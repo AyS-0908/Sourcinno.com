@@ -8,6 +8,11 @@
   --white: #ffffff;
 }
 
+/* Add missing secondary-color class */
+.secondary-color {
+  color: var(--secondary);
+}
+
 * {
   margin: 0;
   padding: 0;
