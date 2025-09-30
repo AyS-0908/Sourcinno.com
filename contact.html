@@ -1,0 +1,45 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sourcinno - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <div id="app-header"></div>
+
+  <!-- Hero -->
+  <section class="hero contact-hero" style="background-color: black;">
+    <h1 data-typewriter data-text="Nous contacter"></h1>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <div class="container">
+      <form action="mailto:contact@sourcinno.com" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="app-footer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
