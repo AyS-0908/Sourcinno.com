@@ -1,0 +1,27 @@
+ name: Deploy to Hostinger VPS
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allows manual deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: Deploy to Hostinger VPS via SSH
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.HOSTINGER_HOST }}
+        username: ${{ secrets.HOSTINGER_USERNAME }}
+        key: ${{ secrets.HOSTINGER_SSH_KEY }}
+        port: 22
+        script: |
+          cd ${{ secrets.DEPLOYMENT_PATH }}
+          git pull origin main
+          echo "Deployment completed at $(date)"
+
