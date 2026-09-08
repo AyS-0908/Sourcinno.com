@@ -7,6 +7,7 @@
  *   --data     assets/data/*.json valides (20 prototypes, publications)
  *   --forms    page contact : formulaire simple + formulaire detaille
  *   --legal    pages legales completes (aucun identifiant laisse a completer)
+ *   --a11y     contrastes, liens et boutons nommes, hierarchie des titres
  *   --consent  aucune balise de mesure d'audience en dur ; banniere presente
  *   --seo      meta Open Graph, longueurs de title/description, sitemap complet
  *   --all      tous les groupes
@@ -330,6 +331,99 @@ function checkConsent() {
   note(`--consent: ${pages.length} page(s) inspectee(s), aucune balise de suivi en dur`);
 }
 
+/* ---------- --a11y ----------
+   Controles statiques d accessibilite. Ils ne remplacent pas un test au
+   clavier, mais ils attrapent ce qui se re-casse tout seul : un lien sans
+   texte, un titre saute, un contraste insuffisant apres un changement de
+   palette. */
+function relLum(hex) {
+  const v = hex.replace("#", "");
+  const n = v.length === 3 ? v.split("").map((c) => c + c) : v.match(/../g);
+  const [r, g, b] = n.map((h) => {
+    const c = parseInt(h, 16) / 255;
+    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+const ratio = (a, b) => {
+  const [x, y] = [relLum(a), relLum(b)].sort((m, n) => n - m);
+  return (x + 0.05) / (y + 0.05);
+};
+
+function checkA11y() {
+  const css = readFileSync(join(ROOT, "assets/css/style.css"), "utf8");
+  const vars = {};
+  for (const m of css.matchAll(/(--[a-z0-9-]+):\s*(#[0-9a-fA-F]{3,8})\s*;/g)) vars[m[1]] = m[2];
+
+  /* Couples reellement utilises par le design system. Les couleurs sont lues
+     dans le CSS : changer la palette refait passer ce controle sur les
+     nouvelles valeurs, jamais sur une copie figee ici. */
+  const PAIRS = [
+    ["texte courant", "--navy", "--white", 4.5],
+    ["texte attenue", "--grey-700", "--white", 4.5],
+    ["texte discret (dates, indices)", "--grey-500", "--white", 4.5],
+    ["texte sur fond gris", "--navy", "--grey-50", 4.5],
+    ["bouton principal", "--white", "--teal-dark", 4.5],
+    ["surtitre et liens teal", "--teal-dark", "--white", 4.5],
+    ["texte sur bleu nuit", "--white", "--navy", 4.5],
+    ["pied de page", "--white", "--navy-dark", 4.5],
+    ["surtitre sur bleu nuit", "#7fd6d3", "--navy", 4.5],
+    ["etiquette technique", "#a04a12", "#fbeade", 4.5],
+    ["message d erreur", "#c53030", "--white", 4.5],
+    ["aplat decoratif teal", "--teal", "--white", 3.0],
+  ];
+  let worst = null;
+  for (const [nom, fg, bg, min] of PAIRS) {
+    const resolve = (name) => (name.startsWith("#") ? name : vars[name]);
+    const cf = resolve(fg), cb = resolve(bg);
+    if (!cf || !cb) { fail("assets/css/style.css", `couleur introuvable pour "${nom}" (${fg} ou ${bg})`); continue; }
+    const r = ratio(cf, cb);
+    if (r < min) fail("assets/css/style.css", `contraste insuffisant pour "${nom}" : ${r.toFixed(2)}:1, minimum ${min}:1 (${cf} sur ${cb})`);
+    if (!worst || r - min < worst.marge) worst = { nom, r, marge: r - min };
+  }
+
+  let links = 0, buttons = 0;
+  for (const p of pages) {
+    const body = p.html.slice(p.html.indexOf("<body"));
+
+    for (const m of body.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
+      links++;
+      const text = m[2].replace(/<[^>]+>/g, "").replace(/&[a-z]+;/g, " ").trim();
+      if (!text && !/aria-label=/.test(m[1]) && !/aria-labelledby=/.test(m[1])) {
+        fail(p.rel, "lien sans texte ni aria-label : " + m[0].slice(0, 70));
+      }
+      if (/target="_blank"/.test(m[1]) && !/rel="[^"]*noopener/.test(m[1])) {
+        fail(p.rel, 'lien target="_blank" sans rel="noopener" : ' + m[0].slice(0, 70));
+      }
+    }
+
+    for (const m of body.matchAll(/<button\b([^>]*)>([\s\S]*?)<\/button>/gi)) {
+      buttons++;
+      const text = m[2].replace(/<[^>]+>/g, "").replace(/&[a-z]+;/g, " ").trim();
+      if (!text && !/aria-label=/.test(m[1])) fail(p.rel, "bouton sans texte ni aria-label : " + m[0].slice(0, 70));
+      if (!/type="/.test(m[1])) fail(p.rel, "bouton sans attribut type : " + m[0].slice(0, 70));
+    }
+
+    for (const m of body.matchAll(/tabindex="([^"]+)"/g)) {
+      if (Number(m[1]) > 0) fail(p.rel, `tabindex="${m[1]}" positif : il casse l ordre naturel du clavier`);
+    }
+
+    let previous = 0;
+    for (const m of body.matchAll(/<h([1-6])[\s>]/gi)) {
+      const level = Number(m[1]);
+      if (previous && level > previous + 1) fail(p.rel, `titre h${level} juste apres un h${previous} : un niveau est saute`);
+      previous = level;
+    }
+
+    if (!/class="skip-link"/.test(body) && !isStub(p)) fail(p.rel, "lien d evitement (skip link) absent");
+  }
+  // Jamais silencieusement absent : ce groupe compare les couleurs DECLAREES.
+  // Il ne peut pas voir un conflit de cascade (une regle plus specifique qui
+  // repeint un bouton). Ce cas-la se voit a l oeil, sur la page rendue.
+  note("--a11y: le conflit de cascade (une regle plus specifique qui repeint un element) n est PAS couvert ici : il se controle a l ecran.");
+  note(`--a11y: ${PAIRS.length} couple(s) de couleurs verifie(s) (le plus juste : ${worst.nom}, ${worst.r.toFixed(2)}:1); ${links} lien(s) et ${buttons} bouton(s) inspecte(s)`);
+}
+
 /* ---------- --seo ---------- */
 function checkSeo() {
   const sitemap = existsSync(join(ROOT, "sitemap.xml")) ? readFileSync(join(ROOT, "sitemap.xml"), "utf8") : "";
@@ -358,6 +452,7 @@ if (want("--copy")) checkCopy();
 if (want("--data")) checkData();
 if (want("--forms")) checkForms();
 if (want("--legal")) checkLegal();
+if (want("--a11y")) checkA11y();
 if (want("--consent")) checkConsent();
 if (want("--seo")) checkSeo();
 
