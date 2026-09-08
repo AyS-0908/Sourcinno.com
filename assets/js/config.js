@@ -1,4 +1,11 @@
 /* Sourcinno — réglages fournisseurs.
+
+   ⚠️ DÉPÔT PUBLIC. Ce fichier est lisible par tout le monde, sur GitHub comme
+   dans le navigateur. N'y colle JAMAIS une clé secrète (clé API OpenAI, mot de
+   passe, jeton). Seules des valeurs publiques par nature vont ici : une URL de
+   formulaire, un identifiant de mesure d'audience, l'adresse d'un service
+   intermédiaire. Une clé secrète doit rester sur le serveur, jamais ici.
+
    SEUL fichier à modifier pour brancher un service externe.
    Tant qu'une valeur est vide, la fonctionnalité marche en mode dégradé
    (décrit en commentaire) : le site ne casse jamais.  */
