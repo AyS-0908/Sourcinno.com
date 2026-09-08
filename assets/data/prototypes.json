@@ -1,0 +1,4 @@
+{
+  "_lisezmoi": "Portfolio de prototypes (PRD §4.1 E). Ce fichier pilote la page /prototypes/ : ajoutez une entree dans items, la page l affiche. Format d une entree : voir prototypes.exemple.json. Champs obligatoires : slug, titre, description, tech. Champs optionnels : url, image, annee, secteur.",
+  "items": []
+}

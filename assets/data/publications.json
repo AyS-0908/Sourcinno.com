@@ -1,0 +1,24 @@
+{
+  "_lisezmoi": "Publications (PRD §4.3). Pilote la page /publications/. Champs obligatoires : type, titre. Optionnels : description, url, date, image, source. Types reconnus : livre, essai, article, video, linkedin. Un processus n8n peut ecrire dans ce fichier.",
+  "items": [
+    {
+      "type": "livre",
+      "titre": "Engagez-vous 2.0",
+      "description": "Un livre sur l'engagement, écrit par Aymard de Scorbiac.",
+      "url": ""
+    },
+    {
+      "type": "essai",
+      "titre": "Du PIB au BCI",
+      "description": "Un essai qui interroge la mesure de la richesse et propose un autre indicateur.",
+      "url": ""
+    },
+    {
+      "type": "linkedin",
+      "titre": "Publications LinkedIn",
+      "description": "Réflexions régulières sur le Corporate Venture Building, l'organisation, les processus et l'IA.",
+      "url": "https://www.linkedin.com/in/aymarddescorbiac",
+      "source": "LinkedIn"
+    }
+  ]
+}

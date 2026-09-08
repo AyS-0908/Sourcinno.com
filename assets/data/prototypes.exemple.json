@@ -1,0 +1,23 @@
+{
+  "_lisezmoi": "MODELE — ne pas publier tel quel. Copiez une entree de items dans prototypes.json et remplacez les valeurs. Le fichier n est jamais lu par le site.",
+  "items": [
+    {
+      "slug": "assistant-devis",
+      "titre": "Assistant de rédaction de devis",
+      "description": "Génère un devis complet à partir d'un échange avec le client, en reprenant la grille tarifaire de l'entreprise.",
+      "tech": ["LLM", "NoCode"],
+      "secteur": "Services B2B",
+      "annee": 2025,
+      "url": "https://exemple.fr/demo",
+      "image": "/pictures/exemple.png"
+    },
+    {
+      "slug": "veille-concurrentielle",
+      "titre": "Veille concurrentielle automatisée",
+      "description": "Agent qui surveille une liste de concurrents et produit une synthèse hebdomadaire.",
+      "tech": ["Agentic AI", "n8n"],
+      "secteur": "Industrie",
+      "annee": 2025
+    }
+  ]
+}

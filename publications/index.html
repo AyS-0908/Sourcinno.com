@@ -45,13 +45,76 @@
 <main id="main">
 <section class="hero hero--page">
   <div class="container">
+    <p class="hero__eyebrow">Publications</p>
     <h1>Publications</h1>
-    <p class="hero__sub">Articles, vid&eacute;os, threads LinkedIn et livre.</p>
+    <p class="hero__sub">Articles, vidéos, publications LinkedIn, un essai et un livre&nbsp;: ce que j’écris sur l’organisation, les processus, le venture building et l’IA.</p>
   </div>
 </section>
-<section class="section">
-  <div class="container measure">
-    <p class="lead">TODO-PASS-SUIVANT : contenu r&eacute;dactionnel &agrave; venir.</p>
+
+<section class="section reveal">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow">Tout</p>
+      <h2>À lire, à écouter, à regarder</h2>
+    </div>
+
+    <div class="filters" data-publication-filters></div>
+    <p class="visually-hidden" data-count role="status"></p>
+
+    <div class="grid grid--2" data-publication-grid></div>
+
+    <div class="empty-state" data-publication-fallback>
+      <h3>Les publications arrivent</h3>
+      <p class="measure mx-auto">La liste est en cours de reprise depuis l’ancien blog et depuis LinkedIn.</p>
+      <p><a class="btn btn--primary" href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">Suivre sur LinkedIn</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt reveal" id="ouvrages">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow">Ouvrages</p>
+      <h2>Deux textes plus longs</h2>
+      <p class="lead">Deux sujets qui reviennent dans mes missions&nbsp;: ce que l’on mesure, et ce qui engage réellement les gens.</p>
+    </div>
+    <div class="grid grid--2">
+      <article class="card">
+        <h3>«&nbsp;Du PIB au BCI&nbsp;»</h3>
+        <p>Un essai sur la mesure de la richesse&nbsp;: ce que le produit intérieur brut capte, ce qu’il laisse de côté, et ce qu’un autre indicateur changerait dans les décisions publiques et privées.</p>
+      </article>
+      <article class="card">
+        <h3>«&nbsp;Engagez-vous 2.0&nbsp;»</h3>
+        <p>Un livre sur l’engagement&nbsp;: pourquoi les dispositifs de motivation classiques s’essoufflent, et ce qui donne réellement envie de s’investir dans un projet collectif.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="linkedin">
+  <div class="container">
+    <div class="split">
+      <div>
+        <p class="section__eyebrow">Au fil de l’eau</p>
+        <h2>Les réflexions courtes sont sur LinkedIn</h2>
+        <p>C’est là que je publie le plus souvent&nbsp;: retours de mission, ce que l’IA change réellement dans une PME, erreurs classiques de venture building, et lectures utiles.</p>
+        <p><a class="btn btn--primary" href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">Suivre sur LinkedIn</a></p>
+      </div>
+      <div>
+        <blockquote class="quote">
+          Une stratégie qui ne descend pas jusqu’au processus reste une intention.
+          <cite>Aymard de Scorbiac</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy reveal" id="contact">
+  <div class="container cta-band">
+    <h2>Un sujet à creuser ensemble&nbsp;?</h2>
+    <p class="lead">Conférence, atelier, intervention en comité de direction&nbsp;: écrivez-moi.</p>
+    <p><a class="btn btn--primary" href="/contact/">Prendre rendez-vous</a></p>
   </div>
 </section>
 </main>
@@ -91,5 +154,6 @@
 </footer>
 <script src="/assets/js/config.js" defer></script>
 <script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/collections.js" defer></script>
 </body>
 </html>
