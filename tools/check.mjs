@@ -313,6 +313,18 @@ function checkConsent() {
     if (!/localStorage|document\.cookie/.test(js)) fail("assets/js/consent.js", "le choix de l utilisateur n est pas memorise");
     if (!/PLAUSIBLE_DOMAIN|GA_MEASUREMENT_ID/.test(js)) fail("assets/js/consent.js", "le script ne lit pas la configuration de mesure d audience");
   }
+  // L assistant est teste hors ligne : il doit aiguiller les questions du PRD
+  // et refuser le hors-sujet plutot que d inventer.
+  try {
+    const out = execFileSync(process.execPath, [join(ROOT, "tools/test-chat.mjs")], { encoding: "utf8" });
+    note(out.trim());
+  } catch (e) {
+    const text = (e.stdout || "") + (e.stderr || "");
+    for (const line of text.split("\n").filter((l) => l.trim())) fail("assistant", line.trim());
+  }
+  const withChat = pages.filter((p) => /chat\.js/.test(p.html)).length;
+  if (withChat !== shellPages.length) fail("assets/js/chat.js", `assistant charge sur ${withChat} page(s) sur ${shellPages.length}`);
+
   const withBanner = pages.filter((p) => /consent\.js/.test(p.html)).length;
   if (withBanner !== shellPages.length) fail("assets/js/consent.js", `banniere chargee sur ${withBanner} page(s) sur ${shellPages.length}`);
   note(`--consent: ${pages.length} page(s) inspectee(s), aucune balise de suivi en dur`);
