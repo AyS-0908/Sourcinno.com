@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=cf9204d5">
 </head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
@@ -43,15 +43,176 @@
   </div>
 </header>
 <main id="main">
-<section class="hero hero--page">
+<section class="hero hero--page hero--pattern">
   <div class="container">
+    <p class="hero__eyebrow">Contact</p>
     <h1>Parlons de votre projet</h1>
-    <p class="hero__sub">Un formulaire court, ou un formulaire d&eacute;taill&eacute; si votre besoin est d&eacute;j&agrave; cadr&eacute;.</p>
+    <p class="hero__sub">Un premier échange de trente minutes suffit généralement à savoir si je suis le bon interlocuteur — et, si ce n’est pas le cas, à vous dire vers qui vous tourner.</p>
   </div>
 </section>
-<section class="section">
+
+<section class="section reveal">
+  <div class="container">
+    <div class="grid grid--2">
+
+      <div>
+        <div class="section__head">
+          <p class="section__eyebrow">Coordonnées</p>
+          <h2>Me joindre directement</h2>
+        </div>
+        <ul class="ticks">
+          <li><strong>Email</strong> &mdash; <a href="mailto:aymard@de-scorbiac.fr">aymard@de-scorbiac.fr</a></li>
+          <li><strong>Téléphone</strong> &mdash; <a href="tel:+33608755877">+33 6 08 75 58 77</a></li>
+          <li><strong>LinkedIn</strong> &mdash; <a href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">linkedin.com/in/aymarddescorbiac</a></li>
+          <li><strong>Où</strong> &mdash; Paris, France. Missions en France et à l’international.</li>
+        </ul>
+        <blockquote class="quote">
+          Décrivez la situation plutôt que la solution attendue. C’est souvent en reformulant le problème que l’on gagne le plus de temps.
+        </blockquote>
+      </div>
+
+      <div>
+        <div class="section__head">
+          <p class="section__eyebrow">Formulaire</p>
+          <h2>Écrire en deux minutes</h2>
+        </div>
+
+        <form id="form-basique" data-contact-form novalidate>
+          <div class="field">
+            <label for="b-nom">Nom <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="b-nom" name="nom" autocomplete="name" required>
+            <p class="error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="b-email">Email <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="b-email" name="email" autocomplete="email" required>
+            <p class="error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="b-message">Message <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="b-message" name="message" required></textarea>
+            <p class="error" aria-live="polite"></p>
+          </div>
+          <div class="field field--check">
+            <input type="checkbox" id="b-rgpd" name="rgpd" required>
+            <label for="b-rgpd">J’accepte que mes données soient utilisées pour répondre à ma demande. Elles ne sont ni revendues ni utilisées à d’autres fins. <a href="/politique-confidentialite/">En savoir plus</a>.</label>
+          </div>
+          <p class="error" aria-live="polite"></p>
+          <button class="btn btn--primary" type="submit">Envoyer</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+
+        <p class="stack">
+          <button class="btn btn--secondary btn--sm" type="button" data-toggle-advanced aria-controls="bloc-form-avance" aria-expanded="false">Besoin d’un accompagnement plus précis&nbsp;?</button>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt reveal" id="bloc-form-avance" hidden>
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow">Formulaire détaillé</p>
+      <h2>Qualifier votre besoin</h2>
+      <p class="lead">Plus long, mais il évite deux échanges&nbsp;: avec ces éléments, la première réponse est déjà utile.</p>
+    </div>
+
+    <form id="form-avance" data-contact-form novalidate>
+      <div class="grid grid--2">
+        <div class="field">
+          <label for="a-nom">Nom <span class="required" aria-hidden="true">*</span></label>
+          <input type="text" id="a-nom" name="nom" autocomplete="name" required>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="a-email">Email <span class="required" aria-hidden="true">*</span></label>
+          <input type="email" id="a-email" name="email" autocomplete="email" required>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="a-telephone">Téléphone</label>
+          <input type="tel" id="a-telephone" name="telephone" autocomplete="tel">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="a-entreprise">Entreprise</label>
+          <input type="text" id="a-entreprise" name="entreprise" autocomplete="organization">
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="a-secteur">Secteur d’activité</label>
+          <input type="text" id="a-secteur" name="secteur" list="secteurs">
+          <datalist id="secteurs">
+            <option value="Industrie"></option>
+            <option value="Services B2B"></option>
+            <option value="Commerce et distribution"></option>
+            <option value="Santé"></option>
+            <option value="Finance et assurance"></option>
+            <option value="Technologie"></option>
+            <option value="Secteur public"></option>
+            <option value="Autre"></option>
+          </datalist>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="a-besoin">Type de besoin <span class="required" aria-hidden="true">*</span></label>
+          <select id="a-besoin" name="besoin" required>
+            <option value="">Choisir…</option>
+            <option value="Stratégie, Organisation &amp; Processus">Stratégie, Organisation &amp; Processus</option>
+            <option value="IA for Business">IA for Business</option>
+            <option value="Venture Building">Venture Building</option>
+            <option value="Autre">Autre</option>
+          </select>
+          <p class="error" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="a-budget">Budget estimé <span class="hint">(facultatif)</span></label>
+          <input type="text" id="a-budget" name="budget" placeholder="Par exemple : 15 000 € sur 3 mois">
+          <p class="error" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="a-message">Message détaillé <span class="required" aria-hidden="true">*</span></label>
+        <textarea id="a-message" name="message" required placeholder="La situation actuelle, ce qui coince, et ce que vous aimeriez avoir changé dans six mois."></textarea>
+        <p class="error" aria-live="polite"></p>
+      </div>
+
+      <div class="field field--check">
+        <input type="checkbox" id="a-rgpd" name="rgpd" required>
+        <label for="a-rgpd">J’accepte que mes données soient utilisées pour répondre à ma demande. Elles ne sont ni revendues ni utilisées à d’autres fins. <a href="/politique-confidentialite/">En savoir plus</a>.</label>
+      </div>
+      <p class="error" aria-live="polite"></p>
+
+      <button class="btn btn--primary" type="submit">Envoyer ma demande</button>
+      <p class="form-status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="section reveal">
   <div class="container measure">
-    <p class="lead">TODO-PASS-SUIVANT : contenu r&eacute;dactionnel &agrave; venir.</p>
+    <p class="section__eyebrow">Ce qui se passe ensuite</p>
+    <h2>Trois étapes, sans engagement</h2>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__n">1</span>
+        <h3>Réponse sous 48 heures ouvrées</h3>
+        <p>Une réponse écrite, avec une première lecture de votre situation.</p>
+      </li>
+      <li class="step">
+        <span class="step__n">2</span>
+        <h3>Échange de trente minutes</h3>
+        <p>Par téléphone ou en visioconférence. Gratuit, et sans obligation de suite.</p>
+      </li>
+      <li class="step">
+        <span class="step__n">3</span>
+        <h3>Proposition écrite</h3>
+        <p>Si le sujet s’y prête&nbsp;: périmètre, livrables, calendrier et budget, sur une page.</p>
+      </li>
+    </ol>
   </div>
 </section>
 </main>
@@ -89,7 +250,8 @@
     </div>
   </div>
 </footer>
-<script src="/assets/js/config.js" defer></script>
-<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/config.js?v=4648a08a" defer></script>
+<script src="/assets/js/site.js?v=31f39486" defer></script>
+<script src="/assets/js/forms.js?v=6139b04f" defer></script>
 </body>
 </html>

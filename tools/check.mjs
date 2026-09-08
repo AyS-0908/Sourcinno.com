@@ -6,6 +6,7 @@
  *   --copy     aucun marqueur de contenu provisoire ne subsiste
  *   --data     assets/data/*.json valides (20 prototypes, publications)
  *   --forms    page contact : formulaire simple + formulaire detaille
+ *   --legal    pages legales completes (aucun identifiant laisse a completer)
  *   --consent  aucune balise de mesure d'audience en dur ; banniere presente
  *   --seo      meta Open Graph, longueurs de title/description, sitemap complet
  *   --all      tous les groupes
@@ -14,6 +15,8 @@
 import { readdirSync, readFileSync, existsSync, statSync } from "node:fs";
 import { join, relative, dirname, resolve, posix } from "node:path";
 import { fileURLToPath } from "node:url";
+import { Script } from "node:vm";
+import { execFileSync } from "node:child_process";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = new Set(process.argv.slice(2));
@@ -130,7 +133,8 @@ function checkStructure() {
     for (const { v, kind } of refs) {
       if (/^(https?:|mailto:|tel:|data:|javascript:)/i.test(v)) continue;
       linksChecked++;
-      const [pathPart, hash] = v.split("#");
+      const [rawPath, hash] = v.split("#");
+      const pathPart = rawPath.split("?")[0];
       if (!pathPart) {
         if (hash && !selfIds.has(hash)) fail(p.rel, `ancre interne #${hash} sans element correspondant`);
         continue;
@@ -160,7 +164,26 @@ function checkStructure() {
     fail(".github/workflows/deploy-hostinger.yml", "workflow de deploiement absent");
   }
 
-  note(`STRUCTURE: ${pages.length} page(s) lue(s), dont ${shellPages.length} avec coquille et ${pages.length - shellPages.length} redirection(s); ${linksChecked} lien(s) interne(s) resolu(s)`);
+  // 5. chaque script du site doit au moins compiler : une erreur de syntaxe
+  //    casse la page entiere sans que rien d autre ici ne le voie.
+  let scriptsChecked = 0;
+  for (const f of allFiles.filter((f) => f.endsWith(".js"))) {
+    const rel = relative(ROOT, f).replace(/\\/g, "/");
+    try { new Script(readFileSync(f, "utf8"), { filename: rel }); scriptsChecked++; }
+    catch (e) { fail(rel, "erreur de syntaxe JavaScript: " + e.message); }
+  }
+
+  // 6. empreintes de version des ressources : sans elles, un visiteur deja venu
+  //    garde l ancien CSS apres un deploiement (voir tools/version.mjs).
+  try {
+    const out = execFileSync(process.execPath, [join(ROOT, "tools/version.mjs"), "--check"], { encoding: "utf8" });
+    note(out.trim());
+  } catch (e) {
+    const text = (e.stdout || "") + (e.stderr || "");
+    for (const line of text.split("\n").filter((l) => l.trim())) fail("versions", line.trim().replace(/^- /, ""));
+  }
+
+  note(`STRUCTURE: ${scriptsChecked} script(s) compile(s); ${pages.length} page(s) lue(s), dont ${shellPages.length} avec coquille et ${pages.length - shellPages.length} redirection(s); ${linksChecked} lien(s) interne(s) resolu(s)`);
 }
 
 /* ---------- --copy ---------- */
@@ -258,6 +281,25 @@ function checkForms() {
   note(`--forms: ${forms.length} formulaire(s) inspecte(s) sur contact/index.html`);
 }
 
+/* ---------- --legal ----------
+   Les pages legales sont ecrites, mais certains identifiants (SIREN, RCS,
+   capital, adresse) ne sont connus que du proprietaire. Ce groupe echoue tant
+   qu ils manquent : publier "[A COMPLETER]" sur un site en ligne serait pire
+   que de le signaler ici. */
+function checkLegal() {
+  let holes = 0;
+  for (const p of pages) {
+    for (const m of p.html.matchAll(/\[À COMPLÉTER[^\]]*\]/g)) {
+      fail(p.rel, "mention legale non renseignee : " + m[0]);
+      holes++;
+    }
+  }
+  for (const f of ["mentions-legales/index.html", "politique-confidentialite/index.html"]) {
+    if (!pages.some((p) => p.rel === f)) fail(f, "page legale absente");
+  }
+  note(`--legal: ${pages.length} page(s) inspectee(s), ${holes} mention(s) a completer`);
+}
+
 /* ---------- --consent ---------- */
 const TRACKER_RE = /googletagmanager\.com|google-analytics\.com|plausible\.io\/js|gtag\(|matomo\.js/i;
 function checkConsent() {
@@ -303,6 +345,7 @@ checkStructure();
 if (want("--copy")) checkCopy();
 if (want("--data")) checkData();
 if (want("--forms")) checkForms();
+if (want("--legal")) checkLegal();
 if (want("--consent")) checkConsent();
 if (want("--seo")) checkSeo();
 

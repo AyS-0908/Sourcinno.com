@@ -95,11 +95,22 @@
       ? "Demande d’accompagnement — sourcinno.com"
       : "Prise de contact — sourcinno.com";
     const body = summarise(form) + "\n\n--\nEnvoyé depuis sourcinno.com";
-    window.location.href =
-      `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    say(form, "ok",
-      "Votre logiciel de messagerie vient de s’ouvrir avec le message pré-rempli. " +
-      "Il ne reste qu’à l’envoyer. Si rien ne s’est ouvert, écrivez directement à " + EMAIL + ".");
+    const url = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    /* Le lien construit est conservé ET affiché : beaucoup de visiteurs n’ont
+       aucun logiciel de messagerie installé, et la navigation mailto échoue
+       alors sans rien dire. Ce lien de repli est leur seule porte de sortie. */
+    form.dataset.lastMailto = url;
+    window.location.href = url;
+    const box = form.querySelector(".form-status");
+    if (box) {
+      box.dataset.state = "ok";
+      box.setAttribute("role", "status");
+      box.innerHTML =
+        "Votre logiciel de messagerie vient de s’ouvrir avec le message pré-rempli&nbsp;: " +
+        "il ne reste qu’à l’envoyer. Rien ne s’est ouvert&nbsp;? " +
+        `<a href="${url.replace(/"/g, "&quot;")}">Ouvrir le message</a>, ` +
+        `ou écrivez directement à <a href="mailto:${EMAIL}">${EMAIL}</a>.`;
+    }
   }
 
   async function sendByEndpoint(form, button) {
