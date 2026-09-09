@@ -21,14 +21,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=e5eb9bdb">
+<link rel="stylesheet" href="/assets/css/style.css?v=bcb9a8ad">
 </head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="site-logo" href="/" aria-label="Sourcinno, retour a l accueil">
-      <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="124" height="40">
+      <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="342" height="110">
     </a>
     <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle__bar"></span>
@@ -36,9 +36,17 @@
     <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
       <ul class="site-nav__list">
         <li><a href="/">Accueil</a></li>
-        <li><a href="/offre-strategie-organisation-processus/">Strat&eacute;gie &amp; Processus</a></li>
-        <li><a href="/offre-ia-business/">IA for Business</a></li>
-        <li><a href="/offre-venture-building/">Venture Building</a></li>
+        <li class="nav-drop-host">
+          <details class="nav-drop">
+            <summary>Services</summary>
+            <ul class="nav-drop__menu">
+              <li><a href="/offre-strategie-organisation-processus/">Strat&eacute;gie, Organisation &amp; Processus</a></li>
+              <li><a href="/offre-ia-business/">IA for Business</a></li>
+              <li><a href="/offre-venture-building/">Venture Building &amp; Portfolio</a></li>
+              <li><a href="/prototypes/">Portfolio de prototypes</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="/publications/">Publications</a></li>
         <li><a href="/contact/">Contact</a></li>
         <li><a class="btn btn--primary btn--sm" href="/contact/">Prendre rendez-vous</a></li>
@@ -58,6 +66,32 @@
   </div>
 </section>
 
+<section class="section section--alt reveal" id="experience">
+  <div class="container">
+    <div class="section__head">
+      <h2>Réalisations</h2>
+    </div>
+    <div class="stats">
+      <div>
+        <p class="stat__n">17</p>
+        <p class="stat__label">missions de conseil chez Accenture</p>
+      </div>
+      <div>
+        <p class="stat__n">30</p>
+        <p class="stat__label">projets mondiaux de transformation dirigés chez Mazars</p>
+      </div>
+      <div>
+        <p class="stat__n">25</p>
+        <p class="stat__label">années en conseil, transformation et innovation</p>
+      </div>
+      <div>
+        <p class="stat__n">3</p>
+        <p class="stat__label">continents&nbsp;: Europe, Afrique, Amérique</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section reveal" id="probleme">
   <div class="container measure">
     <p class="section__eyebrow">Le problème</p>
@@ -68,7 +102,28 @@
   </div>
 </section>
 
-<section class="section section--alt reveal" id="approche">
+<section class="section section--alt reveal" id="livrables">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__eyebrow">Livrables</p>
+      <h2>Ce que vous avez en main à la fin</h2>
+    </div>
+    <div class="grid grid--2">
+      <ul class="ticks">
+        <li>Un plan stratégique traduit en chantiers exécutables.</li>
+        <li>La cartographie de vos processus, avant et après.</li>
+        <li>Une gouvernance de projet formalisée (PMO).</li>
+      </ul>
+      <ul class="ticks">
+        <li>Des tableaux de bord et leurs indicateurs.</li>
+        <li>Des recommandations d’automatisation, chiffrées et priorisées.</li>
+        <li>Les compétences transférées à vos équipes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="approche">
   <div class="container">
     <div class="section__head">
       <p class="section__eyebrow">Approche</p>
@@ -115,63 +170,6 @@
     </ol>
   </div>
 </section>
-
-<section class="section reveal" id="livrables">
-  <div class="container">
-    <div class="section__head">
-      <p class="section__eyebrow">Livrables</p>
-      <h2>Ce que vous avez en main à la fin</h2>
-    </div>
-    <div class="grid grid--2">
-      <ul class="ticks">
-        <li>Un plan stratégique traduit en chantiers exécutables.</li>
-        <li>La cartographie de vos processus, avant et après.</li>
-        <li>Une gouvernance de projet formalisée (PMO).</li>
-      </ul>
-      <ul class="ticks">
-        <li>Des tableaux de bord et leurs indicateurs.</li>
-        <li>Des recommandations d’automatisation, chiffrées et priorisées.</li>
-        <li>Les compétences transférées à vos équipes.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section section--alt reveal" id="experience">
-  <div class="container">
-    <div class="section__head">
-      <p class="section__eyebrow">Expérience pertinente</p>
-      <h2>Une méthode éprouvée à grande échelle</h2>
-      <p class="lead">Dix-sept missions chez Accenture, puis la direction de trente projets mondiaux chez Mazars, dont des thèmes stratégiques transverses comme le Digital et l’Externalisation, avec mise en place de PMO dans des contextes très différents.</p>
-    </div>
-    <div class="stats">
-      <div>
-        <p class="stat__n">17</p>
-        <p class="stat__label">missions de conseil chez Accenture</p>
-      </div>
-      <div>
-        <p class="stat__n">30</p>
-        <p class="stat__label">projets mondiaux de transformation dirigés chez Mazars</p>
-      </div>
-      <div>
-        <p class="stat__n">25</p>
-        <p class="stat__label">années en conseil, transformation et innovation</p>
-      </div>
-      <div>
-        <p class="stat__n">3</p>
-        <p class="stat__label">continents&nbsp;: Europe, Afrique, Amérique</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--navy reveal" id="contact">
-  <div class="container cta-band">
-    <h2>Discutons de votre projet</h2>
-    <p class="lead">Trente minutes suffisent pour savoir si votre sujet est un sujet de stratégie, d’organisation ou de processus &mdash; et par quoi commencer.</p>
-    <p><a class="btn btn--primary" href="/contact/">Prendre rendez-vous</a></p>
-  </div>
-</section>
 </main>
 <footer class="site-footer">
   <div class="container">
@@ -208,7 +206,7 @@
   </div>
 </footer>
 <script src="/assets/js/config.js?v=4648a08a" defer></script>
-<script src="/assets/js/site.js?v=31f39486" defer></script>
+<script src="/assets/js/site.js?v=4cc968e5" defer></script>
 <script src="/assets/js/consent.js?v=90aa7255" defer></script>
 <script src="/assets/js/chat.js?v=00a257f7" defer></script>
 </body>

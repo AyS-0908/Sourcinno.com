@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=e5eb9bdb">
+<link rel="stylesheet" href="/assets/css/style.css?v=bcb9a8ad">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -108,7 +108,7 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="site-logo" href="/" aria-label="Sourcinno, retour a l accueil">
-      <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="124" height="40">
+      <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="342" height="110">
     </a>
     <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle__bar"></span>
@@ -116,9 +116,17 @@
     <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
       <ul class="site-nav__list">
         <li><a href="/">Accueil</a></li>
-        <li><a href="/offre-strategie-organisation-processus/">Strat&eacute;gie &amp; Processus</a></li>
-        <li><a href="/offre-ia-business/">IA for Business</a></li>
-        <li><a href="/offre-venture-building/">Venture Building</a></li>
+        <li class="nav-drop-host">
+          <details class="nav-drop">
+            <summary>Services</summary>
+            <ul class="nav-drop__menu">
+              <li><a href="/offre-strategie-organisation-processus/">Strat&eacute;gie, Organisation &amp; Processus</a></li>
+              <li><a href="/offre-ia-business/">IA for Business</a></li>
+              <li><a href="/offre-venture-building/">Venture Building &amp; Portfolio</a></li>
+              <li><a href="/prototypes/">Portfolio de prototypes</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="/publications/">Publications</a></li>
         <li><a href="/contact/">Contact</a></li>
         <li><a class="btn btn--primary btn--sm" href="/contact/">Prendre rendez-vous</a></li>
@@ -180,88 +188,82 @@
   </div>
 </section>
 
-<!-- C. Timeline / Expérience — PRD §4.1 C -->
+<!-- C + D. Parcours et réalisations clés — PRD §4.1 C et D, réunis en une bande -->
 <section class="section section--alt reveal" id="parcours">
   <div class="container">
     <div class="section__head">
-      <p class="section__eyebrow">Parcours</p>
+      <p class="section__eyebrow">Parcours &amp; réalisations</p>
       <h2>Vingt-cinq ans entre conseil, transformation et innovation</h2>
       <p class="lead">Du grand cabinet à la création de startups : la même discipline de processus, à des échelles différentes.</p>
     </div>
-    <ol class="timeline">
-      <li>
-        <p class="timeline__when">1999 &ndash; 2008</p>
-        <p class="timeline__what">Accenture</p>
-        <p class="timeline__desc">Missions de conseil en stratégie et en organisation, en France et à l’international.</p>
-      </li>
-      <li>
-        <p class="timeline__when">2008 &ndash; 2013</p>
-        <p class="timeline__what">Mazars</p>
-        <p class="timeline__desc">Direction de projets de transformation, avec les processus comme levier principal.</p>
-      </li>
-      <li>
-        <p class="timeline__when">2013 &ndash; 2016</p>
-        <p class="timeline__what">Mazars’ Lab</p>
-        <p class="timeline__desc">Création et direction du lab d’innovation, et accélération de startups.</p>
-      </li>
-      <li>
-        <p class="timeline__when">2016 &ndash; 2018</p>
-        <p class="timeline__what">Fabereo</p>
-        <p class="timeline__desc">Co-fondateur, avec une levée de fonds de 500 K&euro;.</p>
-      </li>
-      <li>
-        <p class="timeline__when">2019 &ndash; aujourd’hui</p>
-        <p class="timeline__what">Sourcinno</p>
-        <p class="timeline__desc">Conseil indépendant : organisation, processus, IA et prototypage rapide.</p>
-      </li>
-    </ol>
-  </div>
-</section>
 
-<!-- D. Réalisations clés — PRD §4.1 D -->
-<section class="section reveal" id="realisations">
-  <div class="container">
-    <div class="section__head">
-      <p class="section__eyebrow">Réalisations clés</p>
-      <h2>Ce que j’ai déjà mené</h2>
-    </div>
-    <div class="grid grid--3">
+    <div class="grid grid--2">
 
-      <article class="card">
-        <h3>Missions</h3>
-        <ul class="ticks">
-          <li>Direction de 30 projets mondiaux de transformation chez Mazars.</li>
-          <li>Mise en place de PMO et d’indicateurs de performance.</li>
-          <li>Optimisation des processus par l’IA et le NoCode.</li>
-          <li>Formation à l’IA pour dirigeants et équipes.</li>
-        </ul>
-      </article>
+      <ol class="timeline">
+        <li>
+          <p class="timeline__when">1999 &ndash; 2008</p>
+          <p class="timeline__what">Accenture</p>
+          <p class="timeline__desc">Missions de conseil en stratégie et en organisation, en France et à l’international.</p>
+        </li>
+        <li>
+          <p class="timeline__when">2008 &ndash; 2013</p>
+          <p class="timeline__what">Mazars</p>
+          <p class="timeline__desc">Direction de projets de transformation, avec les processus comme levier principal.</p>
+        </li>
+        <li>
+          <p class="timeline__when">2013 &ndash; 2016</p>
+          <p class="timeline__what">Mazars’ Lab</p>
+          <p class="timeline__desc">Création et direction du lab d’innovation, et accélération de startups.</p>
+        </li>
+        <li>
+          <p class="timeline__when">2016 &ndash; 2018</p>
+          <p class="timeline__what">Fabereo</p>
+          <p class="timeline__desc">Co-fondateur, avec une levée de fonds de 500 K&euro;.</p>
+        </li>
+        <li>
+          <p class="timeline__when">2019 &ndash; aujourd’hui</p>
+          <p class="timeline__what">Sourcinno</p>
+          <p class="timeline__desc">Conseil indépendant : organisation, processus, IA et prototypage rapide.</p>
+        </li>
+      </ol>
 
-      <article class="card">
-        <h3>Secteurs &amp; géographies</h3>
-        <ul class="ticks">
-          <li>Europe, Afrique, Amérique.</li>
-          <li>PME et ETI.</li>
-          <li>Services et technologie.</li>
-        </ul>
-      </article>
+      <div class="stack" id="realisations">
+        <article class="card">
+          <h3>Missions</h3>
+          <ul class="ticks">
+            <li>Direction de 30 projets mondiaux de transformation chez Mazars.</li>
+            <li>Mise en place de PMO et d’indicateurs de performance.</li>
+            <li>Optimisation des processus par l’IA et le NoCode.</li>
+            <li>Formation à l’IA pour dirigeants et équipes.</li>
+          </ul>
+        </article>
 
-      <article class="card">
-        <h3>Publications</h3>
-        <ul class="ticks">
-          <li>Essai «&nbsp;Du PIB au BCI&nbsp;».</li>
-          <li>Livre «&nbsp;Engagez-vous 2.0&nbsp;».</li>
-          <li>Articles et prises de parole sur l’innovation et l’IA.</li>
-        </ul>
-        <p class="card__foot"><a class="link-arrow" href="/publications/">Voir les publications</a></p>
-      </article>
+        <article class="card">
+          <h3>Secteurs &amp; géographies</h3>
+          <ul class="ticks">
+            <li>Europe, Afrique, Amérique.</li>
+            <li>PME et ETI.</li>
+            <li>Services et technologie.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Publications</h3>
+          <ul class="ticks">
+            <li>Essai «&nbsp;Du PIB au BCI&nbsp;».</li>
+            <li>Livre «&nbsp;Engagez-vous 2.0&nbsp;».</li>
+            <li>Articles et prises de parole sur l’innovation et l’IA.</li>
+          </ul>
+          <p class="card__foot"><a class="link-arrow" href="/publications/">Voir les publications</a></p>
+        </article>
+      </div>
 
     </div>
   </div>
 </section>
 
 <!-- Bandeau de crédibilité -->
-<section class="section section--alt reveal" id="references">
+<section class="section reveal" id="references">
   <div class="container">
     <div class="section__head text-center mx-auto">
       <h2>Nous avons innové avec</h2>
@@ -269,6 +271,7 @@
     <div class="logo-band">
       <img src="/pictures/logo_accenture_nb.png" alt="Accenture" loading="lazy">
       <img src="/pictures/logo_mzlab_nb.jpeg" alt="Mazars’ Lab" loading="lazy">
+      <img src="/pictures/logo_nomaban_nb.png" alt="Nomaban" loading="lazy">
       <img src="/pictures/logo_ibanfirst_nb.png" alt="iBanFirst" loading="lazy">
       <img src="/pictures/logo_particeep_nb.png" alt="Particeep" loading="lazy">
       <img src="/pictures/logo_yoopala_nb.png" alt="Yoopala" loading="lazy">
@@ -349,7 +352,7 @@
   </div>
 </footer>
 <script src="/assets/js/config.js?v=4648a08a" defer></script>
-<script src="/assets/js/site.js?v=31f39486" defer></script>
+<script src="/assets/js/site.js?v=4cc968e5" defer></script>
 <script src="/assets/js/consent.js?v=90aa7255" defer></script>
 <script src="/assets/js/chat.js?v=00a257f7" defer></script>
 </body>

@@ -37,8 +37,28 @@
       if (!href || href.startsWith("http") || href.startsWith("#")) return;
       const target = normalize(href);
       const match = target === "/" ? here === "/" : here === target || here.startsWith(target);
-      if (match) a.setAttribute("aria-current", "page");
+      if (!match) return;
+      a.setAttribute("aria-current", "page");
+      /* Une page de service : c est le titre "Services" du menu qui doit se
+         marquer aussi, sinon rien n indique ou l on se trouve tant que le
+         menu est ferme. */
+      const drop = a.closest(".nav-drop");
+      if (drop) drop.querySelector("summary").setAttribute("aria-current", "page");
     });
+  }
+
+  /* Le <details> se ferme tout seul au clavier (Echap) et quand on choisit un
+     lien ; il ne se ferme pas au clic a cote, d ou ces trois lignes. */
+  function initDropdowns() {
+    const drops = [...document.querySelectorAll(".nav-drop")];
+    if (!drops.length) return;
+    const closeAll = (except) => drops.forEach((d) => { if (d !== except) d.open = false; });
+    drops.forEach((d) => {
+      on(d, "toggle", () => { if (d.open) closeAll(d); });
+      d.querySelectorAll("a").forEach((a) => on(a, "click", () => { d.open = false; }));
+    });
+    on(document, "click", (e) => { if (!e.target.closest(".nav-drop")) closeAll(null); });
+    on(document, "keydown", (e) => { if (e.key === "Escape") closeAll(null); });
   }
 
   function normalize(path) {
@@ -86,6 +106,7 @@
   function init() {
     initNav();
     initActiveLink();
+    initDropdowns();
     initStickyHeader();
     initReveal();
     initYear();

@@ -21,14 +21,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=e5eb9bdb">
+<link rel="stylesheet" href="/assets/css/style.css?v=bcb9a8ad">
 </head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="site-logo" href="/" aria-label="Sourcinno, retour a l accueil">
-      <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="124" height="40">
+      <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="342" height="110">
     </a>
     <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle__bar"></span>
@@ -36,9 +36,17 @@
     <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
       <ul class="site-nav__list">
         <li><a href="/">Accueil</a></li>
-        <li><a href="/offre-strategie-organisation-processus/">Strat&eacute;gie &amp; Processus</a></li>
-        <li><a href="/offre-ia-business/">IA for Business</a></li>
-        <li><a href="/offre-venture-building/">Venture Building</a></li>
+        <li class="nav-drop-host">
+          <details class="nav-drop">
+            <summary>Services</summary>
+            <ul class="nav-drop__menu">
+              <li><a href="/offre-strategie-organisation-processus/">Strat&eacute;gie, Organisation &amp; Processus</a></li>
+              <li><a href="/offre-ia-business/">IA for Business</a></li>
+              <li><a href="/offre-venture-building/">Venture Building &amp; Portfolio</a></li>
+              <li><a href="/prototypes/">Portfolio de prototypes</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="/publications/">Publications</a></li>
         <li><a href="/contact/">Contact</a></li>
         <li><a class="btn btn--primary btn--sm" href="/contact/">Prendre rendez-vous</a></li>
@@ -75,52 +83,6 @@
   </div>
 </section>
 
-<section class="section section--alt reveal" id="ouvrages">
-  <div class="container">
-    <div class="section__head">
-      <p class="section__eyebrow">Ouvrages</p>
-      <h2>Deux textes plus longs</h2>
-      <p class="lead">Deux sujets qui reviennent dans mes missions&nbsp;: ce que l’on mesure, et ce qui engage réellement les gens.</p>
-    </div>
-    <div class="grid grid--2">
-      <article class="card">
-        <h3>«&nbsp;Du PIB au BCI&nbsp;»</h3>
-        <p>Un essai sur la mesure de la richesse&nbsp;: ce que le produit intérieur brut capte, ce qu’il laisse de côté, et ce qu’un autre indicateur changerait dans les décisions publiques et privées.</p>
-      </article>
-      <article class="card">
-        <h3>«&nbsp;Engagez-vous 2.0&nbsp;»</h3>
-        <p>Un livre sur l’engagement&nbsp;: pourquoi les dispositifs de motivation classiques s’essoufflent, et ce qui donne réellement envie de s’investir dans un projet collectif.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section reveal" id="linkedin">
-  <div class="container">
-    <div class="split">
-      <div>
-        <p class="section__eyebrow">Au fil de l’eau</p>
-        <h2>Les réflexions courtes sont sur LinkedIn</h2>
-        <p>C’est là que je publie le plus souvent&nbsp;: retours de mission, ce que l’IA change réellement dans une PME, erreurs classiques de venture building, et lectures utiles.</p>
-        <p><a class="btn btn--primary" href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">Suivre sur LinkedIn</a></p>
-      </div>
-      <div>
-        <blockquote class="quote">
-          Une stratégie qui ne descend pas jusqu’au processus reste une intention.
-          <cite>Aymard de Scorbiac</cite>
-        </blockquote>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--navy reveal" id="contact">
-  <div class="container cta-band">
-    <h2>Un sujet à creuser ensemble&nbsp;?</h2>
-    <p class="lead">Conférence, atelier, intervention en comité de direction&nbsp;: écrivez-moi.</p>
-    <p><a class="btn btn--primary" href="/contact/">Prendre rendez-vous</a></p>
-  </div>
-</section>
 </main>
 <footer class="site-footer">
   <div class="container">
@@ -157,7 +119,7 @@
   </div>
 </footer>
 <script src="/assets/js/config.js?v=4648a08a" defer></script>
-<script src="/assets/js/site.js?v=31f39486" defer></script>
+<script src="/assets/js/site.js?v=4cc968e5" defer></script>
 <script src="/assets/js/consent.js?v=90aa7255" defer></script>
 <script src="/assets/js/chat.js?v=00a257f7" defer></script>
 <script src="/assets/js/collections.js?v=81386ae1" defer></script>

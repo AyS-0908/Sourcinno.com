@@ -700,3 +700,82 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 @media (max-width: 640px) {
   .chat-panel { right: var(--space-2); left: var(--space-2); width: auto; }
 }
+
+/* ---------- Menu deroulant "Services" ----------
+   Bati sur <details> : il s ouvre et se ferme sans JavaScript, repond au
+   clavier et au toucher sans code supplementaire. Le script ne fait
+   qu ajouter la fermeture au clic exterieur. */
+.nav-drop { position: relative; }
+.nav-drop > summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+  padding: 0.4rem 0;
+  transition: color 0.2s var(--ease);
+}
+.nav-drop > summary::-webkit-details-marker { display: none; }
+.nav-drop > summary::after {
+  content: "";
+  width: 0.42rem;
+  height: 0.42rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.2s var(--ease);
+}
+.nav-drop[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.nav-drop > summary:hover,
+.nav-drop[open] > summary,
+.nav-drop > summary[aria-current="page"] { color: var(--teal-dark); }
+.nav-drop > summary[aria-current="page"] { font-weight: 600; }
+
+.nav-drop__menu {
+  position: absolute;
+  top: calc(100% + 0.7rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1100;
+  min-width: 270px;
+  list-style: none;
+  margin: 0;
+  padding: 0.4rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+.nav-drop__menu li { border: 0; }
+.nav-drop__menu a {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--navy);
+  white-space: nowrap;
+  transition: background 0.15s var(--ease), color 0.15s var(--ease);
+}
+.nav-drop__menu a::after { display: none; }
+.nav-drop__menu a:hover { background: var(--grey-50); color: var(--teal-dark); }
+.nav-drop__menu a[aria-current="page"] { color: var(--teal-dark); font-weight: 600; }
+
+@media (max-width: 860px) {
+  /* En mobile le menu est deja une liste verticale : le sous-menu s y insere
+     a plat plutot que de flotter par-dessus. */
+  .nav-drop > summary { display: flex; justify-content: space-between; padding: 0.85rem 0; font-size: 1rem; }
+  .nav-drop__menu {
+    position: static;
+    transform: none;
+    min-width: 0;
+    border: 0;
+    box-shadow: none;
+    padding: 0 0 0.5rem 0.9rem;
+    border-left: 2px solid var(--border);
+    margin-bottom: 0.5rem;
+  }
+  .nav-drop__menu a { padding: 0.6rem 0; white-space: normal; }
+}
