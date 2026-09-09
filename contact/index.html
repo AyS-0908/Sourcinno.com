@@ -21,7 +21,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=bcb9a8ad">
+<link rel="stylesheet" href="/assets/css/style.css?v=bfa5b058">
+<noscript>
+  <style>
+    /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
+       toutes les sections resteraient a opacity 0, donc invisibles. */
+    .reveal { opacity: 1 !important; transform: none !important; }
+    /* Les formulaires ont besoin de JavaScript pour partir. Sans lui, ils
+       feraient un GET et enverraient nom, email et message dans l URL. */
+    form[data-contact-form] { display: none; }
+    .noscript-contact { display: block !important; }
+  </style>
+</noscript>
 </head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
@@ -89,6 +100,12 @@
           <h2>Écrire en deux minutes</h2>
         </div>
 
+        <p class="noscript-contact form-status" data-state="ok" hidden>
+          Les formulaires de cette page ont besoin de JavaScript. Il est
+          désactivé&nbsp;: écrivez directement à
+          <a href="mailto:aymard@de-scorbiac.fr">aymard@de-scorbiac.fr</a>
+          ou appelez le <a href="tel:+33608755877">+33 6 08 75 58 77</a>.
+        </p>
         <form id="form-basique" data-contact-form novalidate>
           <div class="field">
             <label for="b-nom">Nom <span class="required" aria-hidden="true">*</span></label>
@@ -108,6 +125,7 @@
           <div class="field field--check">
             <input type="checkbox" id="b-rgpd" name="rgpd" required>
             <label for="b-rgpd">J’accepte que mes données soient utilisées pour répondre à ma demande. Elles ne sont ni revendues ni utilisées à d’autres fins. <a href="/politique-confidentialite/">En savoir plus</a>.</label>
+            <p class="error" aria-live="polite"></p>
           </div>
           <p class="error" aria-live="polite"></p>
           <button class="btn btn--primary" type="submit">Envoyer</button>
@@ -195,7 +213,8 @@
       <div class="field field--check">
         <input type="checkbox" id="a-rgpd" name="rgpd" required>
         <label for="a-rgpd">J’accepte que mes données soient utilisées pour répondre à ma demande. Elles ne sont ni revendues ni utilisées à d’autres fins. <a href="/politique-confidentialite/">En savoir plus</a>.</label>
-      </div>
+        <p class="error" aria-live="polite"></p>
+          </div>
       <p class="error" aria-live="polite"></p>
 
       <button class="btn btn--primary" type="submit">Envoyer ma demande</button>

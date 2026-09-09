@@ -21,7 +21,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=bcb9a8ad">
+<link rel="stylesheet" href="/assets/css/style.css?v=bfa5b058">
+<noscript>
+  <style>
+    /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
+       toutes les sections resteraient a opacity 0, donc invisibles. */
+    .reveal { opacity: 1 !important; transform: none !important; }
+    /* Les formulaires ont besoin de JavaScript pour partir. Sans lui, ils
+       feraient un GET et enverraient nom, email et message dans l URL. */
+    form[data-contact-form] { display: none; }
+    .noscript-contact { display: block !important; }
+  </style>
+</noscript>
 </head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
@@ -97,6 +108,10 @@
     <p>Ce site ne dépose <strong>aucun cookie de mesure d’audience ni de publicité</strong> tant que vous ne l’avez pas explicitement accepté par la bannière. Si vous refusez, ou si vous ne répondez pas, aucun outil de suivi n’est chargé&nbsp;: le site fonctionne à l’identique.</p>
     <p>Un seul élément est enregistré dans votre navigateur en toutes circonstances&nbsp;: votre réponse à cette bannière, afin de ne pas vous la présenter à chaque page. Cet enregistrement reste sur votre appareil et n’est jamais transmis.</p>
     <p>Vous pouvez revenir sur votre choix à tout moment en effaçant les données du site dans votre navigateur.</p>
+
+    <h2>Polices de caractères et appels à des tiers</h2>
+    <p>Les polices de caractères du site (Inter et Playfair&nbsp;Display) sont chargées depuis <strong>Google&nbsp;Fonts</strong> (<code>fonts.googleapis.com</code> et <code>fonts.gstatic.com</code>). Ce chargement transmet à Google votre adresse IP et les caractéristiques techniques de votre navigateur, dès l’ouverture de la page et avant toute action de votre part. Aucun cookie n’est déposé par ce chargement, et aucune autre donnée n’est transmise.</p>
+    <p>C’est le <strong>seul</strong> appel à un service tiers effectué par ce site. Si vous préférez l’éviter, un bloqueur de contenus le neutralise sans rien casser&nbsp;: les textes s’affichent alors avec les polices de votre appareil.</p>
 
     <h2>Où sont vos données</h2>
     <p>Le site est hébergé sur un serveur loué chez Hostinger. La localisation du centre de données est précisée dans les <a href="/mentions-legales/">mentions légales</a>. [À COMPLÉTER : si le service qui achemine les formulaires est établi hors Union européenne, le nommer ici avec la garantie de transfert applicable.]</p>

@@ -8,6 +8,8 @@
  *   --forms    page contact : formulaire simple + formulaire detaille
  *   --legal    pages legales completes (aucun identifiant laisse a completer)
  *   --a11y     contrastes, liens et boutons nommes, hierarchie des titres
+ *   --nojs     le site reste lisible et sur sans JavaScript
+ *   --tiers    tout hote externe charge est annonce dans la politique de confidentialite
  *   --consent  aucune balise de mesure d'audience en dur ; banniere presente
  *   --seo      meta Open Graph, longueurs de title/description, sitemap complet
  *   --all      tous les groupes
@@ -424,6 +426,88 @@ function checkA11y() {
   note(`--a11y: ${PAIRS.length} couple(s) de couleurs verifie(s) (le plus juste : ${worst.nom}, ${worst.r.toFixed(2)}:1); ${links} lien(s) et ${buttons} bouton(s) inspecte(s)`);
 }
 
+/* ---------- --nojs ----------
+   Le site doit rester LISIBLE sans JavaScript, pas seulement present dans le
+   HTML. Mesure : `.reveal { opacity: 0 }` rendait chaque section invisible
+   alors que le texte etait bien la — un controle qui lit le HTML brut passait
+   au vert sur une page entierement blanche. */
+function checkNoJs() {
+  const css = readFileSync(join(ROOT, "assets/css/style.css"), "utf8");
+
+  /* Toute classe que seul le JavaScript peut poser et qui MASQUE par defaut. */
+  const cachantes = [];
+  for (const m of css.matchAll(/(^|\})\s*([^{}@]+?)\s*\{([^{}]*)\}/g)) {
+    const sel = m[2].trim();
+    const body = m[3];
+    if (!/opacity:\s*0\b|visibility:\s*hidden|display:\s*none/.test(body)) continue;
+    if (/^\.reveal\b/.test(sel)) cachantes.push(sel.trim());
+  }
+
+  for (const p of shellPages) {
+    const usesReveal = /class="[^"]*\breveal\b/.test(p.html);
+    if (!usesReveal) continue;
+    const ns = p.html.match(/<noscript>[\s\S]*?<\/noscript>/i);
+    if (!ns) {
+      fail(p.rel, "la page masque ses sections par defaut (.reveal) et n a aucun <noscript> pour les reafficher : sans JavaScript elle est blanche");
+      continue;
+    }
+    if (!/\.reveal\s*\{[^}]*opacity:\s*1/.test(ns[0])) {
+      fail(p.rel, "le bloc <noscript> ne remet pas .reveal a opacity 1");
+    }
+    if (/<form\b[^>]*data-contact-form/.test(p.html)) {
+      if (!/form\[data-contact-form\]\s*\{[^}]*display:\s*none/.test(ns[0])) {
+        fail(p.rel, "sans JavaScript le formulaire ferait un GET et enverrait les donnees personnelles dans l URL : le <noscript> doit le masquer");
+      }
+      if (!/noscript-contact/.test(p.html)) {
+        fail(p.rel, "aucun moyen de contact de repli affiche quand le formulaire est masque");
+      }
+    }
+  }
+
+  /* Un formulaire sans action ferait un GET sur la page courante. */
+  for (const p of pages) {
+    for (const m of p.html.matchAll(/<form\b([^>]*)>/gi)) {
+      if (!/data-contact-form/.test(m[1])) continue;
+      if (/\baction=/.test(m[1])) fail(p.rel, "le formulaire porte un action : verifier qu il ne renvoie pas les donnees en clair dans l URL");
+    }
+  }
+
+  note(`--nojs: ${shellPages.length} page(s) verifiee(s); ${cachantes.length} regle(s) masquant par defaut recensee(s) (${cachantes.join(", ") || "aucune"})`);
+}
+
+/* ---------- --tiers ----------
+   Tout hote externe appele par une page doit etre annonce dans la politique
+   de confidentialite : un appel a un tiers transmet l adresse IP du visiteur. */
+function checkTiers() {
+  const politique = pages.find((p) => p.rel === "politique-confidentialite/index.html");
+  if (!politique) { fail("politique-confidentialite/index.html", "page absente"); return; }
+  const hotes = new Set();
+  for (const p of pages) {
+    const zone = p.html.slice(0, p.html.indexOf("</head>") + 7) + p.html.slice(p.html.indexOf("<body"));
+    for (const m of zone.matchAll(/(?:src|href)="https?:\/\/([a-z0-9.-]+)/gi)) {
+      const h = m[1].toLowerCase();
+      if (h.endsWith("sourcinno.com") || h === "schema.org" || h === "www.schema.org") continue;
+      if (/^(www\.)?linkedin\.com$/.test(h)) continue;      // lien sortant, pas une ressource chargee
+      if (/^(www\.)?cnil\.fr$/.test(h) || /^(www\.)?hostinger\.fr$/.test(h)) continue;
+      if (/^sourcinno\.wixsite\.com$/.test(h)) continue;    // lien sortant vers le site du livre
+      hotes.add(h);
+    }
+  }
+  /* On ne lit que le TEXTE de la politique, jamais son <head> : celui-ci
+     charge les memes ressources que les autres pages, et la comparaison
+     reviendrait a confronter le fichier a lui-meme — toujours verte. */
+  const texte = politique.html
+    .slice(politique.html.indexOf('<main id="main">'), politique.html.indexOf("</main>"))
+    .toLowerCase();
+  for (const h of hotes) {
+    const racine = h.replace(/^www\./, "").split(".").slice(-2).join(".");
+    if (!texte.includes(racine)) {
+      fail("politique-confidentialite/index.html", `le site charge une ressource depuis ${h}, ce qui transmet l adresse IP du visiteur, et la politique de confidentialite n en parle pas`);
+    }
+  }
+  note(`--tiers: ${hotes.size} hote(s) externe(s) charge(s) par les pages${hotes.size ? " : " + [...hotes].join(", ") : ""}`);
+}
+
 /* ---------- --seo ---------- */
 function checkSeo() {
   const sitemap = existsSync(join(ROOT, "sitemap.xml")) ? readFileSync(join(ROOT, "sitemap.xml"), "utf8") : "";
@@ -453,6 +537,8 @@ if (want("--data")) checkData();
 if (want("--forms")) checkForms();
 if (want("--legal")) checkLegal();
 if (want("--a11y")) checkA11y();
+if (want("--nojs")) checkNoJs();
+if (want("--tiers")) checkTiers();
 if (want("--consent")) checkConsent();
 if (want("--seo")) checkSeo();
 

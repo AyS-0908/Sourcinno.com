@@ -21,7 +21,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=bcb9a8ad">
+<link rel="stylesheet" href="/assets/css/style.css?v=bfa5b058">
+<noscript>
+  <style>
+    /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
+       toutes les sections resteraient a opacity 0, donc invisibles. */
+    .reveal { opacity: 1 !important; transform: none !important; }
+    /* Les formulaires ont besoin de JavaScript pour partir. Sans lui, ils
+       feraient un GET et enverraient nom, email et message dans l URL. */
+    form[data-contact-form] { display: none; }
+    .noscript-contact { display: block !important; }
+  </style>
+</noscript>
 </head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>

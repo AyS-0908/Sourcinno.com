@@ -451,6 +451,9 @@ textarea { min-height: 150px; resize: vertical; }
 .field--check { flex-direction: row; align-items: flex-start; gap: 0.6rem; }
 .field--check input { margin-top: 0.35rem; width: auto; flex: 0 0 auto; }
 .field--check label { font-weight: 400; font-size: 0.9rem; }
+.field--check { flex-wrap: wrap; }
+.field--check .error { flex: 1 0 100%; }
+.noscript-contact { display: none; }
 .field .error { font-size: 0.82rem; color: #c53030; min-height: 1.1em; }
 input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="true"] { border-color: #c53030; }
 .form-status { margin-top: var(--space-2); padding: var(--space-2); border-radius: var(--radius); font-size: 0.92rem; }
