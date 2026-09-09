@@ -782,3 +782,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   }
   .nav-drop__menu a { padding: 0.6rem 0; white-space: normal; }
 }
+
+/* ---------- Illustration centree en tete de bande ---------- */
+.band-figure { margin: 0 auto var(--space-5); max-width: 760px; text-align: center; }
+.band-figure img { margin-inline: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow); }
