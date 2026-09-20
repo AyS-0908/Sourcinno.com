@@ -20,7 +20,7 @@
 
   const CONTACT =
     'Le plus simple est d’en parler : <a href="/contact/">le formulaire est ici</a>, ' +
-    'ou directement <a href="mailto:aymard@de-scorbiac.fr">aymard@de-scorbiac.fr</a>.';
+    'ou directement <a href="mailto:aymard.de.scorbiac@sourcinno.com">aymard.de.scorbiac@sourcinno.com</a>.';
 
   /* Base de connaissances. Chaque entree : des mots-cles, et une reponse.
      Tout provient du contenu du site ; rien n est invente ici. */
@@ -29,27 +29,27 @@
       keys: ["offre", "offres", "service", "services", "proposez", "prestation", "accompagnement"],
       answer:
         "Trois offres, toutes centrées sur l’organisation et les processus :<br>" +
-        '&bull; <a href="/offre-strategie-organisation-processus/">Stratégie, Organisation &amp; Processus</a> — aligner la vision et l’exécution.<br>' +
-        '&bull; <a href="/offre-ia-business/">IA for Business</a> — installer l’IA là où elle fait gagner du temps.<br>' +
-        '&bull; <a href="/offre-venture-building/">Venture Building &amp; Portfolio</a> — structurer la création de nouvelles activités.',
+        '&bull; <a href="/service-strategie-transformation/">Stratégie, Organisation &amp; Processus</a> — aligner la vision et l’exécution.<br>' +
+        '&bull; <a href="/service-ia-business/">IA for Business</a> — installer l’IA là où elle fait gagner du temps.<br>' +
+        '&bull; <a href="/service-venture-building/">Venture Building &amp; Portfolio</a> — structurer la création de nouvelles activités.',
     },
     {
       keys: ["processus", "organisation", "pmo", "strategie", "stratégie", "kpi", "indicateur", "gouvernance"],
       answer:
         "C’est le cœur du métier : diagnostic de l’organisation, cartographie des processus tels qu’ils sont réellement exécutés, feuille de route priorisée, mise en place d’un PMO et d’indicateurs qui mesurent l’avancement plutôt que l’agitation. " +
-        '<a href="/offre-strategie-organisation-processus/">Le détail est ici</a>.',
+        '<a href="/service-strategie-transformation/">Le détail est ici</a>.',
     },
     {
       keys: ["ia", "intelligence artificielle", "llm", "agentic", "agent", "automatis", "nocode", "no-code", "chatgpt"],
       answer:
         "L’approche est pragmatique : former les équipes sur vos propres cas d’usage, repérer les tâches répétitives, construire un prototype en quelques jours, puis décider — industrialiser, ajuster, ou arrêter. " +
-        '<a href="/offre-ia-business/">Voir l’offre IA for Business</a>.',
+        '<a href="/service-ia-business/">Voir l’offre IA for Business</a>.',
     },
     {
       keys: ["venture", "startup", "startups", "incubation", "portefeuille", "portfolio", "levee", "levée", "fonds", "innovation"],
       answer:
         "Venture Building : idéation et sélection d’opportunités sur votre secteur, business plan, validation du marché, incubation jalonnée, recherche de partenaires et de financements, et pilotage du portefeuille avec un PMO dédié. " +
-        '<a href="/offre-venture-building/">Voir l’offre</a>.',
+        '<a href="/service-venture-building/">Voir l’offre</a>.',
     },
     {
       keys: ["mazars", "lab", "mazars’ lab", "mazars lab"],
@@ -94,7 +94,7 @@
     {
       keys: ["contact", "contacter", "rendez-vous", "rdv", "joindre", "telephone", "téléphone", "email", "mail", "appeler"],
       answer:
-        "Par email : <a href=\"mailto:aymard@de-scorbiac.fr\">aymard@de-scorbiac.fr</a>. Par téléphone : " +
+        "Par email : <a href=\"mailto:aymard.de.scorbiac@sourcinno.com\">aymard.de.scorbiac@sourcinno.com</a>. Par téléphone : " +
         '<a href="tel:+33608755877">+33 6 08 75 58 77</a>. Ou via ' +
         '<a href="/contact/">le formulaire</a> — réponse sous 48 heures ouvrées, ' +
         "puis un échange de trente minutes, sans engagement.",

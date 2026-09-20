@@ -13,7 +13,7 @@
 
   const CFG = window.SOURCINNO_CONFIG || {};
   const ENDPOINT = (CFG.FORM_ENDPOINT || "").trim();
-  const EMAIL = (CFG.CONTACT_EMAIL || "aymard@de-scorbiac.fr").trim();
+  const EMAIL = (CFG.CONTACT_EMAIL || "aymard.de.scorbiac@sourcinno.com").trim();
 
   const LABELS = {
     nom: "Nom",

@@ -3,16 +3,23 @@
  *
  * Par defaut : le groupe STRUCTURE (liens, images, balises, header/footer identiques).
  * Options, chacune ajoutant un groupe et ECHOUANT si son sujet n'existe pas encore :
- *   --copy     aucun marqueur de contenu provisoire ne subsiste
- *   --data     assets/data/*.json valides (20 prototypes, publications)
- *   --forms    page contact : formulaire simple + formulaire detaille
+ *   --data     assets/data/publications.json valide, et la page qui l'affiche
+ *   --forms    page contact : le formulaire de contact, complet (V1 = un seul)
  *   --legal    pages legales completes (aucun identifiant laisse a completer)
  *   --a11y     contrastes, liens et boutons nommes, hierarchie des titres
  *   --nojs     le site reste lisible et sur sans JavaScript
  *   --tiers    tout hote externe charge est annonce dans la politique de confidentialite
- *   --consent  aucune balise de mesure d'audience en dur ; banniere presente
  *   --seo      meta Open Graph, longueurs de title/description, sitemap complet
  *   --all      tous les groupes
+ *
+ * Groupes RETIRES en Pass 1, avec leur sujet :
+ *   --copy     le marqueur TODO-PASS-SUIVANT n'existe plus nulle part dans l'arbre ;
+ *              un groupe sans sujet est vert quoi qu'il arrive, donc il ne verifie rien.
+ *   --consent  banniere de consentement et assistant sont reportes en v2 (PLAN.md).
+ *              Le cas "balise de mesure d'audience en dur" reste couvert par --tiers :
+ *              un hote externe non declare dans la politique de confidentialite echoue.
+ * Les deux drapeaux restent acceptes et ignores : les anciennes lignes de commande
+ * continuent de tourner, elles n'ajoutent simplement plus rien.
  * Sortie 0 = tout vert. Sortie 1 = au moins un echec, chacun cite avec son fichier.
  */
 import { readdirSync, readFileSync, existsSync, statSync } from "node:fs";
@@ -189,14 +196,6 @@ function checkStructure() {
   note(`STRUCTURE: ${scriptsChecked} script(s) compile(s); ${pages.length} page(s) lue(s), dont ${shellPages.length} avec coquille et ${pages.length - shellPages.length} redirection(s); ${linksChecked} lien(s) interne(s) resolu(s)`);
 }
 
-/* ---------- --copy ---------- */
-const PLACEHOLDER_RE = /TODO-PASS-SUIVANT/;
-function checkCopy() {
-  let hits = 0;
-  for (const p of pages) if (PLACEHOLDER_RE.test(p.html)) { fail(p.rel, "contenu provisoire encore present (TODO-PASS-SUIVANT)"); hits++; }
-  note(`--copy: ${pages.length} page(s) inspectee(s), ${hits} avec du contenu provisoire`);
-}
-
 /* ---------- --data ---------- */
 function readJson(rel) {
   const f = join(ROOT, rel);
@@ -204,39 +203,20 @@ function readJson(rel) {
   try { return JSON.parse(readFileSync(f, "utf8")); }
   catch (e) { fail(rel, "JSON invalide: " + e.message); return null; }
 }
+/* V1 n'a qu'une seule collection : les publications. Le portfolio de prototypes
+   est reporte en v2 (PLAN.md), ses donnees sont rangees dans assets/data/_v2/ :
+   plus de page, donc plus de controle ici. */
 function checkData() {
-  const protos = readJson("assets/data/prototypes.json");
-  if (protos) {
-    const list = Array.isArray(protos) ? protos : protos.items;
-    if (!Array.isArray(list)) fail("assets/data/prototypes.json", "structure attendue: un tableau, ou {items: []}");
-    else {
-      // Regle durable : chaque entree presente est complete. Le nombre vise par le
-      // PRD (20) est RAPPORTE bruyamment, jamais fige : le figer ferait echouer
-      // le controle a chaque ajout, et masquerait le vrai sujet (des entrees a fournir).
-      if (list.length < 20) {
-        note(`--data: ATTENTION — ${list.length} prototype(s) sur les 20 annonces par le PRD 4.1 E. Completer assets/data/prototypes.json (modele : prototypes.exemple.json).`);
-      }
-      const slugs = new Set();
-      list.forEach((it, i) => {
-        for (const k of ["slug", "titre", "description", "tech"]) {
-          if (!it || it[k] === undefined || it[k] === "" || (Array.isArray(it[k]) && !it[k].length)) {
-            fail("assets/data/prototypes.json", `entree ${i + 1}: champ obligatoire "${k}" manquant`);
-          }
-        }
-        if (it && it.slug) {
-          if (slugs.has(it.slug)) fail("assets/data/prototypes.json", `slug duplique: ${it.slug}`);
-          slugs.add(it.slug);
-        }
-      });
-      note(`--data: ${list.length} prototype(s) valide(s)`);
-    }
-  }
-  for (const [page, file] of [["prototypes/index.html", "assets/data/prototypes.json"], ["publications/index.html", "assets/data/publications.json"]]) {
+  {
+    const page = "publications/index.html";
+    const file = "assets/data/publications.json";
     const p = pages.find((x) => x.rel === page);
-    if (!p) { fail(page, "page de collection absente"); continue; }
-    if (!/collections\.js/.test(p.html)) fail(page, "la page ne charge pas assets/js/collections.js : la collection ne s afficherait jamais");
-    if (!/data-(prototype|publication)-grid/.test(p.html)) fail(page, "aucun conteneur de grille (data-...-grid) dans la page");
-    if (!/data-(prototype|publication)-fallback/.test(p.html)) fail(page, `aucun texte de repli sans JavaScript, alors que le contenu vient de ${file}`);
+    if (!p) fail(page, "page de collection absente");
+    else {
+      if (!/collections\.js/.test(p.html)) fail(page, "la page ne charge pas assets/js/collections.js : la collection ne s afficherait jamais");
+      if (!/data-publication-grid/.test(p.html)) fail(page, "aucun conteneur de grille (data-publication-grid) dans la page");
+      if (!/data-publication-fallback/.test(p.html)) fail(page, `aucun texte de repli sans JavaScript, alors que le contenu vient de ${file}`);
+    }
   }
 
   const pubs = readJson("assets/data/publications.json");
@@ -254,16 +234,21 @@ function checkData() {
   }
 }
 
-/* ---------- --forms ---------- */
+/* ---------- --forms ----------
+   V1 = UN formulaire de contact (PRD 5.4, PLAN.md decision c). Le formulaire
+   detaille part en v2 : son controle est supprime ici.
+   Le second formulaire est encore dans la page ; il est retire par la Passe 6,
+   qui transforme alors le compte annonce ci-dessous en echec. Tant qu'il est la,
+   le compte est RAPPORTE, jamais tu. */
 function checkForms() {
   const p = pages.find((x) => x.rel === "contact/index.html");
   if (!p) { fail("contact/index.html", "page contact absente"); return; }
   const forms = [...p.html.matchAll(/<form\b[\s\S]*?<\/form>/gi)].map((m) => m[0]);
-  if (forms.length < 2) { fail(p.rel, `2 formulaires attendus (simple + detaille, PRD 4.4), trouve ${forms.length}`); return; }
   const basic = forms.find((f) => /id="form-basique"/.test(f));
-  const advanced = forms.find((f) => /id="form-avance"/.test(f));
-  if (!basic) fail(p.rel, 'formulaire simple attendu avec id="form-basique"');
-  if (!advanced) fail(p.rel, 'formulaire detaille attendu avec id="form-avance"');
+  if (!basic) { fail(p.rel, 'formulaire de contact attendu avec id="form-basique"'); return; }
+  if (forms.length > 1) {
+    note(`--forms: ATTENTION — ${forms.length} formulaires sur la page contact, la V1 n'en veut qu'UN (PRD 5.4). Le second est retire par la Passe 6.`);
+  }
   const need = (form, label, names) => {
     if (!form) return;
     for (const n of names) {
@@ -278,10 +263,9 @@ function checkForms() {
       }
     }
   };
-  need(basic, "formulaire simple", ["nom", "email", "message"]);
-  need(advanced, "formulaire detaille", ["nom", "email", "telephone", "entreprise", "secteur", "besoin", "message"]);
+  need(basic, "formulaire de contact", ["nom", "email", "message"]);
   if (!/form-status/.test(p.html)) fail(p.rel, "zone de message de succes/erreur (.form-status) absente");
-  note(`--forms: ${forms.length} formulaire(s) inspecte(s) sur contact/index.html`);
+  note(`--forms: formulaire de contact inspecte sur contact/index.html`);
 }
 
 /* ---------- --legal ----------
@@ -301,36 +285,6 @@ function checkLegal() {
     if (!pages.some((p) => p.rel === f)) fail(f, "page legale absente");
   }
   note(`--legal: ${pages.length} page(s) inspectee(s), ${holes} mention(s) a completer`);
-}
-
-/* ---------- --consent ---------- */
-const TRACKER_RE = /googletagmanager\.com|google-analytics\.com|plausible\.io\/js|gtag\(|matomo\.js/i;
-function checkConsent() {
-  for (const p of pages) {
-    if (TRACKER_RE.test(p.html)) fail(p.rel, "balise de mesure d audience en dur dans le HTML : elle doit etre injectee apres consentement");
-  }
-  const banner = existsSync(join(ROOT, "assets/js/consent.js"));
-  if (!banner) fail("assets/js/consent.js", "script de banniere de consentement absent");
-  else {
-    const js = readFileSync(join(ROOT, "assets/js/consent.js"), "utf8");
-    if (!/localStorage|document\.cookie/.test(js)) fail("assets/js/consent.js", "le choix de l utilisateur n est pas memorise");
-    if (!/PLAUSIBLE_DOMAIN|GA_MEASUREMENT_ID/.test(js)) fail("assets/js/consent.js", "le script ne lit pas la configuration de mesure d audience");
-  }
-  // L assistant est teste hors ligne : il doit aiguiller les questions du PRD
-  // et refuser le hors-sujet plutot que d inventer.
-  try {
-    const out = execFileSync(process.execPath, [join(ROOT, "tools/test-chat.mjs")], { encoding: "utf8" });
-    note(out.trim());
-  } catch (e) {
-    const text = (e.stdout || "") + (e.stderr || "");
-    for (const line of text.split("\n").filter((l) => l.trim())) fail("assistant", line.trim());
-  }
-  const withChat = pages.filter((p) => /chat\.js/.test(p.html)).length;
-  if (withChat !== shellPages.length) fail("assets/js/chat.js", `assistant charge sur ${withChat} page(s) sur ${shellPages.length}`);
-
-  const withBanner = pages.filter((p) => /consent\.js/.test(p.html)).length;
-  if (withBanner !== shellPages.length) fail("assets/js/consent.js", `banniere chargee sur ${withBanner} page(s) sur ${shellPages.length}`);
-  note(`--consent: ${pages.length} page(s) inspectee(s), aucune balise de suivi en dur`);
 }
 
 /* ---------- --a11y ----------
@@ -532,14 +486,12 @@ function checkSeo() {
 
 /* ---------- run ---------- */
 checkStructure();
-if (want("--copy")) checkCopy();
 if (want("--data")) checkData();
 if (want("--forms")) checkForms();
 if (want("--legal")) checkLegal();
 if (want("--a11y")) checkA11y();
 if (want("--nojs")) checkNoJs();
 if (want("--tiers")) checkTiers();
-if (want("--consent")) checkConsent();
 if (want("--seo")) checkSeo();
 
 for (const n of notes) console.log("  " + n);
