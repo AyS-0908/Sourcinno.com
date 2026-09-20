@@ -786,3 +786,199 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 /* ---------- Illustration centree en tete de bande ---------- */
 .band-figure { margin: 0 auto var(--space-5); max-width: 760px; text-align: center; }
 .band-figure img { margin-inline: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow); }
+
+/* ============================================================
+   Page d'accueil — PRD §5.1
+   Ajouts de la passe 2. Rien ci-dessous ne modifie une regle
+   existante : les pages de service gardent .timeline verticale,
+   .card, .logo-band et .reveal tels quels.
+   ============================================================ */
+
+/* ---------- Hero anime — PRD §5.1 "degrade anime + particules" ----------
+   On n anime QUE background-position : aucune propriete de mise en page
+   n est touchee, donc pas de recalcul de layout et pas de saccade sur
+   telephone. Le mouvement n existe que si le visiteur ne demande pas la
+   reduction des animations. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero--animated { background-size: 220% 220%; animation: hero-drift 30s ease-in-out infinite alternate; }
+  .hero--animated::after { animation: hero-dots 38s linear infinite alternate; }
+}
+@keyframes hero-drift {
+  from { background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+@keyframes hero-dots {
+  from { background-position: 0 0, 0 0, 0 0, 0 0; }
+  to   { background-position: 46px 34px, -40px 28px, 34px -32px, -28px -38px; }
+}
+
+/* ---------- Cartes de service avec image de fond — PRD §5.1 section 3 ----------
+   Le texte ne repose JAMAIS sur la photo : un voile bleu nuit opaque (0,92 en
+   haut a 0,82 en bas) s intercale. Le couple reellement affiche est donc blanc
+   sur --navy, celui que `check.mjs --a11y` verifie deja ; ce controle compare
+   des couleurs DECLAREES et ne voit pas une image, d ou ce voile. */
+.card--service {
+  position: relative;
+  overflow: hidden;
+  min-height: 290px;
+  border-color: transparent;
+  color: var(--white);
+  background-color: var(--navy);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.card--service::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.86) 55%, rgba(26, 54, 93, 0.82) 100%);
+}
+.card--service > * { position: relative; z-index: 1; }
+.card--service h3 { color: var(--white); }
+.card--service p { color: rgba(255, 255, 255, 0.92); }
+.card--service:hover { border-color: rgba(49, 151, 149, 0.55); }
+.card--service__icon { font-size: 2rem; line-height: 1; margin-bottom: var(--space-2); }
+/* Images de hero de chaque page de service (PLAN § 2, receipts) : chargees en
+   fond CSS, sous la ligne de flottaison, sans redimensionnement. */
+.card--strategie { background-image: url("/assets/img/about-strategy.webp"); }
+.card--ia        { background-image: url("/pictures/1ai_hero.jpg"); }
+.card--venture   { background-image: url("/pictures/2cvb_hero.png"); }
+
+/* ---------- Timeline HORIZONTALE + infobulles — PRD §5.1 section 3 bis ----------
+   Bloc separe de .timeline (verticale), encore utilisee par les pages de
+   service. Le declencheur est un <button> : l infobulle s ouvre au survol ET
+   au focus clavier, sinon elle n existerait pas pour qui navigue au clavier.
+   Elle reste dans l arbre d accessibilite (opacity, pas visibility) pour que
+   aria-describedby ait quelque chose a lire. */
+/* align-items: flex-start est indispensable, pas cosmetique : sans lui, le <li>
+   s etire sur toute la hauteur de la ligne de grille (fixee par la colonne de
+   droite, bien plus haute), et l infobulle, posee a top: 100%, tombe 300 px
+   sous le bas de l ecran. Mesure : rect y = 1214 pour une fenetre de 900. */
+.timeline--h { list-style: none; margin: 0; padding: 0; display: flex; align-items: flex-start; gap: var(--space-2); }
+.timeline--h > li { position: relative; flex: 1 1 0; min-width: 0; padding-top: var(--space-3); text-align: center; }
+.timeline--h > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--teal), rgba(49, 151, 149, 0.45));
+}
+.timeline--h > li:first-child::before { left: 50%; }
+.timeline--h > li:last-child::before { right: 50%; }
+.timeline--h__dot {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: var(--space-2) 0.15rem 0;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+.timeline--h__dot::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--teal);
+  transition: transform 0.2s var(--ease), background 0.2s var(--ease);
+}
+.timeline--h__dot:hover::before,
+.timeline--h__dot:focus::before { transform: translateX(-50%) scale(1.3); background: var(--teal); }
+.timeline--h__when { display: block; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.05em; color: var(--teal-dark); }
+.timeline--h__what { display: block; font-family: var(--font-title); font-weight: 700; font-size: 1rem; color: var(--navy); }
+
+.timeline__tip {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: calc(100% + 8px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 230px;
+  padding: 0.6rem 0.8rem;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  text-align: left;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s var(--ease);
+}
+/* Aux deux extremites, l infobulle s aligne sur le bord de la colonne : centree,
+   elle sortirait du conteneur. */
+.timeline--h > li:first-child .timeline__tip { left: 0; transform: none; }
+.timeline--h > li:last-child .timeline__tip { left: auto; right: 0; transform: none; }
+/* :focus et non :focus-visible : Chrome ne declare pas :focus-visible sur un
+   bouton focalise par script, et le visiteur au clavier doit voir l infobulle
+   des que le bouton prend le focus, quelle qu en soit l origine. */
+.timeline--h > li:hover .timeline__tip,
+.timeline--h__dot:focus + .timeline__tip { opacity: 1; }
+
+@media (max-width: 860px) {
+  /* Cinq points cote a cote ne tiennent pas sur un telephone : ils s empilent,
+     et l infobulle devient du texte normal (il n y a pas de survol au doigt). */
+  .timeline--h { flex-direction: column; align-items: stretch; gap: var(--space-3); }
+  .timeline--h > li { padding-top: 0; padding-left: var(--space-4); text-align: left; }
+  .timeline--h > li::before { display: none; }
+  .timeline--h__dot { padding: 0; text-align: left; }
+  .timeline--h__dot::before { top: 6px; left: -1.55rem; transform: none; }
+  .timeline--h__dot:hover::before,
+  .timeline--h__dot:focus::before { transform: scale(1.3); }
+  .timeline__tip {
+    position: static;
+    transform: none;
+    width: auto;
+    max-width: none;
+    margin-top: 0.3rem;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    color: var(--text-muted);
+    opacity: 1;
+  }
+}
+
+/* ---------- Chevrons de la demarche — PRD §5.1 section 4 ----------
+   Forme dessinee en CSS (clip-path), pas d image a charger. Sur telephone la
+   pointe disparait : une fleche large de 25 % de l ecran rend le titre
+   illisible. */
+.chevrons { list-style: none; margin: 0 0 var(--space-5); padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-2); }
+.chevron__title {
+  margin: 0 0 var(--space-2);
+  padding: 0.85rem 1.5rem 0.85rem 2.1rem;
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%, 18px 50%);
+}
+.chevrons > li:first-child .chevron__title {
+  padding-left: 1.5rem;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
+}
+.chevrons > li:nth-child(2) .chevron__title { background: var(--navy-soft); }
+.chevrons > li:nth-child(3) .chevron__title { background: var(--teal-dark); }
+.chevrons > li:nth-child(4) .chevron__title { background: #1f6360; }
+.chevron .bullets li { font-size: 0.92rem; }
+.chevron__valid { font-weight: 600; color: var(--teal-dark); font-size: 0.92rem; margin: 0; }
+
+@media (max-width: 860px) {
+  .chevrons { grid-template-columns: 1fr; gap: var(--space-4); }
+  .chevron__title { clip-path: none; padding: 0.7rem 1rem; border-radius: var(--radius); }
+}

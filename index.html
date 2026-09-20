@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=95f967d1">
+<link rel="stylesheet" href="/assets/css/style.css?v=8b43e060">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -144,138 +144,34 @@
   </div>
 </header>
 <main id="main">
-<!-- A. Hero — PRD §4.1 A -->
-<section class="hero">
+<!-- HERO — PRD §5.1 : dégradé animé bleu nuit -> teal + particules -->
+<section class="hero hero--animated">
   <div class="container">
-    <h1>De la Stratégie à la Transformation, par l’Organisation, les Processus et l’Innovation</h1>
-    <p class="hero__sub">Définir <strong>OÙ</strong> aller &rarr; planifier <strong>COMMENT</strong> &amp; <strong>QUAND</strong> &rarr; piloter <strong>QUOI</strong> &amp; <strong>QUI</strong>, avec un focus constant sur l’efficacité opérationnelle.</p>
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="#offres">Découvrir mes offres</a>
-      <a class="btn btn--ghost" href="/contact/">Me contacter</a>
-    </div>
+    <h1>De la Stratégie à la Transformation opérationnelle</h1>
+    <p class="hero__sub">Définir <strong>OÙ</strong> aller &rarr; Planifier <strong>COMMENT</strong> &amp; <strong>QUAND</strong> &rarr; Piloter <strong>QUOI</strong> &amp; <strong>QUI</strong>.</p>
   </div>
 </section>
 
-<!-- B. Offres — PRD §4.1 B -->
-<section class="section reveal" id="offres">
+<!-- SECTION 1 — VOTRE BESOIN — PRD §5.1 -->
+<section class="section section--alt reveal" id="besoin">
   <div class="container">
     <div class="section__head">
-      <p class="section__eyebrow">Mes offres</p>
-      <h2>Trois façons de travailler ensemble</h2>
-      <p class="lead">Une stratégie ne vaut que par son exécution. Chaque offre part de vos processus réels et finit sur des résultats mesurables.</p>
+      <h2>VOTRE BESOIN</h2>
+      <p class="lead">Développer votre croissance profitable et pérenne :</p>
     </div>
-    <div class="grid grid--3">
-
-      <article class="card">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="15" width="6" height="5" rx="1"/><rect x="16" y="15" width="6" height="5" rx="1"/><path d="M12 7v4M5 15v-2h14v2"/></svg>
-        </div>
-        <h3>Stratégie, Organisation &amp; Processus</h3>
-        <p>Je relie votre vision à votre exécution : cartographie des processus, feuille de route priorisée, PMO et indicateurs qui rendent l’avancement visible.</p>
-        <p class="card__foot"><a class="link-arrow" href="/service-strategie-transformation/">En savoir plus</a></p>
-      </article>
-
-      <article class="card">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a4 4 0 0 1 4 4v1a3 3 0 0 1 0 6v2a4 4 0 0 1-8 0v-2a3 3 0 0 1 0-6V7a4 4 0 0 1 4-4z"/><path d="M12 3v18M8 8h1M15 8h1M8 16h1M15 16h1"/></svg>
-        </div>
-        <h3>IA for Business</h3>
-        <p>J’installe l’IA, les LLM et l’IA agentique là où ils font gagner du temps : formation sur vos cas d’usage, prototypes en NoCode, puis intégration dans vos processus.</p>
-        <p class="card__foot"><a class="link-arrow" href="/service-ia-business/">En savoir plus</a></p>
-      </article>
-
-      <article class="card">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c3.5 2.5 5 6 5 9.5L12 16l-5-4.5C7 8 8.5 4.5 12 2z"/><circle cx="12" cy="9" r="1.6"/><path d="M9 17l-2 4 5-2 5 2-2-4"/></svg>
-        </div>
-        <h3>Venture Building &amp; Portfolio</h3>
-        <p>Je structure la création de nouvelles activités : sélection d’opportunités, business plan, incubation jalonnée et pilotage de portefeuille avec un PMO dédié.</p>
-        <p class="card__foot"><a class="link-arrow" href="/service-venture-building/">En savoir plus</a></p>
-      </article>
-
-    </div>
+    <ul class="ticks measure">
+      <li><strong>Stratégie pérenne</strong> : marché attractif x offre adaptée</li>
+      <li><strong>Transformation réaliste</strong> : opérations alignées sur la stratégie</li>
+      <li><strong>Mise en oeuvre efficace</strong> : gestion de projet + conduite du changement</li>
+    </ul>
   </div>
 </section>
 
-<!-- C + D. Parcours et réalisations clés — PRD §4.1 C et D, réunis en une bande -->
-<section class="section section--alt reveal" id="parcours">
-  <div class="container">
-    <div class="section__head">
-      <p class="section__eyebrow">Parcours &amp; réalisations</p>
-      <h2>Vingt-cinq ans entre conseil, transformation et innovation</h2>
-      <p class="lead">Du grand cabinet à la création de startups : la même discipline de processus, à des échelles différentes.</p>
-    </div>
-
-    <div class="grid grid--2">
-
-      <ol class="timeline">
-        <li>
-          <p class="timeline__when">1999 &ndash; 2008</p>
-          <p class="timeline__what">Accenture</p>
-          <p class="timeline__desc">Missions de conseil en stratégie et en organisation, en France et à l’international.</p>
-        </li>
-        <li>
-          <p class="timeline__when">2008 &ndash; 2013</p>
-          <p class="timeline__what">Mazars</p>
-          <p class="timeline__desc">Direction de projets de transformation, avec les processus comme levier principal.</p>
-        </li>
-        <li>
-          <p class="timeline__when">2013 &ndash; 2016</p>
-          <p class="timeline__what">Mazars’ Lab</p>
-          <p class="timeline__desc">Création et direction du lab d’innovation, et accélération de startups.</p>
-        </li>
-        <li>
-          <p class="timeline__when">2016 &ndash; 2018</p>
-          <p class="timeline__what">Fabereo</p>
-          <p class="timeline__desc">Co-fondateur, avec une levée de fonds de 500 K&euro;.</p>
-        </li>
-        <li>
-          <p class="timeline__when">2019 &ndash; aujourd’hui</p>
-          <p class="timeline__what">Sourcinno</p>
-          <p class="timeline__desc">Conseil indépendant : organisation, processus, IA et prototypage rapide.</p>
-        </li>
-      </ol>
-
-      <div class="stack" id="realisations">
-        <article class="card">
-          <h3>Missions</h3>
-          <ul class="ticks">
-            <li>Direction de 30 projets mondiaux de transformation chez Mazars.</li>
-            <li>Mise en place de PMO et d’indicateurs de performance.</li>
-            <li>Optimisation des processus par l’IA et le NoCode.</li>
-            <li>Formation à l’IA pour dirigeants et équipes.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Secteurs &amp; géographies</h3>
-          <ul class="ticks">
-            <li>Europe, Afrique, Amérique.</li>
-            <li>PME et ETI.</li>
-            <li>Services et technologie.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Publications</h3>
-          <ul class="ticks">
-            <li>Essai «&nbsp;Du PIB au BCI&nbsp;».</li>
-            <li>Livre «&nbsp;Engagez-vous 2.0&nbsp;».</li>
-            <li>Articles et prises de parole sur l’innovation et l’IA.</li>
-          </ul>
-          <p class="card__foot"><a class="link-arrow" href="/publications/">Voir les publications</a></p>
-        </article>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Bandeau de crédibilité -->
+<!-- SECTION 2 — ENTREPRISES ACCOMPAGNÉES — PRD §5.1 : bandeau de logos -->
 <section class="section reveal" id="references">
   <div class="container">
     <div class="section__head text-center mx-auto">
-      <h2>Nous avons innové avec</h2>
+      <h2>ENTREPRISES ACCOMPAGNÉES</h2>
     </div>
     <div class="logo-band">
       <img src="/pictures/logo_accenture_nb.png" alt="Accenture" loading="lazy">
@@ -292,24 +188,188 @@
   </div>
 </section>
 
-<!-- G. Contact — PRD §4.1 F -->
-<section class="section section--navy reveal" id="contact">
+<!-- SECTION 3 — SERVICES — PRD §5.1 : 3 colonnes, image de hero en fond -->
+<section class="section reveal" id="services">
   <div class="container">
+    <div class="section__head text-center mx-auto">
+      <h2>SERVICES</h2>
+    </div>
+    <div class="grid grid--3">
+
+      <article class="card card--service card--strategie">
+        <p class="card--service__icon" aria-hidden="true">&#9823;&#65039;</p>
+        <h3>STRATÉGIE &amp; TRANSFORMATION</h3>
+        <p>Aligner vision et exécution</p>
+        <p class="card__foot"><a class="btn btn--primary btn--sm" href="/service-strategie-transformation/">En savoir +</a></p>
+      </article>
+
+      <article class="card card--service card--ia">
+        <p class="card--service__icon" aria-hidden="true">&#10024;</p>
+        <h3>ENTREPRISE IA</h3>
+        <p>Intégrer l’IA à ses opérations</p>
+        <p class="card__foot"><a class="btn btn--primary btn--sm" href="/service-ia-business/">En savoir +</a></p>
+      </article>
+
+      <article class="card card--service card--venture">
+        <p class="card--service__icon" aria-hidden="true">&#128640;</p>
+        <h3>VENTURE BUILDING</h3>
+        <p>Préparer les marchés d’avenir</p>
+        <p class="card__foot"><a class="btn btn--primary btn--sm" href="/service-venture-building/">En savoir +</a></p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — +25 ANS D'EXPÉRIENCE — PRD §5.1 : timeline horizontale + 5 blocs -->
+<section class="section section--alt reveal" id="experience">
+  <div class="container">
+    <div class="section__head">
+      <h2>+25 ANS D’EXPÉRIENCE</h2>
+      <p class="lead">«&nbsp;L’IA rend l’Expérience du consultant encore plus importante&nbsp;»</p>
+    </div>
+
     <div class="grid grid--2">
-      <div>
-        <p class="section__eyebrow">Contact</p>
-        <h2>Parlons de votre projet</h2>
-        <p class="lead">Un premier échange de trente minutes suffit généralement à savoir si je suis le bon interlocuteur.</p>
-        <p><a class="btn btn--primary" href="/contact/">Ouvrir le formulaire</a></p>
+
+      <ol class="timeline--h">
+        <li>
+          <button class="timeline--h__dot" type="button" aria-describedby="tip-accenture">
+            <span class="timeline--h__when">1999 &ndash; 2008</span>
+            <span class="timeline--h__what">Accenture</span>
+          </button>
+          <span class="timeline__tip" id="tip-accenture" role="tooltip">Missions de conseil en stratégie et en organisation, en France et à l’international.</span>
+        </li>
+        <li>
+          <button class="timeline--h__dot" type="button" aria-describedby="tip-mazars">
+            <span class="timeline--h__when">2008 &ndash; 2013</span>
+            <span class="timeline--h__what">Mazars</span>
+          </button>
+          <span class="timeline__tip" id="tip-mazars" role="tooltip">Direction de projets de transformation, avec les processus comme levier principal.</span>
+        </li>
+        <li>
+          <button class="timeline--h__dot" type="button" aria-describedby="tip-mzlab">
+            <span class="timeline--h__when">2013 &ndash; 2016</span>
+            <span class="timeline--h__what">Mazars’ Lab</span>
+          </button>
+          <span class="timeline__tip" id="tip-mzlab" role="tooltip">Création et direction du lab d’innovation, et accélération de startups.</span>
+        </li>
+        <li>
+          <button class="timeline--h__dot" type="button" aria-describedby="tip-fabereo">
+            <span class="timeline--h__when">2016 &ndash; 2018</span>
+            <span class="timeline--h__what">Fabereo</span>
+          </button>
+          <span class="timeline__tip" id="tip-fabereo" role="tooltip">Co-fondateur, avec une levée de fonds de 500 K&euro;.</span>
+        </li>
+        <li>
+          <button class="timeline--h__dot" type="button" aria-describedby="tip-sourcinno">
+            <span class="timeline--h__when">2019 &ndash; présent</span>
+            <span class="timeline--h__what">Sourcinno</span>
+          </button>
+          <span class="timeline__tip" id="tip-sourcinno" role="tooltip">Conseil indépendant : organisation, processus, IA et prototypage rapide.</span>
+        </li>
+      </ol>
+
+      <div class="stack">
+        <article>
+          <h3>🧢 Complémentarité des RÔLES</h3>
+          <ul class="bullets">
+            <li>Consultant : méthodologie, analyse transversale &amp; verticale, références externes, regard extérieur</li>
+            <li>Directeur de projets mondiaux : PMO/Pilotage, opérations, politique</li>
+            <li>Directeur innovation : écosystème, expérimentation, négociation</li>
+            <li>Entrepreneur de startup SaaS (fondateur dirigeant) : pieds sur terre, tête dans les étoiles</li>
+          </ul>
+        </article>
+        <article>
+          <h3>🤓 Adaptabilité aux INTERLOCUTEURS</h3>
+          <ul class="bullets">
+            <li>Comité Exécutif ←→ Stagiaire</li>
+            <li>Corporate, Startup</li>
+            <li>Europe, Afrique du Nord, USA</li>
+          </ul>
+        </article>
+        <article>
+          <h3>♾️ Inter-dépendance des PROBLÉMATIQUES</h3>
+          <ul class="bullets">
+            <li>Stratégie ←→ Organisation ←→ Processus ←→ Compétences ←→ Technologie</li>
+            <li>Gestion de programme/projets</li>
+            <li>Conduite du changement</li>
+          </ul>
+        </article>
+        <article>
+          <h3>🍀 Connaissance FONCTIONNELLE</h3>
+          <ul class="bullets">
+            <li>Stratégie &amp; Transformation (Marché, M&amp;A, PMI, Productivité)</li>
+            <li>Produit &amp; Innovation (1 startup, 5 prototypes)</li>
+            <li>Ventes B2B (orga. &amp; processus, prospection &gt; appels d’offre &gt; négociation)</li>
+            <li>Partenariats &amp; Achat (orga. &amp; processus, négociation)</li>
+            <li>Ressources Humaines (processus, outil)</li>
+          </ul>
+        </article>
+        <article>
+          <h3>✨ Connexion à la TECHNOLOGIE</h3>
+          <ul class="bullets">
+            <li>Intelligence artificielle (Claude Code, GPTs, formation)</li>
+            <li>Workflows (n8n)</li>
+            <li>Portefeuille de prototypes (SaaS)</li>
+          </ul>
+        </article>
       </div>
-      <div>
-        <ul class="ticks">
-          <li><a href="mailto:aymard.de.scorbiac@sourcinno.com">aymard.de.scorbiac@sourcinno.com</a></li>
-          <li><a href="tel:+33608755877">+33 6 08 75 58 77</a></li>
-          <li><a href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">linkedin.com/in/aymarddescorbiac</a></li>
-          <li>Paris, France</li>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — DÉMARCHE ET OUTILS — PRD §5.1 : 4 chevrons + Approche & Outils -->
+<section class="section reveal" id="demarche">
+  <div class="container">
+    <div class="section__head">
+      <h2>DÉMARCHE ET OUTILS</h2>
+    </div>
+
+    <ol class="chevrons">
+      <li class="chevron">
+        <h3 class="chevron__title">A. PÉRIMÈTRE &amp; PRIORITÉ</h3>
+        <ul class="bullets">
+          <li>Interviews ComEx : ❔ pré-questionnaire auto-administré &gt; ✨ pré-synthèse IA &gt; 🔎 analyse manuelle</li>
         </ul>
-      </div>
+        <p class="chevron__valid">☑️ Validation.</p>
+      </li>
+      <li class="chevron">
+        <h3 class="chevron__title">B. DIAGNOSTIC</h3>
+        <ul class="bullets">
+          <li>Données internes =&gt; ❔ collecte &gt; ✨ pré-analyse IA &gt; 🔎 analyse manuelle</li>
+          <li>Interview internes =&gt; ❔ pré-questionnaire auto-administré &gt; ✨ pré-synthèse IA</li>
+          <li>Recherches externes =&gt; ✨ pré-recherche IA &gt; 🔎 recherche manuelle &gt; ❔ interviews</li>
+        </ul>
+        <p class="chevron__valid">☑️ Validation.</p>
+      </li>
+      <li class="chevron">
+        <h3 class="chevron__title">C. RECOMMANDATIONS</h3>
+        <ul class="bullets">
+          <li>Scenarii =&gt; ✨ post-challenging IA</li>
+          <li>Décision</li>
+        </ul>
+        <p class="chevron__valid">☑️ Validation.</p>
+      </li>
+      <li class="chevron">
+        <h3 class="chevron__title">D. PLANIFICATION &amp; PILOTAGE</h3>
+        <ul class="bullets">
+          <li>Suivi des tâches =&gt; ✨ co-pilotage IA &gt; demandes d’arbitrage urgents continus</li>
+          <li>Tableau de bord =&gt; ✨ pré-génération IA</li>
+        </ul>
+        <p class="chevron__valid">☑️ Arbitrages Equipe projet (hebdomadaire) + Comité de pilotage (mensuel).</p>
+      </li>
+    </ol>
+
+    <div class="measure approche">
+      <h3>Approche &amp; Outils</h3>
+      <ul class="ticks">
+        <li>Diagnostic organisationnel et cartographie des processus existants.</li>
+        <li>Élaboration d’une feuille de route (priorités, calendrier, ressources) avec un focus sur les gains rapides.</li>
+        <li>Mise en place d’un <strong>PMO</strong> (Project Management Office) et d’indicateurs de performance (KPI).</li>
+        <li>Accompagnement au changement et à l’adoption des nouveaux processus.</li>
+        <li>Utilisation de l’<strong>IA et du NoCode</strong> pour automatiser les tâches répétitives et fluidifier les flux.</li>
+      </ul>
     </div>
   </div>
 </section>
