@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Publications : articles, vidéos et livre | Sourcinno</title>
-<meta name="description" content="Articles, vidéos, posts LinkedIn, l’essai « Du PIB au BCI » et le livre « Engagez-vous 2.0 » d’Aymard de Scorbiac, sur l’innovation, les processus et l’IA.">
+<title>Publications : livre, essai et LinkedIn | Sourcinno</title>
+<meta name="description" content="Découvrez le livre « Engagez-vous 2.0 », l’essai « Du PIB au BCI » et le profil LinkedIn d’Aymard de Scorbiac.">
 <link rel="canonical" href="https://www.sourcinno.com/publications/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Sourcinno">
-<meta property="og:title" content="Publications : articles, vidéos et livre | Sourcinno">
-<meta property="og:description" content="Articles, vidéos, posts LinkedIn, l’essai « Du PIB au BCI » et le livre « Engagez-vous 2.0 » d’Aymard de Scorbiac, sur l’innovation, les processus et l’IA.">
+<meta property="og:title" content="Publications : livre, essai et LinkedIn | Sourcinno">
+<meta property="og:description" content="Découvrez le livre « Engagez-vous 2.0 », l’essai « Du PIB au BCI » et le profil LinkedIn d’Aymard de Scorbiac.">
 <meta property="og:url" content="https://www.sourcinno.com/publications/">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://www.sourcinno.com/pictures/og-sourcinno.png">
@@ -22,6 +22,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/assets/css/style.css?v=f9a6b945">
+<style>
+  .publication-profile { grid-column: 1 / -1; background: var(--bg-alt); }
+  .publication-book summary { cursor: pointer; color: var(--navy); font-weight: 600; }
+</style>
 <noscript>
   <style>
     /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
@@ -68,7 +72,7 @@
   <div class="container">
     <p class="hero__eyebrow">Publications</p>
     <h1>Publications</h1>
-    <p class="hero__sub">Articles, vidéos, publications LinkedIn, un essai et un livre&nbsp;: ce que j’écris sur l’organisation, les processus, le venture building et l’IA.</p>
+    <p class="hero__sub">Un livre sur l’engagement, un essai sur la mesure de la richesse et mon profil LinkedIn.</p>
   </div>
 </section>
 
@@ -76,7 +80,7 @@
   <div class="container">
     <div class="section__head">
       <p class="section__eyebrow">Tout</p>
-      <h2>À lire, à écouter, à regarder</h2>
+      <h2>À lire et à suivre</h2>
     </div>
 
     <div class="filters" data-publication-filters></div>
@@ -84,10 +88,29 @@
 
     <div class="grid grid--2" data-publication-grid></div>
 
-    <div class="empty-state" data-publication-fallback>
-      <h3>Les publications arrivent</h3>
-      <p class="measure mx-auto">La liste est en cours de reprise depuis l’ancien blog et depuis LinkedIn.</p>
-      <p><a class="btn btn--primary" href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">Suivre sur LinkedIn</a></p>
+    <div data-publication-fallback>
+      <div class="grid grid--2">
+        <article class="card" data-publication-index="0">
+          <p class="tags"><span class="tag">Livre</span></p>
+          <h3>Engagez-vous 2.0</h3>
+          <details class="publication-book">
+            <summary>Découvrir le livre</summary>
+            <p>Un livre sur l’engagement, écrit par Aymard de Scorbiac. Présentation, extraits et biographie sur le site du livre.</p>
+            <p class="card__foot"><a class="link-arrow" href="https://sourcinno.wixsite.com/engagezvous2-0/bio" target="_blank" rel="noopener">Voir le site du livre</a></p>
+          </details>
+        </article>
+        <article class="card" data-publication-index="1">
+          <p class="tags"><span class="tag">Essai</span></p>
+          <h3>Du PIB au BCI</h3>
+          <p>Un essai qui interroge la mesure de la richesse et propose un autre indicateur.</p>
+        </article>
+        <article class="card publication-profile" data-publication-index="2">
+          <p class="tags"><span class="tag">LinkedIn</span></p>
+          <h3>Publications LinkedIn</h3>
+          <p>Réflexions régulières sur le Corporate Venture Building, l'organisation, les processus et l'IA.</p>
+          <p class="card__foot"><a class="link-arrow" href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">Voir le profil LinkedIn</a></p>
+        </article>
+      </div>
     </div>
   </div>
 </section>
@@ -128,6 +151,6 @@
 </footer>
 <script src="/assets/js/config.js?v=fe096bdc" defer></script>
 <script src="/assets/js/site.js?v=4cc968e5" defer></script>
-<script src="/assets/js/collections.js?v=81386ae1" defer></script>
+<script src="/assets/js/collections.js?v=c6b5f3da" defer></script>
 </body>
 </html>

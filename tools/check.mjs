@@ -245,6 +245,21 @@ function checkData() {
           if (!it || !it[k]) fail("assets/data/publications.json", `entree ${i + 1}: champ obligatoire "${k}" manquant`);
         }
       });
+      const page = pages.find((p) => p.rel === "publications/index.html");
+      if (page) {
+        const fallback = [...page.html.matchAll(/<article\b[^>]*data-publication-index="(\d+)"[^>]*>([\s\S]*?)<\/article>/g)];
+        if (fallback.length !== list.length) fail(page.rel, `repli HTML: ${fallback.length} entree(s) pour ${list.length} publication(s) JSON`);
+        list.forEach((it, i) => {
+          const matches = fallback.filter((m) => Number(m[1]) === i);
+          if (matches.length !== 1) { fail(page.rel, `repli HTML: entree ${i + 1} absente ou dupliquee`); return; }
+          const html = matches[0][2];
+          const title = html.match(/<h3>([^<]*)<\/h3>/)?.[1];
+          const paragraphs = [...html.matchAll(/<p(?:\s[^>]*)?>([^<]*)<\/p>/g)].map((m) => m[1]);
+          if (title !== it.titre || !paragraphs.includes(it.description || "")) fail(page.rel, `repli HTML: titre ou description de l'entree ${i + 1} differente du JSON`);
+          const links = [...html.matchAll(/\bhref="([^"]+)"/g)].map((m) => m[1]);
+          if (links.length !== (it.url ? 1 : 0) || (it.url && links[0] !== it.url)) fail(page.rel, `repli HTML: lien de l'entree ${i + 1} different du JSON`);
+        });
+      }
       note(`--data: ${list.length} publication(s) valide(s)`);
     }
   }

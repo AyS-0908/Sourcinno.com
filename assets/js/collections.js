@@ -114,16 +114,18 @@
       ? `<img src="${esc(item.image)}" alt="${esc(item.titre)}" loading="lazy">`
       : "";
     const link = item.url
-      ? `<p class="card__foot"><a class="link-arrow" href="${esc(item.url)}" target="_blank" rel="noopener">Consulter</a></p>`
+      ? `<p class="card__foot"><a class="link-arrow" href="${esc(item.url)}" target="_blank" rel="noopener">${item.type === "livre" ? "Voir le site du livre" : item.type === "linkedin" ? "Voir le profil LinkedIn" : "Consulter"}</a></p>`
       : "";
     const date = item.date ? `<p class="card__meta">${esc(item.date)}</p>` : "";
-    return `<article class="card">
+    const detail = item.type === "livre"
+      ? `<details class="publication-book"><summary>Découvrir le livre</summary><p>${esc(item.description || "")}</p>${link}</details>`
+      : `<p>${esc(item.description || "")}</p>${link}`;
+    return `<article class="card${item.type === "linkedin" ? " publication-profile" : ""}">
       ${media}
       <p class="tags"><span class="tag">${esc(label)}</span></p>
       <h3>${esc(item.titre)}</h3>
       ${date}
-      <p>${esc(item.description || "")}</p>
-      ${link}
+      ${detail}
     </article>`;
   }
 
