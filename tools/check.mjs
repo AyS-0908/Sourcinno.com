@@ -123,6 +123,22 @@ function checkStructure() {
     if (!/id="main"/.test(p.html)) fail(p.rel, 'element <main id="main"> absent');
   }
 
+  // La famille partagee reste Inter seule, dans le CSS et chaque page servie.
+  const cssPath = join(ROOT, "assets/css/style.css");
+  if (existsSync(cssPath) && !/--font-title:\s*var\(--font-body\)/.test(readFileSync(cssPath, "utf8"))) {
+    fail("assets/css/style.css", "les titres doivent utiliser la meme famille Inter que le corps");
+  }
+  const fontUrl = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
+  for (const p of shellPages) {
+    const requests = [...p.html.matchAll(/https:\/\/fonts\.googleapis\.com\/css2\?[^"\s]+/g)].map((m) => m[0]);
+    if (requests.length !== 1 || requests[0] !== fontUrl) fail(p.rel, "la requete Google Fonts doit charger Inter seule");
+  }
+  const privacy = pages.find((p) => p.rel === "politique-confidentialite/index.html");
+  const fontNotice = privacy?.html.match(/<h2>Polices de caractères et appels à des tiers<\/h2>\s*<p>(.*?)<\/p>/s)?.[1];
+  if (!fontNotice || !/\bInter\b/.test(fontNotice) || /Playfair/i.test(fontNotice)) {
+    fail("politique-confidentialite/index.html", "la declaration des polices doit nommer Inter seule");
+  }
+
   // 3. tous les liens et ressources internes resolvent
   const idsOf = (html) => new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((m) => m[1]));
   const pageByUrl = new Map();

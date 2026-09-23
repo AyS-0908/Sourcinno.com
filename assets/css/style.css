@@ -14,8 +14,8 @@
   --teal-dark: #267f7d;
   --orange: #dd6b20;
   --white: #ffffff;
-  --grey-50: #f7f9fb;
-  --grey-100: #eef2f6;
+  --grey-50: #f5f8fc;
+  --grey-100: #e6edf3;
   --grey-300: #cbd5e0;
   --grey-500: #64707f;  /* assombri pour atteindre 4,5:1 sur blanc */
   --grey-700: #4a5568;
@@ -30,7 +30,7 @@
   --border: var(--grey-100);
 
   /* Typographie */
-  --font-title: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-title: var(--font-body);
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   /* Espacement généreux — PRD §7 */
@@ -42,11 +42,11 @@
   --space-6: 4.5rem;
   --space-7: 6rem;
 
-  --radius: 10px;
-  --radius-lg: 16px;
-  --shadow-sm: 0 1px 3px rgba(26, 54, 93, 0.08);
-  --shadow: 0 8px 24px rgba(26, 54, 93, 0.10);
-  --shadow-lg: 0 18px 40px rgba(26, 54, 93, 0.16);
+  --radius: 12px;
+  --radius-lg: 18px;
+  --shadow-sm: 0 2px 8px rgba(18, 37, 63, 0.07);
+  --shadow: 0 12px 32px rgba(18, 37, 63, 0.10);
+  --shadow-lg: 0 20px 44px rgba(18, 37, 63, 0.16);
   --container: 1160px;
   --header-h: 76px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -80,7 +80,7 @@ h1, h2, h3, h4 {
   line-height: 1.18;
   margin: 0 0 var(--space-2);
   color: var(--navy);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
 }
 
 h1 { font-size: clamp(2rem, 4.4vw, 3.25rem); }
@@ -334,6 +334,7 @@ p  { margin: 0 0 var(--space-2); }
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
+  box-shadow: var(--shadow-sm);
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
 }
 .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(49, 151, 149, 0.4); }
@@ -797,23 +798,59 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
    .card, .logo-band et .reveal tels quels.
    ============================================================ */
 
-/* ---------- Hero anime — PRD §5.1 "degrade anime + particules" ----------
-   On n anime QUE background-position : aucune propriete de mise en page
-   n est touchee, donc pas de recalcul de layout et pas de saccade sur
-   telephone. Le mouvement n existe que si le visiteur ne demande pas la
-   reduction des animations. */
+/* ---------- Accueil : stratégie abstraite en CSS, sans image servie ---------- */
+.hero--animated {
+  min-height: 520px;
+  padding-block: clamp(5rem, 8vw, 8rem);
+  background: linear-gradient(115deg, #10243d 0%, #173858 58%, #1b4960 100%);
+}
+.hero--animated::before {
+  content: "";
+  position: absolute;
+  inset: -25% -8% -25% 42%;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 74px, rgba(159, 227, 224, 0.12) 75px 76px),
+    repeating-linear-gradient(0deg, transparent 0 55px, rgba(159, 227, 224, 0.10) 56px 57px),
+    linear-gradient(115deg, transparent 15%, rgba(96, 190, 202, 0.22) 55%, transparent 75%);
+  transform: skewY(-18deg);
+  pointer-events: none;
+}
+.hero--animated::after {
+  inset: 0 0 0 40%;
+  background:
+    radial-gradient(circle at 24% 70%, #9fe3e0 0 4px, transparent 5px),
+    radial-gradient(circle at 48% 49%, #9fe3e0 0 4px, transparent 5px),
+    radial-gradient(circle at 68% 28%, #9fe3e0 0 4px, transparent 5px),
+    radial-gradient(circle at 86% 39%, #9fe3e0 0 4px, transparent 5px),
+    linear-gradient(155deg, transparent 47%, rgba(159, 227, 224, 0.55) 47.2%, rgba(159, 227, 224, 0.55) 47.4%, transparent 47.6%);
+  pointer-events: none;
+}
+.hero--animated .container { max-width: var(--container); }
+.hero--animated h1 { max-width: 14ch; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: 1.05; }
+.hero--animated h1 span { color: #9fe3e0; }
+.hero--animated .hero__sub { max-width: 56ch; margin-bottom: var(--space-3); }
+.hero--animated .hero__actions { margin: 0; }
 @media (prefers-reduced-motion: no-preference) {
   .hero--animated { background-size: 220% 220%; animation: hero-drift 30s ease-in-out infinite alternate; }
-  .hero--animated::after { animation: hero-dots 38s linear infinite alternate; }
 }
 @keyframes hero-drift {
   from { background-position: 0% 50%; }
   to   { background-position: 100% 50%; }
 }
-@keyframes hero-dots {
-  from { background-position: 0 0, 0 0, 0 0, 0 0; }
-  to   { background-position: 46px 34px, -40px 28px, 34px -32px, -28px -38px; }
-}
+
+/* ---------- Besoins en trois cartes et bandeau de confiance ---------- */
+#besoin .section__head { max-width: 640px; margin-bottom: var(--space-4); }
+#besoin .lead { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.25; font-weight: 700; color: var(--navy); }
+.need-cards { list-style: none; margin: 0; padding: 0; counter-reset: needs; }
+.need-cards .card { display: grid; grid-template-columns: 48px 1fr; align-content: center; column-gap: var(--space-2); min-height: 116px; padding: var(--space-3); }
+.need-cards .card::before { counter-increment: needs; content: counter(needs, decimal-leading-zero); grid-row: 1 / 3; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--grey-50); color: var(--teal-dark); font-weight: 700; }
+.need-cards .card strong { line-height: 1.35; }
+.need-cards .card span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.45; }
+#references { padding-block: var(--space-4); }
+#references .section__head { margin-bottom: var(--space-3); }
+#references h2 { font-size: 1.15rem; }
+#references .logo-band { gap: var(--space-2) var(--space-4); }
+#references .logo-band img { height: 34px; }
 
 /* ---------- Cartes de service avec image de fond — PRD §5.1 section 3 ----------
    Le texte ne repose JAMAIS sur la photo : un voile bleu nuit opaque (0,92 en
@@ -823,20 +860,27 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .card--service {
   position: relative;
   overflow: hidden;
-  min-height: 290px;
+  min-height: 280px;
   border-color: transparent;
   color: var(--white);
   background-color: var(--navy);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  box-shadow: var(--shadow);
+  counter-increment: offers;
 }
 .card--service::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.86) 55%, rgba(26, 54, 93, 0.82) 100%);
+  background: linear-gradient(125deg, rgba(18, 37, 63, 0.97) 0%, rgba(18, 37, 63, 0.89) 47%, rgba(26, 54, 93, 0.68) 100%);
 }
+.card--service::after { content: "0" counter(offers); position: absolute; top: var(--space-3); left: var(--space-4); color: #9fe3e0; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.12em; }
+#services .grid { counter-reset: offers; }
+#services .card--service { padding-top: 5.5rem; }
+#services .card--service h3 { max-width: 19ch; }
+#services .card--service .card__foot { margin-top: auto; }
 .card--service > * { position: relative; z-index: 1; }
 .card--service h3 { color: var(--white); }
 .card--service p { color: rgba(255, 255, 255, 0.92); }
@@ -847,6 +891,12 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .card--strategie { background-image: url("/assets/img/about-strategy.webp"); }
 .card--ia        { background-image: url("/pictures/1ai_hero.jpg"); }
 .card--venture   { background-image: url("/pictures/2cvb_hero.png"); }
+#services .card--strategie {
+  background-image:
+    linear-gradient(130deg, rgba(18, 37, 63, 0.3), rgba(26, 54, 93, 0.15)),
+    repeating-linear-gradient(145deg, transparent 0 34px, rgba(159, 227, 224, 0.22) 35px 36px),
+    linear-gradient(135deg, #10243d, #24546a);
+}
 
 /* ---------- Timeline HORIZONTALE + infobulles — PRD §5.1 section 3 bis ----------
    Bloc separe de .timeline (verticale), encore utilisee par les pages de
@@ -904,7 +954,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   position: absolute;
   z-index: 5;
   left: 50%;
-  top: calc(100% + 8px);
+  bottom: calc(100% + 8px);
   transform: translateX(-50%);
   width: max-content;
   max-width: 230px;
@@ -984,4 +1034,38 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 @media (max-width: 860px) {
   .chevrons { grid-template-columns: 1fr; gap: var(--space-4); }
   .chevron__title { clip-path: none; padding: 0.7rem 1rem; border-radius: var(--radius); }
+}
+
+/* ---------- Accueil : parcours et expertises regroupés ---------- */
+#experience .grid--2 { grid-template-columns: 1fr; align-items: start; gap: var(--space-4); }
+#experience .timeline--h { align-self: start; }
+.experience-panel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); padding: var(--space-4); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+.experience-panel article { min-width: 0; }
+.experience-panel h3 { font-size: 0.95rem; line-height: 1.3; margin-bottom: var(--space-1); }
+.experience-panel .bullets { margin: 0; }
+.experience-panel .bullets li { font-size: 0.86rem; line-height: 1.5; margin-bottom: 0.3rem; }
+
+/* ---------- Accueil : quatre étapes lisibles et un panneau d'outils ---------- */
+.approach-layout { display: grid; grid-template-columns: minmax(0, 3fr) minmax(235px, 1fr); gap: var(--space-3); align-items: start; }
+.approach-layout .chevrons { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); margin: 0; }
+.approach-layout .chevron { min-width: 0; padding: var(--space-2); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+.approach-layout .chevron__title { clip-path: none; border-radius: var(--radius); padding: 0.75rem 1rem; }
+.approach-layout .chevron .bullets li { line-height: 1.5; }
+.approach-layout .approche { max-width: none; padding: var(--space-3); background: var(--grey-50); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.approach-layout .approche h3 { font-size: 1.15rem; }
+.approach-layout .approche .ticks { margin: 0; }
+.approach-layout .approche .ticks li { font-size: 0.9rem; line-height: 1.5; }
+
+@media (max-width: 960px) {
+  #experience .grid--2, .approach-layout { grid-template-columns: 1fr; }
+  .experience-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .hero--animated { min-height: 0; padding-block: var(--space-6); }
+  .hero--animated::before { inset: 0 -45% 0 25%; opacity: 0.5; }
+  .hero--animated::after { inset: 0 0 0 25%; opacity: 0.5; }
+  .hero--animated h1 { font-size: clamp(2.35rem, 9vw, 3.2rem); }
+  .need-cards { grid-template-columns: 1fr; }
+  .experience-panel, .approach-layout .chevrons { grid-template-columns: 1fr; }
+  .experience-panel article:last-child { grid-column: auto; }
 }

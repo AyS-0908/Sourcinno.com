@@ -20,8 +20,8 @@
 <link rel="icon" href="/pictures/logo_favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=d311ead5">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css?v=f9a6b945">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -144,31 +144,33 @@
   </div>
 </header>
 <main id="main">
-<!-- HERO — PRD §5.1 : dégradé animé bleu nuit -> teal + particules -->
+<!-- HERO — PRD §5.1 : stratégie abstraite en CSS -->
 <section class="hero hero--animated">
   <div class="container">
-    <h1>De la Stratégie à la Transformation opérationnelle</h1>
+    <p class="hero__eyebrow">Conseil · Stratégie · Transformation</p>
+    <h1>De la Stratégie à la Transformation <span>opérationnelle</span></h1>
     <p class="hero__sub">Définir <strong>OÙ</strong> aller &rarr; Planifier <strong>COMMENT</strong> &amp; <strong>QUAND</strong> &rarr; Piloter <strong>QUOI</strong> &amp; <strong>QUI</strong>.</p>
+    <p class="hero__actions"><a class="btn btn--primary" href="/contact/">Prendre rendez-vous <span aria-hidden="true">&rarr;</span></a></p>
   </div>
 </section>
 
 <!-- SECTION 1 — VOTRE BESOIN — PRD §5.1 -->
-<section class="section section--alt reveal" id="besoin">
+<section class="section reveal" id="besoin">
   <div class="container">
     <div class="section__head">
       <h2>VOTRE BESOIN</h2>
       <p class="lead">Développer votre croissance profitable et pérenne :</p>
     </div>
-    <ul class="ticks measure">
-      <li><strong>Stratégie pérenne</strong> : marché attractif x offre adaptée</li>
-      <li><strong>Transformation réaliste</strong> : opérations alignées sur la stratégie</li>
-      <li><strong>Mise en oeuvre efficace</strong> : gestion de projet + conduite du changement</li>
+    <ul class="grid grid--3 need-cards">
+      <li class="card"><strong>Stratégie pérenne</strong><span>marché attractif x offre adaptée</span></li>
+      <li class="card"><strong>Transformation réaliste</strong><span>opérations alignées sur la stratégie</span></li>
+      <li class="card"><strong>Mise en oeuvre efficace</strong><span>gestion de projet + conduite du changement</span></li>
     </ul>
   </div>
 </section>
 
 <!-- SECTION 2 — ENTREPRISES ACCOMPAGNÉES — PRD §5.1 : bandeau de logos -->
-<section class="section reveal" id="references">
+<section class="section section--alt reveal" id="references">
   <div class="container">
     <div class="section__head text-center mx-auto">
       <h2>ENTREPRISES ACCOMPAGNÉES</h2>
@@ -197,21 +199,18 @@
     <div class="grid grid--3">
 
       <article class="card card--service card--strategie">
-        <p class="card--service__icon" aria-hidden="true">&#9823;&#65039;</p>
         <h3>STRATÉGIE &amp; TRANSFORMATION</h3>
         <p>Aligner vision et exécution</p>
         <p class="card__foot"><a class="btn btn--primary btn--sm" href="/service-strategie-transformation/">En savoir +</a></p>
       </article>
 
       <article class="card card--service card--ia">
-        <p class="card--service__icon" aria-hidden="true">&#10024;</p>
         <h3>ENTREPRISE IA</h3>
         <p>Intégrer l’IA à ses opérations</p>
         <p class="card__foot"><a class="btn btn--primary btn--sm" href="/service-ia-business/">En savoir +</a></p>
       </article>
 
       <article class="card card--service card--venture">
-        <p class="card--service__icon" aria-hidden="true">&#128640;</p>
         <h3>VENTURE BUILDING</h3>
         <p>Préparer les marchés d’avenir</p>
         <p class="card__foot"><a class="btn btn--primary btn--sm" href="/service-venture-building/">En savoir +</a></p>
@@ -269,7 +268,7 @@
         </li>
       </ol>
 
-      <div class="stack">
+      <div class="experience-panel">
         <article>
           <h3>🧢 Complémentarité des RÔLES</h3>
           <ul class="bullets">
@@ -326,6 +325,7 @@
       <h2>DÉMARCHE ET OUTILS</h2>
     </div>
 
+    <div class="approach-layout">
     <ol class="chevrons">
       <li class="chevron">
         <h3 class="chevron__title">A. PÉRIMÈTRE &amp; PRIORITÉ</h3>
@@ -370,6 +370,7 @@
         <li>Accompagnement au changement et à l’adoption des nouveaux processus.</li>
         <li>Utilisation de l’<strong>IA et du NoCode</strong> pour automatiser les tâches répétitives et fluidifier les flux.</li>
       </ul>
+    </div>
     </div>
   </div>
 </section>
