@@ -454,12 +454,10 @@ function checkTiers() {
   const hotes = new Set();
   for (const p of pages) {
     const zone = p.html.slice(0, p.html.indexOf("</head>") + 7) + p.html.slice(p.html.indexOf("<body"));
-    for (const m of zone.matchAll(/(?:src|href)="https?:\/\/([a-z0-9.-]+)/gi)) {
+    // ponytail: count loaded resources, not ordinary links a visitor may choose to open.
+    for (const m of zone.matchAll(/<(?:script|iframe|img|link|source)\b[^>]*\b(?:src|href)="https?:\/\/([a-z0-9.-]+)/gi)) {
       const h = m[1].toLowerCase();
       if (h.endsWith("sourcinno.com") || h === "schema.org" || h === "www.schema.org") continue;
-      if (/^(www\.)?linkedin\.com$/.test(h)) continue;      // lien sortant, pas une ressource chargee
-      if (/^(www\.)?cnil\.fr$/.test(h) || /^(www\.)?hostinger\.fr$/.test(h)) continue;
-      if (/^sourcinno\.wixsite\.com$/.test(h)) continue;    // lien sortant vers le site du livre
       hotes.add(h);
     }
   }
