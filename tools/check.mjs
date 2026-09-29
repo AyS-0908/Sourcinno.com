@@ -266,26 +266,27 @@ function checkData() {
 }
 
 /* ---------- --forms ----------
-   V1 = UN formulaire de contact (PRD 5.4, PLAN.md decision c). Le formulaire
-   detaille part en v2 : son controle est supprime ici.
-   Le second formulaire est encore dans la page ; il est retire par la Passe 6,
-   qui transforme alors le compte annonce ci-dessous en echec. Tant qu'il est la,
-   le compte est RAPPORTE, jamais tu. */
+   V1 = UN formulaire de contact complet (PRD 5.4). */
 function checkForms() {
   const p = pages.find((x) => x.rel === "contact/index.html");
   if (!p) { fail("contact/index.html", "page contact absente"); return; }
   const forms = [...p.html.matchAll(/<form\b[\s\S]*?<\/form>/gi)].map((m) => m[0]);
   const basic = forms.find((f) => /id="form-basique"/.test(f));
   if (!basic) { fail(p.rel, 'formulaire de contact attendu avec id="form-basique"'); return; }
-  if (forms.length > 1) {
-    note(`--forms: ATTENTION — ${forms.length} formulaires sur la page contact, la V1 n'en veut qu'UN (PRD 5.4). Le second est retire par la Passe 6.`);
-  }
-  const need = (form, label, names) => {
+  if (forms.length !== 1) fail(p.rel, `la V1 exige exactement un formulaire de contact, ${forms.length} trouve(s)`);
+  const need = (form, label, required, optional) => {
     if (!form) return;
-    for (const n of names) {
-      if (!new RegExp(`name="${n}"`).test(form)) fail(p.rel, `${label}: champ "${n}" manquant`);
+    const fieldTag = (name) => form.match(new RegExp(`<(?:input|select|textarea)\\b[^>]*name="${name}"[^>]*>`, "i"))?.[0] || "";
+    for (const n of [...required, ...optional]) {
+      if (!fieldTag(n)) fail(p.rel, `${label}: champ "${n}" manquant`);
     }
-    if (!/type="checkbox"/.test(form) || !/name="rgpd"/.test(form)) fail(p.rel, `${label}: case de consentement RGPD manquante`);
+    for (const n of required) {
+      if (!/\brequired\b/i.test(fieldTag(n))) fail(p.rel, `${label}: champ obligatoire "${n}" sans attribut required`);
+    }
+    for (const n of optional) {
+      if (/\brequired\b/i.test(fieldTag(n))) fail(p.rel, `${label}: champ facultatif "${n}" marque required`);
+    }
+    if (!/type="checkbox"/i.test(fieldTag("rgpd"))) fail(p.rel, `${label}: case de consentement RGPD manquante`);
     if (!/<button[^>]*type="submit"/.test(form)) fail(p.rel, `${label}: bouton d envoi manquant`);
     for (const m of form.matchAll(/<(input|select|textarea)\b[^>]*\bid="([^"]+)"/gi)) {
       const id = m[2];
@@ -294,7 +295,7 @@ function checkForms() {
       }
     }
   };
-  need(basic, "formulaire de contact", ["nom", "email", "message"]);
+  need(basic, "formulaire de contact", ["nom", "besoin", "message", "email", "rgpd"], ["entreprise", "telephone"]);
   if (!/form-status/.test(p.html)) fail(p.rel, "zone de message de succes/erreur (.form-status) absente");
   note(`--forms: formulaire de contact inspecte sur contact/index.html`);
 }

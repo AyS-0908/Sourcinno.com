@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Sourcinno</title>
-<meta name="description" content="Contactez Aymard de Scorbiac : un formulaire court pour un premier échange, un formulaire détaillé pour qualifier précisément votre besoin. Paris, France.">
+<meta name="description" content="Contactez Aymard de Scorbiac : un formulaire unique pour présenter votre besoin en stratégie, transformation, IA ou venture building. Paris, France.">
 <link rel="canonical" href="https://www.sourcinno.com/contact/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Sourcinno">
 <meta property="og:title" content="Contact | Sourcinno">
-<meta property="og:description" content="Contactez Aymard de Scorbiac : un formulaire court pour un premier échange, un formulaire détaillé pour qualifier précisément votre besoin. Paris, France.">
+<meta property="og:description" content="Contactez Aymard de Scorbiac : un formulaire unique pour présenter votre besoin en stratégie, transformation, IA ou venture building. Paris, France.">
 <meta property="og:url" content="https://www.sourcinno.com/contact/">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://www.sourcinno.com/pictures/og-sourcinno.png">
@@ -27,8 +27,8 @@
     /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
        toutes les sections resteraient a opacity 0, donc invisibles. */
     .reveal { opacity: 1 !important; transform: none !important; }
-    /* Les formulaires ont besoin de JavaScript pour partir. Sans lui, ils
-       feraient un GET et enverraient nom, email et message dans l URL. */
+    /* Le formulaire a besoin de JavaScript pour partir. Sans lui, il
+       ferait un GET et enverrait nom, email et message dans l URL. */
     form[data-contact-form] { display: none; }
     .noscript-contact { display: block !important; }
   </style>
@@ -99,7 +99,7 @@
         </div>
 
         <p class="noscript-contact form-status" data-state="ok" hidden>
-          Les formulaires de cette page ont besoin de JavaScript. Il est
+          Le formulaire de cette page a besoin de JavaScript. Il est
           désactivé&nbsp;: écrivez directement à
           <a href="mailto:aymard.de.scorbiac@sourcinno.com">aymard.de.scorbiac@sourcinno.com</a>
           ou appelez le <a href="tel:+33608755877">+33 6 08 75 58 77</a>.
@@ -111,13 +111,34 @@
             <p class="error" aria-live="polite"></p>
           </div>
           <div class="field">
-            <label for="b-email">Email <span class="required" aria-hidden="true">*</span></label>
-            <input type="email" id="b-email" name="email" autocomplete="email" required>
+            <label for="b-entreprise">Entreprise <span class="hint">(facultatif)</span></label>
+            <input type="text" id="b-entreprise" name="entreprise" autocomplete="organization">
+            <p class="error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="b-besoin">Type de besoin <span class="required" aria-hidden="true">*</span></label>
+            <select id="b-besoin" name="besoin" required>
+              <option value="">Choisir…</option>
+              <option value="Stratégie &amp; Transformation">Stratégie &amp; Transformation</option>
+              <option value="Entreprise IA">Entreprise IA</option>
+              <option value="Venture Building">Venture Building</option>
+              <option value="Autre">Autre</option>
+            </select>
             <p class="error" aria-live="polite"></p>
           </div>
           <div class="field">
             <label for="b-message">Message <span class="required" aria-hidden="true">*</span></label>
             <textarea id="b-message" name="message" required></textarea>
+            <p class="error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="b-email">Email <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="b-email" name="email" autocomplete="email" required>
+            <p class="error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="b-telephone">Téléphone <span class="hint">(facultatif)</span></label>
+            <input type="tel" id="b-telephone" name="telephone" autocomplete="tel">
             <p class="error" aria-live="polite"></p>
           </div>
           <div class="field field--check">
@@ -129,95 +150,9 @@
           <button class="btn btn--primary" type="submit">Envoyer</button>
           <p class="form-status" aria-live="polite"></p>
         </form>
-
-        <p class="stack">
-          <button class="btn btn--secondary btn--sm" type="button" data-toggle-advanced aria-controls="bloc-form-avance" aria-expanded="false">Besoin d’un accompagnement plus précis&nbsp;?</button>
-        </p>
       </div>
 
     </div>
-  </div>
-</section>
-
-<section class="section section--alt reveal" id="bloc-form-avance" hidden>
-  <div class="container">
-    <div class="section__head">
-      <p class="section__eyebrow">Formulaire détaillé</p>
-      <h2>Qualifier votre besoin</h2>
-      <p class="lead">Plus long, mais il évite deux échanges&nbsp;: avec ces éléments, la première réponse est déjà utile.</p>
-    </div>
-
-    <form id="form-avance" data-contact-form novalidate>
-      <div class="grid grid--2">
-        <div class="field">
-          <label for="a-nom">Nom <span class="required" aria-hidden="true">*</span></label>
-          <input type="text" id="a-nom" name="nom" autocomplete="name" required>
-          <p class="error" aria-live="polite"></p>
-        </div>
-        <div class="field">
-          <label for="a-email">Email <span class="required" aria-hidden="true">*</span></label>
-          <input type="email" id="a-email" name="email" autocomplete="email" required>
-          <p class="error" aria-live="polite"></p>
-        </div>
-        <div class="field">
-          <label for="a-telephone">Téléphone</label>
-          <input type="tel" id="a-telephone" name="telephone" autocomplete="tel">
-          <p class="error" aria-live="polite"></p>
-        </div>
-        <div class="field">
-          <label for="a-entreprise">Entreprise</label>
-          <input type="text" id="a-entreprise" name="entreprise" autocomplete="organization">
-          <p class="error" aria-live="polite"></p>
-        </div>
-        <div class="field">
-          <label for="a-secteur">Secteur d’activité</label>
-          <input type="text" id="a-secteur" name="secteur" list="secteurs">
-          <datalist id="secteurs">
-            <option value="Industrie"></option>
-            <option value="Services B2B"></option>
-            <option value="Commerce et distribution"></option>
-            <option value="Santé"></option>
-            <option value="Finance et assurance"></option>
-            <option value="Technologie"></option>
-            <option value="Secteur public"></option>
-            <option value="Autre"></option>
-          </datalist>
-          <p class="error" aria-live="polite"></p>
-        </div>
-        <div class="field">
-          <label for="a-besoin">Type de besoin <span class="required" aria-hidden="true">*</span></label>
-          <select id="a-besoin" name="besoin" required>
-            <option value="">Choisir…</option>
-            <option value="Stratégie, Organisation &amp; Processus">Stratégie, Organisation &amp; Processus</option>
-            <option value="IA for Business">IA for Business</option>
-            <option value="Venture Building">Venture Building</option>
-            <option value="Autre">Autre</option>
-          </select>
-          <p class="error" aria-live="polite"></p>
-        </div>
-        <div class="field">
-          <label for="a-budget">Budget estimé <span class="hint">(facultatif)</span></label>
-          <input type="text" id="a-budget" name="budget" placeholder="Par exemple : 15 000 € sur 3 mois">
-          <p class="error" aria-live="polite"></p>
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="a-message">Message détaillé <span class="required" aria-hidden="true">*</span></label>
-        <textarea id="a-message" name="message" required placeholder="La situation actuelle, ce qui coince, et ce que vous aimeriez avoir changé dans six mois."></textarea>
-        <p class="error" aria-live="polite"></p>
-      </div>
-
-      <div class="field field--check">
-        <input type="checkbox" id="a-rgpd" name="rgpd" required>
-        <label for="a-rgpd">J’accepte que mes données soient utilisées pour répondre à ma demande. Elles ne sont ni revendues ni utilisées à d’autres fins. <a href="/politique-confidentialite/">En savoir plus</a>.</label>
-        <p class="error" aria-live="polite"></p>
-          </div>
-      <p class="error" aria-live="polite"></p>
-
-      <button class="btn btn--primary" type="submit">Envoyer ma demande</button>
-      <p class="form-status" aria-live="polite"></p>
-    </form>
   </div>
 </section>
 
@@ -280,6 +215,6 @@
 </footer>
 <script src="/assets/js/config.js?v=fe096bdc" defer></script>
 <script src="/assets/js/site.js?v=4cc968e5" defer></script>
-<script src="/assets/js/forms.js?v=7bed2022" defer></script>
+<script src="/assets/js/forms.js?v=94236c3e" defer></script>
 </body>
 </html>

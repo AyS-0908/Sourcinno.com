@@ -1,4 +1,4 @@
-/* Sourcinno — formulaires de contact (PRD §4.4).
+/* Sourcinno — formulaire de contact (PRD §5.4).
  *
  * Deux modes, selon FORM_ENDPOINT dans config.js :
  *   vide    -> ouvre le logiciel de messagerie avec le message pre-rempli (mailto).
@@ -6,7 +6,7 @@
  *   rempli  -> envoie le formulaire en arriere-plan (POST) et affiche un message
  *              de succes sans quitter la page.
  * La validation cote client est identique dans les deux cas.
- * Sans JavaScript, les formulaires restent lisibles et le lien mailto du pied
+ * Sans JavaScript, le formulaire est masque et le lien mailto du pied
  * de page permet toujours de nous ecrire. */
 (() => {
   "use strict";
@@ -20,9 +20,7 @@
     email: "Email",
     telephone: "Téléphone",
     entreprise: "Entreprise",
-    secteur: "Secteur d’activité",
     besoin: "Type de besoin",
-    budget: "Budget estimé",
     message: "Message",
   };
 
@@ -91,9 +89,7 @@
   }
 
   function sendByMail(form) {
-    const subject = form.id === "form-avance"
-      ? "Demande d’accompagnement — sourcinno.com"
-      : "Prise de contact — sourcinno.com";
+    const subject = "Prise de contact — sourcinno.com";
     const body = summarise(form) + "\n\n--\nEnvoyé depuis sourcinno.com";
     const url = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     /* Le lien construit est conservé ET affiché : beaucoup de visiteurs n’ont
@@ -155,27 +151,8 @@
     });
   }
 
-  /* Bouton "Besoin d’un accompagnement plus précis ?" — PRD §4.4 */
-  function initDisclosure() {
-    const trigger = document.querySelector("[data-toggle-advanced]");
-    const panel = document.getElementById("bloc-form-avance");
-    if (!trigger || !panel) return;
-    trigger.setAttribute("aria-expanded", panel.hidden ? "false" : "true");
-    trigger.addEventListener("click", () => {
-      const willOpen = panel.hidden;
-      panel.hidden = !willOpen;
-      trigger.setAttribute("aria-expanded", String(willOpen));
-      if (willOpen) {
-        panel.scrollIntoView({ behavior: "smooth", block: "start" });
-        const first = panel.querySelector("input, select, textarea");
-        if (first) first.focus({ preventScroll: true });
-      }
-    });
-  }
-
   function init() {
     document.querySelectorAll("form[data-contact-form]").forEach(initForm);
-    initDisclosure();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
