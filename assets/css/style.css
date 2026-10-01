@@ -1016,10 +1016,19 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   #demarche .journey-detail { padding: 0 var(--space-2) var(--space-2); }
   #demarche .chevron__title { font-size: 1.1rem; }
 }
-#demarche .approche { max-width: none; padding: var(--space-3); background: var(--grey-50); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+#demarche .approche { max-width: none; }
 #demarche .approche h3 { font-size: 1.15rem; }
-#demarche .approche .ticks { margin: 0; }
+#demarche .approche .tools-strip { padding: var(--space-3); background: var(--grey-50); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+#demarche .approche .tools-labels { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-1); list-style: none; margin: 0 0 var(--space-2); padding: 0; }
+#demarche .approche .tools-labels li { padding: var(--space-1); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); color: var(--teal-dark); font-size: 0.9rem; font-weight: 700; }
+#demarche .approche summary { padding: var(--space-1) 0; color: var(--teal-dark); font-weight: 700; }
+#demarche .approche .tools-action--open, #demarche .approche .tools-details[open] .tools-action--closed { display: none; }
+#demarche .approche .tools-details[open] .tools-action--open { display: block; }
+#demarche .approche .ticks { margin: var(--space-2) 0 0; }
 #demarche .approche .ticks li { font-size: 0.9rem; line-height: 1.5; }
+@media (max-width: 640px) {
+  #demarche .approche .tools-labels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 @media (max-width: 960px) {
   #experience .grid--2 { grid-template-columns: 1fr; }
