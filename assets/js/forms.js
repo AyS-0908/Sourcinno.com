@@ -1,18 +1,12 @@
 /* Sourcinno — formulaire de contact (PRD §5.4).
  *
- * Deux modes, selon FORM_ENDPOINT dans config.js :
- *   vide    -> ouvre le logiciel de messagerie avec le message pre-rempli (mailto).
- *              Aucun compte, aucun service tiers, fonctionne partout.
- *   rempli  -> envoie le formulaire en arriere-plan (POST) et affiche un message
- *              de succes sans quitter la page.
- * La validation cote client est identique dans les deux cas.
+ * V1 : validation puis brouillon mailto, que le visiteur envoie lui-même.
  * Sans JavaScript, le formulaire est masque et le lien mailto du pied
  * de page permet toujours de nous ecrire. */
 (() => {
   "use strict";
 
   const CFG = window.SOURCINNO_CONFIG || {};
-  const ENDPOINT = (CFG.FORM_ENDPOINT || "").trim();
   const EMAIL = (CFG.CONTACT_EMAIL || "aymard.de.scorbiac@sourcinno.com").trim();
 
   const LABELS = {
@@ -102,33 +96,10 @@
       box.dataset.state = "ok";
       box.setAttribute("role", "status");
       box.innerHTML =
-        "Votre logiciel de messagerie vient de s’ouvrir avec le message pré-rempli&nbsp;: " +
-        "il ne reste qu’à l’envoyer. Rien ne s’est ouvert&nbsp;? " +
+        "Le brouillon a été préparé pour votre messagerie&nbsp;: " +
+        "vous devez encore l’envoyer. Rien ne s’est ouvert&nbsp;? " +
         `<a href="${url.replace(/"/g, "&quot;")}">Ouvrir le message</a>, ` +
         `ou écrivez directement à <a href="mailto:${EMAIL}">${EMAIL}</a>.`;
-    }
-  }
-
-  async function sendByEndpoint(form, button) {
-    const original = button ? button.textContent : "";
-    if (button) { button.disabled = true; button.textContent = "Envoi en cours…"; }
-    say(form, "", "");
-    try {
-      const response = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: new FormData(form),
-      });
-      if (!response.ok) throw new Error("HTTP " + response.status);
-      form.reset();
-      fieldsOf(form).forEach((f) => showError(f, ""));
-      say(form, "ok", "Merci, votre message est bien parti. Réponse sous 48 heures ouvrées.");
-    } catch (err) {
-      say(form, "error",
-        "L’envoi automatique a échoué. Écrivez-nous directement à " + EMAIL +
-        " — votre message n’est pas perdu, il est encore dans le formulaire.");
-    } finally {
-      if (button) { button.disabled = false; button.textContent = original; }
     }
   }
 
@@ -146,8 +117,7 @@
         say(form, "error", "Quelques champs sont à corriger, ils sont signalés ci-dessus.");
         return;
       }
-      if (ENDPOINT) sendByEndpoint(form, form.querySelector('button[type="submit"]'));
-      else sendByMail(form);
+      sendByMail(form);
     });
   }
 

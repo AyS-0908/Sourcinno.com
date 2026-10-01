@@ -11,7 +11,7 @@
   --navy-dark: #12253f;
   --navy-soft: #2c4a76;
   --teal: #319795;
-  --teal-dark: #267f7d;
+  --teal-dark: #247a78;
   --orange: #dd6b20;
   --white: #ffffff;
   --grey-50: #f5f8fc;
@@ -372,35 +372,6 @@ p  { margin: 0 0 var(--space-2); }
 .bullets { list-style: none; margin: 0 0 var(--space-2); padding: 0; }
 .bullets li { position: relative; padding-left: 1.2rem; margin-bottom: 0.5rem; }
 .bullets li::before { content: "▪"; position: absolute; left: 0; color: var(--orange); }
-
-/* ---------- Timeline — PRD §4.1 C ---------- */
-.timeline { list-style: none; margin: 0; padding: 0; position: relative; display: grid; gap: var(--space-4); }
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 9px;
-  top: 6px;
-  bottom: 6px;
-  width: 2px;
-  background: linear-gradient(180deg, var(--teal), rgba(49, 151, 149, 0.15));
-}
-.timeline li { position: relative; padding-left: var(--space-4); }
-.timeline li::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 6px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 3px solid var(--teal);
-  transition: transform 0.2s var(--ease), background 0.2s var(--ease);
-}
-.timeline li:hover::before { transform: scale(1.25); background: var(--teal); }
-.timeline__when { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-dark); }
-.timeline__what { font-family: var(--font-title); font-size: 1.15rem; font-weight: 700; margin: 0.1rem 0 0.25rem; }
-.timeline__desc { color: var(--text-muted); margin: 0; }
 
 /* ---------- Bandeau logos clients ---------- */
 .logo-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-4); }
@@ -793,9 +764,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 
 /* ============================================================
    Page d'accueil — PRD §5.1
-   Ajouts de la passe 2. Rien ci-dessous ne modifie une regle
-   existante : les pages de service gardent .timeline verticale,
-   .card, .logo-band et .reveal tels quels.
+   Composants propres a l'accueil.
    ============================================================ */
 
 /* ---------- Accueil : stratégie abstraite en CSS, sans image servie ---------- */
@@ -899,8 +868,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 }
 
 /* ---------- Timeline HORIZONTALE + infobulles — PRD §5.1 section 3 bis ----------
-   Bloc separe de .timeline (verticale), encore utilisee par les pages de
-   service. Le declencheur est un <button> : l infobulle s ouvre au survol ET
+   Le declencheur est un <button> : l infobulle s ouvre au survol ET
    au focus clavier, sinon elle n existerait pas pour qui navigue au clavier.
    Elle reste dans l arbre d accessibilite (opacity, pas visibility) pour que
    aria-describedby ait quelque chose a lire. */

@@ -6,17 +6,12 @@
    formulaire, un identifiant de mesure d'audience, l'adresse d'un service
    intermédiaire. Une clé secrète doit rester sur le serveur, jamais ici.
 
-   SEUL fichier à modifier pour brancher un service externe.
-   Tant qu'une valeur est vide, la fonctionnalité marche en mode dégradé
-   (décrit en commentaire) : le site ne casse jamais.  */
+   Les fonctionnalités V2 nécessiteront leurs scripts et leur validation
+   avant de brancher un service externe. */
 
 window.SOURCINNO_CONFIG = {
-  /* Adresse qui reçoit les formulaires.
-     Vide  -> les formulaires ouvrent le logiciel de messagerie (mailto) avec
-              le message pré-rempli. Fonctionne partout, sans compte.
-     Rempli -> les formulaires envoient directement en arrière-plan.
-     Coller ici l'URL fournie par le service retenu (décision en cours).
-     Exemple : "https://formspree.io/f/abcdwxyz"                            */
+  /* Réservé à V2. V1 utilise uniquement un brouillon mailto ;
+     renseigner cette valeur ne suffit pas à activer l'envoi automatique. */
   FORM_ENDPOINT: "",
 
   /* Adresse email de destination, utilisée par le mode mailto. */

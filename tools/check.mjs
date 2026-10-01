@@ -18,8 +18,7 @@
  *   --consent  banniere de consentement et assistant sont reportes en v2 (PLAN.md).
  *              Le cas "balise de mesure d'audience en dur" reste couvert par --tiers :
  *              un hote externe non declare dans la politique de confidentialite echoue.
- * Les deux drapeaux restent acceptes et ignores : les anciennes lignes de commande
- * continuent de tourner, elles n'ajoutent simplement plus rien.
+ * Les drapeaux retires ou inconnus sont refuses : aucun controle ignore en silence.
  * Sortie 0 = tout vert. Sortie 1 = au moins un echec, chacun cite avec son fichier.
  */
 import { readdirSync, readFileSync, existsSync, statSync } from "node:fs";
@@ -30,6 +29,13 @@ import { execFileSync } from "node:child_process";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = new Set(process.argv.slice(2));
+const allowedArgs = new Set(["--data", "--forms", "--legal", "--a11y", "--nojs", "--tiers", "--seo", "--all"]);
+for (const arg of args) {
+  if (!allowedArgs.has(arg)) {
+    console.error("ECHEC: option inconnue ou retiree : " + arg);
+    process.exit(1);
+  }
+}
 const want = (g) => args.has("--all") || args.has(g);
 
 const failures = [];
@@ -222,7 +228,7 @@ function readJson(rel) {
 /* V1 n'a qu'une seule collection : les publications. Le portfolio de prototypes
    est reporte en v2 (PLAN.md), ses donnees sont rangees dans assets/data/_v2/ :
    plus de page, donc plus de controle ici. */
-function checkData() {
+async function checkData() {
   {
     const page = "publications/index.html";
     const file = "assets/data/publications.json";
@@ -263,6 +269,28 @@ function checkData() {
       note(`--data: ${list.length} publication(s) valide(s)`);
     }
   }
+  try {
+    const payload = '<img src=x onerror="test"> &';
+    const escaped = '&lt;img src=x onerror=&quot;test&quot;&gt; &amp;';
+    for (const type of ['livre', 'linkedin', payload]) {
+      const grid = { innerHTML: '', parentElement: null };
+      const document = {
+        readyState: 'complete',
+        querySelector: (selector) => selector === '[data-publication-grid]' ? grid : null,
+      };
+      new Script(readFileSync(join(ROOT, 'assets/js/collections.js'), 'utf8')).runInNewContext({
+        document,
+        fetch: async () => ({ ok: true, json: async () => [{ type, titre: payload, description: payload, date: payload, image: payload, url: payload }] }),
+      });
+      await new Promise((resolve) => setImmediate(resolve));
+      const escapedCount = grid.innerHTML.split(escaped).length - 1;
+      const expectedCount = type === payload ? 7 : 6; // titre dans le h3 et l'alt de l'image
+      if (grid.innerHTML.includes(payload) || escapedCount !== expectedCount) {
+        throw new Error(`rendu execute : ${escapedCount}/${expectedCount} champs echappes, HTML brut=${grid.innerHTML.includes(payload)}`);
+      }
+    }
+    note('--data: rendu des publications execute avec champs HTML echappes');
+  } catch (err) { fail('assets/js/collections.js', err.message); }
 }
 
 /* ---------- --forms ----------
@@ -297,14 +325,98 @@ function checkForms() {
   };
   need(basic, "formulaire de contact", ["nom", "besoin", "message", "email", "rgpd"], ["entreprise", "telephone"]);
   if (!/form-status/.test(p.html)) fail(p.rel, "zone de message de succes/erreur (.form-status) absente");
+
+  const privacy = pages.find((x) => x.rel === "politique-confidentialite/index.html");
+  if (!privacy || !/Un seul formulaire de contact est proposé/.test(privacy.html) ||
+      /Formulaire simple|Formulaire détaillé/.test(privacy.html)) {
+    fail("politique-confidentialite/index.html", "la politique doit decrire le seul formulaire actuel");
+  }
+
+  const runMail = () => {
+    let submit;
+    let resets = 0;
+    const status = { dataset: {}, textContent: "", innerHTML: "", setAttribute() {} };
+    const makeField = (name, value, options = {}) => {
+      const attrs = new Map();
+      const error = { textContent: "" };
+      return {
+        name, value, type: options.type || "text", required: Boolean(options.required),
+        checked: options.checked !== false, addEventListener() {}, focus() {},
+        closest: () => ({ querySelector: () => error }),
+        setAttribute: (key, val) => attrs.set(key, val),
+        removeAttribute: (key) => attrs.delete(key),
+        getAttribute: (key) => attrs.get(key) || null,
+      };
+    };
+    const fields = [
+      makeField("nom", "Test <V1> & contact", { required: true }),
+      makeField("entreprise", ""),
+      makeField("besoin", "Autre", { required: true }),
+      makeField("message", 'Essai du formulaire : "équipe" & projet', { required: true }),
+      makeField("email", "test@example.com", { type: "email", required: true }),
+      makeField("telephone", ""),
+      makeField("rgpd", "on", { type: "checkbox", required: true }),
+    ];
+    const form = {
+      dataset: {}, setAttribute() {},
+      querySelectorAll: () => fields,
+      querySelector: (selector) => selector === ".form-status" ? status : null,
+      addEventListener: (type, handler) => { if (type === "submit") submit = handler; },
+      reset: () => { resets++; fields.forEach((field) => { field.value = ""; }); },
+    };
+    class TestFormData {
+      constructor() {
+        this.data = new Map(fields.filter((field) => field.type !== "checkbox" || field.checked)
+          .map((field) => [field.name, field.value]));
+      }
+      entries() { return this.data.entries(); }
+    }
+    const context = {
+      window: { SOURCINNO_CONFIG: { FORM_ENDPOINT: "", CONTACT_EMAIL: "aymard.de.scorbiac@sourcinno.com" }, location: { href: "" } },
+      document: { readyState: "complete", querySelectorAll: () => [form] },
+      FormData: TestFormData,
+      fetch: () => { throw new Error("V1 ne doit pas appeler un service d envoi"); },
+    };
+    new Script(readFileSync(join(ROOT, "assets/js/forms.js"), "utf8"), { filename: "forms.js" })
+      .runInNewContext(context);
+    return { fields, form, send: () => submit({ preventDefault() {} }), status,
+      location: context.window.location, get resets() { return resets; } };
+  };
+  try {
+    const valid = runMail();
+    valid.send();
+    const mail = new URL(valid.location.href);
+    if (mail.protocol !== "mailto:" || mail.pathname !== "aymard.de.scorbiac@sourcinno.com" ||
+        mail.searchParams.get("subject") !== "Prise de contact — sourcinno.com" ||
+        !mail.searchParams.get("body").includes('Message : Essai du formulaire : "équipe" & projet') ||
+        !mail.searchParams.get("body").includes("Nom : Test <V1> & contact") ||
+        /rgpd|submission_id/.test(mail.searchParams.get("body"))) {
+      throw new Error("le brouillon doit porter le destinataire et les champs exacts encodes");
+    }
+    if (valid.resets !== 0 || valid.fields[0].value !== "Test <V1> & contact" ||
+        valid.form.dataset.lastMailto !== valid.location.href ||
+        !valid.status.innerHTML.includes("vous devez encore l’envoyer") ||
+        /message est bien parti|message a été envoyé/i.test(valid.status.innerHTML)) {
+      throw new Error("le brouillon doit conserver les champs et ne pas annoncer une livraison");
+    }
+    for (const [name, value] of [["nom", ""], ["email", "invalide"], ["message", "court"], ["rgpd", false]]) {
+      const invalid = runMail();
+      const field = invalid.fields.find((f) => f.name === name);
+      if (name === "rgpd") field.checked = value;
+      else field.value = value;
+      invalid.send();
+      if (invalid.location.href || invalid.status.dataset.state !== "error" || field.getAttribute("aria-invalid") !== "true") {
+        throw new Error(`le champ invalide ${name} doit empecher le brouillon et etre signale`);
+      }
+    }
+  } catch (error) {
+    fail("assets/js/forms.js", "contrat d envoi: " + error.message);
+  }
   note(`--forms: formulaire de contact inspecte sur contact/index.html`);
 }
 
 /* ---------- --legal ----------
-   Les pages legales sont ecrites, mais certains identifiants (SIREN, RCS,
-   capital, adresse) ne sont connus que du proprietaire. Ce groupe echoue tant
-   qu ils manquent : publier "[A COMPLETER]" sur un site en ligne serait pire
-   que de le signaler ici. */
+   Ce groupe refuse tout identifiant laisse a completer avant publication. */
 function checkLegal() {
   let holes = 0;
   for (const p of pages) {
@@ -316,6 +428,8 @@ function checkLegal() {
   for (const f of ["mentions-legales/index.html", "politique-confidentialite/index.html"]) {
     if (!pages.some((p) => p.rel === f)) fail(f, "page legale absente");
   }
+  const hosting = pages.find((p) => p.rel === "mentions-legales/index.html")?.html.match(/<h2>Hébergement<\/h2>([\s\S]*?)(?=<h2>|$)/)?.[1] || "";
+  if (!/href="tel:\+\d{8,15}"/.test(hosting)) fail("mentions-legales/index.html", "telephone de l hebergeur absent de la section Hebergement");
   note(`--legal: ${pages.length} page(s) inspectee(s), ${holes} mention(s) a completer`);
 }
 
@@ -353,6 +467,7 @@ function checkA11y() {
     ["texte sur fond gris", "--navy", "--grey-50", 4.5],
     ["bouton principal", "--white", "--teal-dark", 4.5],
     ["surtitre et liens teal", "--teal-dark", "--white", 4.5],
+    ["dates du parcours sur fond gris", "--teal-dark", "--grey-50", 4.5],
     ["texte sur bleu nuit", "--white", "--navy", 4.5],
     ["pied de page", "--white", "--navy-dark", 4.5],
     ["surtitre sur bleu nuit", "#7fd6d3", "--navy", 4.5],
@@ -368,6 +483,12 @@ function checkA11y() {
     const r = ratio(cf, cb);
     if (r < min) fail("assets/css/style.css", `contraste insuffisant pour "${nom}" : ${r.toFixed(2)}:1, minimum ${min}:1 (${cf} sur ${cb})`);
     if (!worst || r - min < worst.marge) worst = { nom, r, marge: r - min };
+  }
+
+  // ponytail: garde du contexte 404 ; la cascade et le contraste restent verifies a l ecran.
+  const hero404 = pages.find((p) => p.rel === "404.html")?.html.match(/<section class="hero hero--page">([\s\S]*?)<\/section>/)?.[1] || "";
+  if (!/^\s*<div class="container">\s*<p class="hero__eyebrow">/.test(hero404)) {
+    fail("404.html", "surtitre du hero : utiliser hero__eyebrow clair, pas section__eyebrow sombre sur le degrade");
   }
 
   let links = 0, buttons = 0;
@@ -422,7 +543,7 @@ function checkNoJs() {
 
   /* Toute classe que seul le JavaScript peut poser et qui MASQUE par defaut. */
   const cachantes = [];
-  for (const m of css.matchAll(/(^|\})\s*([^{}@]+?)\s*\{([^{}]*)\}/g)) {
+  for (const m of css.replace(/\/\*[\s\S]*?\*\//g, "").matchAll(/(^|\})\s*([^{}@]+?)\s*\{([^{}]*)\}/g)) {
     const sel = m[2].trim();
     const body = m[3];
     if (!/opacity:\s*0\b|visibility:\s*hidden|display:\s*none/.test(body)) continue;
@@ -495,6 +616,17 @@ function checkTiers() {
 /* ---------- --seo ---------- */
 function checkSeo() {
   const sitemap = existsSync(join(ROOT, "sitemap.xml")) ? readFileSync(join(ROOT, "sitemap.xml"), "utf8") : "";
+  const indexed = pages.filter((p) => !isStub(p) && p.rel !== "404.html");
+  const expectedUrls = new Set(indexed.map((p) => "https://www.sourcinno.com/" + p.rel.replace(/index\.html$/, "")));
+  const listedUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  if (!sitemap) fail("sitemap.xml", "sitemap absent");
+  for (const url of expectedUrls) {
+    if (!listedUrls.includes(url)) fail("sitemap.xml", `l URL ${url} n est pas listee`);
+  }
+  for (const url of listedUrls) {
+    if (!expectedUrls.has(url)) fail("sitemap.xml", `l URL ${url} est retiree ou inconnue`);
+  }
+  if (new Set(listedUrls).size !== listedUrls.length) fail("sitemap.xml", "URL dupliquee");
   for (const p of pages) {
     if (isStub(p) || p.rel === "404.html") continue;
     for (const prop of ["og:title", "og:description", "og:url", "og:type"]) {
@@ -506,17 +638,13 @@ function checkSeo() {
     const desc = attr(p.html, /<meta name="description" content="([^"]*)"/i) || "";
     if (desc.length > 165) fail(p.rel, `meta description trop longue: ${desc.length} caracteres (max 165)`);
     if (desc.length < 70) fail(p.rel, `meta description trop courte: ${desc.length} caracteres (min 70)`);
-    const url = "/" + p.rel.replace(/index\.html$/, "");
-    if (sitemap && !sitemap.includes(url === "/" ? "sourcinno.com/</loc>" : url)) {
-      fail("sitemap.xml", `l URL ${url} n est pas listee`);
-    }
   }
   note(`--seo: meta et sitemap verifies sur ${pages.filter((p) => !isStub(p) && p.rel !== "404.html").length} page(s) indexable(s)`);
 }
 
 /* ---------- run ---------- */
 checkStructure();
-if (want("--data")) checkData();
+if (want("--data")) await checkData();
 if (want("--forms")) checkForms();
 if (want("--legal")) checkLegal();
 if (want("--a11y")) checkA11y();
