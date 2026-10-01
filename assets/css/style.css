@@ -972,38 +972,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   }
 }
 
-/* ---------- Chevrons de la demarche — PRD §5.1 section 4 ----------
-   Forme dessinee en CSS (clip-path), pas d image a charger. Sur telephone la
-   pointe disparait : une fleche large de 25 % de l ecran rend le titre
-   illisible. */
-.chevrons { list-style: none; margin: 0 0 var(--space-5); padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-2); }
-.chevron__title {
-  margin: 0 0 var(--space-2);
-  padding: 0.85rem 1.5rem 0.85rem 2.1rem;
-  background: var(--navy);
-  color: var(--white);
-  font-family: var(--font-body);
-  font-size: 0.84rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  line-height: 1.3;
-  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%, 18px 50%);
-}
-.chevrons > li:first-child .chevron__title {
-  padding-left: 1.5rem;
-  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
-}
-.chevrons > li:nth-child(2) .chevron__title { background: var(--navy-soft); }
-.chevrons > li:nth-child(3) .chevron__title { background: var(--teal-dark); }
-.chevrons > li:nth-child(4) .chevron__title { background: #1f6360; }
-.chevron .bullets li { font-size: 0.92rem; }
-.chevron__valid { font-weight: 600; color: var(--teal-dark); font-size: 0.92rem; margin: 0; }
-
-@media (max-width: 860px) {
-  .chevrons { grid-template-columns: 1fr; gap: var(--space-4); }
-  .chevron__title { clip-path: none; padding: 0.7rem 1rem; border-radius: var(--radius); }
-}
-
 /* ---------- Accueil : parcours et expertises regroupés ---------- */
 #experience .grid--2 { grid-template-columns: 1fr; align-items: start; gap: var(--space-4); }
 #experience .timeline--h { align-self: start; }
@@ -1022,19 +990,39 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 #experience .expertise-card .bullets { margin: 0 var(--space-3) var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--border); }
 #experience .expertise-card .bullets li { font-size: 0.95rem; line-height: 1.5; margin-bottom: var(--space-2); }
 
-/* ---------- Accueil : quatre étapes lisibles et un panneau d'outils ---------- */
-.approach-layout { display: grid; grid-template-columns: minmax(0, 3fr) minmax(235px, 1fr); gap: var(--space-3); align-items: start; }
-.approach-layout .chevrons { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); margin: 0; }
-.approach-layout .chevron { min-width: 0; padding: var(--space-2); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
-.approach-layout .chevron__title { clip-path: none; border-radius: var(--radius); padding: 0.75rem 1rem; }
-.approach-layout .chevron .bullets li { line-height: 1.5; }
-.approach-layout .approche { max-width: none; padding: var(--space-3); background: var(--grey-50); border: 1px solid var(--border); border-radius: var(--radius-lg); }
-.approach-layout .approche h3 { font-size: 1.15rem; }
-.approach-layout .approche .ticks { margin: 0; }
-.approach-layout .approche .ticks li { font-size: 0.9rem; line-height: 1.5; }
+/* ---------- Accueil : parcours vertical, ouvertures natives ---------- */
+#demarche .approach-layout { display: grid; gap: var(--space-4); }
+#demarche .chevrons { position: relative; display: grid; gap: var(--space-2); list-style: none; counter-reset: stage; margin: 0; padding: 0 0 0 4rem; }
+#demarche .chevrons::before { content: ""; position: absolute; left: 1rem; top: 1.5rem; bottom: 1.5rem; width: 2px; background: var(--border); }
+#demarche .chevron { position: relative; min-width: 0; counter-increment: stage; }
+#demarche .chevron::before { content: counter(stage); position: absolute; left: -4rem; top: 1rem; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--teal-dark); color: var(--white); font-weight: 700; }
+#demarche .journey-stage { border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--white); }
+#demarche .journey-stage[open] { border-color: var(--teal-dark); background: var(--grey-50); }
+#demarche summary { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-3); list-style: none; cursor: pointer; border-radius: var(--radius-lg); }
+#demarche summary::-webkit-details-marker { display: none; }
+#demarche summary:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 3px; }
+#demarche .chevron__title { margin: 0; font-size: 1.2rem; line-height: 1.3; }
+#demarche .journey-objective { color: var(--text-muted); line-height: 1.5; }
+#demarche .journey-action { padding-top: var(--space-1); color: var(--teal-dark); font-size: 0.9rem; font-weight: 700; }
+#demarche .journey-action--open, #demarche [open] .journey-action--closed { display: none; }
+#demarche [open] .journey-action--open { display: block; }
+#demarche .journey-detail { padding: 0 var(--space-3) var(--space-3); }
+#demarche .chevron .bullets li { font-size: 0.95rem; line-height: 1.5; }
+#demarche .chevron__valid { font-weight: 600; color: var(--teal-dark); font-size: 0.95rem; margin: 0; }
+@media (max-width: 640px) {
+  #demarche .chevrons { padding-left: 3rem; }
+  #demarche .chevron::before { left: -3rem; }
+  #demarche summary { padding: var(--space-2); }
+  #demarche .journey-detail { padding: 0 var(--space-2) var(--space-2); }
+  #demarche .chevron__title { font-size: 1.1rem; }
+}
+#demarche .approche { max-width: none; padding: var(--space-3); background: var(--grey-50); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+#demarche .approche h3 { font-size: 1.15rem; }
+#demarche .approche .ticks { margin: 0; }
+#demarche .approche .ticks li { font-size: 0.9rem; line-height: 1.5; }
 
 @media (max-width: 960px) {
-  #experience .grid--2, .approach-layout { grid-template-columns: 1fr; }
+  #experience .grid--2 { grid-template-columns: 1fr; }
   #experience .experience-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px) {
@@ -1042,5 +1030,5 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .hero--animated::before { inset: 0 -45% 0 25%; opacity: 0.5; }
   .hero--animated::after { inset: 0 0 0 25%; opacity: 0.5; }
   .hero--animated h1 { font-size: clamp(2.35rem, 9vw, 3.2rem); }
-  #experience .experience-panel, .approach-layout .chevrons { grid-template-columns: 1fr; }
+  #experience .experience-panel { grid-template-columns: 1fr; }
 }
