@@ -69,6 +69,39 @@
     return p;
   }
 
+  /* ponytail: native disclosure without JS; only expertise previews need state. */
+  function initExpertise() {
+    document.querySelectorAll("#experience .expertise-card").forEach((card) => {
+      let pinned = card.open, hovered = false, suppressed = false;
+      const focused = () => card.contains(document.activeElement);
+      const update = () => {
+        if (!hovered && !focused()) suppressed = false;
+        card.open = pinned || (!suppressed && (hovered || focused()));
+      };
+      on(card, "pointerenter", (e) => {
+        if (e.pointerType === "touch") return;
+        hovered = true;
+        update();
+      });
+      on(card, "pointerleave", () => { hovered = false; update(); });
+      on(card, "focusin", update);
+      on(card, "focusout", () => requestAnimationFrame(update));
+      on(card.querySelector("summary"), "click", (e) => {
+        e.preventDefault();
+        pinned = !pinned;
+        suppressed = !pinned;
+        update();
+      });
+      on(document, "keydown", (e) => {
+        if (e.key === "Escape" && (hovered || focused())) {
+          pinned = false;
+          suppressed = true;
+          update();
+        }
+      });
+    });
+  }
+
   /* --- Header au défilement (effet verre dépoli) -------------------- */
   function initStickyHeader() {
     const header = document.querySelector(".site-header");
@@ -107,6 +140,7 @@
     initNav();
     initActiveLink();
     initDropdowns();
+    initExpertise();
     initStickyHeader();
     initReveal();
     initYear();

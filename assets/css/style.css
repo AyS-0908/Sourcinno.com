@@ -1007,11 +1007,20 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 /* ---------- Accueil : parcours et expertises regroupés ---------- */
 #experience .grid--2 { grid-template-columns: 1fr; align-items: start; gap: var(--space-4); }
 #experience .timeline--h { align-self: start; }
-.experience-panel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); padding: var(--space-4); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
-.experience-panel article { min-width: 0; }
-.experience-panel h3 { font-size: 0.95rem; line-height: 1.3; margin-bottom: var(--space-1); }
-.experience-panel .bullets { margin: 0; }
-.experience-panel .bullets li { font-size: 0.86rem; line-height: 1.5; margin-bottom: 0.3rem; }
+#experience .experience-panel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: var(--space-3); }
+#experience .expertise-hint { grid-column: 1 / -1; margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+#experience .expertise-card { min-width: 0; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+#experience .expertise-card[open] { background: var(--grey-50); border-color: var(--teal-dark); }
+#experience .expertise-card summary { display: flex; flex-direction: column; min-height: 210px; padding: var(--space-3); cursor: pointer; list-style: none; border-radius: var(--radius-lg); }
+#experience .expertise-card summary::-webkit-details-marker { display: none; }
+#experience .expertise-card summary:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 3px; }
+#experience .expertise-card h3 { font-size: 1.1rem; line-height: 1.3; margin: 0 0 var(--space-1); }
+#experience .expertise-subtitle { color: var(--text-muted); font-size: 1rem; line-height: 1.5; }
+#experience .expertise-action { margin-top: auto; padding-top: var(--space-3); color: var(--teal-dark); font-size: 0.9rem; font-weight: 700; }
+#experience .expertise-action--open, #experience .expertise-card[open] .expertise-action--closed { display: none; }
+#experience .expertise-card[open] .expertise-action--open { display: block; }
+#experience .expertise-card .bullets { margin: 0 var(--space-3) var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--border); }
+#experience .expertise-card .bullets li { font-size: 0.95rem; line-height: 1.5; margin-bottom: var(--space-2); }
 
 /* ---------- Accueil : quatre étapes lisibles et un panneau d'outils ---------- */
 .approach-layout { display: grid; grid-template-columns: minmax(0, 3fr) minmax(235px, 1fr); gap: var(--space-3); align-items: start; }
@@ -1026,13 +1035,12 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 
 @media (max-width: 960px) {
   #experience .grid--2, .approach-layout { grid-template-columns: 1fr; }
-  .experience-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #experience .experience-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px) {
   .hero--animated { min-height: 0; padding-block: var(--space-6); }
   .hero--animated::before { inset: 0 -45% 0 25%; opacity: 0.5; }
   .hero--animated::after { inset: 0 0 0 25%; opacity: 0.5; }
   .hero--animated h1 { font-size: clamp(2.35rem, 9vw, 3.2rem); }
-  .experience-panel, .approach-layout .chevrons { grid-template-columns: 1fr; }
-  .experience-panel article:last-child { grid-column: auto; }
+  #experience .experience-panel, .approach-layout .chevrons { grid-template-columns: 1fr; }
 }
