@@ -807,14 +807,9 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   to   { background-position: 100% 50%; }
 }
 
-/* ---------- Besoins en trois cartes et bandeau de confiance ---------- */
+/* ---------- Besoins des pages de service et bandeau de confiance ---------- */
 #besoin .section__head { max-width: 640px; margin-bottom: var(--space-4); }
 #besoin .lead { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.25; font-weight: 700; color: var(--navy); }
-.need-cards { list-style: none; margin: 0; padding: 0; counter-reset: needs; }
-.need-cards .card { display: grid; grid-template-columns: 48px 1fr; align-content: center; column-gap: var(--space-2); min-height: 116px; padding: var(--space-3); }
-.need-cards .card::before { counter-increment: needs; content: counter(needs, decimal-leading-zero); grid-row: 1 / 3; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--grey-50); color: var(--teal-dark); font-weight: 700; }
-.need-cards .card strong { line-height: 1.35; }
-.need-cards .card span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.45; }
 #references { padding-block: var(--space-4); }
 #references .section__head { margin-bottom: var(--space-3); }
 #references h2 { font-size: 1.15rem; }
@@ -850,6 +845,11 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 #services .card--service { padding-top: 5.5rem; }
 #services .card--service h3 { max-width: 19ch; }
 #services .card--service .card__foot { margin-top: auto; }
+#services .card--service { min-height: 415px; }
+#services .service-needs { list-style: none; margin: 0; padding: var(--space-2) 0 0; border-top: 1px solid rgba(159, 227, 224, 0.3); }
+#services .service-needs li + li { margin-top: var(--space-2); }
+#services .service-needs strong { display: block; color: #9fe3e0; line-height: 1.4; }
+#services .service-needs span { display: block; color: var(--white); font-size: 0.95rem; line-height: 1.5; }
 .card--service > * { position: relative; z-index: 1; }
 .card--service h3 { color: var(--white); }
 .card--service p { color: rgba(255, 255, 255, 0.92); }
@@ -1033,7 +1033,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .hero--animated::before { inset: 0 -45% 0 25%; opacity: 0.5; }
   .hero--animated::after { inset: 0 0 0 25%; opacity: 0.5; }
   .hero--animated h1 { font-size: clamp(2.35rem, 9vw, 3.2rem); }
-  .need-cards { grid-template-columns: 1fr; }
   .experience-panel, .approach-layout .chevrons { grid-template-columns: 1fr; }
   .experience-panel article:last-child { grid-column: auto; }
 }
