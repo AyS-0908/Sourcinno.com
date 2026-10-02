@@ -1,0 +1,77 @@
+=== FULL AUDIT BRIEF - pass p16 - review contact 1 of 2 ===
+RUN AS: gpt-6.1-sol @ effort 4 (1=low 2=medium 3=high 4=xhigh 5=max)
+
+You are a FRESH auditor with zero memory of this work. You GRADE it. You do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p16\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: everything this Pass changed: Full P16: product diff 9db4f3d621e31101144835cc349d92df6224e615..working tree, Strategy #besoin/#experience plus scoped style.css and 14 CSS-hash-only HTML. Named second repo C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW: exact git diff 8c4ec51fc404fa57453b339d26c767721d14ef40 -- PLAN.md PROGRESS.md CHANGELOG.md (includes committed checkpoint934f960 and current changes); read from that repo cwd with approved escalation if Git metadata blocked. Product seal does not cover docs or ignored probes/captures. Contract PLAN16 in full; PRD4/5.2; approved strategie1200/375 PNGs. Isolated local read-only browser probes authorised: existing server127.0.0.1:4173, installed Playwright Edge; no form/embed/live writes/install/main/publish. Ignored evidence: .WIP/p16-preservation.py, p16-browser.cjs, p16-consumers.cjs, p16-consumers-baseline.json, p16-captures/controls.json and need/experience/focus screenshots. Native full suite already executed once at unchanged71c31e8f0a24312d; verify decisive paths/evidence, no redundant whole-suite requirement. Tracking recovery owner oui: old state journal archived, zero contacts, original pre-code product baseline retained; no gate patch. PLAN Done is prepared closure target per code-pass, pointer explicitly keeps GREEN/delivery owed, delivery post-gate requires both repos matching remote. Actual work gpt-6.1-sol/high; reviewer same/xhigh, live controls support1-5, cap2. Frozen exact input hashes before briefing: C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\PLAN.md SHA256 DF7F48BCBA8B23E56D8D5903C25D78A5F67D6D1562522A8B95CA87FEEFAE2AF4 | C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\PRD.md SHA256 A20AEA33D4B398E2C6E55377C151C6FBF1C7D59AE8402982485D38472CFDBE6A | C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\PROGRESS.md SHA256 693ED1E3C8413694C8D566BA4F79B89F611D4122EDFF4934BD836A7BAF6951B9 | C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\CHANGELOG.md SHA256 6936FEEB5DD1335DF8F0C51F4EE2909BD9EECE0694726F671859D87C58D07A00 | C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\prompts\pass16-coder.md SHA256 0E1AB2E77B3B993004328973EB700BC779078D90EAE5B4D969ABE7153AA850DB | C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\previews\services\strategie-desktop-1200.png SHA256 6116093EBE736B8202A62546A4A75F549D335014A484BAE724CC38781B225132 | C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\previews\services\strategie-mobile-375.png SHA256 AF9FBB125285A5A86B3D974E16EFD6CBD7D3774D0A4862C7F8CF326F28C4D22C
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 9db4f3d621e31101144835cc349d92df6224e615
+  404.html                                          |   2 +-
+   ai-business.html                                  |   2 +-
+   assets/css/style.css                              |  27 +++++
+   contact/index.html                                |   2 +-
+   index.html                                        |   2 +-
+   mentions-legales/index.html                       |   2 +-
+   offre-ia-business/index.html                      |   2 +-
+   offre-strategie-organisation-processus/index.html |   2 +-
+   offre-venture-building/index.html                 |   2 +-
+   politique-confidentialite/index.html              |   2 +-
+   prototypes/index.html                             |   2 +-
+   publications/index.html                           |   2 +-
+   service-ia-business/index.html                    |   2 +-
+   service-strategie-transformation/index.html       | 116 ++++++++++++++++------
+   service-venture-building/index.html               |   2 +-
+   venture-building.html                             |   2 +-
+   16 files changed, 128 insertions(+), 43 deletions(-)
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown. Excludes only root
+PROGRESS.md/CHANGELOG.md and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Use the `code-audit` skill in phase-gate mode. Do not invent or modify audit logic.
+2. Re-run the cheapest decisive check for every claim you rely on.
+3. GREEN only if there is no Tier 1 or Tier 2 finding and every check passes.
+4. Need testing -> MORE_TESTS; append `## TEST-REQUESTS` with every AUTO/MANUAL request.
+5. Findings -> append ONE `## Audit fixes to implement` section to .WIP\pass-loop-p16\pass-work.md.
+
+PRIOR FINDINGS
+  none recorded before this contact.
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p16\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "eb7be241",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.

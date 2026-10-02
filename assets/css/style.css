@@ -1041,3 +1041,30 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .hero--animated h1 { font-size: clamp(2.35rem, 9vw, 3.2rem); }
   #experience .experience-panel { grid-template-columns: 1fr; }
 }
+
+/* Services : opt-in local, les pages sœurs gardent leur présentation. */
+.service-refinement { background: var(--white); overflow-wrap: anywhere; }
+#besoin.service-refinement .section__head { max-width: none; }
+#besoin.service-refinement .lead { padding: var(--space-3); margin-bottom: var(--space-3); border-radius: var(--radius-lg); background: var(--grey-50); font-size: 1rem; line-height: 1.7; font-weight: 400; }
+.service-phases { align-items: start; }
+.service-phase { min-width: 0; box-shadow: none; }
+.service-phase__head { display: flex; align-items: start; gap: var(--space-2); padding-bottom: var(--space-2); }
+.service-phase__head .step__n { flex: none; background: var(--teal-dark); }
+.service-phase__percent { margin: 0; color: var(--teal-dark); font-size: 1rem; font-weight: 700; }
+.service-question-list { list-style: none; margin: 0; padding: 0; }
+.service-question-card { border-top: 1px solid var(--border); }
+.service-question-card summary { display: flex; align-items: baseline; gap: var(--space-2); min-height: 44px; padding: var(--space-2) 0; cursor: pointer; list-style: none; font-weight: 700; line-height: 1.5; }
+.service-question-card summary::-webkit-details-marker { display: none; }
+.service-question-card summary::after { content: "+"; flex: none; margin-left: auto; color: var(--teal-dark); }
+.service-question-card[open] summary::after { content: "−"; }
+.service-question-card summary:focus-visible { outline-color: var(--teal-dark); }
+.service-question__number { flex: none; color: var(--teal-dark); font-size: 1rem; }
+.service-question { padding: var(--space-2); margin: 0 0 var(--space-1); border-radius: var(--radius); background: var(--grey-50); color: var(--text-muted); }
+.service-pilotage { padding: var(--space-3); margin: var(--space-3) 0 0; border-radius: var(--radius-lg); background: var(--grey-50); }
+.service-careers { list-style: none; margin: 0; padding: 0; }
+.service-career { min-width: 0; box-shadow: none; }
+.service-career::before { content: ""; display: block; width: 28px; height: 4px; background: var(--teal-dark); border-radius: var(--radius); margin-bottom: var(--space-1); }
+.service-career p { margin: 0; color: var(--text-muted); }
+@media (max-width: 640px) {
+  .service-phase, .service-career { padding: var(--space-2); }
+}
