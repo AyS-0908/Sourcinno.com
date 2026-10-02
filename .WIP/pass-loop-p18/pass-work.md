@@ -54,3 +54,12 @@ NOTES:16th-page scratch failure corrected by ownHTMLsnapshot->bin; product uncha
 AUDIT r1 COST: tokens unknown; reviewer active approximately6–7minutes, wall approximately8minutes incl approval waiting; GREEN/high. INVOCATION: /root/p18_auditor, actual session01a0fef1-127b-7c93-a976-eb61ce2d80cd. USAGE BASIS: unknown; source collaboration completion notice, no comparable new/cached meter available. One reservation/invocation, no confirmation/second contact.
 ## MIGRATION
 Independent GREEN/high and final native/source/rendered receipts migrated to root PROGRESS P18 verification. NITS none new; inherited grey percentages recorded in Known minor issues. Product seal8b073677cb485f7d and14separate inputs equal before/after verdict import. Separate post-verdict PROGRESS/CHANGELOG migration is bookkeeping, not covered by old docs diff. PLAN/PRD/prompt/README/approvedPNG unchanged.
+## CLOSURE
+UNIT: 18
+DOCS: root PLAN18status/evidence only, PROGRESS current/verification, CHANGELOG acceptance; separately pushed docs682c2216d8a1e1b7344a92dea278a1407d94cacf. Planner inputs96ad03a separately verified; PRD/README/prompt/previews/otherPasses unchanged.
+MIGRATED: final native/source/rendered acceptance and independent GREEN/high receipt, separate frozen inputs, scratch-run failure/correction, actual models/contact/unknownusage into PROGRESS P18 verification and CHANGELOG. Remote matchingheads/ahead0behind0 verified bothrepos. Delivery/rootreceipt follow-up bookkeeping not covered by old seal.
+NITS: none new; inherited P16greypercentages retained under root PROGRESS Known minor issues and noted P18 acceptance. No P18testsowed/waiver; historicalP15phonewaiver andp9publicphone remain separate.
+COMMIT: a45007eb9ae7a7f987fb3e9f0e0a666602160fef
+SIZE REALITY: approximately20–25 active minutes combined maker/reviewer/closure estimated, excluding approval/owner waiting; reviewer6–7minutes. New/cached usage unknown;1freshcontactof2,0confirmations. No material sizing deviation or scope expansion.
+DEFERRED: publication/p9/P15historicalphonewaiver/Portfolio/chatbot/apps/n8n/remainingmedia unchanged.
+SURPRISES: native suite traverses scratchHTML; nonHTML opening snapshot avoids unintendedpage. Existingmobile-nav visibilitytransition must settle before asserting visible. Planner CHECK preserves all18criteria until durable/reset receipts verified; no newvalidator/evidencebundle/sharedstyle audit.
