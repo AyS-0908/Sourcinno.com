@@ -1,0 +1,77 @@
+=== FULL AUDIT BRIEF - pass p17 - review contact 1 of 2 ===
+RUN AS: gpt-6.1-sol @ effort 4 (1=low 2=medium 3=high 4=xhigh 5=max)
+
+You are a FRESH auditor with zero memory of this work. You GRADE it. You do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p17\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: everything this Pass changed: Full PLAN17 IA product diff against293dc43; two substantive HTML/CSS paths plus14mechanical CSSstamps. Exact second-repo docs diff against6f2fc9a in .WIP/p17-docs-review.diff (PLAN17status/evidence only PROGRESS CHANGELOG); rootdocs/ignored evidence outside productseal frozen in .WIP/p17-frozen.json recheck at import. PRD4/5.2 approvedIApreviews. Browser .WIP/p17-browser.cjs/.WIP/p17-consumers.cjs and original expectations/controlrecords; localhost read-only realkeyboard/tap1200/375 JSon/off/reduce; no external/video/form activation. Existing native suite once final; run decisive subset or independent targeted browser controls, no redundant broader audit. Phase-gate code-audit; journal append only JSON/fixsection, never read makerjournal. No publication/productmain push, p9/queues/previews/prompt/PRD/README change. Activeapprox15-20minutes waitingexcluded costunknown; actualsol/high maker, sol/xhigh reviewer from metadata.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 293dc43eb31eb987afc83f413aadc32577cf6b07
+  404.html                                          |   2 +-
+   ai-business.html                                  |   2 +-
+   assets/css/style.css                              |   5 +
+   contact/index.html                                |   2 +-
+   index.html                                        |   2 +-
+   mentions-legales/index.html                       |   2 +-
+   offre-ia-business/index.html                      |   2 +-
+   offre-strategie-organisation-processus/index.html |   2 +-
+   offre-venture-building/index.html                 |   2 +-
+   politique-confidentialite/index.html              |   2 +-
+   prototypes/index.html                             |   2 +-
+   publications/index.html                           |   2 +-
+   service-ia-business/index.html                    | 117 ++++++++++++++++------
+   service-strategie-transformation/index.html       |   2 +-
+   service-venture-building/index.html               |   2 +-
+   venture-building.html                             |   2 +-
+   16 files changed, 106 insertions(+), 44 deletions(-)
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown. Excludes only root
+PROGRESS.md/CHANGELOG.md and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Use the `code-audit` skill in phase-gate mode. Do not invent or modify audit logic.
+2. Re-run the cheapest decisive check for every claim you rely on.
+3. GREEN only if there is no Tier 1 or Tier 2 finding and every check passes.
+4. Need testing -> MORE_TESTS; append `## TEST-REQUESTS` with every AUTO/MANUAL request.
+5. Findings -> append ONE `## Audit fixes to implement` section to .WIP\pass-loop-p17\pass-work.md.
+
+PRIOR FINDINGS
+  none recorded before this contact.
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p17\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "4b51433e",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.

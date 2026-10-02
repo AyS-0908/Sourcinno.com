@@ -1068,3 +1068,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 @media (max-width: 640px) {
   .service-phase, .service-career { padding: var(--space-2); }
 }
+
+.service-careers--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 640px) {
+  .service-careers--two { grid-template-columns: 1fr; }
+}
