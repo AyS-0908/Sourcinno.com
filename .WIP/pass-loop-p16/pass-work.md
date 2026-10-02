@@ -158,3 +158,10 @@ FREEZE: all7named root input hashes rechecked equal immediately before verdict i
 FREEZE AFTER IMPORT: all7named second-repo hashes identical; product gate GREEN/close71c31e8f0a24312d,1of2contacts,0owner tests/waivers. Root seal coverage not claimed.
 
 CLOSURE PREP: product/docs audit --fetch ahead0behind0, exact16product/3docs permitted paths; explicit bothstatus/whitespace passed. Reviewer nit migrated to PROGRESS Known minor issues, full evidence/recovery/cost receipt durable there. PLAN/PRD/prompt/previews not edited after review. Fullnative suite not repeated on identical product. Active75–85minutes estimated including reviewer/excluding waits; larger30 sizing, scoped checkpoint/remainder already owner-approved.
+
+## CLOSURE
+UNIT: p16
+DOCS: PLAN16status/evidence only before review; root PROGRESS/CHANGELOG implementation/native/rendered/review/recovery/nit/cost migrated, separately delivered docs-main f749aa20e1ec4def19107305f351987d81f61827. Approved Planner inputs separately8c4ec51; checkpoint934f960 historical. PRD/prompt/previews/body/queues/p9 unchanged. Productseal excludes docs; exact diff and7hashes separately reviewed/rechecked.
+MIGRATED: PROGRESS P16 independent review receipt and Last Verification own native/rendered commands/results, opening baselines, one contact, recovery, usage basis, active size and separate delivery; CHANGELOG visible change/review. Durable record commit follows, then own3file reset only.
+NITS: PROGRESS Known minor issues retains reviewer Tier3 percentage-colour cascade advisory; no Tier1/2 or further fix/review. P16 tests owed none, waiver none; historical P15 waiver/p9 tests unchanged.
+COMMIT: 405401f359bbd52ce7aaa1c2304e65cb4a8bbcbb
