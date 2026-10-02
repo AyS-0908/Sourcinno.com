@@ -80,3 +80,11 @@ None: all P17 acceptance performed by AI; no owner test/waiver.
 ```
 AUDIT r1 COST: tokens unknown, reviewer15-20active minutes estimate excluding permission waiting; GREEN/high.
 INVOCATION: /root/p17_auditor /01a0fea1-9db7-7641-8176-d2b273b5ce6a; actualgpt-6.1-sol/xhigh verifiedturn_context. USAGE BASIS: unknown; no comparable delta supplied. One fresh review/contact1of2, no confirmation; append fallback archived reviewer JSON verbatim, no maker grade. ScopeCLEAN; noTier1/2/newTier3. Existing P16 muted percentage advisory retained.
+
+## CLOSURE
+UNIT: p17
+DOCS: root PLAN17 status/evidence only, PROGRESS/CHANGELOG acceptance and separate docs-main617ac211ea3b0d964efe570c569878b139feb49a pushed; PRD/prompt/previews/README/queues unchanged.
+MIGRATED: exact original preservation, final native once, four rendered JSon/off controls, six shared-consumer comparisons, independent parsed GREEN, model/contacts/unknown usage and product628bd20 receipts into PROGRESS/CHANGELOG. Remaining closure/reset delivery receipts are bookkeeping only.
+NITS: none new; inherited P16 grey percentages retained in PROGRESS Known minor issues. P17 tests owed none/waiver none; historical P15 waiver/p9 tests unchanged.
+COMMIT: 628bd20b2c1aebf5100aa1e76d86d322be9388a8
+SIZE REALITY: approximately40-50combinedactive minutes estimated excluding permission waiting, reviewer15-20estimate; above30 sizing, no scope expansion; new/cached usage unknown, one contact invoked/reserved of2.

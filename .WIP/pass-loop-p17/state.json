@@ -1,7 +1,7 @@
 {
   "unit_label": "pass",
   "unit": "p17",
-  "state": "close",
+  "state": "done",
   "scope": "Full PLAN17 IA product diff against293dc43; two substantive HTML/CSS paths plus14mechanical CSSstamps. Exact second-repo docs diff against6f2fc9a in .WIP/p17-docs-review.diff (PLAN17status/evidence only PROGRESS CHANGELOG); rootdocs/ignored evidence outside productseal frozen in .WIP/p17-frozen.json recheck at import. PRD4/5.2 approvedIApreviews. Browser .WIP/p17-browser.cjs/.WIP/p17-consumers.cjs and original expectations/controlrecords; localhost read-only realkeyboard/tap1200/375 JSon/off/reduce; no external/video/form activation. Existing native suite once final; run decisive subset or independent targeted browser controls, no redundant broader audit. Phase-gate code-audit; journal append only JSON/fixsection, never read makerjournal. No publication/productmain push, p9/queues/previews/prompt/PRD/README change. Activeapprox15-20minutes waitingexcluded costunknown; actualsol/high maker, sol/xhigh reviewer from metadata.",
   "audit_launches": 1,
   "audit_launch_cap": 2,
