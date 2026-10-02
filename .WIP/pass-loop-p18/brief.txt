@@ -1,0 +1,62 @@
+=== FULL AUDIT BRIEF - pass 18 - review contact 1 of 2 ===
+RUN AS: gpt-6.1-sol @ effort 4 (1=low 2=medium 3=high 4=xhigh 5=max)
+
+You are a FRESH auditor with zero memory of this work. You GRADE it. You do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p18\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: everything this Pass changed: FULL P18 only: product service-venture-building/index.html #besoin/#experience diff153b629; named secondrepo root PLAN18 status/evidence,PROGRESS,CHANGELOG exact diff against96ad03a at product .WIP/p18-docs.diff. Read root AGENTS/PROGRESS/PLAN18 and PRD4/5.2, approved venture1200/375PNGs. Supporting source/browser scratch .WIP/p18-preservation.py/p18-browser.cjs/p18-original.bin/p18-original.json and p18-captures/controls.json; frozen14 hashes .WIP/p18-frozen.json. Product seal does not cover secondrepo/ignored inputs. Independently verify affected preservation/render/keyboard/tap/JSoff/reducedmotion/2videos launch+fallback without activation,1200/375 geometry/text/focus/colours; scoped native subset/version sufficient, do not replay unchangedV1/allroutes/P17consumers. LIVE authorization local read-only browser only, blockexternal requests, no video/contact/account/settings writes; LIVE-SAFE journal SLICE contract. Current model sol/high maker confirmedturn_context, reviewer mustsol/xhigh currentcollaborationcontrols supported, max2contacts/onefresh+needed confirmation same reviewer. Scope/delivery markers before GREEN are explicitly conditional, remote finaldelivery not yet complete; independently GREEN leads to separate authorised github-sync closure/journal/reset. No new checker/dependency/product changes. Only append verdict/findings to journal, never READ journal.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 153b629334b434aadd88bb2009757035b1c0fc6c
+  service-venture-building/index.html | 89 ++++++++++++++++++++++++++-----------
+   1 file changed, 64 insertions(+), 25 deletions(-)
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown. Excludes only root
+PROGRESS.md/CHANGELOG.md and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Use the `code-audit` skill in phase-gate mode. Do not invent or modify audit logic.
+2. Re-run the cheapest decisive check for every claim you rely on.
+3. GREEN only if there is no Tier 1 or Tier 2 finding and every check passes.
+4. Need testing -> MORE_TESTS; append `## TEST-REQUESTS` with every AUTO/MANUAL request.
+5. Findings -> append ONE `## Audit fixes to implement` section to .WIP\pass-loop-p18\pass-work.md.
+
+PRIOR FINDINGS
+  none recorded before this contact.
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p18\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "c835b7bc",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.
