@@ -1,7 +1,7 @@
 {
   "unit_label": "pass",
   "unit": "p20",
-  "state": "close",
+  "state": "done",
   "scope": "First full P20: product portfolio/index.html and assets/img/portfolio/go-viral-cover.svg against 6dd4d38. Separate root docs diff 9aa867c PLAN20 token/evidence plus PROGRESS/CHANGELOG20 only; frozen exact patch at product .WIP/pass-loop-p20/docs-delta.patch, verify current diff equals patch and PLAN acceptance body unchanged. Inspect4ownPNG captures and PROGRESS P20 browser receipts; source/geometry/AX/real native pressKey + Chrome touch/trueJS-off already executed; existing fullsuite oncePASS, no need repeat unchanged wide suite. Inherited AGENTS/ARCHITECTURE, P9, rollback/workflow immutable/outsideP20. LOCAL only; no fetch/push/submit/publication. LIVE-SAFE local rendering/navigation read-only; temporary emulations restored; no source provider URL/ID/clientdata. Runtime work gpt-6.1-sol/high confirmed currentrollout; enforced reviewer sol/xhigh controls, max2contacts. Read current skill-code-audit phase-gate; no self-grade. Journal read forbidden, append verdict only.",
   "audit_launches": 1,
   "audit_launch_cap": 2,
