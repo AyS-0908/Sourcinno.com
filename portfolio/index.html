@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio : projets et collaborations | Sourcinno</title>
+<meta name="description" content="Découvrez CRM TENANTS, un projet de parcours commercial guidé, et échangeons sur une mission freelance ou une collaboration.">
+<link rel="canonical" href="https://www.sourcinno.com/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Sourcinno">
+<meta property="og:title" content="Portfolio : projets et collaborations | Sourcinno">
+<meta property="og:description" content="Découvrez CRM TENANTS, un projet de parcours commercial guidé, et échangeons sur une mission freelance ou une collaboration.">
+<meta property="og:url" content="https://www.sourcinno.com/portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.sourcinno.com/pictures/og-sourcinno.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sourcinno — Aymard de Scorbiac, conseil en stratégie, organisation, processus, IA et venture building">
+<link rel="icon" href="/pictures/logo_favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css?v=d980edec">
+<style>
+  .portfolio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); align-items: start; }
+  .portfolio-card { position: relative; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow-wrap: anywhere; }
+  .portfolio-card h2 { font-size: 1.4rem; padding: 24px 76px 20px 20px; margin: 0; min-height: 76px; }
+  /* ponytail: native disclosure owns state, focus and no-JavaScript access. */
+  .portfolio-details > summary { position: absolute; top: 15px; right: 15px; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 50%; color: var(--teal-dark); background: var(--white); cursor: pointer; list-style: none; font-size: 20px; font-weight: 700; }
+  .portfolio-details > summary::-webkit-details-marker { display: none; }
+  .portfolio-details > summary:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 3px; }
+  .portfolio-return, .portfolio-details[open] .portfolio-info, .portfolio-details[open] ~ .portfolio-front { display: none; }
+  .portfolio-details[open] .portfolio-return { display: inline; }
+  .portfolio-back, .portfolio-copy { padding: 20px; }
+  .portfolio-card h3 { font-size: 12px; line-height: 1.4; letter-spacing: 0; text-transform: uppercase; color: var(--teal-dark); margin: 0 0 7px; }
+  .portfolio-card p { font-size: 16px; font-weight: 400; color: var(--navy); margin: 0 0 20px; }
+  .portfolio-cover { position: relative; }
+  .portfolio-cover img { width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius); }
+  .portfolio-lock { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border-radius: 50%; background: var(--teal-dark); display: grid; place-items: center; }
+  .portfolio-lock svg { width: 22px; height: 22px; fill: none; stroke: var(--white); stroke-width: 2; }
+  .portfolio-tags { display: flex; gap: 8px; margin-bottom: 20px; }
+  .portfolio-tags span { padding: 4px 12px; border-radius: 20px; background: var(--bg-alt); font-size: 14px; font-weight: 700; }
+  .portfolio-tags span:first-child { color: var(--teal-dark); }
+  .portfolio-actions { display: flex; gap: 10px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .portfolio-actions a { flex: 1; min-height: 44px; padding: 10px 8px; font-size: 14px; line-height: 1.5; text-align: center; border: 1px solid var(--grey-300); border-radius: 7px; color: var(--teal-dark); font-weight: 700; }
+  .portfolio-actions .portfolio-request { background: var(--teal-dark); color: var(--white); border-color: var(--teal-dark); }
+  .portfolio-timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; list-style: none; margin: 12px 0 20px; padding: 0; }
+  .portfolio-timeline li { font-size: 12px; line-height: 1.35; color: var(--text-muted); }
+  .portfolio-timeline li::before { content: ''; display: block; height: 5px; border-radius: 3px; background: var(--border); margin-bottom: 8px; }
+  .portfolio-timeline li[aria-current="step"] { color: var(--teal-dark); font-weight: 700; }
+  .portfolio-timeline li[aria-current="step"]::before { background: var(--teal-dark); }
+  @media (max-width: 767px) { .portfolio-grid { grid-template-columns: 1fr; } }
+</style>
+<noscript>
+  <style>
+    /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
+       toutes les sections resteraient a opacity 0, donc invisibles. */
+    .reveal { opacity: 1 !important; transform: none !important; }
+    /* Les formulaires ont besoin de JavaScript pour partir. Sans lui, ils
+       feraient un GET et enverraient nom, email et message dans l URL. */
+    form[data-contact-form] { display: none; }
+    .noscript-contact { display: block !important; }
+  </style>
+</noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-logo" href="/" aria-label="Sourcinno, retour a l accueil">
+      <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="342" height="110">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+      <ul class="site-nav__list">
+        <li><a href="/">Exp&eacute;rience</a></li>
+        <li class="nav-drop-host">
+          <details class="nav-drop">
+            <summary>Services</summary>
+            <ul class="nav-drop__menu">
+              <li><a href="/service-strategie-transformation/">&#9823;&#65039; Strat&eacute;gie &amp; Transformation</a></li>
+              <li><a href="/service-ia-business/">&#10024; Entreprise IA</a></li>
+              <li><a href="/service-venture-building/">&#128640; Venture Building</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a class="btn btn--primary btn--sm" href="/contact/">Prendre rendez-vous</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero hero--page">
+  <div class="container">
+    <p class="hero__eyebrow">Portfolio</p>
+    <h1>Des projets à découvrir.<br>Des collaborations à construire.</h1>
+    <p class="hero__sub">Une mission freelance, un projet à lancer ensemble.</p>
+  </div>
+</section>
+<section class="section section--alt">
+  <div class="container portfolio-grid">
+    <article class="portfolio-card" aria-labelledby="crm-title">
+      <h2 id="crm-title">CRM TENANTS</h2>
+      <details class="portfolio-details">
+        <summary>
+          <span class="portfolio-info"><span aria-hidden="true">i</span><span class="visually-hidden">Découvrir les détails de CRM TENANTS</span></span>
+          <span class="portfolio-return"><span aria-hidden="true">←</span><span class="visually-hidden">Revenir à la présentation de CRM TENANTS</span></span>
+        </summary>
+        <div class="portfolio-back">
+          <h3>Persona</h3><p>B2B · Équipes commerciales</p>
+          <h3>Problème</h3><p>Des étapes oubliées et des offres à fiabiliser.</p>
+          <h3>Vision</h3><p>Rendre la vente de surfaces plus rigoureuse.</p>
+          <h3>Proposition de valeur</h3><p>Guider les commerciaux, du besoin au devis.</p>
+          <h3>Solution</h3><p>Un parcours de vente guidé, relié au stock de surfaces et aux règles de devis. Ces fonctions décrivent le projet ; le produit reste à construire.</p>
+          <h3>Différenciation</h3><p>Comparaison à finaliser par benchmark.</p>
+          <h3>Stack</h3><p>À définir pour le produit</p>
+          <h3>Modèle économique</h3><p>À confirmer</p>
+          <h3>Avancement</h3>
+          <ol class="portfolio-timeline" aria-label="Avancement du projet">
+            <li aria-current="step">Idée / maquette<span class="visually-hidden"> : phase actuelle, maquette ; idée, problème et business plan sans validation détaillée attestée. Produit à construire.</span></li>
+            <li>Stories / spec<span class="visually-hidden"> : état détaillé à confirmer.</span></li>
+            <li>Dev / tests<span class="visually-hidden"> : développement, tests et audit du produit à réaliser.</span></li>
+            <li>Kit marché<span class="visually-hidden"> : à confirmer. État de pause non renseigné.</span></li>
+          </ol>
+          <div class="portfolio-actions"><a href="/contact/?project=CRM%20TENANTS&amp;intent=contact">Nous contacter</a></div>
+        </div>
+      </details>
+      <div class="portfolio-front">
+        <div class="portfolio-cover">
+          <img src="/assets/img/portfolio/crm-tenants-cover.svg" alt="Vignette illustrative : du besoin aux surfaces puis au devis" width="528" height="297">
+          <span class="portfolio-lock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10V7a6 6 0 0 1 12 0v3"/><rect x="4" y="10" width="16" height="13" rx="2"/></svg><span class="visually-hidden">Vidéo privée : accès sur demande, invitation à confirmer.</span></span>
+        </div>
+        <div class="portfolio-copy">
+          <div class="portfolio-tags"><span>Immobilier</span><span>B2B</span></div>
+          <h3>Proposition de valeur</h3><p>Guider les commerciaux, du besoin au devis.</p>
+          <div class="portfolio-actions">
+            <a href="/contact/?project=CRM%20TENANTS&amp;intent=contact">Nous contacter</a>
+            <a class="portfolio-request" href="/contact/?project=CRM%20TENANTS&amp;intent=acces">Demander l’accès</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">Sourcinno</p>
+        <p>Aymard de Scorbiac &mdash; consultant ind&eacute;pendant en Strat&eacute;gie, Organisation &amp; Innovation. Paris, France.</p>
+        <p class="site-footer__cta"><a class="btn btn--primary btn--sm" href="/contact/">Prendre rendez-vous</a></p>
+      </div>
+      <div>
+        <h2>Services</h2>
+        <ul>
+          <li><a href="/service-strategie-transformation/">Strat&eacute;gie &amp; Transformation</a></li>
+          <li><a href="/service-ia-business/">Entreprise IA</a></li>
+          <li><a href="/service-venture-building/">Venture Building</a></li>
+          <li><a href="/publications/">Publications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:aymard.de.scorbiac@sourcinno.com">aymard.de.scorbiac@sourcinno.com</a></li>
+          <li><a href="tel:+33608755877">+33 6 08 75 58 77</a></li>
+          <li><a href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.sourcinno.com">www.sourcinno.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; <span data-year>2026</span> Sourcinno SAS &mdash; Paris (France)</p>
+      <p><a href="/mentions-legales/">Mentions l&eacute;gales</a> &middot; <a href="/politique-confidentialite/">Politique de confidentialit&eacute;</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/config.js?v=654769f0" defer></script>
+<script src="/assets/js/site.js?v=c254395b" defer></script>
+</body>
+</html>
