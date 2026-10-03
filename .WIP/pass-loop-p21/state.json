@@ -1,20 +1,20 @@
 {
   "unit_label": "pass",
   "unit": "p21",
-  "state": "paused",
-  "scope": "",
-  "audit_launches": 0,
+  "state": "close",
+  "scope": "FULL P21 phase-gate. Product base722cf85449060854894d960f98b65efa30b81f59: portfolio/index.html own QUICK markup/metadata and assets/img/portfolio/quick-diag-cover.svg; own loop. Root C:/Users/aymar/AYS_CODING/code-SOURCINNO_WWW PLAN21 token/evidence + PROGRESS/CHANGELOG21 exact delta against Planner0a537692e4fdc063e961db0bbe8517d6898f18d2, three SHA256 DOC-FREEZE in pass-work.md. Read prompt root/prompts/pass21-coder.md, PLAN21, PRD4/A2, approved previews/portfolio/manifest-v4.json projects[2] and four approved v4 PNGs, four ignored local evidence captures. Root AGENTS/ARCHITECTURE inherited unstaged, not this Pass. Review all required source/native/rendered/keyboard/true-touch/true-JSoff/contact evidence; no prior P21 audit. Named pilot read-only sections only if needed, never client files/IDs. LIVE authorisation only local read-only page rendering/navigation, no form fill/submission/provider write; LOCAL ONLY no fetch/push/upload/deploy/product-main merge/app installation. Freeze root docs until import. Write verdict/fixes/Tier3 only to this pass-work.md implementation plan, never root PLAN.md. Protected existing CRM/GO articles/styles/shell/sitemap/shared CSS/JS/tools/workflow unchanged; P9 hashes/rollback/historicalwaivers retained. No repeated P20 audit/new validator/dependency/broad scan.",
+  "audit_launches": 1,
   "audit_launch_cap": 2,
   "test_fix_round": 0,
   "test_fix_rounds": 3,
   "manual_open": 0,
   "stop_mode": "decisions-only",
-  "verdict": "pending",
-  "verdict_note": "",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
   "token": "",
   "fix_sections": 0,
   "audit_errors": 0,
-  "paused_from": "test",
+  "paused_from": "",
   "model_capabilities": "gpt-6.1-sol@1,2,3,4,5",
   "models": {
     "work": {
@@ -26,13 +26,13 @@
       "effort": 4
     }
   },
-  "audits_paid": 0,
-  "results_blocks": 0,
+  "audits_paid": 1,
+  "results_blocks": 2,
   "pass_base": "722cf85449060854894d960f98b65efa30b81f59",
-  "brief_fingerprint": "",
-  "green_fingerprint": "",
-  "briefed_at": "",
+  "brief_fingerprint": "03c3e8e895ff5c59",
+  "green_fingerprint": "03c3e8e895ff5c59",
+  "briefed_at": "2026-10-04T00:55:45",
   "cap_extensions": [],
-  "state_dir": ".WIP\\pass-loop-p21",
-  "updated": "2026-10-03"
+  "state_dir": ".WIP/pass-loop-p21",
+  "updated": "2026-10-04"
 }

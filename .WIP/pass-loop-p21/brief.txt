@@ -1,0 +1,63 @@
+=== FULL AUDIT BRIEF - pass p21 - review contact 1 of 2 ===
+RUN AS: gpt-6.1-sol @ effort 4 (1=low 2=medium 3=high 4=xhigh 5=max)
+
+You are a FRESH auditor with zero memory of this work. You GRADE it. You do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p21\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: everything this Pass changed: FULL P21 phase-gate. Product base722cf85449060854894d960f98b65efa30b81f59: portfolio/index.html own QUICK markup/metadata and assets/img/portfolio/quick-diag-cover.svg; own loop. Root C:/Users/aymar/AYS_CODING/code-SOURCINNO_WWW PLAN21 token/evidence + PROGRESS/CHANGELOG21 exact delta against Planner0a537692e4fdc063e961db0bbe8517d6898f18d2, three SHA256 DOC-FREEZE in pass-work.md. Read prompt root/prompts/pass21-coder.md, PLAN21, PRD4/A2, approved previews/portfolio/manifest-v4.json projects[2] and four approved v4 PNGs, four ignored local evidence captures. Root AGENTS/ARCHITECTURE inherited unstaged, not this Pass. Review all required source/native/rendered/keyboard/true-touch/true-JSoff/contact evidence; no prior P21 audit. Named pilot read-only sections only if needed, never client files/IDs. LIVE authorisation only local read-only page rendering/navigation, no form fill/submission/provider write; LOCAL ONLY no fetch/push/upload/deploy/product-main merge/app installation. Freeze root docs until import. Write verdict/fixes/Tier3 only to this pass-work.md implementation plan, never root PLAN.md. Protected existing CRM/GO articles/styles/shell/sitemap/shared CSS/JS/tools/workflow unchanged; P9 hashes/rollback/historicalwaivers retained. No repeated P20 audit/new validator/dependency/broad scan.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 722cf85449060854894d960f98b65efa30b81f59
+  assets/img/portfolio/quick-diag-cover.svg |  7 ++++++
+   portfolio/index.html                      | 41 +++++++++++++++++++++++++++++--
+   2 files changed, 46 insertions(+), 2 deletions(-)
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown. Excludes only root
+PROGRESS.md/CHANGELOG.md and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Use the `code-audit` skill in phase-gate mode. Do not invent or modify audit logic.
+2. Re-run the cheapest decisive check for every claim you rely on.
+3. GREEN only if there is no Tier 1 or Tier 2 finding and every check passes.
+4. Need testing -> MORE_TESTS; append `## TEST-REQUESTS` with every AUTO/MANUAL request.
+5. Findings -> append ONE `## Audit fixes to implement` section to .WIP\pass-loop-p21\pass-work.md.
+
+PRIOR FINDINGS
+  none recorded before this contact.
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p21\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "6121ce61",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.
