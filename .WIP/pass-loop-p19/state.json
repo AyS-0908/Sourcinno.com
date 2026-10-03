@@ -1,7 +1,7 @@
 {
   "unit_label": "pass",
   "unit": "p19",
-  "state": "close",
+  "state": "done",
   "scope": "PLAN19 only: portfolio/index.html, sitemap.xml, assets/img/portfolio/crm-tenants-cover.svg; separately frozen root docs delta .WIP/pass-loop-p19/docs-delta.diff against four Planner .planner.bin inputs; six local rendered captures there. Historical P9 explicit paused exception. Native and actual keyboard/touch/noJS evidence complete; no main merge/push/deployment. Scope unchanged on owner-authorised resume.",
   "audit_launches": 1,
   "audit_launch_cap": 2,
