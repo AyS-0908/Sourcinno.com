@@ -1,0 +1,35 @@
+# Pass 21
+## SLICE
+UNIT: p21, PLAN21 QUICK card only; estimated30active min with4bounded captures/review/closure. Same conversation after P20; owner explicitly selected new Pass here, no handoff/new chat requested. No re-slicing/scope expansion.
+BASE: product rebuild722cf85449060854894d960f98b65efa30b81f59 clean/ahead7 last-known upstream, rollbacke50e34fcb546ac3eda782165829673e7d183f566. Planner inputs separately stored root0a537692e4fdc063e961db0bbe8517d6898f18d2; inherited AGENTS/ARCHITECTURE unstaged. HistoricalP9paused sole explicit exception, P15 waiver/P16 advisory unchanged.
+MODELS: actual own latest rollout turn_context gpt-6.1-sol/high; current collaboration launch controls support same gpt-6.1-sol/xhigh, fresh fork none required. Metadata low/medium/high/xhigh/max ->1,2,3,4,5. Max2contacts, new/cached usage unknown; no token ceiling.
+SCOPE: product portfolio/index.html QUICK markup/metadata only, assets/img/portfolio/quick-diag-cover.svg; own loop and PLAN21 token/evidence/PROGRESS/CHANGELOG21. Existing2articles/styles/shell/shared files unchanged. Approved manifest-v4 projects[2]/fourv4PNGs inspected; PRD4/A2 and source freshness named PLAN21 source receipt. No pilot/provider/private data copied.
+LIVE-SAFE: only local read-only render/navigation; no form fill/submission/storage/provider call. Temporary viewport/touch/JS overrides restored in finally or own temporary contexts closed on failure. No fixtures/live writes. Four screenshots transported only to loopback receiver restricted own4PNGnames/size/magic. No owner cleanup requested.
+MANUAL: none for P21; approved visuals/copy, AI covers real rendered/interaction checks. HistoricalP9/P15 excluded. No security/auth/money/migration halves/dependency gate; no new validator/library. Changed2productfiles reached by source/native/browser; docs/loop reached by exact diff/readback/independent review.
+## EXPECTED TESTS
+- AUTO-1 Final native once: `node tools/check.mjs --all`, `node tools/version.mjs --check`, `git diff --check`; protected-path diff vs722cf85 empty and both existing articles byte-identical. Root docs diff check. Measure seal before/after final checks.
+- AUTO-2 Source approved QUICK name/tag/persona/problem/vision/value/solution/stack literal;9backrubrics/eight16pxregularparagraphs/fourstages/currentDevtests. Accessible partial implementedExcel vs work-tenant/client/Sheets uncompleted; global audit/platform/grouped substates/kit/pause unknown. Exact2publiccontactURLs; no access/player/provider/private IDs/newclaim. SVG16:9 Questions/Réponses/Diagnostic, illustrative/Vidéo à venir.
+- AUTO-3 Visible1200/375 gallery:2columns/thirdcardnextrow vs1column, covers/readabletags/body/nooverflow/44pxcontrols/contact. Persist and inspect onlygallery1200/375,quickback1200/375.
+- AUTO-4 Real keyboard/mobiletouch: all3nativeindependentdisclosures, info/returnnames andfocus; hiddenfront/image/actions absentAX/taborder; front/back QUICK contact reaches exact localpublicURLwithoutsend/prefill. Preserve CRM/GO actions/content.
+- AUTO-5 True browserJSoff1200/375: all3cards/nativeQUICKopen/return/contact/readability and truthfulcontactfallback/footer navigation. Restore overrides; noanimationchange so unchanged reduced-motion baseline reused.
+- AUTO-6 One fresh code-audit phase-gate through generatedbrief; unchangedproductseal and separatelyfrozenroot3docdelta vs0a53769, max2contacts. LOCAL implementation/docs/durableGREEN/CLOSURE/DONE/reset verified; own3statefilesabsent; P9literalhashes/workflow/rollbackpreserved. No fetch/push/upload/publication.
+
+## CHANGED
+Product portfolio/index.html QUICKmarkup/metadata + assets/img/portfolio/quick-diag-cover.svg only. Root own PLAN21token/evidence, PROGRESS/CHANGELOG21 facts; frozen Planner0a53769, inherited2docs unstaged. No CSS/JS/sitemap/workflow/checker/pilot change.
+BROWSER: PROGRESS P21 records actual1200/375 keyboard/AX/noJS/contact and4inspectedcaptures. True tactile still OPEN; Chrome missing, IABdispatchTouchEvent unsupported; owner connection request pending. Temporary emulation restored; no submitted data.
+
+## TEST-RESULTS r1
+TREE: 03c3e8e895ff5c59
+CMD: `node -e $sourceCheck` (raw PowerShell script in tool transcript); `node tools/check.mjs --all`; `node tools/version.mjs --check`; `git diff --check`; `git diff --quiet 722cf85 -- .github/workflows/deploy-hostinger.yml sitemap.xml assets/css assets/js tools assets/img/portfolio/crm-tenants-cover.svg assets/img/portfolio/go-viral-cover.svg`; root `git diff --check`.
+RESULT: FAIL — required AUTO-4 true tactile action not executed because current Chrome connection is absent/IAB rejects Input.dispatchTouchEvent. Overall acceptance incomplete; no source defect/waiver/audit reservation.
+NATIVE: all completed checks succeeded:16pages/265internalrefs/38CSS-JSrefs/6scripts/13colourpairs/243links/16buttons/3publications/allgroups, versions/currentapprovedsource/2oldarticles/shell/CSS/protectedpath checks. Before/afterseal03c3e8e895ff5c59.
+BROWSER:1200/375 keyboard/all3independence/hiddenfrontAX/returnfocus/44px/nineuniformrubrics/partialtimeline/nooverflow/contact2routesblankform verified; four required captures persisted/inspected. ActualJSoff1200/375 reload/loadEvent/readycomplete/noscriptstyles/nativeQUICKopenreturncontact/formnone/fallbackblock/footerlinks and rendered images complete. Exact observations/capturehashes PROGRESS P21.
+NOTES: Chromecreate unavailable; freshbrowserinventoryonlyIAB/MCPApps, IABtouchdispatchunsupported. RawPage.navigate unsupported; documented historyback+Page.reload/readEvents gives bounded trueJSoff proof. All temporary emulation restored/viewportreset. Sourcequery overbroad Inputs metadata discarded/notshipped; native no-sourceidentifier pin succeeded. Token usage unknown,0of2contacts; owner connection question pending.
+
+## MANUAL TEST GUIDE
+None for P21; AI requires true tactile browser capability. Owner connection enablement is environment setup, not a human acceptance test or waiver. HistoricalP9/P15 unchanged.
+
+## PAUSE
+DONE: QUICK card/illustrative SVG/metadata implemented, existing2articles/styles/shell unchanged; final native/source/protected checks succeeded at03c3e8e895ff5c59; actual1200/375 keyboard/JSoff/contact/returnfocus/AX/fourinspectedcaptures complete. No GREEN/DONE or waiver claimed.
+NEXT: restore current Chrome connection (owner environment setup), resume test; perform actualtouch/all3independence/returnfocus/front-backQUICKcontact and append complete current results with matchingseal. Freeze PLAN21 token/evidence/ownPROGRESSCHANGELOG patch vs Planner0a53769, one fresh actualsol/xhigh reviewer/max2contacts, then local-only implementation/durableGREEN/CLOSURE/DONE/reset/docsreceipts. Existing full native suite once; repeat only ifsourcechanges. No wider scope/push/deploy.
+DOCS: root PLAN21On-going/evidenceOPEN, PROGRESS objective/next/checkpoint/size/capabilityboundary, CHANGELOG candidatepaused. Planner0a537692e4fdc063e961db0bbe8517d6898f18d2; inheritedAGENTS/ARCHITECTUREunstaged. HistoricalP9/P15/P16 unchanged. Approx20–25active min/new-cachedusageunknown/0of2contacts. LOCAL checkpoint only.
