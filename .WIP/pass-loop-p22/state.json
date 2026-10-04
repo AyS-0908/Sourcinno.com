@@ -1,7 +1,7 @@
 {
   "unit_label": "pass",
   "unit": "p22",
-  "state": "close",
+  "state": "done",
   "scope": "Full PLAN22 only: product delta vs69a6153 card+SVG and exact root PLAN22/PROGRESS/CHANGELOG delta vs Plannerf60c99e; root pre-review checkpoint frozen. Read root PROGRESS P22 checkpoint and four pinned ignoredPNG captures; approved manifest-v4 row3/fourPNGs/PRD4A2. No root README/PRD/acceptance edits, inheritedAGENTSARCHITECTURE/P9/pilots/remote actions. Required actual local keyboard/touch/trueJSoff/contact observations. LOCAL-only tests/commits allowed, no push/network external calls. Independent code-audit phase-gate; never read pass-work journal, append JSON verdict there per generated brief. No ownerMANUAL waiver or sourcehealth claim.",
   "audit_launches": 1,
   "audit_launch_cap": 2,
