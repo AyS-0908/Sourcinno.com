@@ -1,7 +1,7 @@
 {
   "unit_label": "pass",
   "unit": "p24",
-  "state": "close",
+  "state": "done",
   "scope": "Full P24 exact10HTML/+20links vs3a46d7f. Separate root-doc delta versus Planner902594c: C:/Users/aymar/AYS_CODING/code-SOURCINNO_WWW/.WIP/p24-review/root-docs.diff SHA256 FCDC9DC68398E11E407E88EE2BD8988D59DEEC11E0C8AAE7ED4681C7B545D8AC; frozen-hashes.json pins current PLAN/PROGRESS/CHANGELOG outside product seal. Read PROGRESS P24 acceptance checkpoint for focused browser receipts (CUA current session images). Exact shell diff/focused receipts only, no historical/card/pilot re-audit, no repeated unchanged native suite. All10routes1200/375 JS-on/actual JS-off observed, native keyboard/touch/navigation and restored settings. Current model exception in PROGRESS literal, runtime metadata unavailable, placeholders symbolic; fresh reviewer inherits current session without overrides. Preserve P9 archived hashes and rollback; max2contacts. LOCAL ONLY no external LIVE/submission/push. Use current C:/Users/aymar/AYS_CODING/_AI_SKILLS/skill-code-audit/SKILL.md phase-gate, append verdict to named journal without reading journal. Covered review inputs frozen.",
   "audit_launches": 1,
   "audit_launch_cap": 2,
