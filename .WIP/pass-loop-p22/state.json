@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p22",
+  "state": "test",
+  "scope": "",
+  "audit_launches": 0,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "pending",
+  "verdict_note": "",
+  "token": "",
+  "fix_sections": 0,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "gpt-6.1-sol@1,2,3,4,5",
+  "models": {
+    "work": {
+      "model": "gpt-6.1-sol",
+      "effort": 3
+    },
+    "auditor": {
+      "model": "gpt-6.1-sol",
+      "effort": 4
+    }
+  },
+  "audits_paid": 0,
+  "results_blocks": 0,
+  "pass_base": "69a6153bfb0b99529fffb735df36e85dc72345cd",
+  "seal_paths": "",
+  "brief_fingerprint": "",
+  "green_fingerprint": "",
+  "briefed_at": "",
+  "cap_extensions": [],
+  "state_dir": ".WIP\\pass-loop-p22",
+  "updated": "2026-10-04"
+}
