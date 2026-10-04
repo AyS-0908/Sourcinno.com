@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p23",
+  "state": "close",
+  "scope": "P23 only: product portfolio/index.html assets/js/portfolio.js tools/portfolio.test.mjs; root frozen PLAN23 token/evidence PROGRESS CHANGELOG delta in .WIP/pass-loop-p23/root-docs.diff against rootd176f3f. PLAN23 full acceptance and PRD A2. Existing card/media evidence reused; no whole-site/history/source-project audit. Reviewer runs code-audit phase-gate using current inherited model/effort NO overrides under explicit owner exception: actual metadata unknown, state current-session-unverified@1 symbolic only. LIVE-SAFE local read-only no submissions/restored overrides; PROGRESS P23 browser proof,2 inspected captures. Root hashes TEST-RESULTS r1 verify before verdict; outcome/seal/contact gates unchanged.",
+  "audit_launches": 1,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 0,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "current-session-unverified@1",
+  "models": {
+    "work": {
+      "model": "current-session-unverified",
+      "effort": 1
+    },
+    "auditor": {
+      "model": "current-session-unverified",
+      "effort": 1
+    }
+  },
+  "audits_paid": 1,
+  "results_blocks": 1,
+  "pass_base": "44e57af105058f2729b01b835fbd07d72fbed286",
+  "seal_paths": "",
+  "brief_fingerprint": "42172f4b59b5d4d7",
+  "green_fingerprint": "42172f4b59b5d4d7",
+  "briefed_at": "2026-10-04T12:00:40",
+  "cap_extensions": [],
+  "state_dir": ".WIP\\pass-loop-p23",
+  "updated": "2026-10-04"
+}

@@ -23,6 +23,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/assets/css/style.css?v=d980edec">
 <style>
+  .portfolio-filter { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .portfolio-filter[hidden] { display: none; }
+  .portfolio-filter .field { margin: 0; min-width: 0; }
+  .portfolio-filter input { font: inherit; width: 100%; padding: 0.75rem 0.9rem; color: var(--navy); background: var(--white); border: 1px solid var(--grey-300); border-radius: var(--radius); }
+  .portfolio-filter input, .portfolio-filter select, .portfolio-filter button { min-height: 44px; }
+  .portfolio-filter input:focus-visible, .portfolio-filter select:focus-visible, .portfolio-filter button:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 2px; }
+  .portfolio-filter__results { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+  .portfolio-filter__results p { margin: 0; }
   .portfolio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); align-items: start; }
   .portfolio-card { position: relative; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow-wrap: anywhere; }
   .portfolio-card h2 { font-size: 1.4rem; padding: 24px 76px 20px 20px; margin: 0; min-height: 76px; }
@@ -102,7 +110,22 @@
   </div>
 </section>
 <section class="section section--alt">
-  <div class="container portfolio-grid">
+  <div class="container">
+    <form class="portfolio-filter" id="portfolio-filter" role="search" aria-label="Rechercher un projet" hidden>
+      <div class="field"><label for="portfolio-query">Mot-clé</label><input id="portfolio-query" type="search" placeholder="Nom, besoin, technologie…" aria-controls="portfolio-gallery" autocomplete="off"></div>
+      <div class="field"><label for="portfolio-sector">Secteur</label><select id="portfolio-sector" data-facet="sector" aria-controls="portfolio-gallery"><option value="">Tous les secteurs</option></select></div>
+      <div class="field"><label for="portfolio-persona">Persona</label><select id="portfolio-persona" data-facet="persona" aria-controls="portfolio-gallery"><option value="">Toutes les personas</option></select></div>
+      <div class="field"><label for="portfolio-stack">Stack</label><select id="portfolio-stack" data-facet="stack" aria-controls="portfolio-gallery"><option value="">Toutes les stacks</option></select></div>
+      <div class="field"><label for="portfolio-phase">Avancement</label><select id="portfolio-phase" data-facet="phase" aria-controls="portfolio-gallery"><option value="">Tous les avancements</option></select></div>
+      <div class="field"><label for="portfolio-model">Modèle éco</label><select id="portfolio-model" data-facet="model" aria-controls="portfolio-gallery"><option value="">Tous les modèles</option></select></div>
+      <div class="portfolio-filter__results">
+        <p id="portfolio-count" role="status" aria-live="polite" aria-atomic="true"></p>
+        <button id="portfolio-reset" type="button" class="btn btn--outline">Réinitialiser</button>
+        <p id="portfolio-empty" hidden>Aucun projet ne correspond. Essayez un autre mot-clé ou réinitialisez les filtres.</p>
+      </div>
+    </form>
+  </div>
+  <div class="container portfolio-grid" id="portfolio-gallery">
     <article class="portfolio-card" aria-labelledby="crm-title">
       <h2 id="crm-title">CRM TENANTS</h2>
       <details class="portfolio-details">
@@ -293,5 +316,6 @@
 </footer>
 <script src="/assets/js/config.js?v=654769f0" defer></script>
 <script src="/assets/js/site.js?v=c254395b" defer></script>
+<script src="/assets/js/portfolio.js?v=8d150c6a" defer></script>
 </body>
 </html>
