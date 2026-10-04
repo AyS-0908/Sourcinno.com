@@ -1,7 +1,7 @@
 {
   "unit_label": "pass",
   "unit": "p23",
-  "state": "close",
+  "state": "done",
   "scope": "P23 only: product portfolio/index.html assets/js/portfolio.js tools/portfolio.test.mjs; root frozen PLAN23 token/evidence PROGRESS CHANGELOG delta in .WIP/pass-loop-p23/root-docs.diff against rootd176f3f. PLAN23 full acceptance and PRD A2. Existing card/media evidence reused; no whole-site/history/source-project audit. Reviewer runs code-audit phase-gate using current inherited model/effort NO overrides under explicit owner exception: actual metadata unknown, state current-session-unverified@1 symbolic only. LIVE-SAFE local read-only no submissions/restored overrides; PROGRESS P23 browser proof,2 inspected captures. Root hashes TEST-RESULTS r1 verify before verdict; outcome/seal/contact gates unchanged.",
   "audit_launches": 1,
   "audit_launch_cap": 2,

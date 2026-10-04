@@ -48,3 +48,10 @@ AUDIT r1 COST: unknown tokens, approximately6active min, GREEN/high.
 INVOCATION: /root/p23_auditor (canonical spawn result; UUID unavailable).
 USAGE BASIS: unknown; source collaboration completion notice. Current inherited model/effort metadata unknown under owner exception. No Tier1/2/3 findings;1of2contacts, no confirmation needed.
 Additional mobile Tab/Return attempt after required proofs failed before any action: browser3 disconnected. No new override applied; reviewer explicitly judged named desktop-keyboard/mobile-touch/native-select/AX acceptance complete without claiming this optional repetition ran. All earlier overrides restored. No new waiver.
+## CLOSURE
+UNIT: p23
+DOCS: root PLAN23 token/commit-free evidence frozen before review; PROGRESS/CHANGELOG acceptance and independent receipt migrated; root4e75647b682d48c1aad0de9582ead78c7e7a2cb1 LOCAL ONLY.
+MIGRATED: Native/rendered/keyboard/touch/true-JS-off evidence, independent GREEN/high, contact/cost/model exception, no tests owed and protected baselines into PROGRESS; functional summary into CHANGELOG.
+NITS: none raised; no new waived/owed p23 tests; historical P9/P15 and P16 remain in root PROGRESS/PLAN.
+COMMIT: dd2e37119b7c74265c0a5d053742884e4b8d4442
+DELIVERY: LOCAL ONLY authorised; no fetch/push/publication. Root-delta snapshot was ignored/reviewed separately, frozen hashes checked before import; primary GREEN seal42172f4b59b5d4d7.
