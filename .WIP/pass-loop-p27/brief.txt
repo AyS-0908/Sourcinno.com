@@ -1,0 +1,77 @@
+=== FULL AUDIT BRIEF - pass p27 - review contact 1 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): claude-opus-5-5 @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are a FRESH auditor with zero memory of this work. You GRADE it. You do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p27\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: everything this Pass changed: ADOPTED CANDIDATE - the loop base is 420134c, so the tool's own diff shows only this Pass's one-line fix: the code under review is product range d3b3e21..HEAD (HEAD = 3eea752 on branch rebuild, repository 'C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code'). Read it yourself with: git diff d3b3e21..HEAD. Output of git diff --stat d3b3e21..HEAD:
+ README.md                            |  2 +-
+ assets/js/forms.js                   |  8 +++--
+ contact/index.html                   | 14 +++-----
+ politique-confidentialite/index.html |  2 +-
+ service-ia-business/index.html       |  2 +-
+ tools/check.mjs                      | 63 +++++++++++++++++++++++++-----------
+ 6 files changed, 59 insertions(+), 32 deletions(-)
+Files: README.md, assets/js/forms.js, contact/index.html, politique-confidentialite/index.html, service-ia-business/index.html, tools/check.mjs (five adopted as committed in 420134c; contact/index.html also carries this Pass's wording fix 3eea752: fallback text 'Il est desactive' replaced by 'S il ne s affiche pas').
+Contract: root docs repository C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\PLAN.md, section 27 (Work 1-4, Done When 1-6) and, in section 'Audit fixes to implement - 2026-10-05', ONLY items A-001, A-002, A-003 (wording), A-005, A-006. Out of slice, do not grade: A-004, audit SCOPE items, Tier 3 backlog, the remote Typebot flow, publication, anything older than d3b3e21.
+Evidence written by the work session (verify, do not trust): .WIP/pass-loop-p27/evidence/mutate.sh (mutation ledger; it must be run from a scratch folder OUTSIDE the repository holding two trees named old = git -c core.autocrlf=false archive d3b3e21 and new = copy of HEAD), .WIP/pass-loop-p27/evidence/render.mjs + render-results.json + render-results-before-fix.json (headless Chrome rendered checks at 1200 and 375), .WIP/pass-loop-p27/captures/*.jpg (14 captures). The root docs repository and the ignored .WIP folder are NOT covered by the content seal.
+LIVE-SAFE contract applies to the only live third-party surface, the published Typebot bot: read-only, first screen only, never an answer, never data; the work session opened it twice (one per width). You may rely on the captures, or open it at most ONCE without answering. Never launch a real mail client: a contact submission is driven only inside a sandboxed frame.
+Authorised commands: read-only git; node tools/check.mjs with any flags; node tools/version.mjs --check; the two scripts above from a scratch folder outside the repository; a local server on localhost:4173 is already running. Network only to localhost, Google Fonts, YouTube and the Typebot first screen with its CDN. Hard limits: LOCAL ONLY, no fetch, push, merge, deploy; do not edit, stage or commit any product or docs file; mutate only copies outside the repository; the in-app Browser pane is hidden (boxes measure 0x0 there), so judge rendering from the captures or an external headless browser.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 420134c192c84c446e83bd01b18f6d33e25e5d1e
+  contact/index.html | 4 ++--
+   1 file changed, 2 insertions(+), 2 deletions(-)
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Use the `code-audit` skill in phase-gate mode. Do not invent or modify audit logic.
+2. Re-run the cheapest decisive check for every claim you rely on.
+3. GREEN only if there is no Tier 1 or Tier 2 finding and every check passes.
+4. Need testing -> MORE_TESTS; append `## TEST-REQUESTS` with every AUTO/MANUAL request.
+5. Findings -> append ONE `## Audit fixes to implement` section to C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p27\pass-work.md.
+
+PRIOR FINDINGS
+  none recorded before this contact.
+
+YOUR ANSWER - the only thing that is read
+Append to C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p27\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "0bc92ec2",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.

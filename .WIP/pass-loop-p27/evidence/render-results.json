@@ -1,0 +1,524 @@
+{
+ "375": {
+  "contact": {
+   "normal": {
+    "env": {
+     "innerWidth": 375,
+     "innerHeight": 812,
+     "visibility": "visible",
+     "raf": true,
+     "scrollWidth": 375,
+     "noOverflow": true
+    },
+    "form": {
+     "rect": [
+      24,
+      -213,
+      327,
+      1238
+     ],
+     "display": "block",
+     "hiddenAttr": false,
+     "topmostInside": true,
+     "topmost": "form",
+     "sectionOpacity": "1",
+     "insideWidth": true
+    },
+    "fallback": {
+     "rect": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "display": "none",
+     "hiddenAttr": true,
+     "topmostInside": false,
+     "topmost": null,
+     "sectionOpacity": "1",
+     "insideWidth": true
+    },
+    "visibleForms": 1,
+    "capture": "contact-normal-375.jpg"
+   },
+   "submit": {
+    "sandbox": "allow-scripts allow-same-origin allow-forms",
+    "status": "Le brouillon a été préparé pour votre messagerie : vous devez encore l’envoyer. Rien ne s’est ouvert ? Ouvrir le message, ou écrivez directement à aymard.de.scorbiac@sourcinno.com.",
+    "state": "ok",
+    "statusRect": [
+     327,
+     159
+    ],
+    "links": [
+     "mailto:aymard.de.scorbiac@sourcinno.com?subject=Prise%20de%2",
+     "mailto:aymard.de.scorbiac@sourcinno.com"
+    ],
+    "lastMailto": "mailto:aymard.de.scorbiac@sourcinno.com?subject=Prise%20de%20contact%20%E2%80%94%20sourcinno.com&body=Nom%20%3A%20Test%2",
+    "lastMailtoBodyHasName": true,
+    "frameUrlBefore": "http://localhost:4173/contact/",
+    "frameUrlAfter": "http://localhost:4173/contact/",
+    "invalid": 0,
+    "capture": "contact-submit-375.jpg",
+    "console": [
+     "{\"entry\":{\"source\":\"security\",\"level\":\"warning\",\"text\":\"An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.\",\"timestamp\":1791206571473.026",
+     "{\"entry\":{\"source\":\"other\",\"level\":\"error\",\"text\":\"Navigation to external protocol blocked by sandbox, because it doesn't contain any of: 'allow-top-navigation-to-custom-protocols', 'allow-top-navigat"
+    ]
+   },
+   "blocked": {
+    "requestBlocked": [
+     "inspector"
+    ],
+    "env": {
+     "innerWidth": 375,
+     "innerHeight": 812,
+     "visibility": "visible",
+     "raf": true,
+     "scrollWidth": 375,
+     "noOverflow": true
+    },
+    "fallback": {
+     "rect": [
+      24,
+      326,
+      327,
+      159
+     ],
+     "display": "block",
+     "hiddenAttr": false,
+     "topmostInside": true,
+     "topmost": "p.form-status",
+     "sectionOpacity": "1",
+     "insideWidth": true
+    },
+    "form": {
+     "rect": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "display": "none",
+     "hiddenAttr": true,
+     "topmostInside": false,
+     "topmost": null,
+     "sectionOpacity": "1",
+     "insideWidth": true
+    },
+    "visibleForms": 0,
+    "fallbackText": "Le formulaire de cette page a besoin de JavaScript. S’il ne s’affiche pas : ouvrir un brouillon d’email, à compléter puis à envoyer depuis votre messagerie, ou appelez le +33 6 08 75 58 77.",
+    "capture": "contact-blocked-375.jpg"
+   },
+   "delayed": {
+    "during": {
+     "msSinceHeld": 1472,
+     "released": false,
+     "readyState": "interactive",
+     "fallback": {
+      "rect": [
+       24,
+       326,
+       327,
+       159
+      ],
+      "display": "block",
+      "hiddenAttr": false,
+      "topmostInside": true,
+      "topmost": "p.form-status",
+      "sectionOpacity": "1",
+      "insideWidth": true
+     },
+     "visibleForms": 0,
+     "fallbackText": "Le formulaire de cette page a besoin de JavaScript. S’il ne s’affiche pas : ouvrir un brouillon d’email, à compléter puis à envoyer depuis votre messagerie, ou appelez le +33 6 08 75 58 77.",
+     "capture": "contact-delayed-during-375.jpg",
+     "stillHeldAtCapture": true
+    },
+    "heldMs": 3006,
+    "after": {
+     "form": {
+      "rect": [
+       24,
+       -213,
+       327,
+       1238
+      ],
+      "display": "block",
+      "hiddenAttr": false,
+      "topmostInside": true,
+      "topmost": "form",
+      "sectionOpacity": "1",
+      "insideWidth": true
+     },
+     "fallback": {
+      "rect": [
+       0,
+       0,
+       0,
+       0
+      ],
+      "display": "none",
+      "hiddenAttr": true,
+      "topmostInside": false,
+      "topmost": null,
+      "sectionOpacity": "1",
+      "insideWidth": true
+     },
+     "visibleForms": 1
+    }
+   }
+  },
+  "ia": {
+   "env": {
+    "innerWidth": 375,
+    "innerHeight": 812,
+    "visibility": "visible",
+    "raf": true,
+    "scrollWidth": 375,
+    "noOverflow": true
+   },
+   "notice": {
+    "rect": [
+     49,
+     346,
+     277,
+     119
+    ],
+    "display": "block",
+    "hiddenAttr": false,
+    "topmostInside": true,
+    "topmost": "p.ia-chat__notice",
+    "sectionOpacity": "1",
+    "insideWidth": true
+   },
+   "noticeText": "Au clic, Typebot traite votre connexion et vos réponses ; sa vidéo YouTube peut aussi se charger. Si vous demandez à être rappelé, vos nom, email et téléphone y sont enregistrés. Confidentialité.",
+   "hostsBeforeClick": [
+    "fonts.googleapis.com",
+    "fonts.gstatic.com"
+   ],
+   "noticeCapture": "ia-notice-375.jpg",
+   "chat": {
+    "open": true,
+    "statusHidden": true,
+    "statusText": "Ouverture de la conversation…",
+    "typebotHidden": false,
+    "rect": [
+     49,
+     148,
+     277,
+     600
+    ],
+    "background": "rgb(255, 255, 255)",
+    "text": "En collaboration avec des DRH de PME et ETI, nous avons bâti une formation sur l'IA \"des enjeux stratégiques aux opérations\". L'enjeu : - engager et former vos équipes, - pour tirer les premiers bénéfices de l'IA, rapidement Souhaitez-vous en savoir plus sur AI for Business ? Oui Non merci Made with Typebot",
+    "buttons": [
+     "Oui",
+     "Non merci"
+    ],
+    "iframes": [
+     "www.youtube.com"
+    ]
+   },
+   "envAfter": {
+    "innerWidth": 375,
+    "innerHeight": 812,
+    "visibility": "visible",
+    "raf": true,
+    "scrollWidth": 375,
+    "noOverflow": true
+   },
+   "hostsAfterClick": [
+    "fonts.googleapis.com",
+    "fonts.gstatic.com",
+    "cdn.jsdelivr.net",
+    "typebot.io",
+    "www.youtube.com"
+   ],
+   "chatCapture": "ia-chat-375.jpg"
+  },
+  "privacy": {
+   "env": {
+    "innerWidth": 375,
+    "innerHeight": 812,
+    "visibility": "visible",
+    "raf": true,
+    "scrollWidth": 375,
+    "noOverflow": true
+   },
+   "paragraph": {
+    "rect": [
+     24,
+     94,
+     327,
+     625
+    ],
+    "display": "block",
+    "hiddenAttr": false,
+    "topmostInside": true,
+    "topmost": "p",
+    "sectionOpacity": "1",
+    "insideWidth": true
+   },
+   "paragraphText": "Sur la page Entreprise IA, le parcours « AI for Business » utilise le service externe Typebot (typebot.io). Aucun appel à Typebot ou aux ressources de ce parcours n’est effectué avant votre clic sur « Discuter avec AI for Business ». À l’ouverture, son composant est chargé depuis cdn.jsdelivr.net, qui reçoit des données techniques de connexion. Typebot enregistre ensuite vos données techniques de connexion et vos réponses. Si vous choisissez d’être rappelé, le parcours vous demande vos prénom et nom, votre email et votre téléphone : ils sont enregistrés chez Typebot et lus par Aymard de Scorbiac, seul destinataire, pour vous recontacter. Le parcours charge aussi une vidéo YouTube, qui reçoit alors des données techniques. Les durées de conservation chez Typebot et YouTube dépendent de leurs propres politiques. Vous pouvez utiliser le contact habituel sans ouvrir Typebot.",
+   "capture": "privacy-typebot-375.jpg"
+  }
+ },
+ "1200": {
+  "contact": {
+   "normal": {
+    "env": {
+     "innerWidth": 1200,
+     "innerHeight": 900,
+     "visibility": "visible",
+     "raf": true,
+     "scrollWidth": 1185,
+     "noOverflow": true
+    },
+    "form": {
+     "rect": [
+      605,
+      -131,
+      544,
+      1162
+     ],
+     "display": "block",
+     "hiddenAttr": false,
+     "topmostInside": true,
+     "topmost": "div.field",
+     "sectionOpacity": "1",
+     "insideWidth": true
+    },
+    "fallback": {
+     "rect": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "display": "none",
+     "hiddenAttr": true,
+     "topmostInside": false,
+     "topmost": null,
+     "sectionOpacity": "1",
+     "insideWidth": true
+    },
+    "visibleForms": 1,
+    "capture": "contact-normal-1200.jpg"
+   },
+   "submit": {
+    "sandbox": "allow-scripts allow-same-origin allow-forms",
+    "status": "Le brouillon a été préparé pour votre messagerie : vous devez encore l’envoyer. Rien ne s’est ouvert ? Ouvrir le message, ou écrivez directement à aymard.de.scorbiac@sourcinno.com.",
+    "state": "ok",
+    "statusRect": [
+     544,
+     109
+    ],
+    "links": [
+     "mailto:aymard.de.scorbiac@sourcinno.com?subject=Prise%20de%2",
+     "mailto:aymard.de.scorbiac@sourcinno.com"
+    ],
+    "lastMailto": "mailto:aymard.de.scorbiac@sourcinno.com?subject=Prise%20de%20contact%20%E2%80%94%20sourcinno.com&body=Nom%20%3A%20Test%2",
+    "lastMailtoBodyHasName": true,
+    "frameUrlBefore": "http://localhost:4173/contact/",
+    "frameUrlAfter": "http://localhost:4173/contact/",
+    "invalid": 0,
+    "capture": "contact-submit-1200.jpg",
+    "console": [
+     "{\"entry\":{\"source\":\"security\",\"level\":\"warning\",\"text\":\"An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.\",\"timestamp\":1791206545197.532",
+     "{\"entry\":{\"source\":\"other\",\"level\":\"error\",\"text\":\"Navigation to external protocol blocked by sandbox, because it doesn't contain any of: 'allow-top-navigation-to-custom-protocols', 'allow-top-navigat"
+    ]
+   },
+   "blocked": {
+    "requestBlocked": [
+     "inspector"
+    ],
+    "env": {
+     "innerWidth": 1200,
+     "innerHeight": 900,
+     "visibility": "visible",
+     "raf": true,
+     "scrollWidth": 1185,
+     "noOverflow": true
+    },
+    "fallback": {
+     "rect": [
+      605,
+      396,
+      544,
+      109
+     ],
+     "display": "block",
+     "hiddenAttr": false,
+     "topmostInside": true,
+     "topmost": "p.form-status",
+     "sectionOpacity": "1",
+     "insideWidth": true
+    },
+    "form": {
+     "rect": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "display": "none",
+     "hiddenAttr": true,
+     "topmostInside": false,
+     "topmost": null,
+     "sectionOpacity": "1",
+     "insideWidth": true
+    },
+    "visibleForms": 0,
+    "fallbackText": "Le formulaire de cette page a besoin de JavaScript. S’il ne s’affiche pas : ouvrir un brouillon d’email, à compléter puis à envoyer depuis votre messagerie, ou appelez le +33 6 08 75 58 77.",
+    "capture": "contact-blocked-1200.jpg"
+   },
+   "delayed": {
+    "during": {
+     "msSinceHeld": 1476,
+     "released": false,
+     "readyState": "interactive",
+     "fallback": {
+      "rect": [
+       605,
+       396,
+       544,
+       109
+      ],
+      "display": "block",
+      "hiddenAttr": false,
+      "topmostInside": true,
+      "topmost": "p.form-status",
+      "sectionOpacity": "1",
+      "insideWidth": true
+     },
+     "visibleForms": 0,
+     "fallbackText": "Le formulaire de cette page a besoin de JavaScript. S’il ne s’affiche pas : ouvrir un brouillon d’email, à compléter puis à envoyer depuis votre messagerie, ou appelez le +33 6 08 75 58 77.",
+     "capture": "contact-delayed-during-1200.jpg",
+     "stillHeldAtCapture": true
+    },
+    "heldMs": 3007,
+    "after": {
+     "form": {
+      "rect": [
+       605,
+       -131,
+       544,
+       1162
+      ],
+      "display": "block",
+      "hiddenAttr": false,
+      "topmostInside": true,
+      "topmost": "div.field",
+      "sectionOpacity": "1",
+      "insideWidth": true
+     },
+     "fallback": {
+      "rect": [
+       0,
+       0,
+       0,
+       0
+      ],
+      "display": "none",
+      "hiddenAttr": true,
+      "topmostInside": false,
+      "topmost": null,
+      "sectionOpacity": "1",
+      "insideWidth": true
+     },
+     "visibleForms": 1
+    }
+   }
+  },
+  "ia": {
+   "env": {
+    "innerWidth": 1200,
+    "innerHeight": 900,
+    "visibility": "visible",
+    "raf": true,
+    "scrollWidth": 1185,
+    "noOverflow": true
+   },
+   "notice": {
+    "rect": [
+     238,
+     426,
+     710,
+     48
+    ],
+    "display": "block",
+    "hiddenAttr": false,
+    "topmostInside": true,
+    "topmost": "p.ia-chat__notice",
+    "sectionOpacity": "1",
+    "insideWidth": true
+   },
+   "noticeText": "Au clic, Typebot traite votre connexion et vos réponses ; sa vidéo YouTube peut aussi se charger. Si vous demandez à être rappelé, vos nom, email et téléphone y sont enregistrés. Confidentialité.",
+   "hostsBeforeClick": [
+    "fonts.googleapis.com",
+    "fonts.gstatic.com"
+   ],
+   "noticeCapture": "ia-notice-1200.jpg",
+   "chat": {
+    "open": true,
+    "statusHidden": true,
+    "statusText": "Ouverture de la conversation…",
+    "typebotHidden": false,
+    "rect": [
+     238,
+     264,
+     710,
+     600
+    ],
+    "background": "rgb(255, 255, 255)",
+    "text": "En collaboration avec des DRH de PME et ETI, nous avons bâti une formation sur l'IA \"des enjeux stratégiques aux opérations\". L'enjeu : - engager et former vos équipes, - pour tirer les premiers bénéfices de l'IA, rapidement Souhaitez-vous en savoir plus sur AI for Business ? Oui Non merci Made with Typebot",
+    "buttons": [
+     "Oui",
+     "Non merci"
+    ],
+    "iframes": [
+     "www.youtube.com"
+    ]
+   },
+   "envAfter": {
+    "innerWidth": 1200,
+    "innerHeight": 900,
+    "visibility": "visible",
+    "raf": true,
+    "scrollWidth": 1185,
+    "noOverflow": true
+   },
+   "hostsAfterClick": [
+    "fonts.googleapis.com",
+    "fonts.gstatic.com",
+    "cdn.jsdelivr.net",
+    "typebot.io",
+    "www.youtube.com"
+   ],
+   "chatCapture": "ia-chat-1200.jpg"
+  },
+  "privacy": {
+   "env": {
+    "innerWidth": 1200,
+    "innerHeight": 900,
+    "visibility": "visible",
+    "raf": true,
+    "scrollWidth": 1185,
+    "noOverflow": true
+   },
+   "paragraph": {
+    "rect": [
+     277,
+     287,
+     632,
+     326
+    ],
+    "display": "block",
+    "hiddenAttr": false,
+    "topmostInside": true,
+    "topmost": "p",
+    "sectionOpacity": "1",
+    "insideWidth": true
+   },
+   "paragraphText": "Sur la page Entreprise IA, le parcours « AI for Business » utilise le service externe Typebot (typebot.io). Aucun appel à Typebot ou aux ressources de ce parcours n’est effectué avant votre clic sur « Discuter avec AI for Business ». À l’ouverture, son composant est chargé depuis cdn.jsdelivr.net, qui reçoit des données techniques de connexion. Typebot enregistre ensuite vos données techniques de connexion et vos réponses. Si vous choisissez d’être rappelé, le parcours vous demande vos prénom et nom, votre email et votre téléphone : ils sont enregistrés chez Typebot et lus par Aymard de Scorbiac, seul destinataire, pour vous recontacter. Le parcours charge aussi une vidéo YouTube, qui reçoit alors des données techniques. Les durées de conservation chez Typebot et YouTube dépendent de leurs propres politiques. Vous pouvez utiliser le contact habituel sans ouvrir Typebot.",
+   "capture": "privacy-typebot-1200.jpg"
+  }
+ }
+}

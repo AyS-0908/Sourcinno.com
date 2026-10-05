@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p27",
+  "state": "done",
+  "scope": "ADOPTED CANDIDATE - the loop base is 420134c, so the tool's own diff shows only this Pass's one-line fix: the code under review is product range d3b3e21..HEAD (HEAD = 3eea752 on branch rebuild, repository 'C:\\Users\\aymar\\AYS_CODING\\code-SOURCINNO_WWW\\current sourcinno site- code'). Read it yourself with: git diff d3b3e21..HEAD. Output of git diff --stat d3b3e21..HEAD:\n README.md                            |  2 +-\n assets/js/forms.js                   |  8 +++--\n contact/index.html                   | 14 +++-----\n politique-confidentialite/index.html |  2 +-\n service-ia-business/index.html       |  2 +-\n tools/check.mjs                      | 63 +++++++++++++++++++++++++-----------\n 6 files changed, 59 insertions(+), 32 deletions(-)\nFiles: README.md, assets/js/forms.js, contact/index.html, politique-confidentialite/index.html, service-ia-business/index.html, tools/check.mjs (five adopted as committed in 420134c; contact/index.html also carries this Pass's wording fix 3eea752: fallback text 'Il est desactive' replaced by 'S il ne s affiche pas').\nContract: root docs repository C:\\Users\\aymar\\AYS_CODING\\code-SOURCINNO_WWW\\PLAN.md, section 27 (Work 1-4, Done When 1-6) and, in section 'Audit fixes to implement - 2026-10-05', ONLY items A-001, A-002, A-003 (wording), A-005, A-006. Out of slice, do not grade: A-004, audit SCOPE items, Tier 3 backlog, the remote Typebot flow, publication, anything older than d3b3e21.\nEvidence written by the work session (verify, do not trust): .WIP/pass-loop-p27/evidence/mutate.sh (mutation ledger; it must be run from a scratch folder OUTSIDE the repository holding two trees named old = git -c core.autocrlf=false archive d3b3e21 and new = copy of HEAD), .WIP/pass-loop-p27/evidence/render.mjs + render-results.json + render-results-before-fix.json (headless Chrome rendered checks at 1200 and 375), .WIP/pass-loop-p27/captures/*.jpg (14 captures). The root docs repository and the ignored .WIP folder are NOT covered by the content seal.\nLIVE-SAFE contract applies to the only live third-party surface, the published Typebot bot: read-only, first screen only, never an answer, never data; the work session opened it twice (one per width). You may rely on the captures, or open it at most ONCE without answering. Never launch a real mail client: a contact submission is driven only inside a sandboxed frame.\nAuthorised commands: read-only git; node tools/check.mjs with any flags; node tools/version.mjs --check; the two scripts above from a scratch folder outside the repository; a local server on localhost:4173 is already running. Network only to localhost, Google Fonts, YouTube and the Typebot first screen with its CDN. Hard limits: LOCAL ONLY, no fetch, push, merge, deploy; do not edit, stage or commit any product or docs file; mutate only copies outside the repository; the in-app Browser pane is hidden (boxes measure 0x0 there), so judge rendering from the captures or an external headless browser.",
+  "audit_launches": 1,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 0,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    },
+    "auditor": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 1,
+  "results_blocks": 1,
+  "pass_base": "420134c192c84c446e83bd01b18f6d33e25e5d1e",
+  "seal_paths": "",
+  "brief_fingerprint": "04357cf3521070ee",
+  "green_fingerprint": "04357cf3521070ee",
+  "briefed_at": "2026-10-05T15:25:57",
+  "cap_extensions": [],
+  "state_dir": "C:/Users/aymar/AYS_CODING/code-SOURCINNO_WWW/current sourcinno site- code/.WIP/pass-loop-p27",
+  "updated": "2026-10-05"
+}
