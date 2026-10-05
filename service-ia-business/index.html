@@ -22,8 +22,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/assets/css/style.css?v=d980edec">
+<style>
+  .ia-video { display:block; width:100%; min-height:200px; aspect-ratio:16/9; border:0; border-radius:var(--radius-lg); }
+  .ia-video-launch { position:relative; padding:0; cursor:pointer; overflow:hidden; background:var(--navy-dark); color:var(--white); }
+  .ia-video-launch img { width:100%; height:100%; object-fit:cover; aspect-ratio:16/9; }
+  .ia-video-launch span { position:absolute; inset:0; display:grid; place-items:center; }
+  .ia-video-launch strong { padding:12px 20px; border-radius:var(--radius); background:var(--teal-dark); color:var(--white); }
+  .ia-chat { max-width:760px; margin:auto; padding:var(--space-3); background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); }
+  .ia-chat h3 { margin-bottom:var(--space-1); }
+  .ia-chat details { margin:var(--space-2) 0; }
+  .ia-chat summary { padding:12px 16px; border-radius:var(--radius); background:var(--teal-dark); color:var(--white); cursor:pointer; font-weight:600; }
+  .ia-chat typebot-standard { display:block; width:100%; height:600px; max-height:75vh; margin-top:var(--space-2); }
+  .ia-chat typebot-standard[hidden] { display:none; }
+  .ia-chat__notice { font-size:.875rem; color:var(--text-muted); }
+</style>
 <noscript>
   <style>
+    .ia-video-launch { display:none; }
     /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
        toutes les sections resteraient a opacity 0, donc invisibles. */
     .reveal { opacity: 1 !important; transform: none !important; }
@@ -187,14 +202,23 @@
       <h2>RÉFLEXION</h2>
     </div>
     <figure class="band-figure">
-      <iframe title="Vidéo : AI for BUSINESS" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen style="display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:16px" srcdoc="<style>body{margin:0}a{display:grid;place-items:center;min-height:100vh;background:#142941;color:white;font:600 1.2rem Arial,sans-serif;text-align:center}</style><a href='https://www.youtube-nocookie.com/embed/hDFiKEFv5kA?autoplay=1'>▶ Lancer la vidéo « AI for BUSINESS »</a>"></iframe>
+      <button class="ia-video ia-video-launch" type="button" data-video-launch aria-label="Lire la vidéo AI for Business dans cette page">
+        <img src="/assets/img/ai-for-business-video.jpg" width="480" height="360" alt="" loading="lazy">
+        <span><strong>▶ Lire la vidéo</strong></span>
+      </button>
       <figcaption>Vidéo « AI for BUSINESS » — <a href="https://www.youtube.com/watch?v=hDFiKEFv5kA" target="_blank" rel="noopener">ouvrir sur YouTube</a> si le lecteur ne fonctionne pas.</figcaption>
     </figure>
-    <div class="stack">
-      <h3>Échanger avec AI for Business</h3>
-      <p>Ce parcours questions-réponses est proposé par le service externe Typebot. Il ne se charge qu’à votre clic ; Typebot traite alors les données de connexion et vos réponses selon ses propres réglages. Ses vidéos et autres ressources peuvent aussi se charger. <a href="/politique-confidentialite/">Politique de confidentialité</a>.</p>
-      <iframe title="Parcours questions-réponses AI for Business — Typebot" loading="lazy" style="display:block;width:100%;height:600px;border:0;border-radius:16px" srcdoc="<!doctype html><html lang='fr'><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><style>body{margin:0}a{display:grid;place-items:center;box-sizing:border-box;padding:24px;min-height:100vh;background:#142941;color:white;font:600 1.2rem Arial,sans-serif;text-align:center}a:focus-visible{outline:3px solid white;outline-offset:-8px}</style><a href='https://typebot.io/paiement-produit-num-rique-o8lsepu'>Ouvrir le parcours AI for Business sur Typebot</a></html>"></iframe>
-      <p>Si le parcours ne s’affiche pas : <a href="https://typebot.io/paiement-produit-num-rique-o8lsepu" target="_blank" rel="noopener">ouvrir directement sur Typebot</a> ou <a href="/contact/">nous contacter</a>.</p>
+    <div class="ia-chat">
+      <h3>Une question sur AI for Business ?</h3>
+      <p>Découvrez la formation en quelques échanges.</p>
+      <p class="ia-chat__notice">Au clic, Typebot traite votre connexion et vos réponses ; ses vidéos peuvent aussi se charger. <a href="/politique-confidentialite/">Confidentialité</a>.</p>
+      <details data-chat>
+        <summary>Discuter avec AI for Business</summary>
+        <p role="status" data-chat-status hidden></p>
+        <typebot-standard aria-label="Conversation AI for Business" hidden></typebot-standard>
+        <noscript><p>Pour discuter sans JavaScript, ouvrez directement Typebot avec le lien ci-dessous.</p></noscript>
+      </details>
+      <p class="ia-chat__notice"><a href="https://typebot.io/paiement-produit-num-rique-o8lsepu" target="_blank" rel="noopener">Ouvrir sur Typebot</a> · <a href="/contact/">Nous contacter</a></p>
     </div>
   </div>
 </section>
@@ -241,5 +265,6 @@
 </footer>
 <script src="/assets/js/config.js?v=654769f0" defer></script>
 <script src="/assets/js/site.js?v=c254395b" defer></script>
+<script src="/assets/js/ia-embeds.js?v=4a9985a1" defer></script>
 </body>
 </html>
