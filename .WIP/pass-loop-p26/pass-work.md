@@ -51,6 +51,7 @@ CMD: `node --experimental-vm-modules tools/test-ia-embeds.mjs; node tools/check.
 RESULT: PASS — integration handler/transport checks;16pages294links/8scripts;40version references; whitespace. Fingerprint identical before/after; REWORK browser acceptance above resolves formerly OPEN touch/block. Protection assertions rerun before brief. Remote branches/payments/delivery excluded. No owner manual test owed;0of2audit contacts.
 
 ## FRESH AUDIT r1 — 2026-10-05
+ARCHIVE NOTE: Force-staging scratch for durable commit49c0c5e temporarily brought the two previously ignored viewport JPEGs into Git's seal discovery (567eff3e1a67a3a5). Their bytes are already independently reviewed/archived in49c0c5e; untrack exactly these two again, preserving local files, restores reviewed coverage5ed113f0aaaa2902. No product/root operational source edit after GREEN; capture proof remains a separately inspected artifact as declared in brief.
 AUDIT r1 COST: unknown tokens; approximately15active minutes +624s interrupted browser wait; GREEN/high. INVOCATION: /root/p26_review. USAGE BASIS: unknown; source reviewer completion notice. Runtime model/effort unavailable, inherited defaults; no overrides.
 MODE: code-audit phase-gate; contact1of2; inherited runtime model/effort/usage unknown under owner metadata exception.
 SCOPE: CLEAN. Two HTML changes and three authorised new assets/test paths requested by PLAN26 owner correction; root own PLAN/PRD/PROGRESS/CHANGELOG delta reviewed separately, outside product seal. Scoped CSS, pinned click-only SDK and privacy CDN wording are necessary side work; no unrelated product code, checker/workflow/shared-source edits.
@@ -77,3 +78,10 @@ EFFORT: approximately15active minutes excluding624s tool wait; new/cached tokens
   "opened_fix_section": false
 }
 ```
+
+## CLOSURE
+UNIT: p26
+DOCS: Root PLAN26/PRD owner correction frozen before review; PROGRESS/CHANGELOG current review/closure receipts committed3a463637851a56b2fcb01b66e0638c698ca6f146. PLAN status token reconciliation awaits Planner CHECK per reviewer, no post-GREEN operational edit.
+MIGRATED: Native/integration/browser acceptance, independent GREEN/high/token/fingerprint, protections, current capture paths, model/usage unknown and remote exclusions in PROGRESS P26 rework/Last Verification; visible changes in CHANGELOG. Local-only replaces push under owner publication WAIT.
+NITS: none raised; no Tier1/2/3 findings.
+COMMIT: 49c0c5e2baf541e908143866fca3ec393bbefb7d
