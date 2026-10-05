@@ -10,7 +10,8 @@
  *   --nojs     le site reste lisible et sur sans JavaScript
  *   --tiers    tout hote externe charge est annonce dans la politique de confidentialite
  *   --seo      meta Open Graph, longueurs de title/description, sitemap complet
- *   --all      tous les groupes
+ *   --all      tous les groupes, plus les tests executes (tools/portfolio.test.mjs,
+ *              tools/test-ia-embeds.mjs)
  *
  * Groupes RETIRES en Pass 1, avec leur sujet :
  *   --copy     le marqueur TODO-PASS-SUIVANT n'existe plus nulle part dans l'arbre ;
@@ -357,8 +358,9 @@ function checkForms() {
       makeField("telephone", ""),
       makeField("rgpd", "on", { type: "checkbox", required: true }),
     ];
+    const fallback = { hidden: false };
     const form = {
-      dataset: {}, setAttribute() {},
+      hidden: true, dataset: {}, setAttribute() {},
       querySelectorAll: () => fields,
       querySelector: (selector) => selector === ".form-status" ? status : null,
       addEventListener: (type, handler) => { if (type === "submit") submit = handler; },
@@ -373,17 +375,20 @@ function checkForms() {
     }
     const context = {
       window: { SOURCINNO_CONFIG: { FORM_ENDPOINT: "", CONTACT_EMAIL: "aymard.de.scorbiac@sourcinno.com" }, location: { href: "" } },
-      document: { readyState: "complete", querySelectorAll: () => [form] },
+      document: { readyState: "complete", querySelectorAll: () => [form], querySelector: () => fallback },
       FormData: TestFormData,
       fetch: () => { throw new Error("V1 ne doit pas appeler un service d envoi"); },
     };
     new Script(readFileSync(join(ROOT, "assets/js/forms.js"), "utf8"), { filename: "forms.js" })
       .runInNewContext(context);
-    return { fields, form, send: () => submit({ preventDefault() {} }), status,
+    return { fields, form, fallback, send: () => submit({ preventDefault() {} }), status,
       location: context.window.location, get resets() { return resets; } };
   };
   try {
     const valid = runMail();
+    if (valid.form.hidden !== false || valid.fallback.hidden !== true) {
+      throw new Error("forms.js doit reveler le formulaire et masquer le repli a l initialisation");
+    }
     valid.send();
     const mail = new URL(valid.location.href);
     if (mail.protocol !== "mailto:" || mail.pathname !== "aymard.de.scorbiac@sourcinno.com" ||
@@ -561,21 +566,19 @@ function checkNoJs() {
     if (!/\.reveal\s*\{[^}]*opacity:\s*1/.test(ns[0])) {
       fail(p.rel, "le bloc <noscript> ne remet pas .reveal a opacity 1");
     }
-    if (/<form\b[^>]*data-contact-form/.test(p.html)) {
-      if (!/form\[data-contact-form\]\s*\{[^}]*display:\s*none/.test(ns[0])) {
-        fail(p.rel, "sans JavaScript le formulaire ferait un GET et enverrait les donnees personnelles dans l URL : le <noscript> doit le masquer");
-      }
-      if (!/noscript-contact/.test(p.html)) {
-        fail(p.rel, "aucun moyen de contact de repli affiche quand le formulaire est masque");
-      }
-    }
   }
 
-  /* Un formulaire sans action ferait un GET sur la page courante. */
+  /* Un formulaire sans action ferait un GET sur la page courante : nom, email
+     et message dans l URL. Il est donc livre hidden, repli visible ; seul
+     forms.js, une fois execute, les inverse. */
   for (const p of pages) {
     for (const m of p.html.matchAll(/<form\b([^>]*)>/gi)) {
       if (!/data-contact-form/.test(m[1])) continue;
       if (/\baction=/.test(m[1])) fail(p.rel, "le formulaire porte un action : verifier qu il ne renvoie pas les donnees en clair dans l URL");
+      if (!/\bhidden\b/.test(m[1])) fail(p.rel, "le formulaire doit etre livre hidden : sans forms.js il ferait un GET avec les donnees personnelles dans l URL");
+      if (!/<p\b(?![^>]*\bhidden\b)[^>]*\bdata-form-fallback\b/.test(p.html)) {
+        fail(p.rel, "aucun moyen de contact de repli visible (data-form-fallback) tant que le formulaire est masque");
+      }
     }
   }
 
@@ -589,14 +592,23 @@ function checkTiers() {
   const politique = pages.find((p) => p.rel === "politique-confidentialite/index.html");
   if (!politique) { fail("politique-confidentialite/index.html", "page absente"); return; }
   const hotes = new Set();
+  const add = (host) => {
+    const h = host.toLowerCase();
+    if (h.endsWith("sourcinno.com") || h === "schema.org" || h === "www.schema.org") return;
+    hotes.add(h);
+  };
   for (const p of pages) {
     const zone = p.html.slice(0, p.html.indexOf("</head>") + 7) + p.html.slice(p.html.indexOf("<body"));
     // ponytail: count loaded resources, not ordinary links a visitor may choose to open.
-    for (const m of zone.matchAll(/<(?:script|iframe|img|link|source)\b[^>]*\b(?:src|href)="https?:\/\/([a-z0-9.-]+)/gi)) {
-      const h = m[1].toLowerCase();
-      if (h.endsWith("sourcinno.com") || h === "schema.org" || h === "www.schema.org") continue;
-      hotes.add(h);
+    for (const m of zone.matchAll(/<(?:script|iframe|img|link|source)\b[^>]*\b(?:src|href)="https?:\/\/([a-z0-9.-]+)/gi)) add(m[1]);
+    // Un lecteur srcdoc charge son hote au clic, sans attribut src lisible ci-dessus.
+    for (const s of p.html.matchAll(/\bsrcdoc="([^"]*)"/gi)) {
+      for (const m of s[1].matchAll(/https:\/\/([a-z0-9.-]+)/gi)) add(m[1]);
     }
+  }
+  // Hotes appeles a l execution par les scripts livres ; _v2 est range, jamais charge.
+  for (const f of allFiles.filter((f) => f.endsWith(".js") && !/[\\/]_v2[\\/]/.test(f))) {
+    for (const m of readFileSync(f, "utf8").matchAll(/https:\/\/([a-z0-9.-]+)/gi)) add(m[1]);
   }
   /* On ne lit que le TEXTE de la politique, jamais son <head> : celui-ci
      charge les memes ressources que les autres pages, et la comparaison
@@ -610,7 +622,7 @@ function checkTiers() {
       fail("politique-confidentialite/index.html", `le site charge une ressource depuis ${h}, ce qui transmet l adresse IP du visiteur, et la politique de confidentialite n en parle pas`);
     }
   }
-  note(`--tiers: ${hotes.size} hote(s) externe(s) charge(s) par les pages${hotes.size ? " : " + [...hotes].join(", ") : ""}`);
+  note(`--tiers: ${hotes.size} hote(s) externe(s) charge(s) par les pages et leurs scripts${hotes.size ? " : " + [...hotes].join(", ") : ""}`);
 }
 
 /* ---------- --seo ---------- */
@@ -642,6 +654,20 @@ function checkSeo() {
   note(`--seo: meta et sitemap verifies sur ${pages.filter((p) => !isStub(p) && p.rel !== "404.html").length} page(s) indexable(s)`);
 }
 
+/* ---------- tests executes (--all) ---------- */
+function runTests() {
+  for (const f of ["tools/portfolio.test.mjs", "tools/test-ia-embeds.mjs"]) {
+    try {
+      // --experimental-vm-modules : test-ia-embeds simule l import() du SDK avec vm.SyntheticModule.
+      const out = execFileSync(process.execPath, ["--experimental-vm-modules", join(ROOT, f)], { encoding: "utf8", stdio: "pipe" });
+      note(`${f}: ${out.trim()}`);
+    } catch (e) {
+      const lines = String(e.stderr || e.message).split("\n").map((l) => l.trim()).filter(Boolean);
+      fail(f, "test en echec : " + (lines.find((l) => /^\w*Error\b/.test(l)) || lines.at(-1)));
+    }
+  }
+}
+
 /* ---------- run ---------- */
 checkStructure();
 if (want("--data")) await checkData();
@@ -651,6 +677,7 @@ if (want("--a11y")) checkA11y();
 if (want("--nojs")) checkNoJs();
 if (want("--tiers")) checkTiers();
 if (want("--seo")) checkSeo();
+if (args.has("--all")) runTests();
 
 for (const n of notes) console.log("  " + n);
 if (failures.length) {

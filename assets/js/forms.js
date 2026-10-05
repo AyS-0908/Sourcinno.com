@@ -1,8 +1,9 @@
 /* Sourcinno — formulaire de contact (PRD §5.4).
  *
  * V1 : validation puis brouillon mailto, que le visiteur envoie lui-même.
- * Sans JavaScript, le formulaire est masque et le lien mailto du pied
- * de page permet toujours de nous ecrire. */
+ * Le formulaire est livre masque, le message de repli visible : ce script
+ * les inverse. S il ne s execute pas (JavaScript coupe, requete bloquee),
+ * le visiteur garde le repli et aucun envoi GET n est possible. */
 (() => {
   "use strict";
 
@@ -119,6 +120,9 @@
       }
       sendByMail(form);
     });
+    form.hidden = false;
+    const fallback = document.querySelector("[data-form-fallback]");
+    if (fallback) fallback.hidden = true;
   }
 
   function init() {

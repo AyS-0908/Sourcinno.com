@@ -27,10 +27,6 @@
     /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
        toutes les sections resteraient a opacity 0, donc invisibles. */
     .reveal { opacity: 1 !important; transform: none !important; }
-    /* Le formulaire a besoin de JavaScript pour partir. Sans lui, il
-       ferait un GET et enverrait nom, email et message dans l URL. */
-    form[data-contact-form] { display: none; }
-    .noscript-contact { display: block !important; }
   </style>
 </noscript>
 </head>
@@ -99,12 +95,12 @@
           <h2>Écrire en deux minutes</h2>
         </div>
 
-        <p class="noscript-contact form-status" data-state="ok" hidden>
+        <p class="form-status" data-form-fallback data-state="ok">
           Le formulaire de cette page a besoin de JavaScript. Il est
           désactivé&nbsp;: <a href="mailto:aymard.de.scorbiac@sourcinno.com?subject=Prise%20de%20contact%20%E2%80%94%20sourcinno.com&amp;body=Bonjour%2C%0A%0AJe%20souhaite%20vous%20contacter%20au%20sujet%20de%20%3A%0A">ouvrir un brouillon d’email</a>, à compléter puis à envoyer depuis votre messagerie,
           ou appelez le <a href="tel:+33608755877">+33 6 08 75 58 77</a>.
         </p>
-        <form id="form-basique" data-contact-form novalidate>
+        <form id="form-basique" data-contact-form novalidate hidden>
           <div class="field">
             <label for="b-nom">Nom <span class="required" aria-hidden="true">*</span></label>
             <input type="text" id="b-nom" name="nom" autocomplete="name" required>
@@ -217,6 +213,6 @@
 </footer>
 <script src="/assets/js/config.js?v=654769f0" defer></script>
 <script src="/assets/js/site.js?v=c254395b" defer></script>
-<script src="/assets/js/forms.js?v=1500f439" defer></script>
+<script src="/assets/js/forms.js?v=a711d8f7" defer></script>
 </body>
 </html>

@@ -23,6 +23,6 @@ Après une modification CSS ou JavaScript : `node tools/version.mjs`.
 
 ## Publication
 
-Les changements sont préparés sur `rebuild`. Une publication sur `main` déclenche le déploiement : elle nécessite l’approbation du propriétaire après revue. Les paramètres de déploiement restent dans les secrets GitHub, jamais dans les fichiers publics.
+Les changements sont préparés sur `rebuild`. Une fusion sur `main` ne publie rien : après approbation du propriétaire, le déploiement est lancé manuellement dans Coolify (déploiement automatique désactivé), puis le site public est vérifié.
 
 Le formulaire V1 prépare un email dans la messagerie du visiteur. Le visiteur doit l’envoyer lui-même. L’envoi automatique est prévu pour une version ultérieure.
