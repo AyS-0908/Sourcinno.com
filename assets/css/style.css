@@ -572,7 +572,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .cta-band { text-align: center; }
 .cta-band .btn { margin-top: var(--space-2); }
 
-/* ---------- Collections pilotees par JSON (prototypes, publications) ---------- */
+/* ---------- Filtres et étiquettes (blog Publications) ---------- */
 .filters { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-bottom: var(--space-4); }
 .filters:empty { display: none; }
 .chip {
@@ -588,6 +588,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 }
 .chip:hover { border-color: var(--teal-dark); color: var(--teal-dark); }
 .chip.is-active { background: var(--teal-dark); border-color: var(--teal-dark); color: var(--white); }
+/* .card est en display: flex, qui l emporte sur [hidden] du navigateur : la puce masque ainsi un article. */
+.card[hidden] { display: none; }
 
 .card__meta { font-size: 0.85rem; color: var(--grey-500); margin-bottom: var(--space-1); }
 .card > img { border-radius: var(--radius); margin-bottom: var(--space-2); }
