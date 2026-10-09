@@ -4,7 +4,6 @@
  * Par defaut : le groupe STRUCTURE (liens, images, balises, header/footer/<noscript> identiques
  *              et conformes a tools/shell/, empreintes de version).
  * Options, chacune ajoutant un groupe et ECHOUANT si son sujet n'existe pas encore :
- *   --data     assets/data/publications.json valide, et la page qui l'affiche
  *   --forms    page contact : le formulaire de contact, complet (V1 = un seul)
  *   --legal    pages legales completes (aucun identifiant laisse a completer)
  *   --a11y     contrastes, liens et boutons nommes, hierarchie des titres
@@ -15,12 +14,13 @@
  *   --all      tous les groupes, plus les tests executes (tools/portfolio.test.mjs,
  *              tools/test-ia-embeds.mjs)
  *
- * Groupes RETIRES en Pass 1, avec leur sujet :
+ * Groupes RETIRES avec leur sujet (en Pass 1, sauf mention) :
  *   --copy     le marqueur TODO-PASS-SUIVANT n'existe plus nulle part dans l'arbre ;
  *              un groupe sans sujet est vert quoi qu'il arrive, donc il ne verifie rien.
  *   --consent  banniere de consentement et assistant sont reportes en v2 (PLAN.md).
  *              Le cas "balise de mesure d'audience en dur" reste couvert par --tiers :
  *              un hote externe non declare dans la politique de confidentialite echoue.
+ *   --data     page Publications en HTML statique depuis Pass 34 : plus de JSON a valider.
  * Les drapeaux retires ou inconnus sont refuses : aucun controle ignore en silence.
  * Sortie 0 = tout vert. Sortie 1 = au moins un echec, chacun cite avec son fichier.
  */
@@ -32,7 +32,7 @@ import { execFileSync } from "node:child_process";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = new Set(process.argv.slice(2));
-const allowedArgs = new Set(["--data", "--forms", "--legal", "--a11y", "--nojs", "--tiers", "--seo", "--all"]);
+const allowedArgs = new Set(["--forms", "--legal", "--a11y", "--nojs", "--tiers", "--seo", "--all"]);
 for (const arg of args) {
   if (!allowedArgs.has(arg)) {
     console.error("ECHEC: option inconnue ou retiree : " + arg);
@@ -234,81 +234,6 @@ function checkStructure() {
   }
 
   note(`STRUCTURE: ${scriptsChecked} script(s) compile(s); ${pages.length} page(s) lue(s), dont ${shellPages.length} avec coquille et ${pages.length - shellPages.length} redirection(s); ${linksChecked} lien(s) interne(s) resolu(s)`);
-}
-
-/* ---------- --data ---------- */
-function readJson(rel) {
-  const f = join(ROOT, rel);
-  if (!existsSync(f)) { fail(rel, "fichier de donnees absent"); return null; }
-  try { return JSON.parse(readFileSync(f, "utf8")); }
-  catch (e) { fail(rel, "JSON invalide: " + e.message); return null; }
-}
-/* V1 n'a qu'une seule collection : les publications. Le portfolio de prototypes
-   est reporte en v2 (PLAN.md), ses donnees sont rangees dans assets/data/_v2/ :
-   plus de page, donc plus de controle ici. */
-async function checkData() {
-  {
-    const page = "publications/index.html";
-    const file = "assets/data/publications.json";
-    const p = pages.find((x) => x.rel === page);
-    if (!p) fail(page, "page de collection absente");
-    else {
-      if (!/collections\.js/.test(p.html)) fail(page, "la page ne charge pas assets/js/collections.js : la collection ne s afficherait jamais");
-      if (!/data-publication-grid/.test(p.html)) fail(page, "aucun conteneur de grille (data-publication-grid) dans la page");
-      if (!/data-publication-fallback/.test(p.html)) fail(page, `aucun texte de repli sans JavaScript, alors que le contenu vient de ${file}`);
-    }
-  }
-
-  const pubs = readJson("assets/data/publications.json");
-  if (pubs) {
-    const list = Array.isArray(pubs) ? pubs : pubs.items;
-    if (!Array.isArray(list)) fail("assets/data/publications.json", "structure attendue: un tableau, ou {items: []}");
-    else {
-      list.forEach((it, i) => {
-        for (const k of ["type", "titre"]) {
-          if (!it || !it[k]) fail("assets/data/publications.json", `entree ${i + 1}: champ obligatoire "${k}" manquant`);
-        }
-      });
-      const page = pages.find((p) => p.rel === "publications/index.html");
-      if (page) {
-        const fallback = [...page.html.matchAll(/<article\b[^>]*data-publication-index="(\d+)"[^>]*>([\s\S]*?)<\/article>/g)];
-        if (fallback.length !== list.length) fail(page.rel, `repli HTML: ${fallback.length} entree(s) pour ${list.length} publication(s) JSON`);
-        list.forEach((it, i) => {
-          const matches = fallback.filter((m) => Number(m[1]) === i);
-          if (matches.length !== 1) { fail(page.rel, `repli HTML: entree ${i + 1} absente ou dupliquee`); return; }
-          const html = matches[0][2];
-          const title = html.match(/<h3>([^<]*)<\/h3>/)?.[1];
-          const paragraphs = [...html.matchAll(/<p(?:\s[^>]*)?>([^<]*)<\/p>/g)].map((m) => m[1]);
-          if (title !== it.titre || !paragraphs.includes(it.description || "")) fail(page.rel, `repli HTML: titre ou description de l'entree ${i + 1} differente du JSON`);
-          const links = [...html.matchAll(/\bhref="([^"]+)"/g)].map((m) => m[1]);
-          if (links.length !== (it.url ? 1 : 0) || (it.url && links[0] !== it.url)) fail(page.rel, `repli HTML: lien de l'entree ${i + 1} different du JSON`);
-        });
-      }
-      note(`--data: ${list.length} publication(s) valide(s)`);
-    }
-  }
-  try {
-    const payload = '<img src=x onerror="test"> &';
-    const escaped = '&lt;img src=x onerror=&quot;test&quot;&gt; &amp;';
-    for (const type of ['livre', 'linkedin', payload]) {
-      const grid = { innerHTML: '', parentElement: null };
-      const document = {
-        readyState: 'complete',
-        querySelector: (selector) => selector === '[data-publication-grid]' ? grid : null,
-      };
-      new Script(readFileSync(join(ROOT, 'assets/js/collections.js'), 'utf8')).runInNewContext({
-        document,
-        fetch: async () => ({ ok: true, json: async () => [{ type, titre: payload, description: payload, date: payload, image: payload, url: payload }] }),
-      });
-      await new Promise((resolve) => setImmediate(resolve));
-      const escapedCount = grid.innerHTML.split(escaped).length - 1;
-      const expectedCount = type === payload ? 7 : 6; // titre dans le h3 et l'alt de l'image
-      if (grid.innerHTML.includes(payload) || escapedCount !== expectedCount) {
-        throw new Error(`rendu execute : ${escapedCount}/${expectedCount} champs echappes, HTML brut=${grid.innerHTML.includes(payload)}`);
-      }
-    }
-    note('--data: rendu des publications execute avec champs HTML echappes');
-  } catch (err) { fail('assets/js/collections.js', err.message); }
 }
 
 /* ---------- --forms ----------
@@ -724,7 +649,6 @@ function runTests() {
 
 /* ---------- run ---------- */
 checkStructure();
-if (want("--data")) await checkData();
 if (want("--forms")) checkForms();
 if (want("--legal")) checkLegal();
 if (want("--a11y")) checkA11y();

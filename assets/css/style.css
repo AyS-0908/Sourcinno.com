@@ -771,6 +771,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .video-launch span { position: absolute; inset: 0; margin: auto; width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50%; background: var(--teal-dark); font-size: 1.75rem; line-height: 1; }
 .video-launch:hover span { background: var(--navy); }
 .band-figure figcaption a { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+.card .band-figure { margin: var(--space-1) 0 0; }
 
 /* ---------- Venture Building : matrice offre × client en HTML/CSS (section #kodak) ---------- */
 .vb-kodak { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); align-items: center; }
