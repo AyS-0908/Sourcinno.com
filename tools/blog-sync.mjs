@@ -93,7 +93,7 @@ const day = (d) => (d.getUTCDate() === 1 ? "1er" : String(d.getUTCDate()));
 const block = posts.map((p) => [
   `<article class="card" data-tag="${attr(p.tag)}">`,
   `  <p class="tags"><span class="tag">${html(p.tag)}</span></p>`,
-  `  <h3><a href="${attr(p.link)}" target="_blank" rel="noopener">${html(p.title)} <span aria-hidden="true">→</span></a></h3>`,
+  `  <h3><a href="${attr(p.link)}" target="_blank" rel="noopener">${html(p.title)} <span aria-hidden="true">→</span><span class="visually-hidden"> (nouvel onglet)</span></a></h3>`,
   `  <p class="card__meta"><time datetime="${p.date.toISOString().slice(0, 10)}">${day(p.date)} ${MOIS[p.date.getUTCMonth()]} ${p.date.getUTCFullYear()}</time></p>`,
   `</article>`,
 ].map((l) => INDENT + l).join("\n"));

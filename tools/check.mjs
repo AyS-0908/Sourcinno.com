@@ -578,7 +578,15 @@ function checkA11y() {
     fail("404.html", "surtitre du hero : utiliser hero__eyebrow clair, pas section__eyebrow sombre sur le degrade");
   }
 
-  let links = 0, buttons = 0;
+  /* Nouvel onglet (Pass 42) : le nom accessible d un lien target="_blank" finit par
+     « (nouvel onglet) ». Nom lu = son aria-label s il en a un (le texte visible ne compte
+     alors plus), sinon son texte interieur sans commentaires, sans elements
+     aria-hidden="true" (sans imbrication de la meme balise) et sans balises, span
+     .visually-hidden compris. Un title, un texte apres </a> ou un commentaire ne comptent
+     pas ; un aria-labelledby n est pas lu, donc refuse. */
+  const NOUVEL_ONGLET = "(nouvel onglet)";
+  let links = 0, buttons = 0, blanks = 0;
+  const blankPages = new Set();
   for (const p of pages) {
     const body = p.html.slice(p.html.indexOf("<body"));
 
@@ -588,8 +596,24 @@ function checkA11y() {
       if (!text && !/aria-label=/.test(m[1]) && !/aria-labelledby=/.test(m[1])) {
         fail(p.rel, "lien sans texte ni aria-label : " + m[0].slice(0, 70));
       }
-      if (/target="_blank"/.test(m[1]) && !/rel="[^"]*noopener/.test(m[1])) {
+      if (!/\btarget\s*=\s*["']?_blank\b/i.test(m[1])) continue;
+      blanks++;
+      blankPages.add(p.rel);
+      if (!/rel="[^"]*noopener/.test(m[1])) {
         fail(p.rel, 'lien target="_blank" sans rel="noopener" : ' + m[0].slice(0, 70));
+      }
+      if (/\baria-labelledby\s*=/i.test(m[1])) {
+        fail(p.rel, 'lien target="_blank" nomme par aria-labelledby (non lu par ce controle) : ' + m[0].slice(0, 70));
+        continue;
+      }
+      const label = m[1].match(/\baria-label\s*=\s*(?:"([^"]*)"|'([^']*)')/i);
+      const nom = (label ? label[1] ?? label[2] : m[2]
+        .replace(/<!--[\s\S]*?-->/g, "")
+        .replace(/<(\w+)\b[^>]*\baria-hidden\s*=\s*"true"[^>]*>[\s\S]*?<\/\1>/gi, "")
+        .replace(/<[^>]+>/g, ""))
+        .replace(/&nbsp;|&#160;/g, " ").replace(/\s+/g, " ").trim();
+      if (!nom.endsWith(NOUVEL_ONGLET)) {
+        fail(p.rel, `lien target="_blank" dont le nom accessible ne finit pas par « ${NOUVEL_ONGLET} » (« ${nom.slice(-60)} ») : ` + m[0].slice(0, 70));
       }
     }
 
@@ -618,6 +642,7 @@ function checkA11y() {
   // repeint un bouton). Ce cas-la se voit a l oeil, sur la page rendue.
   note("--a11y: le conflit de cascade (une regle plus specifique qui repeint un element) n est PAS couvert ici : il se controle a l ecran.");
   note(`--a11y: ${PAIRS.length} couple(s) de couleurs verifie(s) (le plus juste : ${worst.nom}, ${worst.r.toFixed(2)}:1); ${links} lien(s) et ${buttons} bouton(s) inspecte(s)`);
+  note(`--a11y: ${blanks} lien(s) target="_blank" sur ${blankPages.size} page(s), chacun lu pour « ${NOUVEL_ONGLET} » en fin de nom accessible`);
 }
 
 /* ---------- --nojs ----------

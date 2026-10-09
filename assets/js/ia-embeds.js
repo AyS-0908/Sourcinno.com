@@ -30,7 +30,7 @@
       if (status) status.hidden = true;
       ready = true;
     } catch {
-      if (status) status.textContent ='La conversation est indisponible ici. Utilisez le lien Typebot ou contactez-nous ci-dessous. Fermez puis rouvrez pour réessayer.';
+      if (status) status.textContent = 'La conversation est indisponible ici. Utilisez le lien Typebot ou contactez-nous ci-dessous. Fermez puis rouvrez pour réessayer.';
     } finally {
       loading = false;
     }

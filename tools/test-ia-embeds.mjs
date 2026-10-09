@@ -90,4 +90,10 @@ bare.open = true;
 await bare.handlers.toggle();
 assert.equal(calls, 2);
 assert.equal(bareMount.hidden, false);
+// Opened once: closing and reopening starts no second conversation (pins the second status guard).
+bare.open = false;
+await bare.handlers.toggle();
+bare.open = true;
+await bare.handlers.toggle();
+assert.equal(calls, 2);
 console.log('PASS: video.js click-only, two launchers embed their own id (youtube-nocookie, focused); chat click-only loading from the local pinned copy, light published bot, blocked SDK retry, no duplicate conversation, no status line needed.');
