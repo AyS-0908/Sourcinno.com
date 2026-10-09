@@ -2,7 +2,8 @@
 /* Sourcinno — verificateur du site statique. Aucune dependance : `node tools/check.mjs`.
  *
  * Par defaut : le groupe STRUCTURE (liens, images, balises, header/footer/<noscript> identiques
- *              et conformes a tools/shell/, empreintes de version).
+ *              et conformes a tools/shell/, empreintes de version, chaque classe du HTML
+ *              avec une regle CSS). Le dossier .WIP (brouillons des Passes) n est jamais lu.
  * Options, chacune ajoutant un groupe et ECHOUANT si son sujet n'existe pas encore :
  *   --forms    page contact : le formulaire de contact, complet (V1 = un seul)
  *   --legal    pages legales completes (aucun identifiant laisse a completer)
@@ -47,7 +48,9 @@ const fail = (file, msg) => failures.push(`${file}: ${msg}`);
 const note = (msg) => notes.push(msg);
 
 /* ---------- decouverte des fichiers ---------- */
-const SKIP_DIRS = new Set([".git", "node_modules", ".github", "tools"]);
+/* .WIP : brouillons et preuves des Passes, jamais servis ; un .html ou un .js
+   laisse la ne devient pas une page ou un script du site. */
+const SKIP_DIRS = new Set([".git", "node_modules", ".github", "tools", ".WIP"]);
 
 function walk(dir, out = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
@@ -89,6 +92,26 @@ const between = (html, startTag, endTag) => {
 };
 const count = (html, re) => (html.match(re) || []).length;
 const attr = (html, re) => { const m = html.match(re); return m ? m[1].trim() : null; };
+/* HTML reellement lu par le navigateur : un commentaire <!-- --> ne compte pas. */
+const live = (html) => html.replace(/<!--[\s\S]*?-->/g, "");
+/* Jetons de chaque attribut class="…", meme coupe sur plusieurs lignes. */
+const classTokens = (html) => [...live(html).matchAll(/(?<![\w-])class="([^"]*)"/g)].flatMap((m) => m[1].split(/\s+/).filter(Boolean));
+/* Blocs <style> d une page (y compris celui du <noscript> de la coquille). */
+const styleBlocks = (html) => [...live(html).matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi)].map((m) => m[1]);
+/* Regles d une feuille, commentaires retires : [selecteurs, declarations]. */
+const cssRules = (css) => [...css.replace(/\/\*[\s\S]*?\*\//g, "").matchAll(/([^{}]+)\{([^{}]*)\}/g)].map((m) => [m[1], m[2]]);
+
+/* Outils et tests lances par node, avec une limite : un processus qui ne finit
+   pas, ou qui echoue sans rien ecrire, devient un echec nomme, jamais un vert. */
+const RUN_TIMEOUT_MS = 30_000;
+const runNode = (argv) => execFileSync(process.execPath, argv, { encoding: "utf8", stdio: "pipe", timeout: RUN_TIMEOUT_MS });
+const timedOut = (e) => e.code === "ETIMEDOUT" || Boolean(e.signal);
+const runFailure = (e) => timedOut(e) ? `interrompu apres ${RUN_TIMEOUT_MS / 1000} s sans finir` : `sortie ${e.status ?? e.code ?? "inconnue"} sans message`;
+function failFromTool(label, file, e) {
+  const lines = ((e.stdout || "") + (e.stderr || "")).split("\n").map((l) => l.trim()).filter(Boolean);
+  if (timedOut(e) || !lines.length) fail(label, `${file} ${runFailure(e)}`);
+  for (const line of lines) fail(label, line.replace(/^- /, ""));
+}
 
 /* ---------- STRUCTURE ---------- */
 function checkStructure() {
@@ -155,12 +178,6 @@ function checkStructure() {
 
   // 3. tous les liens et ressources internes resolvent
   const idsOf = (html) => new Set([...html.matchAll(/\bid="([^"]+)"/g)].map((m) => m[1]));
-  const pageByUrl = new Map();
-  for (const p of pages) {
-    const url = "/" + p.rel.replace(/index\.html$/, "");
-    pageByUrl.set(url, p);
-    pageByUrl.set("/" + p.rel, p);
-  }
 
   let linksChecked = 0;
   for (const p of pages) {
@@ -216,22 +233,54 @@ function checkStructure() {
   // 6. empreintes de version des ressources : sans elles, un visiteur deja venu
   //    garde l ancien CSS apres un deploiement (voir tools/version.mjs).
   try {
-    const out = execFileSync(process.execPath, [join(ROOT, "tools/version.mjs"), "--check"], { encoding: "utf8" });
-    note(out.trim());
+    note(runNode([join(ROOT, "tools/version.mjs"), "--check"]).trim());
   } catch (e) {
-    const text = (e.stdout || "") + (e.stderr || "");
-    for (const line of text.split("\n").filter((l) => l.trim())) fail("versions", line.trim().replace(/^- /, ""));
+    failFromTool("versions", "tools/version.mjs --check", e);
   }
 
   // 7. coquille commune : chaque page porte les blocs de tools/shell/
   //    (voir tools/shell.mjs). Une copie retouchee a la main echoue ici.
   try {
-    const out = execFileSync(process.execPath, [join(ROOT, "tools/shell.mjs"), "--check"], { encoding: "utf8" });
-    note(out.trim());
+    note(runNode([join(ROOT, "tools/shell.mjs"), "--check"]).trim());
   } catch (e) {
-    const text = (e.stdout || "") + (e.stderr || "");
-    for (const line of text.split("\n").filter((l) => l.trim())) fail("coquille", line.trim().replace(/^- /, ""));
+    failFromTool("coquille", "tools/shell.mjs --check", e);
   }
+
+  // 8. recensement : toute classe ecrite dans le HTML a au moins une regle CSS
+  //    (assets/css/*.css hors _v2, plus les <style> des pages). Seules exceptions :
+  //    les classes listees ici, chacune avec le fichier qui la porte ; une
+  //    exception que ce fichier ou les pages n utilisent plus echoue aussi.
+  const SANS_REGLE = new Map([
+    // Posee par la coquille, lue par aucune regle ni script (mesure Pass 39).
+    ["nav-drop-host", "tools/shell/header.html"],
+  ]);
+  const feuilles = allFiles.filter((f) => /^assets\/css\/[^/]+\.css$/.test(relative(ROOT, f).replace(/\\/g, "/")))
+    .map((f) => readFileSync(f, "utf8"));
+  const regles = new Set();
+  for (const css of [...feuilles, ...pages.flatMap((p) => styleBlocks(p.html))]) {
+    for (const [selecteurs] of cssRules(css)) {
+      for (const m of selecteurs.matchAll(/\.(-?[A-Za-z_][\w-]*)/g)) regles.add(m[1]);
+    }
+  }
+  const usages = new Map();
+  for (const p of pages) {
+    for (const t of classTokens(p.html)) {
+      if (!usages.has(t)) usages.set(t, new Set());
+      usages.get(t).add(p.rel);
+    }
+  }
+  for (const [t, where] of usages) {
+    if (regles.has(t) || SANS_REGLE.has(t)) continue;
+    const liste = [...where];
+    fail(liste[0], `classe « ${t} » sans aucune regle CSS (assets/css/ ni <style> de page)${liste.length > 1 ? ` ; aussi dans ${liste.length - 1} autre(s) page(s)` : ""}`);
+  }
+  for (const [t, file] of SANS_REGLE) {
+    const porteur = existsSync(join(ROOT, file)) ? readFileSync(join(ROOT, file), "utf8") : "";
+    if (!classTokens(porteur).includes(t) || !usages.has(t)) {
+      fail(file, `exception de recensement « ${t} » perimee : la retirer de SANS_REGLE dans tools/check.mjs`);
+    }
+  }
+  note(`STRUCTURE: recensement ${usages.size} classe(s) HTML, ${feuilles.length} feuille(s) assets/css + ${pages.reduce((n, p) => n + styleBlocks(p.html).length, 0)} bloc(s) <style> de page, ${regles.size} classe(s) avec regle ; exception(s) sans regle : ${[...SANS_REGLE].map(([t, f]) => `${t} (${f})`).join(", ") || "aucune"}`);
 
   note(`STRUCTURE: ${scriptsChecked} script(s) compile(s); ${pages.length} page(s) lue(s), dont ${shellPages.length} avec coquille et ${pages.length - shellPages.length} redirection(s); ${linksChecked} lien(s) interne(s) resolu(s)`);
 }
@@ -489,23 +538,25 @@ function checkA11y() {
    alors que le texte etait bien la — un controle qui lit le HTML brut passait
    au vert sur une page entierement blanche. */
 function checkNoJs() {
-  const css = readFileSync(join(ROOT, "assets/css/style.css"), "utf8");
-
   /* Masquer .reveal n est permis que sous une classe que seul un script pose :
      .reveal-wait (script en ligne de la coquille, retire par un minuteur) ou
      .reveal-on (site.js). Un <noscript> ne couvre pas site.js bloque ou en 404 :
      une regle `.reveal { opacity: 0 }` sans ces classes y laissait la page
      blanche, JavaScript actif. Regles lues bloc le plus interne d abord, la
-     premiere regle d un @media comprise. */
+     premiere regle d un @media comprise ; style.css ET chaque <style> de page. */
   const GATES = /^(html)?\.reveal-(wait|on)$/;
   const cachantes = [];
-  for (const m of css.replace(/\/\*[\s\S]*?\*\//g, "").matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
-    if (!/opacity:\s*0\b|visibility:\s*hidden|display:\s*none/.test(m[2])) continue;
-    for (const sel of m[1].split(";").pop().split(",").map((s) => s.trim())) {
-      if (!/\.reveal(?![\w-])/.test(sel)) continue;
-      cachantes.push(sel);
-      if (!GATES.test(sel.split(/\s*[\s>+~]\s*/)[0])) {
-        fail("assets/css/style.css", `« ${sel} » masque .reveal sans classe .reveal-wait / .reveal-on posee par un script : la page reste blanche sans site.js`);
+  const sources = [["assets/css/style.css", readFileSync(join(ROOT, "assets/css/style.css"), "utf8")],
+    ...pages.flatMap((p) => styleBlocks(p.html).map((css) => [p.rel + " <style>", css]))];
+  for (const [file, css] of sources) {
+    for (const [selecteurs, declarations] of cssRules(css)) {
+      if (!/opacity:\s*0\b|visibility:\s*hidden|display:\s*none/.test(declarations)) continue;
+      for (const sel of selecteurs.split(";").pop().split(",").map((s) => s.trim())) {
+        if (!/\.reveal(?![\w-])/.test(sel)) continue;
+        cachantes.push(sel);
+        if (!GATES.test(sel.split(/\s*[\s>+~]\s*/)[0])) {
+          fail(file, `« ${sel} » masque .reveal sans classe .reveal-wait / .reveal-on posee par un script : la page reste blanche sans site.js`);
+        }
       }
     }
   }
@@ -527,7 +578,11 @@ function checkNoJs() {
   };
   for (const p of shellPages) {
     if (/class="[^"]*\breveal-(wait|on)\b/.test(p.html)) fail(p.rel, "classe .reveal-wait / .reveal-on ecrite dans le HTML : elle masquerait sans JavaScript");
-    if (!/class="[^"]*\breveal\b/.test(p.html)) continue;
+    if (!classTokens(p.html).includes("reveal")) continue;
+    // Sans site.js, .reveal-on n est jamais posee : la page reste sur le minuteur seul.
+    if (!/<script\b[^>]*\bsrc="\/assets\/js\/site\.js(\?v=[0-9a-f]{8})?"/.test(live(p.html))) {
+      fail(p.rel, "page avec des sections .reveal qui ne charge pas /assets/js/site.js");
+    }
     const gates = [...p.html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => m[1]).filter((c) => c.includes("reveal-wait"));
     if (gates.length !== 1) { fail(p.rel, `${gates.length} script(s) en ligne posant .reveal-wait, 1 attendu (tools/shell/header.html)`); continue; }
     if (!ran.has(gates[0])) {
@@ -545,7 +600,8 @@ function checkNoJs() {
     for (const m of p.html.matchAll(/<form\b([^>]*)>/gi)) {
       if (!/data-contact-form/.test(m[1])) continue;
       if (/\baction=/.test(m[1])) fail(p.rel, "le formulaire porte un action : verifier qu il ne renvoie pas les donnees en clair dans l URL");
-      if (!/\bhidden\b/.test(m[1])) fail(p.rel, "le formulaire doit etre livre hidden : sans forms.js il ferait un GET avec les donnees personnelles dans l URL");
+      // L attribut hidden lui-meme (hidden, hidden="") ; ni aria-hidden, ni data-hidden, ni une valeur citee.
+      if (!/(^|\s)hidden(?=[\s>=/]|$)/.test(m[1].replace(/"[^"]*"/g, '""'))) fail(p.rel, "le formulaire doit etre livre hidden : sans forms.js il ferait un GET avec les donnees personnelles dans l URL");
       if (!/<p\b(?![^>]*\bhidden\b)[^>]*\bdata-form-fallback\b/.test(p.html)) {
         fail(p.rel, "aucun moyen de contact de repli visible (data-form-fallback) tant que le formulaire est masque");
       }
@@ -666,11 +722,10 @@ function runTests() {
   for (const f of ["tools/portfolio.test.mjs", "tools/test-ia-embeds.mjs"]) {
     try {
       // --experimental-vm-modules : test-ia-embeds simule l import() du SDK avec vm.SyntheticModule.
-      const out = execFileSync(process.execPath, ["--experimental-vm-modules", join(ROOT, f)], { encoding: "utf8", stdio: "pipe" });
-      note(`${f}: ${out.trim()}`);
+      note(`${f}: ${runNode(["--experimental-vm-modules", join(ROOT, f)]).trim()}`);
     } catch (e) {
-      const lines = String(e.stderr || e.message).split("\n").map((l) => l.trim()).filter(Boolean);
-      fail(f, "test en echec : " + (lines.find((l) => /^\w*Error\b/.test(l)) || lines.at(-1)));
+      const lines = String(e.stderr || "").split("\n").map((l) => l.trim()).filter(Boolean);
+      fail(f, "test en echec : " + (timedOut(e) || !lines.length ? runFailure(e) : lines.find((l) => /^\w*Error\b/.test(l)) || lines.at(-1)));
     }
   }
 }

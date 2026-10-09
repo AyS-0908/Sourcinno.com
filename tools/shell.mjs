@@ -22,7 +22,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const CHECK_ONLY = process.argv.includes("--check");
-const SKIP = new Set([".git", "node_modules", ".github", "tools"]);
+const SKIP = new Set([".git", "node_modules", ".github", "tools", ".WIP"]);
 
 function walk(dir, out = []) {
   for (const e of readdirSync(dir, { withFileTypes: true })) {
@@ -32,8 +32,9 @@ function walk(dir, out = []) {
   return out;
 }
 
-/* Modeles stockes sans fin de ligne finale ; remis aux fins de ligne de la page. */
-const model = (name) => readFileSync(join(ROOT, "tools/shell", name), "utf8").replace(/\r\n/g, "\n").replace(/\n$/, "");
+/* Modeles stockes sans fin de ligne finale ; remis aux fins de ligne de la page.
+   Un BOM UTF-8 en tete (editeur Windows) est retire : il finirait au milieu de la page. */
+const model = (name) => readFileSync(join(ROOT, "tools/shell", name), "utf8").replace(/^\uFEFF/, "").replace(/\r\n/g, "\n").replace(/\n$/, "");
 const PARTS = [
   { name: "header", file: "tools/shell/header.html", open: '<header class="site-header">', close: "</header>", inHead: false },
   { name: "footer", file: "tools/shell/footer.html", open: '<footer class="site-footer">', close: "</footer>", inHead: false },

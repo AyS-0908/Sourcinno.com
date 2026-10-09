@@ -20,7 +20,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const CHECK_ONLY = process.argv.includes("--check");
-const SKIP = new Set([".git", "node_modules", ".github", "tools"]);
+const SKIP = new Set([".git", "node_modules", ".github", "tools", ".WIP"]);
 
 function walk(dir, out = []) {
   for (const e of readdirSync(dir, { withFileTypes: true })) {
