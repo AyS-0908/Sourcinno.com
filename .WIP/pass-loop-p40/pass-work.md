@@ -78,3 +78,12 @@ Tier 3 advisory (no fix section, no further contact):
 
 AUDIT r1 COST: 161,849 tokens, 13 min 17 s (796,982 ms), 51 tool uses, GREEN high. INVOCATION: pass-auditor subagent (task notification). USAGE BASIS: whole-contact, from the Agent completion notice.
 Verdict imported 23:44 (`status.py verdict`, fingerprint b5515d67606aa094 unchanged). Comparison servers 4181/4182 stopped after the verdict.
+
+## CLOSURE
+UNIT: p40
+DOCS: root PLAN.md § 40 status Done + evidence pointer, AGENTS.md Gotchas (two-way census; computed-style comparison) and ARCHITECTURE.md `style.css` line, all before review; after GREEN: ARCHITECTURE hero wording narrowed to ia/strategie home cards (reviewer T3-2), root PROGRESS.md (Current Objective, Done, Next Action, Last Verification, Known minor issues) and CHANGELOG.md. No README/PRD edits.
+MIGRATED: final native + 14-case mutation ledger, census results vs the 13 probed names, tokens created, computed-style comparison summary (0 differences, 9 token additions), comparator defect, review cost and verdict -> root PROGRESS Last Verification (Pass 40); shipped behaviour -> root CHANGELOG.
+NITS: reviewer Tier-3 notes (regex literal holding a double slash read as a line comment by the string reader, fail-safe; ARCHITECTURE hero wording, fixed; PLAN pointer ahead of PROGRESS, resolved at closure) -> root PROGRESS Known minor issues (P40).
+COMMIT: 3f6a3632776b1769cca18839aa92a5e28d97f11e (product rebuild work commit, LOCAL ONLY, not pushed); journal af0b946.
+
+JOURNAL NOTE (closure): the first `set state=done` was refused (« content changed after GREEN or its seal is missing ») because force-adding `evidence/` to git makes it tracked, and tracked files enter the seal (fingerprint 922508c272a54ce7 vs GREEN b5515d67606aa094). My chained command still committed a durable record (4056c63, state `close`) and a reset (4321a6a): both local, never pushed, dropped with `git reset --soft af0b946` (reflog keeps them). Evidence untracked again → fingerprint b5515d67606aa094 → `set state=done` accepted; evidence re-added in the record-bearing commit below. No product file changed. Trap for the loop: commit durable evidence inside the state dir only after `done`, or keep it outside the seal.
