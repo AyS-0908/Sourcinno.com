@@ -5,10 +5,12 @@
   chat?.addEventListener('toggle', async () => {
     if (!chat.open || loading || ready) return;
     loading = true;
-    status.hidden = false;
-    status.textContent = 'Ouverture de la conversation…';
     try {
-      const { default: Typebot } = await import('https://cdn.jsdelivr.net/npm/@typebot.io/js@0.10.11/dist/web.js');
+      if (status) {
+        status.hidden = false;
+        status.textContent = 'Ouverture de la conversation…';
+      }
+      const { default: Typebot } = await import('/assets/js/vendor/typebot-js-0.10.11/web.js');
       const css = getComputedStyle(chat);
       const color = name => css.getPropertyValue(name).trim();
       Typebot.initStandard({
@@ -25,10 +27,10 @@
         },
       });
       document.querySelector('typebot-standard').hidden = false;
-      status.hidden = true;
+      if (status) status.hidden = true;
       ready = true;
     } catch {
-      status.textContent = 'La conversation est indisponible ici. Utilisez le lien Typebot ou contactez-nous ci-dessous. Fermez puis rouvrez pour réessayer.';
+      if (status) status.textContent ='La conversation est indisponible ici. Utilisez le lien Typebot ou contactez-nous ci-dessous. Fermez puis rouvrez pour réessayer.';
     } finally {
       loading = false;
     }

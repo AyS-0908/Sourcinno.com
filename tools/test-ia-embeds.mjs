@@ -32,24 +32,29 @@ assert.equal(one.replacedBy, frames[1]);
 assert.equal(frames[0].title, 'Vidéo « corpangels Corporates — July23 »');
 assert.ok(frames.every(f => f.referrerPolicy === 'origin' && f.focused && f.allowfullscreen === '' && /autoplay/.test(f.allow)));
 
-// ia-embeds.js: the Typebot chat only.
+// ia-embeds.js: the Typebot chat only, from the pinned local copy (tools/check.mjs checks its SHA-256).
+const SPECIFIER = '/assets/js/vendor/typebot-js-0.10.11/web.js';
 const source = readFileSync(new URL('../assets/js/ia-embeds.js', import.meta.url), 'utf8');
+assert.deepEqual([...source.matchAll(/\bimport\(\s*(['"`])(.*?)\1\s*\)/g)].map(m => m[2]), [SPECIFIER]);
 const chat = element(), status = element();
-let calls = 0, imports = 0, fail = true, options;
+let calls = 0, fail = true, options;
+const imports = [];
 const mount = element();
 const sdk = new vm.SyntheticModule(['default'], function () {
   this.setExport('default', { initStandard(config) { calls++; options = config; } });
 });
 await sdk.link(() => {});
 await sdk.evaluate();
+const load = async specifier => { imports.push(specifier); if (fail) throw Error('blocked'); return sdk; };
+const getComputedStyle = () => ({ getPropertyValue: name => ({ '--white': '#ffffff', '--grey-50': '#f5f8fc', '--navy': '#1a365d', '--teal-dark': '#247a78', '--font-body': 'Arial' })[name] });
 const context = vm.createContext({
   document: {
     querySelector: selector => ({ '[data-chat]': chat, '[data-chat-status]': status, 'typebot-standard': mount })[selector],
   },
-  getComputedStyle: () => ({ getPropertyValue: name => ({ '--white': '#ffffff', '--grey-50': '#f5f8fc', '--navy': '#1a365d', '--teal-dark': '#247a78', '--font-body': 'Arial' })[name] }),
+  getComputedStyle,
 });
-new vm.Script(source, { importModuleDynamically: async () => { imports++; if (fail) throw Error('blocked'); return sdk; } }).runInContext(context);
-assert.equal(imports, 0);
+new vm.Script(source, { importModuleDynamically: load }).runInContext(context);
+assert.equal(imports.length, 0);
 chat.open = true;
 await chat.handlers.toggle();
 assert.equal(calls, 0);
@@ -66,5 +71,23 @@ assert.equal(options.previewTheme.chat.buttons.backgroundColor, '#247a78');
 assert.equal(options.isPreview, undefined);
 await chat.handlers.toggle();
 assert.equal(calls, 1);
-assert.equal(imports, 2);
-console.log('PASS: video.js click-only, two launchers embed their own id (youtube-nocookie, focused); chat click-only loading, light published bot, blocked SDK retry, no duplicate conversation.');
+assert.deepEqual(imports, [SPECIFIER, SPECIFIER]);
+
+// A page without [data-chat-status]: a blocked SDK throws nothing, the retry still opens the chat.
+const bare = element(), bareMount = element();
+bareMount.hidden = true;
+fail = true;
+new vm.Script(source, { importModuleDynamically: load }).runInContext(vm.createContext({
+  document: { querySelector: selector => ({ '[data-chat]': bare, 'typebot-standard': bareMount })[selector] ?? null },
+  getComputedStyle,
+}));
+bare.open = true;
+await bare.handlers.toggle();
+fail = false;
+bare.open = false;
+await bare.handlers.toggle();
+bare.open = true;
+await bare.handlers.toggle();
+assert.equal(calls, 2);
+assert.equal(bareMount.hidden, false);
+console.log('PASS: video.js click-only, two launchers embed their own id (youtube-nocookie, focused); chat click-only loading from the local pinned copy, light published bot, blocked SDK retry, no duplicate conversation, no status line needed.');

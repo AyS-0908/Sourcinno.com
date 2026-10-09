@@ -3,7 +3,8 @@
  *
  * Par defaut : le groupe STRUCTURE (liens, images, balises, header/footer/<noscript> identiques
  *              et conformes a tools/shell/, empreintes de version, chaque classe du HTML
- *              avec une regle CSS). Le dossier .WIP (brouillons des Passes) n est jamais lu.
+ *              avec une regle CSS, empreinte SHA-256 du code tiers de assets/js/vendor/).
+ *              Le dossier .WIP (brouillons des Passes) n est jamais lu.
  * Options, chacune ajoutant un groupe et ECHOUANT si son sujet n'existe pas encore :
  *   --forms    page contact : le formulaire de contact, complet (V1 = un seul)
  *   --legal    pages legales completes (aucun identifiant laisse a completer)
@@ -30,6 +31,7 @@ import { join, relative, dirname, resolve, posix } from "node:path";
 import { fileURLToPath } from "node:url";
 import { Script } from "node:vm";
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = new Set(process.argv.slice(2));
@@ -65,6 +67,18 @@ function walk(dir, out = []) {
 }
 
 const allFiles = walk(ROOT);
+
+/* Code tiers servi par le site lui-meme (Pass 41) : chaque script de VENDOR est
+   epingle par son empreinte SHA-256 et accompagne de son LICENSE. Parce que son
+   contenu est fige par l empreinte, VENDOR est exclu de la compilation en script
+   classique (un module ES n y compile pas), du recensement inverse et de la
+   lecture des hotes par --tiers (les hotes que le bundle nomme dependent des
+   reglages du bot Typebot, pas du site). */
+const VENDOR = "assets/js/vendor/";
+const VENDOR_PINS = new Map([
+  ["assets/js/vendor/typebot-js-0.10.11/web.js", "41adb2855b0e8868b4cf304b20e3ab1f1014e8ed252ec559aaa8d4cd4ed72750"],
+]);
+const isVendor = (f) => relative(ROOT, f).replace(/\\/g, "/").startsWith(VENDOR);
 const htmlFiles = allFiles.filter((f) => f.endsWith(".html")).sort();
 if (htmlFiles.length === 0) {
   console.error("ECHEC: aucun fichier .html trouve sous " + ROOT);
@@ -223,12 +237,29 @@ function checkStructure() {
 
   // 5. chaque script du site doit au moins compiler : une erreur de syntaxe
   //    casse la page entiere sans que rien d autre ici ne le voie.
+  //    Les scripts de VENDOR n y passent pas : ils sont epingles juste apres.
   let scriptsChecked = 0;
-  for (const f of allFiles.filter((f) => f.endsWith(".js"))) {
+  for (const f of allFiles.filter((f) => f.endsWith(".js") && !isVendor(f))) {
     const rel = relative(ROOT, f).replace(/\\/g, "/");
     try { new Script(readFileSync(f, "utf8"), { filename: rel }); scriptsChecked++; }
     catch (e) { fail(rel, "erreur de syntaxe JavaScript: " + e.message); }
   }
+
+  // 5 bis. code tiers : empreinte exacte et LICENSE a cote ; un script de VENDOR
+  //    sans empreinte echoue, sinon il echapperait a tout controle.
+  for (const f of allFiles.filter((f) => isVendor(f) && f.endsWith(".js"))) {
+    const rel = relative(ROOT, f).replace(/\\/g, "/");
+    if (!VENDOR_PINS.has(rel)) fail(rel, "script tiers sans empreinte : l ajouter a VENDOR_PINS dans tools/check.mjs");
+  }
+  for (const [rel, pin] of VENDOR_PINS) {
+    const f = join(ROOT, rel);
+    if (!existsSync(f)) { fail(rel, "script tiers epingle absent"); continue; }
+    const sha = createHash("sha256").update(readFileSync(f)).digest("hex");
+    if (sha !== pin) fail(rel, `empreinte SHA-256 ${sha} differente de l empreinte epinglee ${pin} : fichier modifie`);
+    const licence = join(dirname(f), "LICENSE");
+    if (!existsSync(licence) || !statSync(licence).size) fail(posix.join(posix.dirname(rel), "LICENSE"), "licence du script tiers absente ou vide");
+  }
+  note(`STRUCTURE: code tiers epingle : ${[...VENDOR_PINS].map(([rel, pin]) => `${rel} (sha256 ${pin.slice(0, 12)}…, LICENSE)`).join(", ")}`);
 
   // 6. empreintes de version des ressources : sans elles, un visiteur deja venu
   //    garde l ancien CSS apres un deploiement (voir tools/version.mjs).
@@ -287,7 +318,7 @@ function checkStructure() {
   // 9. recensement inverse : toute classe nommee par un selecteur (memes feuilles
   //    et <style>) sert quelque part : jeton class="…"/class='…' d une page ou de
   //    tools/shell/*.html, ou mot d une chaine "…", '…' ou `…` d un script
-  //    (assets/js/**, _v2 compris, et <script> en ligne hors JSON-LD des pages et
+  //    (assets/js/**, _v2 compris, VENDOR exclu, et <script> en ligne hors JSON-LD des pages et
   //    de la coquille ; commentaires ignores). Limite : une expression reguliere
   //    litterale contenant un guillemet hors d un gabarit `…` decalerait la lecture.
   //    Seules exceptions : une classe dont le nom est compose par un script, avec
@@ -302,7 +333,7 @@ function checkStructure() {
   const sourcesHtml = [...pages.map((p) => p.html), ...partiels];
   const jetons = new Set(sourcesHtml.flatMap(classTokens));
   const scriptsTexte = [
-    ...allFiles.filter((f) => /^assets\/js\/.+\.js$/.test(relOf(f))).map((f) => readFileSync(f, "utf8")),
+    ...allFiles.filter((f) => /^assets\/js\/.+\.js$/.test(relOf(f)) && !isVendor(f)).map((f) => readFileSync(f, "utf8")),
     ...sourcesHtml.flatMap((h) => [...live(h).matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)]
       .filter((m) => !/ld\+json/i.test(m[1])).map((m) => m[2])),
   ];
@@ -689,8 +720,9 @@ function checkTiers() {
       for (const m of s[1].matchAll(/https:\/\/([a-z0-9.-]+)/gi)) add(m[1]);
     }
   }
-  // Hotes appeles a l execution par les scripts livres ; _v2 est range, jamais charge.
-  for (const f of allFiles.filter((f) => f.endsWith(".js") && !/[\\/]_v2[\\/]/.test(f))) {
+  // Hotes appeles a l execution par les scripts livres ; _v2 est range, jamais charge ;
+  // VENDOR (code tiers epingle) nomme les hotes que les reglages du bot Typebot choisissent.
+  for (const f of allFiles.filter((f) => f.endsWith(".js") && !/[\\/]_v2[\\/]/.test(f) && !isVendor(f))) {
     for (const m of readFileSync(f, "utf8").matchAll(/https:\/\/([a-z0-9.-]+)/gi)) add(m[1]);
   }
   /* On ne lit que le TEXTE de la politique, jamais son <head> : celui-ci
