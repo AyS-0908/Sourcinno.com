@@ -37,6 +37,11 @@
     if (field.name === "message" && value.length < 10) {
       return "Merci de détailler un peu votre demande (10 caractères minimum).";
     }
+    /* maxlength="1500" borne la saisie, pas une valeur collee par script : un
+       brouillon mailto trop long est tronque sans rien dire par la messagerie. */
+    if (field.name === "message" && value.length > 1500) {
+      return "Merci de raccourcir votre message (1 500 caractères maximum).";
+    }
     return "";
   }
 

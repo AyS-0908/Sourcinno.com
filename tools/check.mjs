@@ -346,14 +346,17 @@ function checkForms() {
         /message est bien parti|message a été envoyé/i.test(valid.status.innerHTML)) {
       throw new Error("le brouillon doit conserver les champs et ne pas annoncer une livraison");
     }
-    for (const [name, value] of [["nom", ""], ["email", "invalide"], ["message", "court"], ["rgpd", false]]) {
+    /* 3 000 caracteres : une valeur collee par script passe outre maxlength,
+       seul errorFor l arrete avant un brouillon mailto tronque. */
+    for (const [name, value] of [["nom", ""], ["email", "invalide"], ["message", "court"], ["message", "x".repeat(3000)], ["rgpd", false]]) {
       const invalid = runMail();
       const field = invalid.fields.find((f) => f.name === name);
       if (name === "rgpd") field.checked = value;
       else field.value = value;
       invalid.send();
       if (invalid.location.href || invalid.status.dataset.state !== "error" || field.getAttribute("aria-invalid") !== "true") {
-        throw new Error(`le champ invalide ${name} doit empecher le brouillon et etre signale`);
+        const size = typeof value === "string" ? ` (${value.length} caracteres)` : "";
+        throw new Error(`le champ invalide ${name}${size} doit empecher le brouillon et etre signale`);
       }
     }
   } catch (error) {
@@ -488,26 +491,51 @@ function checkA11y() {
 function checkNoJs() {
   const css = readFileSync(join(ROOT, "assets/css/style.css"), "utf8");
 
-  /* Toute classe que seul le JavaScript peut poser et qui MASQUE par defaut. */
+  /* Masquer .reveal n est permis que sous une classe que seul un script pose :
+     .reveal-wait (script en ligne de la coquille, retire par un minuteur) ou
+     .reveal-on (site.js). Un <noscript> ne couvre pas site.js bloque ou en 404 :
+     une regle `.reveal { opacity: 0 }` sans ces classes y laissait la page
+     blanche, JavaScript actif. Regles lues bloc le plus interne d abord, la
+     premiere regle d un @media comprise. */
+  const GATES = /^(html)?\.reveal-(wait|on)$/;
   const cachantes = [];
-  for (const m of css.replace(/\/\*[\s\S]*?\*\//g, "").matchAll(/(^|\})\s*([^{}@]+?)\s*\{([^{}]*)\}/g)) {
-    const sel = m[2].trim();
-    const body = m[3];
-    if (!/opacity:\s*0\b|visibility:\s*hidden|display:\s*none/.test(body)) continue;
-    if (/^\.reveal\b/.test(sel)) cachantes.push(sel.trim());
+  for (const m of css.replace(/\/\*[\s\S]*?\*\//g, "").matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+    if (!/opacity:\s*0\b|visibility:\s*hidden|display:\s*none/.test(m[2])) continue;
+    for (const sel of m[1].split(";").pop().split(",").map((s) => s.trim())) {
+      if (!/\.reveal(?![\w-])/.test(sel)) continue;
+      cachantes.push(sel);
+      if (!GATES.test(sel.split(/\s*[\s>+~]\s*/)[0])) {
+        fail("assets/css/style.css", `« ${sel} » masque .reveal sans classe .reveal-wait / .reveal-on posee par un script : la page reste blanche sans site.js`);
+      }
+    }
   }
 
+  /* Le script en ligne de la coquille est EXECUTE : il doit poser .reveal-wait
+     et la retirer lui-meme apres 3 s au plus (+ 0,6 s de transition < 4 s). */
+  const ran = new Map();
+  const runGate = (code) => {
+    const classes = new Set();
+    const timers = [];
+    new Script(code, { filename: "coquille reveal-wait" }).runInNewContext({
+      document: { documentElement: { classList: { add: (c) => classes.add(c), remove: (c) => classes.delete(c) } } },
+      setTimeout: (fn, ms) => timers.push([fn, ms]),
+    });
+    if (!classes.has("reveal-wait")) return "ne pose pas .reveal-wait";
+    if (timers.length !== 1 || !(timers[0][1] <= 3000)) return "n arme pas un seul minuteur de 3 s au plus";
+    timers[0][0]();
+    return classes.has("reveal-wait") ? "son minuteur ne retire pas .reveal-wait" : "";
+  };
   for (const p of shellPages) {
-    const usesReveal = /class="[^"]*\breveal\b/.test(p.html);
-    if (!usesReveal) continue;
-    const ns = p.html.match(/<noscript>[\s\S]*?<\/noscript>/i);
-    if (!ns) {
-      fail(p.rel, "la page masque ses sections par defaut (.reveal) et n a aucun <noscript> pour les reafficher : sans JavaScript elle est blanche");
-      continue;
+    if (/class="[^"]*\breveal-(wait|on)\b/.test(p.html)) fail(p.rel, "classe .reveal-wait / .reveal-on ecrite dans le HTML : elle masquerait sans JavaScript");
+    if (!/class="[^"]*\breveal\b/.test(p.html)) continue;
+    const gates = [...p.html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => m[1]).filter((c) => c.includes("reveal-wait"));
+    if (gates.length !== 1) { fail(p.rel, `${gates.length} script(s) en ligne posant .reveal-wait, 1 attendu (tools/shell/header.html)`); continue; }
+    if (!ran.has(gates[0])) {
+      let why;
+      try { why = runGate(gates[0]); } catch (error) { why = "erreur : " + error.message; }
+      ran.set(gates[0], why);
     }
-    if (!/\.reveal\s*\{[^}]*opacity:\s*1/.test(ns[0])) {
-      fail(p.rel, "le bloc <noscript> ne remet pas .reveal a opacity 1");
-    }
+    if (ran.get(gates[0])) fail(p.rel, "le script en ligne .reveal-wait " + ran.get(gates[0]));
   }
 
   /* Un formulaire sans action ferait un GET sur la page courante : nom, email
@@ -524,7 +552,7 @@ function checkNoJs() {
     }
   }
 
-  note(`--nojs: ${shellPages.length} page(s) verifiee(s); ${cachantes.length} regle(s) masquant par defaut recensee(s) (${cachantes.join(", ") || "aucune"})`);
+  note(`--nojs: ${shellPages.length} page(s) verifiee(s); ${cachantes.length} selecteur(s) masquant .reveal recense(s) (${cachantes.join(", ") || "aucun"}); ${ran.size} script(s) .reveal-wait execute(s)`);
 }
 
 /* ---------- --tiers ----------

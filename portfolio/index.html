@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=bedaae81">
+<link rel="stylesheet" href="/assets/css/style.css?v=ed73f554">
 <style>
   .portfolio-filter { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
   .portfolio-filter[hidden] { display: none; }
@@ -62,9 +62,8 @@
 </style>
 <noscript>
   <style>
-    /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
-       toutes les sections resteraient a opacity 0, donc invisibles. */
-    .reveal { opacity: 1 !important; transform: none !important; }
+    /* Sans JavaScript, le lecteur video ne peut pas se lancer : on le masque,
+       le lien YouTube de la legende reste. */
     .video-launch { display:none; }
   </style>
 </noscript>
@@ -72,6 +71,12 @@
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
 <header class="site-header">
+  <script>
+    /* Avant les sections : les masque en attendant site.js (animation au scroll),
+       2,5 s au plus. Sans JavaScript, ni classe ni masquage. */
+    document.documentElement.classList.add("reveal-wait");
+    setTimeout(function () { document.documentElement.classList.remove("reveal-wait"); }, 2500);
+  </script>
   <div class="container site-header__inner">
     <a class="site-logo" href="/" aria-label="Sourcinno, retour a l accueil">
       <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="342" height="110">
@@ -315,7 +320,7 @@
   </div>
 </footer>
 <script src="/assets/js/config.js?v=654769f0" defer></script>
-<script src="/assets/js/site.js?v=4cc968e5" defer></script>
+<script src="/assets/js/site.js?v=c0f148db" defer></script>
 <script src="/assets/js/portfolio.js?v=8d150c6a" defer></script>
 </body>
 </html>

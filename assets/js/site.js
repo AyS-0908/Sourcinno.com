@@ -78,22 +78,26 @@
     on(window, "scroll", apply, { passive: true });
   }
 
-  /* --- Apparition au scroll ----------------------------------------- */
+  /* --- Apparition au scroll -----------------------------------------
+     La coquille (tools/shell/header.html) pose .reveal-wait sur <html> et
+     la retire apres 2,5 s si ce fichier n a pas pris le relais. Deja retiree :
+     les sections sont affichees, on ne les remasque pas. */
   function initReveal() {
+    const root = document.documentElement;
+    if (!root.classList.contains("reveal-wait")) return;
     const items = document.querySelectorAll(".reveal");
-    if (!items.length) return;
-    if (reduced || !("IntersectionObserver" in window)) {
-      items.forEach((el) => el.classList.add("is-visible"));
-      return;
+    if (items.length && !reduced && "IntersectionObserver" in window) {
+      root.classList.add("reveal-on");
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+      items.forEach((el) => io.observe(el));
     }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        io.unobserve(entry.target);
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-    items.forEach((el) => io.observe(el));
+    root.classList.remove("reveal-wait");
   }
 
   /* --- Année du copyright ------------------------------------------- */

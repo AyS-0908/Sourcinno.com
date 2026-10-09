@@ -458,9 +458,15 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 }
 .site-footer__brand { font-family: var(--font-title); font-size: 1.2rem; color: var(--white); margin-bottom: var(--space-1); }
 
-/* ---------- Animations au scroll — PRD §7 ---------- */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
-.reveal.is-visible { opacity: 1; transform: none; }
+/* ---------- Animations au scroll — PRD §7 ----------
+   Une section n est masquee que sous une classe posee par un script :
+   .reveal-wait (coquille tools/shell/header.html, retiree apres 2,5 s au plus)
+   puis .reveal-on (site.js). Sans JavaScript, site.js bloque ou mouvement
+   reduit : tout reste visible. `check.mjs --nojs` refuse un masquage sans elles. */
+.reveal { transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-wait .reveal, .reveal-on .reveal:not(.is-visible) { opacity: 0; transform: translateY(22px); }
+}
 
 /* ---------- Utilitaires ---------- */
 .visually-hidden {
@@ -522,7 +528,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal { opacity: 1; transform: none; }
   .card:hover, .card--service:hover { transform: none !important; }
 }
 
