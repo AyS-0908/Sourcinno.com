@@ -1017,3 +1017,22 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 @media (max-width: 640px) {
   .service-careers--two { grid-template-columns: 1fr; }
 }
+
+/* ---------- P36 — Cas d'usage (pages services) : opt-in .service-refinement--usecases, sans effet sur les autres pages ---------- */
+#besoin.service-refinement.service-refinement--usecases .lead { padding: 0; border-radius: 0; background: none; }
+.service-refinement--usecases .service-question-list .disclosure summary { align-items: flex-start; }
+.service-refinement--usecases .service-question-list .disclosure__subtitle { display: block; margin-top: 2px; font-size: .95rem; line-height: 1.5; }
+.service-detail { padding: 0 0 var(--space-2); }
+.service-detail__label { margin: var(--space-2) 0 var(--space-1); font-size: .95rem; font-weight: 700; color: var(--navy); }
+.service-detail .ticks { margin: 0; font-size: .95rem; }
+.service-detail .ticks li { margin-bottom: .4rem; }
+.service-rollout { border-top: 1px solid var(--border); padding-top: var(--space-2); }
+.service-rollout__title { display: flex; gap: var(--space-2); align-items: baseline; margin: 0; font-weight: 700; line-height: 1.5; }
+.service-rollout__goal { margin: var(--space-2) 0 0; }
+.service-levels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-1); list-style: none; margin: 0; padding: 0; }
+.service-level { min-width: 0; padding: var(--space-2); border-radius: var(--radius); background: var(--grey-50); border-top: 3px solid var(--teal-dark); font-size: .92rem; line-height: 1.5; }
+.service-level strong { display: block; margin-bottom: 4px; color: var(--navy); }
+.service-rollout__extras { margin: var(--space-2) 0 0; font-size: .95rem; color: var(--text-muted); }
+@media (max-width: 640px) {
+  .service-levels { grid-template-columns: 1fr; }
+}
