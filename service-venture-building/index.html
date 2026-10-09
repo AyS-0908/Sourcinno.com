@@ -21,13 +21,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=69bb1ff0">
+<link rel="stylesheet" href="/assets/css/style.css?v=74f4ad67">
 <noscript>
   <style>
     /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
        toutes les sections resteraient a opacity 0, donc invisibles. */
     .reveal { opacity: 1 !important; transform: none !important; }
-    .ia-video-launch { display:none; }
+    .video-launch { display:none; }
   </style>
 </noscript>
 </head>
@@ -129,8 +129,11 @@
     </ul>
     </div>
     <figure class="band-figure">
-      <iframe title="Vidéo : CorpAngels — TechnoService SaaS pour création de StartUps" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen style="display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:16px" srcdoc="<style>body{margin:0}a{display:grid;place-items:center;min-height:100vh;background:#142941;color:white;font:600 1.2rem Arial,sans-serif;text-align:center}</style><a href='https://www.youtube-nocookie.com/embed/7qO3G7tCHr8?autoplay=1'>▶ Lancer la vidéo « CorpAngels : TechnoService SaaS pour création de StartUps »</a>"></iframe>
-      <figcaption>Vidéo « CorpAngels : TechnoService SaaS pour création de StartUps » — <a href="https://www.youtube.com/watch?v=7qO3G7tCHr8" target="_blank" rel="noopener">ouvrir sur YouTube</a> si le lecteur ne fonctionne pas.</figcaption>
+      <button class="video-launch" type="button" data-video="7qO3G7tCHr8" aria-label="Lire la vidéo « CorpAngels : TechnoService SaaS pour création de StartUps »">
+        <img src="/assets/img/video-corpangels-technoservice.jpg" width="480" height="360" alt="" loading="lazy">
+        <span aria-hidden="true">▶</span>
+      </button>
+      <figcaption><a href="https://www.youtube.com/watch?v=7qO3G7tCHr8" target="_blank" rel="noopener">Vidéo « CorpAngels : TechnoService SaaS pour création de StartUps »</a></figcaption>
     </figure>
   </div>
 </section>
@@ -168,8 +171,11 @@
       <figcaption>Croissance autour du cœur de métier — <a href="/assets/img/vb-introduction.png" target="_blank" rel="noopener">voir le schéma en grand</a>.</figcaption>
     </figure>
     <figure class="band-figure">
-      <iframe title="Vidéo : corpangels Corporates — July23" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen style="display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:16px" srcdoc="<style>body{margin:0}a{display:grid;place-items:center;min-height:100vh;background:#142941;color:white;font:600 1.2rem Arial,sans-serif;text-align:center}</style><a href='https://www.youtube-nocookie.com/embed/QtzlMHaUGyM?autoplay=1'>▶ Lancer la vidéo « corpangels Corporates — July23 »</a>"></iframe>
-      <figcaption>Vidéo « corpangels Corporates — July23 » — <a href="https://www.youtube.com/watch?v=QtzlMHaUGyM" target="_blank" rel="noopener">ouvrir sur YouTube</a> si le lecteur ne fonctionne pas.</figcaption>
+      <button class="video-launch" type="button" data-video="QtzlMHaUGyM" aria-label="Lire la vidéo « corpangels Corporates — July23 »">
+        <img src="/assets/img/video-corpangels-corporates.jpg" width="480" height="360" alt="" loading="lazy">
+        <span aria-hidden="true">▶</span>
+      </button>
+      <figcaption><a href="https://www.youtube.com/watch?v=QtzlMHaUGyM" target="_blank" rel="noopener">Vidéo « corpangels Corporates — July23 »</a></figcaption>
     </figure>
   </div>
 </section>
@@ -217,5 +223,6 @@
 </footer>
 <script src="/assets/js/config.js?v=654769f0" defer></script>
 <script src="/assets/js/site.js?v=4cc968e5" defer></script>
+<script src="/assets/js/video.js?v=4ad941e0" defer></script>
 </body>
 </html>

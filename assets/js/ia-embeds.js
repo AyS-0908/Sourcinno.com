@@ -1,17 +1,4 @@
 (() => {
-  const launch = document.querySelector('[data-video-launch]');
-  launch?.addEventListener('click', () => {
-    const frame = document.createElement('iframe');
-    frame.title = 'Vidéo : AI for BUSINESS';
-    frame.src = 'https://www.youtube-nocookie.com/embed/hDFiKEFv5kA?autoplay=1&playsinline=1';
-    frame.referrerPolicy = 'origin';
-    frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-    frame.setAttribute('allowfullscreen', '');
-    frame.className = 'ia-video';
-    launch.replaceWith(frame);
-    frame.focus();
-  });
-
   const chat = document.querySelector('[data-chat]');
   const status = document.querySelector('[data-chat-status]');
   let loading = false, ready = false;

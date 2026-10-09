@@ -21,13 +21,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=69bb1ff0">
+<link rel="stylesheet" href="/assets/css/style.css?v=74f4ad67">
 <style>
-  .ia-video { display:block; width:100%; min-height:200px; aspect-ratio:16/9; border:0; border-radius:var(--radius-lg); }
-  .ia-video-launch { position:relative; padding:0; cursor:pointer; overflow:hidden; background:var(--navy-dark); color:var(--white); }
-  .ia-video-launch img { width:100%; height:100%; object-fit:cover; aspect-ratio:16/9; }
-  .ia-video-launch span { position:absolute; inset:0; display:grid; place-items:center; }
-  .ia-video-launch strong { padding:12px 20px; border-radius:var(--radius); background:var(--teal-dark); color:var(--white); }
   .ia-chat { max-width:760px; margin:auto; padding:var(--space-3); background:var(--white); border:1px solid var(--border); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); }
   .ia-chat h3 { margin-bottom:var(--space-1); }
   .ia-chat details { margin:var(--space-2) 0; }
@@ -41,7 +36,7 @@
     /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
        toutes les sections resteraient a opacity 0, donc invisibles. */
     .reveal { opacity: 1 !important; transform: none !important; }
-    .ia-video-launch { display:none; }
+    .video-launch { display:none; }
   </style>
 </noscript>
 </head>
@@ -198,11 +193,11 @@
       <h2>RÉFLEXION</h2>
     </div>
     <figure class="band-figure">
-      <button class="ia-video ia-video-launch" type="button" data-video-launch aria-label="Lire la vidéo AI for Business dans cette page">
+      <button class="video-launch" type="button" data-video="hDFiKEFv5kA" aria-label="Lire la vidéo « AI for BUSINESS »">
         <img src="/assets/img/ai-for-business-video.jpg" width="480" height="360" alt="" loading="lazy">
-        <span><strong>▶ Lire la vidéo</strong></span>
+        <span aria-hidden="true">▶</span>
       </button>
-      <figcaption>Vidéo « AI for BUSINESS » — <a href="https://www.youtube.com/watch?v=hDFiKEFv5kA" target="_blank" rel="noopener">ouvrir sur YouTube</a> si le lecteur ne fonctionne pas.</figcaption>
+      <figcaption><a href="https://www.youtube.com/watch?v=hDFiKEFv5kA" target="_blank" rel="noopener">Vidéo « AI for BUSINESS »</a></figcaption>
     </figure>
     <div class="ia-chat">
       <h3>Une question sur AI for Business ?</h3>
@@ -262,6 +257,7 @@
 </footer>
 <script src="/assets/js/config.js?v=654769f0" defer></script>
 <script src="/assets/js/site.js?v=4cc968e5" defer></script>
-<script src="/assets/js/ia-embeds.js?v=4a9985a1" defer></script>
+<script src="/assets/js/video.js?v=4ad941e0" defer></script>
+<script src="/assets/js/ia-embeds.js?v=1e1e9696" defer></script>
 </body>
 </html>
