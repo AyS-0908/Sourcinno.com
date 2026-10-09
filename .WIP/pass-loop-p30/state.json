@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p30",
+  "state": "done",
+  "scope": "Pass 30 full slice vs base b73680f: index.html (#experience panel + #demarche), assets/css/style.css (disclosure component, dead rules deleted), assets/js/site.js (initExpertise deleted), service-ia-business/index.html, service-strategie-transformation/index.html, service-venture-building/index.html (class rename only), ?v= stamps on 16 pages. Docs repo (outside this seal, read-only for the auditor): root PLAN.md \u00a7 30 (contract: Work 1-4, Done When 1-5; only status token + Evidence line changed by the Coder), root AGENTS.md (one new Gotcha). Rendered recipe + results: .WIP/pass-loop-p30/evidence/render.mjs, captures-pre/ and captures-r1/render-result.json. Server 127.0.0.1:4173 serves this tree (reuse; do not start another on 4173). LOCAL ONLY: no fetch, push, deploy. No LIVE system.",
+  "audit_launches": 1,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 0,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    },
+    "auditor": {
+      "model": "unknown",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 1,
+  "results_blocks": 1,
+  "pass_base": "b73680f0c9898d562fa2f6a0177d8e61e3e9962a",
+  "seal_paths": "",
+  "brief_fingerprint": "621f2f916d179274",
+  "green_fingerprint": "621f2f916d179274",
+  "briefed_at": "2026-10-09T15:01:16",
+  "cap_extensions": [],
+  "state_dir": ".WIP/pass-loop-p30",
+  "updated": "2026-10-09"
+}
