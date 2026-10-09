@@ -1,0 +1,258 @@
+{
+ "mode": "compare",
+ "A": "http://127.0.0.1:4181",
+ "B": "http://127.0.0.1:4182",
+ "saved": "baseline-45ee708.json",
+ "newTokens": [
+  "--accent-on-dark",
+  "--link-hover-on-dark",
+  "--primary-hover",
+  "--error",
+  "--tag-text",
+  "--hero-deep",
+  "--hero-mid",
+  "--hero-end",
+  "--card-strategie-end"
+ ],
+ "pages": {
+  "/ @1200": {
+   "elements": 279,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 279,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 279
+  },
+  "/404.html @1200": {
+   "elements": 104,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 104,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 104
+  },
+  "/contact/ @1200": {
+   "elements": 192,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 192,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 192
+  },
+  "/mentions-legales/ @1200": {
+   "elements": 154,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 154,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 154
+  },
+  "/politique-confidentialite/ @1200": {
+   "elements": 162,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 162,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 162
+  },
+  "/portfolio/ @1200": {
+   "elements": 364,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 364,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 364
+  },
+  "/publications/ @1200": {
+   "elements": 233,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 233,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 233
+  },
+  "/service-ia-business/ @1200": {
+   "elements": 242,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 242,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 242
+  },
+  "/service-strategie-transformation/ @1200": {
+   "elements": 290,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 290,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 290
+  },
+  "/service-venture-building/ @1200": {
+   "elements": 224,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 224,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 224
+  },
+  "/ @375": {
+   "elements": 279,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 279,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 279
+  },
+  "/404.html @375": {
+   "elements": 104,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 104,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 104
+  },
+  "/contact/ @375": {
+   "elements": 192,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 192,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 192
+  },
+  "/mentions-legales/ @375": {
+   "elements": 154,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 154,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 154
+  },
+  "/politique-confidentialite/ @375": {
+   "elements": 162,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 162,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 162
+  },
+  "/portfolio/ @375": {
+   "elements": 364,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 364,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 364
+  },
+  "/publications/ @375": {
+   "elements": 233,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 233,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 233
+  },
+  "/service-ia-business/ @375": {
+   "elements": 242,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 242,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 242
+  },
+  "/service-strategie-transformation/ @375": {
+   "elements": 290,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 290,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 290
+  },
+  "/service-venture-building/ @375": {
+   "elements": 224,
+   "media": true,
+   "reads": 1,
+   "lastChange": null,
+   "savedMatch": true,
+   "elementsB": 224,
+   "sameStructure": true,
+   "differing": [],
+   "tokenOnly": 224
+  }
+ },
+ "summary": {
+  "pagesWidths": 20,
+  "totalElements": 4488,
+  "totalDiffs": 0,
+  "totalSavedDiffs": 0,
+  "badMedia": 0,
+  "outside": [],
+  "newTokensAdded": {
+   "--accent-on-dark: #9fe3e0": 13464,
+   "--card-strategie-end: #24546a": 13464,
+   "--error: #c53030": 13464,
+   "--hero-deep: #10243d": 13464,
+   "--hero-end: #1b4960": 13464,
+   "--hero-mid: #173858": 13464,
+   "--link-hover-on-dark: #7fd6d3": 13464,
+   "--primary-hover: #1f6360": 13464,
+   "--tag-text: #a04a12": 13464
+  }
+ }
+}
