@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /* Sourcinno — verificateur du site statique. Aucune dependance : `node tools/check.mjs`.
  *
- * Par defaut : le groupe STRUCTURE (liens, images, balises, header/footer identiques).
+ * Par defaut : le groupe STRUCTURE (liens, images, balises, header/footer/<noscript> identiques
+ *              et conformes a tools/shell/, empreintes de version).
  * Options, chacune ajoutant un groupe et ECHOUANT si son sujet n'existe pas encore :
  *   --data     assets/data/publications.json valide, et la page qui l'affiche
  *   --forms    page contact : le formulaire de contact, complet (V1 = un seul)
@@ -111,12 +112,15 @@ function checkStructure() {
     }
   }
 
-  // 2. header et footer identiques partout
+  // 2. header, footer et <noscript> du <head> identiques partout
+  //    (une seule source : tools/shell/, recopiee par tools/shell.mjs)
   const headerOf = (p) => between(p.html, '<header class="site-header">', "</header>");
   const footerOf = (p) => between(p.html, '<footer class="site-footer">', "</footer>");
+  const noscriptOf = (p) => between(p.html.slice(0, p.html.indexOf("</head>") + 1), "<noscript>", "</noscript>");
   const ref = shellPages[0];
   const refHeader = headerOf(ref);
   const refFooter = footerOf(ref);
+  const refNoscript = noscriptOf(ref);
   if (!refHeader) fail(ref.rel, "bloc <header class=\"site-header\"> introuvable");
   if (!refFooter) fail(ref.rel, "bloc <footer class=\"site-footer\"> introuvable");
   for (const p of shellPages) {
@@ -126,6 +130,8 @@ function checkStructure() {
     if (!f) { fail(p.rel, "footer absent"); continue; }
     if (refHeader && h !== refHeader) fail(p.rel, `header different de ${ref.rel} (les copies doivent rester identiques)`);
     if (refFooter && f !== refFooter) fail(p.rel, `footer different de ${ref.rel}`);
+    const ns = noscriptOf(p);
+    if (refNoscript && ns !== refNoscript) fail(p.rel, `<noscript> du <head> different de ${ref.rel}`);
     if (!/<nav class="site-nav"/.test(p.html)) fail(p.rel, "navigation absente du HTML servi");
     if (!/id="main"/.test(p.html)) fail(p.rel, 'element <main id="main"> absent');
   }
@@ -214,6 +220,16 @@ function checkStructure() {
   } catch (e) {
     const text = (e.stdout || "") + (e.stderr || "");
     for (const line of text.split("\n").filter((l) => l.trim())) fail("versions", line.trim().replace(/^- /, ""));
+  }
+
+  // 7. coquille commune : chaque page porte les blocs de tools/shell/
+  //    (voir tools/shell.mjs). Une copie retouchee a la main echoue ici.
+  try {
+    const out = execFileSync(process.execPath, [join(ROOT, "tools/shell.mjs"), "--check"], { encoding: "utf8" });
+    note(out.trim());
+  } catch (e) {
+    const text = (e.stdout || "") + (e.stderr || "");
+    for (const line of text.split("\n").filter((l) => l.trim())) fail("coquille", line.trim().replace(/^- /, ""));
   }
 
   note(`STRUCTURE: ${scriptsChecked} script(s) compile(s); ${pages.length} page(s) lue(s), dont ${shellPages.length} avec coquille et ${pages.length - shellPages.length} redirection(s); ${linksChecked} lien(s) interne(s) resolu(s)`);

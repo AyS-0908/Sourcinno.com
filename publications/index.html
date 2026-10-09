@@ -31,10 +31,7 @@
     /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
        toutes les sections resteraient a opacity 0, donc invisibles. */
     .reveal { opacity: 1 !important; transform: none !important; }
-    /* Les formulaires ont besoin de JavaScript pour partir. Sans lui, ils
-       feraient un GET et enverraient nom, email et message dans l URL. */
-    form[data-contact-form] { display: none; }
-    .noscript-contact { display: block !important; }
+    .ia-video-launch { display:none; }
   </style>
 </noscript>
 </head>
@@ -57,13 +54,13 @@
             <ul class="nav-drop__menu">
               <li><a href="/service-strategie-transformation/">&#9823;&#65039; Strat&eacute;gie &amp; Transformation</a></li>
               <li><a href="/service-ia-business/">&#10024; Entreprise IA</a></li>
-              <li><a href="/service-venture-building/">&#128640; Venture Building</a></li>
             </ul>
           </details>
         </li>
+        <li><a href="/service-venture-building/">Venture Building</a></li>
         <li><a href="/publications/">Publications</a></li>
         <li><a href="/portfolio/">Portfolio</a></li>
-        <li><a class="btn btn--primary btn--sm" href="/contact/">Prendre rendez-vous</a></li>
+        <li><a class="btn btn--primary btn--sm" href="/contact/">Rendez-vous</a></li>
       </ul>
     </nav>
   </div>
@@ -124,11 +121,12 @@
       <div>
         <p class="site-footer__brand">Sourcinno</p>
         <p>Aymard de Scorbiac &mdash; consultant ind&eacute;pendant en Strat&eacute;gie, Organisation &amp; Innovation. Paris, France.</p>
-        <p class="site-footer__cta"><a class="btn btn--primary btn--sm" href="/contact/">Prendre rendez-vous</a></p>
+        <p class="site-footer__cta"><a class="btn btn--primary btn--sm" href="/contact/">Rendez-vous</a></p>
       </div>
       <div>
-        <h2>Services</h2>
+        <h2>Pages</h2>
         <ul>
+          <li><a href="/">Exp&eacute;rience</a></li>
           <li><a href="/service-strategie-transformation/">Strat&eacute;gie &amp; Transformation</a></li>
           <li><a href="/service-ia-business/">Entreprise IA</a></li>
           <li><a href="/service-venture-building/">Venture Building</a></li>
