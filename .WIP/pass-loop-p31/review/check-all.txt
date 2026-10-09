@@ -1,0 +1,16 @@
+  VERSIONS: 40 reference(s) CSS/JS a jour sur 16 page(s)
+  SHELL: header, footer et <noscript> conformes a tools/shell/ sur 10 page(s) ; 6 redirection(s) ignoree(s) : ai-business.html, offre-ia-business/index.html, offre-strategie-organisation-processus/index.html, offre-venture-building/index.html, prototypes/index.html, venture-building.html
+  STRUCTURE: 8 script(s) compile(s); 16 page(s) lue(s), dont 10 avec coquille et 6 redirection(s); 306 lien(s) interne(s) resolu(s)
+  --data: 3 publication(s) valide(s)
+  --data: rendu des publications execute avec champs HTML echappes
+  --forms: formulaire de contact inspecte sur contact/index.html
+  --legal: 16 page(s) inspectee(s), 0 mention(s) a completer
+  --a11y: le conflit de cascade (une regle plus specifique qui repeint un element) n est PAS couvert ici : il se controle a l ecran.
+  --a11y: 13 couple(s) de couleurs verifie(s) (le plus juste : dates du parcours sur fond gris, 4.77:1); 279 lien(s) et 13 bouton(s) inspecte(s)
+  --nojs: 10 page(s) verifiee(s); 1 regle(s) masquant par defaut recensee(s) (.reveal)
+  --tiers: 5 hote(s) externe(s) charge(s) par les pages et leurs scripts : fonts.googleapis.com, fonts.gstatic.com, www.youtube-nocookie.com, cdn.jsdelivr.net, typebot.io
+  --seo: meta et sitemap verifies sur 9 page(s) indexable(s)
+  tools/portfolio.test.mjs: PASS: public-card search, all five facets/unknowns, AND, empty/literal query, reset, submit guard
+  tools/test-ia-embeds.mjs: PASS: click-only loading, inline video, light published bot, blocked SDK retry, no duplicate conversation.
+
+OK — aucun probleme sur 16 page(s).

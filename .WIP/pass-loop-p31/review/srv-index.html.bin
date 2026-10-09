@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conseil en Stratégie, Organisation, Processus et IA | Sourcinno</title>
+<meta name="description" content="Aymard de Scorbiac, consultant indépendant à Paris : stratégie, organisation et processus, IA for Business et Venture Building. De la vision à l’exécution.">
+<link rel="canonical" href="https://www.sourcinno.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Sourcinno">
+<meta property="og:title" content="Conseil en Stratégie, Organisation, Processus et IA | Sourcinno">
+<meta property="og:description" content="Aymard de Scorbiac, consultant indépendant à Paris : stratégie, organisation et processus, IA for Business et Venture Building. De la vision à l’exécution.">
+<meta property="og:url" content="https://www.sourcinno.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.sourcinno.com/pictures/og-sourcinno.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sourcinno — Aymard de Scorbiac, conseil en stratégie, organisation, processus, IA et venture building">
+<link rel="icon" href="/pictures/logo_favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css?v=69bb1ff0">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ProfessionalService",
+ "name": "Sourcinno",
+ "url": "https://www.sourcinno.com/",
+ "image": "https://www.sourcinno.com/pictures/og-sourcinno.png",
+ "description": "Conseil independant en strategie, organisation et processus, IA for Business et venture building.",
+ "email": "aymard.de.scorbiac@sourcinno.com",
+ "telephone": "+33608755877",
+ "areaServed": [
+  "FR",
+  "Europe",
+  "Afrique",
+  "Amerique"
+ ],
+ "address": {
+  "@type": "PostalAddress",
+  "addressLocality": "Paris",
+  "addressCountry": "FR"
+ },
+ "founder": {
+  "@type": "Person",
+  "name": "Aymard de Scorbiac",
+  "jobTitle": "Consultant independant en strategie, organisation et innovation",
+  "sameAs": [
+   "https://www.linkedin.com/in/aymarddescorbiac"
+  ],
+  "alumniOf": {
+   "@type": "CollegeOrUniversity",
+   "name": "emlyon business school"
+  },
+  "knowsLanguage": [
+   "fr",
+   "en"
+  ]
+ },
+ "knowsAbout": [
+  "Strategie",
+  "Organisation",
+  "Processus",
+  "PMO",
+  "Intelligence artificielle",
+  "LLM",
+  "Agentic AI",
+  "NoCode",
+  "Venture building"
+ ],
+ "hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Offres",
+  "itemListElement": [
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Strategie, Organisation & Processus",
+     "url": "https://www.sourcinno.com/service-strategie-transformation/"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "IA for Business",
+     "url": "https://www.sourcinno.com/service-ia-business/"
+    }
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Venture Building & Portfolio",
+     "url": "https://www.sourcinno.com/service-venture-building/"
+    }
+   }
+  ]
+ }
+}
+</script>
+<noscript>
+  <style>
+    /* Sans JavaScript, .is-visible n est jamais pose : sans cette regle,
+       toutes les sections resteraient a opacity 0, donc invisibles. */
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .ia-video-launch { display:none; }
+  </style>
+</noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-logo" href="/" aria-label="Sourcinno, retour a l accueil">
+      <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="342" height="110">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+      <ul class="site-nav__list">
+        <li><a href="/">Exp&eacute;rience</a></li>
+        <li class="nav-drop-host">
+          <details class="nav-drop">
+            <summary>Services</summary>
+            <ul class="nav-drop__menu">
+              <li><a href="/service-strategie-transformation/">Strat&eacute;gie &amp; Transformation</a></li>
+              <li><a href="/service-ia-business/">Entreprise IA</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="/service-venture-building/">Venture Building</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a class="btn btn--primary btn--sm" href="/contact/">Rendez-vous</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<!-- HERO — PRD §5.1 : stratégie abstraite en CSS -->
+<section class="hero hero--animated">
+  <div class="container">
+    <h1>De la Stratégie<br>à la <span>Transformation</span></h1>
+    <p class="hero__sub">Définir <strong>OÙ</strong> aller &rarr; Planifier <strong>COMMENT</strong> &amp; <strong>QUAND</strong> &rarr; Piloter <strong>QUOI</strong> &amp; <strong>QUI</strong>.</p>
+    <p class="hero__actions"><a class="btn btn--primary" href="/contact/">Rendez-vous <span aria-hidden="true">&rarr;</span></a></p>
+  </div>
+</section>
+
+<!-- SECTION 1 — SERVICES ET BESOINS — PRD §5.1 -->
+<section class="section reveal" id="services">
+  <div class="container">
+    <div class="section__head">
+      <h2>Votre enjeu</h2>
+      <p class="lead"><strong>Développer votre croissance profitable et pérenne</strong></p>
+    </div>
+    <div class="grid grid--2">
+
+      <article class="card card--service card--strategie">
+        <h3>STRATÉGIE &amp; TRANSFORMATION</h3>
+        <p>Aligner vision et exécution</p>
+        <ul class="service-needs">
+          <li><strong>Stratégie pérenne</strong><span>marché attractif x offre adaptée</span></li>
+          <li><strong>Transformation réaliste</strong><span>opérations alignées sur la stratégie</span></li>
+        </ul>
+        <p class="card__foot"><a class="btn btn--primary btn--sm" href="/service-strategie-transformation/">En savoir +</a></p>
+      </article>
+
+      <article class="card card--service card--ia">
+        <h3>ENTREPRISE IA</h3>
+        <p>Intégrer l’IA à ses opérations</p>
+        <ul class="service-needs">
+          <li><strong>Transformation réaliste</strong><span>opérations alignées sur la stratégie</span></li>
+          <li><strong>Mise en oeuvre efficace</strong><span>gestion de projet + conduite du changement</span></li>
+        </ul>
+        <p class="card__foot"><a class="btn btn--primary btn--sm" href="/service-ia-business/">En savoir +</a></p>
+      </article>
+
+    </div>
+    <p><a class="link-arrow" href="/service-venture-building/">Venture Building : préparer les marchés d’avenir</a></p>
+  </div>
+</section>
+
+<!-- SECTION 2 — ENTREPRISES ACCOMPAGNÉES — PRD §5.1 : bandeau de logos -->
+<section class="section section--alt reveal" id="references">
+  <div class="container">
+    <div class="section__head text-center mx-auto">
+      <h2>Entreprises accompagnées</h2>
+    </div>
+    <div class="logo-band">
+      <img src="/pictures/logo_accenture_nb.png" alt="Accenture" loading="lazy">
+      <img src="/pictures/logo_mzlab_nb.jpeg" alt="Mazars’ Lab" loading="lazy">
+      <img src="/pictures/logo_nomaban_nb.png" alt="Nomaban" loading="lazy">
+      <img src="/pictures/logo_ibanfirst_nb.png" alt="iBanFirst" loading="lazy">
+      <img src="/pictures/logo_particeep_nb.png" alt="Particeep" loading="lazy">
+      <img src="/pictures/logo_yoopala_nb.png" alt="Yoopala" loading="lazy">
+      <img src="/pictures/logo_parisnco_nb.png" alt="Paris&amp;Co" loading="lazy">
+      <img src="/pictures/logo_ioi_nb.png" alt="Institut Open Innovation" loading="lazy">
+      <img src="/pictures/logo_tydex_nb.png" alt="Tydex" loading="lazy">
+      <img src="/pictures/logo_emlyon_nb.png" alt="EM Lyon" loading="lazy">
+      <img src="/pictures/logo_guidemichelin_nb.png" alt="Guide Michelin" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — +25 ANS D'EXPÉRIENCE — PRD §5.1 : frise verticale + 5 cartes empilées -->
+<section class="section section--alt reveal" id="experience">
+  <div class="container">
+    <div class="section__head">
+      <h2>+25 ans d’expérience</h2>
+      <p class="lead">«&nbsp;L’IA rend l’Expérience du consultant encore plus importante&nbsp;»</p>
+    </div>
+
+    <div class="grid grid--2">
+
+      <ol class="timeline">
+        <li>
+          <span class="timeline__when">1999 &ndash; 2008</span>
+          <span class="timeline__what">Accenture</span>
+          <span class="timeline__text">Missions de conseil en stratégie et en organisation, en France et à l’international.</span>
+        </li>
+        <li>
+          <span class="timeline__when">2008 &ndash; 2013</span>
+          <span class="timeline__what">Mazars</span>
+          <span class="timeline__text">Direction de projets de transformation, avec les processus comme levier principal.</span>
+        </li>
+        <li>
+          <span class="timeline__when">2013 &ndash; 2016</span>
+          <span class="timeline__what">Mazars’ Lab</span>
+          <span class="timeline__text">Création et direction du lab d’innovation, et accélération de startups.</span>
+        </li>
+        <li>
+          <span class="timeline__when">2016 &ndash; 2018</span>
+          <span class="timeline__what">Fabereo</span>
+          <span class="timeline__text">Co-fondateur, avec une levée de fonds de 500 K&euro;.</span>
+        </li>
+        <li>
+          <span class="timeline__when">2019 &ndash; présent</span>
+          <span class="timeline__what">Sourcinno</span>
+          <span class="timeline__text">Conseil indépendant : organisation, processus, IA et prototypage rapide.</span>
+        </li>
+      </ol>
+
+      <div class="experience-panel">
+        <details class="disclosure disclosure--card">
+          <summary>
+            <h3>Complémentarité des RÔLES</h3>
+            <span class="disclosure__subtitle">Conseil, projets, innovation, entrepreneuriat</span>
+          </summary>
+          <ul class="bullets">
+            <li>Consultant : méthodologie, analyse transversale &amp; verticale, références externes, regard extérieur</li>
+            <li>Directeur de projets mondiaux : PMO/Pilotage, opérations, politique</li>
+            <li>Directeur innovation : écosystème, expérimentation, négociation</li>
+            <li>Entrepreneur de startup SaaS (fondateur dirigeant) : pieds sur terre, tête dans les étoiles</li>
+          </ul>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>
+            <h3>Adaptabilité aux INTERLOCUTEURS</h3>
+            <span class="disclosure__subtitle">ComEx, startups, Europe, Afrique du Nord, USA</span>
+          </summary>
+          <ul class="bullets">
+            <li>Comité Exécutif ←→ Stagiaire</li>
+            <li>Corporate, Startup</li>
+            <li>Europe, Afrique du Nord, USA</li>
+          </ul>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>
+            <h3>Inter-dépendance des PROBLÉMATIQUES</h3>
+            <span class="disclosure__subtitle">De la stratégie à la conduite du changement</span>
+          </summary>
+          <ul class="bullets">
+            <li>Stratégie ←→ Organisation ←→ Processus ←→ Compétences ←→ Technologie</li>
+            <li>Gestion de programme/projets</li>
+            <li>Conduite du changement</li>
+          </ul>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>
+            <h3>Connaissance FONCTIONNELLE</h3>
+            <span class="disclosure__subtitle">Stratégie, produit, ventes, achats, RH</span>
+          </summary>
+          <ul class="bullets">
+            <li>Stratégie &amp; Transformation (Marché, M&amp;A, PMI, Productivité)</li>
+            <li>Produit &amp; Innovation (1 startup, 5 prototypes)</li>
+            <li>Ventes B2B (orga. &amp; processus, prospection &gt; appels d’offre &gt; négociation)</li>
+            <li>Partenariats &amp; Achat (orga. &amp; processus, négociation)</li>
+            <li>Ressources Humaines (processus, outil)</li>
+          </ul>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>
+            <h3>Connexion à la TECHNOLOGIE</h3>
+            <span class="disclosure__subtitle">IA, workflows et prototypes SaaS</span>
+          </summary>
+          <ul class="bullets">
+            <li>Intelligence artificielle (Claude Code, GPTs, formation)</li>
+            <li>Workflows (n8n)</li>
+            <li>Portefeuille de prototypes (SaaS)</li>
+          </ul>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — DÉMARCHE — PRD §5.1 : 4 étapes en dépliants (titre + résultat attendu) -->
+<section class="section reveal" id="demarche">
+  <div class="container">
+    <div class="section__head">
+      <h2>Démarche</h2>
+    </div>
+
+    <ol class="chevrons">
+      <li class="chevron">
+        <details class="disclosure disclosure--card">
+          <summary>
+            <h3 class="chevron__title">PÉRIMÈTRE &amp; PRIORITÉ</h3>
+            <span class="disclosure__subtitle">🎯 Enjeux, intervenants internes par livrable, planning détaillé, kick-off</span>
+          </summary>
+          <ul class="bullets">
+            <li><strong>Interviews ComEx</strong> : ❔ pré-questionnaire auto-administré &gt; ✨ pré-synthèse IA &gt; 🔎 analyse manuelle</li>
+          </ul>
+        </details>
+      </li>
+      <li class="chevron">
+        <details class="disclosure disclosure--card">
+          <summary>
+            <h3 class="chevron__title">DIAGNOSTIC</h3>
+            <span class="disclosure__subtitle">🔎 Constats chiffrés, forces et faiblesses par processus, écarts avec le marché</span>
+          </summary>
+          <ul class="bullets">
+            <li><strong>Données internes</strong> : ❔ collecte &gt; ✨ pré-analyse IA &gt; 🔎 analyse manuelle</li>
+            <li><strong>Interview internes</strong> : ❔ pré-questionnaire auto-administré &gt; ✨ pré-synthèse IA</li>
+            <li><strong>Recherches externes</strong> : ✨ pré-recherche IA &gt; 🔎 recherche manuelle &gt; ❔ interviews</li>
+          </ul>
+        </details>
+      </li>
+      <li class="chevron">
+        <details class="disclosure disclosure--card">
+          <summary>
+            <h3 class="chevron__title">RECOMMANDATIONS</h3>
+            <span class="disclosure__subtitle">⚖️ Deux à trois scénarios chiffrés, arbitrage ComEx, décision écrite</span>
+          </summary>
+          <ul class="bullets">
+            <li><strong>Scenarii</strong> : ✨ post-challenging IA</li>
+            <li><strong>Décision</strong></li>
+          </ul>
+        </details>
+      </li>
+      <li class="chevron">
+        <details class="disclosure disclosure--card">
+          <summary>
+            <h3 class="chevron__title">PLANIFICATION &amp; PILOTAGE</h3>
+            <span class="disclosure__subtitle">📅 Feuille de route, tableau de bord, arbitrages hebdo et comité mensuel</span>
+          </summary>
+          <ul class="bullets">
+            <li><strong>Suivi des tâches</strong> : ✨ co-pilotage IA &gt; demandes d’arbitrage urgents continus</li>
+            <li><strong>Tableau de bord</strong> : ✨ pré-génération IA</li>
+          </ul>
+        </details>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section reveal" aria-label="Contact">
+  <div class="container cta-band">
+    <a class="btn btn--primary" href="/contact/">Discutons de votre besoin</a>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">Sourcinno</p>
+        <p>Aymard de Scorbiac &mdash; consultant ind&eacute;pendant en Strat&eacute;gie, Organisation &amp; Innovation. Paris, France.</p>
+        <p class="site-footer__cta"><a class="btn btn--primary btn--sm" href="/contact/">Rendez-vous</a></p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="/">Exp&eacute;rience</a></li>
+          <li><a href="/service-strategie-transformation/">Strat&eacute;gie &amp; Transformation</a></li>
+          <li><a href="/service-ia-business/">Entreprise IA</a></li>
+          <li><a href="/service-venture-building/">Venture Building</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:aymard.de.scorbiac@sourcinno.com">aymard.de.scorbiac@sourcinno.com</a></li>
+          <li><a href="tel:+33608755877">+33 6 08 75 58 77</a></li>
+          <li><a href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.sourcinno.com">www.sourcinno.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; <span data-year>2026</span> Sourcinno SAS &mdash; Paris (France)</p>
+      <p><a href="/mentions-legales/">Mentions l&eacute;gales</a> &middot; <a href="/politique-confidentialite/">Politique de confidentialit&eacute;</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/config.js?v=654769f0" defer></script>
+<script src="/assets/js/site.js?v=4cc968e5" defer></script>
+</body>
+</html>

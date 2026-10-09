@@ -1,0 +1,81 @@
+=== FULL AUDIT BRIEF - pass p31 - review contact 1 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): unknown @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are a FRESH auditor with zero memory of this work. You GRADE it. You do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p31\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: everything this Pass changed: Product repo (rebuild) diff vs pass base b275352: index.html (#references h2; #experience comment, h2, ol.timeline five li, five card h3 emoji removed; ?v= stamp), assets/css/style.css (vertical .timeline replaces .timeline--h/.timeline__tip/860px block; #experience rules incl. one min-width 961px block and --xp-row; deletions of 210px floor and 960/640 #experience lines), ?v= stamps on 15 other pages. Contract: root C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\PLAN.md section 31 (Work 1-2, Done When 1-4) and prompts\pass31-coder.md. Evidence: .WIP/pass-loop-p31/pass-work.md TEST-RESULTS r1, evidence/render.mjs, captures-pre, captures-r2 (ignored, outside seal). Server: 127.0.0.1:4174 serves this tree (4173 died). LOCAL ONLY: no fetch/push/deploy; network localhost only. Reviewer scratch files only under .WIP/pass-loop-p31/review/ or its own session scratchpad, never /tmp.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: b2753525f71b5d667bb1458bb6d50f7b6dea2b3e
+  404.html                                          |   2 +-
+   ai-business.html                                  |   2 +-
+   assets/css/style.css                              | 137 ++++++----------------
+   contact/index.html                                |   2 +-
+   index.html                                        |  60 ++++------
+   mentions-legales/index.html                       |   2 +-
+   offre-ia-business/index.html                      |   2 +-
+   offre-strategie-organisation-processus/index.html |   2 +-
+   offre-venture-building/index.html                 |   2 +-
+   politique-confidentialite/index.html              |   2 +-
+   portfolio/index.html                              |   2 +-
+   prototypes/index.html                             |   2 +-
+   publications/index.html                           |   2 +-
+   service-ia-business/index.html                    |   2 +-
+   service-strategie-transformation/index.html       |   2 +-
+   service-venture-building/index.html               |   2 +-
+   venture-building.html                             |   2 +-
+   17 files changed, 73 insertions(+), 154 deletions(-)
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Use the `code-audit` skill in phase-gate mode. Do not invent or modify audit logic.
+2. Re-run the cheapest decisive check for every claim you rely on.
+3. GREEN only if there is no Tier 1 or Tier 2 finding and every check passes.
+4. Need testing -> MORE_TESTS; append `## TEST-REQUESTS` with every AUTO/MANUAL request.
+5. Findings -> append ONE `## Audit fixes to implement` section to C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p31\pass-work.md.
+
+PRIOR FINDINGS
+  none recorded before this contact.
+
+YOUR ANSWER - the only thing that is read
+Append to C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p31\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "31eee95e",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.

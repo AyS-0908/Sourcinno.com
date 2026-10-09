@@ -1,0 +1,887 @@
+{
+ "mode": "post",
+ "home-1200": {
+  "closed": {
+   "olClass": "timeline",
+   "timeline": {
+    "top": 1780,
+    "bottom": 2406,
+    "left": 36.5,
+    "right": 462.1,
+    "h": 626
+   },
+   "li": [
+    {
+     "top": 1780,
+     "bottom": 1886,
+     "left": 36.5,
+     "right": 462.1,
+     "h": 106
+    },
+    {
+     "top": 1910,
+     "bottom": 2016,
+     "left": 36.5,
+     "right": 462.1,
+     "h": 106
+    },
+    {
+     "top": 2040,
+     "bottom": 2146,
+     "left": 36.5,
+     "right": 462.1,
+     "h": 106
+    },
+    {
+     "top": 2170,
+     "bottom": 2276,
+     "left": 36.5,
+     "right": 462.1,
+     "h": 106
+    },
+    {
+     "top": 2300,
+     "bottom": 2406,
+     "left": 36.5,
+     "right": 462.1,
+     "h": 106
+    }
+   ],
+   "card": [
+    {
+     "top": 1780,
+     "bottom": 1886,
+     "left": 510.1,
+     "right": 1148.5,
+     "h": 106
+    },
+    {
+     "top": 1910,
+     "bottom": 2016,
+     "left": 510.1,
+     "right": 1148.5,
+     "h": 106
+    },
+    {
+     "top": 2040,
+     "bottom": 2146,
+     "left": 510.1,
+     "right": 1148.5,
+     "h": 106
+    },
+    {
+     "top": 2170,
+     "bottom": 2276,
+     "left": 510.1,
+     "right": 1148.5,
+     "h": 106
+    },
+    {
+     "top": 2300,
+     "bottom": 2406,
+     "left": 510.1,
+     "right": 1148.5,
+     "h": 106
+    }
+   ],
+   "openCards": 0,
+   "titles": [
+    "Complémentarité des RÔLES",
+    "Adaptabilité aux INTERLOCUTEURS",
+    "Inter-dépendance des PROBLÉMATIQUES",
+    "Connaissance FONCTIONNELLE",
+    "Connexion à la TECHNOLOGIE"
+   ],
+   "h2": [
+    "Entreprises accompagnées",
+    "+25 ans d’expérience"
+   ],
+   "timelineRightMinusFirstCardLeft": -48,
+   "firstTopDelta": 0,
+   "lastBottomDelta": 0,
+   "timelineBottomMinusFirstCardTop": 626,
+   "focusablesInTimeline": 0,
+   "noOverflow": true
+  },
+  "captureClosed": "post-experience-closed-1200.jpg",
+  "captureClosedPanel": "post-experience-closed-panel-1200.jpg",
+  "sentences": [
+   {
+    "text": "Missions de conseil en stratégie et en o",
+    "w": 394,
+    "h": 42,
+    "inViewport": true,
+    "topmost": true
+   },
+   {
+    "text": "Direction de projets de transformation, ",
+    "w": 394,
+    "h": 42,
+    "inViewport": true,
+    "topmost": true
+   },
+   {
+    "text": "Création et direction du lab d’innovatio",
+    "w": 394,
+    "h": 42,
+    "inViewport": true,
+    "topmost": true
+   },
+   {
+    "text": "Co-fondateur, avec une levée de fonds de",
+    "w": 394,
+    "h": 21,
+    "inViewport": true,
+    "topmost": true
+   },
+   {
+    "text": "Conseil indépendant : organisation, proc",
+    "w": 394,
+    "h": 42,
+    "inViewport": true,
+    "topmost": true
+   }
+  ],
+  "openThird": {
+   "olClass": "timeline",
+   "timeline": {
+    "top": 1780,
+    "bottom": 2406,
+    "left": 36.5,
+    "right": 462.1,
+    "h": 626
+   },
+   "li": [
+    {
+     "top": 1780,
+     "bottom": 1886,
+     "left": 36.5,
+     "right": 462.1,
+     "h": 106
+    },
+    {
+     "top": 1910,
+     "bottom": 2016,
+     "left": 36.5,
+     "right": 462.1,
+     "h": 106
+    },
+    {
+     "top": 2040,
+     "bottom": 2146,
+     "left": 36.5,
+     "right": 462.1,
+     "h": 106
+    },
+    {
+     "top": 2170,
+     "bottom": 2276,
+     "left": 36.5,
+     "right": 462.1,
+     "h": 106
+    },
+    {
+     "top": 2300,
+     "bottom": 2406,
+     "left": 36.5,
+     "right": 462.1,
+     "h": 106
+    }
+   ],
+   "card": [
+    {
+     "top": 1780,
+     "bottom": 1886,
+     "left": 510.1,
+     "right": 1148.5,
+     "h": 106
+    },
+    {
+     "top": 1910,
+     "bottom": 2016,
+     "left": 510.1,
+     "right": 1148.5,
+     "h": 106
+    },
+    {
+     "top": 2040,
+     "bottom": 2287.3,
+     "left": 510.1,
+     "right": 1148.5,
+     "h": 247.4
+    },
+    {
+     "top": 2311.3,
+     "bottom": 2417.3,
+     "left": 510.1,
+     "right": 1148.5,
+     "h": 106
+    },
+    {
+     "top": 2441.3,
+     "bottom": 2547.3,
+     "left": 510.1,
+     "right": 1148.5,
+     "h": 106
+    }
+   ],
+   "openCards": 1,
+   "titles": [
+    "Complémentarité des RÔLES",
+    "Adaptabilité aux INTERLOCUTEURS",
+    "Inter-dépendance des PROBLÉMATIQUES",
+    "Connaissance FONCTIONNELLE",
+    "Connexion à la TECHNOLOGIE"
+   ],
+   "h2": [
+    "Entreprises accompagnées",
+    "+25 ans d’expérience"
+   ],
+   "timelineRightMinusFirstCardLeft": -48,
+   "firstTopDelta": 0,
+   "lastBottomDelta": 141.3,
+   "timelineBottomMinusFirstCardTop": 626,
+   "focusablesInTimeline": 0,
+   "noOverflow": true,
+   "maxLiTopShift": 0
+  },
+  "captureThirdOpen": "post-experience-third-open-1200.jpg",
+  "captureThirdOpenPanel": "post-experience-third-open-panel-1200.jpg",
+  "thirdClosedAgain": {
+   "open": false,
+   "after": "\"+\"",
+   "bodyVisible": false
+  },
+  "noOverflowAllOpen": true,
+  "captureAllOpen": "post-experience-all-open-1200.jpg",
+  "clicks": [
+   {
+    "i": 0,
+    "c1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "c2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 1,
+    "c1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "c2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 2,
+    "c1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "c2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 3,
+    "c1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "c2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 4,
+    "c1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "c2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   }
+  ],
+  "keyboard": [
+   {
+    "i": 0,
+    "reached": true,
+    "focusVisible": true,
+    "capture": "post-focus-card1-1200.jpg",
+    "enter1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "enter2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 1,
+    "reached": true,
+    "focusVisible": true,
+    "enter1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "enter2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 2,
+    "reached": true,
+    "focusVisible": true,
+    "enter1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "enter2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 3,
+    "reached": true,
+    "focusVisible": true,
+    "enter1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "enter2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 4,
+    "reached": true,
+    "focusVisible": true,
+    "enter1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "enter2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   }
+  ],
+  "tabPresses": 37,
+  "activeInTimelineEver": false
+ },
+ "home-375": {
+  "closed": {
+   "olClass": "timeline",
+   "timeline": {
+    "top": 2326.5,
+    "bottom": 2894.4,
+    "left": 24,
+    "right": 351,
+    "h": 568
+   },
+   "li": [
+    {
+     "top": 2326.5,
+     "bottom": 2420.8,
+     "left": 24,
+     "right": 351,
+     "h": 94.4
+    },
+    {
+     "top": 2444.8,
+     "bottom": 2539.2,
+     "left": 24,
+     "right": 351,
+     "h": 94.4
+    },
+    {
+     "top": 2563.2,
+     "bottom": 2657.6,
+     "left": 24,
+     "right": 351,
+     "h": 94.4
+    },
+    {
+     "top": 2681.6,
+     "bottom": 2776,
+     "left": 24,
+     "right": 351,
+     "h": 94.4
+    },
+    {
+     "top": 2800,
+     "bottom": 2894.4,
+     "left": 24,
+     "right": 351,
+     "h": 94.4
+    }
+   ],
+   "card": [
+    {
+     "top": 2926.4,
+     "bottom": 3040.4,
+     "left": 24,
+     "right": 351,
+     "h": 114
+    },
+    {
+     "top": 3064.4,
+     "bottom": 3201.1,
+     "left": 24,
+     "right": 351,
+     "h": 136.7
+    },
+    {
+     "top": 3225.1,
+     "bottom": 3361.8,
+     "left": 24,
+     "right": 351,
+     "h": 136.7
+    },
+    {
+     "top": 3385.8,
+     "bottom": 3522.6,
+     "left": 24,
+     "right": 351,
+     "h": 136.7
+    },
+    {
+     "top": 3546.6,
+     "bottom": 3636.6,
+     "left": 24,
+     "right": 351,
+     "h": 90
+    }
+   ],
+   "openCards": 0,
+   "titles": [
+    "Complémentarité des RÔLES",
+    "Adaptabilité aux INTERLOCUTEURS",
+    "Inter-dépendance des PROBLÉMATIQUES",
+    "Connaissance FONCTIONNELLE",
+    "Connexion à la TECHNOLOGIE"
+   ],
+   "h2": [
+    "Entreprises accompagnées",
+    "+25 ans d’expérience"
+   ],
+   "timelineRightMinusFirstCardLeft": 327,
+   "firstTopDelta": 599.9,
+   "lastBottomDelta": 742.2,
+   "timelineBottomMinusFirstCardTop": -32,
+   "focusablesInTimeline": 0,
+   "noOverflow": true
+  },
+  "captureClosed": "post-experience-closed-375.jpg",
+  "sentences": [
+   {
+    "text": "Missions de conseil en stratégie et en o",
+    "w": 295,
+    "h": 42,
+    "inViewport": true,
+    "topmost": true
+   },
+   {
+    "text": "Direction de projets de transformation, ",
+    "w": 295,
+    "h": 42,
+    "inViewport": true,
+    "topmost": true
+   },
+   {
+    "text": "Création et direction du lab d’innovatio",
+    "w": 295,
+    "h": 42,
+    "inViewport": true,
+    "topmost": true
+   },
+   {
+    "text": "Co-fondateur, avec une levée de fonds de",
+    "w": 295,
+    "h": 42,
+    "inViewport": true,
+    "topmost": true
+   },
+   {
+    "text": "Conseil indépendant : organisation, proc",
+    "w": 295,
+    "h": 42,
+    "inViewport": true,
+    "topmost": true
+   }
+  ],
+  "openThird": {
+   "olClass": "timeline",
+   "timeline": {
+    "top": 2326.5,
+    "bottom": 2894.4,
+    "left": 24,
+    "right": 351,
+    "h": 568
+   },
+   "li": [
+    {
+     "top": 2326.5,
+     "bottom": 2420.8,
+     "left": 24,
+     "right": 351,
+     "h": 94.4
+    },
+    {
+     "top": 2444.8,
+     "bottom": 2539.2,
+     "left": 24,
+     "right": 351,
+     "h": 94.4
+    },
+    {
+     "top": 2563.2,
+     "bottom": 2657.6,
+     "left": 24,
+     "right": 351,
+     "h": 94.4
+    },
+    {
+     "top": 2681.6,
+     "bottom": 2776,
+     "left": 24,
+     "right": 351,
+     "h": 94.4
+    },
+    {
+     "top": 2800,
+     "bottom": 2894.4,
+     "left": 24,
+     "right": 351,
+     "h": 94.4
+    }
+   ],
+   "card": [
+    {
+     "top": 2926.4,
+     "bottom": 3040.4,
+     "left": 24,
+     "right": 351,
+     "h": 114
+    },
+    {
+     "top": 3064.4,
+     "bottom": 3201.1,
+     "left": 24,
+     "right": 351,
+     "h": 136.7
+    },
+    {
+     "top": 3225.1,
+     "bottom": 3540.8,
+     "left": 24,
+     "right": 351,
+     "h": 315.7
+    },
+    {
+     "top": 3564.8,
+     "bottom": 3701.5,
+     "left": 24,
+     "right": 351,
+     "h": 136.7
+    },
+    {
+     "top": 3725.5,
+     "bottom": 3815.5,
+     "left": 24,
+     "right": 351,
+     "h": 90
+    }
+   ],
+   "openCards": 1,
+   "titles": [
+    "Complémentarité des RÔLES",
+    "Adaptabilité aux INTERLOCUTEURS",
+    "Inter-dépendance des PROBLÉMATIQUES",
+    "Connaissance FONCTIONNELLE",
+    "Connexion à la TECHNOLOGIE"
+   ],
+   "h2": [
+    "Entreprises accompagnées",
+    "+25 ans d’expérience"
+   ],
+   "timelineRightMinusFirstCardLeft": 327,
+   "firstTopDelta": 599.9,
+   "lastBottomDelta": 921.1,
+   "timelineBottomMinusFirstCardTop": -32,
+   "focusablesInTimeline": 0,
+   "noOverflow": true,
+   "maxLiTopShift": 0
+  },
+  "captureThirdOpen": "post-experience-third-open-375.jpg",
+  "thirdClosedAgain": {
+   "open": false,
+   "after": "\"+\"",
+   "bodyVisible": false
+  },
+  "noOverflowAllOpen": true,
+  "captureAllOpen": "post-experience-all-open-375.jpg",
+  "clicks": [
+   {
+    "i": 0,
+    "c1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "c2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 1,
+    "c1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "c2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 2,
+    "c1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "c2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 3,
+    "c1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "c2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 4,
+    "c1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "c2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   }
+  ],
+  "keyboard": [
+   {
+    "i": 0,
+    "reached": true,
+    "focusVisible": true,
+    "capture": "post-focus-card1-375.jpg",
+    "enter1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "enter2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 1,
+    "reached": true,
+    "focusVisible": true,
+    "enter1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "enter2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 2,
+    "reached": true,
+    "focusVisible": true,
+    "enter1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "enter2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 3,
+    "reached": true,
+    "focusVisible": true,
+    "enter1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "enter2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   },
+   {
+    "i": 4,
+    "reached": true,
+    "focusVisible": true,
+    "enter1": {
+     "open": true,
+     "after": "\"−\"",
+     "bodyVisible": true
+    },
+    "enter2": {
+     "open": false,
+     "after": "\"+\"",
+     "bodyVisible": false
+    },
+    "pass": true
+   }
+  ],
+  "tabPresses": 32,
+  "activeInTimelineEver": false
+ },
+ "extraWidths": {
+  "961": {
+   "firstTopDelta": 0,
+   "lastBottomDelta": 0,
+   "timelineRightMinusFirstCardLeft": -48,
+   "liH": [
+    106,
+    106,
+    106,
+    106,
+    106
+   ],
+   "cardH": [
+    106,
+    106,
+    106,
+    106,
+    106
+   ],
+   "noOverflow": true
+  },
+  "1024": {
+   "firstTopDelta": 0,
+   "lastBottomDelta": 0,
+   "timelineRightMinusFirstCardLeft": -48,
+   "liH": [
+    106,
+    106,
+    106,
+    106,
+    106
+   ],
+   "cardH": [
+    106,
+    106,
+    106,
+    106,
+    106
+   ],
+   "noOverflow": true
+  },
+  "1440": {
+   "firstTopDelta": 0,
+   "lastBottomDelta": 0,
+   "timelineRightMinusFirstCardLeft": -48,
+   "liH": [
+    106,
+    106,
+    106,
+    106,
+    106
+   ],
+   "cardH": [
+    106,
+    106,
+    106,
+    106,
+    106
+   ],
+   "noOverflow": true
+  }
+ }
+}
