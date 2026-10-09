@@ -1,0 +1,123 @@
+=== DELTA CONFIRMATION BRIEF - pass p39 - review contact 2 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): unknown @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are the SAME independent auditor who requested the newest fixes. Confirm only that delta. Do not restart the audit and do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p39\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: ONLY the delta since the last audit: DELTA for A-001 only: tools/check.mjs new helper live() (strips HTML comments) now used by classTokens, styleBlocks (census and --nojs page <style> scan) and the site.js script-tag test in checkNoJs. Re-run the A-001 tests (o1 -> --nojs 1, o10 -> check 0, real tree --all 0) and the affected Done When 2 mutations (btn--nowhere, page <style> .reveal, site.js removed). Same scratchpad/no-network rules as contact 1.. The earlier round already cleared the rest - do not re-audit it and do not re-run its checks.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 2a049235d1089b563371392f3fdb04c2dc67ab1c
+  tools/check.mjs   | 119 +++++++++++++++++++++++++++++++++++++++---------------
+   tools/shell.mjs   |   7 ++--
+   tools/version.mjs |   2 +-
+   3 files changed, 92 insertions(+), 36 deletions(-)
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Do NOT rerun `code-audit`; its valid earlier verdict already cleared the rest.
+2. Inspect only the newest fix section below and the files named under SCOPE.
+3. Re-run each decisive check named by that fix. GREEN only if the requested fix is complete, every check passes, and the delta introduced no Tier 1 or Tier 2 issue.
+4. If it still needs work, append ONE new `## Audit fixes to implement` section to .WIP\pass-loop-p39\pass-work.md.
+
+PRIOR FINDINGS
+Confirm the requested fixes and their affected behavior:
+## Audit fixes to implement — 2026-10-09
+BLOCKING_STATUS: NON_BLOCKING
+READINESS: READY_WITH_FIXES
+REASON: Done When 1-5 all reproduce on fresh scratch copies, but the new site.js and census rules read HTML comments as live markup: a commented-out site.js tag stays green (false PASS) and a commented-out class fails (false FAIL).
+NATIVE CHECKS: `node tools/check.mjs --all` PASS — 16 pages, census 132 classes, 1 exception nav-drop-host · `node tools/version.mjs --check` PASS · `node tools/shell.mjs --check` PASS · `git diff --check` PASS · `git diff --stat 2a04923` PASS — 3 tools only, 90+/36- · Done When 2-5 mutation list on scratch copies (git -c core.autocrlf=false archive 2a04923 + 3 working-tree tools) PASS — m1 btn--nowhere `--all` 1, m2 aria-hidden `--forms --nojs` 1, m3 page `<style>` `.reveal { opacity: 0 }` `--nojs` 1, m4 site.js tag deleted `--nojs` 1, unmodified copy 0 on each command; m5 BOM footer: stamp then `--check` 0, 16/16 pages `cmp`-identical; m6 `.WIP/x.html` + `.WIP/x.js` `--all` 0 with 16 pages, version/shell `--check` 0; m7 hanging portfolio test `--all` 1 after 31 s naming the file (once); m8 `process.exit(3)` version → exit 1 « versions: tools/version.mjs --check sortie 3 sans message ». Same mutations on the pre-Pass tools: m1-m4 exit 0, m5 `--check` 1 (mutations discriminate).
+SCOPE: CLEAN — `runNode`/`failFromTool` and the stale-exception check are necessary side work for Work 2 and the Planner allow-list decision.
+
+### A-001 | Tier 2 | LOW | `tools/check.mjs:96` `tools/check.mjs:581`
+- issue: own mutation o1 — on `mentions-legales/index.html` (a `.reveal` page) the site.js tag wrapped as `<!-- <script src="/assets/js/site.js?v=c0f148db" defer></script> -->` keeps `node tools/check.mjs --all` at exit 0 although the page no longer loads site.js (the P38 T3-3 rule is fooled); own mutation o10 — `<!-- <p class="zz-commented">old</p> -->` after `<main id="main">` makes `node tools/check.mjs` exit 1 on a class nothing renders.
+- fix: strip `<!--[\s\S]*?-->` from the page HTML before `classTokens` (census usages and the `.reveal` detection) and before the site.js script-tag test.
+- test: o1 copy → `node tools/check.mjs --nojs` exit 1 naming `mentions-legales/index.html`; o10 copy → `node tools/check.mjs` exit 0; real tree `node tools/check.mjs --all` exit 0.
+
+**Reviewer notes (Tier 3, non-blocking — route at closure, no fix required):**
+- Known deviation accepted: `nav-drop-host` is a dead class (no CSS rule or script ever read it; `git log -S` confirms), so naming it with `tools/shell/header.html` is the only way to keep Done When 1 (no page changes); route its deletion (partial + restamp + drop the `SANS_REGLE` entry, which the stale check then forces) to a page-touching Pass. Stale check verified: o8 (class removed from the partial, pages restamped) → exit 1 « exception … perimee ».
+- Census reads only double-quoted `class="…"` (o2: `class='btn--nowhere'` → `--all` exit 0); 0 single-quoted class attributes in pages or generators today.
+- An allow-listed class that later gains a CSS rule is not reported stale and the note still says « sans regle » (o13: `.nav-drop-host {}` added → exit 0).
+- `check.mjs:51` says `.WIP` is « jamais servis »: true today (`.WIP` absent from main/origin/main) but `.WIP` evidence is tracked on `rebuild` and ARCHITECTURE gives the Coolify publish root as `/`; add a Release acceptance line to exclude `.WIP` from the published tree or prove nginx refuses `/.WIP/`.
+- AGENTS Gotcha « anywhere else in the product tree a scratch .html is still a site page » overstates slightly: `tools/`, `.github`, `node_modules` are skipped too.
+- Pre-existing, fail-safe: uppercase `HIDDEN` on the form → `--forms --nojs` exit 1 (o12). `timedOut` treats any kill signal as the 30 s timeout (message only).
+- Root PLAN § 39 already reads « Status Done » with `Evidence: PROGRESS.md Last Verification (Pass 39)`, a section PROGRESS does not have yet; both are only true after closure.
+- Own probes that behaved correctly: o3 class ruled only in `assets/css/_v2/` → exit 1; o4 class ruled only inside `@media` (after restamp) → exit 0; o5 `hidden=""` → exit 0; o6 `.reveal` hidden inside `@media` in a page `<style>` → exit 1; o11 `defer` before `src` → exit 0. Timeout margin: both tests ~150 ms vs 30 s.
+
+```json
+{
+  "token": "fa37c5b0",
+  "verdict": "FIX",
+  "confidence": "medium",
+  "evidence": [
+    {"cmd": "node tools/check.mjs --all (product tree, exit 0, 16 pages)", "result": "PASS"},
+    {"cmd": "node tools/version.mjs --check; node tools/shell.mjs --check; git diff --check (product tree, all exit 0)", "result": "PASS"},
+    {"cmd": "git diff --stat 2a04923 (tools/check.mjs, tools/version.mjs, tools/shell.mjs only)", "result": "PASS"},
+    {"cmd": "m1 class=btn--nowhere on mentions-legales: node tools/check.mjs --all exit 1; unmodified copy exit 0", "result": "PASS"},
+    {"cmd": "m2 form hidden -> aria-hidden=true: node tools/check.mjs --forms --nojs exit 1; unmodified copy exit 0", "result": "PASS"},
+    {"cmd": "m3 page style .reveal { opacity: 0 }: node tools/check.mjs --nojs exit 1; unmodified copy exit 0", "result": "PASS"},
+    {"cmd": "m4 site.js script tag deleted on mentions-legales: node tools/check.mjs --nojs exit 1", "result": "PASS"},
+    {"cmd": "m5 footer.html with UTF-8 BOM: node tools/shell.mjs; node tools/shell.mjs --check exit 0; cmp 16/16 pages identical", "result": "PASS"},
+    {"cmd": "m6 .WIP/x.html broken link + .WIP/x.js undeclared host: node tools/check.mjs --all exit 0 16 pages; version and shell --check exit 0", "result": "PASS"},
+    {"cmd": "m7 portfolio.test.mjs = setInterval: node tools/check.mjs --all exit 1 after 31 s naming tools/portfolio.test.mjs", "result": "PASS"},
+    {"cmd": "m8 version.mjs = process.exit(3): node tools/check.mjs exit 1 with versions failure line", "result": "PASS"},
+    {"cmd": "o1 site.js tag inside an HTML comment on mentions-legales: node tools/check.mjs --all exit 0 (expected 1)", "result": "FAIL"},
+    {"cmd": "o10 class zz-commented only inside an HTML comment: node tools/check.mjs exit 1 (expected 0)", "result": "FAIL"},
+    {"cmd": "o3 class ruled only in assets/css/_v2/old.css: node tools/check.mjs --all exit 1", "result": "PASS"},
+    {"cmd": "o8 nav-drop-host removed from tools/shell/header.html then node tools/shell.mjs: node tools/check.mjs exit 1 stale exception", "result": "PASS"}
+  ],
+  "opened_fix_section": true
+}
+```
+
+AUDIT r1 COST: 172,642 tokens, 10 min 44 s, FIX (A-001 Tier 2 LOW). INVOCATION: pass-auditor subagent (task notification). USAGE BASIS: whole-contact, from the Agent completion notice.
+
+## TEST-RESULTS r2
+TREE: fce515b2700d9517
+CMD: `node tools/check.mjs --all` 0 (16 pages); `node tools/check.mjs --forms --a11y --nojs --tiers --seo` 0; `node tools/version.mjs --check` 0; `node tools/shell.mjs --check` 0; `git diff --check` 0; `git diff --stat 2a04923` = 3 tools, +92/−36.
+CMD: `bash <scratchpad>/p39/mutations.sh nohang` after the fix (last edit)
+RESULT: PASS — 31/31 ledger lines PASS (r1 said 30/30: miscount, it was 27/27 + m7; m7 hang unchanged path, not re-run).
+NOTES: A-001 fix = helper `live()` strips `<!-- -->` before `classTokens`, `styleBlocks` and the site.js tag test. Fix ledger: f1 (reviewer o1) site.js tag commented out on mentions-legales -> --nojs 1 naming the page; f2 (o10) class only in an HTML comment -> check 0; f3 own: class whose only rule is in a commented-out `<style>` -> 1; f4 own: commented-out `<style>.reveal { opacity: 0 }` -> --nojs 0. All 27 earlier lines still PASS.
+
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p39\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "e18ed465",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.
