@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p29",
+  "state": "done",
+  "scope": "Product rebuild vs base 2ce1b23 (uncommitted): index.html (hero, #services, new cta-band after #demarche), assets/css/style.css (shadow tokens, btn/card/footer hovers, reduced-motion block, card--venture rule removed, #services .grid + p spacing), tools/shell/header.html + 10 stamped shell pages (header only), portfolio/index.html (btn--outline -> btn--secondary), ?v= stamps on 16 pages. Contract: root PLAN.md section 29 (Goal, Work 1-4, Done When 1-6) and prompts/pass29-coder.md (C:\\Users\\aymar\\AYS_CODING\\code-SOURCINNO_WWW). LOCAL ONLY: no fetch, push, deploy; network localhost and Google Fonts only. Rendered checks: headless Chrome per AGENTS Gotchas; server 127.0.0.1:4173 serves this tree; headless Chrome here defaults to prefers-reduced-motion reduce, emulate no-preference for hover probes. Root docs outside the seal: PLAN.md section 29 status + pointer, AGENTS.md one Gotcha line.",
+  "audit_launches": 1,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 0,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    },
+    "auditor": {
+      "model": "unknown",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 1,
+  "results_blocks": 1,
+  "pass_base": "2ce1b23196d037eeeecdf9b34410663af87c2b1d",
+  "seal_paths": "",
+  "brief_fingerprint": "0de4580992e9a6a2",
+  "green_fingerprint": "0de4580992e9a6a2",
+  "briefed_at": "2026-10-09T14:18:28",
+  "cap_extensions": [],
+  "state_dir": ".WIP/pass-loop-p29",
+  "updated": "2026-10-09"
+}

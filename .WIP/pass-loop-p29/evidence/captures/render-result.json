@@ -1,0 +1,311 @@
+{
+ "home-1200": {
+  "innerWidth": 1200,
+  "scrollWidth": 1185,
+  "noOverflow": true,
+  "h1": {
+   "text": "De la Stratégieà la Transformation",
+   "lineTops": [
+    168,
+    231
+   ],
+   "lineCount": 2,
+   "height": 126,
+   "lineHeight": "63px",
+   "fontSize": "60px",
+   "maxWidth": "560px",
+   "spanText": "Transformation",
+   "spanColor": "rgb(159, 227, 224)",
+   "eyebrow": false
+  },
+  "servicesH2": "Votre enjeu",
+  "leadBold": true,
+  "gridClass": "grid grid--2",
+  "cards": [
+   {
+    "title": "STRATÉGIE & TRANSFORMATION",
+    "top": 806,
+    "left": 37,
+    "right": 581,
+    "bottom": 1254,
+    "h": 448,
+    "w": 544
+   },
+   {
+    "title": "ENTREPRISE IA",
+    "top": 806,
+    "left": 605,
+    "right": 1149,
+    "bottom": 1254,
+    "h": 448,
+    "w": 544
+   }
+  ],
+  "sideBySide": true,
+  "equalHeights": true,
+  "stacked": false,
+  "captureHero": "home-hero-1200.jpg",
+  "captureServices": "home-services-1200.jpg",
+  "linkLine": {
+   "sel": "#services .container > p > a",
+   "found": true,
+   "text": "Venture Building : préparer les marchés d’avenir",
+   "sectionOpacity": "1",
+   "sectionRevealed": true,
+   "rect": {
+    "top": 436,
+    "bottom": 463,
+    "left": 37,
+    "right": 424,
+    "w": 387,
+    "h": 27
+   },
+   "insideViewport": true,
+   "topmost": true
+  },
+  "linkLineHref": "/service-venture-building/",
+  "linkLineGapBelowGrid": 24,
+  "captureLinkLine": "home-linkline-1200.jpg",
+  "ctaBand": {
+   "sel": "main > section[aria-label=\"Contact\"] .cta-band .btn",
+   "found": true,
+   "text": "Discutons de votre besoin",
+   "sectionOpacity": "1",
+   "sectionRevealed": true,
+   "rect": {
+    "top": 422,
+    "bottom": 477,
+    "left": 471,
+    "right": 714,
+    "w": 243,
+    "h": 55
+   },
+   "insideViewport": true,
+   "topmost": true
+  },
+  "ctaAfterDemarche": true,
+  "captureCta": "home-cta-1200.jpg",
+  "noOverflowAfterScroll": true,
+  "hoverServiceCard": {
+   "selector": "#services .card--service",
+   "found": true,
+   "rest": {
+    "transform": "none",
+    "box-shadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px"
+   },
+   "hovered": {
+    "transform": "none",
+    "box-shadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px"
+   }
+  },
+  "hoverHeaderBtn": {
+   "selector": ".site-header .btn--primary",
+   "found": true,
+   "rest": {
+    "transform": "none",
+    "background-color": "rgb(36, 122, 120)"
+   },
+   "hovered": {
+    "transform": "none",
+    "background-color": "rgb(31, 99, 96)"
+   }
+  },
+  "hoverFooterCta": {
+   "selector": ".site-footer__cta .btn",
+   "found": true,
+   "rest": {
+    "color": "rgba(255, 255, 255, 0.78)",
+    "transform": "none"
+   },
+   "hovered": {
+    "color": "rgba(255, 255, 255, 0.78)",
+    "transform": "none"
+   }
+  },
+  "hoverFooterLink": {
+   "selector": ".site-footer ul a",
+   "found": true,
+   "rest": {
+    "color": "rgba(255, 255, 255, 0.78)"
+   },
+   "hovered": {
+    "color": "rgb(127, 214, 211)"
+   }
+  },
+  "footerCtaColourUnchanged": true,
+  "dropdown": {
+   "boxShadow": "rgba(0, 0, 0, 0.16) 0px 20px 44px 0px",
+   "visible": true,
+   "items": [
+    "Stratégie & Transformation",
+    "Entreprise IA"
+   ]
+  },
+  "captureDropdown": "home-dropdown-1200.jpg"
+ },
+ "home-375": {
+  "innerWidth": 375,
+  "scrollWidth": 375,
+  "noOverflow": true,
+  "h1": {
+   "text": "De la Stratégieà la Transformation",
+   "lineTops": [
+    126,
+    165,
+    205
+   ],
+   "lineCount": 3,
+   "height": 118,
+   "lineHeight": "39.48px",
+   "fontSize": "37.6px",
+   "maxWidth": "364px",
+   "spanText": "Transformation",
+   "spanColor": "rgb(159, 227, 224)",
+   "eyebrow": false
+  },
+  "servicesH2": "Votre enjeu",
+  "leadBold": true,
+  "gridClass": "grid grid--2",
+  "cards": [
+   {
+    "title": "STRATÉGIE & TRANSFORMATION",
+    "top": 696,
+    "left": 24,
+    "right": 351,
+    "bottom": 1136,
+    "h": 441,
+    "w": 327
+   },
+   {
+    "title": "ENTREPRISE IA",
+    "top": 1160,
+    "left": 24,
+    "right": 351,
+    "bottom": 1602,
+    "h": 442,
+    "w": 327
+   }
+  ],
+  "sideBySide": false,
+  "equalHeights": false,
+  "stacked": true,
+  "captureHero": "home-hero-375.jpg",
+  "captureServices": "home-services-375.jpg",
+  "linkLine": {
+   "sel": "#services .container > p > a",
+   "found": true,
+   "text": "Venture Building : préparer les marchés d’avenir",
+   "sectionOpacity": "1",
+   "sectionRevealed": true,
+   "rect": {
+    "top": 379,
+    "bottom": 434,
+    "left": 24,
+    "right": 351,
+    "w": 327,
+    "h": 54
+   },
+   "insideViewport": true,
+   "topmost": true
+  },
+  "linkLineHref": "/service-venture-building/",
+  "linkLineGapBelowGrid": 24,
+  "captureLinkLine": "home-linkline-375.jpg",
+  "ctaBand": {
+   "sel": "main > section[aria-label=\"Contact\"] .cta-band .btn",
+   "found": true,
+   "text": "Discutons de votre besoin",
+   "sectionOpacity": "1",
+   "sectionRevealed": true,
+   "rect": {
+    "top": 378,
+    "bottom": 434,
+    "left": 66,
+    "right": 309,
+    "w": 243,
+    "h": 55
+   },
+   "insideViewport": true,
+   "topmost": true
+  },
+  "ctaAfterDemarche": true,
+  "captureCta": "home-cta-375.jpg",
+  "noOverflowAfterScroll": true,
+  "mobileMenu": {
+   "boxShadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px",
+   "opacity": "1",
+   "visibility": "visible",
+   "items": [
+    "Expérience",
+    "Services",
+    "Venture Building",
+    "Publications",
+    "Portfolio",
+    "Rendez-vous"
+   ]
+  },
+  "captureMenu": "home-menu-375.jpg"
+ },
+ "ia-1200": {
+  "hoverCareer": {
+   "selector": ".card.service-career",
+   "found": true,
+   "rest": {
+    "transform": "none",
+    "box-shadow": "none",
+    "border-color": "rgb(230, 237, 243)"
+   },
+   "hovered": {
+    "transform": "none",
+    "box-shadow": "none",
+    "border-color": "rgba(49, 151, 149, 0.4)"
+   }
+  },
+  "hoverPhase": {
+   "selector": ".card.service-phase",
+   "found": true,
+   "rest": {
+    "transform": "none"
+   },
+   "hovered": {
+    "transform": "none"
+   }
+  }
+ },
+ "publications-1200": {
+  "hoverProfile": {
+   "selector": ".card.publication-profile",
+   "found": true,
+   "rest": {
+    "transform": "none",
+    "box-shadow": "rgba(0, 0, 0, 0.07) 0px 2px 8px 0px",
+    "border-color": "rgb(230, 237, 243)"
+   },
+   "hovered": {
+    "transform": "none",
+    "box-shadow": "rgba(0, 0, 0, 0.07) 0px 2px 8px 0px",
+    "border-color": "rgba(49, 151, 149, 0.4)"
+   }
+  }
+ },
+ "portfolio-1200": {
+  "className": "btn btn--secondary",
+  "borderTopWidth": "2px",
+  "borderTopStyle": "solid",
+  "borderColor": "rgb(26, 54, 93)",
+  "color": "rgb(26, 54, 93)"
+ },
+ "home-1200-reduced-motion": {
+  "matches": true,
+  "hoverServiceCard": {
+   "selector": "#services .card--service",
+   "found": true,
+   "rest": {
+    "transform": "none"
+   },
+   "hovered": {
+    "transform": "none"
+   }
+  }
+ }
+}
