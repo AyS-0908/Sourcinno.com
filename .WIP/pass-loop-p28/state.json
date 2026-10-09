@@ -1,0 +1,35 @@
+{
+  "unit_label": "pass",
+  "unit": "p28",
+  "state": "done",
+  "scope": "Product repo (current sourcinno site- code, branch rebuild, base ee37a68, uncommitted): NEW tools/shell.mjs, tools/shell/header.html, tools/shell/footer.html, tools/shell/noscript.html; tools/check.mjs (STRUCTURE item 2 noscript identity, item 7 shell.mjs --check); 10 shell pages 404.html, index.html (+ hero button line), contact/, mentions-legales/, politique-confidentialite/, portfolio/, publications/, service-ia-business/, service-strategie-transformation/, service-venture-building/ (header/footer/head-noscript regions only). Contract: root ../PLAN.md section '## 28.' Done When 1-6 and '### A-006' of 'Audit fixes to implement \u2014 2026-10-09'; decisions D3/D5 in '## V1.1'; PRD.md section 2 menu/footer lines. Root docs changed (outside the product seal): ../PLAN.md section 28 status + pointer, ../AGENTS.md Commands + Gotchas. Evidence helpers (ignored, not deliverables): .WIP/pass-loop-p28/evidence/render.mjs (headless Chrome, server 127.0.0.1:4173), mutate.mjs (mutation ledger on copies, args <product> <scratch-dir>), probe.mjs. LOCAL ONLY: no fetch/push/deploy; localhost and Google Fonts only. Do not edit product or root files.",
+  "audit_launches": 1,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 0,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 1,
+  "results_blocks": 1,
+  "pass_base": "ee37a688edf680acc102a15c6500a425a2680f3d",
+  "seal_paths": "",
+  "brief_fingerprint": "7068ab07a9c2ce82",
+  "green_fingerprint": "7068ab07a9c2ce82",
+  "briefed_at": "2026-10-09T13:46:21",
+  "cap_extensions": [],
+  "state_dir": "C:\\Users\\aymar\\AYS_CODING\\code-SOURCINNO_WWW\\current sourcinno site- code\\.WIP\\pass-loop-p28",
+  "updated": "2026-10-09"
+}

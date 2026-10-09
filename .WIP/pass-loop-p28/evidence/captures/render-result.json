@@ -1,0 +1,527 @@
+{
+ "home-1200": {
+  "innerWidth": 1200,
+  "raf": true,
+  "scrollWidth": 1185,
+  "noOverflow": true,
+  "toggleDisplay": "none",
+  "headerHeight": 77,
+  "logoRight": 161,
+  "items": [
+   {
+    "text": "Expérience",
+    "left": 502,
+    "right": 578,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Services",
+    "left": 602,
+    "right": 672,
+    "top": 19,
+    "h": 37,
+    "offsetTop": 19,
+    "visible": true
+   },
+   {
+    "text": "Venture Building",
+    "left": 696,
+    "right": 806,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Publications",
+    "left": 830,
+    "right": 913,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Portfolio",
+    "left": 937,
+    "right": 993,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Rendez-vous",
+    "left": 1017,
+    "right": 1149,
+    "top": 16,
+    "h": 45,
+    "offsetTop": 16,
+    "visible": true
+   }
+  ],
+  "gapLastToButton": 24,
+  "lastRightLtButtonLeft": true,
+  "offsetTops": [
+   24,
+   19,
+   24,
+   24,
+   24,
+   16
+  ],
+  "centres": [
+   38,
+   37.5,
+   38,
+   38,
+   38,
+   38.5
+  ],
+  "oneRow": true,
+  "buttonInside": true,
+  "logoClear": true,
+  "textWraps": [],
+  "capture": "header-home-1200.jpg"
+ },
+ "home-1000": {
+  "innerWidth": 1000,
+  "raf": true,
+  "scrollWidth": 985,
+  "noOverflow": true,
+  "toggleDisplay": "none",
+  "headerHeight": 77,
+  "logoRight": 148,
+  "items": [
+   {
+    "text": "Expérience",
+    "left": 315,
+    "right": 391,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Services",
+    "left": 415,
+    "right": 485,
+    "top": 19,
+    "h": 37,
+    "offsetTop": 19,
+    "visible": true
+   },
+   {
+    "text": "Venture Building",
+    "left": 509,
+    "right": 619,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Publications",
+    "left": 643,
+    "right": 726,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Portfolio",
+    "left": 750,
+    "right": 806,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Rendez-vous",
+    "left": 830,
+    "right": 961,
+    "top": 16,
+    "h": 45,
+    "offsetTop": 16,
+    "visible": true
+   }
+  ],
+  "gapLastToButton": 24,
+  "lastRightLtButtonLeft": true,
+  "offsetTops": [
+   24,
+   19,
+   24,
+   24,
+   24,
+   16
+  ],
+  "centres": [
+   38,
+   37.5,
+   38,
+   38,
+   38,
+   38.5
+  ],
+  "oneRow": true,
+  "buttonInside": true,
+  "logoClear": true,
+  "textWraps": [],
+  "capture": "header-home-1000.jpg"
+ },
+ "home-900": {
+  "innerWidth": 900,
+  "raf": true,
+  "scrollWidth": 885,
+  "noOverflow": true,
+  "toggleDisplay": "none",
+  "headerHeight": 77,
+  "logoRight": 148,
+  "items": [
+   {
+    "text": "Expérience",
+    "left": 215,
+    "right": 291,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Services",
+    "left": 315,
+    "right": 385,
+    "top": 19,
+    "h": 37,
+    "offsetTop": 19,
+    "visible": true
+   },
+   {
+    "text": "Venture Building",
+    "left": 409,
+    "right": 519,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Publications",
+    "left": 543,
+    "right": 626,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Portfolio",
+    "left": 650,
+    "right": 706,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Rendez-vous",
+    "left": 730,
+    "right": 861,
+    "top": 16,
+    "h": 45,
+    "offsetTop": 16,
+    "visible": true
+   }
+  ],
+  "gapLastToButton": 24,
+  "lastRightLtButtonLeft": true,
+  "offsetTops": [
+   24,
+   19,
+   24,
+   24,
+   24,
+   16
+  ],
+  "centres": [
+   38,
+   37.5,
+   38,
+   38,
+   38,
+   38.5
+  ],
+  "oneRow": true,
+  "buttonInside": true,
+  "logoClear": true,
+  "textWraps": [],
+  "capture": "header-home-900.jpg"
+ },
+ "home-880": {
+  "innerWidth": 880,
+  "raf": true,
+  "scrollWidth": 865,
+  "noOverflow": true,
+  "toggleDisplay": "none",
+  "headerHeight": 77,
+  "logoRight": 148,
+  "items": [
+   {
+    "text": "Expérience",
+    "left": 195,
+    "right": 271,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Services",
+    "left": 295,
+    "right": 365,
+    "top": 19,
+    "h": 37,
+    "offsetTop": 19,
+    "visible": true
+   },
+   {
+    "text": "Venture Building",
+    "left": 389,
+    "right": 499,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Publications",
+    "left": 523,
+    "right": 606,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Portfolio",
+    "left": 630,
+    "right": 686,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Rendez-vous",
+    "left": 710,
+    "right": 841,
+    "top": 16,
+    "h": 45,
+    "offsetTop": 16,
+    "visible": true
+   }
+  ],
+  "gapLastToButton": 24,
+  "lastRightLtButtonLeft": true,
+  "offsetTops": [
+   24,
+   19,
+   24,
+   24,
+   24,
+   16
+  ],
+  "centres": [
+   38,
+   37.5,
+   38,
+   38,
+   38,
+   38.5
+  ],
+  "oneRow": true,
+  "buttonInside": true,
+  "logoClear": true,
+  "textWraps": [],
+  "capture": "header-home-880.jpg"
+ },
+ "home-861": {
+  "innerWidth": 861,
+  "raf": true,
+  "scrollWidth": 846,
+  "noOverflow": true,
+  "toggleDisplay": "none",
+  "headerHeight": 77,
+  "logoRight": 148,
+  "items": [
+   {
+    "text": "Expérience",
+    "left": 176,
+    "right": 252,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Services",
+    "left": 276,
+    "right": 346,
+    "top": 19,
+    "h": 37,
+    "offsetTop": 19,
+    "visible": true
+   },
+   {
+    "text": "Venture Building",
+    "left": 370,
+    "right": 480,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Publications",
+    "left": 504,
+    "right": 587,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Portfolio",
+    "left": 611,
+    "right": 667,
+    "top": 23,
+    "h": 30,
+    "offsetTop": 24,
+    "visible": true
+   },
+   {
+    "text": "Rendez-vous",
+    "left": 691,
+    "right": 822,
+    "top": 16,
+    "h": 45,
+    "offsetTop": 16,
+    "visible": true
+   }
+  ],
+  "gapLastToButton": 24,
+  "lastRightLtButtonLeft": true,
+  "offsetTops": [
+   24,
+   19,
+   24,
+   24,
+   24,
+   16
+  ],
+  "centres": [
+   38,
+   37.5,
+   38,
+   38,
+   38,
+   38.5
+  ],
+  "oneRow": true,
+  "buttonInside": true,
+  "logoClear": true,
+  "textWraps": [],
+  "capture": "header-home-861.jpg"
+ },
+ "venture-1200": {
+  "linkAriaCurrent": "page",
+  "linkColor": "rgb(36, 122, 120)",
+  "summaryAriaCurrent": null,
+  "dropdownHasVenture": false,
+  "current": [
+   "Venture Building"
+  ],
+  "capture": "header-venture-1200.jpg"
+ },
+ "venture-375-menu": {
+  "innerWidth": 375,
+  "navOpacity": "1",
+  "navVisibility": "visible",
+  "toggleExpanded": "true",
+  "noOverflow": true,
+  "items": [
+   {
+    "text": "Expérience",
+    "top": 92,
+    "h": 54,
+    "insideViewport": true,
+    "topmost": true,
+    "ariaCurrent": null
+   },
+   {
+    "text": "Services",
+    "top": 147,
+    "h": 54,
+    "insideViewport": true,
+    "topmost": true,
+    "ariaCurrent": null
+   },
+   {
+    "text": "Venture Building",
+    "top": 203,
+    "h": 54,
+    "insideViewport": true,
+    "topmost": true,
+    "ariaCurrent": "page"
+   },
+   {
+    "text": "Publications",
+    "top": 258,
+    "h": 54,
+    "insideViewport": true,
+    "topmost": true,
+    "ariaCurrent": null
+   },
+   {
+    "text": "Portfolio",
+    "top": 314,
+    "h": 54,
+    "insideViewport": true,
+    "topmost": true,
+    "ariaCurrent": null
+   },
+   {
+    "text": "Rendez-vous",
+    "top": 385,
+    "h": 45,
+    "insideViewport": true,
+    "topmost": true,
+    "ariaCurrent": null
+   }
+  ],
+  "capture": "menu-venture-375.jpg"
+ },
+ "footer-1200": {
+  "headings": [
+   "Pages",
+   "Contact"
+  ],
+  "pages": [
+   "Expérience",
+   "Stratégie & Transformation",
+   "Entreprise IA",
+   "Venture Building",
+   "Publications",
+   "Portfolio"
+  ],
+  "cta": "Rendez-vous",
+  "noOverflow": true,
+  "capture": "footer-home-1200.jpg"
+ }
+}
