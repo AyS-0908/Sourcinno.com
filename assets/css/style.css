@@ -1033,6 +1033,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .service-level { min-width: 0; padding: var(--space-2); border-radius: var(--radius); background: var(--grey-50); border-top: 3px solid var(--teal-dark); font-size: .92rem; line-height: 1.5; }
 .service-level strong { display: block; margin-bottom: 4px; color: var(--navy); }
 .service-rollout__extras { margin: var(--space-2) 0 0; font-size: .95rem; color: var(--text-muted); }
+/* P37 : schéma = lien vers l'original (Stratégie) ; bloc pour que l'anneau de focus entoure l'image. */
+.band-figure > a { display: block; border-radius: var(--radius-lg); }
 @media (max-width: 640px) {
   .service-levels { grid-template-columns: 1fr; }
 }
