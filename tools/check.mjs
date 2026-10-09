@@ -94,8 +94,8 @@ const count = (html, re) => (html.match(re) || []).length;
 const attr = (html, re) => { const m = html.match(re); return m ? m[1].trim() : null; };
 /* HTML reellement lu par le navigateur : un commentaire <!-- --> ne compte pas. */
 const live = (html) => html.replace(/<!--[\s\S]*?-->/g, "");
-/* Jetons de chaque attribut class="…", meme coupe sur plusieurs lignes. */
-const classTokens = (html) => [...live(html).matchAll(/(?<![\w-])class="([^"]*)"/g)].flatMap((m) => m[1].split(/\s+/).filter(Boolean));
+/* Jetons de chaque attribut class="…" ou class='…', meme coupe sur plusieurs lignes. */
+const classTokens = (html) => [...live(html).matchAll(/(?<![\w-])class=(?:"([^"]*)"|'([^']*)')/g)].flatMap((m) => (m[1] ?? m[2]).split(/\s+/).filter(Boolean));
 /* Blocs <style> d une page (y compris celui du <noscript> de la coquille). */
 const styleBlocks = (html) => [...live(html).matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi)].map((m) => m[1]);
 /* Regles d une feuille, commentaires retires : [selecteurs, declarations]. */
@@ -249,17 +249,19 @@ function checkStructure() {
   // 8. recensement : toute classe ecrite dans le HTML a au moins une regle CSS
   //    (assets/css/*.css hors _v2, plus les <style> des pages). Seules exceptions :
   //    les classes listees ici, chacune avec le fichier qui la porte ; une
-  //    exception que ce fichier ou les pages n utilisent plus echoue aussi.
+  //    exception que ce fichier ou les pages n utilisent plus, ou qui a gagne
+  //    une regle, echoue aussi. Vide depuis Pass 40 (classe morte de la coquille retiree).
   const SANS_REGLE = new Map([
-    // Posee par la coquille, lue par aucune regle ni script (mesure Pass 39).
-    ["nav-drop-host", "tools/shell/header.html"],
   ]);
-  const feuilles = allFiles.filter((f) => /^assets\/css\/[^/]+\.css$/.test(relative(ROOT, f).replace(/\\/g, "/")))
-    .map((f) => readFileSync(f, "utf8"));
-  const regles = new Set();
-  for (const css of [...feuilles, ...pages.flatMap((p) => styleBlocks(p.html))]) {
+  const relOf = (f) => relative(ROOT, f).replace(/\\/g, "/");
+  const feuilles = allFiles.filter((f) => /^assets\/css\/[^/]+\.css$/.test(relOf(f)))
+    .map((f) => [relOf(f), readFileSync(f, "utf8")]);
+  const regles = new Map(); // classe -> premier fichier dont un selecteur la nomme
+  for (const [file, css] of [...feuilles, ...pages.flatMap((p) => styleBlocks(p.html).map((b) => [`${p.rel} <style>`, b]))]) {
     for (const [selecteurs] of cssRules(css)) {
-      for (const m of selecteurs.matchAll(/\.(-?[A-Za-z_][\w-]*)/g)) regles.add(m[1]);
+      // valeurs d attribut ([src$="x.png"]) et chaines retirees : seul le selecteur nomme des classes
+      const nu = selecteurs.replace(/\[[^\]]*\]|"[^"]*"|'[^']*'/g, "");
+      for (const m of nu.matchAll(/\.(-?[A-Za-z_][\w-]*)/g)) if (!regles.has(m[1])) regles.set(m[1], file);
     }
   }
   const usages = new Map();
@@ -276,11 +278,55 @@ function checkStructure() {
   }
   for (const [t, file] of SANS_REGLE) {
     const porteur = existsSync(join(ROOT, file)) ? readFileSync(join(ROOT, file), "utf8") : "";
-    if (!classTokens(porteur).includes(t) || !usages.has(t)) {
+    if (!classTokens(porteur).includes(t) || !usages.has(t) || regles.has(t)) {
       fail(file, `exception de recensement « ${t} » perimee : la retirer de SANS_REGLE dans tools/check.mjs`);
     }
   }
   note(`STRUCTURE: recensement ${usages.size} classe(s) HTML, ${feuilles.length} feuille(s) assets/css + ${pages.reduce((n, p) => n + styleBlocks(p.html).length, 0)} bloc(s) <style> de page, ${regles.size} classe(s) avec regle ; exception(s) sans regle : ${[...SANS_REGLE].map(([t, f]) => `${t} (${f})`).join(", ") || "aucune"}`);
+
+  // 9. recensement inverse : toute classe nommee par un selecteur (memes feuilles
+  //    et <style>) sert quelque part : jeton class="…"/class='…' d une page ou de
+  //    tools/shell/*.html, ou mot d une chaine "…", '…' ou `…` d un script
+  //    (assets/js/**, _v2 compris, et <script> en ligne hors JSON-LD des pages et
+  //    de la coquille ; commentaires ignores). Limite : une expression reguliere
+  //    litterale contenant un guillemet hors d un gabarit `…` decalerait la lecture.
+  //    Seules exceptions : une classe dont le nom est compose par un script, avec
+  //    le fichier et le motif qui la composent ; une exception qui n a plus de
+  //    selecteur, qui sert de nouveau telle quelle ou dont le motif a disparu echoue.
+  const SANS_USAGE = new Map([
+    ["chat-msg--bot", ["assets/js/_v2/chat.js", 'chat-msg--" + who']],
+    ["chat-msg--me", ["assets/js/_v2/chat.js", 'chat-msg--" + who']],
+  ]);
+  const partiels = readdirSync(join(ROOT, "tools/shell")).filter((f) => f.endsWith(".html"))
+    .map((f) => readFileSync(join(ROOT, "tools/shell", f), "utf8"));
+  const sourcesHtml = [...pages.map((p) => p.html), ...partiels];
+  const jetons = new Set(sourcesHtml.flatMap(classTokens));
+  const scriptsTexte = [
+    ...allFiles.filter((f) => /^assets\/js\/.+\.js$/.test(relOf(f))).map((f) => readFileSync(f, "utf8")),
+    ...sourcesHtml.flatMap((h) => [...live(h).matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)]
+      .filter((m) => !/ld\+json/i.test(m[1])).map((m) => m[2])),
+  ];
+  const motsDeChaines = new Set();
+  for (const js of scriptsTexte) {
+    for (const m of js.matchAll(/\/\*[\s\S]*?\*\/|\/\/[^\n]*|"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'|`(?:[^`\\]|\\.)*`/g)) {
+      if (m[0].startsWith("/")) continue;
+      for (const w of m[0].matchAll(/[\w-]+/g)) motsDeChaines.add(w[0]);
+    }
+  }
+  const sert = (t) => jetons.has(t) || motsDeChaines.has(t);
+  let mortes = 0;
+  for (const [t, file] of regles) {
+    if (SANS_USAGE.has(t) || sert(t)) continue;
+    mortes++;
+    fail(file, `classe « ${t} » dans un selecteur CSS mais utilisee nulle part (pages, tools/shell/, chaines des scripts) : retirer la regle`);
+  }
+  for (const [t, [file, motif]] of SANS_USAGE) {
+    const porteur = existsSync(join(ROOT, file)) ? readFileSync(join(ROOT, file), "utf8") : "";
+    if (!regles.has(t) || sert(t) || !porteur.includes(motif)) {
+      fail(file, `exception de recensement inverse « ${t} » perimee : la retirer de SANS_USAGE dans tools/check.mjs`);
+    }
+  }
+  note(`STRUCTURE: recensement inverse ${regles.size} classe(s) de selecteur, ${partiels.length} partiel(s) tools/shell, ${scriptsTexte.length} script(s) lus, ${mortes} classe(s) sans usage ; exception(s) composee(s) par script : ${[...SANS_USAGE].map(([t, [f]]) => `${t} (${f})`).join(", ") || "aucune"}`);
 
   note(`STRUCTURE: ${scriptsChecked} script(s) compile(s); ${pages.length} page(s) lue(s), dont ${shellPages.length} avec coquille et ${pages.length - shellPages.length} redirection(s); ${linksChecked} lien(s) interne(s) resolu(s)`);
 }
@@ -469,14 +515,25 @@ function checkA11y() {
     ["dates du parcours sur fond gris", "--teal-dark", "--grey-50", 4.5],
     ["texte sur bleu nuit", "--white", "--navy", 4.5],
     ["pied de page", "--white", "--navy-dark", 4.5],
-    ["surtitre sur bleu nuit", "#7fd6d3", "--navy", 4.5],
-    ["etiquette technique", "#a04a12", "#fbeade", 4.5],
-    ["message d erreur", "#c53030", "--white", 4.5],
+    ["surtitres et accents clairs sur bleu nuit", "--accent-on-dark", "--navy", 4.5],
+    ["lien survole du pied de page", "--link-hover-on-dark", "--navy-dark", 4.5],
+    ["etiquette technique", "--tag-text", "fond .tag", 4.5],
+    ["message d erreur", "--error", "--white", 4.5],
     ["aplat decoratif teal", "--teal", "--white", 3.0],
   ];
+  /* Fond reellement vu sous une etiquette : le rgba() de la regle .tag, fondu sur --white. */
+  const fondTag = (() => {
+    const decl = cssRules(css).find(([sel]) => sel.trim() === ".tag")?.[1] || "";
+    const m = decl.match(/background:\s*rgba\(\s*(\d+),\s*(\d+),\s*(\d+),\s*([\d.]+)\s*\)/);
+    const blanc = vars["--white"];
+    if (!m || !/^#[0-9a-fA-F]{6}$/.test(blanc || "")) return null;
+    const a = Number(m[4]);
+    return "#" + [1, 3, 5].map((i, k) => Math.round(Number(m[k + 1]) * a + parseInt(blanc.slice(i, i + 2), 16) * (1 - a)).toString(16).padStart(2, "0")).join("");
+  })();
   let worst = null;
   for (const [nom, fg, bg, min] of PAIRS) {
-    const resolve = (name) => (name.startsWith("#") ? name : vars[name]);
+    /* Jetons de :root seulement : une couleur en dur ici serait une copie figee. */
+    const resolve = (name) => (name === "fond .tag" ? fondTag : vars[name]);
     const cf = resolve(fg), cb = resolve(bg);
     if (!cf || !cb) { fail("assets/css/style.css", `couleur introuvable pour "${nom}" (${fg} ou ${bg})`); continue; }
     const r = ratio(cf, cb);
