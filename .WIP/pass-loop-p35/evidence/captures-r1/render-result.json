@@ -1,0 +1,1679 @@
+{
+ "375": {
+  "placement": {
+   "cards": 3,
+   "thirdBottom": 1550,
+   "blogTop": 1602,
+   "h2": "Blog",
+   "below": true
+  },
+  "links": [
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/gpts-attention-1",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-03-03"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/j-ai-essay%C3%A9-chatgpt-une-fois",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-03-03"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/l-ia-modifie-t-elle-d%C3%A9j%C3%A0-le-march%C3%A9-du-travail",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-03-03"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/enjeu-1-de-l-ia-sa-vitesse-d-%C3%A9volution",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-03-03"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/l-ia-fait-le-job-de-700-personnes",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-03-03"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/ia-cas-d-usage",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-02-14"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/corporate-venture-building-en-1-mot",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2022-11-30"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/corporate-venture-building-4-engie-x-wefound",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2022-10-25"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/sourcinno-startupstudiotypes",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2022-08-15"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/todo-startup-structure-at-minimum",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2022-07-31"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/corporate-venture-building-longer-to-startup-quicker-to-scaleup-1",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2022-06-25"
+   }
+  ],
+  "linksOk": true,
+  "allBlog": {
+   "text": "Tout le blog →",
+   "w": 109,
+   "h": 20,
+   "top": 396,
+   "left": 24,
+   "inViewport": true,
+   "topmost": true,
+   "href": "https://sourcinno.wixsite.com/blog"
+  },
+  "initial": {
+   "chips": [
+    {
+     "text": "Tous",
+     "pressed": "true",
+     "active": true,
+     "type": "button"
+    },
+    {
+     "text": "IA",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "Venture Building",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "Startup",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    }
+   ],
+   "posts": [
+    {
+     "tag": "IA",
+     "title": "GPTs : attention ! →",
+     "hidden": false,
+     "w": 327,
+     "h": 177
+    },
+    {
+     "tag": "IA",
+     "title": "\"J'ai essayé ChatGpt une fois\" →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA fait le job de 700 personnes →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "IA: cas d'usage par l'image →",
+     "hidden": false,
+     "w": 327,
+     "h": 177
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING: in a nutschell →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Startup Studios: Corporate vs Pure players →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Startup",
+     "title": "ToDo Startup [2]: flexibilité... structurée →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+     "hidden": false,
+     "w": 327,
+     "h": 220
+    }
+   ],
+   "pass": true
+  },
+  "overflowTous": {
+   "ok": true,
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "bad": []
+  },
+  "captureTous": "post-tous-375.jpg",
+  "iaChip": {
+   "text": "IA",
+   "w": 46,
+   "h": 38,
+   "top": 387,
+   "left": 96,
+   "inViewport": true,
+   "topmost": true
+  },
+  "ia": {
+   "chips": [
+    {
+     "text": "Tous",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "IA",
+     "pressed": "true",
+     "active": true,
+     "type": "button"
+    },
+    {
+     "text": "Venture Building",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "Startup",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    }
+   ],
+   "posts": [
+    {
+     "tag": "IA",
+     "title": "GPTs : attention ! →",
+     "hidden": false,
+     "w": 327,
+     "h": 177
+    },
+    {
+     "tag": "IA",
+     "title": "\"J'ai essayé ChatGpt une fois\" →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA fait le job de 700 personnes →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "IA: cas d'usage par l'image →",
+     "hidden": false,
+     "w": 327,
+     "h": 177
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING: in a nutschell →",
+     "hidden": true,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+     "hidden": true,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Startup Studios: Corporate vs Pure players →",
+     "hidden": true,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "tag": "Startup",
+     "title": "ToDo Startup [2]: flexibilité... structurée →",
+     "hidden": true,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+     "hidden": true,
+     "w": 0,
+     "h": 0
+    }
+   ],
+   "visible": 6,
+   "pass": true
+  },
+  "overflowIa": {
+   "ok": true,
+   "innerWidth": 375,
+   "scrollWidth": 375,
+   "bad": []
+  },
+  "captureIa": "post-ia-375.jpg",
+  "restored": {
+   "chips": [
+    {
+     "text": "Tous",
+     "pressed": "true",
+     "active": true,
+     "type": "button"
+    },
+    {
+     "text": "IA",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "Venture Building",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "Startup",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    }
+   ],
+   "posts": [
+    {
+     "tag": "IA",
+     "title": "GPTs : attention ! →",
+     "hidden": false,
+     "w": 327,
+     "h": 177
+    },
+    {
+     "tag": "IA",
+     "title": "\"J'ai essayé ChatGpt une fois\" →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA fait le job de 700 personnes →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "IA: cas d'usage par l'image →",
+     "hidden": false,
+     "w": 327,
+     "h": 177
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING: in a nutschell →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Startup Studios: Corporate vs Pure players →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Startup",
+     "title": "ToDo Startup [2]: flexibilité... structurée →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+     "hidden": false,
+     "w": 327,
+     "h": 220
+    }
+   ],
+   "pass": true
+  },
+  "wixMouse": [],
+  "keyboard": {
+   "tabs": 9,
+   "reached": true,
+   "focusVisible": true,
+   "ia": {
+    "chips": [
+     {
+      "text": "Tous",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     },
+     {
+      "text": "IA",
+      "pressed": "true",
+      "active": true,
+      "type": "button"
+     },
+     {
+      "text": "Venture Building",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     },
+     {
+      "text": "Startup",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     }
+    ],
+    "posts": [
+     {
+      "tag": "IA",
+      "title": "GPTs : attention ! →",
+      "hidden": false,
+      "w": 327,
+      "h": 177
+     },
+     {
+      "tag": "IA",
+      "title": "\"J'ai essayé ChatGpt une fois\" →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "IA",
+      "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "IA",
+      "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "IA",
+      "title": "L'IA fait le job de 700 personnes →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "IA",
+      "title": "IA: cas d'usage par l'image →",
+      "hidden": false,
+      "w": 327,
+      "h": 177
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING: in a nutschell →",
+      "hidden": true,
+      "w": 0,
+      "h": 0
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+      "hidden": true,
+      "w": 0,
+      "h": 0
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Startup Studios: Corporate vs Pure players →",
+      "hidden": true,
+      "w": 0,
+      "h": 0
+     },
+     {
+      "tag": "Startup",
+      "title": "ToDo Startup [2]: flexibilité... structurée →",
+      "hidden": true,
+      "w": 0,
+      "h": 0
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+      "hidden": true,
+      "w": 0,
+      "h": 0
+     }
+    ]
+   },
+   "capture": "post-keyboard-ia-375.jpg",
+   "backOnTous": true,
+   "tous": {
+    "chips": [
+     {
+      "text": "Tous",
+      "pressed": "true",
+      "active": true,
+      "type": "button"
+     },
+     {
+      "text": "IA",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     },
+     {
+      "text": "Venture Building",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     },
+     {
+      "text": "Startup",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     }
+    ],
+    "posts": [
+     {
+      "tag": "IA",
+      "title": "GPTs : attention ! →",
+      "hidden": false,
+      "w": 327,
+      "h": 177
+     },
+     {
+      "tag": "IA",
+      "title": "\"J'ai essayé ChatGpt une fois\" →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "IA",
+      "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "IA",
+      "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "IA",
+      "title": "L'IA fait le job de 700 personnes →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "IA",
+      "title": "IA: cas d'usage par l'image →",
+      "hidden": false,
+      "w": 327,
+      "h": 177
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING: in a nutschell →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Startup Studios: Corporate vs Pure players →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "Startup",
+      "title": "ToDo Startup [2]: flexibilité... structurée →",
+      "hidden": false,
+      "w": 327,
+      "h": 198
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+      "hidden": false,
+      "w": 327,
+      "h": 220
+     }
+    ]
+   },
+   "pass": true,
+   "wix": []
+  },
+  "noScript": {
+   "chips": 0,
+   "posts": [
+    {
+     "tag": "IA",
+     "title": "GPTs : attention ! →",
+     "hidden": false,
+     "w": 327,
+     "h": 177
+    },
+    {
+     "tag": "IA",
+     "title": "\"J'ai essayé ChatGpt une fois\" →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA fait le job de 700 personnes →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "IA",
+     "title": "IA: cas d'usage par l'image →",
+     "hidden": false,
+     "w": 327,
+     "h": 177
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING: in a nutschell →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Startup Studios: Corporate vs Pure players →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Startup",
+     "title": "ToDo Startup [2]: flexibilité... structurée →",
+     "hidden": false,
+     "w": 327,
+     "h": 198
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+     "hidden": false,
+     "w": 327,
+     "h": 220
+    }
+   ],
+   "visible": [
+    {
+     "h": 177,
+     "top": 317,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 198,
+     "top": 307,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 198,
+     "top": 306,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 198,
+     "top": 307,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 198,
+     "top": 306,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 177,
+     "top": 318,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 198,
+     "top": 307,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 198,
+     "top": 307,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 198,
+     "top": 307,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 198,
+     "top": 307,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 220,
+     "top": 296,
+     "sectionOpacity": "1",
+     "topmost": true
+    }
+   ],
+   "placement": {
+    "cards": 3,
+    "thirdBottom": 1350,
+    "blogTop": 1402,
+    "h2": "Blog",
+    "below": true
+   },
+   "overflow": {
+    "ok": true,
+    "innerWidth": 375,
+    "scrollWidth": 375,
+    "bad": []
+   },
+   "capture": "post-noscript-375.jpg",
+   "wix": [],
+   "pass": true
+  },
+  "pass": true
+ },
+ "1200": {
+  "placement": {
+   "cards": 3,
+   "thirdBottom": 1608,
+   "blogTop": 1680,
+   "h2": "Blog",
+   "below": true
+  },
+  "links": [
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/gpts-attention-1",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-03-03"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/j-ai-essay%C3%A9-chatgpt-une-fois",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-03-03"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/l-ia-modifie-t-elle-d%C3%A9j%C3%A0-le-march%C3%A9-du-travail",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-03-03"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/enjeu-1-de-l-ia-sa-vitesse-d-%C3%A9volution",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-03-03"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/l-ia-fait-le-job-de-700-personnes",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-03-03"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/ia-cas-d-usage",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2024-02-14"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/corporate-venture-building-en-1-mot",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2022-11-30"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/corporate-venture-building-4-engie-x-wefound",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2022-10-25"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/sourcinno-startupstudiotypes",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2022-08-15"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/todo-startup-structure-at-minimum",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2022-07-31"
+   },
+   {
+    "href": "https://sourcinno.wixsite.com/blog/post/corporate-venture-building-longer-to-startup-quicker-to-scaleup-1",
+    "target": "_blank",
+    "rel": "noopener",
+    "arrow": "→",
+    "time": "2022-06-25"
+   }
+  ],
+  "linksOk": true,
+  "allBlog": {
+   "text": "Tout le blog →",
+   "w": 109,
+   "h": 20,
+   "top": 440,
+   "left": 37,
+   "inViewport": true,
+   "topmost": true,
+   "href": "https://sourcinno.wixsite.com/blog"
+  },
+  "initial": {
+   "chips": [
+    {
+     "text": "Tous",
+     "pressed": "true",
+     "active": true,
+     "type": "button"
+    },
+    {
+     "text": "IA",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "Venture Building",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "Startup",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    }
+   ],
+   "posts": [
+    {
+     "tag": "IA",
+     "title": "GPTs : attention ! →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "\"J'ai essayé ChatGpt une fois\" →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA fait le job de 700 personnes →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "IA: cas d'usage par l'image →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING: in a nutschell →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Startup Studios: Corporate vs Pure players →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Startup",
+     "title": "ToDo Startup [2]: flexibilité... structurée →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+     "hidden": false,
+     "w": 680,
+     "h": 206
+    }
+   ],
+   "pass": true
+  },
+  "overflowTous": {
+   "ok": true,
+   "innerWidth": 1200,
+   "scrollWidth": 1185,
+   "bad": []
+  },
+  "captureTous": "post-tous-1200.jpg",
+  "iaChip": {
+   "text": "IA",
+   "w": 46,
+   "h": 38,
+   "top": 431,
+   "left": 116,
+   "inViewport": true,
+   "topmost": true
+  },
+  "ia": {
+   "chips": [
+    {
+     "text": "Tous",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "IA",
+     "pressed": "true",
+     "active": true,
+     "type": "button"
+    },
+    {
+     "text": "Venture Building",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "Startup",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    }
+   ],
+   "posts": [
+    {
+     "tag": "IA",
+     "title": "GPTs : attention ! →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "\"J'ai essayé ChatGpt une fois\" →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA fait le job de 700 personnes →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "IA: cas d'usage par l'image →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING: in a nutschell →",
+     "hidden": true,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+     "hidden": true,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Startup Studios: Corporate vs Pure players →",
+     "hidden": true,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "tag": "Startup",
+     "title": "ToDo Startup [2]: flexibilité... structurée →",
+     "hidden": true,
+     "w": 0,
+     "h": 0
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+     "hidden": true,
+     "w": 0,
+     "h": 0
+    }
+   ],
+   "visible": 6,
+   "pass": true
+  },
+  "overflowIa": {
+   "ok": true,
+   "innerWidth": 1200,
+   "scrollWidth": 1185,
+   "bad": []
+  },
+  "captureIa": "post-ia-1200.jpg",
+  "restored": {
+   "chips": [
+    {
+     "text": "Tous",
+     "pressed": "true",
+     "active": true,
+     "type": "button"
+    },
+    {
+     "text": "IA",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "Venture Building",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    },
+    {
+     "text": "Startup",
+     "pressed": "false",
+     "active": false,
+     "type": "button"
+    }
+   ],
+   "posts": [
+    {
+     "tag": "IA",
+     "title": "GPTs : attention ! →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "\"J'ai essayé ChatGpt une fois\" →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA fait le job de 700 personnes →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "IA: cas d'usage par l'image →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING: in a nutschell →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Startup Studios: Corporate vs Pure players →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Startup",
+     "title": "ToDo Startup [2]: flexibilité... structurée →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+     "hidden": false,
+     "w": 680,
+     "h": 206
+    }
+   ],
+   "pass": true
+  },
+  "wixMouse": [],
+  "keyboard": {
+   "tabs": 14,
+   "reached": true,
+   "focusVisible": true,
+   "ia": {
+    "chips": [
+     {
+      "text": "Tous",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     },
+     {
+      "text": "IA",
+      "pressed": "true",
+      "active": true,
+      "type": "button"
+     },
+     {
+      "text": "Venture Building",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     },
+     {
+      "text": "Startup",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     }
+    ],
+    "posts": [
+     {
+      "tag": "IA",
+      "title": "GPTs : attention ! →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "IA",
+      "title": "\"J'ai essayé ChatGpt une fois\" →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "IA",
+      "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "IA",
+      "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "IA",
+      "title": "L'IA fait le job de 700 personnes →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "IA",
+      "title": "IA: cas d'usage par l'image →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING: in a nutschell →",
+      "hidden": true,
+      "w": 0,
+      "h": 0
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+      "hidden": true,
+      "w": 0,
+      "h": 0
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Startup Studios: Corporate vs Pure players →",
+      "hidden": true,
+      "w": 0,
+      "h": 0
+     },
+     {
+      "tag": "Startup",
+      "title": "ToDo Startup [2]: flexibilité... structurée →",
+      "hidden": true,
+      "w": 0,
+      "h": 0
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+      "hidden": true,
+      "w": 0,
+      "h": 0
+     }
+    ]
+   },
+   "capture": "post-keyboard-ia-1200.jpg",
+   "backOnTous": true,
+   "tous": {
+    "chips": [
+     {
+      "text": "Tous",
+      "pressed": "true",
+      "active": true,
+      "type": "button"
+     },
+     {
+      "text": "IA",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     },
+     {
+      "text": "Venture Building",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     },
+     {
+      "text": "Startup",
+      "pressed": "false",
+      "active": false,
+      "type": "button"
+     }
+    ],
+    "posts": [
+     {
+      "tag": "IA",
+      "title": "GPTs : attention ! →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "IA",
+      "title": "\"J'ai essayé ChatGpt une fois\" →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "IA",
+      "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "IA",
+      "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "IA",
+      "title": "L'IA fait le job de 700 personnes →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "IA",
+      "title": "IA: cas d'usage par l'image →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING: in a nutschell →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Startup Studios: Corporate vs Pure players →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "Startup",
+      "title": "ToDo Startup [2]: flexibilité... structurée →",
+      "hidden": false,
+      "w": 680,
+      "h": 181
+     },
+     {
+      "tag": "Venture Building",
+      "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+      "hidden": false,
+      "w": 680,
+      "h": 206
+     }
+    ]
+   },
+   "pass": true,
+   "wix": []
+  },
+  "noScript": {
+   "chips": 0,
+   "posts": [
+    {
+     "tag": "IA",
+     "title": "GPTs : attention ! →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "\"J'ai essayé ChatGpt une fois\" →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA modifie-t-elle déjà le marché du travail ? →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "Enjeu #1 de l'IA : sa vitesse d'évolution →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "L'IA fait le job de 700 personnes →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "IA",
+     "title": "IA: cas d'usage par l'image →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING: in a nutschell →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [4] : Engie x WeFound →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Startup Studios: Corporate vs Pure players →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Startup",
+     "title": "ToDo Startup [2]: flexibilité... structurée →",
+     "hidden": false,
+     "w": 680,
+     "h": 181
+    },
+    {
+     "tag": "Venture Building",
+     "title": "Corporate venture BUILDING [3]: “Plus long au décollage, plus rapide pour le voyage” →",
+     "hidden": false,
+     "w": 680,
+     "h": 206
+    }
+   ],
+   "visible": [
+    {
+     "h": 181,
+     "top": 360,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 181,
+     "top": 360,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 181,
+     "top": 360,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 181,
+     "top": 360,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 181,
+     "top": 359,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 181,
+     "top": 360,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 181,
+     "top": 359,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 181,
+     "top": 360,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 181,
+     "top": 359,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 181,
+     "top": 360,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 206,
+     "top": 347,
+     "sectionOpacity": "1",
+     "topmost": true
+    }
+   ],
+   "placement": {
+    "cards": 3,
+    "thirdBottom": 1263,
+    "blogTop": 1335,
+    "h2": "Blog",
+    "below": true
+   },
+   "overflow": {
+    "ok": true,
+    "innerWidth": 1200,
+    "scrollWidth": 1185,
+    "bad": []
+   },
+   "capture": "post-noscript-1200.jpg",
+   "wix": [],
+   "pass": true
+  },
+  "pass": true
+ },
+ "mode": "post"
+}
