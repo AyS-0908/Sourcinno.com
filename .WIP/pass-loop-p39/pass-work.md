@@ -101,7 +101,7 @@ NOTES: A-001 fix = helper `live()` strips `<!-- -->` before `classTokens`, `styl
 ## AUDIT r2 — delta confirmation A-001 (contact 2 of 2)
 VERDICT: GREEN — A-001 complete. Delta measured against the contact-1 copy of `tools/check.mjs` (version.mjs and shell.mjs byte-identical): new `live()` strips `<!-- -->`, used by `classTokens`, `styleBlocks` and the site.js tag test; `git diff --stat 2a04923` = 3 tools, +92/−36, matches the declared slice.
 CHECKS (fresh scratch copies, new check.mjs copied in, no network): real tree `node tools/check.mjs --all` 0 (16 pages, census still 132 classes, 12 page `<style>` blocks); o1 site.js tag in a comment → `--nojs` 1 naming `mentions-legales/index.html`; o10 class only in a comment → `node tools/check.mjs` 0; m1 btn--nowhere → `--all` 1; m3 page `<style>` `.reveal { opacity: 0 }` → `--nojs` 1; m4 site.js tag deleted → `--nojs` 1; unmodified copy `--all` 0 and `--nojs` 0.
-Tier 3 (non-blocking, new with the delta): `live()` also strips `<!-- -->` inside raw-text `<style>`, so a legacy CDO-wrapped `<style><!-- .reveal { opacity: 0 } --></style>` (still applied by browsers) passes `--nojs` (probe d1 exit 0); 0 pages carry `<!--` inside any `<style>`/`<script>` today and no generator emits it. Optional later hardening: strip comments outside raw-text elements only.
+Tier 3 (non-blocking, new with the delta): `live()` also strips `<!-- -->` inside raw-text `<style>`, so a legacy CDO-wrapped `<style><!-- .reveal { opacity: 0 } --></style>` (still applied by browsers) passes `--nojs` (probe d1 exit 0); 0 pages carry an HTML comment opener inside any `<style>`/`<script>` today and no generator emits it. Optional later hardening: strip comments outside raw-text elements only.
 
 ```json
 {
@@ -128,5 +128,7 @@ CONFIRM r2 COST: ≈14,709 tokens (187,351 cumulative − 172,642), 1 min 15 s, 
 UNIT: p39
 DOCS: root PLAN.md § 39 status Done + evidence pointer (before review); root AGENTS.md Gotchas (Scratch belongs in .WIP; Every HTML class needs a CSS rule) before review; root PROGRESS.md (Done, Last Verification, Next Action, Known minor issues) and CHANGELOG.md after GREEN. ARCHITECTURE.md unchanged (no line made false). No README/PRD edits.
 MIGRATED: final native + mutation evidence, verdicts FIX→GREEN, costs, timeout 30 s, census allow-list content -> root PROGRESS Last Verification (Pass 39); shipped behaviour -> root CHANGELOG.
-NITS: reviewer Tier-3 notes (nav-drop-host dead class, single-quoted class attributes unread, allow-list entry gaining a rule not flagged, `.WIP` tracked on rebuild vs publish root `/`, Gotcha wording, uppercase HIDDEN fail-safe, any kill signal reported as timeout, `<!--` inside `<style>` stripped by live()) -> root PROGRESS Known minor issues (P39).
+NITS: reviewer Tier-3 notes (nav-drop-host dead class, single-quoted class attributes unread, allow-list entry gaining a rule not flagged, `.WIP` tracked on rebuild vs publish root `/`, Gotcha wording, uppercase HIDDEN fail-safe, any kill signal reported as timeout, HTML comment opener inside a style element stripped by live()) -> root PROGRESS Known minor issues (P39).
 COMMIT: 879d18f0e3a150769596325c9b78aba9e319bb9a (product rebuild, LOCAL ONLY, not pushed)
+
+JOURNAL NOTE: two prose mentions of the bare HTML comment opener (reviewer r2 Tier-3 line, CLOSURE NITS) reworded as words: status.py strip_quoted() truncates the journal at a lone opener, which hid `## CLOSURE` from `set state=done`; NITS also reworded (a tag in angle brackets reads as a placeholder). Verdict blocks untouched.
