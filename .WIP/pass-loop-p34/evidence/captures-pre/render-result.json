@@ -1,0 +1,89 @@
+{
+ "375": {
+  "cards": [
+   {
+    "title": "Engagez-vous 2.0",
+    "left": 24,
+    "top": 619,
+    "w": 327
+   },
+   {
+    "title": "Du PIB au BCI",
+    "left": 24,
+    "top": 816,
+    "w": 327
+   },
+   {
+    "title": "Publications LinkedIn",
+    "left": 24,
+    "top": 1150,
+    "w": 327
+   },
+   {
+    "title": "Engagez-vous 2.0",
+    "left": 0,
+    "top": 390,
+    "w": 0
+   },
+   {
+    "title": "Du PIB au BCI",
+    "left": 0,
+    "top": 390,
+    "w": 0
+   },
+   {
+    "title": "Publications LinkedIn",
+    "left": 0,
+    "top": 390,
+    "w": 0
+   }
+  ],
+  "chips": 4,
+  "capture": "pre-publications-375.jpg",
+  "ytRequests": []
+ },
+ "1200": {
+  "cards": [
+   {
+    "title": "Engagez-vous 2.0",
+    "left": 37,
+    "top": 684,
+    "w": 544
+   },
+   {
+    "title": "Du PIB au BCI",
+    "left": 605,
+    "top": 684,
+    "w": 544
+   },
+   {
+    "title": "Publications LinkedIn",
+    "left": 37,
+    "top": 995,
+    "w": 1112
+   },
+   {
+    "title": "Engagez-vous 2.0",
+    "left": 0,
+    "top": 422,
+    "w": 0
+   },
+   {
+    "title": "Du PIB au BCI",
+    "left": 0,
+    "top": 422,
+    "w": 0
+   },
+   {
+    "title": "Publications LinkedIn",
+    "left": 0,
+    "top": 422,
+    "w": 0
+   }
+  ],
+  "chips": 4,
+  "capture": "pre-publications-1200.jpg",
+  "ytRequests": []
+ },
+ "mode": "pre"
+}

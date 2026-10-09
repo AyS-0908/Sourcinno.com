@@ -1,0 +1,369 @@
+{
+ "375": {
+  "cards": [
+   {
+    "title": "Du PIB au BCI",
+    "left": 24,
+    "top": 491,
+    "w": 327,
+    "h": 486
+   },
+   {
+    "title": "Engagez-vous 2.0 →",
+    "left": 24,
+    "top": 993,
+    "w": 327,
+    "h": 270
+   },
+   {
+    "title": "Publications LinkedIn →",
+    "left": 24,
+    "top": 1280,
+    "w": 327,
+    "h": 270
+   }
+  ],
+  "orderOk": true,
+  "chips": 0,
+  "capture": "post-publications-375.jpg",
+  "launcher": {
+   "type": "button",
+   "ariaLabel": "Lire la vidéo « Du PIB au BCI »",
+   "visibleText": "▶",
+   "img": "/assets/img/video-pib-bci.jpg",
+   "alt": "",
+   "naturalWidth": 480,
+   "complete": true,
+   "rect": {
+    "text": "▶",
+    "href": null,
+    "w": 261,
+    "h": 200,
+    "top": 306,
+    "left": 57,
+    "opacity": "1",
+    "inViewport": true,
+    "topmost": true
+   },
+   "capture": "post-launcher-375.jpg"
+  },
+  "links": {
+   "book": {
+    "text": "Engagez-vous 2.0 →",
+    "href": "https://sourcinno.wixsite.com/engagezvous2-0/bio",
+    "w": 170,
+    "h": 22,
+    "top": 395,
+    "left": 57,
+    "opacity": "1",
+    "inViewport": true,
+    "topmost": true,
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "linkedin": {
+    "text": "Publications LinkedIn →",
+    "href": "https://www.linkedin.com/in/aymarddescorbiac",
+    "w": 196,
+    "h": 22,
+    "top": 395,
+    "left": 57,
+    "opacity": "1",
+    "inViewport": true,
+    "topmost": true,
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "caption": {
+    "text": "Vidéo « Du PIB au BCI »",
+    "href": "https://www.youtube.com/watch?v=GEh_2faSLb0",
+    "w": 181,
+    "h": 20,
+    "top": 396,
+    "left": 97,
+    "opacity": "1",
+    "inViewport": true,
+    "topmost": true,
+    "target": "_blank",
+    "rel": "noopener"
+   }
+  },
+  "noOverflow": true,
+  "ytBeforeClick": 0,
+  "click": {
+   "frames": 1,
+   "withId": 1,
+   "frame": {
+    "src": "https://www.youtube-nocookie.com/embed/GEh_2faSLb0?autoplay=1&playsinline=1",
+    "title": "Vidéo « Du PIB au BCI »",
+    "cls": "video-frame",
+    "focused": true
+   },
+   "capture": "post-after-click-375.jpg",
+   "pass": true
+  },
+  "noOverflowAfter": true,
+  "keyboard": {
+   "tabs": 4,
+   "reached": true,
+   "focusVisible": true,
+   "capture": "post-focus-375.jpg",
+   "ytBeforeEnter": 0,
+   "frames": 1,
+   "withId": 1,
+   "focused": true,
+   "pass": true
+  },
+  "noScript": {
+   "cards": [
+    {
+     "title": "Du PIB au BCI",
+     "left": 24,
+     "top": 491,
+     "w": 327,
+     "h": 286
+    },
+    {
+     "title": "Engagez-vous 2.0 →",
+     "left": 24,
+     "top": 793,
+     "w": 327,
+     "h": 270
+    },
+    {
+     "title": "Publications LinkedIn →",
+     "left": 24,
+     "top": 1080,
+     "w": 327,
+     "h": 270
+    }
+   ],
+   "orderOk": true,
+   "cardsVisible": [
+    {
+     "h": 286,
+     "top": 0,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 270,
+     "top": 0,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 270,
+     "top": 0,
+     "sectionOpacity": "1",
+     "topmost": true
+    }
+   ],
+   "launcher": {
+    "w": 0,
+    "h": 0,
+    "display": "none"
+   },
+   "caption": {
+    "text": "Vidéo « Du PIB au BCI »",
+    "href": "https://www.youtube.com/watch?v=GEh_2faSLb0",
+    "w": 181,
+    "h": 20,
+    "top": 396,
+    "left": 97,
+    "opacity": "1",
+    "inViewport": true,
+    "topmost": true
+   },
+   "capture": "post-noscript-375.jpg",
+   "ytRequests": 0,
+   "noOverflow": true,
+   "pass": true
+  },
+  "pass": true
+ },
+ "1200": {
+  "cards": [
+   {
+    "title": "Du PIB au BCI",
+    "left": 37,
+    "top": 555,
+    "w": 680,
+    "h": 581
+   },
+   {
+    "title": "Engagez-vous 2.0 →",
+    "left": 37,
+    "top": 1153,
+    "w": 680,
+    "h": 220
+   },
+   {
+    "title": "Publications LinkedIn →",
+    "left": 37,
+    "top": 1388,
+    "w": 680,
+    "h": 220
+   }
+  ],
+  "orderOk": true,
+  "chips": 0,
+  "capture": "post-publications-1200.jpg",
+  "launcher": {
+   "type": "button",
+   "ariaLabel": "Lire la vidéo « Du PIB au BCI »",
+   "visibleText": "▶",
+   "img": "/assets/img/video-pib-bci.jpg",
+   "alt": "",
+   "naturalWidth": 480,
+   "complete": true,
+   "rect": {
+    "text": "▶",
+    "href": null,
+    "w": 614,
+    "h": 345,
+    "top": 277,
+    "left": 77,
+    "opacity": "1",
+    "inViewport": true,
+    "topmost": true
+   },
+   "capture": "post-launcher-1200.jpg"
+  },
+  "links": {
+   "book": {
+    "text": "Engagez-vous 2.0 →",
+    "href": "https://sourcinno.wixsite.com/engagezvous2-0/bio",
+    "w": 211,
+    "h": 26,
+    "top": 437,
+    "left": 77,
+    "opacity": "1",
+    "inViewport": true,
+    "topmost": true,
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "linkedin": {
+    "text": "Publications LinkedIn →",
+    "href": "https://www.linkedin.com/in/aymarddescorbiac",
+    "w": 243,
+    "h": 26,
+    "top": 437,
+    "left": 77,
+    "opacity": "1",
+    "inViewport": true,
+    "topmost": true,
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   "caption": {
+    "text": "Vidéo « Du PIB au BCI »",
+    "href": "https://www.youtube.com/watch?v=GEh_2faSLb0",
+    "w": 181,
+    "h": 20,
+    "top": 440,
+    "left": 294,
+    "opacity": "1",
+    "inViewport": true,
+    "topmost": true,
+    "target": "_blank",
+    "rel": "noopener"
+   }
+  },
+  "noOverflow": true,
+  "ytBeforeClick": 0,
+  "click": {
+   "frames": 1,
+   "withId": 1,
+   "frame": {
+    "src": "https://www.youtube-nocookie.com/embed/GEh_2faSLb0?autoplay=1&playsinline=1",
+    "title": "Vidéo « Du PIB au BCI »",
+    "cls": "video-frame",
+    "focused": true
+   },
+   "capture": "post-after-click-1200.jpg",
+   "pass": true
+  },
+  "noOverflowAfter": true,
+  "keyboard": {
+   "tabs": 9,
+   "reached": true,
+   "focusVisible": true,
+   "capture": "post-focus-1200.jpg",
+   "ytBeforeEnter": 0,
+   "frames": 1,
+   "withId": 1,
+   "focused": true,
+   "pass": true
+  },
+  "noScript": {
+   "cards": [
+    {
+     "title": "Du PIB au BCI",
+     "left": 37,
+     "top": 555,
+     "w": 680,
+     "h": 236
+    },
+    {
+     "title": "Engagez-vous 2.0 →",
+     "left": 37,
+     "top": 807,
+     "w": 680,
+     "h": 220
+    },
+    {
+     "title": "Publications LinkedIn →",
+     "left": 37,
+     "top": 1043,
+     "w": 680,
+     "h": 220
+    }
+   ],
+   "orderOk": true,
+   "cardsVisible": [
+    {
+     "h": 236,
+     "top": 0,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 220,
+     "top": 0,
+     "sectionOpacity": "1",
+     "topmost": true
+    },
+    {
+     "h": 220,
+     "top": 210,
+     "sectionOpacity": "1",
+     "topmost": true
+    }
+   ],
+   "launcher": {
+    "w": 0,
+    "h": 0,
+    "display": "none"
+   },
+   "caption": {
+    "text": "Vidéo « Du PIB au BCI »",
+    "href": "https://www.youtube.com/watch?v=GEh_2faSLb0",
+    "w": 181,
+    "h": 20,
+    "top": 440,
+    "left": 286,
+    "opacity": "1",
+    "inViewport": true,
+    "topmost": true
+   },
+   "capture": "post-noscript-1200.jpg",
+   "ytRequests": 0,
+   "noOverflow": true,
+   "pass": true
+  },
+  "pass": true
+ },
+ "mode": "post"
+}
