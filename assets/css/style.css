@@ -44,9 +44,9 @@
 
   --radius: 12px;
   --radius-lg: 18px;
-  --shadow-sm: 0 2px 8px rgba(18, 37, 63, 0.07);
-  --shadow: 0 12px 32px rgba(18, 37, 63, 0.10);
-  --shadow-lg: 0 20px 44px rgba(18, 37, 63, 0.16);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.07);
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 20px 44px rgba(0, 0, 0, 0.16);
   --container: 1160px;
   --header-h: 76px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -258,11 +258,11 @@ p  { margin: 0 0 var(--space-2); }
               box-shadow 0.2s var(--ease), color 0.2s var(--ease);
 }
 .btn--primary { background: var(--teal-dark); color: var(--white); box-shadow: var(--shadow-sm); }
-.btn--primary:hover { background: #1f6360; transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn--primary:hover { background: #1f6360; box-shadow: var(--shadow); }
 .btn--secondary { background: transparent; color: var(--navy); border-color: var(--navy); }
-.btn--secondary:hover { background: var(--navy); color: var(--white); transform: translateY(-2px); }
+.btn--secondary:hover { background: var(--navy); color: var(--white); }
 .btn--ghost { background: rgba(255, 255, 255, 0.12); color: var(--white); border-color: rgba(255, 255, 255, 0.55); }
-.btn--ghost:hover { background: var(--white); color: var(--navy); transform: translateY(-2px); }
+.btn--ghost:hover { background: var(--white); color: var(--navy); }
 .btn--sm { padding: 0.55rem 1.1rem; font-size: 0.85rem; }
 .btn[disabled] { opacity: 0.55; cursor: not-allowed; transform: none; }
 
@@ -337,7 +337,7 @@ p  { margin: 0 0 var(--space-2); }
   box-shadow: var(--shadow-sm);
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
 }
-.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(49, 151, 149, 0.4); }
+.card:hover { border-color: rgba(49, 151, 149, 0.4); }
 .card h3 { margin-bottom: var(--space-1); }
 .card p { color: var(--text-muted); }
 .card__foot { margin-top: auto; padding-top: var(--space-2); }
@@ -441,7 +441,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .site-footer { background: var(--navy-dark); color: rgba(255, 255, 255, 0.78); padding-block: var(--space-5) var(--space-3); }
 .site-footer h2 { color: var(--white); font-family: var(--font-body); font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-2); }
 .site-footer a { color: rgba(255, 255, 255, 0.78); transition: color 0.2s var(--ease); }
-.site-footer a:hover { color: #7fd6d3; }
+.site-footer a:not(.btn):hover { color: #7fd6d3; }
 .site-footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: var(--space-4); }
 .site-footer__cta { margin-top: var(--space-2); }
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
@@ -523,6 +523,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
     transition-duration: 0.01ms !important;
   }
   .reveal { opacity: 1; transform: none; }
+  .card:hover, .card--service:hover { transform: none !important; }
 }
 
 @media print {
@@ -851,16 +852,16 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 #services .service-needs li + li { margin-top: var(--space-2); }
 #services .service-needs strong { display: block; color: #9fe3e0; line-height: 1.4; }
 #services .service-needs span { display: block; color: var(--white); font-size: 0.95rem; line-height: 1.5; }
+#services .grid + p { margin: var(--space-3) 0 0; }
 .card--service > * { position: relative; z-index: 1; }
 .card--service h3 { color: var(--white); }
 .card--service p { color: rgba(255, 255, 255, 0.92); }
-.card--service:hover { border-color: rgba(49, 151, 149, 0.55); }
+.card--service:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: rgba(49, 151, 149, 0.55); }
 .card--service__icon { font-size: 2rem; line-height: 1; margin-bottom: var(--space-2); }
 /* Images de hero de chaque page de service (PLAN § 2, receipts) : chargees en
    fond CSS, sous la ligne de flottaison, sans redimensionnement. */
 .card--strategie { background-image: url("/assets/img/about-strategy.webp"); }
 .card--ia        { background-image: url("/pictures/1ai_hero.jpg"); }
-.card--venture   { background-image: url("/pictures/2cvb_hero.png"); }
 #services .card--strategie {
   background-image:
     linear-gradient(130deg, rgba(18, 37, 63, 0.3), rgba(26, 54, 93, 0.15)),
