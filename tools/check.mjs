@@ -10,7 +10,8 @@
  *   --a11y     contrastes, liens et boutons nommes, hierarchie des titres
  *   --nojs     le site reste lisible et sur sans JavaScript
  *   --tiers    tout hote externe charge est annonce dans la politique de confidentialite
- *   --seo      meta Open Graph, longueurs de title/description, sitemap complet
+ *   --seo      meta Open Graph, longueurs de title/description, sitemap complet, et chaque
+ *              Service JSON-LD : url vers une page locale existante, name dans son <title> ou <h1>
  *   --all      tous les groupes, plus les tests executes (tools/portfolio.test.mjs,
  *              tools/test-ia-embeds.mjs)
  *
@@ -668,6 +669,43 @@ function checkSeo() {
     if (desc.length < 70) fail(p.rel, `meta description trop courte: ${desc.length} caracteres (min 70)`);
   }
   note(`--seo: meta et sitemap verifies sur ${pages.filter((p) => !isStub(p) && p.rel !== "404.html").length} page(s) indexable(s)`);
+
+  // JSON-LD : chaque objet "@type": "Service" (a toute profondeur) a une url vers une page locale existante
+  // dont le <title> ou le <h1> (balises retirees, entites decodees) contient son "name", casse comprise.
+  const NAMED = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", rsquo: "’", lsquo: "‘", laquo: "«", raquo: "»", mdash: "—", ndash: "–", eacute: "é", egrave: "è", ecirc: "ê", agrave: "à", ccedil: "ç" };
+  const decode = (s) => s.replace(/<[^>]*>/g, "").replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) =>
+    e[0] === "#" ? String.fromCodePoint(e[1].toLowerCase() === "x" ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10)) : (NAMED[e] ?? m)).trim();
+  const isService = (t) => t === "Service" || (Array.isArray(t) && t.includes("Service"));
+  const services = [];
+  const collect = (node, file) => {
+    if (Array.isArray(node)) { for (const v of node) collect(v, file); return; }
+    if (!node || typeof node !== "object") return;
+    if (isService(node["@type"])) services.push({ file, name: node.name, url: node.url });
+    for (const v of Object.values(node)) collect(v, file);
+  };
+  for (const p of pages) {
+    for (const m of p.html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)) {
+      let data;
+      try { data = JSON.parse(m[1]); } catch (e) { fail(p.rel, "JSON-LD illisible (JSON.parse) : " + e.message); continue; }
+      collect(data, p.rel);
+    }
+  }
+  if (services.length === 0) fail("index.html", "JSON-LD : aucun objet Service trouve (sujet absent)");
+  for (const sv of services) {
+    if (typeof sv.name !== "string" || !sv.name.trim()) { fail(sv.file, `JSON-LD Service sans name (url ${sv.url})`); continue; }
+    const m = typeof sv.url === "string" && sv.url.match(/^https:\/\/www\.sourcinno\.com\/(.*)$/);
+    if (!m) { fail(sv.file, `JSON-LD Service "${sv.name}" : url hors du site ou absente (${sv.url})`); continue; }
+    const path = m[1].split(/[?#]/)[0];
+    const rel = path === "" || path.endsWith("/") ? path + "index.html" : path;
+    const target = pages.find((p) => p.rel === rel || p.rel === rel + "/index.html");
+    if (!target) { fail(sv.file, `JSON-LD Service "${sv.name}" : la page ${sv.url} n existe pas`); continue; }
+    const title = decode(attr(target.html, /<title>([\s\S]*?)<\/title>/i) || "");
+    const h1 = decode(attr(target.html, /<h1[^>]*>([\s\S]*?)<\/h1>/i) || "");
+    if (!title.includes(sv.name) && !h1.includes(sv.name)) {
+      fail(sv.file, `JSON-LD Service "${sv.name}" absent du <title> ("${title}") et du <h1> ("${h1}") de ${target.rel}`);
+    }
+  }
+  note(`--seo: JSON-LD : ${services.length} Service(s) verifie(s) (url locale existante, name dans le <title> ou le <h1> de la page cible)`);
 }
 
 /* ---------- tests executes (--all) ---------- */
