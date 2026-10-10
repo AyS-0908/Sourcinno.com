@@ -1,0 +1,15 @@
+/portfolio/ @1200 structure DIFFERENT: A 364 elements, B 363
+/portfolio/ @1200 html>head:0>style:21 only in A (1575 props, head element)
+/portfolio/ @1200 html>head:0>noscript:22 only in A (1575 props, head element)
+/portfolio/ @1200 html>body:1>main:2>section:1>div:0>form:0>div:0>input:1 transition-behavior: normal -> normal, normal ; transition-delay: 0s -> 0s, 0s ; transition-property: all -> border-color, box-shadow ; transition-timing-function: ease -> cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+/service-ia-business/ @1200 structure DIFFERENT: A 245 elements, B 244
+/service-ia-business/ @1200 html>head:0>style:21 only in A (1575 props, head element)
+/service-ia-business/ @1200 html>head:0>noscript:22 only in A (1575 props, head element)
+/portfolio/ @375 structure DIFFERENT: A 364 elements, B 363
+/portfolio/ @375 html>head:0>style:21 only in A (1575 props, head element)
+/portfolio/ @375 html>head:0>noscript:22 only in A (1575 props, head element)
+/portfolio/ @375 html>body:1>main:2>section:1>div:0>form:0>div:0>input:1 transition-behavior: normal -> normal, normal ; transition-delay: 0s -> 0s, 0s ; transition-property: all -> border-color, box-shadow ; transition-timing-function: ease -> cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+/service-ia-business/ @375 structure DIFFERENT: A 245 elements, B 244
+/service-ia-business/ @375 html>head:0>style:21 only in A (1575 props, head element)
+/service-ia-business/ @375 html>head:0>noscript:22 only in A (1575 props, head element)
+{"pagesWidths":20,"totalElements":4542,"totalDiffs":14,"totalSavedDiffs":0,"badMedia":0,"outside":[],"newTokensAdded":{}}
