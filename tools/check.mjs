@@ -3,7 +3,10 @@
  *
  * Par defaut : le groupe STRUCTURE (liens, images, balises, header/footer/<noscript> identiques
  *              et conformes a tools/shell/, empreintes de version, chaque classe du HTML
- *              avec une regle CSS, empreinte SHA-256 du code tiers de assets/js/vendor/).
+ *              avec une regle CSS, empreinte SHA-256 du code tiers de assets/js/vendor/,
+ *              coherence des coordonnees : email, telephone et LinkedIn conformes a
+ *              tools/shell/footer.html, chaque lanceur video a l id de sa legende, l id
+ *              Typebot des scripts a celui du lien direct ; reference illisible = echec).
  *              Le dossier .WIP (brouillons des Passes) n est jamais lu.
  * Options, chacune ajoutant un groupe et ECHOUANT si son sujet n'existe pas encore :
  *   --forms    page contact : le formulaire de contact, complet (V1 = un seul)
@@ -95,6 +98,21 @@ const pages = htmlFiles.map((f) => ({
    des controles de coquille, mais PAS des controles de liens. */
 const isStub = (p) => /http-equiv="refresh"/i.test(p.html);
 const shellPages = pages.filter((p) => !isStub(p));
+
+/* Coordonnees de reference (Pass 50) : le partiel du footer est la seule source de
+   l email, du telephone et du profil LinkedIn. Une valeur introuvable reste null :
+   la coherence (STRUCTURE) et le contrat d envoi (--forms) echouent en le nommant. */
+const FOOTER_REF = "tools/shell/footer.html";
+const contactRef = (() => {
+  const f = join(ROOT, FOOTER_REF);
+  const html = existsSync(f) ? readFileSync(f, "utf8") : null;
+  return {
+    lu: html !== null,
+    email: html?.match(/href="mailto:([^"?]+)"/)?.[1] ?? null,
+    tel: html?.match(/href="tel:(\+\d+)"/)?.[1] ?? null,
+    linkedin: html?.match(/linkedin\.com\/in\/([\w-]+)/)?.[1] ?? null,
+  };
+})();
 
 /* ---------- helpers ---------- */
 const between = (html, startTag, endTag) => {
@@ -359,6 +377,100 @@ function checkStructure() {
   }
   note(`STRUCTURE: recensement inverse ${regles.size} classe(s) de selecteur, ${partiels.length} partiel(s) tools/shell, ${scriptsTexte.length} script(s) lus, ${mortes} classe(s) sans usage ; exception(s) composee(s) par script : ${[...SANS_USAGE].map(([t, [f]]) => `${t} (${f})`).join(", ") || "aucune"}`);
 
+  // 10. coherence des coordonnees (Pass 50) : pages + assets/js/*.js (ni _v2 ni VENDOR),
+  //     texte brut, copies du footer comprises (shell.mjs --check les tient deja).
+  //     - email : toute forme x@domaine.tld (hors nom de fichier image) = celle du footer ;
+  //     - telephone : tout numero international « +chiffres » d au moins 8 chiffres
+  //       (separateurs espace, &nbsp;, U+00A0) = celui du footer, chiffre a chiffre ; le
+  //       numero de l hebergeur n est admis que dans les mentions legales. Limite : une
+  //       forme nationale (06 …) n est pas lue ;
+  //     - LinkedIn : tout profil linkedin.com/in/… = celui du footer ;
+  //     - video : chaque figure a data-video porte un seul lien de legende
+  //       youtube.com/watch?v= au meme id ; toute autre id YouTube de la page en fait partie ;
+  //     - Typebot : un seul lien direct https://typebot.io/ID dans les pages, et chaque
+  //       « typebot: 'ID' » des scripts egal a lui.
+  //     Reference illisible ou famille sans aucune occurrence = echec, jamais un vert.
+  const R = "coherence des coordonnees";
+  const textes = [...pages.map((p) => [p.rel, p.html]),
+    ...allFiles.filter((f) => /^assets\/js\/[^/]+\.js$/.test(relOf(f))).map((f) => [relOf(f), readFileSync(f, "utf8")])];
+  const compte = (m, v) => m.set(v, (m.get(v) || 0) + 1);
+  const total = (m) => [...m.values()].reduce((a, b) => a + b, 0);
+  const detail = (m) => [...m].map(([v, n]) => `« ${v} » ×${n}`).join(", ");
+  const manque = ["email", "tel", "linkedin"].filter((k) => !contactRef[k]);
+  let bilanCoordonnees;
+  if (!contactRef.lu || manque.length) {
+    fail(FOOTER_REF, `${R} : reference illisible (${contactRef.lu ? `${manque.join(", ")} introuvable(s)` : "fichier absent"}) ; email, telephone et LinkedIn non compares`);
+    bilanCoordonnees = `email, telephone, LinkedIn NON COMPARES (reference ${FOOTER_REF} illisible)`;
+  } else {
+    const chiffres = (s) => s.replace(/&nbsp;/g, "").replace(/\D/g, "");
+    const refTel = chiffres(contactRef.tel);
+    const HOTE = { file: "mentions-legales/index.html", tel: "37064503378" };
+    const vus = { email: new Map(), tel: new Map(), hote: new Map(), linkedin: new Map() };
+    for (const [rel, txt] of textes) {
+      for (const m of txt.matchAll(/[\w.%+-]+@[\w-]+(?:\.[\w-]+)*\.[A-Za-z]{2,}/g)) {
+        if (/\.(?:png|jpe?g|webp|avif|gif|svg|ico)$/i.test(m[0])) continue;
+        if (m[0] === contactRef.email) compte(vus.email, m[0]);
+        else fail(rel, `${R} : email « ${m[0]} » different de la reference ${contactRef.email} (${FOOTER_REF})`);
+      }
+      for (const m of txt.matchAll(/\+\d(?:(?: |&nbsp;| )?\d)+/g)) {
+        const d = chiffres(m[0]);
+        if (d.length < 8) continue;
+        if (d === refTel) compte(vus.tel, m[0]);
+        else if (d === HOTE.tel && rel === HOTE.file) compte(vus.hote, m[0]);
+        else fail(rel, `${R} : telephone « ${m[0]} » ${d === HOTE.tel ? `de l hebergeur, admis seulement dans ${HOTE.file}` : `different de la reference ${contactRef.tel} (${FOOTER_REF})`}`);
+      }
+      for (const m of txt.matchAll(/linkedin\.com\/in\/([\w-]*)/gi)) {
+        if (m[1] === contactRef.linkedin) compte(vus.linkedin, m[0]);
+        else fail(rel, `${R} : profil « ${m[0]} » different de la reference linkedin.com/in/${contactRef.linkedin} (${FOOTER_REF})`);
+      }
+    }
+    for (const [k, nom] of [["email", "email"], ["tel", "telephone"], ["linkedin", "profil LinkedIn"]]) {
+      if (!vus[k].size) fail(FOOTER_REF, `${R} : aucun ${nom} conforme trouve dans les pages et assets/js : rien n a ete compare`);
+    }
+    bilanCoordonnees = `email ${total(vus.email)} (${detail(vus.email)}), telephone ${total(vus.tel)} (${detail(vus.tel)}), hebergeur ${total(vus.hote)} dans ${HOTE.file} seulement (${detail(vus.hote) || "aucun"}), LinkedIn ${total(vus.linkedin)} (${detail(vus.linkedin)})`;
+  }
+  let videos = 0;
+  for (const p of pages) {
+    const figures = [...p.html.matchAll(/<figure\b[\s\S]*?<\/figure>/gi)].map((m) => m[0]);
+    const admis = new Set();
+    let dansFigures = 0;
+    for (const fig of figures) {
+      const ids = [...fig.matchAll(/\bdata-video="([^"]*)"/g)].map((m) => m[1]);
+      if (!ids.length) continue;
+      dansFigures += ids.length;
+      const legendes = [...fig.matchAll(/youtube\.com\/watch\?v=([\w-]+)/g)].map((m) => m[1]);
+      if (ids.length !== 1 || legendes.length !== 1) {
+        fail(p.rel, `${R} : une figure video doit porter un data-video et un lien de legende youtube.com/watch?v= (trouve ${ids.length} et ${legendes.length})`);
+        continue;
+      }
+      admis.add(legendes[0]);
+      if (ids[0] === legendes[0]) videos++;
+      else fail(p.rel, `${R} : data-video « ${ids[0]} » different de l id de sa legende youtube.com/watch?v=${legendes[0]}`);
+    }
+    const tous = count(p.html, /\bdata-video="/g);
+    if (tous !== dansFigures) fail(p.rel, `${R} : ${tous - dansFigures} data-video hors d une figure a legende : aucune reference`);
+    for (const m of p.html.matchAll(/(?:youtube(?:-nocookie)?\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]+)/g)) {
+      if (!admis.has(m[1])) fail(p.rel, `${R} : video YouTube « ${m[1]} » sans lanceur de meme id dans la page`);
+    }
+  }
+  if (!videos) fail("pages", `${R} : aucun lanceur video conforme trouve : rien n a ete compare`);
+  const liensTypebot = new Map();
+  for (const p of pages) for (const m of p.html.matchAll(/https:\/\/typebot\.io\/([\w-]+)/g)) compte(liensTypebot, m[1]);
+  let typebot = 0;
+  if (liensTypebot.size !== 1) {
+    fail("pages", `${R} : lien direct Typebot https://typebot.io/ID ${liensTypebot.size ? `en ${liensTypebot.size} versions (${[...liensTypebot.keys()].join(", ")})` : "introuvable"} : aucune reference pour l id des scripts`);
+  } else {
+    const [refTypebot] = liensTypebot.keys();
+    for (const [rel, txt] of textes.filter(([rel]) => rel.startsWith("assets/js/"))) {
+      for (const m of txt.matchAll(/\btypebot:\s*['"`]([^'"`]*)['"`]/g)) {
+        if (m[1] === refTypebot) typebot++;
+        else fail(rel, `${R} : id Typebot « ${m[1]} » different du lien direct https://typebot.io/${refTypebot} des pages`);
+      }
+    }
+    if (!typebot) fail("assets/js", `${R} : aucun « typebot: 'ID' » conforme dans assets/js/*.js : rien n a ete compare`);
+  }
+  note(`STRUCTURE: ${R} (reference ${FOOTER_REF}) : ${bilanCoordonnees} ; videos ${videos} lanceur(s) = id de leur legende ; Typebot lien direct ×${total(liensTypebot)}, scripts ×${typebot}`);
+
   note(`STRUCTURE: ${scriptsChecked} script(s) compile(s); ${pages.length} page(s) lue(s), dont ${shellPages.length} avec coquille et ${pages.length - shellPages.length} redirection(s); ${linksChecked} lien(s) interne(s) resolu(s)`);
 }
 
@@ -401,6 +513,13 @@ function checkForms() {
     fail("politique-confidentialite/index.html", "la politique doit decrire le seul formulaire actuel");
   }
 
+  // Le destinataire du brouillon est l email du footer (voir contactRef), pas une copie ici.
+  const EMAIL = contactRef.email;
+  if (!EMAIL) {
+    fail(FOOTER_REF, "--forms: email de reference illisible : contrat d envoi de assets/js/forms.js non verifie");
+    note("--forms: contrat d envoi NON VERIFIE (email de reference illisible)");
+    return;
+  }
   const runMail = () => {
     let submit;
     let resets = 0;
@@ -442,7 +561,7 @@ function checkForms() {
       entries() { return this.data.entries(); }
     }
     const context = {
-      window: { SOURCINNO_CONFIG: { FORM_ENDPOINT: "", CONTACT_EMAIL: "aymard.de.scorbiac@sourcinno.com" }, location: { href: "" } },
+      window: { SOURCINNO_CONFIG: { FORM_ENDPOINT: "", CONTACT_EMAIL: EMAIL }, location: { href: "" } },
       document: { readyState: "complete", querySelectorAll: () => [form], querySelector: () => fallback },
       FormData: TestFormData,
       fetch: () => { throw new Error("V1 ne doit pas appeler un service d envoi"); },
@@ -459,7 +578,7 @@ function checkForms() {
     }
     valid.send();
     const mail = new URL(valid.location.href);
-    if (mail.protocol !== "mailto:" || mail.pathname !== "aymard.de.scorbiac@sourcinno.com" ||
+    if (mail.protocol !== "mailto:" || mail.pathname !== EMAIL ||
         mail.searchParams.get("subject") !== "Prise de contact — sourcinno.com" ||
         !mail.searchParams.get("body").includes('Message : Essai du formulaire : "équipe" & projet') ||
         !mail.searchParams.get("body").includes("Nom : Test <V1> & contact") ||
