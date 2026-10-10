@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p48",
+  "state": "done",
+  "scope": "Pass 48 FULL slice, fresh audit (the contact-1 reviewer cannot be resumed in this conversation; treat its A-008 finding as an input, not as proof of clearance). Contract: PLAN \u00a7 48 in root C:\\Users\\aymar\\AYS_CODING\\code-SOURCINNO_WWW\\PLAN.md (Goal, Planner decisions incl. the A-008 owner Option 2 paragraph, Done When 1-6) and \u00a7 Audit fixes to implement 2026-10-10 A-001/A-002/A-003/A-006/A-007 for the original evidence. Product repository C:\\Users\\aymar\\AYS_CODING\\code-SOURCINNO_WWW\\current sourcinno site- code (branch rebuild), opening 1f4aaf4 -> HEAD a8ec73f (checkpoint 38e107a = A-001/2/3/6/7; a8ec73f = A-008 answer: rule scoped to .ticks a[href^=mailto:], Contact phone &nbsp; at contact/index.html:87 and :104): assets/css/style.css, contact/index.html, assets/js/video.js, tools/test-ia-embeds.mjs, plus ?v= stamps in 15 pages. Owner-accepted deviation (do NOT grade as a defect): below ~340 px the Contact :86 and Mentions :90 address may break mid-word; no <wbr>, footer partial, Politique and Mentions content are deliberately NOT edited. Check instead that footer (10 pages), both Politique addresses and Mentions :115 render as on 1f4aaf4 at 320/334/375/768/1200, the Contact phone stays on one line, and 0 elements pass the width. Pass evidence scripts under .WIP/pass-loop-p48/evidence/ (ignored, untracked; not covered by the seal: read them; a008.mjs, mailbreak.mjs, overflow.mjs, ax.mjs, video.mjs, contrast.mjs, contrast_pixels.py, classify.py). Root repo (separate git, outside the seal): git -C root diff b748fac -- PLAN.md = Planner commit 0f950e8 (A-008 decision, Done When 6, the manual owner-look line) + the Coder's status token Done and evidence pointer only. Manual item 1 (owner look at the veil) runs after GREEN; it is not yours to run. LOCAL ONLY: no fetch/push/deploy. Reviewer rules: every scratch file (copies, captures, Chrome profiles, logs) under its own subfolder of the session scratchpad or the system temp folder, never /tmp, never root outputs/ or archive/ (private: never read), never the product .WIP; network only 127.0.0.1 and Google Fonts (Chrome --host-resolver-rules MAP * ~NOTFOUND with EXCLUDE 127.0.0.1/fonts.googleapis.com/fonts.gstatic.com; do not click a video launcher on a live network); do not modify the product or root trees. Re-measure on your own before/after servers (git -c core.autocrlf=false archive 1f4aaf4 for before; ports 4173/4174 are busy with the Coder's servers serving the same trees: pick other ports): overflow at 320 by element rectangles (body clips overflow), address line breaks, hero subtitle pixel contrast, the AX descriptions, video frame titles. Project gotchas: root AGENTS.md. Model: PROGRESS Model restriction exception (inherited settings). This is the LAST contact: a second FIX blocks the Pass.",
+  "audit_launches": 2,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 1,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    },
+    "auditor": {
+      "model": "unknown",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 2,
+  "results_blocks": 2,
+  "pass_base": "1f4aaf4dfe3820914cf3478639e9c77c649a9146",
+  "seal_paths": "",
+  "brief_fingerprint": "d30afc1d843db88a",
+  "green_fingerprint": "d30afc1d843db88a",
+  "briefed_at": "2026-10-10T16:54:23",
+  "cap_extensions": [],
+  "state_dir": ".WIP/pass-loop-p48",
+  "updated": "2026-10-10"
+}

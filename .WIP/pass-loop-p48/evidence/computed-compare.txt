@@ -1,0 +1,21 @@
+/ @1200: 282 elements, B 282, structure same, 5 differing
+/404.html @1200: 105 elements, B 105, structure same, 1 differing
+/contact/ @1200: 190 elements, B 189, structure DIFFERENT, 9 differing
+/mentions-legales/ @1200: 157 elements, B 157, structure same, 3 differing
+/politique-confidentialite/ @1200: 162 elements, B 162, structure same, 3 differing
+/portfolio/ @1200: 364 elements, B 364, structure same, 1 differing
+/publications/ @1200: 249 elements, B 249, structure same, 1 differing
+/service-ia-business/ @1200: 245 elements, B 245, structure same, 1 differing
+/service-strategie-transformation/ @1200: 291 elements, B 291, structure same, 3 differing
+/service-venture-building/ @1200: 227 elements, B 227, structure same, 1 differing
+/ @375: 282 elements, B 282, structure same, 5 differing
+/404.html @375: 105 elements, B 105, structure same, 1 differing
+/contact/ @375: 190 elements, B 189, structure DIFFERENT, 9 differing
+/mentions-legales/ @375: 157 elements, B 157, structure same, 3 differing
+/politique-confidentialite/ @375: 162 elements, B 162, structure same, 3 differing
+/portfolio/ @375: 364 elements, B 364, structure same, 1 differing
+/publications/ @375: 249 elements, B 249, structure same, 1 differing
+/service-ia-business/ @375: 245 elements, B 245, structure same, 2 differing
+/service-strategie-transformation/ @375: 291 elements, B 291, structure same, 4 differing
+/service-venture-building/ @375: 227 elements, B 227, structure same, 2 differing
+{"pagesWidths":20,"totalElements":4544,"totalDiffs":61,"totalSavedDiffs":0,"badMedia":0,"outside":[],"newTokensAdded":{}}

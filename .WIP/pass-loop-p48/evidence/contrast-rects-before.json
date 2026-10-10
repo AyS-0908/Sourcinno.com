@@ -1,0 +1,785 @@
+[
+ {
+  "route": "/service-strategie-transformation/",
+  "width": 320,
+  "reduce": false,
+  "name": "before-service-strategie-transformation-320",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 129,
+    "width": 272,
+    "height": 113.25,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 258.25,
+    "width": 272,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-strategie-transformation/",
+  "width": 375,
+  "reduce": false,
+  "name": "before-service-strategie-transformation-375",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 129,
+    "width": 327,
+    "height": 113.25,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 258.25,
+    "width": 327,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-strategie-transformation/",
+  "width": 641,
+  "reduce": false,
+  "name": "before-service-strategie-transformation-641",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 484,
+    "height": 75.5,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 240.5,
+    "width": 593,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-strategie-transformation/",
+  "width": 700,
+  "reduce": false,
+  "name": "before-service-strategie-transformation-700",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 484,
+    "height": 75.5,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 240.5,
+    "width": 652,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-strategie-transformation/",
+  "width": 768,
+  "reduce": false,
+  "name": "before-service-strategie-transformation-768",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 506,
+    "height": 79.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "33.792px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 244.75,
+    "width": 682,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-strategie-transformation/",
+  "width": 800,
+  "reduce": false,
+  "name": "before-service-strategie-transformation-800",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 528,
+    "height": 83.0625,
+    "color": "rgb(255, 255, 255)",
+    "size": "35.2px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 248.0625,
+    "width": 682,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-strategie-transformation/",
+  "width": 860,
+  "reduce": false,
+  "name": "before-service-strategie-transformation-860",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 572,
+    "height": 89.28125,
+    "color": "rgb(255, 255, 255)",
+    "size": "37.84px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 254.28125,
+    "width": 682,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-strategie-transformation/",
+  "width": 1200,
+  "reduce": false,
+  "name": "before-service-strategie-transformation-1200",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 36.5,
+    "y": 149,
+    "width": 770,
+    "height": 122.71875,
+    "color": "rgb(255, 255, 255)",
+    "size": "52px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 36.5,
+    "y": 287.71875,
+    "width": 682,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-strategie-transformation/",
+  "width": 375,
+  "reduce": true,
+  "name": "before-service-strategie-transformation-375-reduce",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 129,
+    "width": 327,
+    "height": 113.25,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 258.25,
+    "width": 327,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-ia-business/",
+  "width": 320,
+  "reduce": false,
+  "name": "before-service-ia-business-320",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 129,
+    "width": 272,
+    "height": 37.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 182.75,
+    "width": 272,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-ia-business/",
+  "width": 375,
+  "reduce": false,
+  "name": "before-service-ia-business-375",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 129,
+    "width": 327,
+    "height": 37.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 182.75,
+    "width": 327,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-ia-business/",
+  "width": 641,
+  "reduce": false,
+  "name": "before-service-ia-business-641",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 484,
+    "height": 37.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 202.75,
+    "width": 593,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-ia-business/",
+  "width": 700,
+  "reduce": false,
+  "name": "before-service-ia-business-700",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 484,
+    "height": 37.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 202.75,
+    "width": 652,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-ia-business/",
+  "width": 768,
+  "reduce": false,
+  "name": "before-service-ia-business-768",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 506,
+    "height": 39.875,
+    "color": "rgb(255, 255, 255)",
+    "size": "33.792px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 204.875,
+    "width": 682,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-ia-business/",
+  "width": 800,
+  "reduce": false,
+  "name": "before-service-ia-business-800",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 528,
+    "height": 41.53125,
+    "color": "rgb(255, 255, 255)",
+    "size": "35.2px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 206.53125,
+    "width": 682,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-ia-business/",
+  "width": 860,
+  "reduce": false,
+  "name": "before-service-ia-business-860",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 572,
+    "height": 44.640625,
+    "color": "rgb(255, 255, 255)",
+    "size": "37.84px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 209.640625,
+    "width": 682,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-ia-business/",
+  "width": 1200,
+  "reduce": false,
+  "name": "before-service-ia-business-1200",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 36.5,
+    "y": 149,
+    "width": 770,
+    "height": 61.359375,
+    "color": "rgb(255, 255, 255)",
+    "size": "52px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 36.5,
+    "y": 226.359375,
+    "width": 682,
+    "height": 31.28125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-ia-business/",
+  "width": 375,
+  "reduce": true,
+  "name": "before-service-ia-business-375-reduce",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 129,
+    "width": 327,
+    "height": 37.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 182.75,
+    "width": 327,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-venture-building/",
+  "width": 320,
+  "reduce": false,
+  "name": "before-service-venture-building-320",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 129,
+    "width": 272,
+    "height": 37.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 182.75,
+    "width": 272,
+    "height": 156.40625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-venture-building/",
+  "width": 375,
+  "reduce": false,
+  "name": "before-service-venture-building-375",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 129,
+    "width": 327,
+    "height": 37.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 182.75,
+    "width": 327,
+    "height": 125.125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-venture-building/",
+  "width": 641,
+  "reduce": false,
+  "name": "before-service-venture-building-641",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 484,
+    "height": 37.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 202.75,
+    "width": 593,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-venture-building/",
+  "width": 700,
+  "reduce": false,
+  "name": "before-service-venture-building-700",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 484,
+    "height": 37.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 202.75,
+    "width": 652,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-venture-building/",
+  "width": 768,
+  "reduce": false,
+  "name": "before-service-venture-building-768",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 506,
+    "height": 39.875,
+    "color": "rgb(255, 255, 255)",
+    "size": "33.792px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 204.875,
+    "width": 682,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-venture-building/",
+  "width": 800,
+  "reduce": false,
+  "name": "before-service-venture-building-800",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 528,
+    "height": 41.53125,
+    "color": "rgb(255, 255, 255)",
+    "size": "35.2px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 206.53125,
+    "width": 682,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-venture-building/",
+  "width": 860,
+  "reduce": false,
+  "name": "before-service-venture-building-860",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 149,
+    "width": 572,
+    "height": 44.640625,
+    "color": "rgb(255, 255, 255)",
+    "size": "37.84px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 209.640625,
+    "width": 682,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-venture-building/",
+  "width": 1200,
+  "reduce": false,
+  "name": "before-service-venture-building-1200",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 36.5,
+    "y": 149,
+    "width": 770,
+    "height": 61.359375,
+    "color": "rgb(255, 255, 255)",
+    "size": "52px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 36.5,
+    "y": 226.359375,
+    "width": 682,
+    "height": 62.5625,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ },
+ {
+  "route": "/service-venture-building/",
+  "width": 375,
+  "reduce": true,
+  "name": "before-service-venture-building-375-reduce",
+  "veil": "linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%)",
+  "items": [
+   {
+    "sel": "h1",
+    "x": 24,
+    "y": 129,
+    "width": 327,
+    "height": 37.75,
+    "color": "rgb(255, 255, 255)",
+    "size": "32px",
+    "weight": "700"
+   },
+   {
+    "sel": ".hero__sub",
+    "x": 24,
+    "y": 182.75,
+    "width": 327,
+    "height": 125.125,
+    "color": "rgba(255, 255, 255, 0.86)",
+    "size": "18.4px",
+    "weight": "400"
+   }
+  ]
+ }
+]

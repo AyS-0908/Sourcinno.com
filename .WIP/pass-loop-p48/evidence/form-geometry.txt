@@ -1,0 +1,13 @@
+1200 consent  same before {"top":1455.33,"left":604.5,"width":544,"height":120.17,"style":1045492621} after {"top":1455.33,"left":604.5,"width":544,"height":120.17,"style":1045492621}
+1200 hint     same before {"top":1591.5,"left":604.5,"width":544,"height":54.38,"style":1033904831} after {"top":1591.5,"left":604.5,"width":544,"height":54.38,"style":1033904831}
+1200 button   same before {"top":1661.88,"left":604.5,"width":199.19,"height":55.44,"style":459493889} after {"top":1661.88,"left":604.5,"width":199.19,"height":55.44,"style":459493889}
+1200 status   same before {"top":0,"left":0,"width":0,"height":0,"style":1874572513} after {"top":0,"left":0,"width":0,"height":0,"style":1874572513}
+375 consent  same before {"top":2046.53,"left":24,"width":327,"height":169.14,"style":559106548} after {"top":2046.53,"left":24,"width":327,"height":169.14,"style":559106548}
+375 hint     same before {"top":2231.67,"left":24,"width":327,"height":81.56,"style":-1671078721} after {"top":2231.67,"left":24,"width":327,"height":81.56,"style":-1671078721}
+375 button   same before {"top":2329.23,"left":24,"width":199.19,"height":55.44,"style":1046787603} after {"top":2329.23,"left":24,"width":199.19,"height":55.44,"style":1046787603}
+375 status   same before {"top":0,"left":0,"width":0,"height":0,"style":141436403} after {"top":0,"left":0,"width":0,"height":0,"style":141436403}
+320 consent  DIFF before {"top":2143.09,"left":24,"width":306.8,"height":169.14,"style":1218284973} after {"top":2290.48,"left":24,"width":272,"height":169.14,"style":819150644}
+320 hint     DIFF before {"top":2328.23,"left":24,"width":306.8,"height":81.56,"style":1988020410} after {"top":2475.63,"left":24,"width":272,"height":81.56,"style":-1686143765}
+320 button   DIFF before {"top":2425.8,"left":24,"width":199.19,"height":55.44,"style":1046787603} after {"top":2573.19,"left":24,"width":199.19,"height":55.44,"style":1046787603}
+320 status   same before {"top":0,"left":0,"width":0,"height":0,"style":141436403} after {"top":0,"left":0,"width":0,"height":0,"style":141436403}
+FORM GEOMETRY: 3 differences (320 before overflows by design: A-001)

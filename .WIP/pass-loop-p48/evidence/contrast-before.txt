@@ -1,0 +1,55 @@
+/service-strategie-transformation/    320        h1            32px px= 6250 min=4.725 bar=3 under=0
+/service-strategie-transformation/    320        .hero__sub  18.4px px= 1699 min=3.34 bar=4.5 under=191
+/service-strategie-transformation/    375        h1            32px px= 6250 min=5.738 bar=3 under=0
+/service-strategie-transformation/    375        .hero__sub  18.4px px= 1699 min=4.187 bar=4.5 under=31
+/service-strategie-transformation/    641        h1            32px px= 6250 min=5.509 bar=3 under=0
+/service-strategie-transformation/    641        .hero__sub  18.4px px= 1699 min=4.066 bar=4.5 under=59
+/service-strategie-transformation/    700        h1            32px px= 6250 min=6.033 bar=3 under=0
+/service-strategie-transformation/    700        .hero__sub  18.4px px= 1699 min=4.066 bar=4.5 under=20
+/service-strategie-transformation/    768        h1         33.792px px= 7153 min=6.033 bar=3 under=0
+/service-strategie-transformation/    768        .hero__sub  18.4px px= 1699 min=5.273 bar=4.5 under=0
+/service-strategie-transformation/    800        h1          35.2px px= 7473 min=6.318 bar=3 under=0
+/service-strategie-transformation/    800        .hero__sub  18.4px px= 1699 min=5.484 bar=4.5 under=0
+/service-strategie-transformation/    860        h1         37.84px px= 9080 min=6.033 bar=3 under=0
+/service-strategie-transformation/    860        .hero__sub  18.4px px= 1699 min=5.558 bar=4.5 under=0
+/service-strategie-transformation/   1200        h1            52px px=16727 min=6.308 bar=3 under=0
+/service-strategie-transformation/   1200        .hero__sub  18.4px px= 1699 min=5.637 bar=4.5 under=0
+/service-strategie-transformation/    375 reduce h1            32px px= 6250 min=5.738 bar=3 under=0
+/service-strategie-transformation/    375 reduce .hero__sub  18.4px px= 1699 min=4.187 bar=4.5 under=31
+/service-ia-business/                 320        h1            32px px= 1998 min=7.912 bar=3 under=0
+/service-ia-business/                 320        .hero__sub  18.4px px= 1705 min=4.051 bar=4.5 under=66
+/service-ia-business/                 375        h1            32px px= 1998 min=7.638 bar=3 under=0
+/service-ia-business/                 375        .hero__sub  18.4px px= 1705 min=4.294 bar=4.5 under=29
+/service-ia-business/                 641        h1            32px px= 1998 min=10.545 bar=3 under=0
+/service-ia-business/                 641        .hero__sub  18.4px px= 1705 min=4.401 bar=4.5 under=4
+/service-ia-business/                 700        h1            32px px= 1998 min=10.714 bar=3 under=0
+/service-ia-business/                 700        .hero__sub  18.4px px= 1705 min=5.481 bar=4.5 under=0
+/service-ia-business/                 768        h1         33.792px px= 2285 min=10.754 bar=3 under=0
+/service-ia-business/                 768        .hero__sub  18.4px px= 1705 min=5.23 bar=4.5 under=0
+/service-ia-business/                 800        h1          35.2px px= 2398 min=10.623 bar=3 under=0
+/service-ia-business/                 800        .hero__sub  18.4px px= 1705 min=5.2 bar=4.5 under=0
+/service-ia-business/                 860        h1         37.84px px= 2900 min=8.708 bar=3 under=0
+/service-ia-business/                 860        .hero__sub  18.4px px= 1705 min=6.771 bar=4.5 under=0
+/service-ia-business/                1200        h1            52px px= 5351 min=10.575 bar=3 under=0
+/service-ia-business/                1200        .hero__sub  18.4px px= 1705 min=8.04 bar=4.5 under=0
+/service-ia-business/                 375 reduce h1            32px px= 1998 min=7.638 bar=3 under=0
+/service-ia-business/                 375 reduce .hero__sub  18.4px px= 1705 min=4.294 bar=4.5 under=29
+/service-venture-building/            320        h1            32px px= 2660 min=8.659 bar=3 under=0
+/service-venture-building/            320        .hero__sub  18.4px px= 4124 min=7.091 bar=4.5 under=0
+/service-venture-building/            375        h1            32px px= 2660 min=8.615 bar=3 under=0
+/service-venture-building/            375        .hero__sub  18.4px px= 4124 min=6.91 bar=4.5 under=0
+/service-venture-building/            641        h1            32px px= 2660 min=8.489 bar=3 under=0
+/service-venture-building/            641        .hero__sub  18.4px px= 4124 min=3.07 bar=4.5 under=260
+/service-venture-building/            700        h1            32px px= 2660 min=8.583 bar=3 under=0
+/service-venture-building/            700        .hero__sub  18.4px px= 4124 min=2.941 bar=4.5 under=346
+/service-venture-building/            768        h1         33.792px px= 3035 min=8.583 bar=3 under=0
+/service-venture-building/            768        .hero__sub  18.4px px= 4124 min=4.193 bar=4.5 under=125
+/service-venture-building/            800        h1          35.2px px= 3206 min=8.583 bar=3 under=0
+/service-venture-building/            800        .hero__sub  18.4px px= 4124 min=4.603 bar=4.5 under=0
+/service-venture-building/            860        h1         37.84px px= 3843 min=8.489 bar=3 under=0
+/service-venture-building/            860        .hero__sub  18.4px px= 4124 min=7.848 bar=4.5 under=0
+/service-venture-building/           1200        h1            52px px= 7148 min=8.583 bar=3 under=0
+/service-venture-building/           1200        .hero__sub  18.4px px= 4124 min=9.707 bar=4.5 under=0
+/service-venture-building/            375 reduce h1            32px px= 2660 min=8.615 bar=3 under=0
+/service-venture-building/            375 reduce .hero__sub  18.4px px= 4124 min=6.91 bar=4.5 under=0
+54 measures, 12 under the bar or unmeasured

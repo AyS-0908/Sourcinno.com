@@ -1,0 +1,37 @@
+/                                     320 normal  innerWidth=320 past=0 mails=- form=- ok
+/404.html                             320 normal  innerWidth=320 past=0 mails=- form=- ok
+/contact/                             320 normal  innerWidth=331 past=42 mails=330.8/1l form=330.8 FAIL innerWidth 331; 42 past the edge; mail rect 52.8..330.8
+/mentions-legales/                    320 normal  innerWidth=331 past=1 mails=330.8/1l,302/1l form=- FAIL innerWidth 331; 1 past the edge; mail rect 52.8..330.8
+/politique-confidentialite/           320 normal  innerWidth=320 past=0 mails=302/1l,302/1l form=- ok
+/portfolio/                           320 normal  innerWidth=320 past=0 mails=- form=- ok
+/publications/                        320 normal  innerWidth=320 past=0 mails=- form=- ok
+/service-ia-business/                 320 normal  innerWidth=320 past=0 mails=- form=- ok
+/service-strategie-transformation/    320 normal  innerWidth=320 past=0 mails=- form=- ok
+/service-venture-building/            320 normal  innerWidth=320 past=0 mails=- form=- ok
+/contact/                             320 nojs    innerWidth=331 past=13 mails=330.8/1l,226/1l form=- FAIL innerWidth 331; 13 past the edge; mail rect 52.8..330.8
+/contact/                             320 invalid innerWidth=331 past=42 mails=330.8/1l form=330.8 FAIL innerWidth 331; 42 past the edge; mail rect 52.8..330.8; only 0 invalid fields
+/                                     375 normal  innerWidth=375 past=0 mails=- form=- ok
+/404.html                             375 normal  innerWidth=375 past=0 mails=- form=- ok
+/contact/                             375 normal  innerWidth=375 past=0 mails=330.8/1l form=351 ok
+/mentions-legales/                    375 normal  innerWidth=375 past=0 mails=330.8/1l,302/1l form=- ok
+/politique-confidentialite/           375 normal  innerWidth=375 past=0 mails=302/1l,302/1l form=- ok
+/portfolio/                           375 normal  innerWidth=375 past=0 mails=- form=- ok
+/publications/                        375 normal  innerWidth=375 past=0 mails=- form=- ok
+/service-ia-business/                 375 normal  innerWidth=375 past=0 mails=- form=- ok
+/service-strategie-transformation/    375 normal  innerWidth=375 past=0 mails=- form=- ok
+/service-venture-building/            375 normal  innerWidth=375 past=0 mails=- form=- ok
+/contact/                             375 nojs    innerWidth=375 past=0 mails=330.8/1l,317/2l form=- ok
+/contact/                             375 invalid innerWidth=375 past=0 mails=330.8/1l form=351 ok
+/                                    1200 normal  innerWidth=1200 past=0 mails=- form=- ok
+/404.html                            1200 normal  innerWidth=1200 past=0 mails=- form=- ok
+/contact/                            1200 normal  innerWidth=1200 past=0 mails=411.3/1l form=1148.5 ok
+/mentions-legales/                   1200 normal  innerWidth=1200 past=0 mails=671.3/1l,554.5/1l form=- ok
+/politique-confidentialite/          1200 normal  innerWidth=1200 past=0 mails=554.5/1l,684.5/1l form=- ok
+/portfolio/                          1200 normal  innerWidth=1200 past=0 mails=- form=- ok
+/publications/                       1200 normal  innerWidth=1200 past=0 mails=- form=- ok
+/service-ia-business/                1200 normal  innerWidth=1200 past=0 mails=- form=- ok
+/service-strategie-transformation/   1200 normal  innerWidth=1200 past=0 mails=- form=- ok
+/service-venture-building/           1200 normal  innerWidth=1200 past=0 mails=- form=- ok
+/contact/                            1200 nojs    innerWidth=1200 past=0 mails=411.3/1l,843.5/1l form=- ok
+/contact/                            1200 invalid innerWidth=1200 past=0 mails=411.3/1l form=1148.5 ok
+36 runs on http://127.0.0.1:4174, FAILURES 4, outside requests 0
