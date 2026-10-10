@@ -87,7 +87,7 @@ a { color: inherit; text-decoration: none; }
 .ticks a[href^="mailto:"] { overflow-wrap: anywhere; }
 button { font: inherit; }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: var(--font-title);
   font-weight: 700;
   line-height: 1.18;
@@ -320,10 +320,13 @@ p  { margin: 0 0 var(--space-2); }
 .hero--page { padding-block: var(--space-6); }
 
 /* ---------- Cartes ---------- */
-.card {
+/* Surface commune des cartes : avant .card--service et .card--strategie/--ia, qui la surchargent. */
+.card, .step, .disclosure--card, .portfolio-card, .ia-chat {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
+}
+.card {
   padding: var(--space-4);
   display: flex;
   flex-direction: column;
@@ -369,7 +372,7 @@ p  { margin: 0 0 var(--space-2); }
 
 /* ---------- Étapes numérotées ---------- */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
-.step { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-3); }
+.step { padding: var(--space-3); }
 .step__n {
   display: inline-grid;
   place-items: center;
@@ -387,7 +390,7 @@ p  { margin: 0 0 var(--space-2); }
 .field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: var(--space-2); }
 .field > label { font-size: 0.88rem; font-weight: 600; }
 .field .hint { font-size: 0.8rem; color: var(--grey-500); }
-input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+input[type="text"], input[type="email"], input[type="tel"], input[type="search"], select, textarea {
   font: inherit;
   width: 100%;
   padding: 0.75rem 0.9rem;
@@ -923,7 +926,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .disclosure summary:focus-visible { outline-color: var(--teal-dark); }
 .disclosure__subtitle { color: var(--text-muted); font-weight: 400; }
 /* Carte : titre + sous-titre empilés en colonne 1, le "+" en colonne 2 sur la ligne du titre. */
-.disclosure--card { min-width: 0; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.disclosure--card { min-width: 0; }
 .disclosure--card[open] { background: var(--grey-50); border-color: var(--teal-dark); }
 .disclosure--card summary { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-content: start; gap: var(--space-1) var(--space-2); padding: var(--space-3); border-radius: var(--radius-lg); }
 .disclosure--card summary > * { grid-column: 1; }
@@ -1001,3 +1004,49 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 @media (max-width: 640px) {
   .service-levels { grid-template-columns: 1fr; }
 }
+
+/* ---------- Portfolio (anciennement dans portfolio/index.html) ---------- */
+  .portfolio-filter { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .portfolio-filter[hidden] { display: none; }
+  .portfolio-filter .field { margin: 0; min-width: 0; }
+  .portfolio-filter input, .portfolio-filter select, .portfolio-filter button { min-height: 44px; }
+  .portfolio-filter input:focus-visible, .portfolio-filter select:focus-visible, .portfolio-filter button:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 2px; }
+  .portfolio-filter__results { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+  .portfolio-filter__results p { margin: 0; }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); align-items: start; }
+  .portfolio-card { position: relative; overflow-wrap: anywhere; }
+  .portfolio-card h2 { font-size: 1.4rem; padding: 24px 76px 20px 20px; margin: 0; min-height: 76px; }
+  /* ponytail: native disclosure owns state, focus and no-JavaScript access. */
+  .portfolio-details > summary { position: absolute; top: 15px; right: 15px; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 50%; color: var(--teal-dark); background: var(--white); cursor: pointer; list-style: none; font-size: 20px; font-weight: 700; }
+  .portfolio-details > summary::-webkit-details-marker { display: none; }
+  .portfolio-details > summary:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 3px; }
+  .portfolio-return, .portfolio-details[open] .portfolio-info, .portfolio-details[open] ~ .portfolio-front { display: none; }
+  .portfolio-details[open] .portfolio-return { display: inline; }
+  .portfolio-back, .portfolio-copy { padding: 20px; }
+  .portfolio-card h3 { font-size: 12px; line-height: 1.4; letter-spacing: 0; text-transform: uppercase; color: var(--teal-dark); margin: 0 0 7px; }
+  .portfolio-card p { font-size: 16px; font-weight: 400; color: var(--navy); margin: 0 0 20px; }
+  .portfolio-cover { position: relative; }
+  .portfolio-cover img { width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius); }
+  .portfolio-lock { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border-radius: 50%; background: var(--teal-dark); display: grid; place-items: center; }
+  .portfolio-lock svg { width: 22px; height: 22px; fill: none; stroke: var(--white); stroke-width: 2; }
+  .portfolio-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .portfolio-tags span { padding: 4px 12px; border-radius: 20px; background: var(--bg-alt); font-size: 14px; font-weight: 700; }
+  .portfolio-tags span:first-child { color: var(--teal-dark); }
+  .portfolio-actions { display: flex; gap: 10px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .portfolio-actions a { flex: 1; min-height: 44px; padding: 10px 8px; font-size: 14px; line-height: 1.5; text-align: center; border: 1px solid var(--grey-300); border-radius: 7px; color: var(--teal-dark); font-weight: 700; }
+  .portfolio-actions .portfolio-request { background: var(--teal-dark); color: var(--white); border-color: var(--teal-dark); }
+  .portfolio-timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; list-style: none; margin: 12px 0 20px; padding: 0; }
+  .portfolio-timeline li { font-size: 12px; line-height: 1.35; color: var(--text-muted); }
+  .portfolio-timeline li::before { content: ''; display: block; height: 5px; border-radius: 3px; background: var(--border); margin-bottom: 8px; }
+  .portfolio-timeline li[aria-current="step"] { color: var(--teal-dark); font-weight: 700; }
+  .portfolio-timeline li[aria-current="step"]::before { background: var(--teal-dark); }
+  @media (max-width: 767px) { .portfolio-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Entreprise IA : chat (anciennement dans service-ia-business/index.html) ---------- */
+  .ia-chat { max-width:760px; margin:auto; padding:var(--space-3); box-shadow:var(--shadow-sm); }
+  .ia-chat h3 { margin-bottom:var(--space-1); }
+  .ia-chat details { margin:var(--space-2) 0; }
+  .ia-chat summary { padding:12px 16px; border-radius:var(--radius); background:var(--teal-dark); color:var(--white); cursor:pointer; font-weight:600; }
+  .ia-chat typebot-standard { display:block; width:100%; height:600px; max-height:75vh; margin-top:var(--space-2); }
+  .ia-chat typebot-standard[hidden] { display:none; }
+  .ia-chat__notice { font-size:.875rem; color:var(--text-muted); }
