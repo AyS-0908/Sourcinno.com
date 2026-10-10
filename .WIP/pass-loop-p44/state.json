@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p44",
+  "state": "done",
+  "scope": "Full Pass 44 slice vs opening 5d87750 in this product repo (rebuild): assets/css/style.css (footer .btn exclusion :415, .logo-band img mix-blend-mode :358, .vb-matrix__cell overflow-wrap :734 + max-width 360px query :754, .card--service:hover --shadow-lg :852); service-venture-building/index.html (:94 autour nbsp, :161/:198 img sizes); service-ia-business/index.html:222; publications/index.html:90; assets/img/{ai-for-business-video,video-corpangels-corporates,video-corpangels-technoservice,video-pib-bci}.jpg; the style.css?v= re-stamp on 16 pages. Contract: root ../PLAN.md section 44 (Goal, Planner decisions, Done When 1-3) and ../prompts/pass44-coder.md section A; root ../PLAN.md section 44 status token + Evidence line (docs repo, outside this seal). Journal evidence copies: .WIP/pass-loop-p44/evidence/ (render.mjs, pixels.py, thumbs.py, compare-r1.json, after/before-render.json). Reviewer rules, plain words: put every scratch file (exports, copies, captures, Chrome profiles, logs) under its own subfolder C:/Users/aymar/AppData/Local/Temp/claude/C--Users-aymar-AYS-CODING-code-SOURCINNO-WWW/76aa2206-d9a9-483c-b075-f0519aecaa18/scratchpad/p44-review/ - never /tmp, never the root outputs/ or images/ folders, never this repo's .WIP; network only 127.0.0.1 and Google Fonts (no YouTube, Typebot, Wix, jsdelivr; no git fetch/push); serve on your own ports (not 4173/4174, which this session uses); re-run Done When 2 yourself (git -c core.autocrlf=false archive 5d87750 export vs this tree, .WIP/pass-loop-p40/evidence/computed.mjs compare) and measure the Venture matrix words at 320 px yourself; never edit product files. Known deviation to grade: Done When 3 launcher clause, ia at 375 shows 3 top rows darker than luminance 30 (slide's own black margin); and the 375 side crop of the 16:9 thumbnails (journal NOTES).",
+  "audit_launches": 1,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 0,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    },
+    "auditor": {
+      "model": "unknown",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 1,
+  "results_blocks": 1,
+  "pass_base": "5d87750b1a254f53008b7cfe9671a97b3f39f95d",
+  "seal_paths": "",
+  "brief_fingerprint": "ef99f359f9eca788",
+  "green_fingerprint": "ef99f359f9eca788",
+  "briefed_at": "2026-10-10T10:52:30",
+  "cap_extensions": [],
+  "state_dir": ".WIP/pass-loop-p44",
+  "updated": "2026-10-10"
+}

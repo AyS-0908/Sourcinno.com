@@ -1,0 +1,1212 @@
+{
+ "base": "http://127.0.0.1:4174",
+ "tag": "before",
+ "checks": {
+  "footer /": {
+   "rest": {
+    "text": "Rendez-vous",
+    "color": "rgba(255, 255, 255, 0.78)",
+    "background": "rgb(36, 122, 120)",
+    "transition": "color",
+    "w": 131.1875,
+    "h": 44.703125
+   },
+   "hover": {
+    "text": "Rendez-vous",
+    "color": "rgba(255, 255, 255, 0.78)",
+    "background": "rgb(31, 99, 96)",
+    "transition": "color",
+    "w": 131.1875,
+    "h": 44.703125
+   },
+   "link": "rgba(255, 255, 255, 0.78)",
+   "linkHover": "rgb(127, 214, 211)"
+  },
+  "footer /contact/": {
+   "rest": {
+    "text": "Rendez-vous",
+    "color": "rgba(255, 255, 255, 0.78)",
+    "background": "rgb(36, 122, 120)",
+    "transition": "color",
+    "w": 131.1875,
+    "h": 44.703125
+   },
+   "hover": {
+    "text": "Rendez-vous",
+    "color": "rgba(255, 255, 255, 0.78)",
+    "background": "rgb(31, 99, 96)",
+    "transition": "color",
+    "w": 131.1875,
+    "h": 44.703125
+   },
+   "link": "rgba(255, 255, 255, 0.78)",
+   "linkHover": "rgb(127, 214, 211)"
+  },
+  "cards no-preference": [
+   {
+    "target": "#services .card--service:nth-of-type(1)",
+    "rest": {
+     "shadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px",
+     "transform": "none"
+    },
+    "hover": {
+     "shadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px",
+     "transform": "matrix(1, 0, 0, 1, 0, -2)"
+    }
+   },
+   {
+    "target": "#services .card--service:nth-of-type(2)",
+    "rest": {
+     "shadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px",
+     "transform": "none"
+    },
+    "hover": {
+     "shadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px",
+     "transform": "matrix(1, 0, 0, 1, 0, -2)"
+    }
+   }
+  ],
+  "cards reduce": [
+   {
+    "target": "#services .card--service:nth-of-type(1)",
+    "rest": {
+     "shadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px",
+     "transform": "none"
+    },
+    "hover": {
+     "shadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px",
+     "transform": "none"
+    }
+   },
+   {
+    "target": "#services .card--service:nth-of-type(2)",
+    "rest": {
+     "shadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px",
+     "transform": "none"
+    },
+    "hover": {
+     "shadow": "rgba(0, 0, 0, 0.1) 0px 12px 32px 0px",
+     "transform": "none"
+    }
+   }
+  ],
+  "venture 320": {
+   "vw": 320,
+   "words": [
+    {
+     "word": "Conquête",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "Conquête",
+     "width": 118.640625,
+     "height": 120,
+     "minHeight": "120px",
+     "wrap": "anywhere"
+    },
+    {
+     "word": "Exploration",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Instagram",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "—",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "100",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Md$",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "ExplorationInstagram — 100 Md$",
+     "width": 118.640625,
+     "height": 120,
+     "minHeight": "120px",
+     "wrap": "anywhere"
+    },
+    {
+     "word": "Cœur",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "métier",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Kodak",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "—",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "30",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Md$",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "Cœur métierKodak — 30 Md$",
+     "width": 118.640625,
+     "height": 128.578125,
+     "minHeight": "120px",
+     "wrap": "anywhere"
+    },
+    {
+     "word": "Développement",
+     "lines": 2,
+     "rects": 2,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Appareil",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "photo",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "numérique",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "DéveloppementAppareil photo numérique",
+     "width": 118.640625,
+     "height": 128.578125,
+     "minHeight": "120px",
+     "wrap": "anywhere"
+    }
+   ],
+   "autour": {
+    "text": "« autour »",
+    "codepoints": [
+     "ab",
+     "20",
+     "61",
+     "75",
+     "74",
+     "6f",
+     "75",
+     "72",
+     "20",
+     "bb"
+    ],
+    "nbsp": 0,
+    "line": "Stratégie de croissance « autour » du cœur de métier = potentiels leaders :"
+   },
+   "overflow": []
+  },
+  "venture 375": {
+   "vw": 375,
+   "words": [
+    {
+     "word": "Conquête",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "Conquête",
+     "width": 146.140625,
+     "height": 120,
+     "minHeight": "120px",
+     "wrap": "anywhere"
+    },
+    {
+     "word": "Exploration",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Instagram",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "—",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "100",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Md$",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "ExplorationInstagram — 100 Md$",
+     "width": 146.140625,
+     "height": 120,
+     "minHeight": "120px",
+     "wrap": "anywhere"
+    },
+    {
+     "word": "Cœur",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "métier",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Kodak",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "—",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "30",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Md$",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "Cœur métierKodak — 30 Md$",
+     "width": 146.140625,
+     "height": 120,
+     "minHeight": "120px",
+     "wrap": "anywhere"
+    },
+    {
+     "word": "Développement",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Appareil",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "photo",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "numérique",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "DéveloppementAppareil photo numérique",
+     "width": 146.140625,
+     "height": 120,
+     "minHeight": "120px",
+     "wrap": "anywhere"
+    }
+   ],
+   "autour": {
+    "text": "« autour »",
+    "codepoints": [
+     "ab",
+     "20",
+     "61",
+     "75",
+     "74",
+     "6f",
+     "75",
+     "72",
+     "20",
+     "bb"
+    ],
+    "nbsp": 0,
+    "line": "Stratégie de croissance « autour » du cœur de métier = potentiels leaders :"
+   },
+   "overflow": []
+  },
+  "venture 1200": {
+   "vw": 1200,
+   "words": [
+    {
+     "word": "Conquête",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "Conquête",
+     "width": 248.640625,
+     "height": 152,
+     "minHeight": "152px",
+     "wrap": "anywhere"
+    },
+    {
+     "word": "Exploration",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Instagram",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "—",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "100",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Md$",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "ExplorationInstagram — 100 Md$",
+     "width": 248.640625,
+     "height": 152,
+     "minHeight": "152px",
+     "wrap": "anywhere"
+    },
+    {
+     "word": "Cœur",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "métier",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Kodak",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "—",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "30",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Md$",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "Cœur métierKodak — 30 Md$",
+     "width": 248.640625,
+     "height": 152,
+     "minHeight": "152px",
+     "wrap": "anywhere"
+    },
+    {
+     "word": "Développement",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "Appareil",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "photo",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "word": "numérique",
+     "lines": 1,
+     "rects": 1,
+     "fontSize": "15.2px"
+    },
+    {
+     "cell": "DéveloppementAppareil photo numérique",
+     "width": 248.640625,
+     "height": 152,
+     "minHeight": "152px",
+     "wrap": "anywhere"
+    }
+   ],
+   "autour": {
+    "text": "« autour »",
+    "codepoints": [
+     "ab",
+     "20",
+     "61",
+     "75",
+     "74",
+     "6f",
+     "75",
+     "72",
+     "20",
+     "bb"
+    ],
+    "nbsp": 0,
+    "line": "Stratégie de croissance « autour » du cœur de métier = potentiels leaders :"
+   },
+   "overflow": []
+  },
+  "launch ia 1200": {
+   "src": "/assets/img/ai-for-business-video.jpg",
+   "natural": [
+    480,
+    360
+   ],
+   "attr": [
+    "480",
+    "360"
+   ],
+   "box": {
+    "x": 212.5,
+    "y": 2085.078125,
+    "width": 760,
+    "height": 427.5
+   },
+   "ratio": 1.7777777777777777,
+   "img": [
+    760,
+    427.5
+   ],
+   "fit": "cover",
+   "overflow": []
+  },
+  "launch vb1 1200": {
+   "src": "/assets/img/video-corpangels-technoservice.jpg",
+   "natural": [
+    480,
+    360
+   ],
+   "attr": [
+    "480",
+    "360"
+   ],
+   "box": {
+    "x": 212.5,
+    "y": 1686.984375,
+    "width": 760,
+    "height": 427.5
+   },
+   "ratio": 1.7777777777777777,
+   "img": [
+    760,
+    427.5
+   ],
+   "fit": "cover",
+   "overflow": []
+  },
+  "launch vb2 1200": {
+   "src": "/assets/img/video-corpangels-corporates.jpg",
+   "natural": [
+    480,
+    360
+   ],
+   "attr": [
+    "480",
+    "360"
+   ],
+   "box": {
+    "x": 212.5,
+    "y": 2867.640625,
+    "width": 760,
+    "height": 427.5
+   },
+   "ratio": 1.7777777777777777,
+   "img": [
+    760,
+    427.5
+   ],
+   "fit": "cover",
+   "overflow": []
+  },
+  "launch pub 1200": {
+   "src": "/assets/img/video-pib-bci.jpg",
+   "natural": [
+    480,
+    360
+   ],
+   "attr": [
+    "480",
+    "360"
+   ],
+   "box": {
+    "x": 69.5,
+    "y": 730.984375,
+    "width": 614,
+    "height": 345.375
+   },
+   "ratio": 1.7777777777777777,
+   "img": [
+    614,
+    345.375
+   ],
+   "fit": "cover",
+   "overflow": []
+  },
+  "launch ia 375": {
+   "src": "/assets/img/ai-for-business-video.jpg",
+   "natural": [
+    480,
+    360
+   ],
+   "attr": [
+    "480",
+    "360"
+   ],
+   "box": {
+    "x": 24,
+    "y": 3052.6875,
+    "width": 327,
+    "height": 200
+   },
+   "ratio": 1.635,
+   "img": [
+    327,
+    200
+   ],
+   "fit": "cover",
+   "overflow": []
+  },
+  "launch vb1 375": {
+   "src": "/assets/img/video-corpangels-technoservice.jpg",
+   "natural": [
+    480,
+    360
+   ],
+   "attr": [
+    "480",
+    "360"
+   ],
+   "box": {
+    "x": 24,
+    "y": 2146.84375,
+    "width": 327,
+    "height": 200
+   },
+   "ratio": 1.635,
+   "img": [
+    327,
+    200
+   ],
+   "fit": "cover",
+   "overflow": []
+  },
+  "launch vb2 375": {
+   "src": "/assets/img/video-corpangels-corporates.jpg",
+   "natural": [
+    480,
+    360
+   ],
+   "attr": [
+    "480",
+    "360"
+   ],
+   "box": {
+    "x": 24,
+    "y": 3327.0625,
+    "width": 327,
+    "height": 200
+   },
+   "ratio": 1.635,
+   "img": [
+    327,
+    200
+   ],
+   "fit": "cover",
+   "overflow": []
+  },
+  "launch pub 375": {
+   "src": "/assets/img/video-pib-bci.jpg",
+   "natural": [
+    480,
+    360
+   ],
+   "attr": [
+    "480",
+    "360"
+   ],
+   "box": {
+    "x": 57,
+    "y": 717,
+    "width": 261,
+    "height": 200
+   },
+   "ratio": 1.305,
+   "img": [
+    261,
+    200
+   ],
+   "fit": "cover",
+   "overflow": []
+  },
+  "logos 1200": {
+   "bg": "rgb(245, 248, 252)",
+   "rect": {
+    "x": 36.5,
+    "y": 1455.03125,
+    "width": 1112,
+    "height": 84
+   },
+   "logos": [
+    {
+     "src": "/pictures/logo_accenture.png",
+     "x": 26.453125,
+     "y": 0,
+     "width": 117.21875,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_mazars.png",
+     "x": 175.671875,
+     "y": 0,
+     "width": 213.5,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_mzlab.png",
+     "x": 421.171875,
+     "y": 0,
+     "width": 75,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_fabereo.png",
+     "x": 528.171875,
+     "y": 0,
+     "width": 100.859375,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_nomaban_nb.png",
+     "x": 661.03125,
+     "y": 0,
+     "width": 149.09375,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_ibanfirst_nb.png",
+     "x": 842.125,
+     "y": 0,
+     "width": 86.765625,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_particeep_nb.png",
+     "x": 960.890625,
+     "y": 0,
+     "width": 124.65625,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_yoopala_nb.png",
+     "x": 112.0625,
+     "y": 50,
+     "width": 105.890625,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_parisnco_nb.png",
+     "x": 249.953125,
+     "y": 50,
+     "width": 103.40625,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_ioi_nb.png",
+     "x": 385.359375,
+     "y": 50,
+     "width": 166.71875,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_tydex_nb.png",
+     "x": 584.078125,
+     "y": 50,
+     "width": 93.140625,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_emlyon_nb.png",
+     "x": 709.21875,
+     "y": 50,
+     "width": 74.921875,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_guidemichelin_nb.png",
+     "x": 816.140625,
+     "y": 53.5,
+     "width": 183.796875,
+     "height": 27,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    }
+   ],
+   "hovered": [
+    {
+     "name": "accenture",
+     "filter": "grayscale(0)",
+     "opacity": "1",
+     "blend": "normal"
+    },
+    {
+     "name": "fabereo",
+     "filter": "grayscale(0)",
+     "opacity": "1",
+     "blend": "normal"
+    },
+    {
+     "name": "mazars",
+     "filter": "grayscale(0)",
+     "opacity": "1",
+     "blend": "normal"
+    }
+   ],
+   "overflow": []
+  },
+  "logos 375": {
+   "bg": "rgb(245, 248, 252)",
+   "rect": {
+    "x": 24,
+    "y": 1810.359375,
+    "width": 327,
+    "height": 334
+   },
+   "logos": [
+    {
+     "src": "/pictures/logo_accenture.png",
+     "x": 104.890625,
+     "y": 0,
+     "width": 117.21875,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_mazars.png",
+     "x": 3.25,
+     "y": 50,
+     "width": 213.5,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_mzlab.png",
+     "x": 248.75,
+     "y": 50,
+     "width": 75,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_fabereo.png",
+     "x": 22.515625,
+     "y": 100,
+     "width": 100.859375,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_nomaban_nb.png",
+     "x": 155.375,
+     "y": 100,
+     "width": 149.09375,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_ibanfirst_nb.png",
+     "x": 41.78125,
+     "y": 150,
+     "width": 86.765625,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_particeep_nb.png",
+     "x": 160.546875,
+     "y": 150,
+     "width": 124.65625,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_yoopala_nb.png",
+     "x": 42.84375,
+     "y": 200,
+     "width": 105.890625,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_parisnco_nb.png",
+     "x": 180.734375,
+     "y": 200,
+     "width": 103.40625,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_ioi_nb.png",
+     "x": 17.5625,
+     "y": 250,
+     "width": 166.71875,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_tydex_nb.png",
+     "x": 216.28125,
+     "y": 250,
+     "width": 93.140625,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_emlyon_nb.png",
+     "x": 18.140625,
+     "y": 300,
+     "width": 74.921875,
+     "height": 34,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    },
+    {
+     "src": "/pictures/logo_guidemichelin_nb.png",
+     "x": 125.0625,
+     "y": 303.5,
+     "width": 183.796875,
+     "height": 27,
+     "blend": "normal",
+     "filter": "grayscale(1)",
+     "opacity": "0.55",
+     "complete": true
+    }
+   ],
+   "hovered": [
+    {
+     "name": "accenture",
+     "filter": "grayscale(0)",
+     "opacity": "1",
+     "blend": "normal"
+    },
+    {
+     "name": "fabereo",
+     "filter": "grayscale(0)",
+     "opacity": "1",
+     "blend": "normal"
+    },
+    {
+     "name": "mazars",
+     "filter": "grayscale(0)",
+     "opacity": "1",
+     "blend": "normal"
+    }
+   ],
+   "overflow": []
+  },
+  "full home 1200": {
+   "overflow": []
+  },
+  "full ia 1200": {
+   "overflow": []
+  },
+  "full pub 1200": {
+   "overflow": []
+  },
+  "full home 375": {
+   "overflow": []
+  },
+  "full ia 375": {
+   "overflow": []
+  },
+  "full pub 375": {
+   "overflow": []
+  },
+  "full home 320": {
+   "overflow": []
+  },
+  "full ia 320": {
+   "overflow": []
+  },
+  "full pub 320": {
+   "overflow": []
+  }
+ },
+ "media": [
+  [
+   "footer /",
+   true
+  ],
+  [
+   "footer /contact/",
+   true
+  ],
+  [
+   "cards no-preference",
+   true
+  ],
+  [
+   "cards reduce",
+   true
+  ],
+  [
+   "venture 320",
+   true
+  ],
+  [
+   "venture 375",
+   true
+  ],
+  [
+   "venture 1200",
+   true
+  ],
+  [
+   "launch ia 1200",
+   true
+  ],
+  [
+   "launch vb1 1200",
+   true
+  ],
+  [
+   "launch vb2 1200",
+   true
+  ],
+  [
+   "launch pub 1200",
+   true
+  ],
+  [
+   "launch ia 375",
+   true
+  ],
+  [
+   "launch vb1 375",
+   true
+  ],
+  [
+   "launch vb2 375",
+   true
+  ],
+  [
+   "launch pub 375",
+   true
+  ],
+  [
+   "logos 1200",
+   true
+  ],
+  [
+   "logos 375",
+   true
+  ],
+  [
+   "full home 1200",
+   true
+  ],
+  [
+   "full ia 1200",
+   true
+  ],
+  [
+   "full pub 1200",
+   true
+  ],
+  [
+   "full home 375",
+   true
+  ],
+  [
+   "full ia 375",
+   true
+  ],
+  [
+   "full pub 375",
+   true
+  ],
+  [
+   "full home 320",
+   true
+  ],
+  [
+   "full ia 320",
+   true
+  ],
+  [
+   "full pub 320",
+   true
+  ]
+ ],
+ "outside": [],
+ "badMedia": []
+}
