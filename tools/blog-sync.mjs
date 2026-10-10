@@ -6,7 +6,7 @@
  *   <!-- blog-sync:debut --> ... <!-- blog-sync:fin -->
  * Articles gardes : liens /blog/post/ (francais). Liens /blog/en/post/ (anglais) : ignores.
  * Etiquettes : "⚡IA" -> IA, "VENTURE BUILDING" -> Venture Building, "STARTUP" -> Startup.
- * Plus recent d abord ; date en francais (table des mois, UTC, sans dependre de la machine).
+ * Plus recent d abord ; date en francais (table des mois, jour de Paris, sans dependre de la machine).
  * La page garde ses fins de ligne (CRLF ou LF), seule la liste entre les marqueurs change.
  *
  * USAGE
@@ -89,12 +89,15 @@ for (const [n, item] of items.entries()) {
 if (!posts.length) die("aucun article francais dans le flux");
 posts.sort((a, b) => b.date - a.date);
 
-const day = (d) => (d.getUTCDate() === 1 ? "1er" : String(d.getUTCDate()));
-const block = posts.map((p) => [
+/* Jour calendaire de Paris (Intl de Node, sans dependance) : 22:00 GMT en ete = minuit le lendemain. */
+const PARIS = new Intl.DateTimeFormat("en", { timeZone: "Europe/Paris", year: "numeric", month: "numeric", day: "numeric" });
+const paris = (d) => Object.fromEntries(PARIS.formatToParts(d).filter((x) => x.type !== "literal").map((x) => [x.type, Number(x.value)]));
+const pad = (n) => String(n).padStart(2, "0");
+const block = posts.map((p) => ({ ...p, ...paris(p.date) })).map((p) => [
   `<article class="card" data-tag="${attr(p.tag)}">`,
   `  <p class="tags"><span class="tag">${html(p.tag)}</span></p>`,
   `  <h3><a href="${attr(p.link)}" target="_blank" rel="noopener">${html(p.title)} <span aria-hidden="true">→</span><span class="visually-hidden"> (nouvel onglet)</span></a></h3>`,
-  `  <p class="card__meta"><time datetime="${p.date.toISOString().slice(0, 10)}">${day(p.date)} ${MOIS[p.date.getUTCMonth()]} ${p.date.getUTCFullYear()}</time></p>`,
+  `  <p class="card__meta"><time datetime="${p.year}-${pad(p.month)}-${pad(p.day)}">${p.day === 1 ? "1er" : p.day} ${MOIS[p.month - 1]} ${p.year}</time></p>`,
   `</article>`,
 ].map((l) => INDENT + l).join("\n"));
 const wanted = "\n" + block.join("\n") + "\n" + INDENT;

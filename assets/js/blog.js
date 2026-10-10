@@ -3,7 +3,10 @@
   const list = document.getElementById('blog-list');
   if (!list) return;
   const posts = [...list.querySelectorAll('[data-tag]')];
-  const tags = [...new Set(posts.map((post) => post.dataset.tag))];
+  // Ordre fixe des puces, quel que soit l'ordre des articles ; une étiquette absente de la page n'a pas de puce.
+  const present = new Set(posts.map((post) => post.dataset.tag));
+  const order = ['IA', 'Venture Building', 'Startup'];
+  const tags = [...order.filter((tag) => present.has(tag)), ...[...present].filter((tag) => !order.includes(tag))];
   if (tags.length < 2) return;
   const bar = document.createElement('div');
   bar.className = 'filters';

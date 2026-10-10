@@ -724,6 +724,10 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .band-figure .video-launch img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; }
 .video-launch span { position: absolute; inset: 0; margin: auto; width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50%; background: var(--teal-dark); font-size: 1.75rem; line-height: 1; }
 .video-launch:hover span { background: var(--navy); }
+@media (max-width: 640px) {
+  /* Sur telephone le ▶ centre masquait une lettre du titre de la vignette : plus petit, dans le coin. */
+  .video-launch span { inset: auto 12px 12px auto; margin: 0; width: 48px; height: 48px; font-size: 1.2rem; }
+}
 .band-figure figcaption a { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
 .card .band-figure { margin: var(--space-1) 0 0; }
 
