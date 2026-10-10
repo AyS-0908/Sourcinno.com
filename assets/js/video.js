@@ -3,7 +3,10 @@
   for (const launch of document.querySelectorAll('button[data-video]')) {
     launch.addEventListener('click', () => {
       const frame = document.createElement('iframe');
-      frame.title = launch.closest('figure')?.querySelector('figcaption')?.textContent.trim() || launch.getAttribute('aria-label');
+      // Titre du lecteur = texte visible de la légende : sans la mention cachée « (nouvel onglet) » de son lien.
+      const caption = launch.closest('figure')?.querySelector('figcaption')?.cloneNode(true);
+      caption?.querySelectorAll('.visually-hidden').forEach((hidden) => hidden.remove());
+      frame.title = caption?.textContent.trim() || launch.getAttribute('aria-label');
       frame.src = `https://www.youtube-nocookie.com/embed/${launch.dataset.video}?autoplay=1&playsinline=1`;
       frame.referrerPolicy = 'origin';
       frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';

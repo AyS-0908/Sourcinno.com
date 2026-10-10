@@ -83,6 +83,8 @@ body {
 
 img, svg, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
+/* Une adresse email ne contient aucune coupure : elle passe a la ligne n importe ou plutot que de deborder a 320 px. */
+a[href^="mailto:"] { overflow-wrap: anywhere; }
 button { font: inherit; }
 
 h1, h2, h3, h4 {
@@ -97,7 +99,6 @@ h1, h2, h3, h4 {
 h1 { font-size: clamp(2rem, 4.4vw, 3.25rem); }
 h2 { font-size: clamp(1.6rem, 3vw, 2.35rem); }
 h3 { font-size: clamp(1.15rem, 1.8vw, 1.4rem); }
-h4 { font-size: 1.05rem; }
 p  { margin: 0 0 var(--space-2); }
 
 :focus-visible {
@@ -123,6 +124,8 @@ p  { margin: 0 0 var(--space-2); }
 .grid { display: grid; gap: var(--space-3); }
 .grid--2 { grid-template-columns: repeat(2, 1fr); }
 .grid--3 { grid-template-columns: repeat(3, 1fr); }
+/* Un enfant de grille peut retrecir sous la largeur de son contenu (sinon la piste 1fr s elargit au-dela de l ecran). */
+.grid > * { min-width: 0; }
 
 /* ---------- Skip link ---------- */
 .skip-link {
@@ -251,7 +254,6 @@ p  { margin: 0 0 var(--space-2); }
 .btn--ghost { background: rgba(255, 255, 255, 0.12); color: var(--white); border-color: rgba(255, 255, 255, 0.55); }
 .btn--ghost:hover { background: var(--white); color: var(--navy); }
 .btn--sm { padding: 0.55rem 1.1rem; font-size: 0.85rem; }
-.btn[disabled] { opacity: 0.55; cursor: not-allowed; transform: none; }
 
 .link-arrow {
   font-weight: 600;
@@ -300,6 +302,11 @@ p  { margin: 0 0 var(--space-2); }
   position: absolute;
   inset: 0;
   background: linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%);
+}
+/* Jusqu a 860 px le sous-titre passe sur la partie claire des photos : voile plus dense, fini en marine
+   (meme un teal fonce plafonne sous 4,5:1 avec ce blanc ; contraste mesure >= 4,9:1, Pass 48). */
+@media (max-width: 860px) {
+  .hero--offer::before { background: linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.84) 55%, rgba(26, 54, 93, 0.74) 100%); }
 }
 .hero--offer h1 { max-width: 22ch; }
 .hero__eyebrow {
@@ -525,7 +532,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   font-style: italic;
   color: var(--navy);
 }
-.quote cite { display: block; font-family: var(--font-body); font-style: normal; font-size: 0.9rem; color: var(--grey-500); margin-top: var(--space-1); }
 
 /* ---------- Bandeau d'appel a l'action ---------- */
 .cta-band { text-align: center; }
@@ -551,7 +557,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .card[hidden] { display: none; }
 
 .card__meta { font-size: 0.85rem; color: var(--grey-500); margin-bottom: var(--space-1); }
-.card > img { border-radius: var(--radius); margin-bottom: var(--space-2); }
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 var(--space-1); }
 .tag {
   font-size: 0.72rem;

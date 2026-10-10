@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=dd3e0528">
+<link rel="stylesheet" href="/assets/css/style.css?v=394f7feb">
 <noscript>
   <style>
     /* Sans JavaScript, le lecteur video ne peut pas se lancer : on le masque,
@@ -106,46 +106,45 @@
         <form id="form-basique" data-contact-form novalidate hidden>
           <div class="field">
             <label for="b-nom">Nom <span class="required" aria-hidden="true">*</span></label>
-            <input type="text" id="b-nom" name="nom" autocomplete="name" required>
-            <p class="error" aria-live="polite"></p>
+            <input type="text" id="b-nom" name="nom" aria-describedby="err-nom" autocomplete="name" required>
+            <p class="error" id="err-nom" aria-live="polite"></p>
           </div>
           <div class="field">
             <label for="b-entreprise">Entreprise <span class="hint">(facultatif)</span></label>
-            <input type="text" id="b-entreprise" name="entreprise" autocomplete="organization">
-            <p class="error" aria-live="polite"></p>
+            <input type="text" id="b-entreprise" name="entreprise" aria-describedby="err-entreprise" autocomplete="organization">
+            <p class="error" id="err-entreprise" aria-live="polite"></p>
           </div>
           <div class="field">
             <label for="b-besoin">Type de besoin <span class="required" aria-hidden="true">*</span></label>
-            <select id="b-besoin" name="besoin" required>
+            <select id="b-besoin" name="besoin" aria-describedby="err-besoin" required>
               <option value="">Choisir…</option>
               <option value="Stratégie &amp; Transformation">Stratégie &amp; Transformation</option>
               <option value="Entreprise IA">Entreprise IA</option>
               <option value="Venture Building">Venture Building</option>
               <option value="Autre">Autre</option>
             </select>
-            <p class="error" aria-live="polite"></p>
+            <p class="error" id="err-besoin" aria-live="polite"></p>
           </div>
           <div class="field">
             <label for="b-message">Message <span class="required" aria-hidden="true">*</span> <span class="hint">(1&nbsp;500 caractères maximum)</span></label>
-            <textarea id="b-message" name="message" maxlength="1500" required></textarea>
-            <p class="error" aria-live="polite"></p>
+            <textarea id="b-message" name="message" aria-describedby="err-message" maxlength="1500" required></textarea>
+            <p class="error" id="err-message" aria-live="polite"></p>
           </div>
           <div class="field">
             <label for="b-email">Email <span class="required" aria-hidden="true">*</span></label>
-            <input type="email" id="b-email" name="email" autocomplete="email" required>
-            <p class="error" aria-live="polite"></p>
+            <input type="email" id="b-email" name="email" aria-describedby="err-email" autocomplete="email" required>
+            <p class="error" id="err-email" aria-live="polite"></p>
           </div>
           <div class="field">
             <label for="b-telephone">Téléphone <span class="hint">(facultatif)</span></label>
-            <input type="tel" id="b-telephone" name="telephone" autocomplete="tel">
-            <p class="error" aria-live="polite"></p>
+            <input type="tel" id="b-telephone" name="telephone" aria-describedby="err-telephone" autocomplete="tel">
+            <p class="error" id="err-telephone" aria-live="polite"></p>
           </div>
           <div class="field field--check">
-            <input type="checkbox" id="b-rgpd" name="rgpd" required>
+            <input type="checkbox" id="b-rgpd" name="rgpd" aria-describedby="err-rgpd" required>
             <label for="b-rgpd">J’accepte que mes données soient utilisées pour répondre à ma demande. Elles ne sont ni revendues ni utilisées à d’autres fins. <a href="/politique-confidentialite/">En savoir plus</a>.</label>
-            <p class="error" aria-live="polite"></p>
+            <p class="error" id="err-rgpd" aria-live="polite"></p>
           </div>
-          <p class="error" aria-live="polite"></p>
           <p class="hint">Ce formulaire prépare un brouillon d’email. Vous l’envoyez ensuite depuis votre messagerie.</p>
           <button class="btn btn--primary" type="submit">Préparer mon email</button>
           <p class="form-status" aria-live="polite"></p>

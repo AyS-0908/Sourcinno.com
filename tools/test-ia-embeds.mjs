@@ -5,19 +5,36 @@ import vm from 'node:vm';
 // Integration check: real event handlers, a disposable DOM and SDK transport.
 const element = () => ({ hidden: false, open: false, handlers: {}, addEventListener(name, fn) { this.handlers[name] = fn; } });
 
-// video.js: two launchers, nothing created before a click, each click embeds its own id.
+// video.js: launchers, nothing created before a click, each click embeds its own id; the frame title is the
+// caption's visible text (its hidden « (nouvel onglet) » span removed from a copy), else the launcher's label.
 const player = readFileSync(new URL('../assets/js/video.js', import.meta.url), 'utf8');
 const frames = [];
-const launcher = (id, title) => Object.assign(element(), {
+const caption = (parts) => ({
+  parts,
+  get textContent() { return this.parts.map(p => p.text).join(''); },
+  cloneNode: () => caption(parts.map(p => ({ ...p }))),
+  querySelectorAll(selector) {
+    assert.equal(selector, '.visually-hidden');
+    return this.parts.filter(p => p.hidden).map(p => ({ remove: () => { this.parts = this.parts.filter(q => q !== p); } }));
+  },
+});
+const captions = [];
+const launcher = (id, title, figure = true) => Object.assign(element(), {
   dataset: { video: id },
   getAttribute: () => `Lire la vidéo « ${title} »`,
-  closest: () => ({ querySelector: () => ({ textContent: ` Vidéo « ${title} » ` }) }),
+  closest: () => {
+    if (!figure) return null;
+    const c = caption([{ text: ` Vidéo « ${title} »` }, { text: ' (nouvel onglet)', hidden: true }, { text: ' ' }]);
+    captions.push(c);
+    return { querySelector: () => c };
+  },
   replaceWith(node) { this.replacedBy = node; },
 });
 const one = launcher('hDFiKEFv5kA', 'AI for BUSINESS'), two = launcher('QtzlMHaUGyM', 'corpangels Corporates — July23');
+const bareLaunch = launcher('GEh_2faSLb0', 'Du PIB au BCI', false);
 vm.runInContext(player, vm.createContext({
   document: {
-    querySelectorAll: selector => (selector === 'button[data-video]' ? [one, two] : []),
+    querySelectorAll: selector => (selector === 'button[data-video]' ? [one, two, bareLaunch] : []),
     createElement: () => { const f = { setAttribute(name, value) { this[name] = value; }, focus() { this.focused = true; } }; frames.push(f); return f; },
   },
 }));
@@ -30,6 +47,10 @@ assert.equal(frames[1].src, 'https://www.youtube-nocookie.com/embed/hDFiKEFv5kA?
 assert.equal(two.replacedBy, frames[0]);
 assert.equal(one.replacedBy, frames[1]);
 assert.equal(frames[0].title, 'Vidéo « corpangels Corporates — July23 »');
+assert.equal(frames[1].title, 'Vidéo « AI for BUSINESS »');
+assert.ok(captions.every(c => c.textContent.includes('(nouvel onglet)')), 'the page caption itself keeps its hidden notice');
+bareLaunch.handlers.click();
+assert.equal(frames[2].title, 'Lire la vidéo « Du PIB au BCI »');
 assert.ok(frames.every(f => f.referrerPolicy === 'origin' && f.focused && f.allowfullscreen === '' && /autoplay/.test(f.allow)));
 
 // ia-embeds.js: the Typebot chat only, from the pinned local copy (tools/check.mjs checks its SHA-256).
@@ -96,4 +117,4 @@ await bare.handlers.toggle();
 bare.open = true;
 await bare.handlers.toggle();
 assert.equal(calls, 2);
-console.log('PASS: video.js click-only, two launchers embed their own id (youtube-nocookie, focused); chat click-only loading from the local pinned copy, light published bot, blocked SDK retry, no duplicate conversation, no status line needed.');
+console.log('PASS: video.js click-only, each launcher embeds its own id (youtube-nocookie, focused), frame title = visible caption without « (nouvel onglet) », else the launcher label; chat click-only loading from the local pinned copy, light published bot, blocked SDK retry, no duplicate conversation, no status line needed.');
