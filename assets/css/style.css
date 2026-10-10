@@ -722,12 +722,9 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .video-frame { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-lg); }
 .video-launch { position: relative; padding: 0; cursor: pointer; overflow: hidden; background: var(--navy-dark); color: var(--white); }
 .band-figure .video-launch img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; }
-.video-launch span { position: absolute; inset: 0; margin: auto; width: 58px; height: 58px; display: grid; place-items: center; border-radius: 50%; background: var(--teal-dark); font-size: 1.4rem; line-height: 1; }
+/* Centre, le ▶ masquait une lettre du titre de la vignette : petit, dans le coin, sur tous les ecrans. */
+.video-launch span { position: absolute; inset: auto 12px 12px auto; margin: 0; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: var(--teal-dark); font-size: 0.96rem; line-height: 1; }
 .video-launch:hover span { background: var(--navy); }
-@media (max-width: 640px) {
-  /* Sur telephone le ▶ centre masquait une lettre du titre de la vignette : plus petit, dans le coin. */
-  .video-launch span { inset: auto 12px 12px auto; margin: 0; width: 38px; height: 38px; font-size: 0.96rem; }
-}
 .band-figure figcaption a { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
 .card .band-figure { margin: var(--space-1) 0 0; }
 
