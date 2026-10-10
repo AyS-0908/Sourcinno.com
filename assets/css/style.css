@@ -321,7 +321,7 @@ p  { margin: 0 0 var(--space-2); }
 
 /* ---------- Cartes ---------- */
 /* Surface commune des cartes : avant .card--service et .card--strategie/--ia, qui la surchargent. */
-.card, .step, .disclosure--card, .portfolio-card, .ia-chat {
+.card, .disclosure--card, .portfolio-card, .ia-chat {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -371,8 +371,6 @@ p  { margin: 0 0 var(--space-2); }
 .logo-band img:hover { opacity: 1; filter: grayscale(0); }
 
 /* ---------- Étapes numérotées ---------- */
-.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
-.step { padding: var(--space-3); }
 .step__n {
   display: inline-grid;
   place-items: center;
@@ -970,7 +968,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .service-question-list { list-style: none; margin: 0; padding: 0; }
 .service-question__number { flex: none; color: var(--teal-dark); font-size: 1rem; }
 .service-question { padding: var(--space-2); margin: 0 0 var(--space-1); border-radius: var(--radius); background: var(--grey-50); color: var(--text-muted); }
-.service-pilotage { padding: var(--space-3); margin: var(--space-3) 0 0; border-radius: var(--radius-lg); background: var(--grey-50); }
 .service-careers { list-style: none; margin: 0; padding: 0; }
 .service-career { min-width: 0; box-shadow: none; }
 .service-career::before { content: ""; display: block; width: 28px; height: 4px; background: var(--teal-dark); border-radius: var(--radius); margin-bottom: var(--space-1); }
