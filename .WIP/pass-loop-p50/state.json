@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p50",
+  "state": "done",
+  "scope": "FULL slice, Pass 50 (contract: root repo C:\\Users\\aymar\\AYS_CODING\\code-SOURCINNO_WWW PLAN.md section 50, Goal/Planner decisions/Probes/Work 1-4/Done When 1-4). Product repo (this one, branch rebuild) diff fca0472..HEAD: tools/check.mjs (contactRef from tools/shell/footer.html, STRUCTURE step 10 coherence rule and its note, --forms fixture reads the reference, header comment) and mentions-legales/index.html line 98 (host phone with non-breaking spaces). Root docs repo (separate git repo, NOT in this seal, review by git diff there): PLAN.md section 50 status token + evidence pointer, ARCHITECTURE.md Components verifier line. Evidence (ignored, unsealed): .WIP/pass-loop-p50/evidence/ counts.sh, mutations.mjs + mutations.txt, cdp.mjs + hostphone.mjs + hostphone-*.txt/png. REVIEWER RULES (owner): every scratch file (copies, Chrome profiles, logs) under its own subfolder of the session scratchpad C:\\Users\\aymar\\AppData\\Local\\Temp\\claude\\C--Users-aymar-AYS-CODING-code-SOURCINNO-WWW\\e8afbc47-bb43-4e15-b920-1af3453f9f14\\scratchpad\\reviewer-p50, never /tmp, root outputs/ or archive/, never the product .WIP; network only 127.0.0.1 and Google Fonts (no Wix, Typebot, YouTube; never click a video launcher on a live network); LOCAL ONLY: no fetch, push, merge, deploy; never edit the live tree. Re-run the Done When 3 mutation set on your OWN scratch export (git -c core.autocrlf=false archive HEAD) and add at least one mutation of your own choosing; probe for false FAIL as well as false GREEN. Port 4173/4174 are free; stop any server you start.",
+  "audit_launches": 1,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 0,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    },
+    "auditor": {
+      "model": "unknown",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 1,
+  "results_blocks": 1,
+  "pass_base": "fca04724de717a79f3755e8cdf6cf352e979672b",
+  "seal_paths": "",
+  "brief_fingerprint": "196967d9605fb96f",
+  "green_fingerprint": "196967d9605fb96f",
+  "briefed_at": "2026-10-10T22:29:17",
+  "cap_extensions": [],
+  "state_dir": ".WIP/pass-loop-p50",
+  "updated": "2026-10-10"
+}
