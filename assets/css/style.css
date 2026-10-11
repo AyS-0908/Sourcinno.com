@@ -85,6 +85,7 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 /* Une adresse email ne contient aucune coupure : celles des listes de contact passent a la ligne n importe ou plutot que de deborder a 320 px. */
 .ticks a[href^="mailto:"] { overflow-wrap: anywhere; }
+.ticks--contact a { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
 button { font: inherit; }
 
 h1, h2, h3 {
@@ -409,7 +410,7 @@ textarea { min-height: 150px; resize: vertical; }
 .field--check label { font-weight: 400; font-size: 0.9rem; }
 .field--check { flex-wrap: wrap; }
 .field--check .error { flex: 1 0 100%; }
-.field .error { font-size: 0.82rem; color: var(--error); min-height: 1.1em; }
+.field .error { margin: 0; font-size: 0.82rem; color: var(--error); }
 input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--error); }
 .form-status { margin-top: var(--space-2); padding: var(--space-2); border-radius: var(--radius); font-size: 0.92rem; }
 .form-status[data-state="ok"] { background: rgba(49, 151, 149, 0.12); border: 1px solid var(--teal); }
@@ -522,16 +523,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
     linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
   background-size: 56px 56px, 56px 56px;
   opacity: 0.9;
-}
-
-/* ---------- Citation ---------- */
-.quote {
-  border-left: 3px solid var(--teal);
-  padding-left: var(--space-3);
-  font-family: var(--font-title);
-  font-size: 1.2rem;
-  font-style: italic;
-  color: var(--navy);
 }
 
 /* ---------- Bandeau d'appel a l'action ---------- */
