@@ -1,0 +1,80 @@
+=== FULL AUDIT BRIEF - pass p57 - review contact 1 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): claude-opus-5-5 @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are a FRESH auditor with zero memory of this work. You GRADE it. You do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p57\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: everything this Pass changed: FULL SLICE, product repository, range 6438148..4b203c8 (26 files): tools/blog/corporate-venture-building-4-engie-x-wefound.html, tools/blog/corporate-venture-building-en-1-mot.html, tools/blog/corporate-venture-building-longer-to-startup-quicker-to-scaleup-1.html, tools/blog/todo-startup-structure-at-minimum.html (4 text files); assets/img/blog/ (21 new files: 20 pictures corporate-venture-building-en-1-mot-1..18, corporate-venture-building-longer-to-startup-quicker-to-scaleup-1-1.png, todo-startup-structure-at-minimum-1.webp, and video-nPHlrri2CjE.jpg); publications/index.html between its two blog-sync markers. NOT changed and must stay so: tools/blog-sync.mjs, assets/css/, assets/js/. Contract: root docs repository C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW, PLAN.md section 57 (Done When 1 to 5) and PRD.md section Refonte 2026-10-11 row Publications articles (copy rules: original typos kept, Wix headings as h4, underline outside a link dropped, italics kept, attached PDFs not copied, each picture a short French description, each video a label). Stakes: content fidelity against the saved Wix sections (.WIP/pass-loop-p57/wix/*.html, ignored scratch, readable on disk) and nothing injected into the page; the tool itself did not change. Scratch scripts of the Coder, readable but not product: .WIP/pass-loop-p57/ (import.mjs, fidelity.mjs, pictures.py, evidence/render.mjs, evidence/red.sh). REVIEWER RULES (owner instructions): put every scratch file you create under your own subfolder C:\Users\aymar\AppData\Local\Temp\claude\C--Users-aymar-AYS-CODING-code-SOURCINNO-WWW\d5311625-ebf1-4a0c-8ad4-3442d556af58\scratchpad\p57-review, never in /tmp, never in the root outputs/ folder, never in the product .WIP folder (your only write there is your verdict appended to this Pass journal). Do not edit, stage or commit any product or docs file. NETWORK AUTHORIZATION: 127.0.0.1 and Google Fonts only, plus AT MOST ONE read-only GET of ONE Wix post page (sourcinno.wixsite.com/blog/post/...) to check one saved copy; no other network access, no git fetch or push. Never click a video launcher on a live network. LIVE-SAFE contract applies to that single GET (read-only, nothing written anywhere); it is stated in the journal section SLICE. Please re-run Done When 1 and Done When 2 yourself from the product folder (commands in the journal block TEST-RESULTS r1), and make your OWN render of /publications/ at 1200 px and 375 px, scripts on and off, with one Venture Building article open. A local server already serves the product folder on http://127.0.0.1:4173 (reuse it; if you need another port use 4174 bound to 127.0.0.1 and stop it after). Headless Chrome recipe and its traps: root AGENTS.md Gotchas (helper .WIP/pass-loop-p51/evidence/cdp.mjs with P48_PROFILES pointing into your scratch subfolder; reduced motion set explicitly; with scripts disabled evaluate synchronously and wait from Node; body clips horizontal overflow so compare each element right edge to the emulated width). Measured environment fact: on this machine Page.captureScreenshot never answers for a capture 6000 px high or more (3000 px answers in 1 s), and the page with the 18-picture article open is 9238 px high at 1200: capture in tiles of 2500 px or less, or clip to the part you need. Venture Building and Startup posts are hidden until their chip is pressed; pictures in a closed article are loading=lazy and load only when scrolled near.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 6438148c1216e3383dd7c3d746052292a50850cc
+  .../corporate-venture-building-en-1-mot-1.webp     | Bin 0 -> 141416 bytes
+   .../corporate-venture-building-en-1-mot-10.webp    | Bin 0 -> 123328 bytes
+   .../corporate-venture-building-en-1-mot-11.webp    | Bin 0 -> 101610 bytes
+   .../corporate-venture-building-en-1-mot-12.png     | Bin 0 -> 20447 bytes
+   .../corporate-venture-building-en-1-mot-13.webp    | Bin 0 -> 55998 bytes
+   .../corporate-venture-building-en-1-mot-14.webp    | Bin 0 -> 48702 bytes
+   .../corporate-venture-building-en-1-mot-15.webp    | Bin 0 -> 58478 bytes
+   .../corporate-venture-building-en-1-mot-16.webp    | Bin 0 -> 53474 bytes
+   .../corporate-venture-building-en-1-mot-17.webp    | Bin 0 -> 58542 bytes
+   .../corporate-venture-building-en-1-mot-18.webp    | Bin 0 -> 63124 bytes
+   .../blog/corporate-venture-building-en-1-mot-2.png | Bin 0 -> 51758 bytes
+   .../blog/corporate-venture-building-en-1-mot-3.png | Bin 0 -> 258542 bytes
+   .../corporate-venture-building-en-1-mot-4.webp     | Bin 0 -> 105038 bytes
+   .../corporate-venture-building-en-1-mot-5.webp     | Bin 0 -> 89746 bytes
+   .../blog/corporate-venture-building-en-1-mot-6.png | Bin 0 -> 51136 bytes
+   .../corporate-vent
+  [diff display truncated; inspect the complete diff against the named Pass base]
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Use the `code-audit` skill in phase-gate mode. Do not invent or modify audit logic.
+2. Re-run the cheapest decisive check for every claim you rely on.
+3. GREEN only if there is no Tier 1 or Tier 2 finding and every check passes.
+4. Need testing -> MORE_TESTS; append `## TEST-REQUESTS` with every AUTO/MANUAL request.
+5. Findings -> append ONE `## Audit fixes to implement` section to .WIP\pass-loop-p57\pass-work.md.
+
+PRIOR FINDINGS
+  none recorded before this contact.
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p57\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "b783db54",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.

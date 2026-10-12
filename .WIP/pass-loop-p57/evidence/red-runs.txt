@@ -1,0 +1,42 @@
+== scratch copy: 116 files; page 6cad20cf1d85bb12
+$ node tools/blog-sync.mjs --from /c/Users/aymar/AYS_CODING/code-SOURCINNO_WWW/current sourcinno site- code/.WIP/pass-loop-p57/wix/feed.xml --check
+  BLOG: liste conforme au flux ; 11 article(s) francais (IA 6, Venture Building 4, Startup 1), dont 10 complet(s) (tools/blog/), 9 anglais ignore(s)
+exit 0
+$ node /c/Users/aymar/AYS_CODING/code-SOURCINNO_WWW/current sourcinno site- code/.WIP/pass-loop-p57/fidelity.mjs
+IDENTIQUE corporate-venture-building-4-engie-x-wefound: Wix 15 mots, site 15 mots
+   exclus côté Wix : 1 figure(s) [1 VIDEO], dont avec texte 0 ; 0 fichier(s) joint(s)
+   exclus côté site : 1 légende(s) de figure [▶ Vidéo : témoignage du Corporate Startup Studio d’Engie, co-créé avec WeFound], 0 mention(s) cachée(s) []
+IDENTIQUE corporate-venture-building-en-1-mot: Wix 32 mots, site 32 mots
+   exclus côté Wix : 18 figure(s) [18 IMAGE], dont avec texte 0 ; 4 fichier(s) joint(s) « BCG 2022- Corporate venturing Models.pdf Télécharger PDF • 733KB » « BCG 2018-How-the-Best-Corporate-Venturers-Keep-Getting-Better.pdf Télécharger PDF • 1.57MB » « Bain 2022- The Engine2 imperative.pdf Télécharger PDF • 1.68MB » « McK 2022- new-business-building-in-2022-driving-growth-in-volatile-times_vf.pdf Télécharger PDF • 848KB »
+   exclus côté site : 0 légende(s) de figure [], 5 mention(s) cachée(s) [(nouvel onglet)]
+IDENTIQUE corporate-venture-building-longer-to-startup-quicker-to-scaleup-1: Wix 795 mots, site 795 mots
+   exclus côté Wix : 1 figure(s) [1 IMAGE], dont avec texte 0 ; 0 fichier(s) joint(s)
+   exclus côté site : 0 légende(s) de figure [], 1 mention(s) cachée(s) [(nouvel onglet)]
+IDENTIQUE todo-startup-structure-at-minimum: Wix 398 mots, site 398 mots
+   exclus côté Wix : 1 figure(s) [1 IMAGE], dont avec texte 0 ; 0 fichier(s) joint(s)
+   exclus côté site : 0 légende(s) de figure [], 0 mention(s) cachée(s) []
+FIDELITE C:\Users\aymar\AppData\Local\Temp\claude\C--Users-aymar-AYS-CODING-code-SOURCINNO-WWW\d5311625-ebf1-4a0c-8ad4-3442d556af58\scratchpad\p57\red: 0 article(s) différent(s) ou absent(s) ; 1240 mots identiques
+exit 0
+== D. fidelity: one word removed (« finalement ») from tools/blog/todo-startup-structure-at-minimum.html, page regenerated
+1
+$ node tools/blog-sync.mjs --from /c/Users/aymar/AYS_CODING/code-SOURCINNO_WWW/current sourcinno site- code/.WIP/pass-loop-p57/wix/feed.xml
+BLOG: 11 article(s) francais (IA 6, Venture Building 4, Startup 1), dont 10 complet(s) (tools/blog/), 9 anglais ignore(s) ; page reecrite
+exit 0
+$ node /c/Users/aymar/AYS_CODING/code-SOURCINNO_WWW/current sourcinno site- code/.WIP/pass-loop-p57/fidelity.mjs
+IDENTIQUE corporate-venture-building-4-engie-x-wefound: Wix 15 mots, site 15 mots
+   exclus côté Wix : 1 figure(s) [1 VIDEO], dont avec texte 0 ; 0 fichier(s) joint(s)
+   exclus côté site : 1 légende(s) de figure [▶ Vidéo : témoignage du Corporate Startup Studio d’Engie, co-créé avec WeFound], 0 mention(s) cachée(s) []
+IDENTIQUE corporate-venture-building-en-1-mot: Wix 32 mots, site 32 mots
+   exclus côté Wix : 18 figure(s) [18 IMAGE], dont avec texte 0 ; 4 fichier(s) joint(s) « BCG 2022- Corporate venturing Models.pdf Télécharger PDF • 733KB » « BCG 2018-How-the-Best-Corporate-Venturers-Keep-Getting-Better.pdf Télécharger PDF • 1.57MB » « Bain 2022- The Engine2 imperative.pdf Télécharger PDF • 1.68MB » « McK 2022- new-business-building-in-2022-driving-growth-in-volatile-times_vf.pdf Télécharger PDF • 848KB »
+   exclus côté site : 0 légende(s) de figure [], 5 mention(s) cachée(s) [(nouvel onglet)]
+IDENTIQUE corporate-venture-building-longer-to-startup-quicker-to-scaleup-1: Wix 795 mots, site 795 mots
+   exclus côté Wix : 1 figure(s) [1 IMAGE], dont avec texte 0 ; 0 fichier(s) joint(s)
+   exclus côté site : 0 légende(s) de figure [], 1 mention(s) cachée(s) [(nouvel onglet)]
+DIFFERENT todo-startup-structure-at-minimum: Wix 398 mots, site 397 mots
+   exclus côté Wix : 1 figure(s) [1 IMAGE], dont avec texte 0 ; 0 fichier(s) joint(s)
+   exclus côté site : 0 légende(s) de figure [], 0 mention(s) cachée(s) []
+   première différence au mot 7 : Wix « d'une nouvelle entreprise consiste finalement à atteindre 3 objectifs » / site « d'une nouvelle entreprise consiste à atteindre 3 objectifs : »
+FIDELITE C:\Users\aymar\AppData\Local\Temp\claude\C--Users-aymar-AYS-CODING-code-SOURCINNO-WWW\d5311625-ebf1-4a0c-8ad4-3442d556af58\scratchpad\p57\red: 1 article(s) différent(s) ou absent(s) ; 842 mots identiques
+exit 1
+== E. render against the 6438148 page (the four posts still Wix cards), served on 127.0.0.1:4174
+render exit 1 ; FAIL lines 34 ; RENDER http://127.0.0.1:4174/publications/: failing checks 34, outside requests 0
