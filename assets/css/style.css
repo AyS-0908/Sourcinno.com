@@ -549,6 +549,12 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .chip.is-active { background: var(--teal-dark); border-color: var(--teal-dark); color: var(--white); }
 /* .card est en display: flex, qui l emporte sur [hidden] du navigateur : la puce masque ainsi un article. */
 .card[hidden] { display: none; }
+/* Publications : une colonne à la largeur de lecture ; sur ordinateur, les trois cartes (1/3) à côté du blog (2/3).
+   minmax(0, …) : le lecteur vidéo ne peut pas élargir sa colonne. */
+.pub-cols { display: grid; grid-template-columns: minmax(0, 68ch); gap: var(--space-6) var(--space-4); align-items: start; }
+@media (min-width: 961px) {
+  .pub-cols { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+}
 
 .card__meta { font-size: 0.85rem; color: var(--grey-500); margin-bottom: var(--space-1); }
 .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 var(--space-1); }

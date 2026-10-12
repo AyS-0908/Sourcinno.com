@@ -1,5 +1,5 @@
 (() => {
-  // Filtres du blog Publications : les puces n'existent que si ce script s'exécute ; sans lui, tous les articles restent visibles.
+  // Filtres du blog Publications : une étiquette à la fois, la première choisie à l'ouverture. Les puces n'existent que si ce script s'exécute ; sans lui, tous les articles restent visibles.
   const list = document.getElementById('blog-list');
   if (!list) return;
   const posts = [...list.querySelectorAll('[data-tag]')];
@@ -17,9 +17,9 @@
       other.classList.toggle('is-active', other === chip);
       other.setAttribute('aria-pressed', String(other === chip));
     }
-    for (const post of posts) post.hidden = chip.textContent !== 'Tous' && post.dataset.tag !== chip.textContent;
+    for (const post of posts) post.hidden = post.dataset.tag !== chip.textContent;
   };
-  for (const tag of ['Tous', ...tags]) {
+  for (const tag of tags) {
     const chip = document.createElement('button');
     chip.type = 'button';
     chip.className = 'chip';
