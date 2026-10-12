@@ -17,7 +17,7 @@
  *   --seo      meta Open Graph, longueurs de title/description, sitemap complet, et chaque
  *              Service JSON-LD : url vers une page locale existante, name dans son <title> ou <h1>
  *   --all      tous les groupes, plus les tests executes (tools/portfolio.test.mjs,
- *              tools/test-ia-embeds.mjs)
+ *              tools/test-ia-embeds.mjs, tools/blog-sync.test.mjs)
  *
  * Groupes RETIRES avec leur sujet (en Pass 1, sauf mention) :
  *   --copy     le marqueur TODO-PASS-SUIVANT n'existe plus nulle part dans l'arbre ;
@@ -952,7 +952,7 @@ function checkSeo() {
 
 /* ---------- tests executes (--all) ---------- */
 function runTests() {
-  for (const f of ["tools/portfolio.test.mjs", "tools/test-ia-embeds.mjs"]) {
+  for (const f of ["tools/portfolio.test.mjs", "tools/test-ia-embeds.mjs", "tools/blog-sync.test.mjs"]) {
     try {
       // --experimental-vm-modules : test-ia-embeds simule l import() du SDK avec vm.SyntheticModule.
       note(`${f}: ${runNode(["--experimental-vm-modules", join(ROOT, f)]).trim()}`);

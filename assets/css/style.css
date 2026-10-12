@@ -954,6 +954,28 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 @media (max-width: 640px) {
   .blog-body { margin: 0 var(--space-2) var(--space-2); }
 }
+/* Tableau d'un article : toute la largeur de la carte, première ligne et première colonne en en-têtes. */
+.blog-body > table { max-width: none; }
+.blog-body table { width: 100%; table-layout: fixed; border-collapse: collapse; background: var(--white); }
+.blog-body tr > :first-child { width: 7.5rem; }
+.blog-body th, .blog-body td { padding: var(--space-1) 0.75rem; border: 1px solid var(--grey-300); vertical-align: top; text-align: left; overflow-wrap: break-word; }
+.blog-body th { background: var(--grey-100); color: var(--text); font-weight: 700; line-height: 1.4; }
+.blog-body td > * { margin: 0; }
+.blog-body td > * + * { margin-top: var(--space-1); }
+.blog-body td ul, .blog-body td ol { padding-left: 1.15rem; }
+/* Téléphone, sans script : chaque ligne devient un bloc — son titre, puis chaque cellule sous le titre de sa colonne
+   (attribut data-label de la cellule). La ligne des titres de colonne est masquée : ils sont répétés au-dessus de chaque cellule. */
+@media (max-width: 640px) {
+  .blog-body table, .blog-body tbody, .blog-body tr, .blog-body th, .blog-body td { display: block; }
+  .blog-body table { background: none; }
+  .blog-body tr { border: 1px solid var(--grey-300); border-radius: var(--radius); background: var(--white); overflow: hidden; }
+  .blog-body tr:has(> th[scope="col"]) { display: none; }
+  .blog-body tr + tr { margin-top: var(--space-2); }
+  .blog-body tr > :first-child { width: auto; }
+  .blog-body th, .blog-body td { border: 0; }
+  .blog-body td + td { border-top: 1px solid var(--border); }
+  .blog-body td[data-label]::before { content: attr(data-label); display: block; margin-bottom: var(--space-1); color: var(--teal-dark); font-size: 0.85rem; font-weight: 700; line-height: 1.4; }
+}
 
 /* ---------- Accueil : parcours vertical, ouvertures natives ---------- */
 #demarche .chevrons { position: relative; display: grid; gap: var(--space-2); list-style: none; counter-reset: stage; margin: 0; padding: 0 0 0 4rem; }

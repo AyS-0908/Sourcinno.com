@@ -17,8 +17,16 @@
  * Seules y sont admises, bien imbriquees, les balises de FORMAT (plus bas), ecrites a l identique :
  * p, h4, ul, ol, li, strong, em sans attribut ; a href="https://…" target="_blank" rel="noopener" ;
  * span.visually-hidden ; img de /assets/img/blog/ (fichier present) avec alt, width, height, loading ;
- * la figure video du site (figure.band-figure, button.video-launch, figcaption). Le lien entre un
- * lanceur et sa legende, et la mention « (nouvel onglet) », sont tenus par tools/check.mjs, pas ici.
+ * la figure video du site (figure.band-figure, button.video-launch, figcaption) ; pour un tableau :
+ * table, tr, td sans attribut, th scope="col" ou scope="row", td data-label="…" (titre de sa colonne,
+ * que la feuille de style affiche au-dessus de la cellule sur telephone ; le script ne verifie pas
+ * qu il reprend ce titre). Aucune autre balise de tableau (thead, tbody, colgroup, caption) ni
+ * attribut (class, style, id, colspan…). « Bien imbriquees » = chaque fermeture ferme la derniere
+ * balise ouverte ; le script ne verifie pas quelle balise peut en contenir quelle autre (un td hors
+ * d un tr passe). Le lien entre un lanceur et sa legende, et la mention « (nouvel onglet) », sont
+ * tenus par tools/check.mjs, pas ici. tools/blog-sync.test.mjs (lance par `node tools/check.mjs --all`)
+ * execute ce script sur des arbres jetables : par regle de FORMAT, ses balises admises et une liste
+ * de balises refusees ; les deux sorties ; les refus de fichier cites plus bas.
  *
  * USAGE
  *   node tools/blog-sync.mjs                    lit le flux en ligne et recopie la liste
@@ -53,6 +61,10 @@ const FORMAT = [
   /^<img src="\/assets\/img\/blog\/[\w.-]+" alt="[^"<>]+" width="\d+" height="\d+" loading="lazy">$/,
   /^<figure class="band-figure">$/,
   /^<button class="video-launch" type="button" data-video="[\w-]+" aria-label="[^"<>]+">$/,
+  /^<\/(?:table|tr|th|td)>$/,
+  /^<(?:table|tr|td)>$/,
+  /^<th scope="(?:col|row)">$/,
+  /^<td data-label="[^"<>]+">$/,
 ];
 
 const die = (msg) => { console.error("ECHEC blog-sync : " + msg + " — rien n est ecrit"); process.exit(1); };
