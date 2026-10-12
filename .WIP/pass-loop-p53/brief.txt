@@ -1,0 +1,137 @@
+=== DELTA CONFIRMATION BRIEF - pass p53 - review contact 2 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): claude-opus-5-5 @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are the SAME independent auditor who requested the newest fixes. Confirm only that delta. Do not restart the audit and do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p53\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: ONLY the delta since the last audit: DELTA after FIX A-001 only: publications/index.html line 77, class 'section reveal' became 'section' (product commit after d200a53, see git log -1; reviewer's recommended option: the two-block section is always shown, the scroll fade-in is gone on this page only). Nothing else changed since d200a53. Decisive checks: the A-001 test (Coder's script .WIP/pass-loop-p53/evidence/firstscreen.mjs: no-scroll load at 375x553, 375x635, 360x640, 320x568, 1200x900) and Done When 1-4 still green. Same reviewer rules as contact 1: scratch only under the session scratchpad auditor-p53 folder, network 127.0.0.1 and Google Fonts only, no blog-sync, no fetch/push/deploy; site served on http://127.0.0.1:4173.. The earlier round already cleared the rest - do not re-audit it and do not re-run its checks.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 17f0a005c40658175d48f59740d82aa3e7b82cd2
+  404.html                                          |  2 +-
+   ai-business.html                                  |  2 +-
+   assets/css/style.css                              |  6 ++++++
+   assets/js/blog.js                                 |  6 +++---
+   contact/index.html                                |  2 +-
+   index.html                                        |  2 +-
+   mentions-legales/index.html                       |  2 +-
+   offre-ia-business/index.html                      |  2 +-
+   offre-strategie-organisation-processus/index.html |  2 +-
+   offre-venture-building/index.html                 |  2 +-
+   politique-confidentialite/index.html              |  2 +-
+   portfolio/index.html                              |  2 +-
+   prototypes/index.html                             |  2 +-
+   publications/index.html                           | 20 ++++++++++----------
+   service-ia-business/index.html                    |  2 +-
+   service-strategie-transformation/index.html       |  2 +-
+   service-venture-building/index.html               |  2 +-
+   venture-building.html                             |  2 +-
+   18 files changed, 34 insertions(+), 28 deletions(-)
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Do NOT rerun `code-audit`; its valid earlier verdict already cleared the rest.
+2. Inspect only the newest fix section below and the files named under SCOPE.
+3. Re-run each decisive check named by that fix. GREEN only if the requested fix is complete, every check passes, and the delta introduced no Tier 1 or Tier 2 issue.
+4. If it still needs work, append ONE new `## Audit fixes to implement` section to .WIP\pass-loop-p53\pass-work.md.
+
+PRIOR FINDINGS
+Confirm the requested fixes and their affected behavior:
+## Audit fixes to implement — 2026-10-12
+BLOCKING_STATUS: NON_BLOCKING (no Tier 1; one Tier 2, so no GREEN at contact 1)
+READINESS: READY_WITH_FIXES
+REASON: Done When 1–4 are all met on the auditor's own runs, but the single tall `.reveal` section leaves the first screen blank at load on short phone screens where 17f0a00 showed the heading.
+NATIVE CHECKS: `node tools/check.mjs --all` PASS (exit 0, 16 pages, both executed tests PASS) · `node tools/version.mjs --check` PASS · `node tools/shell.mjs --check` PASS · `git diff --check 17f0a00` PASS · `grep -c Tous assets/js/blog.js` PASS (0) · marker command PASS (`IDENTIQUE 5299`) · `git diff 17f0a00 -- assets/css/style.css` PASS (one hunk `@@ -551,0 +552,6`, no line removed or changed)
+SCOPE: CLEAN — wrapper, six CSS lines, `blog.js` without « Tous », `?v=` stamps: all requested by PLAN § 53; `.measure` dropped from three elements of the page = requested (Work 2).
+COVERAGE: 18/18 changed files read — skipped: none (15 of them are one stamp line each, read in the diff: 15 identical `style.css?v=36f36f6d` → `42ed7c26` pairs)
+
+### A-001 | Tier 2 | MEDIUM | `publications/index.html:77`
+- issue: the two former `.reveal` sections are now ONE `.reveal` section about 2 660 px high in one column, and `site.js` shows a block only once 8 % of its height is on screen (`threshold: 0.08`, bottom margin −8 %), so at load, JavaScript on, motion allowed, no scroll, the whole section stays at opacity 0 and the screen under the hero is blank until a 40–120 px scroll — measured blank band: 375×635 = 252 px (40 % of the screen), 375×553 = 170 px, 360×640 = 226 px, 320×568 = 154 px; unchanged after a 6 s wait; 17f0a00 shows « À lire et à suivre » and the top of the first card at all four sizes (captures `head-` / `base-firstscreen-375x635.png`); invisible in the MANUAL-1 captures, which are full-page and taken after a scroll through the page.
+- fix: make the reveal of the first block independent of the height of the whole two-block section, layout untouched — option with the auditor's reco: take `.reveal` off this one section (content always shown, as with reduced motion; the fade-in on this page goes: owner/Planner veto); alternative that keeps the fade: `.reveal` on smaller units (for instance the two `.section__head`, or head + list separately); NOT enough: `.reveal` moved to the two column blocks (measured on a scratch copy: still hidden at 375×553 and 320×568).
+- test: headless Chrome, scripts on, `prefers-reduced-motion: no-preference`, `/publications/` loaded and NOT scrolled (no page walk before measuring): at 375×553, 375×635, 360×640 and 320×568 the h2 « À lire et à suivre » and all its ancestors are at opacity 1, and at 1200×900 both columns are shown; red = the same probe on d200a53 reports the section hidden; then Done When 1–4 re-run green (scripts off still 11 posts) and the three MANUAL-1 views keep the same layout.
+
+Auditor notes, advisory only (Tier 3, no action needed for green, outside the fixes):
+- Done When 2–4 re-rendered by the auditor with an own script (not `render.mjs`): 1440/1200/961 two columns (tops equal, blog = 2.000 × cards, no overlap, nothing leaving its column), 960/768/375/320 one column, no right edge past the emulated width, launcher 0.5625, ▶ 38×38; chips IA / Venture Building / Startup, 6 → 4 → 1 by real Tab + Enter/Space and by mouse, re-activation never empties, never 11 and never 0; scripts off 1200 and 375: no chip, 11 posts, same tracks, BCI caption link on screen and top-most. Detectors proven alive on a run-time mutation. `blog.js` branches the page cannot reach today, re-run on a mutated list: one tag → no chip and 11 posts; IA absent → Venture Building selected; unknown tag → chip appended last. Outside requests: 0.
+- Backlog for the Planner (pre-existing class, `site.js` is outside this Pass's bounds): a `.reveal` block higher than 11.5 screens can never reach 8 % and would stay invisible with scripts on; today's section is 2 545 px at 568×320 against a 3 680 px limit, and the list grows with the feed.
+- Root `PLAN.md` § 53 heading already reads « Status Done » (uncommitted root edit) while this review is contact 1: it must describe the real state when it is committed.
+- Auditor scratch (scripts, logs, captures, base and variant copies): session scratchpad `auditor-p53\`; nothing written in the product tree except this section and the verdict below.
+
+```json
+{
+  "token": "25b9a76e",
+  "verdict": "FIX",
+  "confidence": "high",
+  "evidence": [
+    {"cmd": "node tools/check.mjs --all", "result": "PASS"},
+    {"cmd": "node tools/version.mjs --check", "result": "PASS"},
+    {"cmd": "node tools/shell.mjs --check", "result": "PASS"},
+    {"cmd": "git diff --check 17f0a00", "result": "PASS"},
+    {"cmd": "git diff --stat 17f0a00 -- . ':(exclude).WIP' (18 files: 3 sources + stamp lines only)", "result": "PASS"},
+    {"cmd": "git diff -U0 17f0a00 -- assets/css/style.css (one hunk -551,0 +552,6, nothing removed)", "result": "PASS"},
+    {"cmd": "grep -c Tous assets/js/blog.js (0)", "result": "PASS"},
+    {"cmd": "marker command of prompts/pass53-coder.md (IDENTIQUE 5299)", "result": "PASS"},
+    {"cmd": "P48_BASE=http://127.0.0.1:4173 node auditor-p53/audit.mjs geom chips nojs (own render: 7 widths scripts on, chips by keyboard and mouse, scripts off at 1200 and 375; 0 failing, 0 outside requests)", "result": "PASS"},
+    {"cmd": "P48_BASE=http://127.0.0.1:4173 node auditor-p53/audit.mjs red edge (detectors see a run-time mutation; blog.js one-tag, IA-absent and unknown-tag branches)", "result": "PASS"},
+    {"cmd": "node auditor-p53/firstscreen.mjs on d200a53 (4173) and on a 17f0a00 export (4175): at load without scroll, section hidden at 375x635, 375x553, 360x640, 320x568 on d200a53, shown on 17f0a00", "result": "FAIL"}
+  ],
+  "opened_fix_section": true
+}
+```
+
+AUDIT r1 COST: 180,156 tokens / 11 min 15 s (first leg, cut by the session usage limit before any verdict) then 209,966 tokens / 5 min 0 s reported at the end of the resumed leg; verdict FIX (A-001, Tier 2)
+INVOCATION: a629bb2a177b4598e (same auditor resumed with the same brief and token after the cut)
+USAGE BASIS: unknown (Agent completion notices `subagent_tokens`; whether the second figure includes the first is not stated)
+
+## CHANGED r2
+- `publications/index.html:77`: `class="section reveal"` → `class="section"` (A-001, the reviewer's recommended option: the two-block section is always shown; the fade-in on scroll is gone on this page only). Product commit 1166b7a.
+- Evidence: `.WIP/pass-loop-p53/evidence/firstscreen.mjs` (new), render.txt and the five captures rewritten by the re-run.
+
+## TEST-RESULTS r2
+TREE: ca6687727cd211b3
+CMD: `node .WIP/pass-loop-p53/evidence/firstscreen.mjs` exit 0; `node .WIP/pass-loop-p53/evidence/render.mjs` exit 0; `node tools/check.mjs --all` exit 0; `node tools/version.mjs --check` 0; `node tools/shell.mjs --check` 0; `git diff --check 17f0a00` 0; `grep -c "Tous" assets/js/blog.js` 0; marker command `IDENTIQUE 5299`
+RESULT: PASS — A-001 test green, Done When 1–4 green again (render: failing checks 0, outside requests 0; 16 pages).
+NOTES: firstscreen, loaded and not scrolled, scripts on, motion allowed: 375x553, 375x635, 360x640, 320x568 and 1200x900 → both h2 and every ancestor at opacity 1 (first h2 top 413–465 px). Red run: the same script on the d200a53 page (scratch copy, 127.0.0.1:4174) → exit 1, the four phone sizes FAIL (both h2 hidden), 1200x900 ok.
+ Scope still: outside the three source files, 0 non-`?v=` changed line since 17f0a00. Layout of the three owner views unchanged (same capture sizes 1200x2301, 1200x2034, 375x3904; render geometry identical).
+
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p53\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "300cc83f",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.

@@ -1,0 +1,97 @@
+== JS on W=1440
+   ok   wrapper holds 2 blocks, the second is #blog (2, « blog »)
+   ok   section opacity 1
+   ok   cards order ["Du PIB au BCI","Engagez-vous 2.0","Publications LinkedIn"]
+   ok   two columns: tops 464.9 / 464.9 (± 1)
+   ok   blog 720.0 px = 2.000 × cards 360.0 px (2 ± 3 %), blog left 548.5 > cards right 516.5
+   ok   elements past 1440 px: 0
+   ok   launcher 294.0x165.4 ratio 0.5625 inside its card (156.5–516.5)
+   ok   ▶ 38.0x38.0
+   FAIL chips ["Tous","IA","Venture Building","Startup"]
+   FAIL on load pressed ["Tous"], shown 11 of 11 ["IA","Venture Building","Startup"]
+== JS on W=1200
+   ok   wrapper holds 2 blocks, the second is #blog (2, « blog »)
+   ok   section opacity 1
+   ok   cards order ["Du PIB au BCI","Engagez-vous 2.0","Publications LinkedIn"]
+   ok   two columns: tops 464.9 / 464.9 (± 1)
+   ok   blog 720.0 px = 2.000 × cards 360.0 px (2 ± 3 %), blog left 428.5 > cards right 396.5
+   ok   elements past 1200 px: 0
+   ok   launcher 294.0x165.4 ratio 0.5625 inside its card (36.5–396.5)
+   ok   ▶ 38.0x38.0
+   FAIL chips ["Tous","IA","Venture Building","Startup"]
+   FAIL on load pressed ["Tous"], shown 11 of 11 ["IA","Venture Building","Startup"]
+   FAIL Tab ×14 + Enter on « Venture Building »: pressed ["IA"], shown 6 ["IA"]
+   FAIL Tab ×1 + Enter on « Startup »: pressed ["Venture Building"], shown 4 ["Venture Building"]
+== JS on W=961
+   ok   wrapper holds 2 blocks, the second is #blog (2, « blog »)
+   ok   section opacity 1
+   ok   cards order ["Du PIB au BCI","Engagez-vous 2.0","Publications LinkedIn"]
+   ok   two columns: tops 453.5 / 453.5 (± 1)
+   ok   blog 577.3 px = 2.000 × cards 288.7 px (2 ± 3 %), blog left 344.7 > cards right 312.7
+   ok   elements past 961 px: 0
+   ok   launcher 222.7x125.2 ratio 0.5625 inside its card (24.0–312.7)
+   ok   ▶ 38.0x38.0
+   FAIL chips ["Tous","IA","Venture Building","Startup"]
+   FAIL on load pressed ["Tous"], shown 11 of 11 ["IA","Venture Building","Startup"]
+== JS on W=960
+   ok   wrapper holds 2 blocks, the second is #blog (2, « blog »)
+   ok   section opacity 1
+   ok   cards order ["Du PIB au BCI","Engagez-vous 2.0","Publications LinkedIn"]
+   ok   one column: blog top 1648.8 ≥ last card bottom 1576.8, lefts 24.0 / 24.0, width 680.0
+   ok   elements past 960 px: 0
+   ok   launcher 614.0x345.4 ratio 0.5625 inside its card (24.0–704.0)
+   ok   ▶ 38.0x38.0
+   FAIL chips ["Tous","IA","Venture Building","Startup"]
+   FAIL on load pressed ["Tous"], shown 11 of 11 ["IA","Venture Building","Startup"]
+== JS on W=768
+   ok   wrapper holds 2 blocks, the second is #blog (2, « blog »)
+   ok   section opacity 1
+   ok   cards order ["Du PIB au BCI","Engagez-vous 2.0","Publications LinkedIn"]
+   ok   one column: blog top 1635.1 ≥ last card bottom 1563.1, lefts 24.0 / 24.0, width 680.0
+   ok   elements past 768 px: 0
+   ok   launcher 614.0x345.4 ratio 0.5625 inside its card (24.0–704.0)
+   ok   ▶ 38.0x38.0
+   FAIL chips ["Tous","IA","Venture Building","Startup"]
+   FAIL on load pressed ["Tous"], shown 11 of 11 ["IA","Venture Building","Startup"]
+== JS on W=375
+   ok   wrapper holds 2 blocks, the second is #blog (2, « blog »)
+   ok   section opacity 1
+   ok   cards order ["Du PIB au BCI","Engagez-vous 2.0","Publications LinkedIn"]
+   ok   one column: blog top 1548.8 ≥ last card bottom 1496.8, lefts 24.0 / 24.0, width 327.0
+   ok   elements past 375 px: 0
+   ok   launcher 261.0x146.8 ratio 0.5625 inside its card (24.0–351.0)
+   ok   ▶ 38.0x38.0
+   FAIL chips ["Tous","IA","Venture Building","Startup"]
+   FAIL on load pressed ["Tous"], shown 11 of 11 ["IA","Venture Building","Startup"]
+== JS on W=320
+   ok   wrapper holds 2 blocks, the second is #blog (2, « blog »)
+   ok   section opacity 1
+   ok   cards order ["Du PIB au BCI","Engagez-vous 2.0","Publications LinkedIn"]
+   ok   one column: blog top 1603.5 ≥ last card bottom 1551.5, lefts 24.0 / 24.0, width 272.0
+   ok   elements past 320 px: 0
+   ok   launcher 206.0x115.9 ratio 0.5625 inside its card (24.0–296.0)
+   ok   ▶ 38.0x38.0
+   FAIL chips ["Tous","IA","Venture Building","Startup"]
+   FAIL on load pressed ["Tous"], shown 11 of 11 ["IA","Venture Building","Startup"]
+== JS off W=1200
+   ok   wrapper holds 2 blocks, the second is #blog (2, « blog »)
+   ok   section opacity 1
+   ok   cards order ["Du PIB au BCI","Engagez-vous 2.0","Publications LinkedIn"]
+   ok   two columns: tops 464.9 / 464.9 (± 1)
+   ok   blog 720.0 px = 2.000 × cards 360.0 px (2 ± 3 %), blog left 428.5 > cards right 396.5
+   ok   elements past 1200 px: 0
+   ok   chips 0
+   ok   posts with a box 11 of 11
+   ok   same columns as with scripts: cards x 36.5 w 360.0, blog x 428.5 w 720.0
+   ok   BCI caption link box 181.0x20.0 (launcher display none)
+== JS off W=375
+   ok   wrapper holds 2 blocks, the second is #blog (2, « blog »)
+   ok   section opacity 1
+   ok   cards order ["Du PIB au BCI","Engagez-vous 2.0","Publications LinkedIn"]
+   ok   one column: blog top 1402.0 ≥ last card bottom 1350.0, lefts 24.0 / 24.0, width 327.0
+   ok   elements past 375 px: 0
+   ok   chips 0
+   ok   posts with a box 11 of 11
+   ok   same columns as with scripts: cards x 24.0 w 327.0, blog x 24.0 w 327.0
+   ok   BCI caption link box 181.0x20.0 (launcher display none)
+RENDER http://127.0.0.1:4174/publications/: failing checks 16, outside requests 0
