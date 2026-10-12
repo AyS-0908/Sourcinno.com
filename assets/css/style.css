@@ -811,8 +811,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 #references .logo-band img[src$="guidemichelin_nb.png"] { height: 27px; } /* owner 2026-10-08: -20 % */
 /* owner 2026-10-12: hauteurs réglées sur le dessin réel de chaque logo (les fichiers n'ont pas les mêmes marges internes). */
 #references .logo-band img[src$="logo_mazars.png"] { height: 18px; }
-#references .logo-band img[src$="ibanfirst_nb.png"] { height: 48px; }
-#references .logo-band img[src$="particeep_nb.png"] { height: 38px; }
+#references .logo-band img[src$="ibanfirst_nb.png"] { height: 53px; }
+#references .logo-band img[src$="particeep_nb.png"] { height: 40px; }
 #references .logo-band img[src$="yoopala_nb.png"] { height: 42px; }
 #references .logo-band img[src$="parisnco_nb.png"] { height: 36px; }
 #references .logo-band img[src$="ioi_nb.png"] { height: 30px; }
