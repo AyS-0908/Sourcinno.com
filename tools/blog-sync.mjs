@@ -9,16 +9,29 @@
  * Plus recent d abord ; date en francais (table des mois, jour de Paris, sans dependre de la machine).
  * La page garde ses fins de ligne (CRLF ou LF), seule la liste entre les marqueurs change.
  *
+ * ARTICLES COMPLETS. Un article dont tools/blog/<nom>.html existe est ecrit en depliant
+ * (details.disclosure--card : etiquette, titre et date dans le resume, le fichier dans div.blog-body) ;
+ * sans fichier, il garde sa carte et son lien vers Wix. <nom> = dernier segment du lien de l article,
+ * decode, sans accents, en minuscules, toute suite hors a-z0-9 remplacee par "-".
+ * Le fichier est insere tel quel (HTML, non echappe), reindente ; ses fins de ligne ne comptent pas.
+ * Seules y sont admises, bien imbriquees, les balises de FORMAT (plus bas), ecrites a l identique :
+ * p, h4, ul, ol, li, strong, em sans attribut ; a href="https://…" target="_blank" rel="noopener" ;
+ * span.visually-hidden ; img de /assets/img/blog/ (fichier present) avec alt, width, height, loading ;
+ * la figure video du site (figure.band-figure, button.video-launch, figcaption). Le lien entre un
+ * lanceur et sa legende, et la mention « (nouvel onglet) », sont tenus par tools/check.mjs, pas ici.
+ *
  * USAGE
  *   node tools/blog-sync.mjs                    lit le flux en ligne et recopie la liste
  *   node tools/blog-sync.mjs --check            n ecrit rien, sort 1 si la liste differe du flux
  *   node tools/blog-sync.mjs --from <fichier>   lit une copie locale du flux (combinable avec --check)
  * Sortie 1 sans rien ecrire : flux injoignable (statut HTTP cite) ou illisible, aucun article
  * francais, lien ni francais ni anglais, categorie absente, inconnue ou multiple sur un article
- * francais (article nomme), date illisible, marqueur absent ou en double.
+ * francais (article nomme), date illisible, marqueur absent ou en double ; dans tools/blog/ (fichier
+ * nomme) : balise ou attribut hors format, imbrication fausse, image absente, fichier vide, fichier qui
+ * n est pas un .html, fichier dont le nom ne correspond a aucun article francais du flux.
  * `node tools/check.mjs` ne lance PAS ce script (il reste hors ligne) : le lancer avant un deploiement.
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -30,6 +43,17 @@ const END = "<!-- blog-sync:fin -->";
 const TAGS = { "⚡IA": "IA", "VENTURE BUILDING": "Venture Building", "STARTUP": "Startup" };
 const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 const INDENT = "      ";
+const BLOG = "tools/blog";
+const FORMAT = [
+  /^<\/(?:p|h4|ul|ol|li|strong|em|a|span|figure|figcaption|button)>$/,
+  /^<(?:p|h4|ul|ol|li|strong|em|figcaption)>$/,
+  /^<a href="https:\/\/[^"\s<>]+" target="_blank" rel="noopener">$/,
+  /^<span class="visually-hidden">$/,
+  /^<span aria-hidden="true">$/,
+  /^<img src="\/assets\/img\/blog\/[\w.-]+" alt="[^"<>]+" width="\d+" height="\d+" loading="lazy">$/,
+  /^<figure class="band-figure">$/,
+  /^<button class="video-launch" type="button" data-video="[\w-]+" aria-label="[^"<>]+">$/,
+];
 
 const die = (msg) => { console.error("ECHEC blog-sync : " + msg + " — rien n est ecrit"); process.exit(1); };
 const argv = process.argv.slice(2);
@@ -89,17 +113,55 @@ for (const [n, item] of items.entries()) {
 if (!posts.length) die("aucun article francais dans le flux");
 posts.sort((a, b) => b.date - a.date);
 
+/* Articles complets de tools/blog/ : chaque fichier doit etre au format et correspondre a un article. */
+const slug = (link) => decodeURIComponent(link.split("/").pop()).normalize("NFD").replace(/[̀-ͯ]/g, "")
+  .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+function fullText(rel) {
+  const text = readFileSync(join(ROOT, rel), "utf8").replace(/\r\n/g, "\n");
+  const open = [];
+  for (const [t] of text.matchAll(/<[^>]*>?/g)) {
+    if (!FORMAT.some((f) => f.test(t))) die(`${rel} : balise ou attribut hors format « ${t.slice(0, 80)} »`);
+    const name = t.match(/^<\/?(\w+)/)[1];
+    if (name === "img") { const src = t.match(/src="([^"]*)"/)[1]; if (!existsSync(join(ROOT, src))) die(`${rel} : image absente ${src}`); }
+    else if (t[1] !== "/") open.push(name);
+    else if (open.pop() !== name) die(`${rel} : </${name}> ferme une autre balise`);
+  }
+  if (open.length) die(`${rel} : <${open.pop()}> non ferme`);
+  const lines = text.split("\n").map((l) => l.trimEnd()).filter(Boolean);
+  if (!lines.length) die(`${rel} : fichier vide`);
+  return lines;
+}
+const files = existsSync(join(ROOT, BLOG)) ? readdirSync(join(ROOT, BLOG)).sort() : [];
+for (const f of files) {
+  if (!f.endsWith(".html")) die(`${BLOG}/${f} : fichier inattendu (seuls des .html d article sont admis)`);
+  const post = posts.find((p) => slug(p.link) === f.slice(0, -5));
+  if (!post) die(`${BLOG}/${f} : aucun article francais du flux ne porte ce nom (attendus : ${posts.map((p) => slug(p.link)).join(", ")})`);
+  post.text = fullText(`${BLOG}/${f}`);
+}
+
 /* Jour calendaire de Paris (Intl de Node, sans dependance) : 22:00 GMT en ete = minuit le lendemain. */
 const PARIS = new Intl.DateTimeFormat("en", { timeZone: "Europe/Paris", year: "numeric", month: "numeric", day: "numeric" });
 const paris = (d) => Object.fromEntries(PARIS.formatToParts(d).filter((x) => x.type !== "literal").map((x) => [x.type, Number(x.value)]));
 const pad = (n) => String(n).padStart(2, "0");
-const block = posts.map((p) => ({ ...p, ...paris(p.date) })).map((p) => [
+const time = (p) => `<time datetime="${p.year}-${pad(p.month)}-${pad(p.day)}">${p.day === 1 ? "1er" : p.day} ${MOIS[p.month - 1]} ${p.year}</time>`;
+const block = posts.map((p) => ({ ...p, ...paris(p.date) })).map((p) => (p.text ? [
+  `<details class="disclosure disclosure--card" data-tag="${attr(p.tag)}">`,
+  `  <summary>`,
+  `    <span class="tags"><span class="tag">${html(p.tag)}</span></span>`,
+  `    <h3>${html(p.title)}</h3>`,
+  `    <span class="card__meta">${time(p)}</span>`,
+  `  </summary>`,
+  `  <div class="blog-body">`,
+  ...p.text.map((l) => "    " + l),
+  `  </div>`,
+  `</details>`,
+] : [
   `<article class="card" data-tag="${attr(p.tag)}">`,
   `  <p class="tags"><span class="tag">${html(p.tag)}</span></p>`,
   `  <h3><a href="${attr(p.link)}" target="_blank" rel="noopener">${html(p.title)} <span aria-hidden="true">→</span><span class="visually-hidden"> (nouvel onglet)</span></a></h3>`,
-  `  <p class="card__meta"><time datetime="${p.year}-${pad(p.month)}-${pad(p.day)}">${p.day === 1 ? "1er" : p.day} ${MOIS[p.month - 1]} ${p.year}</time></p>`,
+  `  <p class="card__meta">${time(p)}</p>`,
   `</article>`,
-].map((l) => INDENT + l).join("\n"));
+]).map((l) => INDENT + l).join("\n"));
 const wanted = "\n" + block.join("\n") + "\n" + INDENT;
 
 const page = readFileSync(PAGE, "utf8");
@@ -114,7 +176,7 @@ if (j < i) die(`publications/index.html : ${END} avant ${START}`);
 const current = page.slice(i, j);
 const next = wanted.replace(/\n/g, eol);
 const counts = Object.values(TAGS).map((t) => `${t} ${posts.filter((p) => p.tag === t).length}`).join(", ");
-const summary = `${posts.length} article(s) francais (${counts}), ${english} anglais ignore(s)`;
+const summary = `${posts.length} article(s) francais (${counts}), dont ${files.length} complet(s) (${BLOG}/), ${english} anglais ignore(s)`;
 
 if (CHECK_ONLY) {
   if (current !== next) {

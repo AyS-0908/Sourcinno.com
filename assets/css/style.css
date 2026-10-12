@@ -935,6 +935,26 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .disclosure--card .bullets { margin: 0 var(--space-2) var(--space-2); }
 }
 
+/* ---------- Publications : article complet dans un dépliant du blog (écrit par tools/blog-sync.mjs) ---------- */
+/* Résumé : étiquette, titre, date empilés ; le "+" sur la ligne du titre. */
+#blog-list .disclosure--card summary::after { grid-row: 2; }
+#blog-list .disclosure--card .tags,
+#blog-list .disclosure--card .card__meta { margin: 0; font-weight: 400; }
+/* Corps : même retrait et même filet que .bullets ; texte à la largeur de lecture, image jamais plus large que la carte. */
+.blog-body { margin: 0 var(--space-3) var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+.blog-body > * { margin: 0; }
+.blog-body > * + * { margin-top: var(--space-2); }
+.blog-body > :not(img) { max-width: 68ch; }
+.blog-body h4 { margin-top: var(--space-3); color: var(--text); font-size: 1rem; line-height: 1.4; }
+.blog-body ul, .blog-body ol { padding-left: 1.4rem; }
+.blog-body li + li { margin-top: 0.4rem; }
+.blog-body a { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+.blog-body > img { border: 1px solid var(--border); border-radius: var(--radius); }
+.blog-body .band-figure { max-width: 480px; text-align: left; }
+@media (max-width: 640px) {
+  .blog-body { margin: 0 var(--space-2) var(--space-2); }
+}
+
 /* ---------- Accueil : parcours vertical, ouvertures natives ---------- */
 #demarche .chevrons { position: relative; display: grid; gap: var(--space-2); list-style: none; counter-reset: stage; margin: 0; padding: 0 0 0 4rem; }
 #demarche .chevrons::before { content: ""; position: absolute; left: 1rem; top: 1.5rem; bottom: 1.5rem; width: 2px; background: var(--border); }
