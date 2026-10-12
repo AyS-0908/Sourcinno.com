@@ -166,7 +166,9 @@ p  { margin: 0 0 var(--space-2); }
   min-height: var(--header-h);
 }
 .site-logo { display: flex; align-items: center; gap: 0.6rem; flex: 0 0 auto; }
-.site-logo img { height: 40px; width: auto; }
+.site-logo img { height: 65px; width: auto; }
+/* De 861 à 960 px le menu complet ne laisse pas la place : logo à 40 px (owner 2026-10-11). */
+@media (min-width: 861px) and (max-width: 960px) { .site-logo img { height: 40px; } }
 
 .site-nav { margin-left: auto; }
 .site-nav__list {
@@ -804,10 +806,10 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 #besoin .lead { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.25; font-weight: 700; color: var(--navy); }
 #references { padding-block: var(--space-4); }
 #references .section__head { margin-bottom: var(--space-3); }
-#references h2 { font-size: 1.15rem; }
 #references .logo-band { gap: var(--space-2) var(--space-4); }
 #references .logo-band img { height: 34px; }
 #references .logo-band img[src$="guidemichelin_nb.png"] { height: 27px; } /* owner 2026-10-08: -20 % */
+#references .logo-band img[src$="logo_mazars.png"] { height: 22px; } /* owner 2026-10-11: pas plus grand que les autres */
 
 /* ---------- Cartes de service avec image de fond — PRD §5.1 section 3 ----------
    Le texte ne repose JAMAIS sur la photo : un voile bleu nuit opaque (0,92 en
