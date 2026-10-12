@@ -809,7 +809,15 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 #references .logo-band { gap: var(--space-2) var(--space-4); }
 #references .logo-band img { height: 34px; }
 #references .logo-band img[src$="guidemichelin_nb.png"] { height: 27px; } /* owner 2026-10-08: -20 % */
-#references .logo-band img[src$="logo_mazars.png"] { height: 22px; } /* owner 2026-10-11: pas plus grand que les autres */
+/* owner 2026-10-12: hauteurs réglées sur le dessin réel de chaque logo (les fichiers n'ont pas les mêmes marges internes). */
+#references .logo-band img[src$="logo_mazars.png"] { height: 18px; }
+#references .logo-band img[src$="ibanfirst_nb.png"] { height: 48px; }
+#references .logo-band img[src$="particeep_nb.png"] { height: 38px; }
+#references .logo-band img[src$="yoopala_nb.png"] { height: 42px; }
+#references .logo-band img[src$="parisnco_nb.png"] { height: 36px; }
+#references .logo-band img[src$="ioi_nb.png"] { height: 30px; }
+#references .logo-band img[src$="tydex_nb.png"] { height: 44px; }
+#references .logo-band img[src$="emlyon_nb.png"] { height: 30px; }
 
 /* ---------- Cartes de service avec image de fond — PRD §5.1 section 3 ----------
    Le texte ne repose JAMAIS sur la photo : un voile bleu nuit opaque (0,92 en
