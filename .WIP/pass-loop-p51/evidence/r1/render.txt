@@ -1,0 +1,73 @@
+== contact-1200-js /contact/ W=1200 JS=on page 1200x2026 -> contact-1200-js.png
+   section 0 hero hero--page hero--pattern h2=null bg=rgba(0, 0, 0, 0) h=316 inView=true opacity=1 topmost=true ok
+   section 1 section reveal is-visible h2="Coordonnées" bg=rgba(0, 0, 0, 0) h=1236 inView=true opacity=1 topmost=true ok
+   overflow: innerWidth 1200 scrollWidth 1185 elements past 1200: 0
+   contact: form shown=true fallback shown=false fallback first in column=true button « Envoyer » main h2 ["Coordonnées"]
+   RESULT contact-1200-js: sections not ok 0, past width 0, launchers not ok 0, contact state ok
+   SUBMIT 1200: button « Envoyer » state=ok role=status box=544x109 inView=true status « Le brouillon a été préparé pour votre messagerie : vous devez encore l’envoyer. Rien ne s’est ouvert ? Ouvrir le message, ou écrivez directement à aymard.de.scorbiac@sourcinno.com. »
+   SUBMIT 1200: must-still-send=true promises-delivery=false lastMailto mailto:aymard.de.scorbiac@sourcinno.com?… frame http://127.0.0.1:4173/contact/ -> http://127.0.0.1:4173/contact/ invalid=0 -> contact-1200-submit.png ok
+== contact-1200-nojs /contact/ W=1200 JS=off page 1200x1299 -> contact-1200-nojs.png
+   section 0 hero hero--page hero--pattern h2=null bg=rgba(0, 0, 0, 0) h=316 inView=true opacity=1 topmost=true ok
+   section 1 section reveal h2="Coordonnées" bg=rgba(0, 0, 0, 0) h=508 inView=true opacity=1 topmost=true ok
+   overflow: innerWidth 1200 scrollWidth 1185 elements past 1200: 0
+   contact: form shown=false fallback shown=true fallback first in column=true button « Envoyer » main h2 ["Coordonnées"]
+   RESULT contact-1200-nojs: sections not ok 0, past width 0, launchers not ok 0, contact state ok
+== contact-375-js /contact/ W=375 JS=on page 375x3146 -> contact-375-js.png
+   section 0 hero hero--page hero--pattern h2=null bg=rgba(0, 0, 0, 0) h=384 inView=true opacity=1 topmost=true ok
+   section 1 section reveal is-visible h2="Coordonnées" bg=rgba(0, 0, 0, 0) h=1800 inView=true opacity=1 topmost=true ok
+   overflow: innerWidth 375 scrollWidth 375 elements past 375: 0
+   contact: form shown=true fallback shown=false fallback first in column=true button « Envoyer » main h2 ["Coordonnées"]
+   RESULT contact-375-js: sections not ok 0, past width 0, launchers not ok 0, contact state ok
+   SUBMIT 375: button « Envoyer » state=ok role=status box=327x159 inView=true status « Le brouillon a été préparé pour votre messagerie : vous devez encore l’envoyer. Rien ne s’est ouvert ? Ouvrir le message, ou écrivez directement à aymard.de.scorbiac@sourcinno.com. »
+   SUBMIT 375: must-still-send=true promises-delivery=false lastMailto mailto:aymard.de.scorbiac@sourcinno.com?… frame http://127.0.0.1:4173/contact/ -> http://127.0.0.1:4173/contact/ invalid=0 -> contact-375-submit.png ok
+== contact-375-nojs /contact/ W=375 JS=off page 375x2196 -> contact-375-nojs.png
+   section 0 hero hero--page hero--pattern h2=null bg=rgba(0, 0, 0, 0) h=384 inView=true opacity=1 topmost=true ok
+   section 1 section reveal h2="Coordonnées" bg=rgba(0, 0, 0, 0) h=851 inView=true opacity=1 topmost=true ok
+   overflow: innerWidth 375 scrollWidth 375 elements past 375: 0
+   contact: form shown=false fallback shown=true fallback first in column=true button « Envoyer » main h2 ["Coordonnées"]
+   RESULT contact-375-nojs: sections not ok 0, past width 0, launchers not ok 0, contact state ok
+== service-venture-building-1200-js /service-venture-building/ W=1200 JS=on page 1200x3918 -> service-venture-building-1200-js.png
+   section 0 hero hero--offer hero--venture h2=null bg=rgba(0, 0, 0, 0) h=285 inView=true opacity=1 topmost=true ok
+   section 1 kodak h2="Kodak aurait pu créer Instagram" bg=rgba(0, 0, 0, 0) h=573 inView=true opacity=1 topmost=true ok
+   section 2 david-goliath h2="David + Goliath" bg=rgb(245, 248, 252) h=737 inView=true opacity=1 topmost=true ok
+   section 3 experience h2="Expériences associées" bg=rgb(255, 255, 255) h=444 inView=true opacity=1 topmost=true ok
+   section 4 besoin h2="Votre besoin > Livrables" bg=rgb(245, 248, 252) h=1190 inView=true opacity=1 topmost=true ok
+   section 5 Contact h2=null bg=rgba(0, 0, 0, 0) h=215 inView=true opacity=1 topmost=true ok
+   overflow: innerWidth 1200 scrollWidth 1185 elements past 1200: 0
+   launcher QtzlMHaUGyM display=block box=760x428 thumb=true (480px) caption shown=true « Vidéo « corpangels Corporates — July23 » (nouvel onglet) »
+   launcher 7qO3G7tCHr8 display=block box=760x428 thumb=true (480px) caption shown=true « Vidéo « CorpAngels : TechnoService SaaS pour création de StartUps » (nouvel onglet) »
+   RESULT service-venture-building-1200-js: sections not ok 0, past width 0, launchers not ok 0, contact state ok
+== service-venture-building-1200-nojs /service-venture-building/ W=1200 JS=off page 1200x3063 -> service-venture-building-1200-nojs.png
+   section 0 hero hero--offer hero--venture h2=null bg=rgba(0, 0, 0, 0) h=285 inView=true opacity=1 topmost=true ok
+   section 1 kodak h2="Kodak aurait pu créer Instagram" bg=rgba(0, 0, 0, 0) h=573 inView=true opacity=1 topmost=true ok
+   section 2 david-goliath h2="David + Goliath" bg=rgb(245, 248, 252) h=310 inView=true opacity=1 topmost=true ok
+   section 3 experience h2="Expériences associées" bg=rgb(255, 255, 255) h=444 inView=true opacity=1 topmost=true ok
+   section 4 besoin h2="Votre besoin > Livrables" bg=rgb(245, 248, 252) h=762 inView=true opacity=1 topmost=true ok
+   section 5 Contact h2=null bg=rgba(0, 0, 0, 0) h=215 inView=true opacity=1 topmost=true ok
+   overflow: innerWidth 1200 scrollWidth 1185 elements past 1200: 0
+   launcher QtzlMHaUGyM display=none box=0x0 thumb=true (480px) caption shown=true « Vidéo « corpangels Corporates — July23 » (nouvel onglet) »
+   launcher 7qO3G7tCHr8 display=none box=0x0 thumb=true (480px) caption shown=true « Vidéo « CorpAngels : TechnoService SaaS pour création de StartUps » (nouvel onglet) »
+   RESULT service-venture-building-1200-nojs: sections not ok 0, past width 0, launchers not ok 0, contact state ok
+== service-venture-building-375-js /service-venture-building/ W=375 JS=on page 375x4675 -> service-venture-building-375-js.png
+   section 0 hero hero--offer hero--venture h2=null bg=rgba(0, 0, 0, 0) h=284 inView=true opacity=1 topmost=true ok
+   section 1 kodak h2="Kodak aurait pu créer Instagram" bg=rgba(0, 0, 0, 0) h=852 inView=true opacity=1 topmost=true ok
+   section 2 david-goliath h2="David + Goliath" bg=rgb(245, 248, 252) h=469 inView=true opacity=1 topmost=true ok
+   section 3 experience h2="Expériences associées" bg=rgb(255, 255, 255) h=696 inView=true opacity=1 topmost=true ok
+   section 4 besoin h2="Votre besoin > Livrables" bg=rgb(245, 248, 252) h=1238 inView=true opacity=1 topmost=true ok
+   section 5 Contact h2=null bg=rgba(0, 0, 0, 0) h=175 inView=true opacity=1 topmost=true ok
+   overflow: innerWidth 375 scrollWidth 375 elements past 375: 0
+   launcher QtzlMHaUGyM display=block box=327x184 thumb=true (480px) caption shown=true « Vidéo « corpangels Corporates — July23 » (nouvel onglet) »
+   launcher 7qO3G7tCHr8 display=block box=327x184 thumb=true (480px) caption shown=true « Vidéo « CorpAngels : TechnoService SaaS pour création de StartUps » (nouvel onglet) »
+   RESULT service-venture-building-375-js: sections not ok 0, past width 0, launchers not ok 0, contact state ok
+== service-venture-building-375-nojs /service-venture-building/ W=375 JS=off page 375x4307 -> service-venture-building-375-nojs.png
+   section 0 hero hero--offer hero--venture h2=null bg=rgba(0, 0, 0, 0) h=284 inView=true opacity=1 topmost=true ok
+   section 1 kodak h2="Kodak aurait pu créer Instagram" bg=rgba(0, 0, 0, 0) h=852 inView=true opacity=1 topmost=true ok
+   section 2 david-goliath h2="David + Goliath" bg=rgb(245, 248, 252) h=285 inView=true opacity=1 topmost=true ok
+   section 3 experience h2="Expériences associées" bg=rgb(255, 255, 255) h=696 inView=true opacity=1 topmost=true ok
+   section 4 besoin h2="Votre besoin > Livrables" bg=rgb(245, 248, 252) h=1054 inView=true opacity=1 topmost=true ok
+   section 5 Contact h2=null bg=rgba(0, 0, 0, 0) h=175 inView=true opacity=1 topmost=true ok
+   overflow: innerWidth 375 scrollWidth 375 elements past 375: 0
+   launcher QtzlMHaUGyM display=none box=0x0 thumb=true (480px) caption shown=true « Vidéo « corpangels Corporates — July23 » (nouvel onglet) »
+   launcher 7qO3G7tCHr8 display=none box=0x0 thumb=true (480px) caption shown=true « Vidéo « CorpAngels : TechnoService SaaS pour création de StartUps » (nouvel onglet) »
+   RESULT service-venture-building-375-nojs: sections not ok 0, past width 0, launchers not ok 0, contact state ok
+RENDER http://127.0.0.1:4173: runs 8, failing runs/submits 0, outside requests 0, blocked mailto attempts 2 (want 2: one per submit)
