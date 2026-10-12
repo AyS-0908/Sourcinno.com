@@ -1,0 +1,148 @@
+== JS on W=1200: closed, chips
+   ok   posts 11: 11 dépliant(s) (IA 6, Venture Building 4, Startup 1), open on load 0
+   ok   cards that are not dépliants 0, with a Wix post link 0; dépliants holding a Wix link 0
+   ok   closed: elements past 1200 px: 0
+   ok   chips ["IA","Venture Building","Startup"]
+   ok   on load pressed ["IA"], shown 6 ["IA"]
+   ok   Tab ×14 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   ok   under « Venture Building »: 4 dépliant(s), open 0, card(s) with a Wix post link 0
+   ok   Tab ×1 + Enter on « Startup »: shown 1 ["Startup"]
+   ok   under « Startup »: 1 dépliant(s), open 0, card(s) with a Wix post link 0
+== JS on W=1200: chip « Venture Building », « Startup Studios » opened by Tab + Enter
+   ok   Tab ×14 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   ok   under « Venture Building »: 4 dépliant(s), open 0, card(s) with a Wix post link 0
+   Tab ×4 + Enter on its summary (summary focused: true)
+   ok   « Startup Studios » open
+   ok   text blocks with a non-zero box 70 of 70; 773 words on screen (article 773)
+   ok   links inside the article 0 (the 5 old sourcinno.com links are gone, their words stay)
+   ok   picture /assets/img/blog/sourcinno-startupstudiotypes-1.png natural 580 px, box 580.0x360.8 inside a 720.0 card
+   ok   table 670.0x2006.4 (display table): 6 rows of 3 cells
+   ok   header cells: column titles ["Studios CORPORATE (\"Corporate Venture Bu","Studios PURE PLAYER"], row titles ["Acteur type","Enjeu","Approche","Avantages","Défis"], corner «  »
+   ok   the 10 other cells carry the title of their column (data-label): 10 of 10
+   ok   three columns: cell boxes shown 18 of 18, inside the card (428.5–1148.5) 18 of 18
+   ok   both column titles on one line of boxes: tops 2347.1 / 2347.1, heights 59.6 / 59.6, lefts 574.0 / 848.5
+   ok   the five row titles in the first column, one under the other: lefts ["454.0"], first column 120.0 wide
+   ok   each row: its two cells under their column title, beside their row title (columns 120.0 / 274.5 / 274.5)
+   ok   no generated column title in a cell: 10 of 10
+   ok   open: elements past 1200 px: 0
+   ok   title font Inter, Inter loaded: true
+   capture publications-1200-startup-studios.png, page y 0–5402 (1200x5402 from 3 tile(s))
+== JS on W=1200: every article open, chip by chip
+   ok   « IA »: open and shown 6; elements past 1200 px: 0
+   ok   « Venture Building »: open and shown 4; elements past 1200 px: 0
+   ok   « Startup »: open and shown 1; elements past 1200 px: 0
+   ok   img between the markers 30 (26 pictures, 4 video thumbnails): non-empty alt 30, width+height 30, loading=lazy 30, src under /assets/img/blog/ 30
+   ok   pictures loaded 30 of 30
+== JS on W=375: closed, chips
+   ok   posts 11: 11 dépliant(s) (IA 6, Venture Building 4, Startup 1), open on load 0
+   ok   cards that are not dépliants 0, with a Wix post link 0; dépliants holding a Wix link 0
+   ok   closed: elements past 375 px: 0
+   ok   chips ["IA","Venture Building","Startup"]
+   ok   on load pressed ["IA"], shown 6 ["IA"]
+   ok   Tab ×9 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   ok   under « Venture Building »: 4 dépliant(s), open 0, card(s) with a Wix post link 0
+   ok   Tab ×1 + Enter on « Startup »: shown 1 ["Startup"]
+   ok   under « Startup »: 1 dépliant(s), open 0, card(s) with a Wix post link 0
+== JS on W=375: chip « Venture Building », « Startup Studios » opened by Tab + Enter
+   ok   Tab ×9 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   ok   under « Venture Building »: 4 dépliant(s), open 0, card(s) with a Wix post link 0
+   Tab ×4 + Enter on its summary (summary focused: true)
+   ok   « Startup Studios » open
+   ok   text blocks with a non-zero box 68 of 68; 764 words on screen (article 773, less the 9 words of the column titles, shown as generated text)
+   ok   links inside the article 0 (the 5 old sourcinno.com links are gone, their words stay)
+   ok   picture /assets/img/blog/sourcinno-startupstudiotypes-1.png natural 580 px, box 293.0x182.6 inside a 327.0 card
+   ok   table 293.0x3733.2 (display block): 6 rows of 3 cells
+   ok   header cells: column titles ["Studios CORPORATE (\"Corporate Venture Bu","Studios PURE PLAYER"], row titles ["Acteur type","Enjeu","Approche","Avantages","Défis"], corner «  »
+   ok   the 10 other cells carry the title of their column (data-label): 10 of 10
+   ok   row of column titles not shown (its titles are repeated above each cell): 3 of 3 boxes empty
+   ok   stacked: cell boxes shown 15 of 15, inside the card (24.0–351.0) 15 of 15; widths ["291.0"]
+   ok   each row title once, above its two cells, one under the other: 5 of 5 rows
+   ok   column title generated above the text of its cell (::before content = the column title, a block, first text ["54.1","36.0"] px under the top of the cell): 10 of 10
+   ok   open: elements past 375 px: 0
+   ok   title font Inter, Inter loaded: true
+   capture publications-375-startup-studios.png, page y 1533–7980 (375x6447 from 3 tile(s))
+   comparison style injected (not in the tree): table 293.0 wide in a 327.0 card, its content 670 px (scrolls sideways: true), elements past 375 px: 79 (the cells inside the frame count: they are reached by sliding)
+   capture publications-375-startup-studios-scroll.png, page y 1533–6253 (375x4720 from 2 tile(s))
+   ok   comparison style removed: card 5945.7 high (5945.7 before), elements past 375 px: 0
+== JS on W=375: every article open, chip by chip
+   ok   « IA »: open and shown 6; elements past 375 px: 0
+   ok   « Venture Building »: open and shown 4; elements past 375 px: 0
+   ok   « Startup »: open and shown 1; elements past 375 px: 0
+   ok   img between the markers 30 (26 pictures, 4 video thumbnails): non-empty alt 30, width+height 30, loading=lazy 30, src under /assets/img/blog/ 30
+   ok   pictures loaded 30 of 30
+== JS on W=320: closed, chips
+   ok   posts 11: 11 dépliant(s) (IA 6, Venture Building 4, Startup 1), open on load 0
+   ok   cards that are not dépliants 0, with a Wix post link 0; dépliants holding a Wix link 0
+   ok   closed: elements past 320 px: 0
+   ok   chips ["IA","Venture Building","Startup"]
+   ok   on load pressed ["IA"], shown 6 ["IA"]
+   ok   Tab ×9 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   ok   under « Venture Building »: 4 dépliant(s), open 0, card(s) with a Wix post link 0
+   ok   Tab ×1 + Enter on « Startup »: shown 1 ["Startup"]
+   ok   under « Startup »: 1 dépliant(s), open 0, card(s) with a Wix post link 0
+== JS on W=320: chip « Venture Building », « Startup Studios » opened by Tab + Enter
+   ok   Tab ×9 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   ok   under « Venture Building »: 4 dépliant(s), open 0, card(s) with a Wix post link 0
+   Tab ×4 + Enter on its summary (summary focused: true)
+   ok   « Startup Studios » open
+   ok   text blocks with a non-zero box 68 of 68; 764 words on screen (article 773, less the 9 words of the column titles, shown as generated text)
+   ok   links inside the article 0 (the 5 old sourcinno.com links are gone, their words stay)
+   ok   picture /assets/img/blog/sourcinno-startupstudiotypes-1.png natural 580 px, box 238.0x148.5 inside a 272.0 card
+   ok   table 238.0x4582.1 (display block): 6 rows of 3 cells
+   ok   header cells: column titles ["Studios CORPORATE (\"Corporate Venture Bu","Studios PURE PLAYER"], row titles ["Acteur type","Enjeu","Approche","Avantages","Défis"], corner «  »
+   ok   the 10 other cells carry the title of their column (data-label): 10 of 10
+   ok   row of column titles not shown (its titles are repeated above each cell): 3 of 3 boxes empty
+   ok   stacked: cell boxes shown 15 of 15, inside the card (24.0–296.0) 15 of 15; widths ["236.0"]
+   ok   each row title once, above its two cells, one under the other: 5 of 5 rows
+   ok   column title generated above the text of its cell (::before content = the column title, a block, first text ["73.1","36.0"] px under the top of the cell): 10 of 10
+   ok   open: elements past 320 px: 0
+   ok   title font Inter, Inter loaded: true
+== JS on W=320: every article open, chip by chip
+   ok   « IA »: open and shown 6; elements past 320 px: 0
+   ok   « Venture Building »: open and shown 4; elements past 320 px: 0
+   ok   « Startup »: open and shown 1; elements past 320 px: 0
+   ok   img between the markers 30 (26 pictures, 4 video thumbnails): non-empty alt 30, width+height 30, loading=lazy 30, src under /assets/img/blog/ 30
+   ok   pictures loaded 30 of 30
+== JS on 375x553, not scrolled
+   ok   h2 « À lire et à suivre » shown true, top 413 of 553
+   ok   first card shown true, top 491 of 553
+== JS off W=1200
+   ok   posts 11: 11 dépliant(s) (IA 6, Venture Building 4, Startup 1), open on load 0
+   ok   cards that are not dépliants 0, with a Wix post link 0; dépliants holding a Wix link 0
+   ok   closed: elements past 1200 px: 0
+   ok   chips 0
+   ok   posts with a non-zero box 11 of 11
+   mouse click on its summary
+   ok   « Startup Studios » open
+   ok   text blocks with a non-zero box 70 of 70; 773 words on screen (article 773)
+   ok   links inside the article 0 (the 5 old sourcinno.com links are gone, their words stay)
+   ok   picture /assets/img/blog/sourcinno-startupstudiotypes-1.png natural 580 px, box 580.0x360.8 inside a 720.0 card
+   ok   table 670.0x2006.4 (display table): 6 rows of 3 cells
+   ok   header cells: column titles ["Studios CORPORATE (\"Corporate Venture Bu","Studios PURE PLAYER"], row titles ["Acteur type","Enjeu","Approche","Avantages","Défis"], corner «  »
+   ok   the 10 other cells carry the title of their column (data-label): 10 of 10
+   ok   three columns: cell boxes shown 18 of 18, inside the card (428.5–1148.5) 18 of 18
+   ok   both column titles on one line of boxes: tops 3177.4 / 3177.4, heights 59.6 / 59.6, lefts 574.0 / 848.5
+   ok   the five row titles in the first column, one under the other: lefts ["454.0"], first column 120.0 wide
+   ok   each row: its two cells under their column title, beside their row title (columns 120.0 / 274.5 / 274.5)
+   ok   no generated column title in a cell: 10 of 10
+   ok   open: elements past 1200 px: 0
+== JS off W=375
+   ok   posts 11: 11 dépliant(s) (IA 6, Venture Building 4, Startup 1), open on load 0
+   ok   cards that are not dépliants 0, with a Wix post link 0; dépliants holding a Wix link 0
+   ok   closed: elements past 375 px: 0
+   ok   chips 0
+   ok   posts with a non-zero box 11 of 11
+   mouse click on its summary
+   ok   « Startup Studios » open
+   ok   text blocks with a non-zero box 68 of 68; 764 words on screen (article 773, less the 9 words of the column titles, shown as generated text)
+   ok   links inside the article 0 (the 5 old sourcinno.com links are gone, their words stay)
+   ok   picture /assets/img/blog/sourcinno-startupstudiotypes-1.png natural 580 px, box 293.0x182.6 inside a 327.0 card
+   ok   table 293.0x3733.2 (display block): 6 rows of 3 cells
+   ok   header cells: column titles ["Studios CORPORATE (\"Corporate Venture Bu","Studios PURE PLAYER"], row titles ["Acteur type","Enjeu","Approche","Avantages","Défis"], corner «  »
+   ok   the 10 other cells carry the title of their column (data-label): 10 of 10
+   ok   row of column titles not shown (its titles are repeated above each cell): 3 of 3 boxes empty
+   ok   stacked: cell boxes shown 15 of 15, inside the card (24.0–351.0) 15 of 15; widths ["291.0"]
+   ok   each row title once, above its two cells, one under the other: 5 of 5 rows
+   ok   column title generated above the text of its cell (::before content = the column title, a block, first text ["54.1","36.0"] px under the top of the cell): 10 of 10
+   ok   open: elements past 375 px: 0
+RENDER http://127.0.0.1:4173/publications/: failing checks 0, outside requests 0

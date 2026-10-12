@@ -1,0 +1,78 @@
+== JS on W=1200: closed, chips
+   FAIL posts 11: 10 dépliant(s) (IA 6, Venture Building 3, Startup 1), open on load 0
+   FAIL cards that are not dépliants 1, with a Wix post link 1; dépliants holding a Wix link 0
+   ok   closed: elements past 1200 px: 0
+   ok   chips ["IA","Venture Building","Startup"]
+   ok   on load pressed ["IA"], shown 6 ["IA"]
+   ok   Tab ×14 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   FAIL under « Venture Building »: 3 dépliant(s), open 0, card(s) with a Wix post link 1
+   ok   Tab ×1 + Enter on « Startup »: shown 1 ["Startup"]
+   ok   under « Startup »: 1 dépliant(s), open 0, card(s) with a Wix post link 0
+== JS on W=1200: chip « Venture Building », « Startup Studios » opened by Tab + Enter
+   ok   Tab ×14 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   FAIL under « Venture Building »: 3 dépliant(s), open 0, card(s) with a Wix post link 1
+   FAIL no dépliant titled « Startup Studios: Corporate vs Pure players »
+== JS on W=1200: every article open, chip by chip
+   ok   « IA »: open and shown 6; elements past 1200 px: 0
+   FAIL « Venture Building »: open and shown 3; elements past 1200 px: 0
+   ok   « Startup »: open and shown 1; elements past 1200 px: 0
+   FAIL img between the markers 29 (25 pictures, 4 video thumbnails): non-empty alt 29, width+height 29, loading=lazy 29, src under /assets/img/blog/ 29
+   ok   pictures loaded 29 of 29
+== JS on W=375: closed, chips
+   FAIL posts 11: 10 dépliant(s) (IA 6, Venture Building 3, Startup 1), open on load 0
+   FAIL cards that are not dépliants 1, with a Wix post link 1; dépliants holding a Wix link 0
+   ok   closed: elements past 375 px: 0
+   ok   chips ["IA","Venture Building","Startup"]
+   ok   on load pressed ["IA"], shown 6 ["IA"]
+   ok   Tab ×9 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   FAIL under « Venture Building »: 3 dépliant(s), open 0, card(s) with a Wix post link 1
+   ok   Tab ×1 + Enter on « Startup »: shown 1 ["Startup"]
+   ok   under « Startup »: 1 dépliant(s), open 0, card(s) with a Wix post link 0
+== JS on W=375: chip « Venture Building », « Startup Studios » opened by Tab + Enter
+   ok   Tab ×9 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   FAIL under « Venture Building »: 3 dépliant(s), open 0, card(s) with a Wix post link 1
+   FAIL no dépliant titled « Startup Studios: Corporate vs Pure players »
+== JS on W=375: every article open, chip by chip
+   ok   « IA »: open and shown 6; elements past 375 px: 0
+   FAIL « Venture Building »: open and shown 3; elements past 375 px: 0
+   ok   « Startup »: open and shown 1; elements past 375 px: 0
+   FAIL img between the markers 29 (25 pictures, 4 video thumbnails): non-empty alt 29, width+height 29, loading=lazy 29, src under /assets/img/blog/ 29
+   ok   pictures loaded 29 of 29
+== JS on W=320: closed, chips
+   FAIL posts 11: 10 dépliant(s) (IA 6, Venture Building 3, Startup 1), open on load 0
+   FAIL cards that are not dépliants 1, with a Wix post link 1; dépliants holding a Wix link 0
+   ok   closed: elements past 320 px: 0
+   ok   chips ["IA","Venture Building","Startup"]
+   ok   on load pressed ["IA"], shown 6 ["IA"]
+   ok   Tab ×9 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   FAIL under « Venture Building »: 3 dépliant(s), open 0, card(s) with a Wix post link 1
+   ok   Tab ×1 + Enter on « Startup »: shown 1 ["Startup"]
+   ok   under « Startup »: 1 dépliant(s), open 0, card(s) with a Wix post link 0
+== JS on W=320: chip « Venture Building », « Startup Studios » opened by Tab + Enter
+   ok   Tab ×9 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   FAIL under « Venture Building »: 3 dépliant(s), open 0, card(s) with a Wix post link 1
+   FAIL no dépliant titled « Startup Studios: Corporate vs Pure players »
+== JS on W=320: every article open, chip by chip
+   ok   « IA »: open and shown 6; elements past 320 px: 0
+   FAIL « Venture Building »: open and shown 3; elements past 320 px: 0
+   ok   « Startup »: open and shown 1; elements past 320 px: 0
+   FAIL img between the markers 29 (25 pictures, 4 video thumbnails): non-empty alt 29, width+height 29, loading=lazy 29, src under /assets/img/blog/ 29
+   ok   pictures loaded 29 of 29
+== JS on 375x553, not scrolled
+   ok   h2 « À lire et à suivre » shown true, top 413 of 553
+   ok   first card shown true, top 491 of 553
+== JS off W=1200
+   FAIL posts 11: 10 dépliant(s) (IA 6, Venture Building 3, Startup 1), open on load 0
+   FAIL cards that are not dépliants 1, with a Wix post link 1; dépliants holding a Wix link 0
+   ok   closed: elements past 1200 px: 0
+   ok   chips 0
+   ok   posts with a non-zero box 11 of 11
+   FAIL no dépliant titled « Startup Studios: Corporate vs Pure players »
+== JS off W=375
+   FAIL posts 11: 10 dépliant(s) (IA 6, Venture Building 3, Startup 1), open on load 0
+   FAIL cards that are not dépliants 1, with a Wix post link 1; dépliants holding a Wix link 0
+   ok   closed: elements past 375 px: 0
+   ok   chips 0
+   ok   posts with a non-zero box 11 of 11
+   FAIL no dépliant titled « Startup Studios: Corporate vs Pure players »
+RENDER http://127.0.0.1:4174/publications/: failing checks 27, outside requests 0
