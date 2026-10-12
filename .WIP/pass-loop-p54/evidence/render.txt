@@ -1,0 +1,98 @@
+== JS on W=1200: closed, chips
+   ok   posts 11: 6 dépliant(s), 6 IA, open on load 0
+   ok   other posts 5, with a Wix post link 5; dépliants holding a Wix link 0
+   ok   closed: elements past 1200 px: 0
+   ok   chips ["IA","Venture Building","Startup"]
+   ok   on load pressed ["IA"], shown 6 ["IA"]
+   ok   Tab ×14 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   ok   Tab ×1 + Enter on « Startup »: shown 1 ["Startup"]
+== JS on W=1200: articles opened by Tab + Enter
+   Tab ×17 + Enter on « ChatGpt une fois » (summary focused: true)
+   ok   « ChatGpt une fois » open
+   ok   text blocks with a non-zero box 23 of 23 (281 words on screen)
+   ok   open: elements past 1200 px: 0
+   ok   launcher 480.0x270.0 ratio 0.5625 inside its card, thumbnail natural 480 px
+   ok   ▶ 38.0x38.0
+   capture publications-1200-chatgpt.png 1200x3521
+   Tab ×1 + Enter on « marché du travail » (summary focused: true)
+   ok   « marché du travail » open
+   ok   text blocks with a non-zero box 8 of 8 (114 words on screen)
+   ok   open: elements past 1200 px: 0
+   ok   picture /assets/img/blog/l-ia-modifie-t-elle-deja-le-marche-du-travail-1.png natural 975 px, box 670.0x400.0
+   ok   picture 453.5–1123.5 inside its card 428.5–1148.5 (card 720.0 wide)
+   capture publications-1200-marche.png 1200x2817
+   Tab ×3 + Enter on « cas d'usage » (summary focused: true)
+   ok   « cas d'usage » open
+   ok   text blocks with a non-zero box 60 of 60 (404 words on screen)
+   ok   open: elements past 1200 px: 0
+   capture publications-1200-cas-usage.png 1200x4855
+== JS on W=1200: the six articles open
+   ok   open 6; elements past 1200 px: 0
+   ok   img between the markers 8 (5 pictures, 3 video thumbnails): non-empty alt 8, width+height 8, loading=lazy 8, src under /assets/img/blog/ 8
+   ok   pictures loaded 8 of 8
+== JS on W=375: closed, chips
+   ok   posts 11: 6 dépliant(s), 6 IA, open on load 0
+   ok   other posts 5, with a Wix post link 5; dépliants holding a Wix link 0
+   ok   closed: elements past 375 px: 0
+   ok   chips ["IA","Venture Building","Startup"]
+   ok   on load pressed ["IA"], shown 6 ["IA"]
+   ok   Tab ×9 + Enter on « Venture Building »: shown 4 ["Venture Building"]
+   ok   Tab ×1 + Enter on « Startup »: shown 1 ["Startup"]
+== JS on W=375: articles opened by Tab + Enter
+   Tab ×12 + Enter on « ChatGpt une fois » (summary focused: true)
+   ok   « ChatGpt une fois » open
+   ok   text blocks with a non-zero box 23 of 23 (281 words on screen)
+   ok   open: elements past 375 px: 0
+   ok   launcher 293.0x164.8 ratio 0.5625 inside its card, thumbnail natural 480 px
+   ok   ▶ 38.0x38.0
+   Tab ×1 + Enter on « marché du travail » (summary focused: true)
+   ok   « marché du travail » open
+   ok   text blocks with a non-zero box 8 of 8 (114 words on screen)
+   ok   open: elements past 375 px: 0
+   ok   picture /assets/img/blog/l-ia-modifie-t-elle-deja-le-marche-du-travail-1.png natural 975 px, box 293.0x175.4
+   ok   picture 41.0–334.0 inside its card 24.0–351.0 (card 327.0 wide)
+   capture publications-375-marche.png 375x4340
+   Tab ×3 + Enter on « cas d'usage » (summary focused: true)
+   ok   « cas d'usage » open
+   ok   text blocks with a non-zero box 60 of 60 (404 words on screen)
+   ok   open: elements past 375 px: 0
+== JS on W=375: the six articles open
+   ok   open 6; elements past 375 px: 0
+   ok   img between the markers 8 (5 pictures, 3 video thumbnails): non-empty alt 8, width+height 8, loading=lazy 8, src under /assets/img/blog/ 8
+   ok   pictures loaded 8 of 8
+== JS on 375x553, not scrolled
+   ok   h2 « À lire et à suivre » shown true, top 413 of 553
+   ok   first card shown true, top 491 of 553
+== JS off W=1200
+   ok   posts 11: 6 dépliant(s), 6 IA, open on load 0
+   ok   other posts 5, with a Wix post link 5; dépliants holding a Wix link 0
+   ok   closed: elements past 1200 px: 0
+   ok   chips 0
+   ok   posts with a non-zero box 11 of 11
+   mouse click on « marché du travail »
+   ok   « marché du travail » open
+   ok   text blocks with a non-zero box 8 of 8 (114 words on screen)
+   ok   open: elements past 1200 px: 0
+   mouse click on « ChatGpt une fois »
+   ok   « ChatGpt une fois » open
+   ok   text blocks with a non-zero box 23 of 23 (280 words on screen)
+   ok   open: elements past 1200 px: 0
+   ok   video: caption link box 177.0x19.0, launcher display none
+   capture publications-1200-nojs.png 1200x4984
+== JS off W=375
+   ok   posts 11: 6 dépliant(s), 6 IA, open on load 0
+   ok   other posts 5, with a Wix post link 5; dépliants holding a Wix link 0
+   ok   closed: elements past 375 px: 0
+   ok   chips 0
+   ok   posts with a non-zero box 11 of 11
+   mouse click on « marché du travail »
+   ok   « marché du travail » open
+   ok   text blocks with a non-zero box 8 of 8 (114 words on screen)
+   ok   open: elements past 375 px: 0
+   mouse click on « ChatGpt une fois »
+   ok   « ChatGpt une fois » open
+   ok   text blocks with a non-zero box 23 of 23 (280 words on screen)
+   ok   open: elements past 375 px: 0
+   ok   video: caption link box 177.0x19.0, launcher display none
+   capture publications-375-nojs.png 375x7018
+RENDER http://127.0.0.1:4173/publications/: failing checks 0, outside requests 0
