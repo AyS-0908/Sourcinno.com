@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p56",
+  "state": "done",
+  "scope": "DELTA after your FIX A-001 only (same auditor, confirmation). What changed in the product since the tree you reviewed: assets/js/site.js, function apply() inside initHoverList(): when hover mode turns on, the block's enclosing .reveal section gets the class is-visible (your first proposed route; 2 lines of code and a 3-line comment, inside the branch if (mq.matches); reveal stays on both #besoin sections; nothing runs outside hover mode); and the ?v= stamp of site.js rewritten by node tools/version.mjs on the 10 shell pages (one line each). No other product file changed: style.css and the #besoin markup of the two pages are byte for byte the ones you read. Effect to judge: in hover mode the section now fades in on load wherever it is, also on windows 600 px high and less where cb0bfbf itself kept the title hidden until a scroll; outside hover mode the scroll reveal is untouched. Root doc (parent repository, unsealed): ../ARCHITECTURE.md Layering rule 5, one sentence added. Your A-001 test, run by the Coder (evidence folder is ignored by git, unsealed): node .WIP/pass-loop-p56/evidence/first-screen.mjs exit 0, no \u00ab differs \u00bb line (the script now reads your four sizes 1366x657, 1366x625, 1280x649, 1024x640 beside 1280x580 to 720, plus five windows outside hover mode against cb0bfbf; it keeps the word \u00ab differs \u00bb for \u00ab hidden where cb0bfbf shows it \u00bb and exits 1 on any); node .WIP/pass-loop-p56/evidence/render.mjs exit 0, 515 checks, failing 0; node tools/check.mjs --all, node tools/version.mjs --check, node tools/shell.mjs --check exit 0. Servers unchanged: 127.0.0.1:4173 = this tree (with the fix), 4174 = cb0bfbf, 4175 = the no-reserve copy rebuilt from this tree. Same rules as before: your scratch files under C:\\Users\\aymar\\AppData\\Local\\Temp\\claude\\C--Users-aymar-AYS-CODING-code-SOURCINNO-WWW\\027b915f-96bc-4c38-a9a9-f3531bf81ed3\\scratchpad\\p56-reviewer only, network 127.0.0.1 and Google Fonts only, LOCAL ONLY, no edit other than appending your verdict to the journal. No MANUAL item, no live system.",
+  "audit_launches": 2,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 1,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    },
+    "auditor": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 2,
+  "results_blocks": 2,
+  "pass_base": "cb0bfbf8637fe351bf202b5a9e0b06ae50674312",
+  "seal_paths": "",
+  "brief_fingerprint": "e9c8f831a3bdc155",
+  "green_fingerprint": "e9c8f831a3bdc155",
+  "briefed_at": "2026-10-13T22:30:31",
+  "cap_extensions": [],
+  "state_dir": ".WIP/pass-loop-p56",
+  "updated": "2026-10-13"
+}

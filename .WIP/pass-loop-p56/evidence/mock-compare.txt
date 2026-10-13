@@ -1,0 +1,13 @@
+== 1920 px (layout width 1905): mock block 1112x1220.3, 2 lists in hover mode, 2 active rows; port block 1112x1221.3, 2 lists in hover mode, 2 active rows
+   504 elements and pseudo-elements compared (449 properties each), identical 503, different label at the same position 0
+   DIFF min-block-size: 1 place(s) — ol.service-question-list.hl__items: mock « 481px » port « 482px »
+   boxes (width x height) that differ: 3 — div.grid.grid--2.service-phases mock 1112x1220.3 port 1112x1221.3 | div.card.service-phase.hl.is-hover mock 1112x640.6 port 1112x641.6 | ol.service-question-list.hl__items mock 468.2x481 port 468.2x482
+== 1200 px (layout width 1185): mock block 1112x1218.3, 2 lists in hover mode, 2 active rows; port block 1112x1219.3, 2 lists in hover mode, 2 active rows
+   504 elements and pseudo-elements compared (449 properties each), identical 503, different label at the same position 0
+   DIFF min-block-size: 1 place(s) — ol.service-question-list.hl__items: mock « 481px » port « 482px »
+   boxes (width x height) that differ: 3 — div.grid.grid--2.service-phases mock 1112x1218.3 port 1112x1219.3 | div.card.service-phase.hl.is-hover mock 1112x639.7 port 1112x640.7 | ol.service-question-list.hl__items mock 468.2x481 port 468.2x482
+== 961 px (layout width 946): mock block 898x1263.8, 2 lists in hover mode, 2 active rows; port block 898x1264.8, 2 lists in hover mode, 2 active rows
+   504 elements and pseudo-elements compared (449 properties each), identical 503, different label at the same position 0
+   DIFF min-block-size: 1 place(s) — ol.service-question-list.hl__items: mock « 534px » port « 535px »
+   boxes (width x height) that differ: 3 — div.grid.grid--2.service-phases mock 898x1263.8 port 898x1264.8 | div.card.service-phase.hl.is-hover mock 898x688.9 port 898x689.9 | ol.service-question-list.hl__items mock 370.9x534 port 370.9x535
+MOCK-COMPARE: 3 computed-style difference(s) in all

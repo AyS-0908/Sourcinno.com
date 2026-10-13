@@ -1,0 +1,205 @@
+RENDER p56 on http://127.0.0.1:4174 (BASELINE run on the scratch copy of cb0bfbf: comparisons are written, not checked)
+== /service-strategie-transformation/ — hover mode (Done When 2 and 5)
+ -- strategie 1920: innerWidth 1920, layout width (clientWidth) 1905, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 1920: page ready true, Inter loaded true, heading font Inter
+   FAIL strategie 1920: hover mode on 0 list(s) of 2 expected (lists marked data-hoverlist: 0; rows 7 of 7)
+ -- strategie 1920 reduced-motion: innerWidth 1920, layout width (clientWidth) 1905, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 1920 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   FAIL strategie 1920 reduced-motion: hover mode on 0 list(s) of 2 expected (lists marked data-hoverlist: 0; rows 7 of 7)
+ -- strategie 1200: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 1200: page ready true, Inter loaded true, heading font Inter
+   FAIL strategie 1200: hover mode on 0 list(s) of 2 expected (lists marked data-hoverlist: 0; rows 7 of 7)
+ -- strategie 1200 reduced-motion: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 1200 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   FAIL strategie 1200 reduced-motion: hover mode on 0 list(s) of 2 expected (lists marked data-hoverlist: 0; rows 7 of 7)
+ -- strategie 961: innerWidth 961, layout width (clientWidth) 946, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 961: page ready true, Inter loaded true, heading font Inter
+   FAIL strategie 961: hover mode on 0 list(s) of 2 expected (lists marked data-hoverlist: 0; rows 7 of 7)
+ -- strategie 961 reduced-motion: innerWidth 961, layout width (clientWidth) 946, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 961 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   FAIL strategie 961 reduced-motion: hover mode on 0 list(s) of 2 expected (lists marked data-hoverlist: 0; rows 7 of 7)
+== /service-strategie-transformation/ — no hover mode (Done When 3)
+ -- strategie 960 px, fine pointer: innerWidth 960, layout width (clientWidth) 945, fine pointer with hover true, (hover: none) false, 961 px and more false
+   ok   strategie 960 px, fine pointer: page ready true, Inter loaded true, heading font Inter
+   ok   strategie 960 px, fine pointer: no hover mode (lists in hover mode 0 of 0, detail panels shown 0, rows active 0, rows open 0 of 7)
+        baseline besoin /service-strategie-transformation/|960-fine|closed: 69 entries
+        baseline besoin /service-strategie-transformation/|960-fine|open1: 82 entries
+   ok   strategie 960 px, fine pointer: each row opens (text visible) and closes by click: 7 of 7; by real Tab then Enter, Enter: 7 of 7 (Tab presses 7, 1, 1, 1, 1, 1, 1)
+   ok   strategie 960 px, fine pointer: elements past the layout width 945 px: 0
+   ok   strategie 960 px, fine pointer: script errors 0
+ -- strategie 1200 px, touch screen: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover false, (hover: none) true, 961 px and more true
+   ok   strategie 1200 px, touch screen: page ready true, Inter loaded true, heading font Inter
+   ok   strategie 1200 px, touch screen: no hover mode (lists in hover mode 0 of 0, detail panels shown 0, rows active 0, rows open 0 of 7)
+        baseline besoin /service-strategie-transformation/|1200-touch|closed: 69 entries
+        baseline besoin /service-strategie-transformation/|1200-touch|open1: 82 entries
+   ok   strategie 1200 px, touch screen: each row opens (text visible) and closes by tap: 7 of 7; by real Tab then Enter, Enter: 7 of 7 (Tab presses 7, 1, 1, 1, 1, 1, 1)
+   ok   strategie 1200 px, touch screen: elements past the layout width 1185 px: 0
+   ok   strategie 1200 px, touch screen: script errors 0
+ -- strategie 375 px (touch): innerWidth 375, layout width (clientWidth) 375, fine pointer with hover false, (hover: none) true, 961 px and more false
+   ok   strategie 375 px (touch): page ready true, Inter loaded true, heading font Inter
+   ok   strategie 375 px (touch): no hover mode (lists in hover mode 0 of 0, detail panels shown 0, rows active 0, rows open 0 of 7)
+        baseline besoin /service-strategie-transformation/|375|closed: 69 entries
+        baseline besoin /service-strategie-transformation/|375|open1: 82 entries
+   ok   strategie 375 px (touch): each row opens (text visible) and closes by tap: 7 of 7; by real Tab then Enter, Enter: 7 of 7 (Tab presses 2, 1, 1, 1, 1, 1, 1)
+   ok   strategie 375 px (touch): elements past the layout width 375 px: 0
+   ok   strategie 375 px (touch): script errors 0
+ -- strategie 1200 px, scripts disabled: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 1200 px, scripts disabled: page ready true, Inter loaded true, heading font Inter
+   ok   strategie 1200 px, scripts disabled: no hover mode (lists in hover mode 0 of 0, detail panels shown 0, rows active 0, rows open 0 of 7)
+        baseline besoin /service-strategie-transformation/|1200-nojs|closed: 69 entries
+        baseline besoin /service-strategie-transformation/|1200-nojs|open1: 82 entries
+   ok   strategie 1200 px, scripts disabled: each row opens (text visible) and closes by click: 7 of 7; by real Tab then Enter, Enter: 7 of 7 (Tab presses 7, 1, 1, 1, 1, 1, 1)
+   ok   strategie 1200 px, scripts disabled: elements past the layout width 1185 px: 0
+ -- strategie 375 px, scripts disabled (touch): innerWidth 375, layout width (clientWidth) 375, fine pointer with hover false, (hover: none) true, 961 px and more false
+   ok   strategie 375 px, scripts disabled (touch): page ready true, Inter loaded true, heading font Inter
+   ok   strategie 375 px, scripts disabled (touch): no hover mode (lists in hover mode 0 of 0, detail panels shown 0, rows active 0, rows open 0 of 7)
+        baseline besoin /service-strategie-transformation/|375-nojs|closed: 69 entries
+        baseline besoin /service-strategie-transformation/|375-nojs|open1: 82 entries
+   ok   strategie 375 px, scripts disabled (touch): each row opens (text visible) and closes by tap: 7 of 7; by real Tab then Enter, Enter: 7 of 7 (Tab presses 2, 1, 1, 1, 1, 1, 1)
+   ok   strategie 375 px, scripts disabled (touch): elements past the layout width 375 px: 0
+== /service-strategie-transformation/ — everything outside #besoin (Done When 4)
+   ok   strategie 1200: page ready true, Inter loaded true; lists in hover mode 0
+        baseline outside /service-strategie-transformation/|1200: 110 entries
+   ok   strategie 1200: script errors 0
+   ok   strategie 375: page ready true, Inter loaded true; lists in hover mode 0
+        baseline outside /service-strategie-transformation/|375: 110 entries
+   ok   strategie 375: script errors 0
+== /service-strategie-transformation/ — once, outside the Done When list
+   FAIL strategie 960 → 1200 → 960: row 2 opened at 960 (true); widened to 1200: lists in hover mode 0 of 2, rows left open 1, active rows 0, reserves , entrance animation replayed false, elements past the layout width 0
+   FAIL strategie 960 → 1200 → 960: back to 960: lists in hover mode 0, rows open 1, active 0, panels emptied and hidden, reserve removed
+   ok   strategie 960 → 1200 → 960: script errors 0
+        baseline first /service-strategie-transformation/|1280x600: {"titleOnScreen":true,"hidden":true,"sectionHeight":796}
+        baseline first /service-strategie-transformation/|1280x660: {"titleOnScreen":true,"hidden":false,"sectionHeight":796}
+        baseline first /service-strategie-transformation/|1280x700: {"titleOnScreen":true,"hidden":false,"sectionHeight":796}
+        baseline first /service-strategie-transformation/|1280x768: {"titleOnScreen":true,"hidden":false,"sectionHeight":796}
+        baseline first /service-strategie-transformation/|1280x900: {"titleOnScreen":true,"hidden":false,"sectionHeight":796}
+== /service-ia-business/ — hover mode (Done When 2 and 5)
+ -- ia 1920: innerWidth 1920, layout width (clientWidth) 1905, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 1920: page ready true, Inter loaded true, heading font Inter
+   FAIL ia 1920: hover mode on 0 list(s) of 1 expected (lists marked data-hoverlist: 0; rows 3 of 3)
+ -- ia 1920 reduced-motion: innerWidth 1920, layout width (clientWidth) 1905, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 1920 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   FAIL ia 1920 reduced-motion: hover mode on 0 list(s) of 1 expected (lists marked data-hoverlist: 0; rows 3 of 3)
+ -- ia 1200: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 1200: page ready true, Inter loaded true, heading font Inter
+   FAIL ia 1200: hover mode on 0 list(s) of 1 expected (lists marked data-hoverlist: 0; rows 3 of 3)
+ -- ia 1200 reduced-motion: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 1200 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   FAIL ia 1200 reduced-motion: hover mode on 0 list(s) of 1 expected (lists marked data-hoverlist: 0; rows 3 of 3)
+ -- ia 961: innerWidth 961, layout width (clientWidth) 946, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 961: page ready true, Inter loaded true, heading font Inter
+   FAIL ia 961: hover mode on 0 list(s) of 1 expected (lists marked data-hoverlist: 0; rows 3 of 3)
+ -- ia 961 reduced-motion: innerWidth 961, layout width (clientWidth) 946, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 961 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   FAIL ia 961 reduced-motion: hover mode on 0 list(s) of 1 expected (lists marked data-hoverlist: 0; rows 3 of 3)
+== /service-ia-business/ — no hover mode (Done When 3)
+ -- ia 960 px, fine pointer: innerWidth 960, layout width (clientWidth) 945, fine pointer with hover true, (hover: none) false, 961 px and more false
+   ok   ia 960 px, fine pointer: page ready true, Inter loaded true, heading font Inter
+   ok   ia 960 px, fine pointer: no hover mode (lists in hover mode 0 of 0, detail panels shown 0, rows active 0, rows open 0 of 3)
+        baseline besoin /service-ia-business/|960-fine|closed: 58 entries
+        baseline besoin /service-ia-business/|960-fine|open1: 68 entries
+   ok   ia 960 px, fine pointer: each row opens (text visible) and closes by click: 3 of 3; by real Tab then Enter, Enter: 3 of 3 (Tab presses 7, 1, 1)
+   ok   ia 960 px, fine pointer: phase 2 dépliant « Données d'entrée » opens and closes by click (true, true)
+   ok   ia 960 px, fine pointer: elements past the layout width 945 px: 0
+   ok   ia 960 px, fine pointer: script errors 0
+ -- ia 1200 px, touch screen: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover false, (hover: none) true, 961 px and more true
+   ok   ia 1200 px, touch screen: page ready true, Inter loaded true, heading font Inter
+   ok   ia 1200 px, touch screen: no hover mode (lists in hover mode 0 of 0, detail panels shown 0, rows active 0, rows open 0 of 3)
+        baseline besoin /service-ia-business/|1200-touch|closed: 58 entries
+        baseline besoin /service-ia-business/|1200-touch|open1: 68 entries
+   ok   ia 1200 px, touch screen: each row opens (text visible) and closes by tap: 3 of 3; by real Tab then Enter, Enter: 3 of 3 (Tab presses 7, 1, 1)
+   ok   ia 1200 px, touch screen: phase 2 dépliant « Données d'entrée » opens and closes by tap (true, true)
+   ok   ia 1200 px, touch screen: elements past the layout width 1185 px: 0
+   ok   ia 1200 px, touch screen: script errors 0
+ -- ia 375 px (touch): innerWidth 375, layout width (clientWidth) 375, fine pointer with hover false, (hover: none) true, 961 px and more false
+   ok   ia 375 px (touch): page ready true, Inter loaded true, heading font Inter
+   ok   ia 375 px (touch): no hover mode (lists in hover mode 0 of 0, detail panels shown 0, rows active 0, rows open 0 of 3)
+        baseline besoin /service-ia-business/|375|closed: 58 entries
+        baseline besoin /service-ia-business/|375|open1: 68 entries
+   ok   ia 375 px (touch): each row opens (text visible) and closes by tap: 3 of 3; by real Tab then Enter, Enter: 3 of 3 (Tab presses 2, 1, 1)
+   ok   ia 375 px (touch): phase 2 dépliant « Données d'entrée » opens and closes by tap (true, true)
+   ok   ia 375 px (touch): elements past the layout width 375 px: 0
+   ok   ia 375 px (touch): script errors 0
+ -- ia 1200 px, scripts disabled: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 1200 px, scripts disabled: page ready true, Inter loaded true, heading font Inter
+   ok   ia 1200 px, scripts disabled: no hover mode (lists in hover mode 0 of 0, detail panels shown 0, rows active 0, rows open 0 of 3)
+        baseline besoin /service-ia-business/|1200-nojs|closed: 58 entries
+        baseline besoin /service-ia-business/|1200-nojs|open1: 68 entries
+   ok   ia 1200 px, scripts disabled: each row opens (text visible) and closes by click: 3 of 3; by real Tab then Enter, Enter: 3 of 3 (Tab presses 7, 1, 1)
+   ok   ia 1200 px, scripts disabled: phase 2 dépliant « Données d'entrée » opens and closes by click (true, true)
+   ok   ia 1200 px, scripts disabled: elements past the layout width 1185 px: 0
+ -- ia 375 px, scripts disabled (touch): innerWidth 375, layout width (clientWidth) 375, fine pointer with hover false, (hover: none) true, 961 px and more false
+   ok   ia 375 px, scripts disabled (touch): page ready true, Inter loaded true, heading font Inter
+   ok   ia 375 px, scripts disabled (touch): no hover mode (lists in hover mode 0 of 0, detail panels shown 0, rows active 0, rows open 0 of 3)
+        baseline besoin /service-ia-business/|375-nojs|closed: 58 entries
+        baseline besoin /service-ia-business/|375-nojs|open1: 68 entries
+   ok   ia 375 px, scripts disabled (touch): each row opens (text visible) and closes by tap: 3 of 3; by real Tab then Enter, Enter: 3 of 3 (Tab presses 2, 1, 1)
+   ok   ia 375 px, scripts disabled (touch): phase 2 dépliant « Données d'entrée » opens and closes by tap (true, true)
+   ok   ia 375 px, scripts disabled (touch): elements past the layout width 375 px: 0
+== /service-ia-business/ — everything outside #besoin (Done When 4)
+   ok   ia 1200: page ready true, Inter loaded true; lists in hover mode 0
+        baseline outside /service-ia-business/|1200: 110 entries
+   ok   ia 1200: script errors 0
+   ok   ia 375: page ready true, Inter loaded true; lists in hover mode 0
+        baseline outside /service-ia-business/|375: 110 entries
+   ok   ia 375: script errors 0
+== /service-ia-business/ — once, outside the Done When list
+   FAIL ia 960 → 1200 → 960: row 2 opened at 960 (true); widened to 1200: lists in hover mode 0 of 1, rows left open 1, active rows 0, reserves , entrance animation replayed false, elements past the layout width 0
+   FAIL ia 960 → 1200 → 960: back to 960: lists in hover mode 0, rows open 1, active 0, panels emptied and hidden, reserve removed
+   ok   ia 960 → 1200 → 960: script errors 0
+        baseline first /service-ia-business/|1280x600: {"titleOnScreen":true,"hidden":true,"sectionHeight":968.9}
+        baseline first /service-ia-business/|1280x660: {"titleOnScreen":true,"hidden":false,"sectionHeight":968.9}
+        baseline first /service-ia-business/|1280x700: {"titleOnScreen":true,"hidden":false,"sectionHeight":968.9}
+        baseline first /service-ia-business/|1280x768: {"titleOnScreen":true,"hidden":false,"sectionHeight":968.9}
+        baseline first /service-ia-business/|1280x900: {"titleOnScreen":true,"hidden":false,"sectionHeight":968.9}
+== the eight other shell pages (Done When 4)
+   ok   / 1200: page ready true; hover lists on this page 0
+        baseline sections /|1200: 8 entries
+   ok   / 1200: script errors 0
+   ok   / 375: page ready true; hover lists on this page 0
+        baseline sections /|375: 8 entries
+   ok   / 375: script errors 0
+   ok   /service-venture-building/ 1200: page ready true; hover lists on this page 0
+        baseline sections /service-venture-building/|1200: 8 entries
+   ok   /service-venture-building/ 1200: script errors 0
+   ok   /service-venture-building/ 375: page ready true; hover lists on this page 0
+        baseline sections /service-venture-building/|375: 8 entries
+   ok   /service-venture-building/ 375: script errors 0
+   ok   /portfolio/ 1200: page ready true; hover lists on this page 0
+        baseline sections /portfolio/|1200: 4 entries
+   ok   /portfolio/ 1200: script errors 0
+   ok   /portfolio/ 375: page ready true; hover lists on this page 0
+        baseline sections /portfolio/|375: 4 entries
+   ok   /portfolio/ 375: script errors 0
+   ok   /publications/ 1200: page ready true; hover lists on this page 0
+        baseline sections /publications/|1200: 4 entries
+   ok   /publications/ 1200: script errors 0
+   ok   /publications/ 375: page ready true; hover lists on this page 0
+        baseline sections /publications/|375: 4 entries
+   ok   /publications/ 375: script errors 0
+   ok   /contact/ 1200: page ready true; hover lists on this page 0
+        baseline sections /contact/|1200: 4 entries
+   ok   /contact/ 1200: script errors 0
+   ok   /contact/ 375: page ready true; hover lists on this page 0
+        baseline sections /contact/|375: 4 entries
+   ok   /contact/ 375: script errors 0
+   ok   /mentions-legales/ 1200: page ready true; hover lists on this page 0
+        baseline sections /mentions-legales/|1200: 4 entries
+   ok   /mentions-legales/ 1200: script errors 0
+   ok   /mentions-legales/ 375: page ready true; hover lists on this page 0
+        baseline sections /mentions-legales/|375: 4 entries
+   ok   /mentions-legales/ 375: script errors 0
+   ok   /politique-confidentialite/ 1200: page ready true; hover lists on this page 0
+        baseline sections /politique-confidentialite/|1200: 4 entries
+   ok   /politique-confidentialite/ 1200: script errors 0
+   ok   /politique-confidentialite/ 375: page ready true; hover lists on this page 0
+        baseline sections /politique-confidentialite/|375: 4 entries
+   ok   /politique-confidentialite/ 375: script errors 0
+   ok   /404.html 1200: page ready true; hover lists on this page 0
+        baseline sections /404.html|1200: 3 entries
+   ok   /404.html 1200: script errors 0
+   ok   /404.html 375: page ready true; hover lists on this page 0
+        baseline sections /404.html|375: 3 entries
+   ok   /404.html 375: script errors 0
+baseline.json written: 20 « besoin » lists, 4 « outside » lists, 16 « sections » lists, 10 first screens
+RENDER http://127.0.0.1:4174: 121 checks, failing 16

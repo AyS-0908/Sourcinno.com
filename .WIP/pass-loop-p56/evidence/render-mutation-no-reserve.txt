@@ -1,0 +1,388 @@
+RENDER p56 on http://127.0.0.1:4175 — PARTIAL RUN, parts: hover
+== /service-strategie-transformation/ — hover mode (Done When 2 and 5)
+ -- strategie 1920: innerWidth 1920, layout width (clientWidth) 1905, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 1920: page ready true, Inter loaded true, heading font Inter
+   ok   strategie 1920: hover mode on 2 list(s) of 2 expected (lists marked data-hoverlist: 2; rows 7 of 7)
+   ok   strategie 1920: on load, list 1: row 01 active alone, no row open, its detail shown 561.8x423.1 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 423.6 high, reserve --hl-min «  »
+   ok   strategie 1920: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 1920: on load, list 2: row 05 active alone, no row open, its detail shown 561.8x384.5 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 384.5 high, reserve --hl-min «  »
+   ok   strategie 1920: list 2: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 1920: mouse on row 01: active alone in its list, not opened, its own detail shown 561.8x423.1 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1920: mouse on row 01: boxes changed since load 0 of 159
+   ok   strategie 1920: mouse on row 02: active alone in its list, not opened, its own detail shown 561.8x481.2 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1920: mouse on row 02: boxes changed since load 117 of 159 — « main 0 77 1905 4194.2 » → « main 0 77 1905 4251.8 » | « section 0 477 1905 1422.8 » → « section 0 477 1905 1480.4 » | « div 372.5 549 1160 1278.8 » → « div 372.5 549 1160 1336.4 » | « div 396.5 676.5 1112 1151.3 » → « div 396.5 676.5 1112 1208.9 »
+   ok   strategie 1920: mouse on row 03: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1920: mouse on row 03: boxes changed since load 0 of 159
+   ok   strategie 1920: mouse on row 04: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1920: mouse on row 04: boxes changed since load 0 of 159
+   ok   strategie 1920: mouse on row 05: active alone in its list, not opened, its own detail shown 561.8x384.5 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1920: mouse on row 05: boxes changed since load 0 of 159
+   ok   strategie 1920: mouse on row 06: active alone in its list, not opened, its own detail shown 561.8x395.9 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1920: mouse on row 06: boxes changed since load 89 of 159 — « main 0 77 1905 4194.2 » → « main 0 77 1905 4205.6 » | « section 0 477 1905 1422.8 » → « section 0 477 1905 1434.3 » | « div 372.5 549 1160 1278.8 » → « div 372.5 549 1160 1290.3 » | « div 396.5 676.5 1112 1151.3 » → « div 396.5 676.5 1112 1162.7 »
+   ok   strategie 1920: mouse on row 07: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1920: mouse on row 07: boxes changed since load 89 of 159 — « main 0 77 1905 4194.2 » → « main 0 77 1905 4142.5 » | « section 0 477 1905 1422.8 » → « section 0 477 1905 1371.2 » | « div 372.5 549 1160 1278.8 » → « div 372.5 549 1160 1227.2 » | « div 396.5 676.5 1112 1151.3 » → « div 396.5 676.5 1112 1099.6 »
+   ok   strategie 1920: text « detail em rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (2 pieces of text over the 7 rows, 3465 pixels; fewest painted pixels in one piece 195)
+   ok   strategie 1920: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (35 pieces of text over the 7 rows, 173480 pixels; fewest painted pixels in one piece 170)
+   ok   strategie 1920: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (14 pieces of text over the 7 rows, 27720 pixels; fewest painted pixels in one piece 289)
+   ok   strategie 1920: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (9 pieces of text over the 7 rows, 60228 pixels; fewest painted pixels in one piece 500)
+   ok   strategie 1920: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (7 pieces of text over the 7 rows, 58280 pixels; fewest painted pixels in one piece 827)
+   ok   strategie 1920: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (7 pieces of text over the 7 rows, 3171 pixels; fewest painted pixels in one piece 100)
+   ok   strategie 1920: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (7 pieces of text over the 7 rows, 26733 pixels; fewest painted pixels in one piece 659)
+   ok   strategie 1920: the same probe without reduced motion sees them: 8 at most, on 7 of 7 moves (0 would mean a blind probe)
+   ok   strategie 1920: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   strategie 1920: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920: keyboard: 1 Tab → row 03 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920: keyboard: 1 Tab → row 04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3378 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920: keyboard: 1 Tab → row 05 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920: keyboard: 1 Tab → row 06 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920: keyboard: 1 Tab → row 07 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920: elements past the layout width 1905 px (innerWidth 1920): 0
+   ok   strategie 1920: script errors 0
+ -- strategie 1920 reduced-motion: innerWidth 1920, layout width (clientWidth) 1905, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 1920 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   ok   strategie 1920 reduced-motion: hover mode on 2 list(s) of 2 expected (lists marked data-hoverlist: 2; rows 7 of 7)
+   ok   strategie 1920 reduced-motion: on load, list 1: row 01 active alone, no row open, its detail shown 561.8x423.1 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 423.6 high, reserve --hl-min «  »
+   ok   strategie 1920 reduced-motion: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 1920 reduced-motion: on load, list 2: row 05 active alone, no row open, its detail shown 561.8x384.5 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 384.5 high, reserve --hl-min «  »
+   ok   strategie 1920 reduced-motion: list 2: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 1920 reduced-motion: mouse on row 01: active alone in its list, not opened, its own detail shown 561.8x423.1 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1920 reduced-motion: mouse on row 01: boxes changed since load 0 of 159
+   ok   strategie 1920 reduced-motion: mouse on row 02: active alone in its list, not opened, its own detail shown 561.8x481.2 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1920 reduced-motion: mouse on row 02: boxes changed since load 117 of 159 — « main 0 77 1905 4194.2 » → « main 0 77 1905 4251.8 » | « section 0 477 1905 1422.8 » → « section 0 477 1905 1480.4 » | « div 372.5 549 1160 1278.8 » → « div 372.5 549 1160 1336.4 » | « div 396.5 676.5 1112 1151.3 » → « div 396.5 676.5 1112 1208.9 »
+   ok   strategie 1920 reduced-motion: mouse on row 03: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1920 reduced-motion: mouse on row 03: boxes changed since load 0 of 159
+   ok   strategie 1920 reduced-motion: mouse on row 04: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1920 reduced-motion: mouse on row 04: boxes changed since load 0 of 159
+   ok   strategie 1920 reduced-motion: mouse on row 05: active alone in its list, not opened, its own detail shown 561.8x384.5 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1920 reduced-motion: mouse on row 05: boxes changed since load 0 of 159
+   ok   strategie 1920 reduced-motion: mouse on row 06: active alone in its list, not opened, its own detail shown 561.8x395.9 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1920 reduced-motion: mouse on row 06: boxes changed since load 89 of 159 — « main 0 77 1905 4194.2 » → « main 0 77 1905 4205.6 » | « section 0 477 1905 1422.8 » → « section 0 477 1905 1434.3 » | « div 372.5 549 1160 1278.8 » → « div 372.5 549 1160 1290.3 » | « div 396.5 676.5 1112 1151.3 » → « div 396.5 676.5 1112 1162.7 »
+   ok   strategie 1920 reduced-motion: mouse on row 07: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1920 reduced-motion: mouse on row 07: boxes changed since load 89 of 159 — « main 0 77 1905 4194.2 » → « main 0 77 1905 4142.5 » | « section 0 477 1905 1422.8 » → « section 0 477 1905 1371.2 » | « div 372.5 549 1160 1278.8 » → « div 372.5 549 1160 1227.2 » | « div 396.5 676.5 1112 1151.3 » → « div 396.5 676.5 1112 1099.6 »
+   ok   strategie 1920 reduced-motion: text « detail em rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (2 pieces of text over the 7 rows, 3465 pixels; fewest painted pixels in one piece 195)
+   ok   strategie 1920 reduced-motion: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (35 pieces of text over the 7 rows, 173480 pixels; fewest painted pixels in one piece 170)
+   ok   strategie 1920 reduced-motion: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (14 pieces of text over the 7 rows, 27720 pixels; fewest painted pixels in one piece 289)
+   ok   strategie 1920 reduced-motion: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (9 pieces of text over the 7 rows, 60228 pixels; fewest painted pixels in one piece 500)
+   ok   strategie 1920 reduced-motion: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (7 pieces of text over the 7 rows, 58280 pixels; fewest painted pixels in one piece 827)
+   ok   strategie 1920 reduced-motion: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (7 pieces of text over the 7 rows, 3171 pixels; fewest painted pixels in one piece 100)
+   ok   strategie 1920 reduced-motion: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (7 pieces of text over the 7 rows, 26733 pixels; fewest painted pixels in one piece 659)
+   ok   strategie 1920 reduced-motion: animations or transitions over 50 ms in #besoin right after each of the 7 mouse moves: 0 at most
+   ok   strategie 1920 reduced-motion: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   strategie 1920 reduced-motion: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920 reduced-motion: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920 reduced-motion: keyboard: 1 Tab → row 03 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920 reduced-motion: keyboard: 1 Tab → row 04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3378 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920 reduced-motion: keyboard: 1 Tab → row 05 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920 reduced-motion: keyboard: 1 Tab → row 06 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920 reduced-motion: keyboard: 1 Tab → row 07 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1920 reduced-motion: elements past the layout width 1905 px (innerWidth 1920): 0
+   ok   strategie 1920 reduced-motion: script errors 0
+ -- strategie 1200: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 1200: page ready true, Inter loaded true, heading font Inter
+   ok   strategie 1200: hover mode on 2 list(s) of 2 expected (lists marked data-hoverlist: 2; rows 7 of 7)
+   ok   strategie 1200: on load, list 1: row 01 active alone, no row open, its detail shown 561.8x423.1 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 423.6 high, reserve --hl-min «  »
+   ok   strategie 1200: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 1200: on load, list 2: row 05 active alone, no row open, its detail shown 561.8x384.5 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 384.5 high, reserve --hl-min «  »
+   ok   strategie 1200: list 2: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 1200: mouse on row 01: active alone in its list, not opened, its own detail shown 561.8x423.1 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1200: mouse on row 01: boxes changed since load 0 of 159
+   ok   strategie 1200: mouse on row 02: active alone in its list, not opened, its own detail shown 561.8x481.2 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1200: mouse on row 02: boxes changed since load 117 of 159 — « main 0 77 1185 4184.6 » → « main 0 77 1185 4242.2 » | « section 0 477 1185 1419 » → « section 0 477 1185 1476.6 » | « div 12.5 549 1160 1275 » → « div 12.5 549 1160 1332.6 » | « div 36.5 674.7 1112 1149.3 » → « div 36.5 674.7 1112 1206.9 »
+   ok   strategie 1200: mouse on row 03: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1200: mouse on row 03: boxes changed since load 0 of 159
+   ok   strategie 1200: mouse on row 04: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1200: mouse on row 04: boxes changed since load 0 of 159
+   ok   strategie 1200: mouse on row 05: active alone in its list, not opened, its own detail shown 561.8x384.5 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1200: mouse on row 05: boxes changed since load 0 of 159
+   ok   strategie 1200: mouse on row 06: active alone in its list, not opened, its own detail shown 561.8x395.9 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1200: mouse on row 06: boxes changed since load 89 of 159 — « main 0 77 1185 4184.6 » → « main 0 77 1185 4196.1 » | « section 0 477 1185 1419 » → « section 0 477 1185 1430.4 » | « div 12.5 549 1160 1275 » → « div 12.5 549 1160 1286.4 » | « div 36.5 674.7 1112 1149.3 » → « div 36.5 674.7 1112 1160.8 »
+   ok   strategie 1200: mouse on row 07: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1200: mouse on row 07: boxes changed since load 89 of 159 — « main 0 77 1185 4184.6 » → « main 0 77 1185 4133 » | « section 0 477 1185 1419 » → « section 0 477 1185 1367.3 » | « div 12.5 549 1160 1275 » → « div 12.5 549 1160 1223.3 » | « div 36.5 674.7 1112 1149.3 » → « div 36.5 674.7 1112 1097.7 »
+   ok   strategie 1200: text « detail em rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (2 pieces of text over the 7 rows, 3465 pixels; fewest painted pixels in one piece 195)
+   ok   strategie 1200: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (35 pieces of text over the 7 rows, 172951 pixels; fewest painted pixels in one piece 170)
+   ok   strategie 1200: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (14 pieces of text over the 7 rows, 27720 pixels; fewest painted pixels in one piece 289)
+   ok   strategie 1200: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (9 pieces of text over the 7 rows, 60228 pixels; fewest painted pixels in one piece 500)
+   ok   strategie 1200: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (7 pieces of text over the 7 rows, 58280 pixels; fewest painted pixels in one piece 827)
+   ok   strategie 1200: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (7 pieces of text over the 7 rows, 3171 pixels; fewest painted pixels in one piece 100)
+   ok   strategie 1200: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (7 pieces of text over the 7 rows, 26733 pixels; fewest painted pixels in one piece 659)
+   ok   strategie 1200: the same probe without reduced motion sees them: 8 at most, on 7 of 7 moves (0 would mean a blind probe)
+   ok   strategie 1200: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   strategie 1200: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200: keyboard: 1 Tab → row 03 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200: keyboard: 1 Tab → row 04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3378 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200: keyboard: 1 Tab → row 05 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200: keyboard: 1 Tab → row 06 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200: keyboard: 1 Tab → row 07 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200: elements past the layout width 1185 px (innerWidth 1200): 0
+   ok   strategie 1200: script errors 0
+ -- strategie 1200 reduced-motion: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 1200 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   ok   strategie 1200 reduced-motion: hover mode on 2 list(s) of 2 expected (lists marked data-hoverlist: 2; rows 7 of 7)
+   ok   strategie 1200 reduced-motion: on load, list 1: row 01 active alone, no row open, its detail shown 561.8x423.1 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 423.6 high, reserve --hl-min «  »
+   ok   strategie 1200 reduced-motion: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 1200 reduced-motion: on load, list 2: row 05 active alone, no row open, its detail shown 561.8x384.5 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 384.5 high, reserve --hl-min «  »
+   ok   strategie 1200 reduced-motion: list 2: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 1200 reduced-motion: mouse on row 01: active alone in its list, not opened, its own detail shown 561.8x423.1 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1200 reduced-motion: mouse on row 01: boxes changed since load 0 of 159
+   ok   strategie 1200 reduced-motion: mouse on row 02: active alone in its list, not opened, its own detail shown 561.8x481.2 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1200 reduced-motion: mouse on row 02: boxes changed since load 117 of 159 — « main 0 77 1185 4184.6 » → « main 0 77 1185 4242.2 » | « section 0 477 1185 1419 » → « section 0 477 1185 1476.6 » | « div 12.5 549 1160 1275 » → « div 12.5 549 1160 1332.6 » | « div 36.5 674.7 1112 1149.3 » → « div 36.5 674.7 1112 1206.9 »
+   ok   strategie 1200 reduced-motion: mouse on row 03: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1200 reduced-motion: mouse on row 03: boxes changed since load 0 of 159
+   ok   strategie 1200 reduced-motion: mouse on row 04: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1200 reduced-motion: mouse on row 04: boxes changed since load 0 of 159
+   ok   strategie 1200 reduced-motion: mouse on row 05: active alone in its list, not opened, its own detail shown 561.8x384.5 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 1200 reduced-motion: mouse on row 05: boxes changed since load 0 of 159
+   ok   strategie 1200 reduced-motion: mouse on row 06: active alone in its list, not opened, its own detail shown 561.8x395.9 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1200 reduced-motion: mouse on row 06: boxes changed since load 89 of 159 — « main 0 77 1185 4184.6 » → « main 0 77 1185 4196.1 » | « section 0 477 1185 1419 » → « section 0 477 1185 1430.4 » | « div 12.5 549 1160 1275 » → « div 12.5 549 1160 1286.4 » | « div 36.5 674.7 1112 1149.3 » → « div 36.5 674.7 1112 1160.8 »
+   ok   strategie 1200 reduced-motion: mouse on row 07: active alone in its list, not opened, its own detail shown 561.8x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 1200 reduced-motion: mouse on row 07: boxes changed since load 89 of 159 — « main 0 77 1185 4184.6 » → « main 0 77 1185 4133 » | « section 0 477 1185 1419 » → « section 0 477 1185 1367.3 » | « div 12.5 549 1160 1275 » → « div 12.5 549 1160 1223.3 » | « div 36.5 674.7 1112 1149.3 » → « div 36.5 674.7 1112 1097.7 »
+   ok   strategie 1200 reduced-motion: text « detail em rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (2 pieces of text over the 7 rows, 3465 pixels; fewest painted pixels in one piece 195)
+   ok   strategie 1200 reduced-motion: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (35 pieces of text over the 7 rows, 172951 pixels; fewest painted pixels in one piece 170)
+   ok   strategie 1200 reduced-motion: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (14 pieces of text over the 7 rows, 27720 pixels; fewest painted pixels in one piece 289)
+   ok   strategie 1200 reduced-motion: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (9 pieces of text over the 7 rows, 60228 pixels; fewest painted pixels in one piece 500)
+   ok   strategie 1200 reduced-motion: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (7 pieces of text over the 7 rows, 58280 pixels; fewest painted pixels in one piece 827)
+   ok   strategie 1200 reduced-motion: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (7 pieces of text over the 7 rows, 3171 pixels; fewest painted pixels in one piece 100)
+   ok   strategie 1200 reduced-motion: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (7 pieces of text over the 7 rows, 26733 pixels; fewest painted pixels in one piece 659)
+   ok   strategie 1200 reduced-motion: animations or transitions over 50 ms in #besoin right after each of the 7 mouse moves: 0 at most
+   ok   strategie 1200 reduced-motion: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   strategie 1200 reduced-motion: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200 reduced-motion: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200 reduced-motion: keyboard: 1 Tab → row 03 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200 reduced-motion: keyboard: 1 Tab → row 04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3378 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200 reduced-motion: keyboard: 1 Tab → row 05 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200 reduced-motion: keyboard: 1 Tab → row 06 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200 reduced-motion: keyboard: 1 Tab → row 07 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 1200 reduced-motion: elements past the layout width 1185 px (innerWidth 1200): 0
+   ok   strategie 1200 reduced-motion: script errors 0
+ -- strategie 961: innerWidth 961, layout width (clientWidth) 946, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 961: page ready true, Inter loaded true, heading font Inter
+   ok   strategie 961: hover mode on 2 list(s) of 2 expected (lists marked data-hoverlist: 2; rows 7 of 7)
+   ok   strategie 961: on load, list 1: row 01 active alone, no row open, its detail shown 445.1x527.8 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 527.8 high, reserve --hl-min «  »
+   ok   strategie 961: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 961: on load, list 2: row 05 active alone, no row open, its detail shown 445.1x384.5 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 384.5 high, reserve --hl-min «  »
+   ok   strategie 961: list 2: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 961: mouse on row 01: active alone in its list, not opened, its own detail shown 445.1x527.8 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 961: mouse on row 01: boxes changed since load 0 of 159
+   ok   strategie 961: mouse on row 02: active alone in its list, not opened, its own detail shown 445.1x534.2 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961: mouse on row 02: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4331 » | « section 0 477 946 1507.3 » → « section 0 477 946 1513.7 » | « div 0 549 946 1363.3 » → « div 0 549 946 1369.7 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1252.5 »
+   ok   strategie 961: mouse on row 03: active alone in its list, not opened, its own detail shown 445.1x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961: mouse on row 03: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4266 » | « section 0 477 946 1507.3 » → « section 0 477 946 1448.6 » | « div 0 549 946 1363.3 » → « div 0 549 946 1304.6 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1187.4 »
+   ok   strategie 961: mouse on row 04: active alone in its list, not opened, its own detail shown 445.1x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961: mouse on row 04: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4266 » | « section 0 477 946 1507.3 » → « section 0 477 946 1448.6 » | « div 0 549 946 1363.3 » → « div 0 549 946 1304.6 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1187.4 »
+   ok   strategie 961: mouse on row 05: active alone in its list, not opened, its own detail shown 445.1x384.5 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961: mouse on row 05: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4266 » | « section 0 477 946 1507.3 » → « section 0 477 946 1448.6 » | « div 0 549 946 1363.3 » → « div 0 549 946 1304.6 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1187.4 »
+   ok   strategie 961: mouse on row 06: active alone in its list, not opened, its own detail shown 445.1x395.9 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961: mouse on row 06: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4277.4 » | « section 0 477 946 1507.3 » → « section 0 477 946 1460.1 » | « div 0 549 946 1363.3 » → « div 0 549 946 1316.1 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1198.9 »
+   ok   strategie 961: mouse on row 07: active alone in its list, not opened, its own detail shown 445.1x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961: mouse on row 07: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4214.3 » | « section 0 477 946 1507.3 » → « section 0 477 946 1397 » | « div 0 549 946 1363.3 » → « div 0 549 946 1253 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1135.8 »
+   ok   strategie 961: text « detail em rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (2 pieces of text over the 7 rows, 3465 pixels; fewest painted pixels in one piece 195)
+   ok   strategie 961: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (35 pieces of text over the 7 rows, 173320 pixels; fewest painted pixels in one piece 170)
+   ok   strategie 961: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (14 pieces of text over the 7 rows, 27720 pixels; fewest painted pixels in one piece 289)
+   ok   strategie 961: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (9 pieces of text over the 7 rows, 60039 pixels; fewest painted pixels in one piece 500)
+   ok   strategie 961: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (7 pieces of text over the 7 rows, 57860 pixels; fewest painted pixels in one piece 827)
+   ok   strategie 961: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (7 pieces of text over the 7 rows, 3024 pixels; fewest painted pixels in one piece 100)
+   ok   strategie 961: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (7 pieces of text over the 7 rows, 26586 pixels; fewest painted pixels in one piece 659)
+   ok   strategie 961: the same probe without reduced motion sees them: 8 at most, on 7 of 7 moves (0 would mean a blind probe)
+   ok   strategie 961: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   strategie 961: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2934 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3066 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961: keyboard: 1 Tab → row 03 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2934 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961: keyboard: 1 Tab → row 04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2928 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961: keyboard: 1 Tab → row 05 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2934 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961: keyboard: 1 Tab → row 06 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2928 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961: keyboard: 1 Tab → row 07 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2934 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961: elements past the layout width 946 px (innerWidth 961): 0
+   ok   strategie 961: script errors 0
+ -- strategie 961 reduced-motion: innerWidth 961, layout width (clientWidth) 946, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   strategie 961 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   ok   strategie 961 reduced-motion: hover mode on 2 list(s) of 2 expected (lists marked data-hoverlist: 2; rows 7 of 7)
+   ok   strategie 961 reduced-motion: on load, list 1: row 01 active alone, no row open, its detail shown 445.1x527.8 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 527.8 high, reserve --hl-min «  »
+   ok   strategie 961 reduced-motion: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 961 reduced-motion: on load, list 2: row 05 active alone, no row open, its detail shown 445.1x384.5 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 384.5 high, reserve --hl-min «  »
+   ok   strategie 961 reduced-motion: list 2: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   strategie 961 reduced-motion: mouse on row 01: active alone in its list, not opened, its own detail shown 445.1x527.8 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   strategie 961 reduced-motion: mouse on row 01: boxes changed since load 0 of 159
+   ok   strategie 961 reduced-motion: mouse on row 02: active alone in its list, not opened, its own detail shown 445.1x534.2 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961 reduced-motion: mouse on row 02: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4331 » | « section 0 477 946 1507.3 » → « section 0 477 946 1513.7 » | « div 0 549 946 1363.3 » → « div 0 549 946 1369.7 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1252.5 »
+   ok   strategie 961 reduced-motion: mouse on row 03: active alone in its list, not opened, its own detail shown 445.1x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961 reduced-motion: mouse on row 03: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4266 » | « section 0 477 946 1507.3 » → « section 0 477 946 1448.6 » | « div 0 549 946 1363.3 » → « div 0 549 946 1304.6 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1187.4 »
+   ok   strategie 961 reduced-motion: mouse on row 04: active alone in its list, not opened, its own detail shown 445.1x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961 reduced-motion: mouse on row 04: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4266 » | « section 0 477 946 1507.3 » → « section 0 477 946 1448.6 » | « div 0 549 946 1363.3 » → « div 0 549 946 1304.6 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1187.4 »
+   ok   strategie 961 reduced-motion: mouse on row 05: active alone in its list, not opened, its own detail shown 445.1x384.5 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961 reduced-motion: mouse on row 05: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4266 » | « section 0 477 946 1507.3 » → « section 0 477 946 1448.6 » | « div 0 549 946 1363.3 » → « div 0 549 946 1304.6 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1187.4 »
+   ok   strategie 961 reduced-motion: mouse on row 06: active alone in its list, not opened, its own detail shown 445.1x395.9 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961 reduced-motion: mouse on row 06: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4277.4 » | « section 0 477 946 1507.3 » → « section 0 477 946 1460.1 » | « div 0 549 946 1363.3 » → « div 0 549 946 1316.1 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1198.9 »
+   ok   strategie 961 reduced-motion: mouse on row 07: active alone in its list, not opened, its own detail shown 445.1x331.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL strategie 961 reduced-motion: mouse on row 07: boxes changed since load 117 of 159 — « main 0 77 946 4324.6 » → « main 0 77 946 4214.3 » | « section 0 477 946 1507.3 » → « section 0 477 946 1397 » | « div 0 549 946 1363.3 » → « div 0 549 946 1253 » | « div 24 666.2 898 1246.1 » → « div 24 666.2 898 1135.8 »
+   ok   strategie 961 reduced-motion: text « detail em rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (2 pieces of text over the 7 rows, 3465 pixels; fewest painted pixels in one piece 195)
+   ok   strategie 961 reduced-motion: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (35 pieces of text over the 7 rows, 173320 pixels; fewest painted pixels in one piece 170)
+   ok   strategie 961 reduced-motion: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (14 pieces of text over the 7 rows, 27720 pixels; fewest painted pixels in one piece 289)
+   ok   strategie 961 reduced-motion: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (9 pieces of text over the 7 rows, 60039 pixels; fewest painted pixels in one piece 500)
+   ok   strategie 961 reduced-motion: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (7 pieces of text over the 7 rows, 57860 pixels; fewest painted pixels in one piece 827)
+   ok   strategie 961 reduced-motion: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (7 pieces of text over the 7 rows, 3024 pixels; fewest painted pixels in one piece 100)
+   ok   strategie 961 reduced-motion: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (7 pieces of text over the 7 rows, 26586 pixels; fewest painted pixels in one piece 659)
+   ok   strategie 961 reduced-motion: animations or transitions over 50 ms in #besoin right after each of the 7 mouse moves: 0 at most
+   ok   strategie 961 reduced-motion: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   strategie 961 reduced-motion: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2934 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961 reduced-motion: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3066 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961 reduced-motion: keyboard: 1 Tab → row 03 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2934 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961 reduced-motion: keyboard: 1 Tab → row 04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2928 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961 reduced-motion: keyboard: 1 Tab → row 05 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2934 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961 reduced-motion: keyboard: 1 Tab → row 06 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2928 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961 reduced-motion: keyboard: 1 Tab → row 07 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2934 pixels, median 5.08:1 against the same pixels without it
+   ok   strategie 961 reduced-motion: elements past the layout width 946 px (innerWidth 961): 0
+   ok   strategie 961 reduced-motion: script errors 0
+== /service-ia-business/ — hover mode (Done When 2 and 5)
+ -- ia 1920: innerWidth 1920, layout width (clientWidth) 1905, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 1920: page ready true, Inter loaded true, heading font Inter
+   ok   ia 1920: hover mode on 1 list(s) of 1 expected (lists marked data-hoverlist: 1; rows 3 of 3)
+   ok   ia 1920: on load, list 1: row 01 active alone, no row open, its detail shown 561.8x358.6 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 379.6 high, reserve --hl-min «  »
+   ok   ia 1920: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   ia 1920: mouse on row 01: active alone in its list, not opened, its own detail shown 561.8x358.6 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   ia 1920: mouse on row 01: boxes changed since load 0 of 148
+   ok   ia 1920: mouse on row 02: active alone in its list, not opened, its own detail shown 561.8x553.6 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 1920: mouse on row 02: boxes changed since load 113 of 148 — « main 0 77 1905 3598 » → « main 0 77 1905 3772.1 » | « section 0 477 1905 1346.6 » → « section 0 477 1905 1520.6 » | « div 372.5 549 1160 1202.6 » → « div 372.5 549 1160 1376.6 » | « div 396.5 676.5 1112 1075 » → « div 396.5 676.5 1112 1249.1 »
+   ok   ia 1920: mouse on row 03–04: active alone in its list, not opened, its own detail shown 561.8x416.7 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 1920: mouse on row 03–04: boxes changed since load 113 of 148 — « main 0 77 1905 3598 » → « main 0 77 1905 3635.2 » | « section 0 477 1905 1346.6 » → « section 0 477 1905 1383.7 » | « div 372.5 549 1160 1202.6 » → « div 372.5 549 1160 1239.7 » | « div 396.5 676.5 1112 1075 » → « div 396.5 676.5 1112 1112.1 »
+   ok   ia 1920: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (15 pieces of text over the 3 rows, 125220 pixels; fewest painted pixels in one piece 358)
+   ok   ia 1920: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (6 pieces of text over the 3 rows, 11880 pixels; fewest painted pixels in one piece 289)
+   ok   ia 1920: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (3 pieces of text over the 3 rows, 50841 pixels; fewest painted pixels in one piece 2156)
+   ok   ia 1920: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (3 pieces of text over the 3 rows, 36180 pixels; fewest painted pixels in one piece 1364)
+   ok   ia 1920: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (3 pieces of text over the 3 rows, 1953 pixels; fewest painted pixels in one piece 100)
+   ok   ia 1920: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (3 pieces of text over the 3 rows, 17703 pixels; fewest painted pixels in one piece 1005)
+   ok   ia 1920: the same probe without reduced motion sees them: 4 at most, on 3 of 3 moves (0 would mean a blind probe)
+   ok   ia 1920: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   ia 1920: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1920: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1920: keyboard: 1 Tab → row 03–04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3798 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1920: phase 2 dépliant « Données d'entrée »: a click opens it (true, text visible true), a click closes it (true); class and inside a hover list: disclosure|false
+   ok   ia 1920: elements past the layout width 1905 px (innerWidth 1920): 0
+   ok   ia 1920: script errors 0
+ -- ia 1920 reduced-motion: innerWidth 1920, layout width (clientWidth) 1905, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 1920 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   ok   ia 1920 reduced-motion: hover mode on 1 list(s) of 1 expected (lists marked data-hoverlist: 1; rows 3 of 3)
+   ok   ia 1920 reduced-motion: on load, list 1: row 01 active alone, no row open, its detail shown 561.8x358.6 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 379.6 high, reserve --hl-min «  »
+   ok   ia 1920 reduced-motion: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   ia 1920 reduced-motion: mouse on row 01: active alone in its list, not opened, its own detail shown 561.8x358.6 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   ia 1920 reduced-motion: mouse on row 01: boxes changed since load 0 of 148
+   ok   ia 1920 reduced-motion: mouse on row 02: active alone in its list, not opened, its own detail shown 561.8x553.6 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 1920 reduced-motion: mouse on row 02: boxes changed since load 113 of 148 — « main 0 77 1905 3598 » → « main 0 77 1905 3772.1 » | « section 0 477 1905 1346.6 » → « section 0 477 1905 1520.6 » | « div 372.5 549 1160 1202.6 » → « div 372.5 549 1160 1376.6 » | « div 396.5 676.5 1112 1075 » → « div 396.5 676.5 1112 1249.1 »
+   ok   ia 1920 reduced-motion: mouse on row 03–04: active alone in its list, not opened, its own detail shown 561.8x416.7 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 1920 reduced-motion: mouse on row 03–04: boxes changed since load 113 of 148 — « main 0 77 1905 3598 » → « main 0 77 1905 3635.2 » | « section 0 477 1905 1346.6 » → « section 0 477 1905 1383.7 » | « div 372.5 549 1160 1202.6 » → « div 372.5 549 1160 1239.7 » | « div 396.5 676.5 1112 1075 » → « div 396.5 676.5 1112 1112.1 »
+   ok   ia 1920 reduced-motion: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (15 pieces of text over the 3 rows, 125220 pixels; fewest painted pixels in one piece 358)
+   ok   ia 1920 reduced-motion: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (6 pieces of text over the 3 rows, 11880 pixels; fewest painted pixels in one piece 289)
+   ok   ia 1920 reduced-motion: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (3 pieces of text over the 3 rows, 50841 pixels; fewest painted pixels in one piece 2156)
+   ok   ia 1920 reduced-motion: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (3 pieces of text over the 3 rows, 36180 pixels; fewest painted pixels in one piece 1364)
+   ok   ia 1920 reduced-motion: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (3 pieces of text over the 3 rows, 1953 pixels; fewest painted pixels in one piece 100)
+   ok   ia 1920 reduced-motion: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (3 pieces of text over the 3 rows, 17703 pixels; fewest painted pixels in one piece 1005)
+   ok   ia 1920 reduced-motion: animations or transitions over 50 ms in #besoin right after each of the 3 mouse moves: 0 at most
+   ok   ia 1920 reduced-motion: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   ia 1920 reduced-motion: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1920 reduced-motion: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3510 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1920 reduced-motion: keyboard: 1 Tab → row 03–04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3798 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1920 reduced-motion: phase 2 dépliant « Données d'entrée »: a click opens it (true, text visible true), a click closes it (true); class and inside a hover list: disclosure|false
+   ok   ia 1920 reduced-motion: elements past the layout width 1905 px (innerWidth 1920): 0
+   ok   ia 1920 reduced-motion: script errors 0
+ -- ia 1200: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 1200: page ready true, Inter loaded true, heading font Inter
+   ok   ia 1200: hover mode on 1 list(s) of 1 expected (lists marked data-hoverlist: 1; rows 3 of 3)
+   ok   ia 1200: on load, list 1: row 01 active alone, no row open, its detail shown 561.8x358.6 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 379.6 high, reserve --hl-min «  »
+   ok   ia 1200: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   ia 1200: mouse on row 01: active alone in its list, not opened, its own detail shown 561.8x358.6 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   ia 1200: mouse on row 01: boxes changed since load 0 of 148
+   ok   ia 1200: mouse on row 02: active alone in its list, not opened, its own detail shown 561.8x553.6 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 1200: mouse on row 02: boxes changed since load 113 of 148 — « main 0 77 1185 3587.5 » → « main 0 77 1185 3761.6 » | « section 0 477 1185 1342.7 » → « section 0 477 1185 1516.8 » | « div 12.5 549 1160 1198.7 » → « div 12.5 549 1160 1372.8 » | « div 36.5 674.7 1112 1073.1 » → « div 36.5 674.7 1112 1247.1 »
+   ok   ia 1200: mouse on row 03–04: active alone in its list, not opened, its own detail shown 561.8x416.7 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 1200: mouse on row 03–04: boxes changed since load 113 of 148 — « main 0 77 1185 3587.5 » → « main 0 77 1185 3624.6 » | « section 0 477 1185 1342.7 » → « section 0 477 1185 1379.8 » | « div 12.5 549 1160 1198.7 » → « div 12.5 549 1160 1235.8 » | « div 36.5 674.7 1112 1073.1 » → « div 36.5 674.7 1112 1110.2 »
+   ok   ia 1200: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (15 pieces of text over the 3 rows, 125220 pixels; fewest painted pixels in one piece 358)
+   ok   ia 1200: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (6 pieces of text over the 3 rows, 11880 pixels; fewest painted pixels in one piece 289)
+   ok   ia 1200: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (3 pieces of text over the 3 rows, 50841 pixels; fewest painted pixels in one piece 2156)
+   ok   ia 1200: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (3 pieces of text over the 3 rows, 36180 pixels; fewest painted pixels in one piece 1364)
+   ok   ia 1200: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (3 pieces of text over the 3 rows, 1953 pixels; fewest painted pixels in one piece 100)
+   ok   ia 1200: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (3 pieces of text over the 3 rows, 17703 pixels; fewest painted pixels in one piece 1005)
+   ok   ia 1200: the same probe without reduced motion sees them: 4 at most, on 3 of 3 moves (0 would mean a blind probe)
+   ok   ia 1200: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   ia 1200: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1200: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1200: keyboard: 1 Tab → row 03–04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3792 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1200: phase 2 dépliant « Données d'entrée »: a click opens it (true, text visible true), a click closes it (true); class and inside a hover list: disclosure|false
+   ok   ia 1200: elements past the layout width 1185 px (innerWidth 1200): 0
+   ok   ia 1200: script errors 0
+ -- ia 1200 reduced-motion: innerWidth 1200, layout width (clientWidth) 1185, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 1200 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   ok   ia 1200 reduced-motion: hover mode on 1 list(s) of 1 expected (lists marked data-hoverlist: 1; rows 3 of 3)
+   ok   ia 1200 reduced-motion: on load, list 1: row 01 active alone, no row open, its detail shown 561.8x358.6 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 379.6 high, reserve --hl-min «  »
+   ok   ia 1200 reduced-motion: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   ia 1200 reduced-motion: mouse on row 01: active alone in its list, not opened, its own detail shown 561.8x358.6 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   ia 1200 reduced-motion: mouse on row 01: boxes changed since load 0 of 148
+   ok   ia 1200 reduced-motion: mouse on row 02: active alone in its list, not opened, its own detail shown 561.8x553.6 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 1200 reduced-motion: mouse on row 02: boxes changed since load 113 of 148 — « main 0 77 1185 3587.5 » → « main 0 77 1185 3761.6 » | « section 0 477 1185 1342.7 » → « section 0 477 1185 1516.8 » | « div 12.5 549 1160 1198.7 » → « div 12.5 549 1160 1372.8 » | « div 36.5 674.7 1112 1073.1 » → « div 36.5 674.7 1112 1247.1 »
+   ok   ia 1200 reduced-motion: mouse on row 03–04: active alone in its list, not opened, its own detail shown 561.8x416.7 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 1200 reduced-motion: mouse on row 03–04: boxes changed since load 113 of 148 — « main 0 77 1185 3587.5 » → « main 0 77 1185 3624.6 » | « section 0 477 1185 1342.7 » → « section 0 477 1185 1379.8 » | « div 12.5 549 1160 1198.7 » → « div 12.5 549 1160 1235.8 » | « div 36.5 674.7 1112 1073.1 » → « div 36.5 674.7 1112 1110.2 »
+   ok   ia 1200 reduced-motion: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (15 pieces of text over the 3 rows, 125220 pixels; fewest painted pixels in one piece 358)
+   ok   ia 1200 reduced-motion: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (6 pieces of text over the 3 rows, 11880 pixels; fewest painted pixels in one piece 289)
+   ok   ia 1200 reduced-motion: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (3 pieces of text over the 3 rows, 50841 pixels; fewest painted pixels in one piece 2156)
+   ok   ia 1200 reduced-motion: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (3 pieces of text over the 3 rows, 36180 pixels; fewest painted pixels in one piece 1364)
+   ok   ia 1200 reduced-motion: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (3 pieces of text over the 3 rows, 1953 pixels; fewest painted pixels in one piece 100)
+   ok   ia 1200 reduced-motion: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (3 pieces of text over the 3 rows, 17703 pixels; fewest painted pixels in one piece 1005)
+   ok   ia 1200 reduced-motion: animations or transitions over 50 ms in #besoin right after each of the 3 mouse moves: 0 at most
+   ok   ia 1200 reduced-motion: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   ia 1200 reduced-motion: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1200 reduced-motion: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3516 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1200 reduced-motion: keyboard: 1 Tab → row 03–04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3792 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 1200 reduced-motion: phase 2 dépliant « Données d'entrée »: a click opens it (true, text visible true), a click closes it (true); class and inside a hover list: disclosure|false
+   ok   ia 1200 reduced-motion: elements past the layout width 1185 px (innerWidth 1200): 0
+   ok   ia 1200 reduced-motion: script errors 0
+ -- ia 961: innerWidth 961, layout width (clientWidth) 946, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 961: page ready true, Inter loaded true, heading font Inter
+   ok   ia 961: hover mode on 1 list(s) of 1 expected (lists marked data-hoverlist: 1; rows 3 of 3)
+   ok   ia 961: on load, list 1: row 01 active alone, no row open, its detail shown 445.1x358.6 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 425.2 high, reserve --hl-min «  »
+   ok   ia 961: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   ia 961: mouse on row 01: active alone in its list, not opened, its own detail shown 445.1x358.6 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   ia 961: mouse on row 01: boxes changed since load 0 of 148
+   ok   ia 961: mouse on row 02: active alone in its list, not opened, its own detail shown 445.1x658.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 961: mouse on row 02: boxes changed since load 113 of 148 — « main 0 77 946 3638.3 » → « main 0 77 946 3871.5 » | « section 0 477 946 1394.5 » → « section 0 477 946 1627.6 » | « div 0 549 946 1250.5 » → « div 0 549 946 1483.6 » | « div 24 666.2 898 1133.3 » → « div 24 666.2 898 1366.4 »
+   ok   ia 961: mouse on row 03–04: active alone in its list, not opened, its own detail shown 445.1x443.9 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 961: mouse on row 03–04: boxes changed since load 113 of 148 — « main 0 77 946 3638.3 » → « main 0 77 946 3657 » | « section 0 477 946 1394.5 » → « section 0 477 946 1413.2 » | « div 0 549 946 1250.5 » → « div 0 549 946 1269.2 » | « div 24 666.2 898 1133.3 » → « div 24 666.2 898 1152 »
+   ok   ia 961: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (15 pieces of text over the 3 rows, 125040 pixels; fewest painted pixels in one piece 358)
+   ok   ia 961: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (6 pieces of text over the 3 rows, 11880 pixels; fewest painted pixels in one piece 289)
+   ok   ia 961: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (3 pieces of text over the 3 rows, 50673 pixels; fewest painted pixels in one piece 2156)
+   ok   ia 961: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (3 pieces of text over the 3 rows, 35880 pixels; fewest painted pixels in one piece 1364)
+   ok   ia 961: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (3 pieces of text over the 3 rows, 1890 pixels; fewest painted pixels in one piece 100)
+   ok   ia 961: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (3 pieces of text over the 3 rows, 17619 pixels; fewest painted pixels in one piece 1005)
+   ok   ia 961: the same probe without reduced motion sees them: 4 at most, on 3 of 3 moves (0 would mean a blind probe)
+   ok   ia 961: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   ia 961: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2934 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 961: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3066 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 961: keyboard: 1 Tab → row 03–04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3348 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 961: phase 2 dépliant « Données d'entrée »: a click opens it (true, text visible true), a click closes it (true); class and inside a hover list: disclosure|false
+   ok   ia 961: elements past the layout width 946 px (innerWidth 961): 0
+   ok   ia 961: script errors 0
+ -- ia 961 reduced-motion: innerWidth 961, layout width (clientWidth) 946, fine pointer with hover true, (hover: none) false, 961 px and more true
+   ok   ia 961 reduced-motion: page ready true, Inter loaded true, heading font Inter
+   ok   ia 961 reduced-motion: hover mode on 1 list(s) of 1 expected (lists marked data-hoverlist: 1; rows 3 of 3)
+   ok   ia 961 reduced-motion: on load, list 1: row 01 active alone, no row open, its detail shown 445.1x358.6 in the viewport and topmost, top 0 px from the list's top, first line 44 px under the edge, no entrance animation; list 425.2 high, reserve --hl-min «  »
+   ok   ia 961 reduced-motion: list 1: the copied detail holds 0 id, name, nested hover list, dépliant or script; aria-live « polite »
+   ok   ia 961 reduced-motion: mouse on row 01: active alone in its list, not opened, its own detail shown 445.1x358.6 in the viewport and topmost, top 0 px from the list's top, inside its card
+   ok   ia 961 reduced-motion: mouse on row 01: boxes changed since load 0 of 148
+   ok   ia 961 reduced-motion: mouse on row 02: active alone in its list, not opened, its own detail shown 445.1x658.4 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 961 reduced-motion: mouse on row 02: boxes changed since load 113 of 148 — « main 0 77 946 3638.3 » → « main 0 77 946 3871.5 » | « section 0 477 946 1394.5 » → « section 0 477 946 1627.6 » | « div 0 549 946 1250.5 » → « div 0 549 946 1483.6 » | « div 24 666.2 898 1133.3 » → « div 24 666.2 898 1366.4 »
+   ok   ia 961 reduced-motion: mouse on row 03–04: active alone in its list, not opened, its own detail shown 445.1x443.9 in the viewport and topmost, top 0 px from the list's top, inside its card
+   FAIL ia 961 reduced-motion: mouse on row 03–04: boxes changed since load 113 of 148 — « main 0 77 946 3638.3 » → « main 0 77 946 3657 » | « section 0 477 946 1394.5 » → « section 0 477 946 1413.2 » | « div 0 549 946 1250.5 » → « div 0 549 946 1269.2 » | « div 24 666.2 898 1133.3 » → « div 24 666.2 898 1152 »
+   ok   ia 961 reduced-motion: text « detail li rgb(26, 54, 93) » against the worst pixel behind it rgb(245,248,252) = 11.40:1 (15 pieces of text over the 3 rows, 125040 pixels; fewest painted pixels in one piece 358)
+   ok   ia 961 reduced-motion: text « detail p.service-detail__label rgb(74, 85, 104) » against the worst pixel behind it rgb(245,248,252) = 7.07:1 (6 pieces of text over the 3 rows, 11880 pixels; fewest painted pixels in one piece 289)
+   ok   ia 961 reduced-motion: text « detail p.service-question rgb(74, 85, 104) » against the worst pixel behind it rgb(255,255,255) = 7.53:1 (3 pieces of text over the 3 rows, 50673 pixels; fewest painted pixels in one piece 2156)
+   ok   ia 961 reduced-motion: text « row span.disclosure__subtitle rgba(255, 255, 255, 0.86) » against the worst pixel behind it rgb(26,54,93) = 9.41:1 (3 pieces of text over the 3 rows, 35880 pixels; fewest painted pixels in one piece 1364)
+   ok   ia 961 reduced-motion: text « row span.service-question__number rgb(159, 227, 224) » against the worst pixel behind it rgb(26,54,93) = 8.41:1 (3 pieces of text over the 3 rows, 1890 pixels; fewest painted pixels in one piece 100)
+   ok   ia 961 reduced-motion: text « row strong rgb(255, 255, 255) » against the worst pixel behind it rgb(26,54,93) = 12.14:1 (3 pieces of text over the 3 rows, 17619 pixels; fewest painted pixels in one piece 1005)
+   ok   ia 961 reduced-motion: animations or transitions over 50 ms in #besoin right after each of the 3 mouse moves: 0 at most
+   ok   ia 961 reduced-motion: mouse click on row 02: not opened, active, its own detail shown; rows open 0
+   ok   ia 961 reduced-motion: keyboard: 7 Tab → row 01 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 2934 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 961 reduced-motion: keyboard: 1 Tab → row 02 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3066 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 961 reduced-motion: keyboard: 1 Tab → row 03–04 focused (:focus-visible true), active, its own detail shown; Enter keeps it (opened false, focus kept true); focus ring 3348 pixels, median 5.08:1 against the same pixels without it
+   ok   ia 961 reduced-motion: phase 2 dépliant « Données d'entrée »: a click opens it (true, text visible true), a click closes it (true); class and inside a hover list: disclosure|false
+   ok   ia 961 reduced-motion: elements past the layout width 946 px (innerWidth 961): 0
+   ok   ia 961 reduced-motion: script errors 0
+RENDER http://127.0.0.1:4175: 372 checks, failing 36 — PARTIAL RUN (hover): not the full render
