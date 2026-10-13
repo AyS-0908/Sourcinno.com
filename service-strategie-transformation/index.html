@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=94fbe4b0">
+<link rel="stylesheet" href="/assets/css/style.css?v=b3d93a14">
 <noscript>
   <style>
     /* Sans JavaScript, le lecteur video ne peut pas se lancer : on le masque,
@@ -82,12 +82,12 @@
     </div>
     <p class="lead">Définir une direction pérenne, puis y aligner les opérations : organisation, processus, compétences, et outils</p>
     <div class="grid grid--2 service-phases">
-      <div class="card service-phase">
+      <div class="card service-phase hl" data-hoverlist>
         <div class="service-phase__head">
           <span class="step__n" aria-hidden="true">1</span>
           <div><h3>Stratégie</h3><p class="service-phase__percent">10% d'inspiration</p></div>
         </div>
-        <ol class="service-question-list" start="1">
+        <ol class="service-question-list hl__items" start="1">
           <li>
             <details class="disclosure">
               <summary><span class="service-question__number">01</span><span><strong>Choisir une direction</strong><span class="disclosure__subtitle">Livrables : constats chiffrés, scénarios de direction, décision ComEx</span></span></summary>
@@ -166,13 +166,14 @@
             </details>
           </li>
         </ol>
+        <div class="hl__detail" aria-live="polite"></div>
       </div>
-      <div class="card service-phase">
+      <div class="card service-phase hl" data-hoverlist>
         <div class="service-phase__head">
           <span class="step__n" aria-hidden="true">2</span>
           <div><h3>Transformation</h3><p class="service-phase__percent">90% de transpiration</p></div>
         </div>
-        <ol class="service-question-list" start="5">
+        <ol class="service-question-list hl__items" start="5">
           <li>
             <details class="disclosure">
               <summary><span class="service-question__number">05</span><span><strong>Organiser la mise en œuvre</strong><span class="disclosure__subtitle">Livrables : plan d'action, tableau de bord, comités de pilotage</span></span></summary>
@@ -230,6 +231,7 @@
             </details>
           </li>
         </ol>
+        <div class="hl__detail" aria-live="polite"></div>
       </div>
     </div>
   </div>
@@ -329,6 +331,6 @@
   </div>
 </footer>
 <script src="/assets/js/config.js?v=654769f0" defer></script>
-<script src="/assets/js/site.js?v=c0f148db" defer></script>
+<script src="/assets/js/site.js?v=36559700" defer></script>
 </body>
 </html>

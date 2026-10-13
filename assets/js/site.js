@@ -100,6 +100,76 @@
     root.classList.remove("reveal-wait");
   }
 
+  /* --- Liste à aperçu (pages services, « Livrables ») ----------------
+     Ordinateur avec souris, 961 px et plus : survoler une ligne ou l'atteindre
+     au clavier affiche son détail à côté de la liste. Écran tactile, fenêtre
+     plus étroite ou sans ce fichier : le dépliant natif reste. Le détail est
+     une copie du contenu de la ligne : aucun texte ne dépend du survol. */
+  function initHoverList() {
+    const mq = window.matchMedia("(hover: hover) and (pointer: fine) and (min-width: 961px)");
+    document.querySelectorAll("[data-hoverlist]").forEach((root) => {
+      const panel = root.querySelector(".hl__detail");
+      /* Les lignes de la liste seulement : un dépliant imbriqué n'en devient jamais une. */
+      const items = [...root.querySelectorAll(".hl__items > li > details")];
+      if (!panel || !items.length) return;
+      let current = items[0];
+
+      const fill = (d) => {
+        panel.textContent = "";
+        [...d.children].forEach((c) => { if (c.tagName !== "SUMMARY") panel.appendChild(c.cloneNode(true)); });
+      };
+      /* Le détail reste calé en haut ; la liste réserve la hauteur du plus long
+         détail : changer de ligne ne déplace rien sur la page. */
+      const reserve = () => {
+        if (!mq.matches) return;
+        let max = 0;
+        root.style.removeProperty("--hl-min");
+        panel.classList.remove("is-swap");
+        items.forEach((d) => { fill(d); max = Math.max(max, Math.ceil(panel.getBoundingClientRect().height)); });
+        fill(current);
+        root.style.setProperty("--hl-min", max + "px");
+      };
+      /* byUser : l'entrée animée ne joue que sur un geste du visiteur, jamais
+         au chargement ni au redimensionnement. */
+      const show = (d, byUser) => {
+        if (d === current && panel.childNodes.length) return;
+        current = d;
+        items.forEach((x) => x.classList.toggle("is-active", x === d));
+        panel.classList.toggle("is-swap", !!byUser);
+        fill(d);
+      };
+      const apply = () => {
+        root.classList.toggle("is-hover", mq.matches);
+        panel.textContent = "";
+        if (mq.matches) {
+          /* La section est bien plus haute en mode aperçu : l'apparition au défilement
+             attendrait 8 % de cette hauteur à l'écran et laisserait le premier écran
+             vide sous le héros. Elle est donc montrée dès que le mode s'active. */
+          const section = root.closest(".reveal");
+          if (section) section.classList.add("is-visible");
+          items.forEach((d) => { d.open = false; });
+          show(current);
+          reserve();
+        } else {
+          items.forEach((d) => d.classList.remove("is-active"));
+          root.style.removeProperty("--hl-min");
+        }
+      };
+
+      items.forEach((d) => {
+        const s = d.querySelector("summary");
+        on(s, "pointerenter", () => { if (mq.matches) show(d, true); });
+        on(s, "focus", () => { if (mq.matches) show(d, true); });
+        /* En mode aperçu une ligne ne s'ouvre jamais : clic et Entrée affichent son détail. */
+        on(s, "click", (e) => { if (mq.matches) { e.preventDefault(); show(d, true); } });
+      });
+      on(mq, "change", apply);
+      on(window, "resize", reserve);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(reserve);
+      apply();
+    });
+  }
+
   /* --- Année du copyright ------------------------------------------- */
   function initYear() {
     document.querySelectorAll("[data-year]").forEach((el) => {
@@ -113,6 +183,7 @@
     initDropdowns();
     initStickyHeader();
     initReveal();
+    initHoverList();
     initYear();
   }
 

@@ -1019,6 +1019,33 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .service-level { min-width: 0; padding: var(--space-2); border-radius: var(--radius); background: var(--grey-50); border-top: 3px solid var(--teal-dark); font-size: .92rem; line-height: 1.5; }
 .service-level strong { display: block; margin-bottom: 4px; color: var(--navy); }
 .service-rollout__extras { margin: var(--space-2) 0 0; font-size: .95rem; color: var(--text-muted); }
+
+/* ---------- P56 — Liste à aperçu : le détail d'une ligne s'affiche à côté de la liste (maquette V1.2, bloc cartes-A) ----------
+   .is-hover, .is-active, .is-swap et --hl-min sont posés par site.js, avec une souris et à partir de 961 px seulement.
+   Sans .is-hover (écran tactile, fenêtre étroite, sans script) rien ne change : les dépliants natifs restent tels quels. */
+.hl__detail { display: none; }
+.hl.is-hover { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-2); align-items: stretch; }
+.hl.is-hover > .hl__items { display: grid; gap: var(--space-1); align-content: start; min-height: var(--hl-min, 0px); }
+.hl.is-hover summary::after { content: ""; align-self: center; width: .6rem; height: .6rem; border-top: 2px solid currentColor; border-right: 2px solid currentColor; transform: rotate(45deg); opacity: 0; }
+.hl.is-hover .is-active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+.hl.is-hover .is-active summary::after { opacity: 1; color: var(--accent-on-dark); }
+.hl.is-hover .is-active strong { color: var(--white); }
+.hl.is-hover .is-active .disclosure__subtitle { color: rgba(255, 255, 255, 0.86); }
+.hl.is-hover .is-active .service-question__number { color: var(--accent-on-dark); }
+.hl.is-hover > .hl__detail { display: block; align-self: start; padding: var(--space-3); border: 1px solid var(--teal-dark); border-radius: var(--radius-lg); background: var(--grey-50); }
+.hl.is-hover > .hl__detail .service-detail { padding: 0; }
+.hl.is-hover > .hl__detail .service-question { background: var(--white); }
+/* Livrables : les deux phases l'une sous l'autre, la liste à gauche et le détail à droite. */
+.service-phases:has(.hl.is-hover) { grid-template-columns: 1fr; }
+.service-phase.hl.is-hover { grid-template-areas: "head head" "items detail"; }
+.service-phase.hl.is-hover > .service-phase__head { grid-area: head; }
+.service-phase.hl.is-hover .disclosure { border: 1px solid transparent; border-top-color: var(--border); border-radius: var(--radius); }
+.service-phase.hl.is-hover .disclosure summary { padding: var(--space-2); }
+@media (prefers-reduced-motion: no-preference) {
+  .hl.is-hover .disclosure { transition: background-color .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease); }
+  .hl.is-hover > .hl__detail.is-swap > * { animation: hl-in .32s var(--ease) both; }
+}
+@keyframes hl-in { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }
 /* P37 : schéma = lien vers l'original (Stratégie) ; bloc pour que l'anneau de focus entoure l'image. */
 .band-figure > a { display: block; border-radius: var(--radius-lg); }
 @media (max-width: 640px) {
