@@ -26,9 +26,7 @@
   --primary-hover:      #1f6360;  /* bouton principal et lanceur survoles */
   --error:              #c53030;  /* message et bordure d erreur */
   --tag-text:           #a04a12;  /* texte des etiquettes (fond orange translucide) */
-  --hero-deep:          #10243d;  /* degrade du hero d accueil et de la carte Strategie */
-  --hero-mid:           #173858;  /* degrade du hero d accueil */
-  --hero-end:           #1b4960;  /* degrade du hero d accueil */
+  --hero-deep:          #10243d;  /* degrade de la carte Strategie de l accueil */
   --card-strategie-end: #24546a;  /* degrade de la carte Strategie de l accueil */
 
   /* Rôles */
@@ -292,26 +290,59 @@ p  { margin: 0 0 var(--space-2); }
 .hero h1 { color: var(--white); max-width: 18ch; }
 .hero__sub {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.86);
+  color: var(--white);
   max-width: 62ch;
   margin-bottom: var(--space-4);
 }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 
-/* Hero d'offre : plus petit, image de fond propre à l'offre — PRD §4.2 */
-.hero--offer { padding-block: var(--space-6); background-size: cover; background-position: center; }
-.hero--offer::before {
-  content: "";
+/* Hero photo (accueil et pages de service) — PRD § Refonte 2026-10-11 : la photo occupe les 70 % de droite
+   et se fond dans le bleu nuit ; le voile (::after, a la place des particules) n existe que derriere le texte.
+   Jusqu a 860 px : la photo en bloc de 230 px, le texte remonte sur son bas estompe. */
+.hero--cover { display: flex; align-items: center; min-height: 400px; padding-block: 0; background: var(--navy-dark); }
+.hero--cover::after { background: linear-gradient(90deg, rgba(18, 37, 63, 0.96) 0%, rgba(18, 37, 63, 0.9) 36%, rgba(18, 37, 63, 0.78) 52%, rgba(18, 37, 63, 0) 72%); }
+.hero--cover > .container { padding-block: var(--space-5); }
+.hero--cover h1 { max-width: 22ch; }
+.hero--cover .hero__sub:last-child { margin-bottom: 0; }
+.hero__bg {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.78) 55%, rgba(49, 151, 149, 0.62) 100%);
+  inset: 0 0 0 30%;
+  width: 70%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 42%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 42%);
 }
-/* Jusqu a 860 px le sous-titre passe sur la partie claire des photos : voile plus dense, fini en marine
-   (meme un teal fonce plafonne sous 4,5:1 avec ce blanc ; contraste mesure >= 4,9:1, Pass 48). */
+/* Point de la photo garde au cadrage, par page. */
+.hero--strategie .hero__bg { object-position: 50% 12%; }
+.hero--venture .hero__bg { object-position: 50% 30%; }
+.hero--home .hero__bg { object-position: 86% 60%; }
+.hero--home { min-height: 520px; }
+.hero--home h1 { max-width: 14ch; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: 1.05; }
+.hero--home h1 span { color: var(--accent-on-dark); }
+.hero--home .hero__sub { max-width: 56ch; margin-bottom: var(--space-3); }
+.hero--home .hero__actions { margin: 0; }
+@media (min-width: 861px) {
+  .hero--cover h1, .hero--cover .hero__sub { max-width: 50%; }
+}
 @media (max-width: 860px) {
-  .hero--offer::before { background: linear-gradient(120deg, rgba(18, 37, 63, 0.92) 0%, rgba(26, 54, 93, 0.84) 55%, rgba(26, 54, 93, 0.74) 100%); }
+  .hero--cover { display: block; min-height: 0; }
+  .hero__bg {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: 230px;
+    -webkit-mask-image: linear-gradient(180deg, #000 50%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 50%, transparent 100%);
+  }
+  .hero--cover::after { background: linear-gradient(180deg, rgba(18, 37, 63, 0) 0, rgba(18, 37, 63, 0) 100px, rgba(18, 37, 63, 0.92) 178px); }
+  .hero--cover > .container { margin-top: -3.25rem; padding-block: 0 var(--space-4); }
 }
-.hero--offer h1 { max-width: 22ch; }
+@media (max-width: 640px) {
+  .hero--home h1 { font-size: clamp(2.35rem, 9vw, 3.2rem); }
+}
 .hero__eyebrow {
   font-size: 0.78rem;
   font-weight: 700;
@@ -767,46 +798,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
    Composants propres a l'accueil.
    ============================================================ */
 
-/* ---------- Accueil : stratégie abstraite en CSS, sans image servie ---------- */
-.hero--animated {
-  min-height: 520px;
-  padding-block: clamp(5rem, 8vw, 8rem);
-  background: linear-gradient(115deg, var(--hero-deep) 0%, var(--hero-mid) 58%, var(--hero-end) 100%);
-}
-.hero--animated::before {
-  content: "";
-  position: absolute;
-  inset: -25% -8% -25% 42%;
-  background:
-    repeating-linear-gradient(90deg, transparent 0 74px, rgba(159, 227, 224, 0.12) 75px 76px),
-    repeating-linear-gradient(0deg, transparent 0 55px, rgba(159, 227, 224, 0.10) 56px 57px),
-    linear-gradient(115deg, transparent 15%, rgba(96, 190, 202, 0.22) 55%, transparent 75%);
-  transform: skewY(-18deg);
-  pointer-events: none;
-}
-.hero--animated::after {
-  inset: 0 0 0 40%;
-  background:
-    radial-gradient(circle at 24% 70%, var(--accent-on-dark) 0 4px, transparent 5px),
-    radial-gradient(circle at 48% 49%, var(--accent-on-dark) 0 4px, transparent 5px),
-    radial-gradient(circle at 68% 28%, var(--accent-on-dark) 0 4px, transparent 5px),
-    radial-gradient(circle at 86% 39%, var(--accent-on-dark) 0 4px, transparent 5px),
-    linear-gradient(155deg, transparent 47%, rgba(159, 227, 224, 0.55) 47.2%, rgba(159, 227, 224, 0.55) 47.4%, transparent 47.6%);
-  pointer-events: none;
-}
-.hero--animated .container { max-width: var(--container); }
-.hero--animated h1 { max-width: 14ch; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: 1.05; }
-.hero--animated h1 span { color: var(--accent-on-dark); }
-.hero--animated .hero__sub { max-width: 56ch; margin-bottom: var(--space-3); }
-.hero--animated .hero__actions { margin: 0; }
-@media (prefers-reduced-motion: no-preference) {
-  .hero--animated { background-size: 220% 220%; animation: hero-drift 30s ease-in-out infinite alternate; }
-}
-@keyframes hero-drift {
-  from { background-position: 0% 50%; }
-  to   { background-position: 100% 50%; }
-}
-
 /* ---------- Besoins des pages de service et bandeau de confiance ---------- */
 #besoin .section__head { max-width: 640px; margin-bottom: var(--space-4); }
 #besoin .lead { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.25; font-weight: 700; color: var(--navy); }
@@ -855,12 +846,11 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .card--service h3 { color: var(--white); }
 .card--service p { color: rgba(255, 255, 255, 0.92); }
 .card--service:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: rgba(49, 151, 149, 0.55); }
-/* Images de hero de chaque page de service (PLAN § 2, receipts) : chargees en
-   fond CSS, sans redimensionnement ; une seule declaration par image, partagee
-   par la carte de l accueil et le hero de la page de service (Pass 40). */
-.card--strategie, .hero--strategie { background-image: url("/assets/img/about-strategy.webp"); }
-.card--ia, .hero--ia               { background-image: url("/pictures/1ai_hero.jpg"); }
-.hero--venture                     { background-image: url("/pictures/2cvb_hero.png"); }
+/* Images des deux cartes de service de l accueil : chargees en fond CSS, sans
+   redimensionnement, une seule declaration par image (Pass 40). Les photos des
+   heros sont des <img> dans les pages (Pass 55). */
+.card--strategie { background-image: url("/assets/img/about-strategy.webp"); }
+.card--ia        { background-image: url("/pictures/1ai_hero.jpg"); }
 #services .card--strategie {
   background-image:
     linear-gradient(130deg, rgba(18, 37, 63, 0.3), rgba(26, 54, 93, 0.15)),
@@ -987,13 +977,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   #demarche .chevrons { padding-left: 3rem; }
   #demarche .chevron::before { left: -3rem; }
   #demarche .chevron__title { font-size: 1.1rem; }
-}
-
-@media (max-width: 640px) {
-  .hero--animated { min-height: 0; padding-block: var(--space-6); }
-  .hero--animated::before { inset: 0 -45% 0 25%; opacity: 0.5; }
-  .hero--animated::after { inset: 0 0 0 25%; opacity: 0.5; }
-  .hero--animated h1 { font-size: clamp(2.35rem, 9vw, 3.2rem); }
 }
 
 /* Services : opt-in local, les pages sœurs gardent leur présentation. */
