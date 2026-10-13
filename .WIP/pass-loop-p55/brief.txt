@@ -1,0 +1,82 @@
+=== FULL AUDIT BRIEF - pass p55 - review contact 1 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): claude-opus-5-5 @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are a FRESH auditor with zero memory of this work. You GRADE it. You do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p55\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: everything this Pass changed: FULL AUDIT of Pass 55 (PLAN section 55 at the docs root C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\PLAN.md, Done When 1 to 6; approved mockup previews/v12/README.md and previews/v12/index.html lines 52-84 and 203-234 at that root). Changed in this product repository against base 19fef04: assets/css/style.css; index.html; service-strategie-transformation/index.html; service-ia-business/index.html; service-venture-building/index.html; assets/img/hero-home.webp, hero-strategie.webp, hero-venture.jpg (added); pictures/2cvb_hero.png (removed); the ?v= stamp line of the 12 other pages. Also changed, in the docs root repository (a second repository, NOT under this seal): PLAN.md section 55 status token and evidence pointer, ARCHITECTURE.md Components style.css clause. Coder evidence, to read as claims and not as proof: .WIP/pass-loop-p55/evidence/ (render.mjs, render.txt, render-red-19fef04.txt, mutation-red.txt, baseline.json, pictures.py, markup.py, eight hero captures). RULES FOR YOU: every scratch file you create goes under a subfolder of your own inside the session scratchpad C:\Users\aymar\AppData\Local\Temp\claude\C--Users-aymar-AYS-CODING-code-SOURCINNO-WWW\63242de0-f620-44bb-93db-d720a4876353\scratchpad (for example scratchpad\reviewer-p55), never /tmp, never the docs root outputs/ folder (the owner's: never read it), never the product .WIP; the product tree and the docs root are read-only for you except the verdict you append to pass-work.md; network only 127.0.0.1 and Google Fonts; LOCAL ONLY (no git fetch, push or deploy). The working tree is served on http://127.0.0.1:4173 (python http.server left by an earlier session; if it does not answer, serve the product folder yourself on another free port of 127.0.0.1 and say which); for a copy of 19fef04 use git -c core.autocrlf=false archive 19fef04 into your scratch folder and serve it on a free port (4174 is free). Headless Chrome recipe and its traps: AGENTS.md Gotchas at the docs root. DO: re-run Done When 1 yourself (node tools/check.mjs --all, node tools/version.mjs --check, node tools/shell.mjs --check, the git diff --stat against 19fef04 and the dead-rule grep); make your OWN render (your own script or measure, not only a re-run of the Coder's render.mjs) of the four photo pages at 1920, 1200, 861, 860, 375 and 320 px and of Contact, Publications and Mentions legales at 375 px, and LOOK at your captures. STAKES, in this order: (1) the title, the home accent word and the subtitle read on every photo at every width: the worst pixel behind the text, not an average, at least 4.5:1; (2) no picture with a watermark and no file from the scratch folder .WIP/mockup-v12/img entered a tracked path of this PUBLIC repository (the three sources are the docs root previews/v12/img files only); (3) nothing below the heroes moved and the two home service cards kept their background pictures; (4) the dead rules really left (home drift, grid, dots, keyframes hero-drift, tokens --hero-mid and --hero-end, .hero--offer) and the class census holds both ways; (5) picture, title and subtitle show with scripts disabled. Known and declared by the Coder, judge them: the home scrim at 640 px and less differs from the mockup PAGE (see CHANGED in pass-work.md is not yours to read: the fact is that the mockup page inherited a half-opacity ::after rule from the old dots at 640 px and less, removed here with the dots, so the home scrim is now the same as on the three service pages); at 1920 px the home title takes three lines; the Entreprise IA picture pictures/1ai_hero.jpg (554x360) is enlarged and soft, accepted by the Planner (PLAN section 55 decision 2); no owner look in this Pass (decision 5), no manual item. Out of scope: cards and Demarche (Pass 56), Portfolio (60), blog list (59), hero wording, og:image, header, PLAN Code backlog.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 19fef0449917a8c5fbd8e81190e915028b823354
+  404.html                                          |   2 +-
+   ai-business.html                                  |   2 +-
+   assets/css/style.css                              | 117 +++++++++-------------
+   assets/img/hero-home.webp                         | Bin 0 -> 229922 bytes
+   assets/img/hero-strategie.webp                    | Bin 0 -> 233716 bytes
+   assets/img/hero-venture.jpg                       | Bin 0 -> 105929 bytes
+   contact/index.html                                |   2 +-
+   index.html                                        |   7 +-
+   mentions-legales/index.html                       |   2 +-
+   offre-ia-business/index.html                      |   2 +-
+   offre-strategie-organisation-processus/index.html |   2 +-
+   offre-venture-building/index.html                 |   2 +-
+   pictures/2cvb_hero.png                            | Bin 220411 -> 0 bytes
+   politique-confidentialite/index.html              |   2 +-
+   portfolio/index.html                              |   2 +-
+   prototypes/index.html                             |   2 +-
+   publications/index.html                           |   2 +-
+   service-ia-business/index.html                  
+  [diff display truncated; inspect the complete diff against the named Pass base]
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Use the `code-audit` skill in phase-gate mode. Do not invent or modify audit logic.
+2. Re-run the cheapest decisive check for every claim you rely on.
+3. GREEN only if there is no Tier 1 or Tier 2 finding and every check passes.
+4. Need testing -> MORE_TESTS; append `## TEST-REQUESTS` with every AUTO/MANUAL request.
+5. Findings -> append ONE `## Audit fixes to implement` section to .WIP\pass-loop-p55\pass-work.md.
+
+PRIOR FINDINGS
+  none recorded before this contact.
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p55\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "ed382876",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.

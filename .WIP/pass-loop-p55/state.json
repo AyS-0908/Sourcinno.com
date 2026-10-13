@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p55",
+  "state": "done",
+  "scope": "FULL AUDIT of Pass 55 (PLAN section 55 at the docs root C:\\Users\\aymar\\AYS_CODING\\code-SOURCINNO_WWW\\PLAN.md, Done When 1 to 6; approved mockup previews/v12/README.md and previews/v12/index.html lines 52-84 and 203-234 at that root). Changed in this product repository against base 19fef04: assets/css/style.css; index.html; service-strategie-transformation/index.html; service-ia-business/index.html; service-venture-building/index.html; assets/img/hero-home.webp, hero-strategie.webp, hero-venture.jpg (added); pictures/2cvb_hero.png (removed); the ?v= stamp line of the 12 other pages. Also changed, in the docs root repository (a second repository, NOT under this seal): PLAN.md section 55 status token and evidence pointer, ARCHITECTURE.md Components style.css clause. Coder evidence, to read as claims and not as proof: .WIP/pass-loop-p55/evidence/ (render.mjs, render.txt, render-red-19fef04.txt, mutation-red.txt, baseline.json, pictures.py, markup.py, eight hero captures). RULES FOR YOU: every scratch file you create goes under a subfolder of your own inside the session scratchpad C:\\Users\\aymar\\AppData\\Local\\Temp\\claude\\C--Users-aymar-AYS-CODING-code-SOURCINNO-WWW\\63242de0-f620-44bb-93db-d720a4876353\\scratchpad (for example scratchpad\\reviewer-p55), never /tmp, never the docs root outputs/ folder (the owner's: never read it), never the product .WIP; the product tree and the docs root are read-only for you except the verdict you append to pass-work.md; network only 127.0.0.1 and Google Fonts; LOCAL ONLY (no git fetch, push or deploy). The working tree is served on http://127.0.0.1:4173 (python http.server left by an earlier session; if it does not answer, serve the product folder yourself on another free port of 127.0.0.1 and say which); for a copy of 19fef04 use git -c core.autocrlf=false archive 19fef04 into your scratch folder and serve it on a free port (4174 is free). Headless Chrome recipe and its traps: AGENTS.md Gotchas at the docs root. DO: re-run Done When 1 yourself (node tools/check.mjs --all, node tools/version.mjs --check, node tools/shell.mjs --check, the git diff --stat against 19fef04 and the dead-rule grep); make your OWN render (your own script or measure, not only a re-run of the Coder's render.mjs) of the four photo pages at 1920, 1200, 861, 860, 375 and 320 px and of Contact, Publications and Mentions legales at 375 px, and LOOK at your captures. STAKES, in this order: (1) the title, the home accent word and the subtitle read on every photo at every width: the worst pixel behind the text, not an average, at least 4.5:1; (2) no picture with a watermark and no file from the scratch folder .WIP/mockup-v12/img entered a tracked path of this PUBLIC repository (the three sources are the docs root previews/v12/img files only); (3) nothing below the heroes moved and the two home service cards kept their background pictures; (4) the dead rules really left (home drift, grid, dots, keyframes hero-drift, tokens --hero-mid and --hero-end, .hero--offer) and the class census holds both ways; (5) picture, title and subtitle show with scripts disabled. Known and declared by the Coder, judge them: the home scrim at 640 px and less differs from the mockup PAGE (see CHANGED in pass-work.md is not yours to read: the fact is that the mockup page inherited a half-opacity ::after rule from the old dots at 640 px and less, removed here with the dots, so the home scrim is now the same as on the three service pages); at 1920 px the home title takes three lines; the Entreprise IA picture pictures/1ai_hero.jpg (554x360) is enlarged and soft, accepted by the Planner (PLAN section 55 decision 2); no owner look in this Pass (decision 5), no manual item. Out of scope: cards and Demarche (Pass 56), Portfolio (60), blog list (59), hero wording, og:image, header, PLAN Code backlog.",
+  "audit_launches": 1,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 0,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    },
+    "auditor": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 1,
+  "results_blocks": 1,
+  "pass_base": "19fef0449917a8c5fbd8e81190e915028b823354",
+  "seal_paths": "",
+  "brief_fingerprint": "283cc2fca6dfdfd6",
+  "green_fingerprint": "283cc2fca6dfdfd6",
+  "briefed_at": "2026-10-13T12:32:27",
+  "cap_extensions": [],
+  "state_dir": ".WIP/pass-loop-p55",
+  "updated": "2026-10-13"
+}

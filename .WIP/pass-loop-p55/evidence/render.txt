@@ -1,0 +1,772 @@
+RENDER p55 on http://127.0.0.1:4173
+== / — photo hero, scripts on, reduced motion off then on
+   ok   home 1920: page ready true, Inter loaded true, title font Inter 72px
+   ok   home 1920: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 1920: hero 1905x520; picture box x 571.5–1905 = 70 % of the hero on its right, 520 high
+   ok   home 1920: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (556 wide): 0; widest word ends 914.3 of 952.5
+   ok   home 1920: title rgb(255, 255, 255) against the worst pixel of its box rgb(43,59,75) = 11.48:1 (124041 pixels; inside the line boxes alone 11.48:1)
+   ok   home 1920: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(43,59,75) = 7.94:1 (45672 pixels; inside the line boxes alone 7.94:1)
+   ok   home 1920: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(48,64,82) = 10.60:1 (29754 pixels; inside the line boxes alone 10.60:1)
+   ok   home 1920: picture on screen: 80.2 % of the right quarter of the hero far from navy, 12546 colours
+   ok   home 1920: title box 556x226.8 and subtitle box 556x62.6 inside the screen, topmost at their first line, painted pixels title 37637, accent word 11688, subtitle 4670
+   ok   home 1920: elements past 1920 px: 0
+   ok   home 1920: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   home 1920 reduced-motion: page ready true, Inter loaded true, title font Inter 72px
+   ok   home 1920 reduced-motion: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 1920 reduced-motion: hero 1905x520; picture box x 571.5–1905 = 70 % of the hero on its right, 520 high
+   ok   home 1920 reduced-motion: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (556 wide): 0; widest word ends 914.3 of 952.5
+   ok   home 1920 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(43,59,75) = 11.48:1 (124041 pixels; inside the line boxes alone 11.48:1)
+   ok   home 1920 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(43,59,75) = 7.94:1 (45672 pixels; inside the line boxes alone 7.94:1)
+   ok   home 1920 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(48,64,82) = 10.60:1 (29754 pixels; inside the line boxes alone 10.60:1)
+   ok   home 1920 reduced-motion: picture on screen: 80.2 % of the right quarter of the hero far from navy, 12546 colours
+   ok   home 1920 reduced-motion: title box 556x226.8 and subtitle box 556x62.6 inside the screen, topmost at their first line, painted pixels title 37637, accent word 11688, subtitle 4670
+   ok   home 1920 reduced-motion: elements past 1920 px: 0
+   ok   home 1200: page ready true, Inter loaded true, title font Inter 60px
+   ok   home 1200: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 1200: hero 1185x520; picture box x 355.5–1185 = 70 % of the hero on its right, 520 high
+   ok   home 1200: hero height 520 (expected 520 ± 2)
+   ok   home 1200: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (556 wide): 0; widest word ends 574 of 592.5
+   ok   home 1200: title rgb(255, 255, 255) against the worst pixel of its box rgb(46,52,65) = 12.47:1 (72630 pixels; inside the line boxes alone 12.47:1)
+   ok   home 1200: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(46,52,65) = 8.63:1 (31032 pixels; inside the line boxes alone 8.63:1)
+   ok   home 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(49,64,82) = 10.58:1 (29754 pixels; inside the line boxes alone 12.86:1)
+   ok   home 1200: picture on screen: 70.7 % of the right quarter of the hero far from navy, 10947 colours
+   ok   home 1200: title box 556x126 and subtitle box 556x62.6 inside the screen, topmost at their first line, painted pixels title 26707, accent word 8375, subtitle 4670
+   ok   home 1200: elements past 1200 px: 0
+   ok   home 1200: heights below the hero and the two home card pictures = 19fef04
+        capture hero-home-1200.jpg 1200x597
+   ok   home 1200: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   home 1200 reduced-motion: page ready true, Inter loaded true, title font Inter 60px
+   ok   home 1200 reduced-motion: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 1200 reduced-motion: hero 1185x520; picture box x 355.5–1185 = 70 % of the hero on its right, 520 high
+   ok   home 1200 reduced-motion: hero height 520 (expected 520 ± 2)
+   ok   home 1200 reduced-motion: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (556 wide): 0; widest word ends 574 of 592.5
+   ok   home 1200 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(46,52,65) = 12.47:1 (72630 pixels; inside the line boxes alone 12.47:1)
+   ok   home 1200 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(46,52,65) = 8.63:1 (31032 pixels; inside the line boxes alone 8.63:1)
+   ok   home 1200 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(49,64,82) = 10.58:1 (29754 pixels; inside the line boxes alone 12.86:1)
+   ok   home 1200 reduced-motion: picture on screen: 70.7 % of the right quarter of the hero far from navy, 10947 colours
+   ok   home 1200 reduced-motion: title box 556x126 and subtitle box 556x62.6 inside the screen, topmost at their first line, painted pixels title 26707, accent word 8375, subtitle 4670
+   ok   home 1200 reduced-motion: elements past 1200 px: 0
+   ok   home 961: page ready true, Inter loaded true, title font Inter 48.05px
+   ok   home 961: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 961: hero 946x520; picture box x 283.8–946 = 70 % of the hero on its right, 520 high
+   ok   home 961: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (449 wide): 0; widest word ends 454.2 of 473
+   ok   home 961: title rgb(255, 255, 255) against the worst pixel of its box rgb(44,55,69) = 12.07:1 (47410 pixels; inside the line boxes alone 12.07:1)
+   ok   home 961: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(44,55,69) = 8.36:1 (20414 pixels; inside the line boxes alone 8.36:1)
+   ok   home 961: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(47,61,79) = 11.05:1 (23706 pixels; inside the line boxes alone 11.30:1)
+   ok   home 961: picture on screen: 72.8 % of the right quarter of the hero far from navy, 9587 colours
+   ok   home 961: title box 449x100.9 and subtitle box 449x62.6 inside the screen, topmost at their first line, painted pixels title 16933, accent word 5306, subtitle 4670
+   ok   home 961: elements past 961 px: 0
+   ok   home 961: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   home 961 reduced-motion: page ready true, Inter loaded true, title font Inter 48.05px
+   ok   home 961 reduced-motion: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 961 reduced-motion: hero 946x520; picture box x 283.8–946 = 70 % of the hero on its right, 520 high
+   ok   home 961 reduced-motion: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (449 wide): 0; widest word ends 454.2 of 473
+   ok   home 961 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(44,55,69) = 12.07:1 (47410 pixels; inside the line boxes alone 12.07:1)
+   ok   home 961 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(44,55,69) = 8.36:1 (20414 pixels; inside the line boxes alone 8.36:1)
+   ok   home 961 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(47,61,79) = 11.05:1 (23706 pixels; inside the line boxes alone 11.30:1)
+   ok   home 961 reduced-motion: picture on screen: 72.8 % of the right quarter of the hero far from navy, 9587 colours
+   ok   home 961 reduced-motion: title box 449x100.9 and subtitle box 449x62.6 inside the screen, topmost at their first line, painted pixels title 16933, accent word 5306, subtitle 4670
+   ok   home 961 reduced-motion: elements past 961 px: 0
+   ok   home 861: page ready true, Inter loaded true, title font Inter 43.05px
+   ok   home 861: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 861: hero 846x520; picture box x 253.8–846 = 70 % of the hero on its right, 520 high
+   ok   home 861: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (399 wide): 0; widest word ends 410.6 of 423
+   ok   home 861: title rgb(255, 255, 255) against the worst pixel of its box rgb(47,51,64) = 12.59:1 (37926 pixels; inside the line boxes alone 12.59:1)
+   ok   home 861: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(47,51,64) = 8.71:1 (16172 pixels; inside the line boxes alone 8.71:1)
+   ok   home 861: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(34,52,74) = 12.67:1 (18684 pixels; inside the line boxes alone 13.05:1)
+   ok   home 861: picture on screen: 72.8 % of the right quarter of the hero far from navy, 8584 colours
+   ok   home 861: title box 399x90.4 and subtitle box 399x62.6 inside the screen, topmost at their first line, painted pixels title 13313, accent word 4176, subtitle 4670
+   ok   home 861: elements past 861 px: 0
+   ok   home 861: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   home 861 reduced-motion: page ready true, Inter loaded true, title font Inter 43.05px
+   ok   home 861 reduced-motion: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 861 reduced-motion: hero 846x520; picture box x 253.8–846 = 70 % of the hero on its right, 520 high
+   ok   home 861 reduced-motion: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (399 wide): 0; widest word ends 410.6 of 423
+   ok   home 861 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(47,51,64) = 12.59:1 (37926 pixels; inside the line boxes alone 12.59:1)
+   ok   home 861 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(47,51,64) = 8.71:1 (16172 pixels; inside the line boxes alone 8.71:1)
+   ok   home 861 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(34,52,74) = 12.67:1 (18684 pixels; inside the line boxes alone 13.05:1)
+   ok   home 861 reduced-motion: picture on screen: 72.8 % of the right quarter of the hero far from navy, 8584 colours
+   ok   home 861 reduced-motion: title box 399x90.4 and subtitle box 399x62.6 inside the screen, topmost at their first line, painted pixels title 13313, accent word 4176, subtitle 4670
+   ok   home 861 reduced-motion: elements past 861 px: 0
+   ok   home 860: page ready true, Inter loaded true, title font Inter 43px
+   ok   home 860: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 860: hero 860x427; picture block 860x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   home 860: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (406 wide): 0; widest word ends 410.6 of 430
+   ok   home 860: title rgb(255, 255, 255) against the worst pixel of its box rgb(32,47,70) = 13.49:1 (37926 pixels; inside the line boxes alone 14.42:1)
+   ok   home 860: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(20,39,65) = 10.41:1 (16483 pixels; inside the line boxes alone 10.41:1)
+   ok   home 860: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (14007 pixels; inside the line boxes alone 15.25:1)
+   ok   home 860: picture on screen: 69.3 % of the top 110 px of the block far from navy, 5650 colours
+   ok   home 860: title box 406x90.3 and subtitle box 616x31.3 inside the screen, topmost at their first line, painted pixels title 13313, accent word 4176, subtitle 4670
+   ok   home 860: elements past 860 px: 0
+   ok   home 860: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   home 860 reduced-motion: page ready true, Inter loaded true, title font Inter 43px
+   ok   home 860 reduced-motion: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 860 reduced-motion: hero 860x427; picture block 860x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   home 860 reduced-motion: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (406 wide): 0; widest word ends 410.6 of 430
+   ok   home 860 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(32,47,70) = 13.49:1 (37926 pixels; inside the line boxes alone 14.42:1)
+   ok   home 860 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(20,39,65) = 10.41:1 (16483 pixels; inside the line boxes alone 10.41:1)
+   ok   home 860 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (14007 pixels; inside the line boxes alone 15.25:1)
+   ok   home 860 reduced-motion: picture on screen: 69.3 % of the top 110 px of the block far from navy, 5650 colours
+   ok   home 860 reduced-motion: title box 406x90.3 and subtitle box 616x31.3 inside the screen, topmost at their first line, painted pixels title 13313, accent word 4176, subtitle 4670
+   ok   home 860 reduced-motion: elements past 860 px: 0
+   ok   home 375: page ready true, Inter loaded true, title font Inter 37.6px
+   ok   home 375: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 375: hero 375x517.7; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   home 375: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (327 wide): 0; widest word ends 294.8 of 351
+   ok   home 375: title rgb(255, 255, 255) against the worst pixel of its box rgb(30,48,73) = 13.34:1 (33604 pixels; inside the line boxes alone 13.34:1)
+   ok   home 375: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(18,38,64) = 10.56:1 (12466 pixels; inside the line boxes alone 10.56:1)
+   ok   home 375: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (27115 pixels; inside the line boxes alone 15.25:1)
+   ok   home 375: picture on screen: 34.7 % of the top 110 px of the block far from navy, 3584 colours
+   ok   home 375: title box 327x118.4 and subtitle box 327x93.8 inside the screen, topmost at their first line, painted pixels title 10805, accent word 3363, subtitle 4670
+   ok   home 375: elements past 375 px: 0
+   ok   home 375: heights below the hero and the two home card pictures = 19fef04
+        capture hero-home-375.jpg 375x595
+   ok   home 375: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   home 375 reduced-motion: page ready true, Inter loaded true, title font Inter 37.6px
+   ok   home 375 reduced-motion: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 375 reduced-motion: hero 375x517.7; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   home 375 reduced-motion: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (327 wide): 0; widest word ends 294.8 of 351
+   ok   home 375 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(30,48,73) = 13.34:1 (33604 pixels; inside the line boxes alone 13.34:1)
+   ok   home 375 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(18,38,64) = 10.56:1 (12466 pixels; inside the line boxes alone 10.56:1)
+   ok   home 375 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (27115 pixels; inside the line boxes alone 15.25:1)
+   ok   home 375 reduced-motion: picture on screen: 34.7 % of the top 110 px of the block far from navy, 3584 colours
+   ok   home 375 reduced-motion: title box 327x118.4 and subtitle box 327x93.8 inside the screen, topmost at their first line, painted pixels title 10805, accent word 3363, subtitle 4670
+   ok   home 375 reduced-motion: elements past 375 px: 0
+   ok   home 320: page ready true, Inter loaded true, title font Inter 37.6px
+   ok   home 320: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 320: hero 320x517.7; picture block 320x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   home 320: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (272 wide): 0; widest word ends 294.8 of 296
+   ok   home 320: title rgb(255, 255, 255) against the worst pixel of its box rgb(30,48,73) = 13.34:1 (33604 pixels; inside the line boxes alone 13.34:1)
+   ok   home 320: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(18,38,64) = 10.56:1 (12466 pixels; inside the line boxes alone 10.56:1)
+   ok   home 320: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (22780 pixels; inside the line boxes alone 15.25:1)
+   ok   home 320: picture on screen: 38 % of the top 110 px of the block far from navy, 3381 colours
+   ok   home 320: title box 272x118.4 and subtitle box 272x93.8 inside the screen, topmost at their first line, painted pixels title 10805, accent word 3363, subtitle 4670
+   ok   home 320: elements past 320 px: 0
+   ok   home 320: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   home 320 reduced-motion: page ready true, Inter loaded true, title font Inter 37.6px
+   ok   home 320 reduced-motion: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 320 reduced-motion: hero 320x517.7; picture block 320x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   home 320 reduced-motion: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (272 wide): 0; widest word ends 294.8 of 296
+   ok   home 320 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(30,48,73) = 13.34:1 (33604 pixels; inside the line boxes alone 13.34:1)
+   ok   home 320 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(18,38,64) = 10.56:1 (12466 pixels; inside the line boxes alone 10.56:1)
+   ok   home 320 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (22780 pixels; inside the line boxes alone 15.25:1)
+   ok   home 320 reduced-motion: picture on screen: 38 % of the top 110 px of the block far from navy, 3381 colours
+   ok   home 320 reduced-motion: title box 272x118.4 and subtitle box 272x93.8 inside the screen, topmost at their first line, painted pixels title 10805, accent word 3363, subtitle 4670
+   ok   home 320 reduced-motion: elements past 320 px: 0
+== /service-strategie-transformation/ — photo hero, scripts on, reduced motion off then on
+   ok   strategie 1920: page ready true, Inter loaded true, title font Inter 52px
+   ok   strategie 1920: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 1920: hero 1905x400; picture box x 571.5–1905 = 70 % of the hero on its right, 400 high
+   ok   strategie 1920: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (556 wide): 0; widest word ends 768.3 of 952.5
+   ok   strategie 1920: title rgb(255, 255, 255) against the worst pixel of its box rgb(29,48,71) = 13.41:1 (69751 pixels; inside the line boxes alone 13.41:1)
+   ok   strategie 1920: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(38,52,73) = 12.58:1 (10718 pixels; inside the line boxes alone 12.58:1)
+   ok   strategie 1920: picture on screen: 46.6 % of the right quarter of the hero far from navy, 1970 colours
+   ok   strategie 1920: title box 556x184.1 and subtitle box 556x31.3 inside the screen, topmost at their first line, painted pixels title 16727, subtitle 1699
+   ok   strategie 1920: elements past 1920 px: 0
+   ok   strategie 1920: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   strategie 1920 reduced-motion: page ready true, Inter loaded true, title font Inter 52px
+   ok   strategie 1920 reduced-motion: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 1920 reduced-motion: hero 1905x400; picture box x 571.5–1905 = 70 % of the hero on its right, 400 high
+   ok   strategie 1920 reduced-motion: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (556 wide): 0; widest word ends 768.3 of 952.5
+   ok   strategie 1920 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(29,48,71) = 13.41:1 (69751 pixels; inside the line boxes alone 13.41:1)
+   ok   strategie 1920 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(38,52,73) = 12.58:1 (10718 pixels; inside the line boxes alone 12.58:1)
+   ok   strategie 1920 reduced-motion: picture on screen: 46.6 % of the right quarter of the hero far from navy, 1970 colours
+   ok   strategie 1920 reduced-motion: title box 556x184.1 and subtitle box 556x31.3 inside the screen, topmost at their first line, painted pixels title 16727, subtitle 1699
+   ok   strategie 1920 reduced-motion: elements past 1920 px: 0
+   ok   strategie 1200: page ready true, Inter loaded true, title font Inter 52px
+   ok   strategie 1200: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 1200: hero 1185x400; picture box x 355.5–1185 = 70 % of the hero on its right, 400 high
+   ok   strategie 1200: hero height 400 (expected 400 ± 2)
+   ok   strategie 1200: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (556 wide): 0; widest word ends 408.3 of 592.5
+   ok   strategie 1200: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,40,66) = 14.85:1 (69751 pixels; inside the line boxes alone 14.88:1)
+   ok   strategie 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(32,48,74) = 13.27:1 (10718 pixels; inside the line boxes alone 13.27:1)
+   ok   strategie 1200: picture on screen: 60.5 % of the right quarter of the hero far from navy, 2676 colours
+   ok   strategie 1200: title box 556x184.1 and subtitle box 556x31.3 inside the screen, topmost at their first line, painted pixels title 16727, subtitle 1699
+   ok   strategie 1200: elements past 1200 px: 0
+   ok   strategie 1200: heights below the hero and the two home card pictures = 19fef04
+        capture hero-strategie-1200.jpg 1200x477
+   ok   strategie 1200: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   strategie 1200 reduced-motion: page ready true, Inter loaded true, title font Inter 52px
+   ok   strategie 1200 reduced-motion: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 1200 reduced-motion: hero 1185x400; picture box x 355.5–1185 = 70 % of the hero on its right, 400 high
+   ok   strategie 1200 reduced-motion: hero height 400 (expected 400 ± 2)
+   ok   strategie 1200 reduced-motion: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (556 wide): 0; widest word ends 408.3 of 592.5
+   ok   strategie 1200 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,40,66) = 14.85:1 (69751 pixels; inside the line boxes alone 14.88:1)
+   ok   strategie 1200 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(32,48,74) = 13.27:1 (10718 pixels; inside the line boxes alone 13.27:1)
+   ok   strategie 1200 reduced-motion: picture on screen: 60.5 % of the right quarter of the hero far from navy, 2676 colours
+   ok   strategie 1200 reduced-motion: title box 556x184.1 and subtitle box 556x31.3 inside the screen, topmost at their first line, painted pixels title 16727, subtitle 1699
+   ok   strategie 1200 reduced-motion: elements past 1200 px: 0
+   ok   strategie 961: page ready true, Inter loaded true, title font Inter 42.284px
+   ok   strategie 961: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 961: hero 946x400; picture box x 283.8–946 = 70 % of the hero on its right, 400 high
+   ok   strategie 961: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (449 wide): 0; widest word ends 324.2 of 473
+   ok   strategie 961: title rgb(255, 255, 255) against the worst pixel of its box rgb(22,40,65) = 14.85:1 (45752 pixels; inside the line boxes alone 14.85:1)
+   ok   strategie 961: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(34,54,79) = 12.29:1 (21978 pixels; inside the line boxes alone 12.29:1)
+   ok   strategie 961: picture on screen: 58.1 % of the right quarter of the hero far from navy, 2729 colours
+   ok   strategie 961: title box 449x149.7 and subtitle box 449x62.6 inside the screen, topmost at their first line, painted pixels title 10750, subtitle 1699
+   ok   strategie 961: elements past 961 px: 0
+   ok   strategie 961: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   strategie 961 reduced-motion: page ready true, Inter loaded true, title font Inter 42.284px
+   ok   strategie 961 reduced-motion: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 961 reduced-motion: hero 946x400; picture box x 283.8–946 = 70 % of the hero on its right, 400 high
+   ok   strategie 961 reduced-motion: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (449 wide): 0; widest word ends 324.2 of 473
+   ok   strategie 961 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(22,40,65) = 14.85:1 (45752 pixels; inside the line boxes alone 14.85:1)
+   ok   strategie 961 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(34,54,79) = 12.29:1 (21978 pixels; inside the line boxes alone 12.29:1)
+   ok   strategie 961 reduced-motion: picture on screen: 58.1 % of the right quarter of the hero far from navy, 2729 colours
+   ok   strategie 961 reduced-motion: title box 449x149.7 and subtitle box 449x62.6 inside the screen, topmost at their first line, painted pixels title 10750, subtitle 1699
+   ok   strategie 961 reduced-motion: elements past 961 px: 0
+   ok   strategie 861: page ready true, Inter loaded true, title font Inter 37.884px
+   ok   strategie 861: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 861: hero 846x400; picture box x 253.8–846 = 70 % of the hero on its right, 400 high
+   ok   strategie 861: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (399 wide): 0; widest word ends 294.8 of 423
+   ok   strategie 861: title rgb(255, 255, 255) against the worst pixel of its box rgb(22,41,66) = 14.69:1 (37127 pixels; inside the line boxes alone 14.85:1)
+   ok   strategie 861: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(44,60,79) = 11.25:1 (20900 pixels; inside the line boxes alone 11.25:1)
+   ok   strategie 861: picture on screen: 54.8 % of the right quarter of the hero far from navy, 2952 colours
+   ok   strategie 861: title box 399x134.1 and subtitle box 399x62.6 inside the screen, topmost at their first line, painted pixels title 9089, subtitle 1699
+   ok   strategie 861: elements past 861 px: 0
+   ok   strategie 861: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   strategie 861 reduced-motion: page ready true, Inter loaded true, title font Inter 37.884px
+   ok   strategie 861 reduced-motion: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 861 reduced-motion: hero 846x400; picture box x 253.8–846 = 70 % of the hero on its right, 400 high
+   ok   strategie 861 reduced-motion: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (399 wide): 0; widest word ends 294.8 of 423
+   ok   strategie 861 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(22,41,66) = 14.69:1 (37127 pixels; inside the line boxes alone 14.85:1)
+   ok   strategie 861 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(44,60,79) = 11.25:1 (20900 pixels; inside the line boxes alone 11.25:1)
+   ok   strategie 861 reduced-motion: picture on screen: 54.8 % of the right quarter of the hero far from navy, 2952 colours
+   ok   strategie 861 reduced-motion: title box 399x134.1 and subtitle box 399x62.6 inside the screen, topmost at their first line, painted pixels title 9089, subtitle 1699
+   ok   strategie 861 reduced-motion: elements past 861 px: 0
+   ok   strategie 860: page ready true, Inter loaded true, title font Inter 37.84px
+   ok   strategie 860: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 860: hero 860x346.6; picture block 860x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   strategie 860: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (572 wide): 0; widest word ends 496.4 of 596
+   ok   strategie 860: title rgb(255, 255, 255) against the worst pixel of its box rgb(27,45,70) = 13.90:1 (43043 pixels; inside the line boxes alone 13.90:1)
+   ok   strategie 860: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (10695 pixels; inside the line boxes alone 15.25:1)
+   ok   strategie 860: picture on screen: 60.2 % of the top 110 px of the block far from navy, 4005 colours
+   ok   strategie 860: title box 572x89.3 and subtitle box 682x31.3 inside the screen, topmost at their first line, painted pixels title 9089, subtitle 1699
+   ok   strategie 860: elements past 860 px: 0
+   ok   strategie 860: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   strategie 860 reduced-motion: page ready true, Inter loaded true, title font Inter 37.84px
+   ok   strategie 860 reduced-motion: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 860 reduced-motion: hero 860x346.6; picture block 860x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   strategie 860 reduced-motion: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (572 wide): 0; widest word ends 496.4 of 596
+   ok   strategie 860 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(27,45,70) = 13.90:1 (43043 pixels; inside the line boxes alone 13.90:1)
+   ok   strategie 860 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (10695 pixels; inside the line boxes alone 15.25:1)
+   ok   strategie 860 reduced-motion: picture on screen: 60.2 % of the top 110 px of the block far from navy, 4005 colours
+   ok   strategie 860 reduced-motion: title box 572x89.3 and subtitle box 682x31.3 inside the screen, topmost at their first line, painted pixels title 9089, subtitle 1699
+   ok   strategie 860 reduced-motion: elements past 860 px: 0
+   ok   strategie 375: page ready true, Inter loaded true, title font Inter 32px
+   ok   strategie 375: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 375: hero 375x401.8; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   strategie 375: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (327 wide): 0; widest word ends 255.8 of 351
+   ok   strategie 375: title rgb(255, 255, 255) against the worst pixel of its box rgb(27,45,69) = 13.93:1 (26680 pixels; inside the line boxes alone 13.93:1)
+   ok   strategie 375: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (14742 pixels; inside the line boxes alone 15.25:1)
+   ok   strategie 375: picture on screen: 63.3 % of the top 110 px of the block far from navy, 4424 colours
+   ok   strategie 375: title box 327x113.3 and subtitle box 327x62.6 inside the screen, topmost at their first line, painted pixels title 6257, subtitle 1699
+   ok   strategie 375: elements past 375 px: 0
+   ok   strategie 375: heights below the hero and the two home card pictures = 19fef04
+        capture hero-strategie-375.jpg 375x479
+   ok   strategie 375: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   strategie 375 reduced-motion: page ready true, Inter loaded true, title font Inter 32px
+   ok   strategie 375 reduced-motion: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 375 reduced-motion: hero 375x401.8; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   strategie 375 reduced-motion: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (327 wide): 0; widest word ends 255.8 of 351
+   ok   strategie 375 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(27,45,69) = 13.93:1 (26680 pixels; inside the line boxes alone 13.93:1)
+   ok   strategie 375 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (14742 pixels; inside the line boxes alone 15.25:1)
+   ok   strategie 375 reduced-motion: picture on screen: 63.3 % of the top 110 px of the block far from navy, 4424 colours
+   ok   strategie 375 reduced-motion: title box 327x113.3 and subtitle box 327x62.6 inside the screen, topmost at their first line, painted pixels title 6257, subtitle 1699
+   ok   strategie 375 reduced-motion: elements past 375 px: 0
+   ok   strategie 320: page ready true, Inter loaded true, title font Inter 32px
+   ok   strategie 320: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 320: hero 320x401.8; picture block 320x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   strategie 320: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (272 wide): 0; widest word ends 255.8 of 296
+   ok   strategie 320: title rgb(255, 255, 255) against the worst pixel of its box rgb(27,45,69) = 13.93:1 (26680 pixels; inside the line boxes alone 13.93:1)
+   ok   strategie 320: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (13338 pixels; inside the line boxes alone 15.25:1)
+   ok   strategie 320: picture on screen: 60.8 % of the top 110 px of the block far from navy, 4388 colours
+   ok   strategie 320: title box 272x113.3 and subtitle box 272x62.6 inside the screen, topmost at their first line, painted pixels title 6257, subtitle 1699
+   ok   strategie 320: elements past 320 px: 0
+   ok   strategie 320: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   strategie 320 reduced-motion: page ready true, Inter loaded true, title font Inter 32px
+   ok   strategie 320 reduced-motion: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 320 reduced-motion: hero 320x401.8; picture block 320x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   strategie 320 reduced-motion: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (272 wide): 0; widest word ends 255.8 of 296
+   ok   strategie 320 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(27,45,69) = 13.93:1 (26680 pixels; inside the line boxes alone 13.93:1)
+   ok   strategie 320 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (13338 pixels; inside the line boxes alone 15.25:1)
+   ok   strategie 320 reduced-motion: picture on screen: 60.8 % of the top 110 px of the block far from navy, 4388 colours
+   ok   strategie 320 reduced-motion: title box 272x113.3 and subtitle box 272x62.6 inside the screen, topmost at their first line, painted pixels title 6257, subtitle 1699
+   ok   strategie 320 reduced-motion: elements past 320 px: 0
+== /service-ia-business/ — photo hero, scripts on, reduced motion off then on
+   ok   ia 1920: page ready true, Inter loaded true, title font Inter 52px
+   ok   ia 1920: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 1920: hero 1905x400; picture box x 571.5–1905 = 70 % of the hero on its right, 400 high
+   ok   ia 1920: title « Entreprise IA » 2 words, cut or out of the title box (556 wide): 0; widest word ends 707.6 of 952.5
+   ok   ia 1920: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,38,65) = 15.16:1 (19968 pixels; inside the line boxes alone 15.16:1)
+   ok   ia 1920: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(33,41,67) = 14.36:1 (10212 pixels; inside the line boxes alone 14.36:1)
+   ok   ia 1920: picture on screen: 97.6 % of the right quarter of the hero far from navy, 4936 colours
+   ok   ia 1920: title box 556x61.4 and subtitle box 556x31.3 inside the screen, topmost at their first line, painted pixels title 5351, subtitle 1705
+   ok   ia 1920: elements past 1920 px: 0
+   ok   ia 1920: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   ia 1920 reduced-motion: page ready true, Inter loaded true, title font Inter 52px
+   ok   ia 1920 reduced-motion: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 1920 reduced-motion: hero 1905x400; picture box x 571.5–1905 = 70 % of the hero on its right, 400 high
+   ok   ia 1920 reduced-motion: title « Entreprise IA » 2 words, cut or out of the title box (556 wide): 0; widest word ends 707.6 of 952.5
+   ok   ia 1920 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,38,65) = 15.16:1 (19968 pixels; inside the line boxes alone 15.16:1)
+   ok   ia 1920 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(33,41,67) = 14.36:1 (10212 pixels; inside the line boxes alone 14.36:1)
+   ok   ia 1920 reduced-motion: picture on screen: 97.6 % of the right quarter of the hero far from navy, 4936 colours
+   ok   ia 1920 reduced-motion: title box 556x61.4 and subtitle box 556x31.3 inside the screen, topmost at their first line, painted pixels title 5351, subtitle 1705
+   ok   ia 1920 reduced-motion: elements past 1920 px: 0
+   ok   ia 1200: page ready true, Inter loaded true, title font Inter 52px
+   ok   ia 1200: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 1200: hero 1185x400; picture box x 355.5–1185 = 70 % of the hero on its right, 400 high
+   ok   ia 1200: hero height 400 (expected 400 ± 2)
+   ok   ia 1200: title « Entreprise IA » 2 words, cut or out of the title box (556 wide): 0; widest word ends 347.6 of 592.5
+   ok   ia 1200: title rgb(255, 255, 255) against the worst pixel of its box rgb(19,38,64) = 15.23:1 (19968 pixels; inside the line boxes alone 15.23:1)
+   ok   ia 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(28,40,65) = 14.69:1 (10212 pixels; inside the line boxes alone 14.69:1)
+   ok   ia 1200: picture on screen: 93.3 % of the right quarter of the hero far from navy, 6016 colours
+   ok   ia 1200: title box 556x61.4 and subtitle box 556x31.3 inside the screen, topmost at their first line, painted pixels title 5351, subtitle 1705
+   ok   ia 1200: elements past 1200 px: 0
+   ok   ia 1200: heights below the hero and the two home card pictures = 19fef04
+        capture hero-ia-1200.jpg 1200x477
+   ok   ia 1200: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   ia 1200 reduced-motion: page ready true, Inter loaded true, title font Inter 52px
+   ok   ia 1200 reduced-motion: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 1200 reduced-motion: hero 1185x400; picture box x 355.5–1185 = 70 % of the hero on its right, 400 high
+   ok   ia 1200 reduced-motion: hero height 400 (expected 400 ± 2)
+   ok   ia 1200 reduced-motion: title « Entreprise IA » 2 words, cut or out of the title box (556 wide): 0; widest word ends 347.6 of 592.5
+   ok   ia 1200 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(19,38,64) = 15.23:1 (19968 pixels; inside the line boxes alone 15.23:1)
+   ok   ia 1200 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(28,40,65) = 14.69:1 (10212 pixels; inside the line boxes alone 14.69:1)
+   ok   ia 1200 reduced-motion: picture on screen: 93.3 % of the right quarter of the hero far from navy, 6016 colours
+   ok   ia 1200 reduced-motion: title box 556x61.4 and subtitle box 556x31.3 inside the screen, topmost at their first line, painted pixels title 5351, subtitle 1705
+   ok   ia 1200 reduced-motion: elements past 1200 px: 0
+   ok   ia 961: page ready true, Inter loaded true, title font Inter 42.284px
+   ok   ia 961: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 961: hero 946x400; picture box x 283.8–946 = 70 % of the hero on its right, 400 high
+   ok   ia 961: title « Entreprise IA » 2 words, cut or out of the title box (449 wide): 0; widest word ends 274.3 of 473
+   ok   ia 961: title rgb(255, 255, 255) against the worst pixel of its box rgb(19,38,64) = 15.23:1 (13052 pixels; inside the line boxes alone 15.23:1)
+   ok   ia 961: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(42,48,87) = 12.66:1 (10189 pixels; inside the line boxes alone 12.66:1)
+   ok   ia 961: picture on screen: 90.8 % of the right quarter of the hero far from navy, 6566 colours
+   ok   ia 961: title box 449x49.9 and subtitle box 449x31.3 inside the screen, topmost at their first line, painted pixels title 3408, subtitle 1705
+   ok   ia 961: elements past 961 px: 0
+   ok   ia 961: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   ia 961 reduced-motion: page ready true, Inter loaded true, title font Inter 42.284px
+   ok   ia 961 reduced-motion: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 961 reduced-motion: hero 946x400; picture box x 283.8–946 = 70 % of the hero on its right, 400 high
+   ok   ia 961 reduced-motion: title « Entreprise IA » 2 words, cut or out of the title box (449 wide): 0; widest word ends 274.3 of 473
+   ok   ia 961 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(19,38,64) = 15.23:1 (13052 pixels; inside the line boxes alone 15.23:1)
+   ok   ia 961 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(42,48,87) = 12.66:1 (10189 pixels; inside the line boxes alone 12.66:1)
+   ok   ia 961 reduced-motion: picture on screen: 90.8 % of the right quarter of the hero far from navy, 6566 colours
+   ok   ia 961 reduced-motion: title box 449x49.9 and subtitle box 449x31.3 inside the screen, topmost at their first line, painted pixels title 3408, subtitle 1705
+   ok   ia 961 reduced-motion: elements past 961 px: 0
+   ok   ia 861: page ready true, Inter loaded true, title font Inter 37.884px
+   ok   ia 861: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 861: hero 846x400; picture box x 253.8–846 = 70 % of the hero on its right, 400 high
+   ok   ia 861: title « Entreprise IA » 2 words, cut or out of the title box (399 wide): 0; widest word ends 250.7 of 423
+   ok   ia 861: title rgb(255, 255, 255) against the worst pixel of its box rgb(19,38,64) = 15.23:1 (10669 pixels; inside the line boxes alone 15.23:1)
+   ok   ia 861: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(38,48,84) = 12.86:1 (20736 pixels; inside the line boxes alone 14.11:1)
+   ok   ia 861: picture on screen: 90.2 % of the right quarter of the hero far from navy, 6441 colours
+   ok   ia 861: title box 399x44.7 and subtitle box 399x62.6 inside the screen, topmost at their first line, painted pixels title 2900, subtitle 1705
+   ok   ia 861: elements past 861 px: 0
+   ok   ia 861: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   ia 861 reduced-motion: page ready true, Inter loaded true, title font Inter 37.884px
+   ok   ia 861 reduced-motion: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 861 reduced-motion: hero 846x400; picture box x 253.8–846 = 70 % of the hero on its right, 400 high
+   ok   ia 861 reduced-motion: title « Entreprise IA » 2 words, cut or out of the title box (399 wide): 0; widest word ends 250.7 of 423
+   ok   ia 861 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(19,38,64) = 15.23:1 (10669 pixels; inside the line boxes alone 15.23:1)
+   ok   ia 861 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(38,48,84) = 12.86:1 (20736 pixels; inside the line boxes alone 14.11:1)
+   ok   ia 861 reduced-motion: picture on screen: 90.2 % of the right quarter of the hero far from navy, 6441 colours
+   ok   ia 861 reduced-motion: title box 399x44.7 and subtitle box 399x62.6 inside the screen, topmost at their first line, painted pixels title 2900, subtitle 1705
+   ok   ia 861 reduced-motion: elements past 861 px: 0
+   ok   ia 860: page ready true, Inter loaded true, title font Inter 37.84px
+   ok   ia 860: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 860: hero 860x301.9; picture block 860x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   ia 860: title « Entreprise IA » 2 words, cut or out of the title box (572 wide): 0; widest word ends 250.7 of 596
+   ok   ia 860: title rgb(255, 255, 255) against the worst pixel of its box rgb(24,41,70) = 14.54:1 (10442 pixels; inside the line boxes alone 14.54:1)
+   ok   ia 860: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (10189 pixels; inside the line boxes alone 15.25:1)
+   ok   ia 860: picture on screen: 99.2 % of the top 110 px of the block far from navy, 5278 colours
+   ok   ia 860: title box 572x44.6 and subtitle box 682x31.3 inside the screen, topmost at their first line, painted pixels title 2900, subtitle 1705
+   ok   ia 860: elements past 860 px: 0
+   ok   ia 860: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   ia 860 reduced-motion: page ready true, Inter loaded true, title font Inter 37.84px
+   ok   ia 860 reduced-motion: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 860 reduced-motion: hero 860x301.9; picture block 860x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   ia 860 reduced-motion: title « Entreprise IA » 2 words, cut or out of the title box (572 wide): 0; widest word ends 250.7 of 596
+   ok   ia 860 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(24,41,70) = 14.54:1 (10442 pixels; inside the line boxes alone 14.54:1)
+   ok   ia 860 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (10189 pixels; inside the line boxes alone 15.25:1)
+   ok   ia 860 reduced-motion: picture on screen: 99.2 % of the top 110 px of the block far from navy, 5278 colours
+   ok   ia 860 reduced-motion: title box 572x44.6 and subtitle box 682x31.3 inside the screen, topmost at their first line, painted pixels title 2900, subtitle 1705
+   ok   ia 860 reduced-motion: elements past 860 px: 0
+   ok   ia 375: page ready true, Inter loaded true, title font Inter 32px
+   ok   ia 375: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 375: hero 375x326.3; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   ia 375: title « Entreprise IA » 2 words, cut or out of the title box (327 wide): 0; widest word ends 215.6 of 351
+   ok   ia 375: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,42,70) = 14.47:1 (7488 pixels; inside the line boxes alone 14.47:1)
+   ok   ia 375: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (14630 pixels; inside the line boxes alone 15.25:1)
+   ok   ia 375: picture on screen: 99 % of the top 110 px of the block far from navy, 6394 colours
+   ok   ia 375: title box 327x37.8 and subtitle box 327x62.6 inside the screen, topmost at their first line, painted pixels title 1998, subtitle 1705
+   ok   ia 375: elements past 375 px: 0
+   ok   ia 375: heights below the hero and the two home card pictures = 19fef04
+        capture hero-ia-375.jpg 375x404
+   ok   ia 375: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   ia 375 reduced-motion: page ready true, Inter loaded true, title font Inter 32px
+   ok   ia 375 reduced-motion: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 375 reduced-motion: hero 375x326.3; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   ia 375 reduced-motion: title « Entreprise IA » 2 words, cut or out of the title box (327 wide): 0; widest word ends 215.6 of 351
+   ok   ia 375 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,42,70) = 14.47:1 (7488 pixels; inside the line boxes alone 14.47:1)
+   ok   ia 375 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (14630 pixels; inside the line boxes alone 15.25:1)
+   ok   ia 375 reduced-motion: picture on screen: 99 % of the top 110 px of the block far from navy, 6394 colours
+   ok   ia 375 reduced-motion: title box 327x37.8 and subtitle box 327x62.6 inside the screen, topmost at their first line, painted pixels title 1998, subtitle 1705
+   ok   ia 375 reduced-motion: elements past 375 px: 0
+   ok   ia 320: page ready true, Inter loaded true, title font Inter 32px
+   ok   ia 320: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 320: hero 320x326.3; picture block 320x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   ia 320: title « Entreprise IA » 2 words, cut or out of the title box (272 wide): 0; widest word ends 215.6 of 296
+   ok   ia 320: title rgb(255, 255, 255) against the worst pixel of its box rgb(19,42,70) = 14.51:1 (7488 pixels; inside the line boxes alone 14.51:1)
+   ok   ia 320: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (14630 pixels; inside the line boxes alone 15.25:1)
+   ok   ia 320: picture on screen: 98.6 % of the top 110 px of the block far from navy, 6089 colours
+   ok   ia 320: title box 272x37.8 and subtitle box 272x62.6 inside the screen, topmost at their first line, painted pixels title 1998, subtitle 1705
+   ok   ia 320: elements past 320 px: 0
+   ok   ia 320: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   ia 320 reduced-motion: page ready true, Inter loaded true, title font Inter 32px
+   ok   ia 320 reduced-motion: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 320 reduced-motion: hero 320x326.3; picture block 320x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   ia 320 reduced-motion: title « Entreprise IA » 2 words, cut or out of the title box (272 wide): 0; widest word ends 215.6 of 296
+   ok   ia 320 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,42,71) = 14.44:1 (7488 pixels; inside the line boxes alone 14.44:1)
+   ok   ia 320 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (14630 pixels; inside the line boxes alone 15.25:1)
+   ok   ia 320 reduced-motion: picture on screen: 98.6 % of the top 110 px of the block far from navy, 6089 colours
+   ok   ia 320 reduced-motion: title box 272x37.8 and subtitle box 272x62.6 inside the screen, topmost at their first line, painted pixels title 1998, subtitle 1705
+   ok   ia 320 reduced-motion: elements past 320 px: 0
+== /service-venture-building/ — photo hero, scripts on, reduced motion off then on
+   ok   venture 1920: page ready true, Inter loaded true, title font Inter 52px
+   ok   venture 1920: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 1920: hero 1905x400; picture box x 571.5–1905 = 70 % of the hero on its right, 400 high
+   ok   venture 1920: title « Venture Building » 2 words, cut or out of the title box (556 wide): 0; widest word ends 794.7 of 952.5
+   ok   venture 1920: title rgb(255, 255, 255) against the worst pixel of its box rgb(23,44,70) = 14.14:1 (25536 pixels; inside the line boxes alone 14.14:1)
+   ok   venture 1920: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(31,53,80) = 12.48:1 (29700 pixels; inside the line boxes alone 12.50:1)
+   ok   venture 1920: picture on screen: 100 % of the right quarter of the hero far from navy, 41 colours
+   ok   venture 1920: title box 556x61.4 and subtitle box 556x62.6 inside the screen, topmost at their first line, painted pixels title 7148, subtitle 2557
+   ok   venture 1920: elements past 1920 px: 0
+   ok   venture 1920: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   venture 1920 reduced-motion: page ready true, Inter loaded true, title font Inter 52px
+   ok   venture 1920 reduced-motion: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 1920 reduced-motion: hero 1905x400; picture box x 571.5–1905 = 70 % of the hero on its right, 400 high
+   ok   venture 1920 reduced-motion: title « Venture Building » 2 words, cut or out of the title box (556 wide): 0; widest word ends 794.7 of 952.5
+   ok   venture 1920 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(23,44,70) = 14.14:1 (25536 pixels; inside the line boxes alone 14.14:1)
+   ok   venture 1920 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(31,53,80) = 12.48:1 (29700 pixels; inside the line boxes alone 12.50:1)
+   ok   venture 1920 reduced-motion: picture on screen: 100 % of the right quarter of the hero far from navy, 41 colours
+   ok   venture 1920 reduced-motion: title box 556x61.4 and subtitle box 556x62.6 inside the screen, topmost at their first line, painted pixels title 7148, subtitle 2557
+   ok   venture 1920 reduced-motion: elements past 1920 px: 0
+   ok   venture 1200: page ready true, Inter loaded true, title font Inter 52px
+   ok   venture 1200: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 1200: hero 1185x400; picture box x 355.5–1185 = 70 % of the hero on its right, 400 high
+   ok   venture 1200: hero height 400 (expected 400 ± 2)
+   ok   venture 1200: title « Venture Building » 2 words, cut or out of the title box (556 wide): 0; widest word ends 434.7 of 592.5
+   ok   venture 1200: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,40,66) = 14.85:1 (25536 pixels; inside the line boxes alone 14.85:1)
+   ok   venture 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(31,53,79) = 12.50:1 (29700 pixels; inside the line boxes alone 12.50:1)
+   ok   venture 1200: picture on screen: 100 % of the right quarter of the hero far from navy, 75 colours
+   ok   venture 1200: title box 556x61.4 and subtitle box 556x62.6 inside the screen, topmost at their first line, painted pixels title 7148, subtitle 2557
+   ok   venture 1200: elements past 1200 px: 0
+   ok   venture 1200: heights below the hero and the two home card pictures = 19fef04
+        capture hero-venture-1200.jpg 1200x477
+   ok   venture 1200: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   venture 1200 reduced-motion: page ready true, Inter loaded true, title font Inter 52px
+   ok   venture 1200 reduced-motion: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 1200 reduced-motion: hero 1185x400; picture box x 355.5–1185 = 70 % of the hero on its right, 400 high
+   ok   venture 1200 reduced-motion: hero height 400 (expected 400 ± 2)
+   ok   venture 1200 reduced-motion: title « Venture Building » 2 words, cut or out of the title box (556 wide): 0; widest word ends 434.7 of 592.5
+   ok   venture 1200 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,40,66) = 14.85:1 (25536 pixels; inside the line boxes alone 14.85:1)
+   ok   venture 1200 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(31,53,79) = 12.50:1 (29700 pixels; inside the line boxes alone 12.50:1)
+   ok   venture 1200 reduced-motion: picture on screen: 100 % of the right quarter of the hero far from navy, 75 colours
+   ok   venture 1200 reduced-motion: title box 556x61.4 and subtitle box 556x62.6 inside the screen, topmost at their first line, painted pixels title 7148, subtitle 2557
+   ok   venture 1200 reduced-motion: elements past 1200 px: 0
+   ok   venture 961: page ready true, Inter loaded true, title font Inter 42.284px
+   ok   venture 961: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 961: hero 946x400; picture box x 283.8–946 = 70 % of the hero on its right, 400 high
+   ok   venture 961: title « Venture Building » 2 words, cut or out of the title box (449 wide): 0; widest word ends 344.1 of 473
+   ok   venture 961: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,40,66) = 14.85:1 (16692 pixels; inside the line boxes alone 14.85:1)
+   ok   venture 961: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(28,49,75) = 13.21:1 (22464 pixels; inside the line boxes alone 13.23:1)
+   ok   venture 961: picture on screen: 100 % of the right quarter of the hero far from navy, 73 colours
+   ok   venture 961: title box 449x49.9 and subtitle box 449x62.6 inside the screen, topmost at their first line, painted pixels title 4591, subtitle 2557
+   ok   venture 961: elements past 961 px: 0
+   ok   venture 961: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   venture 961 reduced-motion: page ready true, Inter loaded true, title font Inter 42.284px
+   ok   venture 961 reduced-motion: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 961 reduced-motion: hero 946x400; picture box x 283.8–946 = 70 % of the hero on its right, 400 high
+   ok   venture 961 reduced-motion: title « Venture Building » 2 words, cut or out of the title box (449 wide): 0; widest word ends 344.1 of 473
+   ok   venture 961 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,40,66) = 14.85:1 (16692 pixels; inside the line boxes alone 14.85:1)
+   ok   venture 961 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(28,49,75) = 13.21:1 (22464 pixels; inside the line boxes alone 13.23:1)
+   ok   venture 961 reduced-motion: picture on screen: 100 % of the right quarter of the hero far from navy, 73 colours
+   ok   venture 961 reduced-motion: title box 449x49.9 and subtitle box 449x62.6 inside the screen, topmost at their first line, painted pixels title 4591, subtitle 2557
+   ok   venture 961 reduced-motion: elements past 961 px: 0
+   ok   venture 861: page ready true, Inter loaded true, title font Inter 37.884px
+   ok   venture 861: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 861: hero 846x400; picture box x 253.8–846 = 70 % of the hero on its right, 400 high
+   ok   venture 861: title « Venture Building » 2 words, cut or out of the title box (399 wide): 0; widest word ends 316.9 of 423
+   ok   venture 861: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,41,66) = 14.71:1 (13771 pixels; inside the line boxes alone 14.71:1)
+   ok   venture 861: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(25,46,72) = 13.76:1 (18522 pixels; inside the line boxes alone 13.76:1)
+   ok   venture 861: picture on screen: 100 % of the right quarter of the hero far from navy, 77 colours
+   ok   venture 861: title box 399x44.7 and subtitle box 399x62.6 inside the screen, topmost at their first line, painted pixels title 3843, subtitle 2557
+   ok   venture 861: elements past 861 px: 0
+   ok   venture 861: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   venture 861 reduced-motion: page ready true, Inter loaded true, title font Inter 37.884px
+   ok   venture 861 reduced-motion: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 861 reduced-motion: hero 846x400; picture box x 253.8–846 = 70 % of the hero on its right, 400 high
+   ok   venture 861 reduced-motion: title « Venture Building » 2 words, cut or out of the title box (399 wide): 0; widest word ends 316.9 of 423
+   ok   venture 861 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,41,66) = 14.71:1 (13771 pixels; inside the line boxes alone 14.71:1)
+   ok   venture 861 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(25,46,72) = 13.76:1 (18522 pixels; inside the line boxes alone 13.76:1)
+   ok   venture 861 reduced-motion: picture on screen: 100 % of the right quarter of the hero far from navy, 77 colours
+   ok   venture 861 reduced-motion: title box 399x44.7 and subtitle box 399x62.6 inside the screen, topmost at their first line, painted pixels title 3843, subtitle 2557
+   ok   venture 861 reduced-motion: elements past 861 px: 0
+   ok   venture 860: page ready true, Inter loaded true, title font Inter 37.84px
+   ok   venture 860: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 860: hero 860x301.9; picture block 860x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   venture 860: title « Venture Building » 2 words, cut or out of the title box (572 wide): 0; widest word ends 316.9 of 596
+   ok   venture 860: title rgb(255, 255, 255) against the worst pixel of its box rgb(22,42,68) = 14.50:1 (13478 pixels; inside the line boxes alone 14.50:1)
+   ok   venture 860: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (15571 pixels; inside the line boxes alone 15.25:1)
+   ok   venture 860: picture on screen: 100 % of the top 110 px of the block far from navy, 526 colours
+   ok   venture 860: title box 572x44.6 and subtitle box 682x31.3 inside the screen, topmost at their first line, painted pixels title 3843, subtitle 2557
+   ok   venture 860: elements past 860 px: 0
+   ok   venture 860: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   venture 860 reduced-motion: page ready true, Inter loaded true, title font Inter 37.84px
+   ok   venture 860 reduced-motion: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 860 reduced-motion: hero 860x301.9; picture block 860x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   venture 860 reduced-motion: title « Venture Building » 2 words, cut or out of the title box (572 wide): 0; widest word ends 316.9 of 596
+   ok   venture 860 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(22,42,68) = 14.50:1 (13478 pixels; inside the line boxes alone 14.50:1)
+   ok   venture 860 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (15571 pixels; inside the line boxes alone 15.25:1)
+   ok   venture 860 reduced-motion: picture on screen: 100 % of the top 110 px of the block far from navy, 526 colours
+   ok   venture 860 reduced-motion: title box 572x44.6 and subtitle box 682x31.3 inside the screen, topmost at their first line, painted pixels title 3843, subtitle 2557
+   ok   venture 860 reduced-motion: elements past 860 px: 0
+   ok   venture 375: page ready true, Inter loaded true, title font Inter 32px
+   ok   venture 375: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 375: hero 375x357.6; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   venture 375: title « Venture Building » 2 words, cut or out of the title box (327 wide): 0; widest word ends 271.2 of 351
+   ok   venture 375: title rgb(255, 255, 255) against the worst pixel of its box rgb(26,45,70) = 13.93:1 (9672 pixels; inside the line boxes alone 13.93:1)
+   ok   venture 375: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (23822 pixels; inside the line boxes alone 15.25:1)
+   ok   venture 375: picture on screen: 100 % of the top 110 px of the block far from navy, 347 colours
+   ok   venture 375: title box 327x37.8 and subtitle box 327x93.8 inside the screen, topmost at their first line, painted pixels title 2660, subtitle 2557
+   ok   venture 375: elements past 375 px: 0
+   ok   venture 375: heights below the hero and the two home card pictures = 19fef04
+        capture hero-venture-375.jpg 375x435
+   ok   venture 375: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   venture 375 reduced-motion: page ready true, Inter loaded true, title font Inter 32px
+   ok   venture 375 reduced-motion: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 375 reduced-motion: hero 375x357.6; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   venture 375 reduced-motion: title « Venture Building » 2 words, cut or out of the title box (327 wide): 0; widest word ends 271.2 of 351
+   ok   venture 375 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(26,45,70) = 13.93:1 (9672 pixels; inside the line boxes alone 13.93:1)
+   ok   venture 375 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (23822 pixels; inside the line boxes alone 15.25:1)
+   ok   venture 375 reduced-motion: picture on screen: 100 % of the top 110 px of the block far from navy, 347 colours
+   ok   venture 375 reduced-motion: title box 327x37.8 and subtitle box 327x93.8 inside the screen, topmost at their first line, painted pixels title 2660, subtitle 2557
+   ok   venture 375 reduced-motion: elements past 375 px: 0
+   ok   venture 320: page ready true, Inter loaded true, title font Inter 32px
+   ok   venture 320: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 320: hero 320x357.6; picture block 320x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   venture 320: title « Venture Building » 2 words, cut or out of the title box (272 wide): 0; widest word ends 271.2 of 296
+   ok   venture 320: title rgb(255, 255, 255) against the worst pixel of its box rgb(26,45,70) = 13.93:1 (9672 pixels; inside the line boxes alone 13.93:1)
+   ok   venture 320: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (22962 pixels; inside the line boxes alone 15.25:1)
+   ok   venture 320: picture on screen: 100 % of the top 110 px of the block far from navy, 316 colours
+   ok   venture 320: title box 272x37.8 and subtitle box 272x93.8 inside the screen, topmost at their first line, painted pixels title 2660, subtitle 2557
+   ok   venture 320: elements past 320 px: 0
+   ok   venture 320: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   venture 320 reduced-motion: page ready true, Inter loaded true, title font Inter 32px
+   ok   venture 320 reduced-motion: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 320 reduced-motion: hero 320x357.6; picture block 320x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   venture 320 reduced-motion: title « Venture Building » 2 words, cut or out of the title box (272 wide): 0; widest word ends 271.2 of 296
+   ok   venture 320 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(26,45,70) = 13.93:1 (9672 pixels; inside the line boxes alone 13.93:1)
+   ok   venture 320 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (22962 pixels; inside the line boxes alone 15.25:1)
+   ok   venture 320 reduced-motion: picture on screen: 100 % of the top 110 px of the block far from navy, 316 colours
+   ok   venture 320 reduced-motion: title box 272x37.8 and subtitle box 272x93.8 inside the screen, topmost at their first line, painted pixels title 2660, subtitle 2557
+   ok   venture 320 reduced-motion: elements past 320 px: 0
+== the six plain pages, scripts on
+   ok   /404.html 1200: page ready true, Inter loaded true, title font Inter
+   ok   /404.html 1200: no picture in this hero (class « hero hero--page »)
+   ok   /404.html 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(26,54,93) = 12.14:1 (10212 pixels; inside the line boxes alone 12.14:1)
+   ok   /404.html 1200: hero box x 0 y 77 1200x385.3 = 19fef04
+   ok   /404.html 1200: elements past 1200 px: 0
+   ok   /404.html 1200: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /404.html 375: page ready true, Inter loaded true, title font Inter
+   ok   /404.html 375: no picture in this hero (class « hero hero--page »)
+   ok   /404.html 375: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(31,85,106) = 8.18:1 (17280 pixels; inside the line boxes alone 8.74:1)
+   ok   /404.html 375: hero box x 0 y 77 375x446.2 = 19fef04
+   ok   /404.html 375: elements past 375 px: 0
+   ok   /404.html 375: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /404.html 320: page ready true, Inter loaded true, title font Inter
+   ok   /404.html 320: no picture in this hero (class « hero hero--page »)
+   ok   /404.html 320: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(30,78,103) = 8.97:1 (13068 pixels; inside the line boxes alone 9.46:1)
+   ok   /404.html 320: hero box x 0 y 77 320x446.2 = 19fef04
+   ok   /404.html 320: elements past 320 px: 0
+   ok   /404.html 320: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /contact/ 1200: page ready true, Inter loaded true, title font Inter
+   ok   /contact/ 1200: no picture in this hero (class « hero hero--page hero--pattern »)
+   ok   /contact/ 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(56,91,118) = 7.18:1 (36774 pixels; inside the line boxes alone 7.18:1)
+   ok   /contact/ 1200: hero box x 0 y 77 1185x315.9 = 19fef04
+   ok   /contact/ 1200: elements past 1200 px: 0
+   ok   /contact/ 1200: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /contact/ 375: page ready true, Inter loaded true, title font Inter
+   ok   /contact/ 375: no picture in this hero (class « hero hero--page hero--pattern »)
+   ok   /contact/ 375: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(61,119,129) = 5.06:1 (46768 pixels; inside the line boxes alone 5.58:1)
+   ok   /contact/ 375: hero box x 0 y 77 375x383.9 = 19fef04
+   ok   /contact/ 375: elements past 375 px: 0
+   ok   /contact/ 375: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /contact/ 320: page ready true, Inter loaded true, title font Inter
+   ok   /contact/ 320: no picture in this hero (class « hero hero--page hero--pattern »)
+   ok   /contact/ 320: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(60,113,127) = 5.44:1 (47435 pixels; inside the line boxes alone 5.44:1)
+   ok   /contact/ 320: hero box x 0 y 77 320x415.2 = 19fef04
+   ok   /contact/ 320: elements past 320 px: 0
+   ok   /contact/ 320: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /mentions-legales/ 1200: page ready true, Inter loaded true, title font Inter
+   ok   /mentions-legales/ 1200: no picture in this hero (class « hero hero--page »)
+   ok   /mentions-legales/ 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(28,65,98) = 10.60:1 (13386 pixels; inside the line boxes alone 10.60:1)
+   ok   /mentions-legales/ 1200: hero box x 0 y 77 1185x284.6 = 19fef04
+   ok   /mentions-legales/ 1200: elements past 1200 px: 0
+   ok   /mentions-legales/ 1200: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /mentions-legales/ 375: page ready true, Inter loaded true, title font Inter
+   ok   /mentions-legales/ 375: no picture in this hero (class « hero hero--page »)
+   ok   /mentions-legales/ 375: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(62,117,129) = 5.16:1 (16995 pixels; inside the line boxes alone 5.16:1)
+   ok   /mentions-legales/ 375: hero box x 0 y 77 375x252.3 = 19fef04
+   ok   /mentions-legales/ 375: elements past 375 px: 0
+   ok   /mentions-legales/ 375: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /mentions-legales/ 320: page ready true, Inter loaded true, title font Inter
+   ok   /mentions-legales/ 320: no picture in this hero (class « hero hero--page »)
+   ok   /mentions-legales/ 320: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(61,116,128) = 5.24:1 (22962 pixels; inside the line boxes alone 8.20:1)
+   ok   /mentions-legales/ 320: hero box x 0 y 77 320x283.6 = 19fef04
+   ok   /mentions-legales/ 320: elements past 320 px: 0
+   ok   /mentions-legales/ 320: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /politique-confidentialite/ 1200: page ready true, Inter loaded true, title font Inter
+   ok   /politique-confidentialite/ 1200: no picture in this hero (class « hero hero--page »)
+   ok   /politique-confidentialite/ 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(30,76,102) = 9.21:1 (57104 pixels; inside the line boxes alone 9.46:1)
+   ok   /politique-confidentialite/ 1200: hero box x 0 y 77 1185x408.6 = 19fef04
+   ok   /politique-confidentialite/ 1200: elements past 1200 px: 0
+   ok   /politique-confidentialite/ 1200: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /politique-confidentialite/ 375: page ready true, Inter loaded true, title font Inter
+   ok   /politique-confidentialite/ 375: no picture in this hero (class « hero hero--page »)
+   ok   /politique-confidentialite/ 375: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(33,100,112) = 6.73:1 (53879 pixels; inside the line boxes alone 6.97:1)
+   ok   /politique-confidentialite/ 375: hero box x 0 y 77 375x415.2 = 19fef04
+   ok   /politique-confidentialite/ 375: elements past 375 px: 0
+   ok   /politique-confidentialite/ 375: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /politique-confidentialite/ 320: page ready true, Inter loaded true, title font Inter
+   ok   /politique-confidentialite/ 320: no picture in this hero (class « hero hero--page »)
+   ok   /politique-confidentialite/ 320: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(61,112,127) = 5.49:1 (57392 pixels; inside the line boxes alone 5.49:1)
+   ok   /politique-confidentialite/ 320: hero box x 0 y 77 320x446.5 = 19fef04
+   ok   /politique-confidentialite/ 320: elements past 320 px: 0
+   ok   /politique-confidentialite/ 320: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /portfolio/ 1200: page ready true, Inter loaded true, title font Inter
+   ok   /portfolio/ 1200: no picture in this hero (class « hero hero--page »)
+   ok   /portfolio/ 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(27,59,95) = 11.43:1 (10327 pixels; inside the line boxes alone 11.43:1)
+   ok   /portfolio/ 1200: hero box x 0 y 77 1185x407.4 = 19fef04
+   ok   /portfolio/ 1200: elements past 1200 px: 0
+   ok   /portfolio/ 1200: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /portfolio/ 375: page ready true, Inter loaded true, title font Inter
+   ok   /portfolio/ 375: no picture in this hero (class « hero hero--page »)
+   ok   /portfolio/ 375: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(33,98,111) = 6.90:1 (15930 pixels; inside the line boxes alone 7.37:1)
+   ok   /portfolio/ 375: hero box x 0 y 77 375x365.6 = 19fef04
+   ok   /portfolio/ 375: elements past 375 px: 0
+   ok   /portfolio/ 375: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /portfolio/ 320: page ready true, Inter loaded true, title font Inter
+   ok   /portfolio/ 320: no picture in this hero (class « hero hero--page »)
+   ok   /portfolio/ 320: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(53,95,118) = 6.89:1 (12375 pixels; inside the line boxes alone 6.89:1)
+   ok   /portfolio/ 320: hero box x 0 y 77 320x403.3 = 19fef04
+   ok   /portfolio/ 320: elements past 320 px: 0
+   ok   /portfolio/ 320: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /publications/ 1200: page ready true, Inter loaded true, title font Inter
+   ok   /publications/ 1200: no picture in this hero (class « hero hero--page »)
+   ok   /publications/ 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(28,68,99) = 10.21:1 (32292 pixels; inside the line boxes alone 10.60:1)
+   ok   /publications/ 1200: hero box x 0 y 77 1185x315.9 = 19fef04
+   ok   /publications/ 1200: elements past 1200 px: 0
+   ok   /publications/ 1200: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /publications/ 375: page ready true, Inter loaded true, title font Inter
+   ok   /publications/ 375: no picture in this hero (class « hero hero--page »)
+   ok   /publications/ 375: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(62,117,129) = 5.16:1 (28122 pixels; inside the line boxes alone 7.28:1)
+   ok   /publications/ 375: hero box x 0 y 77 375x283.6 = 19fef04
+   ok   /publications/ 375: elements past 375 px: 0
+   ok   /publications/ 375: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+   ok   /publications/ 320: page ready true, Inter loaded true, title font Inter
+   ok   /publications/ 320: no picture in this hero (class « hero hero--page »)
+   ok   /publications/ 320: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(61,115,128) = 5.30:1 (31824 pixels; inside the line boxes alone 7.28:1)
+   ok   /publications/ 320: hero box x 0 y 77 320x314.9 = 19fef04
+   ok   /publications/ 320: elements past 320 px: 0
+   ok   /publications/ 320: hosts asked outside 127.0.0.1 and Google Fonts [] = 19fef04
+== scripts disabled, the four photo pages
+   ok   home 1200 scripts-off: page ready true, Inter loaded true, title font Inter 60px
+   ok   home 1200 scripts-off: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 1200 scripts-off: hero 1185x520; picture box x 355.5–1185 = 70 % of the hero on its right, 520 high
+   ok   home 1200 scripts-off: hero height 520 (expected 520 ± 2)
+   ok   home 1200 scripts-off: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (556 wide): 0; widest word ends 574 of 592.5
+   ok   home 1200 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(46,52,65) = 12.47:1 (72630 pixels; inside the line boxes alone 12.47:1)
+   ok   home 1200 scripts-off: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(46,52,65) = 8.63:1 (31032 pixels; inside the line boxes alone 8.63:1)
+   ok   home 1200 scripts-off: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(49,64,82) = 10.58:1 (29754 pixels; inside the line boxes alone 12.86:1)
+   ok   home 1200 scripts-off: picture on screen: 70.7 % of the right quarter of the hero far from navy, 10947 colours
+   ok   home 1200 scripts-off: title box 556x126 and subtitle box 556x62.6 inside the screen, topmost at their first line, painted pixels title 26707, accent word 8375, subtitle 4670
+   ok   home 1200 scripts-off: elements past 1200 px: 0
+   ok   home 1200 scripts-off: heights below the hero and the two home card pictures = 19fef04
+   ok   home 375 scripts-off: page ready true, Inter loaded true, title font Inter 37.6px
+   ok   home 375 scripts-off: picture /assets/img/hero-home.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   home 375 scripts-off: hero 375x517.7; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   home 375 scripts-off: title « De la Stratégieà la Transformation » 6 words, cut or out of the title box (327 wide): 0; widest word ends 294.8 of 351
+   ok   home 375 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(30,48,73) = 13.34:1 (33604 pixels; inside the line boxes alone 13.34:1)
+   ok   home 375 scripts-off: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(18,38,64) = 10.56:1 (12466 pixels; inside the line boxes alone 10.56:1)
+   ok   home 375 scripts-off: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (27115 pixels; inside the line boxes alone 15.25:1)
+   ok   home 375 scripts-off: picture on screen: 34.7 % of the top 110 px of the block far from navy, 3584 colours
+   ok   home 375 scripts-off: title box 327x118.4 and subtitle box 327x93.8 inside the screen, topmost at their first line, painted pixels title 10805, accent word 3363, subtitle 4670
+   ok   home 375 scripts-off: elements past 375 px: 0
+   ok   home 375 scripts-off: heights below the hero and the two home card pictures = 19fef04
+   ok   strategie 1200 scripts-off: page ready true, Inter loaded true, title font Inter 52px
+   ok   strategie 1200 scripts-off: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 1200 scripts-off: hero 1185x400; picture box x 355.5–1185 = 70 % of the hero on its right, 400 high
+   ok   strategie 1200 scripts-off: hero height 400 (expected 400 ± 2)
+   ok   strategie 1200 scripts-off: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (556 wide): 0; widest word ends 408.3 of 592.5
+   ok   strategie 1200 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,40,66) = 14.85:1 (69751 pixels; inside the line boxes alone 14.88:1)
+   ok   strategie 1200 scripts-off: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(32,48,74) = 13.27:1 (10718 pixels; inside the line boxes alone 13.27:1)
+   ok   strategie 1200 scripts-off: picture on screen: 60.5 % of the right quarter of the hero far from navy, 2676 colours
+   ok   strategie 1200 scripts-off: title box 556x184.1 and subtitle box 556x31.3 inside the screen, topmost at their first line, painted pixels title 16727, subtitle 1699
+   ok   strategie 1200 scripts-off: elements past 1200 px: 0
+   ok   strategie 1200 scripts-off: heights below the hero and the two home card pictures = 19fef04
+   ok   strategie 375 scripts-off: page ready true, Inter loaded true, title font Inter 32px
+   ok   strategie 375 scripts-off: picture /assets/img/hero-strategie.webp complete, natural 1600x900, alt «  », width/height 1600x900, loading null, first child of the hero true
+   ok   strategie 375 scripts-off: hero 375x401.8; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   strategie 375 scripts-off: title « Stratégie > Transformation opérationnelle » 4 words, cut or out of the title box (327 wide): 0; widest word ends 255.8 of 351
+   ok   strategie 375 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(27,45,69) = 13.93:1 (26680 pixels; inside the line boxes alone 13.93:1)
+   ok   strategie 375 scripts-off: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (14742 pixels; inside the line boxes alone 15.25:1)
+   ok   strategie 375 scripts-off: picture on screen: 63.3 % of the top 110 px of the block far from navy, 4424 colours
+   ok   strategie 375 scripts-off: title box 327x113.3 and subtitle box 327x62.6 inside the screen, topmost at their first line, painted pixels title 6257, subtitle 1699
+   ok   strategie 375 scripts-off: elements past 375 px: 0
+   ok   strategie 375 scripts-off: heights below the hero and the two home card pictures = 19fef04
+   ok   ia 1200 scripts-off: page ready true, Inter loaded true, title font Inter 52px
+   ok   ia 1200 scripts-off: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 1200 scripts-off: hero 1185x400; picture box x 355.5–1185 = 70 % of the hero on its right, 400 high
+   ok   ia 1200 scripts-off: hero height 400 (expected 400 ± 2)
+   ok   ia 1200 scripts-off: title « Entreprise IA » 2 words, cut or out of the title box (556 wide): 0; widest word ends 347.6 of 592.5
+   ok   ia 1200 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(19,38,64) = 15.23:1 (19968 pixels; inside the line boxes alone 15.23:1)
+   ok   ia 1200 scripts-off: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(28,40,65) = 14.69:1 (10212 pixels; inside the line boxes alone 14.69:1)
+   ok   ia 1200 scripts-off: picture on screen: 93.3 % of the right quarter of the hero far from navy, 6016 colours
+   ok   ia 1200 scripts-off: title box 556x61.4 and subtitle box 556x31.3 inside the screen, topmost at their first line, painted pixels title 5351, subtitle 1705
+   ok   ia 1200 scripts-off: elements past 1200 px: 0
+   ok   ia 1200 scripts-off: heights below the hero and the two home card pictures = 19fef04
+   ok   ia 375 scripts-off: page ready true, Inter loaded true, title font Inter 32px
+   ok   ia 375 scripts-off: picture /pictures/1ai_hero.jpg complete, natural 554x360, alt «  », width/height 554x360, loading null, first child of the hero true
+   ok   ia 375 scripts-off: hero 375x326.3; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   ia 375 scripts-off: title « Entreprise IA » 2 words, cut or out of the title box (327 wide): 0; widest word ends 215.6 of 351
+   ok   ia 375 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,42,70) = 14.47:1 (7488 pixels; inside the line boxes alone 14.47:1)
+   ok   ia 375 scripts-off: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (14630 pixels; inside the line boxes alone 15.25:1)
+   ok   ia 375 scripts-off: picture on screen: 99 % of the top 110 px of the block far from navy, 6394 colours
+   ok   ia 375 scripts-off: title box 327x37.8 and subtitle box 327x62.6 inside the screen, topmost at their first line, painted pixels title 1998, subtitle 1705
+   ok   ia 375 scripts-off: elements past 375 px: 0
+   ok   ia 375 scripts-off: heights below the hero and the two home card pictures = 19fef04
+   ok   venture 1200 scripts-off: page ready true, Inter loaded true, title font Inter 52px
+   ok   venture 1200 scripts-off: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 1200 scripts-off: hero 1185x400; picture box x 355.5–1185 = 70 % of the hero on its right, 400 high
+   ok   venture 1200 scripts-off: hero height 400 (expected 400 ± 2)
+   ok   venture 1200 scripts-off: title « Venture Building » 2 words, cut or out of the title box (556 wide): 0; widest word ends 434.7 of 592.5
+   ok   venture 1200 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(21,40,66) = 14.85:1 (25536 pixels; inside the line boxes alone 14.85:1)
+   ok   venture 1200 scripts-off: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(31,53,79) = 12.50:1 (29700 pixels; inside the line boxes alone 12.50:1)
+   ok   venture 1200 scripts-off: picture on screen: 100 % of the right quarter of the hero far from navy, 75 colours
+   ok   venture 1200 scripts-off: title box 556x61.4 and subtitle box 556x62.6 inside the screen, topmost at their first line, painted pixels title 7148, subtitle 2557
+   ok   venture 1200 scripts-off: elements past 1200 px: 0
+   ok   venture 1200 scripts-off: heights below the hero and the two home card pictures = 19fef04
+   ok   venture 375 scripts-off: page ready true, Inter loaded true, title font Inter 32px
+   ok   venture 375 scripts-off: picture /assets/img/hero-venture.jpg complete, natural 1024x1536, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   ok   venture 375 scripts-off: hero 375x357.6; picture block 375x230 at the top, title starts 178 px under its top (52 px over its faded end)
+   ok   venture 375 scripts-off: title « Venture Building » 2 words, cut or out of the title box (327 wide): 0; widest word ends 271.2 of 351
+   ok   venture 375 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(26,45,70) = 13.93:1 (9672 pixels; inside the line boxes alone 13.93:1)
+   ok   venture 375 scripts-off: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(18,38,64) = 15.25:1 (23822 pixels; inside the line boxes alone 15.25:1)
+   ok   venture 375 scripts-off: picture on screen: 100 % of the top 110 px of the block far from navy, 347 colours
+   ok   venture 375 scripts-off: title box 327x37.8 and subtitle box 327x93.8 inside the screen, topmost at their first line, painted pixels title 2660, subtitle 2557
+   ok   venture 375 scripts-off: elements past 375 px: 0
+   ok   venture 375 scripts-off: heights below the hero and the two home card pictures = 19fef04
+RENDER http://127.0.0.1:4173: failing checks 0

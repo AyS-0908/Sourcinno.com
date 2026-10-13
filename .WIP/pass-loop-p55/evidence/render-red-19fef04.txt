@@ -1,0 +1,225 @@
+RENDER p55 on http://127.0.0.1:4174 (BASELINE run on the scratch copy of 19fef04: comparisons are written, not checked)
+== / — photo hero, scripts on, reduced motion off then on
+   FAIL home 1920: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 1905x533.9
+        baseline hosts /|1920: []
+   FAIL home 1920 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 1905x533.9
+   FAIL home 1200: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 1185x520
+        baseline below /|1200|on: {"parts":["header.site-header 77","section#services.section 780.3","section#references.section 242.5","section#experience.section 906.9","se
+        baseline hosts /|1200: []
+   FAIL home 1200 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 1185x520
+   FAIL home 961: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 946x520
+        baseline hosts /|961: []
+   FAIL home 961 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 946x520
+   FAIL home 861: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 846x520
+        baseline hosts /|861: []
+   FAIL home 861 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 846x520
+   FAIL home 860: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 860x520
+        baseline hosts /|860: []
+   FAIL home 860 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 860x520
+   FAIL home 375: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 375x411.7
+        baseline below /|375|on: {"parts":["header.site-header 77","section#services.section 1244","section#references.section 550.2","section#experience.section 1569.2","se
+        baseline hosts /|375: []
+   FAIL home 375 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 375x411.7
+   FAIL home 320: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 320x411.7
+        baseline hosts /|320: []
+   FAIL home 320 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 320x411.7
+== /service-strategie-transformation/ — photo hero, scripts on, reduced motion off then on
+   FAIL strategie 1920: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 1905x346
+        baseline hosts /service-strategie-transformation/|1920: []
+   FAIL strategie 1920 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 1905x346
+   FAIL strategie 1200: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 1185x346
+        baseline below /service-strategie-transformation/|1200|on: {"parts":["header.site-header 77","section#besoin.section 793.1","section#experience.section 703.7","section#reflexion.section 1446.5","sect
+        baseline hosts /service-strategie-transformation/|1200: []
+   FAIL strategie 1200 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 1185x346
+   FAIL strategie 961: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 946x323.1
+        baseline hosts /service-strategie-transformation/|961: []
+   FAIL strategie 961 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 946x323.1
+   FAIL strategie 861: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 846x312.7
+        baseline hosts /service-strategie-transformation/|861: []
+   FAIL strategie 861 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 846x312.7
+   FAIL strategie 860: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 860x312.6
+        baseline hosts /service-strategie-transformation/|860: []
+   FAIL strategie 860 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 860x312.6
+   FAIL strategie 375: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 375x327.8
+        baseline below /service-strategie-transformation/|375|on: {"parts":["header.site-header 77","section#besoin.section 1303.3","section#experience.section 1144.6","section#reflexion.section 803","secti
+        baseline hosts /service-strategie-transformation/|375: []
+   FAIL strategie 375 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 375x327.8
+   FAIL strategie 320: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 320x327.8
+        baseline hosts /service-strategie-transformation/|320: []
+   FAIL strategie 320 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 320x327.8
+== /service-ia-business/ — photo hero, scripts on, reduced motion off then on
+   FAIL ia 1920: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 1905x284.6
+        baseline hosts /service-ia-business/|1920: []
+   FAIL ia 1920 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 1905x284.6
+   FAIL ia 1200: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 1185x284.6
+        baseline below /service-ia-business/|1200|on: {"parts":["header.site-header 77","section#besoin.section 966","section#experience.section 595","section#reflexion.section 1034.4","section.
+        baseline hosts /service-ia-business/|1200: []
+   FAIL ia 1200 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 1185x284.6
+   FAIL ia 961: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 946x273.2
+        baseline hosts /service-ia-business/|961: []
+   FAIL ia 961 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 946x273.2
+   FAIL ia 861: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 846x268
+        baseline hosts /service-ia-business/|861: []
+   FAIL ia 861 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 846x268
+   FAIL ia 860: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 860x267.9
+        baseline hosts /service-ia-business/|860: []
+   FAIL ia 860 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 860x267.9
+   FAIL ia 375: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 375x252.3
+        baseline below /service-ia-business/|375|on: {"parts":["header.site-header 77","section#besoin.section 1809","section#experience.section 784.2","section#reflexion.section 855.1","sectio
+        baseline hosts /service-ia-business/|375: []
+   FAIL ia 375 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 375x252.3
+   FAIL ia 320: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 320x252.3
+        baseline hosts /service-ia-business/|320: []
+   FAIL ia 320 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 320x252.3
+== /service-venture-building/ — photo hero, scripts on, reduced motion off then on
+   FAIL venture 1920: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 1905x284.6
+        baseline hosts /service-venture-building/|1920: []
+   FAIL venture 1920 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 1905x284.6
+   FAIL venture 1200: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 1185x284.6
+        baseline below /service-venture-building/|1200|on: {"parts":["header.site-header 77","section#kodak.section 573.2","section#david-goliath.section 737.2","section#experience.section 443.5","se
+        baseline hosts /service-venture-building/|1200: []
+   FAIL venture 1200 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 1185x284.6
+   FAIL venture 961: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 946x273.2
+        baseline hosts /service-venture-building/|961: []
+   FAIL venture 961 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 946x273.2
+   FAIL venture 861: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 846x268
+        baseline hosts /service-venture-building/|861: []
+   FAIL venture 861 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 846x268
+   FAIL venture 860: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 860x267.9
+        baseline hosts /service-venture-building/|860: []
+   FAIL venture 860 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 860x267.9
+   FAIL venture 375: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 375x283.6
+        baseline below /service-venture-building/|375|on: {"parts":["header.site-header 77","section#kodak.section 851.8","section#david-goliath.section 468.5","section#experience.section 695.7","se
+        baseline hosts /service-venture-building/|375: []
+   FAIL venture 375 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 375x283.6
+   FAIL venture 320: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 320x283.6
+        baseline hosts /service-venture-building/|320: []
+   FAIL venture 320 reduced-motion: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 320x283.6
+== the six plain pages, scripts on
+   ok   /404.html 1200: page ready true, Inter loaded true, title font Inter
+   ok   /404.html 1200: no picture in this hero (class « hero hero--page »)
+   ok   /404.html 1200: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(26,54,93) = 9.41:1 (10212 pixels; inside the line boxes alone 9.41:1)
+        baseline plain /404.html|1200: ["0","77","1200","385.3"]
+   ok   /404.html 1200: elements past 1200 px: 0
+        baseline hosts /404.html|1200: []
+   ok   /404.html 375: page ready true, Inter loaded true, title font Inter
+   ok   /404.html 375: no picture in this hero (class « hero hero--page »)
+   ok   /404.html 375: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(31,85,106) = 6.55:1 (17280 pixels; inside the line boxes alone 6.96:1)
+        baseline plain /404.html|375: ["0","77","375","446.2"]
+   ok   /404.html 375: elements past 375 px: 0
+        baseline hosts /404.html|375: []
+   ok   /404.html 320: page ready true, Inter loaded true, title font Inter
+   ok   /404.html 320: no picture in this hero (class « hero hero--page »)
+   ok   /404.html 320: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(30,78,103) = 7.13:1 (13068 pixels; inside the line boxes alone 7.48:1)
+        baseline plain /404.html|320: ["0","77","320","446.2"]
+   ok   /404.html 320: elements past 320 px: 0
+        baseline hosts /404.html|320: []
+   ok   /contact/ 1200: page ready true, Inter loaded true, title font Inter
+   ok   /contact/ 1200: no picture in this hero (class « hero hero--page hero--pattern »)
+   ok   /contact/ 1200: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(56,91,118) = 5.82:1 (36774 pixels; inside the line boxes alone 5.82:1)
+        baseline plain /contact/|1200: ["0","77","1185","315.9"]
+   ok   /contact/ 1200: elements past 1200 px: 0
+        baseline hosts /contact/|1200: []
+   ok   /contact/ 375: page ready true, Inter loaded true, title font Inter
+   ok   /contact/ 375: no picture in this hero (class « hero hero--page hero--pattern »)
+   FAIL /contact/ 375: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(61,119,129) = 4.22:1 (46768 pixels; inside the line boxes alone 4.62:1)
+        baseline plain /contact/|375: ["0","77","375","383.9"]
+   ok   /contact/ 375: elements past 375 px: 0
+        baseline hosts /contact/|375: []
+   ok   /contact/ 320: page ready true, Inter loaded true, title font Inter
+   ok   /contact/ 320: no picture in this hero (class « hero hero--page hero--pattern »)
+   ok   /contact/ 320: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(60,113,127) = 4.51:1 (47435 pixels; inside the line boxes alone 4.51:1)
+        baseline plain /contact/|320: ["0","77","320","415.2"]
+   ok   /contact/ 320: elements past 320 px: 0
+        baseline hosts /contact/|320: []
+   ok   /mentions-legales/ 1200: page ready true, Inter loaded true, title font Inter
+   ok   /mentions-legales/ 1200: no picture in this hero (class « hero hero--page »)
+   ok   /mentions-legales/ 1200: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(28,65,98) = 8.31:1 (13386 pixels; inside the line boxes alone 8.31:1)
+        baseline plain /mentions-legales/|1200: ["0","77","1185","284.6"]
+   ok   /mentions-legales/ 1200: elements past 1200 px: 0
+        baseline hosts /mentions-legales/|1200: []
+   ok   /mentions-legales/ 375: page ready true, Inter loaded true, title font Inter
+   ok   /mentions-legales/ 375: no picture in this hero (class « hero hero--page »)
+   FAIL /mentions-legales/ 375: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(62,117,129) = 4.30:1 (16995 pixels; inside the line boxes alone 4.30:1)
+        baseline plain /mentions-legales/|375: ["0","77","375","252.3"]
+   ok   /mentions-legales/ 375: elements past 375 px: 0
+        baseline hosts /mentions-legales/|375: []
+   ok   /mentions-legales/ 320: page ready true, Inter loaded true, title font Inter
+   ok   /mentions-legales/ 320: no picture in this hero (class « hero hero--page »)
+   FAIL /mentions-legales/ 320: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(61,116,128) = 4.36:1 (22962 pixels; inside the line boxes alone 6.56:1)
+        baseline plain /mentions-legales/|320: ["0","77","320","283.6"]
+   ok   /mentions-legales/ 320: elements past 320 px: 0
+        baseline hosts /mentions-legales/|320: []
+   ok   /politique-confidentialite/ 1200: page ready true, Inter loaded true, title font Inter
+   ok   /politique-confidentialite/ 1200: no picture in this hero (class « hero hero--page »)
+   ok   /politique-confidentialite/ 1200: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(30,76,102) = 7.30:1 (57104 pixels; inside the line boxes alone 7.48:1)
+        baseline plain /politique-confidentialite/|1200: ["0","77","1185","408.6"]
+   ok   /politique-confidentialite/ 1200: elements past 1200 px: 0
+        baseline hosts /politique-confidentialite/|1200: []
+   ok   /politique-confidentialite/ 375: page ready true, Inter loaded true, title font Inter
+   ok   /politique-confidentialite/ 375: no picture in this hero (class « hero hero--page »)
+   ok   /politique-confidentialite/ 375: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(33,100,112) = 5.46:1 (53879 pixels; inside the line boxes alone 5.66:1)
+        baseline plain /politique-confidentialite/|375: ["0","77","375","415.2"]
+   ok   /politique-confidentialite/ 375: elements past 375 px: 0
+        baseline hosts /politique-confidentialite/|375: []
+   ok   /politique-confidentialite/ 320: page ready true, Inter loaded true, title font Inter
+   ok   /politique-confidentialite/ 320: no picture in this hero (class « hero hero--page »)
+   ok   /politique-confidentialite/ 320: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(61,112,127) = 4.55:1 (57392 pixels; inside the line boxes alone 4.55:1)
+        baseline plain /politique-confidentialite/|320: ["0","77","320","446.5"]
+   ok   /politique-confidentialite/ 320: elements past 320 px: 0
+        baseline hosts /politique-confidentialite/|320: []
+   ok   /portfolio/ 1200: page ready true, Inter loaded true, title font Inter
+   ok   /portfolio/ 1200: no picture in this hero (class « hero hero--page »)
+   ok   /portfolio/ 1200: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(27,59,95) = 8.90:1 (10327 pixels; inside the line boxes alone 8.90:1)
+        baseline plain /portfolio/|1200: ["0","77","1185","407.4"]
+   ok   /portfolio/ 1200: elements past 1200 px: 0
+        baseline hosts /portfolio/|1200: []
+   ok   /portfolio/ 375: page ready true, Inter loaded true, title font Inter
+   ok   /portfolio/ 375: no picture in this hero (class « hero hero--page »)
+   ok   /portfolio/ 375: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(33,98,111) = 5.60:1 (15930 pixels; inside the line boxes alone 5.95:1)
+        baseline plain /portfolio/|375: ["0","77","375","365.6"]
+   ok   /portfolio/ 375: elements past 375 px: 0
+        baseline hosts /portfolio/|375: []
+   ok   /portfolio/ 320: page ready true, Inter loaded true, title font Inter
+   ok   /portfolio/ 320: no picture in this hero (class « hero hero--page »)
+   ok   /portfolio/ 320: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(53,95,118) = 5.60:1 (12375 pixels; inside the line boxes alone 5.60:1)
+        baseline plain /portfolio/|320: ["0","77","320","403.3"]
+   ok   /portfolio/ 320: elements past 320 px: 0
+        baseline hosts /portfolio/|320: []
+   ok   /publications/ 1200: page ready true, Inter loaded true, title font Inter
+   ok   /publications/ 1200: no picture in this hero (class « hero hero--page »)
+   ok   /publications/ 1200: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(28,68,99) = 8.03:1 (32292 pixels; inside the line boxes alone 8.31:1)
+        baseline plain /publications/|1200: ["0","77","1185","315.9"]
+   ok   /publications/ 1200: elements past 1200 px: 0
+        baseline hosts /publications/|1200: []
+   ok   /publications/ 375: page ready true, Inter loaded true, title font Inter
+   ok   /publications/ 375: no picture in this hero (class « hero hero--page »)
+   FAIL /publications/ 375: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(62,117,129) = 4.30:1 (28122 pixels; inside the line boxes alone 5.88:1)
+        baseline plain /publications/|375: ["0","77","375","283.6"]
+   ok   /publications/ 375: elements past 375 px: 0
+        baseline hosts /publications/|375: []
+   ok   /publications/ 320: page ready true, Inter loaded true, title font Inter
+   ok   /publications/ 320: no picture in this hero (class « hero hero--page »)
+   FAIL /publications/ 320: subtitle rgba(255, 255, 255, 0.86) against the worst pixel of its box rgb(61,115,128) = 4.40:1 (31824 pixels; inside the line boxes alone 5.88:1)
+        baseline plain /publications/|320: ["0","77","320","314.9"]
+   ok   /publications/ 320: elements past 320 px: 0
+        baseline hosts /publications/|320: []
+== scripts disabled, the four photo pages
+   FAIL home 1200 scripts-off: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 1185x520
+        baseline below /|1200|off: {"parts":["header.site-header 77","section#services.section 780.3","section#references.section 242.5","section#experience.section 906.9","se
+   FAIL home 375 scripts-off: no picture in the hero (img.hero__bg), class « hero hero--animated », hero 375x411.7
+        baseline below /|375|off: {"parts":["header.site-header 77","section#services.section 1244","section#references.section 550.2","section#experience.section 1569.2","se
+   FAIL strategie 1200 scripts-off: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 1185x346
+        baseline below /service-strategie-transformation/|1200|off: {"parts":["header.site-header 77","section#besoin.section 793.1","section#experience.section 703.7","section#reflexion.section 1446.5","sect
+   FAIL strategie 375 scripts-off: no picture in the hero (img.hero__bg), class « hero hero--offer hero--strategie », hero 375x327.8
+        baseline below /service-strategie-transformation/|375|off: {"parts":["header.site-header 77","section#besoin.section 1303.3","section#experience.section 1144.6","section#reflexion.section 803","secti
+   FAIL ia 1200 scripts-off: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 1185x284.6
+        baseline below /service-ia-business/|1200|off: {"parts":["header.site-header 77","section#besoin.section 966","section#experience.section 595","section#reflexion.section 606.9","section.s
+   FAIL ia 375 scripts-off: no picture in the hero (img.hero__bg), class « hero hero--offer hero--ia », hero 375x252.3
+        baseline below /service-ia-business/|375|off: {"parts":["header.site-header 77","section#besoin.section 1809","section#experience.section 784.2","section#reflexion.section 671.2","sectio
+   FAIL venture 1200 scripts-off: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 1185x284.6
+        baseline below /service-venture-building/|1200|off: {"parts":["header.site-header 77","section#kodak.section 573.2","section#david-goliath.section 309.7","section#experience.section 443.5","se
+   FAIL venture 375 scripts-off: no picture in the hero (img.hero__bg), class « hero hero--offer hero--venture », hero 375x283.6
+        baseline below /service-venture-building/|375|off: {"parts":["header.site-header 77","section#kodak.section 851.8","section#david-goliath.section 284.6","section#experience.section 695.7","se
+baseline.json written: 18 plain hero boxes, 16 « below the hero » lists, 46 host lists
+RENDER http://127.0.0.1:4174: failing checks 69

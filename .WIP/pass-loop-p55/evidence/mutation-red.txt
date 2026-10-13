@@ -1,0 +1,86 @@
+p55 mutation run: a scratch copy of the working tree (session scratchpad, served on 127.0.0.1:4174) with TWO deliberate defects:
+  1. the two .hero--cover::after rules (the scrim) removed from assets/css/style.css;
+  2. the Venture Building hero picture address changed to a file that does not exist.
+Command: P48_BASE=http://127.0.0.1:4174 P55_NO_LOG=1 node .WIP/pass-loop-p55/evidence/render.mjs -> exit 1. Every FAIL line:
+RENDER p55 on http://127.0.0.1:4174
+   FAIL home 1920: title rgb(255, 255, 255) against the worst pixel of its box rgb(155,158,140) = 2.74:1 (124041 pixels; inside the line boxes alone 2.74:1)
+   FAIL home 1920: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(155,158,140) = 1.90:1 (45672 pixels; inside the line boxes alone 1.90:1)
+   FAIL home 1920: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(169,173,159) = 2.29:1 (29754 pixels; inside the line boxes alone 2.29:1)
+   FAIL home 1920 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(155,158,140) = 2.74:1 (124041 pixels; inside the line boxes alone 2.74:1)
+   FAIL home 1920 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(155,158,140) = 1.90:1 (45672 pixels; inside the line boxes alone 1.90:1)
+   FAIL home 1920 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(169,173,159) = 2.29:1 (29754 pixels; inside the line boxes alone 2.29:1)
+   FAIL home 1200: title rgb(255, 255, 255) against the worst pixel of its box rgb(161,113,73) = 4.22:1 (72630 pixels; inside the line boxes alone 4.22:1)
+   FAIL home 1200: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(161,113,73) = 2.92:1 (31032 pixels; inside the line boxes alone 2.92:1)
+   FAIL home 1200: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(173,172,150) = 2.30:1 (29754 pixels; inside the line boxes alone 4.88:1)
+   FAIL home 1200 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(161,113,73) = 4.22:1 (72630 pixels; inside the line boxes alone 4.22:1)
+   FAIL home 1200 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(161,113,73) = 2.92:1 (31032 pixels; inside the line boxes alone 2.92:1)
+   FAIL home 1200 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(173,172,150) = 2.30:1 (29754 pixels; inside the line boxes alone 4.88:1)
+   FAIL home 961: title rgb(255, 255, 255) against the worst pixel of its box rgb(157,130,91) = 3.63:1 (47410 pixels; inside the line boxes alone 3.63:1)
+   FAIL home 961: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(157,130,91) = 2.52:1 (20414 pixels; inside the line boxes alone 2.52:1)
+   FAIL home 961: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(163,167,156) = 2.45:1 (23706 pixels; inside the line boxes alone 2.85:1)
+   FAIL home 961 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(157,130,91) = 3.63:1 (47410 pixels; inside the line boxes alone 3.63:1)
+   FAIL home 961 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(157,130,91) = 2.52:1 (20414 pixels; inside the line boxes alone 2.52:1)
+   FAIL home 961 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(163,167,156) = 2.45:1 (23706 pixels; inside the line boxes alone 2.85:1)
+   FAIL home 861: title rgb(255, 255, 255) against the worst pixel of its box rgb(167,109,70) = 4.27:1 (37926 pixels; inside the line boxes alone 4.27:1)
+   FAIL home 861: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(167,109,70) = 2.96:1 (16172 pixels; inside the line boxes alone 2.96:1)
+   FAIL home 861: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(123,132,131) = 3.84:1 (18684 pixels; inside the line boxes alone 4.47:1)
+   FAIL home 861 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(167,109,70) = 4.27:1 (37926 pixels; inside the line boxes alone 4.27:1)
+   FAIL home 861 reduced-motion: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(167,109,70) = 2.96:1 (16172 pixels; inside the line boxes alone 2.96:1)
+   FAIL home 861 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(123,132,131) = 3.84:1 (18684 pixels; inside the line boxes alone 4.47:1)
+   FAIL home 860: title rgb(255, 255, 255) against the worst pixel of its box rgb(129,134,133) = 3.70:1 (37926 pixels; inside the line boxes alone 5.17:1)
+   FAIL home 860 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(129,134,133) = 3.70:1 (37926 pixels; inside the line boxes alone 5.17:1)
+   FAIL home 375: title rgb(255, 255, 255) against the worst pixel of its box rgb(126,140,152) = 3.45:1 (33604 pixels; inside the line boxes alone 3.45:1)
+   FAIL home 375 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(126,140,152) = 3.45:1 (33604 pixels; inside the line boxes alone 3.45:1)
+   FAIL home 320: title rgb(255, 255, 255) against the worst pixel of its box rgb(128,140,152) = 3.43:1 (33604 pixels; inside the line boxes alone 3.43:1)
+   FAIL home 320 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(128,140,152) = 3.43:1 (33604 pixels; inside the line boxes alone 3.43:1)
+   FAIL strategie 1920: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(136,128,122) = 3.88:1 (10718 pixels; inside the line boxes alone 3.88:1)
+   FAIL strategie 1920 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(136,128,122) = 3.88:1 (10718 pixels; inside the line boxes alone 3.88:1)
+   FAIL strategie 961: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(122,140,153) = 3.48:1 (21978 pixels; inside the line boxes alone 3.48:1)
+   FAIL strategie 961 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(122,140,153) = 3.48:1 (21978 pixels; inside the line boxes alone 3.48:1)
+   FAIL strategie 861: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(156,162,154) = 2.61:1 (20900 pixels; inside the line boxes alone 2.61:1)
+   FAIL strategie 861 reduced-motion: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(156,162,154) = 2.61:1 (20900 pixels; inside the line boxes alone 2.61:1)
+   FAIL strategie 860: title rgb(255, 255, 255) against the worst pixel of its box rgb(126,136,150) = 3.59:1 (43043 pixels; inside the line boxes alone 3.59:1)
+   FAIL strategie 860 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(126,136,150) = 3.59:1 (43043 pixels; inside the line boxes alone 3.59:1)
+   FAIL strategie 375: title rgb(255, 255, 255) against the worst pixel of its box rgb(126,136,145) = 3.61:1 (26680 pixels; inside the line boxes alone 3.61:1)
+   FAIL strategie 375 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(126,136,145) = 3.61:1 (26680 pixels; inside the line boxes alone 3.61:1)
+   FAIL strategie 320: title rgb(255, 255, 255) against the worst pixel of its box rgb(126,136,145) = 3.61:1 (26680 pixels; inside the line boxes alone 3.61:1)
+   FAIL strategie 320 reduced-motion: title rgb(255, 255, 255) against the worst pixel of its box rgb(126,136,145) = 3.61:1 (26680 pixels; inside the line boxes alone 3.61:1)
+   FAIL venture 1920: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 1920: picture on screen: 0.3 % of the right quarter of the hero far from navy, 8 colours
+   FAIL venture 1920 reduced-motion: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 1920 reduced-motion: picture on screen: 0.3 % of the right quarter of the hero far from navy, 8 colours
+   FAIL venture 1200: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 1200: picture on screen: 0.4 % of the right quarter of the hero far from navy, 7 colours
+   FAIL venture 1200 reduced-motion: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 1200 reduced-motion: picture on screen: 0.4 % of the right quarter of the hero far from navy, 7 colours
+   FAIL venture 961: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 961: picture on screen: 0.5 % of the right quarter of the hero far from navy, 7 colours
+   FAIL venture 961 reduced-motion: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 961 reduced-motion: picture on screen: 0.5 % of the right quarter of the hero far from navy, 7 colours
+   FAIL venture 861: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 861: picture on screen: 0.5 % of the right quarter of the hero far from navy, 7 colours
+   FAIL venture 861 reduced-motion: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 861 reduced-motion: picture on screen: 0.5 % of the right quarter of the hero far from navy, 7 colours
+   FAIL venture 860: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 860: picture on screen: 1.4 % of the top 110 px of the block far from navy, 86 colours
+   FAIL venture 860 reduced-motion: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 860 reduced-motion: picture on screen: 1.4 % of the top 110 px of the block far from navy, 86 colours
+   FAIL venture 375: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 375: picture on screen: 2 % of the top 110 px of the block far from navy, 83 colours
+   FAIL venture 375 reduced-motion: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 375 reduced-motion: picture on screen: 2 % of the top 110 px of the block far from navy, 83 colours
+   FAIL venture 320: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 320: picture on screen: 2.2 % of the top 110 px of the block far from navy, 84 colours
+   FAIL venture 320 reduced-motion: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 320 reduced-motion: picture on screen: 2.2 % of the top 110 px of the block far from navy, 84 colours
+   FAIL home 1200 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(161,113,73) = 4.22:1 (72630 pixels; inside the line boxes alone 4.22:1)
+   FAIL home 1200 scripts-off: accent word rgb(159, 227, 224) against the worst pixel of its box rgb(161,113,73) = 2.92:1 (31032 pixels; inside the line boxes alone 2.92:1)
+   FAIL home 1200 scripts-off: subtitle rgb(255, 255, 255) against the worst pixel of its box rgb(173,172,150) = 2.30:1 (29754 pixels; inside the line boxes alone 4.88:1)
+   FAIL home 375 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(126,140,152) = 3.45:1 (33604 pixels; inside the line boxes alone 3.45:1)
+   FAIL strategie 375 scripts-off: title rgb(255, 255, 255) against the worst pixel of its box rgb(126,136,145) = 3.61:1 (26680 pixels; inside the line boxes alone 3.61:1)
+   FAIL venture 1200 scripts-off: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 1200 scripts-off: picture on screen: 0.4 % of the right quarter of the hero far from navy, 7 colours
+   FAIL venture 375 scripts-off: picture /assets/img/hero-absent.jpg complete, natural 0x0, alt «  », width/height 1024x1536, loading null, first child of the hero true
+   FAIL venture 375 scripts-off: picture on screen: 2 % of the top 110 px of the block far from navy, 83 colours
+RENDER http://127.0.0.1:4174: failing checks 79
+exit 1
