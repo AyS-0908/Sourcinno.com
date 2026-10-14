@@ -17,7 +17,8 @@
  *   --seo      meta Open Graph, longueurs de title/description, sitemap complet, et chaque
  *              Service JSON-LD : url vers une page locale existante, name dans son <title> ou <h1>
  *   --all      tous les groupes, plus les tests executes (tools/portfolio.test.mjs,
- *              tools/test-ia-embeds.mjs, tools/blog-sync.test.mjs)
+ *              tools/test-ia-embeds.mjs, tools/blog-sync.test.mjs) et
+ *              `node tools/blog-sync.mjs --check` (liste du blog = fichiers de tools/blog/, hors ligne)
  *
  * Groupes RETIRES avec leur sujet (en Pass 1, sauf mention) :
  *   --copy     le marqueur TODO-PASS-SUIVANT n'existe plus nulle part dans l'arbre ;
@@ -960,6 +961,14 @@ function runTests() {
       const lines = String(e.stderr || "").split("\n").map((l) => l.trim()).filter(Boolean);
       fail(f, "test en echec : " + (timedOut(e) || !lines.length ? runFailure(e) : lines.find((l) => /^\w*Error\b/.test(l)) || lines.at(-1)));
     }
+  }
+  // La liste du blog de publications/index.html = les fichiers de tools/blog/ (le script ne lit rien d autre).
+  const f = "tools/blog-sync.mjs --check";
+  try {
+    note(`${f}: ${runNode([join(ROOT, "tools/blog-sync.mjs"), "--check"]).trim()}`);
+  } catch (e) {
+    const lines = String(e.stderr || "").split("\n").map((l) => l.trim()).filter(Boolean);
+    fail(f, "en echec : " + (timedOut(e) || !lines.length ? runFailure(e) : lines.join(" | ")));
   }
 }
 
