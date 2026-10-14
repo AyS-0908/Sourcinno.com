@@ -1,0 +1,16 @@
+== 1920 px (layout width 1905): mock block 1112x626, tabs mode 1, active tabs 1, tabs 68.7x46 147.7x46 147.7x46 136.7x46 121.7x46 on 1 line(s), panel 638.4x364, reserve 364px
+                                     port block 1112x626, tabs mode 1, active tabs 1, tabs 68.7x46 147.7x46 147.7x46 136.7x46 121.7x46 on 1 line(s), panel 638.4x365, reserve 365px
+   246 elements and pseudo-elements compared (449 properties each), identical 245, different label at the same position 0
+   DIFF min-block-size: 1 place(s) — div.hl__detail: mock « 364px » port « 365px »
+   boxes (width x height) that differ: 2 — div.experience-panel.hl.hl--tabs.is-hover mock 638.4x426 port 638.4x427 | div.hl__detail mock 638.4x364 port 638.4x365
+== 1200 px (layout width 1185): mock block 1112x626, tabs mode 1, active tabs 1, tabs 68.7x46 147.7x46 147.7x46 136.7x46 121.7x46 on 1 line(s), panel 638.4x364, reserve 364px
+                                     port block 1112x626, tabs mode 1, active tabs 1, tabs 68.7x46 147.7x46 147.7x46 136.7x46 121.7x46 on 1 line(s), panel 638.4x365, reserve 365px
+   246 elements and pseudo-elements compared (449 properties each), identical 245, different label at the same position 0
+   DIFF min-block-size: 1 place(s) — div.hl__detail: mock « 364px » port « 365px »
+   boxes (width x height) that differ: 2 — div.experience-panel.hl.hl--tabs.is-hover mock 638.4x426 port 638.4x427 | div.hl__detail mock 638.4x364 port 638.4x365
+== 961 px (layout width 946): mock block 898x626, tabs mode 1, active tabs 1, tabs 68x46 147x46 147x46 136x46 510x46 on 2 line(s), panel 510x411, reserve 411px
+                                    port block 898x626, tabs mode 1, active tabs 1, tabs 68x46 147x46 147x46 136x46 510x46 on 2 line(s), panel 510x411, reserve 411px
+   246 elements and pseudo-elements compared (449 properties each), identical 246, different label at the same position 0
+   no computed-style difference
+   boxes (width x height) that differ: 0
+MOCK-COMPARE: 2 computed-style difference(s) in all

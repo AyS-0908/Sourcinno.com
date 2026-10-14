@@ -1,0 +1,91 @@
+=== FULL AUDIT BRIEF - pass p61 - review contact 1 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): claude-opus-5-5 @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are a FRESH auditor with zero memory of this work. You GRADE it. You do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p61\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: everything this Pass changed: FULL SLICE of Pass 61 (home page: the five « +25 ans d'expérience » cards become tabs for a visitor with a mouse from 961 px; everyone else keeps today's cards). Pass base = product commit 6311e63; the change is uncommitted in the working tree of the product repository `C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code` (branch rebuild; quote the path). LOCAL ONLY.
+FILES TO JUDGE (product): `assets/js/site.js` (`initHoverList()`: +16 -6), `assets/css/style.css` (block « P61 », 16 rules, right after block « P56 »), `index.html` (`#experience` only: classes `hl hl--tabs`, `data-hoverlist="tabs"`, one wrapper `div.hl__items`, five `span.hl__lead`, one empty `div.hl__detail aria-live="polite"`; no word changed), and the `?v=` lines `tools/version.mjs` rewrote on the 15 other pages. Nothing else may differ: `git diff --stat 6311e63 -- . ':(exclude).WIP'` must hold these 18 files only.
+CONTRACT (read-only, in the ROOT repository `C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW`, a second repository this seal does not cover): `PLAN.md` § 61 in full (Goal, Planner decisions 1-4, Done When 1-7; § 62 Démarche is NOT this Pass); `ARCHITECTURE.md` Layering rule 5 and the `site.js` clause (both edited by this Pass: judge that they say what the code does); root `AGENTS.md` Gotchas; the approved mockup `previews/v12/` (`README.md`, `index.html` :38-51, :85-132 and :260-293, `mock.js`, `captures/accueil-t-1200.png`, `accueil-t-375.png`). Root `README.md`, `PRD.md`, `outputs/`: do not read `outputs/`, edit nothing.
+RULES FOR YOU: write every scratch file under your OWN subfolder of the session scratchpad, `C:\Users\aymar\AppData\Local\Temp\claude\C--Users-aymar-AYS-CODING-code-SOURCINNO-WWW\54dd53a2-e0ac-4776-ab9f-57f31e232990\scratchpad\p61-reviewer\` (Chrome profiles included); never `/tmp`, never root `outputs/`, never the product `.WIP` (the only file you write there is your verdict appended to `pass-work.md`, plus one fix section on FIX). Network: 127.0.0.1 and Google Fonts only; no git fetch, push or commit; never stop a server; change no product file. `.WIP/mockup-v12/` and earlier `.WIP/pass-loop-p*/` are read-only.
+SERVERS, all on 127.0.0.1, already running: 4173 = the working tree (this Pass); 4174 = scratch copy of 6311e63 (before); 4175 = scratch copy of cb0bfbf with the approved mockup at `/.WIP/mockup-v12/` (it runs on the stylesheet it was approved on); 4176 = the tree with the height reserve removed (the `root.style.setProperty("--hl-min", ...)` line of `site.js` deleted): a red control, a correct « nothing moves » probe must fail there.
+WHAT TO RUN: (a) Done When 1 from the product folder: `node tools/check.mjs --all`, `node tools/version.mjs --check`, `node tools/shell.mjs --check`, exit 0 each, and the diff stat above. (b) YOUR OWN render, written by you (you may import `.WIP/pass-loop-p61/evidence/cdp.mjs` as Chrome launcher only, with `P48_PROFILES` set to your scratch folder; do not rely on the Coder's `render.mjs` or its tables): the home page at 1920, 1200, 961, 960 and 375 px, plus 1200 px as a touch screen and with scripts off, and one service page (Stratégie or Entreprise IA) at 1200 px. Headless Chrome traps measured in this project (AGENTS Gotchas): it reports `prefers-reduced-motion: reduce` by default (set it explicitly); with scripts disabled page timers stop (evaluate synchronously, wait from Node); a `captureBeyondViewport` capture resizes the window and fires the script's listeners; a capture clip is in DOCUMENT coordinates; a capture over about 3000 px high may never answer; closed `details` have non-zero boxes; `:focus-visible` needs a real Tab key (`Input.dispatchKeyEvent`), not `el.focus()`; after a keyboard focus move the pointer away; never start two Chrome in the same millisecond with that launcher; `#experience` sits about 1640 px down the page: scroll it into view before a mouse move and prove « visible » by a box inside the viewport, never by a computed style; `body` clips horizontal overflow (compare right edges to `clientWidth`).
+STAKES, IN THIS ORDER: 1. No text reachable by the mouse only: keyboard (real Tab reaches each tab and shows its whole title, subtitle and list; Enter keeps it), touch screen and scripts off (every card shows its whole title and opens and closes natively). 2. Nothing moves when the tab changes (every block of the page keeps position and size; prove your probe red on 4176). 3. Outside hover mode (960 px fine pointer, 1200 px touch, 375 px, scripts off at 1200 and 375) the home page is 6311e63 box for box, cards closed and first card open (compare 4173 with 4174). 4. The two service lists behave as at Pass 56 (rows are direct children only: the nested dépliant of Entreprise IA phase 2 never becomes a row; a bare `data-hoverlist` never takes the tabs branch; their section is still shown on load in hover mode). 5. The nine other shell pages untouched (section heights against 4174) and no script error on any of the ten. 6. The active tab and the panel read on screen: rendered colours, 4.5:1 or more for every text, measured from pixels or from the rendered background, not from declared colours (`check.mjs --a11y` cannot see a cascade conflict); visible focus ring. 7. Reduced motion: no animation or transition over 50 ms in `#experience`. 8. No CSS rule ported without a user, no class without a rule (census both ways), colours as `:root` tokens. Also Planner decision 2: with a mouse at 1200 px, motion allowed, loaded WITHOUT scrolling, `#experience` is not marked `is-visible`; it is after scrolling to it.
+DECLARED BY THE CODER (judge each: accept, or FIX): (1) Port against mockup, computed styles of the section's two-column grid, 246 elements and pseudo-elements at 1920, 1200, 961 px: one difference, the panel's reserve is 365 px where the mockup page has 364 (rounded up since Pass 56; panel 638.4x365 against 638.4x364); nothing differs at 961. (2) From 961 to 1199 px the tabs take two lines; at 961 the fifth tab is alone on the second line and stretches to the full width (same on the mockup; left to the owner's overall review, PLAN § V1.2 MANUAL-V12). (3) Mockup rules not ported as written: `.hl__items { display: grid; gap }` unconditional (replaced by `.hl--tabs > .hl__items`, Planner decision 1); `.hl.is-hover .disclosure--card summary { min-height: 0; padding }` (both declarations overridden by the tabs rule on its only user); `.hl.is-hover .is-active h3` and `.hl.is-hover > .hl__detail .bullets` ported scoped to `.hl--tabs` so the service lists keep their Pass 56 rules. (4) Two tabs rules carry `#experience` in front to outrank the section's id rules (`gap` on the panel, `min-height` on the summary). (5) Never proven, nothing built: a screen reader (native `details`, no tab role; in hover mode the title is in the tab and again in the `aria-live="polite"` panel, rewritten on every tab change, once fonts are loaded and on every resize), a device with both touch and mouse, any browser but Chrome. (6) The Pass 56 `first-screen` probe was not repeated: `#experience` starts about 1640 px down and is not taller in tabs mode (906.9 px at 1200 in both modes).
+NO MANUAL ITEM in this Pass: owner decision 2026-10-13 (PLAN § V1.2 MANUAL-V12), he approved these tabs on the mockup and reviews everything once after Passes 61, 62, 59 and 60. No live system: no LIVE-SAFE clause applies. Out of scope even if seen: Démarche, the service pages' markup, Portfolio, the blog list, wording, heroes, the PLAN § Code backlog items. Non-blocking observations go in your prose as Tier 3, not as fixes.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 6311e636a986624c3e697fc3e3833a1f1c42fb09
+  404.html                                          |  4 ++--
+   ai-business.html                                  |  2 +-
+   assets/css/style.css                              | 21 +++++++++++++++++++++
+   assets/js/site.js                                 | 22 ++++++++++++++++------
+   contact/index.html                                |  4 ++--
+   index.html                                        | 19 +++++++++++--------
+   mentions-legales/index.html                       |  4 ++--
+   offre-ia-business/index.html                      |  2 +-
+   offre-strategie-organisation-processus/index.html |  2 +-
+   offre-venture-building/index.html                 |  2 +-
+   politique-confidentialite/index.html              |  4 ++--
+   portfolio/index.html                              |  4 ++--
+   prototypes/index.html                             |  2 +-
+   publications/index.html                           |  4 ++--
+   service-ia-business/index.html                    |  4 ++--
+   service-strategie-transformation/index.html       |  4 ++--
+   service-venture-building/index.html               |  4 ++--
+   venture-building.html                             |  2 +-
+   18 files cha
+  [diff display truncated; inspect the complete diff against the named Pass base]
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Use the `code-audit` skill in phase-gate mode. Do not invent or modify audit logic.
+2. Re-run the cheapest decisive check for every claim you rely on.
+3. GREEN only if there is no Tier 1 or Tier 2 finding and every check passes.
+4. Need testing -> MORE_TESTS; append `## TEST-REQUESTS` with every AUTO/MANUAL request.
+5. Findings -> append ONE `## Audit fixes to implement` section to .WIP\pass-loop-p61\pass-work.md.
+
+PRIOR FINDINGS
+  none recorded before this contact.
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p61\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "fbc18e2b",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.
