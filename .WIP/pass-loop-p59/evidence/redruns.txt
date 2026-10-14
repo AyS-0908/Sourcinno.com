@@ -1,0 +1,33 @@
+== red runs of the real tool (eleven real files, one change each)
+ok   no line 1: exit 1, page unchanged true; stderr « ECHEC blog-sync : tools/blog/gpts-attention-1.html : ligne 1 sans en-tete <!-- blog: titre="…" date="AAAA-MM-JJ" etiquette="…" --> — rien n est ecrit »
+ok   no line 1 (--check): exit 1, page unchanged true; stderr « ECHEC blog-sync : tools/blog/gpts-attention-1.html : ligne 1 sans en-tete <!-- blog: titre="…" date="AAAA-MM-JJ" etiquette="…" --> — rien n est ecrit »
+ok   wrong date 2024-02-30: exit 1, page unchanged true; stderr « ECHEC blog-sync : tools/blog/gpts-attention-1.html : date « 2024-02-30 » impossible (AAAA-MM-JJ, un jour du calendrier) — rien n est ecrit »
+ok   wrong date 2024-02-30 (--check): exit 1, page unchanged true; stderr « ECHEC blog-sync : tools/blog/gpts-attention-1.html : date « 2024-02-30 » impossible (AAAA-MM-JJ, un jour du calendrier) — rien n est ecrit »
+ok   unknown tag ⚡IA: exit 1, page unchanged true; stderr « ECHEC blog-sync : tools/blog/gpts-attention-1.html : etiquette « ⚡IA » inconnue (connues : IA, Venture Building, Startup) — rien n est ecrit »
+ok   unknown tag ⚡IA (--check): exit 1, page unchanged true; stderr « ECHEC blog-sync : tools/blog/gpts-attention-1.html : etiquette « ⚡IA » inconnue (connues : IA, Venture Building, Startup) — rien n est ecrit »
+ok   a tfoot in the table: exit 1, page unchanged true; stderr « ECHEC blog-sync : tools/blog/sourcinno-startupstudiotypes.html : balise ou attribut hors format « <tfoot> » — rien n est ecrit »
+ok   a tfoot in the table (--check): exit 1, page unchanged true; stderr « ECHEC blog-sync : tools/blog/sourcinno-startupstudiotypes.html : balise ou attribut hors format « <tfoot> » — rien n est ecrit »
+ok   data-label not its column title: exit 1, page unchanged true; stderr « ECHEC blog-sync : tools/blog/sourcinno-startupstudiotypes.html : data-label « Studios PURE » ne reprend pas le titre de sa colonne (« Studios PURE PLAYER ») — rien n est ecrit »
+ok   data-label not its column title (--check): exit 1, page unchanged true; stderr « ECHEC blog-sync : tools/blog/sourcinno-startupstudiotypes.html : data-label « Studios PURE » ne reprend pas le titre de sa colonne (« Studios PURE PLAYER ») — rien n est ecrit »
+ok   twelfth file, newest date: exit 0 « BLOG: 12 article(s) (IA 6, Venture Building 4, Startup 2) lus dans tools/blog/ ; page reecrite »; 12 posts, first « Douzième article &amp; essai », then « GPTs : attention ! »; header off the page true; 13 h3 in the page
+ok   twelfth file, then --check: exit 0 « BLOG: liste conforme aux fichiers ; 12 article(s) (IA 6, Venture Building 4, Startup 2) lus dans tools/blog/ »
+== check.mjs --all on a product copy whose list differs from the files
+ok   copy as is: check --all exit 0
+ok   title changed in a file, page not re-run: check --all exit 1; « - tools/blog-sync.mjs --check: en echec : Blog perime — lancer: node tools/blog-sync.mjs (11 article(s) (IA 6, Venture Building 4, Startup 1) lus dans tools/blog/) | premiere difference, ligne 5 de la liste : | - page : <h3>GPTs : attention !</h3> | + fichiers : <h3>GPTs : attention !!</h3> »
+ok   same copy, plain run (no --all): exit 0 — the offline --check stays under --all only
+== mutations of the tool: the test must fail on each
+ok   any date accepted: test exit 1, 13 case(s) failing, first « header refusal — date « 2024-04-31 » — exit 0, expected 1; stderr: (empty) »
+ok   leap years ignored (February 28 days always): test exit 1, 1 case(s) failing, first « order — same date: rang ascending, then the files without rang by name; rang never crosses dates — ECHEC blog-sync : tools/blog/a.html : date « 2024-02-29 » impossible (AAAA-MM-JJ, un jour du cal »
+ok   any tag accepted: test exit 1, 6 case(s) failing, first « header refusal — etiquette « ia » — exit 0, expected 1; stderr: (empty) »
+ok   header optional (a file without line 1 read as body): test exit 1, 3 case(s) failing, first « header refusal — space before the header — exit 0, expected 1; stderr: (empty) »
+ok   any title accepted: test exit 1, 4 case(s) failing, first « header refusal — raw greater-than in the title — exit 0, expected 1; stderr: (empty) »
+ok   rang ignored in the order: test exit 1, 1 case(s) failing, first « order — same date: rang ascending, then the files without rang by name; rang never crosses dates — Expected values to be strictly deep-equal: »
+ok   rang of any form accepted: test exit 1, 6 case(s) failing, first « header refusal — rang « 0 » — exit 0, expected 1; stderr: (empty) »
+ok   file name order reversed for ties: test exit 1, 1 case(s) failing, first « order — same date, no rang: file name ascending — Expected values to be strictly deep-equal: »
+ok   leading ^ dropped from the link rule: test exit 1, 2 case(s) failing, first « format refusal — link: <x<a href="https://example.com/a?b=1&amp;c=2" target="_blank" rel="noopener"> — stderr does not hold « tools/blog/article-un.html : balise ou attribut hors format « <x<a hr »
+ok   a thirteenth FORMAT rule (<div>): test exit 1, 2 case(s) failing, first « format refusal — tags without attribute: <div> — stderr does not hold « tools/blog/article-un.html : balise ou attribut hors format « <div> »: ECHEC blog-sync : tools/blog/article-un.html : <div> »
+ok   tfoot admitted: test exit 1, 1 case(s) failing, first « format refusal — table tags without attribute: <tfoot> — stderr does not hold « tools/blog/article-un.html : balise ou attribut hors format « <tfoot> »: ECHEC blog-sync : tools/blog/article-un.ht »
+ok   data-label not compared with its column title: test exit 1, 4 case(s) failing, first « other refusal — data-label on the row title column — exit 0, expected 1; stderr: (empty) »
+ok   header written on the page: test exit 1, 2 case(s) failing, first « accepted — table document: each file a dépliant written line for line, its header never on the page — Expected values to be strictly equal: »
+ok   1er never written: test exit 1, 4 case(s) failing, first « accepted — table document: each file a dépliant written line for line, its header never on the page — Expected values to be strictly equal: »
+REDRUNS: all as expected

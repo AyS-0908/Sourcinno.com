@@ -1,0 +1,22 @@
+  STRUCTURE: code tiers epingle : assets/js/vendor/typebot-js-0.10.11/web.js (sha256 41adb2855b0e…, LICENSE)
+  VERSIONS: 43 reference(s) CSS/JS a jour sur 16 page(s)
+  SHELL: header, footer et <noscript> conformes a tools/shell/ sur 10 page(s) ; 6 redirection(s) ignoree(s) : ai-business.html, offre-ia-business/index.html, offre-strategie-organisation-processus/index.html, offre-venture-building/index.html, prototypes/index.html, venture-building.html
+  STRUCTURE: recensement 141 classe(s) HTML, 1 feuille(s) assets/css + 10 bloc(s) <style> de page, 169 classe(s) avec regle ; exception(s) sans regle : aucune
+  STRUCTURE: recensement inverse 169 classe(s) de selecteur, 3 partiel(s) tools/shell, 47 script(s) lus, 0 classe(s) sans usage ; exception(s) composee(s) par script : chat-msg--bot (assets/js/_v2/chat.js), chat-msg--me (assets/js/_v2/chat.js)
+  STRUCTURE: coherence des coordonnees (reference tools/shell/footer.html) : email 34 (« aymard.de.scorbiac@sourcinno.com » ×34), telephone 27 (« +33608755877 » ×14, « +33 6 08 75 58 77 » ×11, « +33&nbsp;6&nbsp;08&nbsp;75&nbsp;58&nbsp;77 » ×2), hebergeur 2 dans mentions-legales/index.html seulement (« +37064503378 » ×1, « +370&nbsp;645&nbsp;03378 » ×1), LinkedIn 14 (« linkedin.com/in/aymarddescorbiac » ×14) ; videos 8 lanceur(s) = id de leur legende ; Typebot lien direct ×1, scripts ×1
+  STRUCTURE: 9 script(s) compile(s); 16 page(s) lue(s), dont 10 avec coquille et 6 redirection(s); 346 lien(s) interne(s) resolu(s)
+  --forms: formulaire de contact inspecte sur contact/index.html
+  --legal: 16 page(s) inspectee(s), 0 mention(s) a completer
+  --a11y: le conflit de cascade (une regle plus specifique qui repeint un element) n est PAS couvert ici : il se controle a l ecran.
+  --a11y: 14 couple(s) de couleurs verifie(s) (le plus juste : dates du parcours sur fond gris, 4.77:1); 290 lien(s) et 20 bouton(s) inspecte(s)
+  --a11y: 38 lien(s) target="_blank" sur 10 page(s), chacun lu pour « (nouvel onglet) » en fin de nom accessible
+  --nojs: 10 page(s) verifiee(s); 2 selecteur(s) masquant .reveal recense(s) (.reveal-wait .reveal, .reveal-on .reveal:not(.is-visible)); 1 script(s) .reveal-wait execute(s)
+  --tiers: 4 hote(s) externe(s) charge(s) par les pages et leurs scripts : fonts.googleapis.com, fonts.gstatic.com, typebot.io, www.youtube-nocookie.com
+  --seo: meta et sitemap verifies sur 9 page(s) indexable(s)
+  --seo: JSON-LD : 3 Service(s) verifie(s) (url locale existante, name dans le <title> ou le <h1> de la page cible)
+  tools/portfolio.test.mjs: PASS: public-card search, all five facets/unknowns, AND, empty/literal query, reset, submit guard
+  tools/test-ia-embeds.mjs: PASS: video.js click-only, each launcher embeds its own id (youtube-nocookie, focused), frame title = visible caption without « (nouvel onglet) », else the launcher label; chat click-only loading from the local pinned copy, light published bot, blocked SDK retry, no duplicate conversation, no status line needed.
+  tools/blog-sync.test.mjs: PASS: blog-sync on throw-away trees, 166 cases: 16 accepted (12 FORMAT rules, dépliant written in full, header kept off the page, CRLF text file, stale page), 86 format refusals (tfoot and each rule's leading ^ included, the rule count read from the tool), 43 header refusals (line 1, title escaping, date, tag, rang), 4 order cases (date, rang, file name, French dates), 16 other refusals (nesting, data-label against its column title, missing picture, empty file, not .html, no file, markers), 1 known limit; 159 tool starts
+  tools/blog-sync.mjs --check: BLOG: liste conforme aux fichiers ; 11 article(s) (IA 6, Venture Building 4, Startup 1) lus dans tools/blog/
+
+OK — aucun probleme sur 16 page(s).

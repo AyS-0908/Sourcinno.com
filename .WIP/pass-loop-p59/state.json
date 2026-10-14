@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "p59",
+  "state": "done",
+  "scope": "DELTA after A-001 only: root repository C:\\Users\\aymar\\AYS_CODING\\code-SOURCINNO_WWW, uncommitted: PLAN.md line 90 (end now \node tools/blog-sync.mjs, no --from) and PROGRESS.md Open line 20 (typo/English titles/quotes item now routed to line 1 of the tools/blog/ file, then node tools/blog-sync.mjs). Product tree unchanged since contact 1 (seal 3e4c593b519cfa16). Fix test: grep -n -- '--from\\|saved feed' PLAN.md PROGRESS.md AGENTS.md ARCHITECTURE.md prints only PLAN.md :417 :421 :426 :431.",
+  "audit_launches": 2,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 1,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    },
+    "auditor": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 2,
+  "results_blocks": 2,
+  "pass_base": "8ec414715f5affaed3538b75d9599ab48a26d165",
+  "seal_paths": "",
+  "brief_fingerprint": "3e4c593b519cfa16",
+  "green_fingerprint": "3e4c593b519cfa16",
+  "briefed_at": "2026-10-14T22:42:06",
+  "cap_extensions": [],
+  "state_dir": "C:/Users/aymar/AYS_CODING/code-SOURCINNO_WWW/current sourcinno site- code/.WIP/pass-loop-p59",
+  "updated": "2026-10-14"
+}

@@ -1,0 +1,136 @@
+=== DELTA CONFIRMATION BRIEF - pass p59 - review contact 2 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): claude-opus-5-5 @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are the SAME independent auditor who requested the newest fixes. Confirm only that delta. Do not restart the audit and do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p59\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: ONLY the delta since the last audit: DELTA after A-001 only: root repository C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW, uncommitted: PLAN.md line 90 (end now 
+ode tools/blog-sync.mjs, no --from) and PROGRESS.md Open line 20 (typo/English titles/quotes item now routed to line 1 of the tools/blog/ file, then node tools/blog-sync.mjs). Product tree unchanged since contact 1 (seal 3e4c593b519cfa16). Fix test: grep -n -- '--from\|saved feed' PLAN.md PROGRESS.md AGENTS.md ARCHITECTURE.md prints only PLAN.md :417 :421 :426 :431.. The earlier round already cleared the rest - do not re-audit it and do not re-run its checks.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 8ec414715f5affaed3538b75d9599ab48a26d165
+  tools/blog-sync.mjs                                | 218 ++++++++++-----------
+   tools/blog-sync.test.mjs                           | 178 ++++++++++++-----
+   ...rporate-venture-building-4-engie-x-wefound.html |   1 +
+   .../blog/corporate-venture-building-en-1-mot.html  |   1 +
+   ...ing-longer-to-startup-quicker-to-scaleup-1.html |   1 +
+   .../enjeu-1-de-l-ia-sa-vitesse-d-evolution.html    |   1 +
+   tools/blog/gpts-attention-1.html                   |   1 +
+   tools/blog/ia-cas-d-usage.html                     |   1 +
+   tools/blog/j-ai-essaye-chatgpt-une-fois.html       |   1 +
+   tools/blog/l-ia-fait-le-job-de-700-personnes.html  |   1 +
+   ...a-modifie-t-elle-deja-le-marche-du-travail.html |   1 +
+   tools/blog/sourcinno-startupstudiotypes.html       |   1 +
+   tools/blog/todo-startup-structure-at-minimum.html  |   1 +
+   tools/check.mjs                                    |  11 +-
+   14 files changed, 252 insertions(+), 166 deletions(-)
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Do NOT rerun `code-audit`; its valid earlier verdict already cleared the rest.
+2. Inspect only the newest fix section below and the files named under SCOPE.
+3. Re-run each decisive check named by that fix. GREEN only if the requested fix is complete, every check passes, and the delta introduced no Tier 1 or Tier 2 issue.
+4. If it still needs work, append ONE new `## Audit fixes to implement` section to C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p59\pass-work.md.
+
+PRIOR FINDINGS
+Confirm the requested fixes and their affected behavior:
+## Audit fixes to implement — 2026-10-14 (review contact 1 of 2, fresh auditor)
+BLOCKING_STATUS: NON_BLOCKING
+READINESS: READY_WITH_FIXES
+REASON: tool, test, eleven headers and check.mjs meet Done When 1–3 (re-run by the auditor; Done When 4 not re-run: no served file differs from 8ec4147), but two live root-doc lines still route blog changes through the Wix feed this Pass removed.
+NATIVE CHECKS: `node tools/check.mjs --all` PASS — « OK — aucun probleme sur 16 page(s) », BLOG line printed · `node tools/version.mjs --check` PASS · `node tools/shell.mjs --check` PASS · `node tools/blog-sync.test.mjs` PASS — 166 cases, 159 tool starts · `git grep -n -E "fetch|wixsite|pubDate|--from" -- tools/blog-sync.mjs` PASS — empty, exit 1; imports fs/path/url only · `node tools/blog-sync.mjs` PASS — « page inchangee », status unchanged (14 files) · `git diff --stat 8ec4147 -- publications/index.html` PASS — empty · `git diff --stat 8ec4147 -- . ':(exclude).WIP'` PASS — the 14 files only, each blog file +1 line.
+AUDITOR RUNS (throw-away copy of the working tree under the session scratchpad): 16 red runs of the real tool all exit 1, file named, page md5 unchanged — no line 1, header moved to the end, BOM before header, header repeated on line 2, 2023-02-29, 2100-02-29, 2024-06-31, etiquette « Tech », rang « 0 », rang « 2» with space, raw &, &nbsp;, leading space in titre, <tfoot>, data-label « Studios PURE PLAYERS », data-label of the other column. A twelfth file dated 2026-10-14 is written first (title escaped, no « ‹!-- blog: » on the page), removing it restores the page byte for byte. Stale page: `--check` and `check.mjs --all` exit 1 naming the first difference; plain `node tools/check.mjs` exits 0 and never mentions blog-sync. Mutation of a copy of the tool, test run against it: 25 of 26 mutants killed (leading ^ dropped ×2, tfoot admitted, one FORMAT rule removed, a 13th added, data-label check off / case-insensitive / not entity-decoded, th title tags kept, column counter not reset, leap year every 4th year, bare & and any entity in titre, rang ignored / 0 accepted / unranked first, line-1 check removed, header written into the dépliant, titre not decoded, « 1er » dropped, any etiquette, --check exit 0 on a stale page, date order ascending); survivor: « outermost table instead of nearest » (Tier 3 below). Control run (unmutated) exit 0.
+SCOPE: CLEAN — `rang` is the owner's 2026-10-14 decision; the data-label rule is Done When 3; nothing else unrequested.
+COVERAGE: 14/14 changed product files read + 4/4 changed root docs read (PLAN § 59 and the lines it made stale, AGENTS Commands, ARCHITECTURE :14 :27, PROGRESS) — skipped: none.
+
+### A-001 | Tier 2 | LOW | `PLAN.md:90`, `PROGRESS.md:20` (root repository)
+- issue: two open root-doc items still route blog changes through the removed Wix feed: PLAN Release acceptance (P57 photo) ends with `node tools/blog-sync.mjs --from <saved feed>`, which the tool now refuses (« option inconnue : --from — rien n est ecrit », exit 1, re-run), and PROGRESS Open « fix the Wix blog copy (typo « nutschell », English titles on French posts, straight quotes) » lost its re-sync step in this Pass, so it now reads as if a Wix fix reached the site, while those titles live in line 1 of `tools/blog/*.html` (« nutschell »: `tools/blog/corporate-venture-building-en-1-mot.html:1`) and no Wix change can reach the page any more.
+- fix: PLAN :90 → `node tools/blog-sync.mjs` (no `--from`); PROGRESS Open → the site copy is corrected in line 1 (or body) of the `tools/blog/` file, wording approved by the owner, then `node tools/blog-sync.mjs`; a Wix-side fix is separate and no longer reaches the site.
+- test: `grep -n -- "--from\|saved feed" PLAN.md PROGRESS.md AGENTS.md ARCHITECTURE.md` from the root prints only § 59's own probe/decision/Work/Done When lines (:417, :421, :426, :431); PROGRESS Open names `tools/blog/` for the typo.
+
+Advisory (Tier 3, not blocking, no review needed):
+- T3-1 `tools/blog-sync.test.mjs`: the header comment's « dans le tableau le plus proche » is untested — the mutant `tb = tables[0]` survives (no nested-table case). One case with a table inside a td whose inner data-label matches only the inner column title would hold it.
+- T3-2 `tools/blog-sync.mjs:28-30` (carried from Pass 58): the format text says img « avec alt, width, height, loading » while FORMAT requires `loading="lazy"` in that attribute order and a non-empty alt, and `span aria-hidden="true"` (admitted anywhere) is only implied by « la figure video du site ». « ecrites a l identique » covers it loosely.
+- T3-3 closure bookkeeping: PLAN § 59 « Status Done », its evidence line « receipts PROGRESS Last Verification (Pass 59) » and PROGRESS « closed locally … each with an independent review GREEN » precede the verdict; PROGRESS has no Last Verification (Pass 59) entry yet and CHANGELOG (PLAN § 59 Work 4) is unchanged. Write both at closure, after the confirmation.
+
+```json
+{
+  "token": "67b4c9ff",
+  "verdict": "FIX",
+  "confidence": "high",
+  "evidence": [
+    {"cmd": "node tools/check.mjs --all", "result": "PASS"},
+    {"cmd": "node tools/version.mjs --check", "result": "PASS"},
+    {"cmd": "node tools/shell.mjs --check", "result": "PASS"},
+    {"cmd": "node tools/blog-sync.test.mjs", "result": "PASS"},
+    {"cmd": "git grep -n -E \"fetch|wixsite|pubDate|--from\" -- tools/blog-sync.mjs (empty, exit 1)", "result": "PASS"},
+    {"cmd": "node tools/blog-sync.mjs --check; node tools/blog-sync.mjs (page inchangee, git status unchanged)", "result": "PASS"},
+    {"cmd": "git diff --stat 8ec414715f5affaed3538b75d9599ab48a26d165 -- publications/index.html (empty)", "result": "PASS"},
+    {"cmd": "git diff --stat 8ec414715f5affaed3538b75d9599ab48a26d165 -- . ':(exclude).WIP' (14 files only)", "result": "PASS"},
+    {"cmd": "16 red runs of the real tool on a scratch copy (no line 1, bad dates incl. 2023-02-29 and 2100-02-29, unknown tag, bad rang, title escaping, tfoot, data-label mismatch): exit 1, file named, page md5 unchanged", "result": "PASS"},
+    {"cmd": "twelfth file dated 2026-10-14 on a scratch copy: written first, header absent from page, removal restores page md5", "result": "PASS"},
+    {"cmd": "stale page on a scratch copy: node tools/check.mjs --all exit 1; plain node tools/check.mjs exit 0 without blog-sync", "result": "PASS"},
+    {"cmd": "node mutate.mjs + mutate2.mjs: 26 mutated copies of tools/blog-sync.mjs against the test, 25 killed, survivor tb = tables[0] (nested table, Tier 3)", "result": "PASS"},
+    {"cmd": "node tools/blog-sync.mjs --from saved-feed.xml (the command PLAN.md:90 still documents)", "result": "FAIL"}
+  ],
+  "opened_fix_section": true
+}
+```
+
+AUDIT r1 COST: 198,229 tokens, 12 min 30 s, FIX
+INVOCATION: a4636fcd63fb61bb8
+USAGE BASIS: whole-contact (Agent completion notice: subagent_tokens 198229, duration_ms 750333)
+
+
+## FIX ROUND for A-001 (root repository only; product tree untouched)
+PLAN.md:90 now ends `node tools/blog-sync.mjs` (no `--from`); PROGRESS.md Open: the typo / English titles / quotes item now says a Wix fix no longer reaches the site and names line 1 of the `tools/blog/` file (« nutschell »: `corporate-venture-building-en-1-mot.html` line 1), then `node tools/blog-sync.mjs`. Tier 3 notes T3-1..T3-3: recorded at closure (T3-3 is closure bookkeeping, done after confirmation).
+
+## TEST-RESULTS r2
+TREE: 3e4c593b519cfa16
+CMD: `grep -n -- "--from\|saved feed" PLAN.md PROGRESS.md AGENTS.md ARCHITECTURE.md` (root) -> only PLAN.md:417, :421, :426, :431 (§ 59's own lines); `node tools/check.mjs --all` (product) exit 0
+RESULT: PASS — fix test as the auditor stated it; product seal unchanged (3e4c593b519cfa16 before, 3e4c593b519cfa16 after).
+
+JOURNAL NOTE (Coder): in the auditor's AUDITOR RUNS line above, the comment opener (less-than, exclamation mark, two hyphens) was replaced by ‹!-- (no word changed): status.py reads an unclosed comment opener as hidden text and ignored every later block.
+
+
+YOUR ANSWER - the only thing that is read
+Append to C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p59\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "c485751b",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.
