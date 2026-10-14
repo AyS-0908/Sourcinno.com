@@ -1,0 +1,4 @@
+1920 {"overflowX":"auto","rowRight":1333,"figLeft":1333,"docScrollW":1905,"clientW":1905,"topmostRightOfRow":"DIV.container","insideFig":false}
+1200 {"overflowX":"auto","rowRight":973,"figLeft":973,"docScrollW":1185,"clientW":1185,"topmostRightOfRow":"DIV.container","insideFig":false}
+961 {"overflowX":"auto","rowRight":853,"figLeft":853,"docScrollW":946,"clientW":946,"topmostRightOfRow":"DIV.container","insideFig":false}
+375 {"overflowX":"auto","rowRight":351,"figLeft":351,"docScrollW":375,"clientW":375,"topmostRightOfRow":"DIV.container","insideFig":false}
