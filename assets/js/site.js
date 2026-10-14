@@ -100,22 +100,31 @@
     root.classList.remove("reveal-wait");
   }
 
-  /* --- Liste à aperçu (pages services, « Livrables ») ----------------
+  /* --- Liste à aperçu (pages services « Livrables », accueil « +25 ans d'expérience ») ---
      Ordinateur avec souris, 961 px et plus : survoler une ligne ou l'atteindre
      au clavier affiche son détail à côté de la liste. Écran tactile, fenêtre
      plus étroite ou sans ce fichier : le dépliant natif reste. Le détail est
-     une copie du contenu de la ligne : aucun texte ne dépend du survol. */
+     une copie du contenu de la ligne : aucun texte ne dépend du survol.
+     data-hoverlist="tabs" (accueil) : les titres en ligne, le détail dessous. */
   function initHoverList() {
     const mq = window.matchMedia("(hover: hover) and (pointer: fine) and (min-width: 961px)");
     document.querySelectorAll("[data-hoverlist]").forEach((root) => {
       const panel = root.querySelector(".hl__detail");
-      /* Les lignes de la liste seulement : un dépliant imbriqué n'en devient jamais une. */
-      const items = [...root.querySelectorAll(".hl__items > li > details")];
+      const tabs = root.getAttribute("data-hoverlist") === "tabs";
+      /* Les lignes de la liste seulement, enfants directs : un dépliant imbriqué n'en devient jamais une. */
+      const items = [...root.querySelectorAll(".hl__items > li > details, .hl__items > details")];
       if (!panel || !items.length) return;
       let current = items[0];
 
       const fill = (d) => {
         panel.textContent = "";
+        if (tabs) {
+          /* Onglets : l'onglet ne montre qu'un mot du titre ; le titre entier et le sous-titre sont repris en tête du détail. */
+          const head = document.createElement("div");
+          head.className = "hl__head";
+          [...d.querySelector("summary").children].forEach((c) => head.appendChild(c.cloneNode(true)));
+          panel.appendChild(head);
+        }
         [...d.children].forEach((c) => { if (c.tagName !== "SUMMARY") panel.appendChild(c.cloneNode(true)); });
       };
       /* Le détail reste calé en haut ; la liste réserve la hauteur du plus long
@@ -144,8 +153,9 @@
         if (mq.matches) {
           /* La section est bien plus haute en mode aperçu : l'apparition au défilement
              attendrait 8 % de cette hauteur à l'écran et laisserait le premier écran
-             vide sous le héros. Elle est donc montrée dès que le mode s'active. */
-          const section = root.closest(".reveal");
+             vide sous le héros. Elle est donc montrée dès que le mode s'active.
+             Pas en onglets : la section n'y grandit pas, elle garde son apparition au défilement. */
+          const section = tabs ? null : root.closest(".reveal");
           if (section) section.classList.add("is-visible");
           items.forEach((d) => { d.open = false; });
           show(current);

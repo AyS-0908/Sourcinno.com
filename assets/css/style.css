@@ -1046,6 +1046,27 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .hl.is-hover > .hl__detail.is-swap > * { animation: hl-in .32s var(--ease) both; }
 }
 @keyframes hl-in { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }
+/* ---------- P61 — Accueil « +25 ans d'expérience » : onglets (maquette V1.2, bloc accueil-T) ----------
+   Même mécanisme et même script que la liste à aperçu : seule la disposition change, les titres en ligne, le détail dessous.
+   L'onglet ne montre que le mot en capitales du titre (.hl__lead masqué) ; le titre entier et le sous-titre sont repris en
+   tête du détail (.hl__head, écrit par site.js). Sans .is-hover : les cartes empilées, .hl__items porte leur écart.
+   #experience devant deux règles : elles doivent passer devant les règles #experience de la section. */
+.hl--tabs > .hl__items { display: grid; gap: var(--space-3); }
+#experience .hl--tabs.is-hover { grid-template-columns: minmax(0, 1fr); gap: var(--space-2); }
+.hl--tabs.is-hover > .hl__items { display: flex; flex-wrap: wrap; gap: 4px; min-height: 0; }
+.hl--tabs.is-hover .disclosure--card { flex: 1 1 auto; }
+.hl--tabs.is-hover .disclosure--card, .hl--tabs.is-hover .disclosure--card summary { border-radius: 999px; }
+#experience .hl--tabs.is-hover .disclosure--card summary { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 .7rem; }
+.hl--tabs.is-hover summary::after { display: none; }
+.hl--tabs.is-hover .hl__items h3 { font-size: .8rem; letter-spacing: 0; white-space: nowrap; }
+.hl--tabs.is-hover .is-active h3 { color: var(--white); }
+.hl--tabs.is-hover .hl__items .disclosure__subtitle { display: none; }
+.hl--tabs.is-hover .hl__items .hl__lead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.hl--tabs.is-hover > .hl__detail { min-height: var(--hl-min, 0px); padding: var(--space-4); background: var(--white); box-shadow: var(--shadow-sm); }
+.hl--tabs .hl__head h3 { margin: 0; font-size: 1.3rem; line-height: 1.3; }
+.hl--tabs .hl__head .disclosure__subtitle { display: block; margin-top: var(--space-1); }
+.hl--tabs.is-hover > .hl__detail .bullets { margin: var(--space-2) 0 0; padding-top: var(--space-2); border-top: 1px solid var(--border); }
+.hl--tabs.is-hover > .hl__detail .bullets li { font-size: 1rem; }
 /* P37 : schéma = lien vers l'original (Stratégie) ; bloc pour que l'anneau de focus entoure l'image. */
 .band-figure > a { display: block; border-radius: var(--radius-lg); }
 @media (max-width: 640px) {
