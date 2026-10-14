@@ -1082,6 +1082,20 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .hl--tabs.is-hover > .hl__detail .bullets li { font-size: 1rem; }
 /* P37 : schéma = lien vers l'original (Stratégie) ; bloc pour que l'anneau de focus entoure l'image. */
 .band-figure > a { display: block; border-radius: var(--radius-lg); }
+/* P63 : Stratégie « Réflexion » en visionneuse (site.js, initViewer). Tout passe par .is-on, posée par le script :
+   sans lui, les deux schémas restent l'un sous l'autre. */
+.viewer.is-on { display: flex; gap: 0; max-width: 760px; margin-inline: auto; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; }
+.viewer.is-on::-webkit-scrollbar { display: none; }
+/* La ligne prend la hauteur du plus haut schéma, le plus bas est centré : rien ne bouge sous la visionneuse.
+   Le retrait de 6 px garde l'anneau de focus du lien à l'intérieur de la ligne, qui coupe ce qui dépasse. */
+.viewer.is-on > .band-figure { flex: 0 0 100%; margin: 0; padding: 6px; display: flex; flex-direction: column; justify-content: center; scroll-snap-align: start; scroll-snap-stop: always; }
+/* L'ombre large du schéma serait coupée net par la ligne (un rectangle gris autour) : ombre courte ici. */
+.viewer.is-on img { box-shadow: var(--shadow-sm); }
+.viewer__nav { display: flex; align-items: center; justify-content: center; gap: var(--space-2); margin-top: var(--space-3); }
+.viewer__btn { width: 44px; height: 44px; display: grid; place-items: center; padding: 0; border: 1px solid var(--navy); border-radius: 50%; background: var(--navy); color: var(--white); font: inherit; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+.viewer__btn:hover:not(:disabled) { background: var(--teal-dark); border-color: var(--teal-dark); }
+.viewer__btn:disabled { background: var(--white); border-color: var(--border); color: var(--grey-500); cursor: default; }
+.viewer__pos { min-width: 3.5em; text-align: center; color: var(--text-muted); font-weight: 600; font-variant-numeric: tabular-nums; }
 @media (max-width: 640px) {
   .service-levels { grid-template-columns: 1fr; }
 }

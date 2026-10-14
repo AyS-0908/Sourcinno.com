@@ -180,6 +180,62 @@
     });
   }
 
+  /* --- Visionneuse (Stratégie « Réflexion ») ---------------------------
+     Les images restent dans la page, en ligne, une seule à la fois dans le
+     cadre ; ‹ / › et le doigt font défiler la ligne. Sans ce fichier, aucun
+     bouton et aucune ligne : les images l'une sous l'autre. */
+  function initViewer() {
+    document.querySelectorAll("[data-viewer]").forEach((row) => {
+      const slides = [...row.children].filter((c) => c.tagName === "FIGURE");
+      if (slides.length < 2 || typeof row.scrollTo !== "function") return;
+      const nav = document.createElement("div");
+      nav.className = "viewer__nav";
+      const button = (text, label) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "viewer__btn";
+        b.textContent = text;
+        b.setAttribute("aria-label", label);
+        return b;
+      };
+      const prev = button("‹", "Image précédente");
+      const next = button("›", "Image suivante");
+      const pos = document.createElement("span");
+      pos.className = "viewer__pos";
+      pos.setAttribute("aria-live", "polite");
+      nav.append(prev, pos, next);
+      let index = 0;
+
+      const update = (i) => {
+        index = Math.max(0, Math.min(slides.length - 1, i));
+        pos.textContent = index + 1 + " / " + slides.length;
+        const focused = document.activeElement;
+        prev.disabled = index === 0;
+        next.disabled = index === slides.length - 1;
+        /* Le bouton qui vient de se désactiver avait le focus : il passe à l'autre. */
+        if (focused === prev && prev.disabled) next.focus();
+        if (focused === next && next.disabled) prev.focus();
+      };
+      const go = (i) => {
+        update(i);
+        row.scrollTo({ left: index * row.clientWidth, behavior: reduced ? "auto" : "smooth" });
+      };
+      on(prev, "click", () => go(index - 1));
+      on(next, "click", () => go(index + 1));
+      /* Doigt, pavé tactile ou Tab sur le lien de l'image cachée : la position suit, une fois la ligne arrêtée. */
+      let timer = 0;
+      on(row, "scroll", () => {
+        clearTimeout(timer);
+        timer = setTimeout(() => update(Math.round(row.scrollLeft / row.clientWidth)), 120);
+      }, { passive: true });
+      on(window, "resize", () => row.scrollTo({ left: index * row.clientWidth, behavior: "auto" }));
+
+      row.classList.add("is-on");
+      row.after(nav);
+      update(0);
+    });
+  }
+
   /* --- Année du copyright ------------------------------------------- */
   function initYear() {
     document.querySelectorAll("[data-year]").forEach((el) => {
@@ -195,6 +251,7 @@
     initReveal();
     initHoverList();
     initYear();
+    initViewer();
   }
 
   if (document.readyState === "loading") {
