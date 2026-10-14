@@ -967,16 +967,29 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .blog-body td[data-label]::before { content: attr(data-label); display: block; margin-bottom: var(--space-1); color: var(--teal-dark); font-size: 0.85rem; font-weight: 700; line-height: 1.4; }
 }
 
-/* ---------- Accueil : parcours vertical, ouvertures natives ---------- */
-#demarche .chevrons { position: relative; display: grid; gap: var(--space-2); list-style: none; counter-reset: stage; margin: 0; padding: 0 0 0 4rem; }
-#demarche .chevrons::before { content: ""; position: absolute; left: 1rem; top: 1.5rem; bottom: 1.5rem; width: 2px; background: var(--border); }
-#demarche .chevron { position: relative; min-width: 0; counter-increment: stage; }
-#demarche .chevron::before { content: counter(stage); position: absolute; left: -4rem; top: 1rem; display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--teal-dark); color: var(--white); font-weight: 700; }
-#demarche .chevron__title { margin: 0; font-size: 1.2rem; line-height: 1.3; }
+/* ---------- Accueil : démarche en quatre étapes en ligne, les livrables types dessous ---------- */
+.dm-steps, .dm-deliv__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); list-style: none; margin: 0; padding: 0; }
+.dm-steps { counter-reset: dm; }
+.dm-step { position: relative; padding-top: 3.25rem; counter-increment: dm; }
+.dm-step::before { content: counter(dm); position: absolute; top: 0; left: 0; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--teal-dark); color: var(--white); font-weight: 700; }
+.dm-step:not(:last-child)::after { content: ""; position: absolute; top: calc(1.125rem - 1px); left: 2.75rem; right: calc(.5rem - var(--space-4)); height: 2px; background: var(--grey-300); }
+.dm-step h3 { margin-bottom: var(--space-1); font-size: 1.1rem; line-height: 1.3; }
+.dm-step__how { list-style: none; margin: 0; padding: 0; color: var(--text-muted); font-size: .95rem; line-height: 1.5; }
+.dm-step__how li + li { margin-top: var(--space-1); }
+.dm-step__how strong { color: var(--navy); }
+.dm-deliv { margin: var(--space-5) calc(-1 * var(--space-3)) 0; padding: var(--space-3); border-radius: var(--radius-lg); background: var(--grey-50); }
+.dm-deliv h3 { margin-bottom: var(--space-2); }
+.dm-deliv__stage { margin: 0 0 var(--space-1); color: var(--teal-dark); font-size: .85rem; font-weight: 700; line-height: 1.4; }
+.dm-deliv .ticks { margin: 0; font-size: .95rem; line-height: 1.5; }
+@media (max-width: 960px) {
+  .dm-steps, .dm-deliv__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dm-step:nth-child(2)::after { display: none; }
+}
 @media (max-width: 640px) {
-  #demarche .chevrons { padding-left: 3rem; }
-  #demarche .chevron::before { left: -3rem; }
-  #demarche .chevron__title { font-size: 1.1rem; }
+  .dm-steps, .dm-deliv__grid { grid-template-columns: 1fr; gap: var(--space-3); }
+  .dm-step { padding: 0 0 0 3.25rem; }
+  .dm-step:not(:last-child)::after { display: block; top: 2.5rem; bottom: calc(-1 * var(--space-3)); left: calc(1.125rem - 1px); right: auto; width: 2px; height: auto; }
+  .dm-deliv { margin-inline: 0; }
 }
 
 /* Services : opt-in local, les pages sœurs gardent leur présentation. */
