@@ -1,0 +1,234 @@
+RENDER p60 on http://127.0.0.1:4173
+== Venture Building, scripts on (Done When 3)
+ -- Venture Building 1200 mouse: main sections (no id) > kodak > david-goliath > experience > portfolio > reflexion > (no id)
+   ok   Venture Building 1200 mouse: page ready true, Inter loaded true; section is-visible true, opacity product 1
+   ok   Venture Building 1200 mouse: section #portfolio present
+   ok   Venture Building 1200 mouse: #experience > #portfolio > #reflexion; #portfolio class « section section--alt reveal is-visible », #reflexion class « section reveal » (alt off)
+   ok   Venture Building 1200 mouse: headings: one h1 in the page; in the section h2 « Portfolio », 4 h3 (CRM TENANTS, GO VIRAL, QUICK DIAG, N8N ORCHESTRATOR), 40 h4, other 0
+   ok   Venture Building 1200 mouse: on load cards box/box/no box/no box, button box « Afficher plus (2) », form box, count « 4 projets trouvés », focus body
+   ok   Venture Building 1200 mouse: on load cards 1, 2 and the button on screen: [{"on":true,"why":"img.","w":544,"h":603},{"on":true,"why":"img.","w":544,"h":603},{"on":true,"why":"button.btn","w":173,"h":55}]
+   ok   Venture Building 1200 mouse: click on « Afficher plus »: cards box/box/box/box, button no box « Afficher plus (2) », form box, count « 4 projets trouvés », focus card 3 summary; cards 3, 4 on screen [{"on":true,"why":"img.","w":544,"h":603},{"on":true,"why":"img.","w":544,"h":603}]
+   ok   Venture Building 1200 mouse: four cards shown, elements past the layout width: 0 (0 boxes cut by a clipping ancestor)
+   ok   Venture Building 1200 mouse: script errors 0
+   ok   Venture Building 1200 mouse: keyboard: 20 Tab → « Afficher plus » (:focus-visible true), Enter: cards box/box/box/box, button no box « Afficher plus (2) », form box, count « 4 projets trouvés », focus card 3 summary
+   ok   Venture Building 1200 mouse: keyboard: after Enter the focus is on the first card shown (card 3 summary)
+   ok   Venture Building 1200 mouse keyboard: script errors 0
+   ok   Venture Building 1200 mouse: typed « questionnaires »: cards no box/no box/box/no box, button no box « Afficher plus (2) », form box, count « 1 projet trouvé », focus input#portfolio-query; card 3 on screen {"on":true,"why":"img.","w":544,"h":603}
+   ok   Venture Building 1200 mouse: « Réinitialiser » after the search (declared: four cards, the button does not come back): cards box/box/box/box, button no box « Afficher plus (2) », form box, count « 4 projets trouvés », focus button#portfolio-reset
+   ok   Venture Building 1200 mouse search: script errors 0
+   ok   Venture Building 1200 mouse: boxes of every element of main before #portfolio (document coordinates) = c5db875 (72 entries)
+   ok   Venture Building 1200 mouse: boxes of #reflexion and everything after it in main (from #reflexion's top) = c5db875 (42 entries)
+        backgrounds now: (no id) rgb(18, 37, 63) | kodak rgba(0, 0, 0, 0) | david-goliath rgb(245, 248, 252) | experience rgb(255, 255, 255) | portfolio rgb(245, 248, 252) | reflexion rgba(0, 0, 0, 0) | Contact rgba(0, 0, 0, 0)
+        c5db875:         (no id) rgb(18, 37, 63) | kodak rgba(0, 0, 0, 0) | david-goliath rgb(245, 248, 252) | experience rgb(255, 255, 255) | reflexion rgb(245, 248, 252) | Contact rgba(0, 0, 0, 0)
+   ok   Venture Building 1200 mouse boxes: script errors 0
+ -- Venture Building 375 touch: main sections (no id) > kodak > david-goliath > experience > portfolio > reflexion > (no id)
+   ok   Venture Building 375 touch: page ready true, Inter loaded true; section is-visible true, opacity product 1
+   ok   Venture Building 375 touch: section #portfolio present
+   ok   Venture Building 375 touch: #experience > #portfolio > #reflexion; #portfolio class « section section--alt reveal is-visible », #reflexion class « section reveal » (alt off)
+   ok   Venture Building 375 touch: headings: one h1 in the page; in the section h2 « Portfolio », 4 h3 (CRM TENANTS, GO VIRAL, QUICK DIAG, N8N ORCHESTRATOR), 40 h4, other 0
+   ok   Venture Building 375 touch: on load cards box/box/no box/no box, button box « Afficher plus (2) », form box, count « 4 projets trouvés », focus body
+   ok   Venture Building 375 touch: on load cards 1, 2 and the button on screen: [{"on":true,"why":"div.portfolio-copy","w":327,"h":528},{"on":true,"why":"div.portfolio-copy","w":327,"h":548},{"on":true,"why":"button.btn","w":173,"h":55}]
+   ok   Venture Building 375 touch: tap on « Afficher plus »: cards box/box/box/box, button no box « Afficher plus (2) », form box, count « 4 projets trouvés », focus card 3 summary; cards 3, 4 on screen [{"on":true,"why":"div.portfolio-copy","w":327,"h":548},{"on":true,"why":"img.","w":327,"h":508}]
+   ok   Venture Building 375 touch: four cards shown, elements past the layout width: 0 (0 boxes cut by a clipping ancestor)
+   ok   Venture Building 375 touch: script errors 0
+   ok   Venture Building 375 touch: keyboard: 16 Tab → « Afficher plus » (:focus-visible true), Enter: cards box/box/box/box, button no box « Afficher plus (2) », form box, count « 4 projets trouvés », focus card 3 summary
+   ok   Venture Building 375 touch: keyboard: after Enter the focus is on the first card shown (card 3 summary)
+   ok   Venture Building 375 touch keyboard: script errors 0
+   ok   Venture Building 375 touch: typed « questionnaires »: cards no box/no box/box/no box, button no box « Afficher plus (2) », form box, count « 1 projet trouvé », focus input#portfolio-query; card 3 on screen {"on":true,"why":"div.portfolio-copy","w":327,"h":548}
+   ok   Venture Building 375 touch: « Réinitialiser » after the search (declared: four cards, the button does not come back): cards box/box/box/box, button no box « Afficher plus (2) », form box, count « 4 projets trouvés », focus button#portfolio-reset
+   ok   Venture Building 375 touch search: script errors 0
+   ok   Venture Building 375 touch: boxes of every element of main before #portfolio (document coordinates) = c5db875 (72 entries)
+   ok   Venture Building 375 touch: boxes of #reflexion and everything after it in main (from #reflexion's top) = c5db875 (42 entries)
+        backgrounds now: (no id) rgb(18, 37, 63) | kodak rgba(0, 0, 0, 0) | david-goliath rgb(245, 248, 252) | experience rgb(255, 255, 255) | portfolio rgb(245, 248, 252) | reflexion rgba(0, 0, 0, 0) | Contact rgba(0, 0, 0, 0)
+        c5db875:         (no id) rgb(18, 37, 63) | kodak rgba(0, 0, 0, 0) | david-goliath rgb(245, 248, 252) | experience rgb(255, 255, 255) | reflexion rgb(245, 248, 252) | Contact rgba(0, 0, 0, 0)
+   ok   Venture Building 375 touch boxes: script errors 0
+== Venture Building, scripts disabled (Done When 3)
+   ok   Venture Building 1200 scripts disabled: page ready true, section #portfolio present true
+   ok   Venture Building 1200 scripts disabled: the four cards (box size, computed style of title, back label, front label, text, tag; grid width) against /portfolio/ = c5db875 (4 entries)
+   ok   Venture Building 1200 scripts disabled: cards box/box/box/box, button no box « Afficher plus (2) », form no box, count «  », focus body; each card on screen [true,true,true,true]
+   ok   Venture Building 1200 scripts disabled: card 1: a click on its « i » opens the back (open true, back box true, front box false, back on screen true)
+   ok   Venture Building 1200 scripts disabled: card 2: a click on its « i » opens the back (open true, back box true, front box false, back on screen true)
+   ok   Venture Building 1200 scripts disabled: card 3: a click on its « i » opens the back (open true, back box true, front box false, back on screen true)
+   ok   Venture Building 1200 scripts disabled: card 4: a click on its « i » opens the back (open true, back box true, front box false, back on screen true)
+   ok   Venture Building 375 scripts disabled: page ready true, section #portfolio present true
+   ok   Venture Building 375 scripts disabled: the four cards (box size, computed style of title, back label, front label, text, tag; grid width) against /portfolio/ = c5db875 (4 entries)
+   ok   Venture Building 375 scripts disabled: cards box/box/box/box, button no box « Afficher plus (2) », form no box, count «  », focus body; each card on screen [true,true,true,true]
+   ok   Venture Building 375 scripts disabled: card 1: a click on its « i » opens the back (open true, back box true, front box false, back on screen true)
+   ok   Venture Building 375 scripts disabled: card 2: a click on its « i » opens the back (open true, back box true, front box false, back on screen true)
+   ok   Venture Building 375 scripts disabled: card 3: a click on its « i » opens the back (open true, back box true, front box false, back on screen true)
+   ok   Venture Building 375 scripts disabled: card 4: a click on its « i » opens the back (open true, back box true, front box false, back on screen true)
+== /portfolio/ (Done When 4)
+   ok   /portfolio/: HTTP 200, refresh « 0; url=/service-venture-building/#portfolio », « Continuer » → /service-venture-building/#portfolio, canonical https://www.sourcinno.com/service-venture-building/, robots « noindex, follow », no header/footer true
+== arriving by /portfolio/ (review A-001)
+   ok   /portfolio/ landing 1200x900: landed at /service-venture-building/#portfolio; h2 « Portfolio » 129.8–172.3 px, header bottom 77 px, topmost at its centre true, scrollY 2173
+   ok   /portfolio/ landing 1200x900: script errors 0
+   ok   /portfolio/ landing 1200x900 scripts disabled: landed at /service-venture-building/#portfolio; h2 « Portfolio » 152.3–194.8 px, header bottom 77 px, topmost at its centre true, scrollY 1723
+   ok   /portfolio/ landing 375x740: landed at /service-venture-building/#portfolio; h2 « Portfolio » 109.6–139.8 px, header bottom 77 px, topmost at its centre true, scrollY 2393
+   ok   /portfolio/ landing 375x740: script errors 0
+   ok   /portfolio/ landing 375x740 scripts disabled: landed at /service-venture-building/#portfolio; h2 « Portfolio » 132.7–162.8 px, header bottom 77 px, topmost at its centre true, scrollY 2186
+== the nine shell pages (Done When 4)
+   ok   / 1200: page ready true; « Portfolio » links in header/footer: none
+   ok   / 1200: heights of the 6 main blocks = c5db875
+        header 77 → 77 px, footer 397.8 → 363.5 px (the footer « Pages » column lost one entry)
+   ok   / 1200: script errors 0
+   ok   / 375: page ready true; « Portfolio » links in header/footer: none
+   ok   / 375: heights of the 6 main blocks = c5db875
+        header 77 → 77 px, footer 884.8 → 850.5 px (the footer « Pages » column lost one entry)
+   ok   / 375: script errors 0
+   ok   /service-strategie-transformation/ 1200: page ready true; « Portfolio » links in header/footer: none
+   ok   /service-strategie-transformation/ 1200: heights of the 5 main blocks = c5db875
+        header 77 → 77 px, footer 397.8 → 363.5 px (the footer « Pages » column lost one entry)
+   ok   /service-strategie-transformation/ 1200: script errors 0
+   ok   /service-strategie-transformation/ 375: page ready true; « Portfolio » links in header/footer: none
+   ok   /service-strategie-transformation/ 375: heights of the 5 main blocks = c5db875
+        header 77 → 77 px, footer 884.8 → 850.5 px (the footer « Pages » column lost one entry)
+   ok   /service-strategie-transformation/ 375: script errors 0
+   ok   /service-ia-business/ 1200: page ready true; « Portfolio » links in header/footer: none
+   ok   /service-ia-business/ 1200: heights of the 5 main blocks = c5db875
+        header 77 → 77 px, footer 397.8 → 363.5 px (the footer « Pages » column lost one entry)
+   ok   /service-ia-business/ 1200: script errors 0
+   ok   /service-ia-business/ 375: page ready true; « Portfolio » links in header/footer: none
+   ok   /service-ia-business/ 375: heights of the 5 main blocks = c5db875
+        header 77 → 77 px, footer 884.8 → 850.5 px (the footer « Pages » column lost one entry)
+   ok   /service-ia-business/ 375: script errors 0
+   ok   /service-venture-building/ 1200: page ready true; « Portfolio » links in header/footer: none
+   ok   /service-venture-building/ 1200: heights of the 6 main blocks (without #portfolio) = c5db875
+        header 77 → 77 px, footer 397.8 → 363.5 px (the footer « Pages » column lost one entry)
+   ok   /service-venture-building/ 1200: script errors 0
+   ok   /service-venture-building/ 375: page ready true; « Portfolio » links in header/footer: none
+   ok   /service-venture-building/ 375: heights of the 6 main blocks (without #portfolio) = c5db875
+        header 77 → 77 px, footer 884.8 → 850.5 px (the footer « Pages » column lost one entry)
+   ok   /service-venture-building/ 375: script errors 0
+   ok   /publications/ 1200: page ready true; « Portfolio » links in header/footer: none
+   ok   /publications/ 1200: heights of the 2 main blocks = c5db875
+        header 77 → 77 px, footer 397.8 → 363.5 px (the footer « Pages » column lost one entry)
+   ok   /publications/ 1200: script errors 0
+   ok   /publications/ 375: page ready true; « Portfolio » links in header/footer: none
+   ok   /publications/ 375: heights of the 2 main blocks = c5db875
+        header 77 → 77 px, footer 884.8 → 850.5 px (the footer « Pages » column lost one entry)
+   ok   /publications/ 375: script errors 0
+   ok   /contact/ 1200: page ready true; « Portfolio » links in header/footer: none
+   ok   /contact/ 1200: heights of the 2 main blocks = c5db875
+        header 77 → 77 px, footer 397.8 → 363.5 px (the footer « Pages » column lost one entry)
+   ok   /contact/ 1200: script errors 0
+   ok   /contact/ 375: page ready true; « Portfolio » links in header/footer: none
+   ok   /contact/ 375: heights of the 2 main blocks = c5db875
+        header 77 → 77 px, footer 884.8 → 850.5 px (the footer « Pages » column lost one entry)
+   ok   /contact/ 375: script errors 0
+   ok   /mentions-legales/ 1200: page ready true; « Portfolio » links in header/footer: none
+   ok   /mentions-legales/ 1200: heights of the 2 main blocks = c5db875
+        header 77 → 77 px, footer 397.8 → 363.5 px (the footer « Pages » column lost one entry)
+   ok   /mentions-legales/ 1200: script errors 0
+   ok   /mentions-legales/ 375: page ready true; « Portfolio » links in header/footer: none
+   ok   /mentions-legales/ 375: heights of the 2 main blocks = c5db875
+        header 77 → 77 px, footer 884.8 → 850.5 px (the footer « Pages » column lost one entry)
+   ok   /mentions-legales/ 375: script errors 0
+   ok   /politique-confidentialite/ 1200: page ready true; « Portfolio » links in header/footer: none
+   ok   /politique-confidentialite/ 1200: heights of the 2 main blocks = c5db875
+        header 77 → 77 px, footer 397.8 → 363.5 px (the footer « Pages » column lost one entry)
+   ok   /politique-confidentialite/ 1200: script errors 0
+   ok   /politique-confidentialite/ 375: page ready true; « Portfolio » links in header/footer: none
+   ok   /politique-confidentialite/ 375: heights of the 2 main blocks = c5db875
+        header 77 → 77 px, footer 884.8 → 850.5 px (the footer « Pages » column lost one entry)
+   ok   /politique-confidentialite/ 375: script errors 0
+   ok   /404.html 1200: page ready true; « Portfolio » links in header/footer: none
+   ok   /404.html 1200: heights of the 1 main blocks = c5db875
+        header 77 → 77 px, footer 397.8 → 363.5 px (the footer « Pages » column lost one entry)
+   ok   /404.html 1200: script errors 0
+   ok   /404.html 375: page ready true; « Portfolio » links in header/footer: none
+   ok   /404.html 375: heights of the 1 main blocks = c5db875
+        header 77 → 77 px, footer 884.8 → 850.5 px (the footer « Pages » column lost one entry)
+   ok   /404.html 375: script errors 0
+== desktop menu on one row (Done When 4)
+   ok   / 861 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 255.5/355.5/449.8/583.8/690.8, last right edge 822 (layout 846); logo 124.3x40, gap logo → first item 107.2 px
+        gap logo → first item: c5db875 27.2 px, now 107.2 px
+   ok   / 861 menu: script errors 0
+   ok   /service-strategie-transformation/ 861 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 256.5/354.5/449.8/583.8/690.8, last right edge 822 (layout 846); logo 124.3x40, gap logo → first item 108.2 px
+        gap logo → first item: c5db875 28.2 px, now 108.2 px
+   ok   /service-strategie-transformation/ 861 menu: script errors 0
+   ok   /service-ia-business/ 861 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 256.5/354.5/449.8/583.8/690.8, last right edge 822 (layout 846); logo 124.3x40, gap logo → first item 108.2 px
+        gap logo → first item: c5db875 28.2 px, now 108.2 px
+   ok   /service-ia-business/ 861 menu: script errors 0
+   ok   /service-venture-building/ 861 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 252.5/350.5/444.8/583.8/690.8, last right edge 822 (layout 846); logo 124.3x40, gap logo → first item 104.2 px
+        gap logo → first item: c5db875 24.2 px, now 104.2 px
+   ok   /service-venture-building/ 861 menu: script errors 0
+   ok   /publications/ 861 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 254.5/352.5/446.8/580.8/690.8, last right edge 822 (layout 846); logo 124.3x40, gap logo → first item 106.2 px
+        gap logo → first item: c5db875 26.2 px, now 106.2 px
+   ok   /publications/ 861 menu: script errors 0
+   ok   /contact/ 861 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 257.5/355.5/449.8/583.8/690.8, last right edge 822 (layout 846); logo 124.3x40, gap logo → first item 109.2 px
+        gap logo → first item: c5db875 29.2 px, now 109.2 px
+   ok   /contact/ 861 menu: script errors 0
+   ok   /mentions-legales/ 861 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 257.5/355.5/449.8/583.8/690.8, last right edge 822 (layout 846); logo 124.3x40, gap logo → first item 109.2 px
+        gap logo → first item: c5db875 29.2 px, now 109.2 px
+   ok   /mentions-legales/ 861 menu: script errors 0
+   ok   /politique-confidentialite/ 861 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 257.5/355.5/449.8/583.8/690.8, last right edge 822 (layout 846); logo 124.3x40, gap logo → first item 109.2 px
+        gap logo → first item: c5db875 29.2 px, now 109.2 px
+   ok   /politique-confidentialite/ 861 menu: script errors 0
+   ok   /404.html 861 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 257.5/355.5/449.8/583.8/690.8, last right edge 822 (layout 846); logo 124.3x40, gap logo → first item 109.2 px
+        gap logo → first item: c5db875 29.2 px, now 109.2 px
+   ok   /404.html 861 menu: script errors 0
+   ok   / 961 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 355.5/455.5/549.8/683.8/790.8, last right edge 922 (layout 946); logo 202x65, gap logo → first item 129.5 px
+        gap logo → first item: c5db875 49.5 px, now 129.5 px
+   ok   / 961 menu: script errors 0
+   ok   /service-strategie-transformation/ 961 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 356.5/454.5/549.8/683.8/790.8, last right edge 922 (layout 946); logo 202x65, gap logo → first item 130.5 px
+        gap logo → first item: c5db875 50.5 px, now 130.5 px
+   ok   /service-strategie-transformation/ 961 menu: script errors 0
+   ok   /service-ia-business/ 961 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 356.5/454.5/549.8/683.8/790.8, last right edge 922 (layout 946); logo 202x65, gap logo → first item 130.5 px
+        gap logo → first item: c5db875 50.5 px, now 130.5 px
+   ok   /service-ia-business/ 961 menu: script errors 0
+   ok   /service-venture-building/ 961 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 352.5/450.5/544.8/683.8/790.8, last right edge 922 (layout 946); logo 202x65, gap logo → first item 126.5 px
+        gap logo → first item: c5db875 46.5 px, now 126.5 px
+   ok   /service-venture-building/ 961 menu: script errors 0
+   ok   /publications/ 961 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 354.5/452.5/546.8/680.8/790.8, last right edge 922 (layout 946); logo 202x65, gap logo → first item 128.5 px
+        gap logo → first item: c5db875 48.5 px, now 128.5 px
+   ok   /publications/ 961 menu: script errors 0
+   ok   /contact/ 961 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 357.5/455.5/549.8/683.8/790.8, last right edge 922 (layout 946); logo 202x65, gap logo → first item 131.5 px
+        gap logo → first item: c5db875 51.5 px, now 131.5 px
+   ok   /contact/ 961 menu: script errors 0
+   ok   /mentions-legales/ 961 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 357.5/455.5/549.8/683.8/790.8, last right edge 922 (layout 946); logo 202x65, gap logo → first item 131.5 px
+        gap logo → first item: c5db875 51.5 px, now 131.5 px
+   ok   /mentions-legales/ 961 menu: script errors 0
+   ok   /politique-confidentialite/ 961 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 357.5/455.5/549.8/683.8/790.8, last right edge 922 (layout 946); logo 202x65, gap logo → first item 131.5 px
+        gap logo → first item: c5db875 51.5 px, now 131.5 px
+   ok   /politique-confidentialite/ 961 menu: script errors 0
+   ok   /404.html 961 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 372.5/470.5/564.8/698.8/805.8, last right edge 937 (layout 961); logo 202x65, gap logo → first item 146.5 px
+        gap logo → first item: c5db875 66.5 px, now 146.5 px
+   ok   /404.html 961 menu: script errors 0
+   ok   / 1200 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 582/682/776.3/910.3/1017.3, last right edge 1148.5 (layout 1185); logo 202x65, gap logo → first item 343.5 px
+        gap logo → first item: c5db875 263.5 px, now 343.5 px
+   ok   / 1200 menu: script errors 0
+   ok   /service-strategie-transformation/ 1200 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 583/681/776.3/910.3/1017.3, last right edge 1148.5 (layout 1185); logo 202x65, gap logo → first item 344.5 px
+        gap logo → first item: c5db875 264.5 px, now 344.5 px
+   ok   /service-strategie-transformation/ 1200 menu: script errors 0
+   ok   /service-ia-business/ 1200 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 583/681/776.3/910.3/1017.3, last right edge 1148.5 (layout 1185); logo 202x65, gap logo → first item 344.5 px
+        gap logo → first item: c5db875 264.5 px, now 344.5 px
+   ok   /service-ia-business/ 1200 menu: script errors 0
+   ok   /service-venture-building/ 1200 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 579/677/771.3/910.3/1017.3, last right edge 1148.5 (layout 1185); logo 202x65, gap logo → first item 340.5 px
+        gap logo → first item: c5db875 260.5 px, now 340.5 px
+   ok   /service-venture-building/ 1200 menu: script errors 0
+   ok   /publications/ 1200 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 581/679/773.3/907.3/1017.3, last right edge 1148.5 (layout 1185); logo 202x65, gap logo → first item 342.5 px
+        gap logo → first item: c5db875 262.5 px, now 342.5 px
+   ok   /publications/ 1200 menu: script errors 0
+   ok   /contact/ 1200 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 584/682/776.3/910.3/1017.3, last right edge 1148.5 (layout 1185); logo 202x65, gap logo → first item 345.5 px
+        gap logo → first item: c5db875 265.5 px, now 345.5 px
+   ok   /contact/ 1200 menu: script errors 0
+   ok   /mentions-legales/ 1200 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 584/682/776.3/910.3/1017.3, last right edge 1148.5 (layout 1185); logo 202x65, gap logo → first item 345.5 px
+        gap logo → first item: c5db875 265.5 px, now 345.5 px
+   ok   /mentions-legales/ 1200 menu: script errors 0
+   ok   /politique-confidentialite/ 1200 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 584/682/776.3/910.3/1017.3, last right edge 1148.5 (layout 1185); logo 202x65, gap logo → first item 345.5 px
+        gap logo → first item: c5db875 265.5 px, now 345.5 px
+   ok   /politique-confidentialite/ 1200 menu: script errors 0
+   ok   /404.html 1200 menu: 5 items ["Expérience","Services","Venture Building","Publications","Rendez-vous"], centres 38/38/38/38/38, left edges 591.5/689.5/783.8/917.8/1024.8, last right edge 1156 (layout 1200); logo 202x65, gap logo → first item 345.5 px
+        gap logo → first item: c5db875 265.5 px, now 345.5 px
+   ok   /404.html 1200 menu: script errors 0
+== footer line breaks at 320 px (AGENTS Gotcha)
+   ok   / 320 footer: text, line count and width of each li/p/h2 (c5db875 without its « Portfolio » entry) = c5db875 (16 entries)
+   ok   / 320 footer: script errors 0
+== kept captures (Done When 6)
+   ok   capture portfolio-1200.jpg: #portfolio 1185x1087 wholly inside the 3000 px viewport; cards box/box/no box/no box, button box « Afficher plus (2) », form box, count « 4 projets trouvés », focus body
+        capture portfolio-1200.jpg 1185x1087
+   ok   capture portfolio-1200-plus.jpg: #portfolio 1185x1642 wholly inside the 3000 px viewport; cards box/box/box/box, button no box « Afficher plus (2) », form box, count « 4 projets trouvés », focus card 3 summary
+        capture portfolio-1200-plus.jpg 1185x1642
+   ok   capture portfolio-375.jpg: #portfolio 375x1999 wholly inside the 3000 px viewport; cards box/box/no box/no box, button box « Afficher plus (2) », form box, count « 4 projets trouvés », focus body
+        capture portfolio-375.jpg 375x1999
+RENDER http://127.0.0.1:4173: 170 checks, failing 0

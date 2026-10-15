@@ -1,0 +1,9 @@
+RENDER p60 on http://127.0.0.1:4176 — PARTIAL RUN, parts: landing
+== arriving by /portfolio/ (review A-001)
+   FAIL /portfolio/ landing 1200x900: landed at /service-venture-building/#portfolio; h2 « Portfolio » 49.8–92.3 px, header bottom 77 px, topmost at its centre false, scrollY 2253
+   ok   /portfolio/ landing 1200x900: script errors 0
+   FAIL /portfolio/ landing 1200x900 scripts disabled: landed at /service-venture-building/#portfolio; h2 « Portfolio » 72.3–114.8 px, header bottom 77 px, topmost at its centre true, scrollY 1803
+   FAIL /portfolio/ landing 375x740: landed at /service-venture-building/#portfolio; h2 « Portfolio » 29.6–59.8 px, header bottom 77 px, topmost at its centre false, scrollY 2473
+   ok   /portfolio/ landing 375x740: script errors 0
+   FAIL /portfolio/ landing 375x740 scripts disabled: landed at /service-venture-building/#portfolio; h2 « Portfolio » 51.7–81.8 px, header bottom 77 px, topmost at its centre false, scrollY 2267
+RENDER http://127.0.0.1:4176: 6 checks, failing 4 — PARTIAL RUN (landing): not the full render

@@ -1,0 +1,80 @@
+  STRUCTURE: code tiers epingle : assets/js/vendor/typebot-js-0.10.11/web.js (sha256 41adb2855b0e…, LICENSE)
+  VERSIONS: 41 reference(s) CSS/JS a jour sur 16 page(s)
+  SHELL: header, footer et <noscript> conformes a tools/shell/ sur 9 page(s) ; 7 redirection(s) ignoree(s) : ai-business.html, offre-ia-business/index.html, offre-strategie-organisation-processus/index.html, offre-venture-building/index.html, portfolio/index.html, prototypes/index.html, venture-building.html
+  STRUCTURE: recensement 141 classe(s) HTML, 1 feuille(s) assets/css + 9 bloc(s) <style> de page, 169 classe(s) avec regle ; exception(s) sans regle : aucune
+  STRUCTURE: recensement inverse 169 classe(s) de selecteur, 3 partiel(s) tools/shell, 44 script(s) lus, 0 classe(s) sans usage ; exception(s) composee(s) par script : chat-msg--bot (assets/js/_v2/chat.js), chat-msg--me (assets/js/_v2/chat.js)
+  STRUCTURE: coherence des coordonnees (reference tools/shell/footer.html) : email 32 (« aymard.de.scorbiac@sourcinno.com » ×32), telephone 25 (« +33608755877 » ×13, « +33 6 08 75 58 77 » ×10, « +33&nbsp;6&nbsp;08&nbsp;75&nbsp;58&nbsp;77 » ×2), hebergeur 2 dans mentions-legales/index.html seulement (« +37064503378 » ×1, « +370&nbsp;645&nbsp;03378 » ×1), LinkedIn 13 (« linkedin.com/in/aymarddescorbiac » ×13) ; videos 8 lanceur(s) = id de leur legende ; Typebot lien direct ×1, scripts ×1
+  STRUCTURE: 9 script(s) compile(s); 16 page(s) lue(s), dont 9 avec coquille et 7 redirection(s); 309 lien(s) interne(s) resolu(s)
+  --forms: formulaire de contact inspecte sur contact/index.html
+  --legal: 16 page(s) inspectee(s), 0 mention(s) a completer
+  --a11y: le conflit de cascade (une regle plus specifique qui repeint un element) n est PAS couvert ici : il se controle a l ecran.
+  --a11y: 14 couple(s) de couleurs verifie(s) (le plus juste : dates du parcours sur fond gris, 4.77:1); 251 lien(s) et 20 bouton(s) inspecte(s)
+  --a11y: 37 lien(s) target="_blank" sur 9 page(s), chacun lu pour « (nouvel onglet) » en fin de nom accessible
+  --nojs: 9 page(s) verifiee(s); 2 selecteur(s) masquant .reveal recense(s) (.reveal-wait .reveal, .reveal-on .reveal:not(.is-visible)); 1 script(s) .reveal-wait execute(s)
+  --tiers: 4 hote(s) externe(s) charge(s) par les pages et leurs scripts : fonts.googleapis.com, fonts.gstatic.com, typebot.io, www.youtube-nocookie.com
+  --seo: meta et sitemap verifies sur 8 page(s) indexable(s)
+  --seo: JSON-LD : 3 Service(s) verifie(s) (url locale existante, name dans le <title> ou le <h1> de la page cible)
+  tools/portfolio.test.mjs: PASS: « Afficher plus » (two cards, one click shows four, focus on the third; a search removes it), public-card search, all five facets/unknowns, AND, empty/literal query, reset, submit guard
+  tools/test-ia-embeds.mjs: PASS: video.js click-only, each launcher embeds its own id (youtube-nocookie, focused), frame title = visible caption without « (nouvel onglet) », else the launcher label; chat click-only loading from the local pinned copy, light published bot, blocked SDK retry, no duplicate conversation, no status line needed.
+  tools/blog-sync.test.mjs: PASS: blog-sync on throw-away trees, 166 cases: 16 accepted (12 FORMAT rules, dépliant written in full, header kept off the page, CRLF text file, stale page), 86 format refusals (tfoot and each rule's leading ^ included, the rule count read from the tool), 43 header refusals (line 1, title escaping, date, tag, rang), 4 order cases (date, rang, file name, French dates), 16 other refusals (nesting, data-label against its column title, missing picture, empty file, not .html, no file, markers), 1 known limit; 159 tool starts
+  tools/blog-sync.mjs --check: BLOG: liste conforme aux fichiers ; 11 article(s) (IA 6, Venture Building 4, Startup 1) lus dans tools/blog/
+
+OK — aucun probleme sur 16 page(s).
+EXIT check.mjs --all 0
+  VERSIONS: 41 reference(s) CSS/JS a jour sur 16 page(s)
+EXIT version --check 0
+  SHELL: header, footer et <noscript> conformes a tools/shell/ sur 9 page(s) ; 7 redirection(s) ignoree(s) : ai-business.html, offre-ia-business/index.html, offre-strategie-organisation-processus/index.html, offre-venture-building/index.html, portfolio/index.html, prototypes/index.html, venture-building.html
+EXIT shell --check 0
+PASS: « Afficher plus » (two cards, one click shows four, focus on the third; a search removes it), public-card search, all five facets/unknowns, AND, empty/literal query, reset, submit guard
+EXIT portfolio.test 0
+card 1: equal (1073 / 1073 characters)
+card 2: equal (1054 / 1054 characters)
+card 3: equal (1162 / 1162 characters)
+card 4: equal (1108 / 1108 characters)
+PASS: 4 cards, text equal to c5db875:portfolio/index.html
+EXIT cardtext 0
+warning: in the working copy of '404.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ai-business.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/css/style.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/js/portfolio.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'contact/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'mentions-legales/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'offre-ia-business/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'offre-strategie-organisation-processus/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'offre-venture-building/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'politique-confidentialite/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'portfolio/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'prototypes/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'publications/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'service-ia-business/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'service-strategie-transformation/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'service-venture-building/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tools/portfolio.test.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tools/shell/footer.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tools/shell/header.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'venture-building.html', LF will be replaced by CRLF the next time Git touches it
+ 404.html                                          |   4 +-
+ ai-business.html                                  |   2 +-
+ assets/css/style.css                              |   6 +-
+ assets/js/portfolio.js                            |  17 +-
+ contact/index.html                                |   4 +-
+ index.html                                        |   4 +-
+ mentions-legales/index.html                       |   4 +-
+ offre-ia-business/index.html                      |   2 +-
+ offre-strategie-organisation-processus/index.html |   2 +-
+ offre-venture-building/index.html                 |   2 +-
+ politique-confidentialite/index.html              |   4 +-
+ portfolio/index.html                              | 280 +---------------------
+ prototypes/index.html                             |   2 +-
+ publications/index.html                           |   4 +-
+ service-ia-business/index.html                    |   4 +-
+ service-strategie-transformation/index.html       |   4 +-
+ service-venture-building/index.html               | 185 +++++++++++++-
+ sitemap.xml                                       |   1 -
+ tools/portfolio.test.mjs                          |  91 ++++---
+ tools/shell/footer.html                           |   1 -
+ tools/shell/header.html                           |   1 -
+ venture-building.html                             |   2 +-
+ 22 files changed, 285 insertions(+), 341 deletions(-)
+EXIT git grep 1

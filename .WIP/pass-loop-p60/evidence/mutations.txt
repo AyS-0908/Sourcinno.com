@@ -1,0 +1,10 @@
+unmutated copy: exit 0
+RED   update() no longer hides the button: exit 1; AssertionError [ERR_ASSERTION]: Expected values to be strictly equal: at tools/portfolio.test.mjs:59:8
+RED   cards 3-4 not hidden on load: exit 1; AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal: at tools/portfolio.test.mjs:48:8
+RED   click does not show the cards: exit 1; AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal: at tools/portfolio.test.mjs:53:8
+RED   click keeps the button: exit 1; AssertionError [ERR_ASSERTION]: Expected values to be strictly equal: at tools/portfolio.test.mjs:54:8
+RED   no focus move: exit 1; AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal: at tools/portfolio.test.mjs:55:8
+RED   label count wrong: exit 1; AssertionError [ERR_ASSERTION]: Expected values to be strictly equal: at tools/portfolio.test.mjs:50:8
+RED   button never shown: exit 1; AssertionError [ERR_ASSERTION]: Expected values to be strictly equal: at tools/portfolio.test.mjs:49:8
+RED   h4 read back as h3: exit 1; TypeError: Cannot read properties of undefined (reading 'nextElementSibling') at boot (tools/portfolio.test.mjs:33:6)
+ALL MUTATIONS CAUGHT
