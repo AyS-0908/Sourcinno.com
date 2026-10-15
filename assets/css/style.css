@@ -846,10 +846,10 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .card--service h3 { color: var(--white); }
 .card--service p { color: rgba(255, 255, 255, 0.92); }
 .card--service:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: rgba(49, 151, 149, 0.55); }
-/* Images des deux cartes de service de l accueil : chargees en fond CSS, sans
-   redimensionnement, une seule declaration par image (Pass 40). Les photos des
-   heros sont des <img> dans les pages (Pass 55). */
-.card--strategie { background-image: url("/assets/img/about-strategy.webp"); }
+/* Image de la carte IA de l accueil : chargee en fond CSS, sans
+   redimensionnement, une seule declaration (Pass 40). La carte Strategie a son
+   fond en degrade (#services .card--strategie, ci-dessous ; image retiree Pass 65).
+   Les photos des heros sont des <img> dans les pages (Pass 55). */
 .card--ia        { background-image: url("/pictures/1ai_hero.jpg"); }
 #services .card--strategie {
   background-image:
