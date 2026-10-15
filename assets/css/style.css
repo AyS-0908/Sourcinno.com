@@ -1101,6 +1101,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 }
 
 /* ---------- Portfolio (anciennement dans portfolio/index.html) ---------- */
+  /* Arrivee par /portfolio/ (ancre #portfolio) : le titre de la section sous l en-tete collant (77 px), pas dessous. */
+  #portfolio { scroll-margin-top: 80px; }
   .portfolio-filter { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
   .portfolio-filter[hidden] { display: none; }
   .portfolio-filter .field { margin: 0; min-width: 0; }
@@ -1110,7 +1112,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .portfolio-filter__results p { margin: 0; }
   .portfolio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); align-items: start; }
   .portfolio-card { position: relative; overflow-wrap: anywhere; }
-  .portfolio-card h2 { font-size: 1.4rem; padding: 24px 76px 20px 20px; margin: 0; min-height: 76px; }
+  .portfolio-card h3 { font-size: 1.4rem; padding: 24px 76px 20px 20px; margin: 0; min-height: 76px; }
   /* ponytail: native disclosure owns state, focus and no-JavaScript access. */
   .portfolio-details > summary { position: absolute; top: 15px; right: 15px; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 50%; color: var(--teal-dark); background: var(--white); cursor: pointer; list-style: none; font-size: 20px; font-weight: 700; }
   .portfolio-details > summary::-webkit-details-marker { display: none; }
@@ -1118,7 +1120,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .portfolio-return, .portfolio-details[open] .portfolio-info, .portfolio-details[open] ~ .portfolio-front { display: none; }
   .portfolio-details[open] .portfolio-return { display: inline; }
   .portfolio-back, .portfolio-copy { padding: 20px; }
-  .portfolio-card h3 { font-size: 12px; line-height: 1.4; letter-spacing: 0; text-transform: uppercase; color: var(--teal-dark); margin: 0 0 7px; }
+  .portfolio-card h4 { font-size: 12px; line-height: 1.4; letter-spacing: 0; text-transform: uppercase; color: var(--teal-dark); margin: 0 0 7px; }
   .portfolio-card p { font-size: 16px; font-weight: 400; color: var(--navy); margin: 0 0 20px; }
   .portfolio-cover { position: relative; }
   .portfolio-cover img { width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius); }

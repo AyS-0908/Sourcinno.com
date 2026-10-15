@@ -4,10 +4,11 @@
   const query = document.getElementById('portfolio-query');
   const count = document.getElementById('portfolio-count');
   const empty = document.getElementById('portfolio-empty');
+  const more = document.getElementById('portfolio-more');
   const selects = [...form.querySelectorAll('select')];
   const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
   const records = [...document.querySelectorAll('.portfolio-card')].map(card => {
-    const field = title => [...card.querySelectorAll('.portfolio-back h3')].find(heading => heading.textContent === title).nextElementSibling.textContent;
+    const field = title => [...card.querySelectorAll('.portfolio-back h4')].find(heading => heading.textContent === title).nextElementSibling.textContent;
     return {
       card, text: normalize(card.textContent),
       sector: [card.querySelector('.portfolio-tags span').textContent],
@@ -31,6 +32,7 @@
     }
     count.textContent = found === 1 ? '1 projet trouvé' : `${found} projets trouvés`;
     empty.hidden = found !== 0;
+    more.hidden = true;
   }
   form.addEventListener('submit', event => event.preventDefault());
   form.addEventListener('input', update);
@@ -41,5 +43,18 @@
     update();
   });
   update();
+  // « Afficher plus »: two cards on load, the others in one click; any search (update) shows every match and removes the button.
+  const extra = records.slice(2);
+  if (extra.length) {
+    const button = more.querySelector('button');
+    extra.forEach(record => { record.card.hidden = true; });
+    button.textContent = `Afficher plus (${extra.length})`;
+    button.addEventListener('click', () => {
+      more.hidden = true;
+      extra.forEach(record => { record.card.hidden = false; });
+      extra[0].card.querySelector('summary').focus();
+    });
+    more.hidden = false;
+  }
   form.hidden = false;
 })();
