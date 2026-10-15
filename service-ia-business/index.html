@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=d4554acc">
+<link rel="stylesheet" href="/assets/css/style.css?v=0743c0b1">
 <noscript>
   <style>
     /* Sans JavaScript, le lecteur video ne peut pas se lancer : on le masque,
@@ -147,32 +147,71 @@
         </ol>
         <div class="hl__detail" aria-live="polite"></div>
       </div>
-      <div class="card service-phase">
+      <div class="card service-phase hl" data-hoverlist>
         <div class="service-phase__head">
           <span class="step__n" aria-hidden="true">2</span>
           <div><h3>Transformation</h3><p class="service-phase__percent">90% de transpiration</p></div>
         </div>
-        <div class="service-rollout">
-          <p class="service-rollout__title"><span class="service-question__number">05–07</span><span>Mise en œuvre dès le premier jour</span></p>
-          <p class="service-rollout__goal"><strong>Objectif :</strong> configurer et utiliser immédiatement l'IA sur les tâches sélectionnées.</p>
-          <details class="disclosure">
-            <summary>Données d'entrée</summary>
-            <div class="service-detail">
-              <ul class="ticks">
-                <li>Description interne du processus, tâche par tâche : étapes, données d'entrée, livrables, outils, etc.</li>
-                <li>Frictions à supprimer en priorité.</li>
-                <li>Avertissements sur ce qu'il NE FAUT PAS confier à l'IA et sur les risques liés à l'IA : hallucinations, coûts, confidentialité des données, etc.</li>
-              </ul>
-            </div>
-          </details>
-          <p class="service-detail__label">Livrables</p>
-          <ul class="service-levels">
-            <li class="service-level"><strong>Niveau 1</strong>Fonctionnalités IA intégrées aux SaaS existants &rarr; rien à faire.</li>
-            <li class="service-level"><strong>Niveau 2</strong>Compétence IA (« AI Skill ») réutilisable par tâche : instructions + outils.</li>
-            <li class="service-level"><strong>Niveau 3</strong>Processus structuré, numérisé et renforcé par l'IA dans un outil utilisé au quotidien (Excel, Google Sheets, OpusSuite, etc.).</li>
-          </ul>
-          <p class="service-rollout__extras"><strong>Compléments :</strong> manuel de formation, page web permettant de lancer les Skills ou les outils.</p>
-        </div>
+        <ol class="service-question-list hl__items" start="5">
+          <li>
+            <details class="disclosure">
+              <summary><span class="service-question__number">05</span><span><strong>IA niveau 1- Déjà intégrée</strong><span class="disclosure__subtitle">Fonctionnalités IA intégrées aux SaaS existants &rarr; rien à faire.</span></span></summary>
+              <div class="service-detail">
+                <p class="service-question"><strong>Objectif :</strong> configurer et utiliser immédiatement l'IA sur les tâches sélectionnées.</p>
+                <p class="service-detail__label">Données d'entrée</p>
+                <ul class="ticks">
+                  <li>Description interne du processus, tâche par tâche : étapes, données d'entrée, livrables, outils, etc.</li>
+                  <li>Frictions à supprimer en priorité.</li>
+                  <li>Avertissements sur ce qu'il NE FAUT PAS confier à l'IA et sur les risques liés à l'IA : hallucinations, coûts, confidentialité des données, etc.</li>
+                </ul>
+                <p class="service-detail__label">Livrables</p>
+                <ul class="ticks">
+                  <li>Fonctionnalités IA intégrées aux SaaS existants &rarr; rien à faire.</li>
+                </ul>
+                <p><strong>Compléments :</strong> manuel de formation, page web permettant de lancer les Skills ou les outils.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="disclosure">
+              <summary><span class="service-question__number">06</span><span><strong>IA niveau 2- Ré-utiliser</strong><span class="disclosure__subtitle">Compétence IA (« AI Skill ») réutilisable par tâche : instructions + outils.</span></span></summary>
+              <div class="service-detail">
+                <p class="service-question"><strong>Objectif :</strong> configurer et utiliser immédiatement l'IA sur les tâches sélectionnées.</p>
+                <p class="service-detail__label">Données d'entrée</p>
+                <ul class="ticks">
+                  <li>Description interne du processus, tâche par tâche : étapes, données d'entrée, livrables, outils, etc.</li>
+                  <li>Frictions à supprimer en priorité.</li>
+                  <li>Avertissements sur ce qu'il NE FAUT PAS confier à l'IA et sur les risques liés à l'IA : hallucinations, coûts, confidentialité des données, etc.</li>
+                </ul>
+                <p class="service-detail__label">Livrables</p>
+                <ul class="ticks">
+                  <li>Compétence IA (« AI Skill ») réutilisable par tâche : instructions + outils.</li>
+                </ul>
+                <p><strong>Compléments :</strong> manuel de formation, page web permettant de lancer les Skills ou les outils.</p>
+              </div>
+            </details>
+          </li>
+          <li>
+            <details class="disclosure">
+              <summary><span class="service-question__number">07</span><span><strong>IA niveau 3- Restructurer</strong><span class="disclosure__subtitle">Processus structuré, numérisé et renforcé par l'IA dans un outil utilisé au quotidien (Excel, Google Sheets, OpusSuite, etc.).</span></span></summary>
+              <div class="service-detail">
+                <p class="service-question"><strong>Objectif :</strong> configurer et utiliser immédiatement l'IA sur les tâches sélectionnées.</p>
+                <p class="service-detail__label">Données d'entrée</p>
+                <ul class="ticks">
+                  <li>Description interne du processus, tâche par tâche : étapes, données d'entrée, livrables, outils, etc.</li>
+                  <li>Frictions à supprimer en priorité.</li>
+                  <li>Avertissements sur ce qu'il NE FAUT PAS confier à l'IA et sur les risques liés à l'IA : hallucinations, coûts, confidentialité des données, etc.</li>
+                </ul>
+                <p class="service-detail__label">Livrables</p>
+                <ul class="ticks">
+                  <li>Processus structuré, numérisé et renforcé par l'IA dans un outil utilisé au quotidien (Excel, Google Sheets, OpusSuite, etc.).</li>
+                </ul>
+                <p><strong>Compléments :</strong> manuel de formation, page web permettant de lancer les Skills ou les outils.</p>
+              </div>
+            </details>
+          </li>
+        </ol>
+        <div class="hl__detail" aria-live="polite"></div>
       </div>
     </div>
   </div>
@@ -209,23 +248,12 @@
     <div class="section__head">
       <h2>Réflexion</h2>
     </div>
-    <figure class="band-figure">
-      <button class="video-launch" type="button" data-video="hDFiKEFv5kA" aria-label="Lire la vidéo « AI for BUSINESS »">
-        <img src="/assets/img/ai-for-business-video.jpg" width="468" height="263" alt="" loading="lazy">
-        <span aria-hidden="true">▶</span>
-      </button>
-      <figcaption><a href="https://www.youtube.com/watch?v=hDFiKEFv5kA" target="_blank" rel="noopener">Vidéo « AI for BUSINESS »<span class="visually-hidden"> (nouvel onglet)</span></a></figcaption>
-    </figure>
     <div class="ia-chat">
-      <h3>Une question sur AI for Business ?</h3>
-      <p>Découvrez la formation en quelques échanges.</p>
-      <p class="ia-chat__notice">Au clic, Typebot traite votre connexion et vos réponses ; sa vidéo YouTube peut aussi se charger. Si vous demandez à être rappelé, vos nom, email et téléphone y sont enregistrés. <a href="/politique-confidentialite/">Confidentialité</a>.</p>
-      <details data-chat>
-        <summary>Discuter avec AI for Business</summary>
+      <div data-chat>
         <p role="status" data-chat-status hidden></p>
         <typebot-standard aria-label="Conversation AI for Business" hidden></typebot-standard>
         <noscript><p>Pour discuter sans JavaScript, ouvrez directement Typebot avec le lien ci-dessous.</p></noscript>
-      </details>
+      </div>
       <p class="ia-chat__notice"><a href="https://typebot.io/paiement-produit-num-rique-o8lsepu" target="_blank" rel="noopener">Ouvrir sur Typebot<span class="visually-hidden"> (nouvel onglet)</span></a> · <a href="/contact/">Nous contacter</a></p>
     </div>
   </div>
@@ -273,7 +301,6 @@
 </footer>
 <script src="/assets/js/config.js?v=654769f0" defer></script>
 <script src="/assets/js/site.js?v=c702b75d" defer></script>
-<script src="/assets/js/video.js?v=f008ff18" defer></script>
-<script src="/assets/js/ia-embeds.js?v=86aedf4b" defer></script>
+<script src="/assets/js/ia-embeds.js?v=c5b46ee5" defer></script>
 </body>
 </html>

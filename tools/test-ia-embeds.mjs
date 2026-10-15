@@ -57,7 +57,10 @@ assert.ok(frames.every(f => f.referrerPolicy === 'origin' && f.focused && f.allo
 const SPECIFIER = '/assets/js/vendor/typebot-js-0.10.11/web.js';
 const source = readFileSync(new URL('../assets/js/ia-embeds.js', import.meta.url), 'utf8');
 assert.deepEqual([...source.matchAll(/\bimport\(\s*(['"`])(.*?)\1\s*\)/g)].map(m => m[2]), [SPECIFIER]);
-const chat = element(), status = element();
+// The chat starts by itself when its section comes on screen: an IntersectionObserver stub records the callback and
+// the target; the test fires it. Without the observer, the chat starts at once.
+const section = { id: 'reflexion' };
+const chat = Object.assign(element(), { closest: () => section }), status = element();
 let calls = 0, fail = true, options;
 const imports = [];
 const mount = element();
@@ -68,53 +71,64 @@ await sdk.link(() => {});
 await sdk.evaluate();
 const load = async specifier => { imports.push(specifier); if (fail) throw Error('blocked'); return sdk; };
 const getComputedStyle = () => ({ getPropertyValue: name => ({ '--white': '#ffffff', '--grey-50': '#f5f8fc', '--navy': '#1a365d', '--teal-dark': '#247a78', '--font-body': 'Arial' })[name] });
-const context = vm.createContext({
-  document: {
-    querySelector: selector => ({ '[data-chat]': chat, '[data-chat-status]': status, 'typebot-standard': mount })[selector],
-  },
-  getComputedStyle,
-});
-new vm.Script(source, { importModuleDynamically: load }).runInContext(context);
-assert.equal(imports.length, 0);
-chat.open = true;
-await chat.handlers.toggle();
+const settle = async () => { for (let i = 0; i < 5; i++) await new Promise(r => setImmediate(r)); };
+const observers = [];
+class IntersectionObserver {
+  constructor(callback, options) { this.callback = callback; this.options = options; this.targets = []; this.disconnected = 0; observers.push(this); }
+  observe(target) { this.targets.push(target); }
+  disconnect() { this.disconnected++; }
+}
+const see = async (io, isIntersecting = true) => { io.callback([{ isIntersecting, target: io.targets[0] }], io); await settle(); };
+const run = (doc, withObserver = true) => {
+  const global = { document: doc, getComputedStyle };
+  if (withObserver) global.IntersectionObserver = IntersectionObserver;
+  global.window = global;
+  new vm.Script(source, { importModuleDynamically: load }).runInContext(vm.createContext(global));
+};
+run({ querySelector: selector => ({ '[data-chat]': chat, '[data-chat-status]': status, 'typebot-standard': mount })[selector] });
+await settle();
+assert.equal(observers.length, 1, 'one observer');
+const io = observers[0];
+assert.deepEqual(io.targets, [section], 'the observer watches the chat section');
+assert.equal(imports.length, 0, 'nothing loaded before the section is seen');
+await see(io, false);
+assert.equal(imports.length, 0, 'a section leaving the screen loads nothing');
+// Seen with the SDK blocked: one import, no conversation, the message, the observer kept for a later try.
+await see(io);
+assert.deepEqual(imports, [SPECIFIER]);
 assert.equal(calls, 0);
 assert.match(status.textContent, /indisponible/);
+assert.equal(io.disconnected, 0);
+// Seen again, SDK reachable: one conversation, the observer disconnected.
 fail = false;
-chat.open = false;
-await chat.handlers.toggle();
-chat.open = true;
-await chat.handlers.toggle();
+await see(io);
 assert.equal(calls, 1);
+assert.equal(imports.length, 2);
+assert.equal(mount.hidden, false);
+assert.equal(status.hidden, true);
+assert.equal(io.disconnected, 1);
 assert.equal(options.typebot, 'paiement-produit-num-rique-o8lsepu');
 assert.equal(options.previewTheme.general.background.content, '#ffffff');
 assert.equal(options.previewTheme.chat.buttons.backgroundColor, '#247a78');
 assert.equal(options.isPreview, undefined);
-await chat.handlers.toggle();
+// A second sight (a callback already queued): no second import, no second conversation.
+await see(io);
 assert.equal(calls, 1);
 assert.deepEqual(imports, [SPECIFIER, SPECIFIER]);
 
-// A page without [data-chat-status]: a blocked SDK throws nothing, the retry still opens the chat.
-const bare = element(), bareMount = element();
+// A page without [data-chat-status] and a browser without IntersectionObserver: the chat starts at once.
+const bare = Object.assign(element(), { closest: () => null }), bareMount = element();
 bareMount.hidden = true;
-fail = true;
-new vm.Script(source, { importModuleDynamically: load }).runInContext(vm.createContext({
-  document: { querySelector: selector => ({ '[data-chat]': bare, 'typebot-standard': bareMount })[selector] ?? null },
-  getComputedStyle,
-}));
-bare.open = true;
-await bare.handlers.toggle();
-fail = false;
-bare.open = false;
-await bare.handlers.toggle();
-bare.open = true;
-await bare.handlers.toggle();
+run({ querySelector: selector => ({ '[data-chat]': bare, 'typebot-standard': bareMount })[selector] ?? null }, false);
+await settle();
+assert.equal(observers.length, 1, 'no observer created without IntersectionObserver');
 assert.equal(calls, 2);
 assert.equal(bareMount.hidden, false);
-// Opened once: closing and reopening starts no second conversation (pins the second status guard).
-bare.open = false;
-await bare.handlers.toggle();
-bare.open = true;
-await bare.handlers.toggle();
-assert.equal(calls, 2);
-console.log('PASS: video.js click-only, each launcher embeds its own id (youtube-nocookie, focused), frame title = visible caption without « (nouvel onglet) », else the launcher label; chat click-only loading from the local pinned copy, light published bot, blocked SDK retry, no duplicate conversation, no status line needed.');
+assert.equal(imports.length, 3);
+
+// A page without the chat: no observer, nothing loaded.
+run({ querySelector: () => null });
+await settle();
+assert.equal(observers.length, 1);
+assert.equal(imports.length, 3);
+console.log('PASS: video.js click-only, each launcher embeds its own id (youtube-nocookie, focused), frame title = visible caption without « (nouvel onglet) », else the launcher label; chat started on view by an IntersectionObserver on its section (nothing loaded before, one conversation when seen, none twice; blocked SDK retried on the next sight, then the observer disconnected), at once without the observer, from the local pinned copy, light published bot, no status line needed.');

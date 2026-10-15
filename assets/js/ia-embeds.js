@@ -1,9 +1,9 @@
 (() => {
   const chat = document.querySelector('[data-chat]');
   const status = document.querySelector('[data-chat-status]');
-  let loading = false, ready = false;
-  chat?.addEventListener('toggle', async () => {
-    if (!chat.open || loading || ready) return;
+  let loading = false, ready = false, io = null;
+  const start = async () => {
+    if (loading || ready) return;
     loading = true;
     try {
       if (status) {
@@ -29,10 +29,18 @@
       document.querySelector('typebot-standard').hidden = false;
       if (status) status.hidden = true;
       ready = true;
+      io?.disconnect();
     } catch {
-      if (status) status.textContent = 'La conversation est indisponible ici. Utilisez le lien Typebot ou contactez-nous ci-dessous. Fermez puis rouvrez pour réessayer.';
+      if (status) status.textContent = 'La conversation est indisponible ici. Utilisez le lien Typebot ou contactez-nous ci-dessous.';
     } finally {
       loading = false;
     }
-  });
+  };
+  if (!chat) return;
+  /* La conversation démarre seule quand sa section arrive à l'écran (essai suivant au prochain passage si le
+     chargement échoue) ; sans IntersectionObserver, dès le chargement de la page. */
+  if (typeof IntersectionObserver === 'function') {
+    io = new IntersectionObserver(entries => { if (entries.some(e => e.isIntersecting)) start(); });
+    io.observe(chat.closest('section') || chat);
+  } else start();
 })();
