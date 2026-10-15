@@ -1,0 +1,207 @@
+=== DELTA CONFIRMATION BRIEF - pass p65 - review contact 2 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): claude-opus-5-5 @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are the SAME independent auditor who requested the newest fixes. Confirm only that delta. Do not restart the audit and do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p65\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: ONLY the delta since the last audit: DELTA for fixes A-001..A-003 only, all in the ROOT repository C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW (product unchanged at a4131b8, seal 39c143a123bf2897 as at r1). Root commit 073af85: PLAN.md section Deferred / Release acceptance gains two appended lines 'Release audit P65 A-001' (the five third-party blog pictures, owner gesture) and 'Release audit P65 A-002' (Typebot video bubble loads youtube.com/embed with autoplay when the chat starts on view; owner deletes it before publication, else the chat goes back to a click) - appended rather than edited into the existing Typebot bullet because the Pass may not remove or rewrite a line under that heading; root .gitignore gains outputs/ next to archive/ (folder not read, moved or staged); the pending root doc edits (PLAN 65 status Done + evidence pointer, ARCHITECTURE .WIP untracked + home Strategie card without picture, AGENTS .WIP gotcha line) are committed. Decisive checks: from the root, git diff -U0 848e2f5 -- PLAN.md (only removed line = the 65 heading's old status token), git status --short empty, git check-ignore -v outputs/x names .gitignore. Same rules as contact 1: no fetch/push/deploy, network 127.0.0.1 and Google Fonts only, scratch under scratchpad\auditor-p65.. The earlier round already cleared the rest - do not re-audit it and do not re-run its checks.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 4f3875c7841ea562b470f5ec9574a5348f6521cd
+  .WIP/pass-loop-p26/screenshots/desktop-1200.jpg    |   Bin 313374 -> 0 bytes
+   .WIP/pass-loop-p26/screenshots/mobile-375.jpg      |   Bin 244236 -> 0 bytes
+   .../evidence/captures-r1/footer-home-1200.jpg      |   Bin 65366 -> 0 bytes
+   .../evidence/captures-r1/header-home-1000.jpg      |   Bin 67889 -> 0 bytes
+   .../evidence/captures-r1/header-home-1200.jpg      |   Bin 73944 -> 0 bytes
+   .../evidence/captures-r1/header-home-861.jpg       |   Bin 59806 -> 0 bytes
+   .../evidence/captures-r1/header-home-880.jpg       |   Bin 62297 -> 0 bytes
+   .../evidence/captures-r1/header-home-900.jpg       |   Bin 60747 -> 0 bytes
+   .../evidence/captures-r1/header-venture-1200.jpg   |   Bin 68270 -> 0 bytes
+   .../evidence/captures-r1/menu-venture-375.jpg      |   Bin 26520 -> 0 bytes
+   .../evidence/captures-r1/render-result.json        |   457 -
+   .../evidence/captures/footer-home-1200.jpg         |   Bin 65366 -> 0 bytes
+   .../evidence/captures/header-home-1000.jpg         |   Bin 67889 -> 0 bytes
+   .../evidence/captures/header-home-1200.jpg         |   Bin 73944 -> 0 bytes
+   .../evidence/captures/header-home-861.jpg          |   Bin 59806 -> 0 bytes
+   .../ev
+  [diff display truncated; inspect the complete diff against the named Pass base]
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Do NOT rerun `code-audit`; its valid earlier verdict already cleared the rest.
+2. Inspect only the newest fix section below and the files named under SCOPE.
+3. Re-run each decisive check named by that fix. GREEN only if the requested fix is complete, every check passes, and the delta introduced no Tier 1 or Tier 2 issue.
+4. If it still needs work, append ONE new `## Audit fixes to implement` section to C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p65\pass-work.md.
+
+PRIOR FINDINGS
+Confirm the requested fixes and their affected behavior:
+## Audit fixes to implement — 2026-10-15
+Release audit, code-audit REPO mode over product 670f72f..a4131b8 (contact 1 of 2, fresh auditor).
+BLOCKING_STATUS: NON_BLOCKING
+READINESS: READY_WITH_FIXES
+REASON: All code checks pass and this Pass changed nothing visible. Two owner-side risks found in the release range are missing from the release checklist (PLAN § Deferred / Release acceptance), and one release criterion cannot pass as things stand.
+NATIVE CHECKS: `node tools/check.mjs --all` PASS — 16 pages, three executed tests PASS, BLOG 12 articles, census 0 without rule / 0 without use
+NATIVE CHECKS: `node tools/version.mjs --check` PASS — 40 references; `node tools/shell.mjs --check` PASS — 9 pages, 7 stubs
+NATIVE CHECKS: `git diff --check 4f3875c HEAD` PASS; `git diff --check 670f72f HEAD -- . ':(exclude).WIP'` PASS
+NATIVE CHECKS: `.WIP` 0 tracked, `git check-ignore -v .WIP/x` = `.gitignore:4`, 121 tracked files, cited `git show <sha>:.WIP/…` evidence reachable (product 27b136c 60582be 271bd50 6b7a59e 8d850e5; root cee3e9e) PASS
+NATIVE CHECKS: workflow blob ae13e30 identical at 670f72f and HEAD, one `if: ${{ false }}` PASS; `FORM_ENDPOINT: ""` PASS; secret scan of `git log -p 670f72f..HEAD` + discover_repo `secret_paths` [] PASS
+NATIVE CHECKS: auditor render, 10 routes x 1200/375 x scripts on/off, HEAD vs 4f3875c export: 80 loads, 0 section-height diffs, 0 script errors, 0 failed requests, Inter loaded, home `.card--strategie` background identical PASS
+NATIVE CHECKS: auditor contact render 1200/375: scripts on = prefilled mailto, « vous devez encore l’envoyer », no delivery claim; scripts off = draft link + phone, no overflow PASS
+NATIVE CHECKS: `tools/logo-band.py` re-run (17f0a00, the unreviewed item of § Release acceptance P52) rebuilds all 13 `pictures/band_*.png` byte for byte; widths/heights match `index.html`, CSS 48 px PASS
+SCOPE: CLEAN — the Pass diff is .gitignore, the two pictures, one CSS line + comment and the ?v= stamps, all asked by § 65 decisions 1–2
+COVERAGE: 20/20 changed non-.WIP files read (the 614 `.WIP` index removals not read: untracked scratch, still on disk and reachable in history, checked by count and `git cat-file -e`)
+
+### A-001 | Tier 2 | MEDIUM | `assets/img/blog/l-ia-fait-le-job-de-700-personnes-1.webp`, `assets/img/blog/enjeu-1-de-l-ia-sa-vitesse-d-evolution-1.png`
+- issue: Five blog pictures added since 670f72f are clearly someone else's work, and the § Release acceptance licence list does not name them. They are a BFM Business TV frame showing an identifiable guest (`l-ia-fait-le-job-de-700-personnes-1.webp`), two portraits of Barack Obama of unstated origin (`enjeu-1-de-l-ia-sa-vitesse-d-evolution-1.png`), and three charts copied whole from Berkeley (`enjeu-1-de-l-ia-sa-vitesse-d-evolution-2.webp`), bloomberry/Revealera (`l-ia-modifie-t-elle-deja-le-marche-du-travail-1.png`) and Bain & Company (`corporate-venture-building-longer-to-startup-quicker-to-scaleup-1-1.png`). The P57/P58 rule only checks the Wix prefix `ea3de5_`, which shows who uploaded a file, not who owns it, so it cannot catch these.
+- fix: Owner-side route, no code. Add one line to PLAN § Deferred / Release acceptance that names the five files: before publication the owner confirms each one is his own, licensed, or quoted with its source; otherwise he replaces or drops it (light route: the picture line of its `tools/blog/` file, the picture file, then `node tools/blog-sync.mjs`). Name the same gesture in PROGRESS Open « Publication ».
+- test: From the root, `git diff 848e2f5 -- PLAN.md` shows the added line naming the five files under § Release acceptance, and no line removed under that heading.
+
+### A-002 | Tier 2 | MEDIUM | `assets/js/ia-embeds.js:42`, `assets/js/vendor/typebot-js-0.10.11/web.js:56`
+- issue: Since Pass 64, the Typebot chat starts without a click as soon as Entreprise IA « Réflexion » comes on screen. The bot's first bubble is a YouTube video, which Typebot embeds from `https://www.youtube.com/embed` (not youtube-nocookie) with autoplay on by default (`isAutoplayEnabled:!0`). So every visitor who scrolls there loads a YouTube frame, and its cookies, without consent. This goes against the site's own click-to-play rule (PLAN § V1.1 D2) and the privacy page's « ni bannière cookies » (`politique-confidentialite/index.html:105`). The issue is recorded only in PROGRESS Open, not in the Typebot line of § Release acceptance.
+- fix: Owner-side route. Extend the Typebot bullet of § Release acceptance: before publication the owner deletes the video bubble in the Typebot editor (his 2026-10-15 remark « Tout supprimer, y compris la vidéo »). If he keeps the video, the chat goes back to starting on a click before publication (code, light route).
+- test: The § Release acceptance Typebot bullet names the video bubble and the owner's gesture, with no line removed under the heading.
+
+### A-003 | Tier 2 | LOW | root `outputs/` (project root repository)
+- issue: The release criterion « `git status --short` is clean in both repositories », and this Pass's Done When 4, cannot pass. Root `git status --short` lists `?? outputs/` (the owner's private Excel pilot), and no root ignore rule covers it, although PROGRESS Next Action says « `outputs/` and `archive/` stay out of git ».
+- fix: Add `outputs/` to the root `.gitignore` next to `archive/`, or have the owner move the folder out of the project. Then commit the pending root doc edits.
+- test: From the project root, `git status --short` prints nothing and `git check-ignore -v outputs/x` names `.gitignore`.
+
+NOTE (Tier 3, advisory, not to implement in this Pass):
+- Three more pictures are used by no page: `assets/img/about-business-model.webp`, `pictures/1ai_chg_mgt.png` (450 KB) and `pictures/logo_linkedin_nb.png`. They were already unused at 670f72f; remove them later by the light route.
+- Three client logos are new since 670f72f (Mazars, Guide Michelin, Fabereo). The owner confirms he may show them, as for the ten earlier ones.
+- `/tools/` and `/.github/` are served by the static root. They are already public on GitHub, and robots.txt disallows `/tools/`.
+- The root PLAN working copy already marks § 65 « Status Done » before this verdict was given.
+
+```json
+{
+  "token": "2edc0b3a",
+  "verdict": "FIX",
+  "confidence": "high",
+  "evidence": [
+    {
+      "cmd": "node tools/check.mjs --all",
+      "result": "PASS"
+    },
+    {
+      "cmd": "node tools/version.mjs --check",
+      "result": "PASS"
+    },
+    {
+      "cmd": "node tools/shell.mjs --check",
+      "result": "PASS"
+    },
+    {
+      "cmd": "git diff --check 4f3875c HEAD",
+      "result": "PASS"
+    },
+    {
+      "cmd": "git diff --check 670f72f HEAD -- . ':(exclude).WIP'",
+      "result": "PASS"
+    },
+    {
+      "cmd": "git ls-files .WIP | wc -l (0); git check-ignore -v .WIP/x (.gitignore:4); git ls-files | wc -l (121)",
+      "result": "PASS"
+    },
+    {
+      "cmd": "git cat-file -e 27b136c/60582be/271bd50/6b7a59e/8d850e5 :.WIP/... (product) and cee3e9e:.WIP/pass-loop-p8/pass-work.md (root)",
+      "result": "PASS"
+    },
+    {
+      "cmd": "git diff --quiet 670f72f HEAD -- .github/workflows/deploy-hostinger.yml (blob ae13e30 both)",
+      "result": "PASS"
+    },
+    {
+      "cmd": "grep FORM_ENDPOINT assets/js/config.js (FORM_ENDPOINT: '')",
+      "result": "PASS"
+    },
+    {
+      "cmd": "git log -p 670f72f..HEAD | grep -E secret/key/token/private-key/webhook patterns; python discover_repo.py . (secret_paths empty)",
+      "result": "PASS"
+    },
+    {
+      "cmd": "node render.mjs: 10 routes x 1200/375 x scripts on/off, HEAD (127.0.0.1:4173) vs 4f3875c export (127.0.0.1:4175)",
+      "result": "PASS"
+    },
+    {
+      "cmd": "node contact.mjs: /contact/ at 1200/375 scripts on (prefilled mailto, no delivery claim) and off (draft link fallback)",
+      "result": "PASS"
+    },
+    {
+      "cmd": "python tools/logo-band.py (scratch copy, output redirected) vs pictures/band_*.png sha256",
+      "result": "PASS"
+    },
+    {
+      "cmd": "visual review of every picture added since 670f72f vs PLAN Release acceptance licence lines",
+      "result": "FAIL"
+    },
+    {
+      "cmd": "grep -o -F 'https://www.youtube.com/embed' assets/js/vendor/typebot-js-0.10.11/web.js (Typebot video bubble; chat started on view by assets/js/ia-embeds.js:42)",
+      "result": "FAIL"
+    },
+    {
+      "cmd": "git -C C:/Users/aymar/AYS_CODING/code-SOURCINNO_WWW status --short (?? outputs/)",
+      "result": "FAIL"
+    }
+  ],
+  "opened_fix_section": true
+}
+```
+
+AUDIT r1 COST: 273,453 tokens, 1,031.6 s (17.2 min), FIX. INVOCATION: Agent subagent (pass-auditor), id in the session's task notice. USAGE BASIS: whole-contact (Agent completion notice `subagent_tokens`; cumulative-vs-incremental split not exposed).
+
+OWNER CHOICE (peak hours hook, between rounds): « Continue through peak hours; finish Pass 65 now. »
+
+## FIX ROUND 1 (A-001..A-003, root repository only; product unchanged at a4131b8)
+- A-001: PLAN § Release acceptance + one line « Release audit P65 A-001 » naming the five files, their likely owners and the owner gesture (confirm rights or replace/drop, light route).
+- A-002: PLAN § Release acceptance + one line « Release audit P65 A-002 » (the Typebot video bubble loads youtube.com/embed with autoplay when the chat starts on view; owner deletes the bubble before publication, else the chat goes back to a click). Appended, not edited into the existing Typebot bullet: the Pass may not remove or rewrite a line under that heading.
+- A-003: root `.gitignore` + `outputs/` (next to `archive/`, which it already holds for the same reason; the folder is neither read, moved nor staged); pending root doc edits committed.
+Root commit 073af85 (`.gitignore`, AGENTS, ARCHITECTURE, PLAN). PROGRESS and CHANGELOG are written after the verdict (bookkeeping).
+
+## TEST-RESULTS r2
+TREE: 39c143a123bf2897
+CMD: `git diff -U0 848e2f5 -- PLAN.md` · `git -C .. status --short` · `git -C .. check-ignore -v outputs/x` · `node tools/check.mjs --all` · `node tools/version.mjs --check` · `node tools/shell.mjs --check`
+RESULT: PASS — PLAN diff vs the Planner inputs: +4 −1, the only removed line is the § 65 heading's old status token « Not started »; the two A-001/A-002 lines added under § Release acceptance, none removed there. Root `git status --short` prints nothing (0 lines) at 073af85; `check-ignore` = `.gitignore:24:outputs/`. Product native checks at a4131b8: check.mjs 0 (16 pages), version 0, shell 0.
+NOTES: product seal unchanged from r1 (39c143a123bf2897): the fixes touched the root repository only.
+
+
+YOUR ANSWER - the only thing that is read
+Append to C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW\current sourcinno site- code\.WIP\pass-loop-p65\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "2f1199bb",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.

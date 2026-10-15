@@ -1,0 +1,140 @@
+RENDER p65: old http://127.0.0.1:4174 (4f3875c copy) against new http://127.0.0.1:4173; 10 routes x 1200/375 x scripts on/off
+== scripts on
+   ok   / 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /, new /
+   ok   / 1200: 8 heights (header, each main block, footer) = 4f3875c
+   ok   / 1200: script errors 0 (4f3875c: 0)
+   ok   / 1200: home service cards, computed background-image and size = 4f3875c:
+        card card--service card--strategie | linear-gradient(130deg, rgba(18, 37, 63, 0.3), rgba(26, 54, 93, 0.15)), repeating-linear-gradient(145deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 34px, rgba(159, 227, 224, 0.22) 35px, rgba(159, 227, 224, 0.22) 36px), linear-gradient(135deg, rgb(16, 36, 61), rgb(36, 84, 106)) | 544x467
+        card card--service card--ia | url("/pictures/1ai_hero.jpg") | 544x467
+   ok   / 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /, new /
+   ok   / 375: 8 heights (header, each main block, footer) = 4f3875c
+   ok   / 375: script errors 0 (4f3875c: 0)
+   ok   / 375: home service cards, computed background-image and size = 4f3875c:
+        card card--service card--strategie | linear-gradient(130deg, rgba(18, 37, 63, 0.3), rgba(26, 54, 93, 0.15)), repeating-linear-gradient(145deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 34px, rgba(159, 227, 224, 0.22) 35px, rgba(159, 227, 224, 0.22) 36px), linear-gradient(135deg, rgb(16, 36, 61), rgb(36, 84, 106)) | 327x450
+        card card--service card--ia | url("/pictures/1ai_hero.jpg") | 327x447
+   ok   /service-strategie-transformation/ 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-strategie-transformation/, new /service-strategie-transformation/
+   ok   /service-strategie-transformation/ 1200: 7 heights (header, each main block, footer) = 4f3875c
+   ok   /service-strategie-transformation/ 1200: script errors 0 (4f3875c: 0)
+   ok   /service-strategie-transformation/ 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-strategie-transformation/, new /service-strategie-transformation/
+   ok   /service-strategie-transformation/ 375: 7 heights (header, each main block, footer) = 4f3875c
+   ok   /service-strategie-transformation/ 375: script errors 0 (4f3875c: 0)
+   ok   /service-ia-business/ 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-ia-business/, new /service-ia-business/
+   ok   /service-ia-business/ 1200: 7 heights (header, each main block, footer) = 4f3875c
+   ok   /service-ia-business/ 1200: script errors 0 (4f3875c: 0)
+   ok   /service-ia-business/ 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-ia-business/, new /service-ia-business/
+   ok   /service-ia-business/ 375: 7 heights (header, each main block, footer) = 4f3875c
+   ok   /service-ia-business/ 375: script errors 0 (4f3875c: 0)
+   ok   /service-venture-building/ 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-venture-building/, new /service-venture-building/
+   ok   /service-venture-building/ 1200: 9 heights (header, each main block, footer) = 4f3875c
+   ok   /service-venture-building/ 1200: script errors 0 (4f3875c: 0)
+   ok   /service-venture-building/ 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-venture-building/, new /service-venture-building/
+   ok   /service-venture-building/ 375: 9 heights (header, each main block, footer) = 4f3875c
+   ok   /service-venture-building/ 375: script errors 0 (4f3875c: 0)
+   ok   /portfolio/ 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-venture-building/, new /service-venture-building/
+   ok   /portfolio/ 1200: 9 heights (header, each main block, footer) = 4f3875c
+   ok   /portfolio/ 1200: script errors 0 (4f3875c: 0)
+   ok   /portfolio/ 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-venture-building/, new /service-venture-building/
+   ok   /portfolio/ 375: 9 heights (header, each main block, footer) = 4f3875c
+   ok   /portfolio/ 375: script errors 0 (4f3875c: 0)
+   ok   /publications/ 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /publications/, new /publications/
+   ok   /publications/ 1200: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /publications/ 1200: script errors 0 (4f3875c: 0)
+   ok   /publications/ 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /publications/, new /publications/
+   ok   /publications/ 375: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /publications/ 375: script errors 0 (4f3875c: 0)
+   ok   /contact/ 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /contact/, new /contact/
+   ok   /contact/ 1200: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /contact/ 1200: script errors 0 (4f3875c: 0)
+   ok   /contact/ 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /contact/, new /contact/
+   ok   /contact/ 375: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /contact/ 375: script errors 0 (4f3875c: 0)
+   ok   /mentions-legales/ 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /mentions-legales/, new /mentions-legales/
+   ok   /mentions-legales/ 1200: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /mentions-legales/ 1200: script errors 0 (4f3875c: 0)
+   ok   /mentions-legales/ 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /mentions-legales/, new /mentions-legales/
+   ok   /mentions-legales/ 375: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /mentions-legales/ 375: script errors 0 (4f3875c: 0)
+   ok   /politique-confidentialite/ 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /politique-confidentialite/, new /politique-confidentialite/
+   ok   /politique-confidentialite/ 1200: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /politique-confidentialite/ 1200: script errors 0 (4f3875c: 0)
+   ok   /politique-confidentialite/ 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /politique-confidentialite/, new /politique-confidentialite/
+   ok   /politique-confidentialite/ 375: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /politique-confidentialite/ 375: script errors 0 (4f3875c: 0)
+   ok   /404.html 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /404.html, new /404.html
+   ok   /404.html 1200: 3 heights (header, each main block, footer) = 4f3875c
+   ok   /404.html 1200: script errors 0 (4f3875c: 0)
+   ok   /404.html 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /404.html, new /404.html
+   ok   /404.html 375: 3 heights (header, each main block, footer) = 4f3875c
+   ok   /404.html 375: script errors 0 (4f3875c: 0)
+== scripts off
+   ok   / 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /, new /
+   ok   / 1200 scripts off: 8 heights (header, each main block, footer) = 4f3875c
+   ok   / 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   / 1200 scripts off: home service cards, computed background-image and size = 4f3875c:
+        card card--service card--strategie | linear-gradient(130deg, rgba(18, 37, 63, 0.3), rgba(26, 54, 93, 0.15)), repeating-linear-gradient(145deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 34px, rgba(159, 227, 224, 0.22) 35px, rgba(159, 227, 224, 0.22) 36px), linear-gradient(135deg, rgb(16, 36, 61), rgb(36, 84, 106)) | 544x467
+        card card--service card--ia | url("/pictures/1ai_hero.jpg") | 544x467
+   ok   / 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /, new /
+   ok   / 375 scripts off: 8 heights (header, each main block, footer) = 4f3875c
+   ok   / 375 scripts off: script errors 0 (4f3875c: 0)
+   ok   / 375 scripts off: home service cards, computed background-image and size = 4f3875c:
+        card card--service card--strategie | linear-gradient(130deg, rgba(18, 37, 63, 0.3), rgba(26, 54, 93, 0.15)), repeating-linear-gradient(145deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 34px, rgba(159, 227, 224, 0.22) 35px, rgba(159, 227, 224, 0.22) 36px), linear-gradient(135deg, rgb(16, 36, 61), rgb(36, 84, 106)) | 327x450
+        card card--service card--ia | url("/pictures/1ai_hero.jpg") | 327x447
+   ok   /service-strategie-transformation/ 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-strategie-transformation/, new /service-strategie-transformation/
+   ok   /service-strategie-transformation/ 1200 scripts off: 7 heights (header, each main block, footer) = 4f3875c
+   ok   /service-strategie-transformation/ 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   /service-strategie-transformation/ 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-strategie-transformation/, new /service-strategie-transformation/
+   ok   /service-strategie-transformation/ 375 scripts off: 7 heights (header, each main block, footer) = 4f3875c
+   ok   /service-strategie-transformation/ 375 scripts off: script errors 0 (4f3875c: 0)
+   ok   /service-ia-business/ 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-ia-business/, new /service-ia-business/
+   ok   /service-ia-business/ 1200 scripts off: 7 heights (header, each main block, footer) = 4f3875c
+   ok   /service-ia-business/ 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   /service-ia-business/ 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-ia-business/, new /service-ia-business/
+   ok   /service-ia-business/ 375 scripts off: 7 heights (header, each main block, footer) = 4f3875c
+   ok   /service-ia-business/ 375 scripts off: script errors 0 (4f3875c: 0)
+   ok   /service-venture-building/ 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-venture-building/, new /service-venture-building/
+   ok   /service-venture-building/ 1200 scripts off: 9 heights (header, each main block, footer) = 4f3875c
+   ok   /service-venture-building/ 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   /service-venture-building/ 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-venture-building/, new /service-venture-building/
+   ok   /service-venture-building/ 375 scripts off: 9 heights (header, each main block, footer) = 4f3875c
+   ok   /service-venture-building/ 375 scripts off: script errors 0 (4f3875c: 0)
+   ok   /portfolio/ 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-venture-building/, new /service-venture-building/
+   ok   /portfolio/ 1200 scripts off: 9 heights (header, each main block, footer) = 4f3875c
+   ok   /portfolio/ 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   /portfolio/ 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /service-venture-building/, new /service-venture-building/
+   ok   /portfolio/ 375 scripts off: 9 heights (header, each main block, footer) = 4f3875c
+   ok   /portfolio/ 375 scripts off: script errors 0 (4f3875c: 0)
+   ok   /publications/ 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /publications/, new /publications/
+   ok   /publications/ 1200 scripts off: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /publications/ 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   /publications/ 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /publications/, new /publications/
+   ok   /publications/ 375 scripts off: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /publications/ 375 scripts off: script errors 0 (4f3875c: 0)
+   ok   /contact/ 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /contact/, new /contact/
+   ok   /contact/ 1200 scripts off: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /contact/ 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   /contact/ 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /contact/, new /contact/
+   ok   /contact/ 375 scripts off: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /contact/ 375 scripts off: script errors 0 (4f3875c: 0)
+   ok   /mentions-legales/ 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /mentions-legales/, new /mentions-legales/
+   ok   /mentions-legales/ 1200 scripts off: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /mentions-legales/ 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   /mentions-legales/ 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /mentions-legales/, new /mentions-legales/
+   ok   /mentions-legales/ 375 scripts off: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /mentions-legales/ 375 scripts off: script errors 0 (4f3875c: 0)
+   ok   /politique-confidentialite/ 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /politique-confidentialite/, new /politique-confidentialite/
+   ok   /politique-confidentialite/ 1200 scripts off: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /politique-confidentialite/ 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   /politique-confidentialite/ 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /politique-confidentialite/, new /politique-confidentialite/
+   ok   /politique-confidentialite/ 375 scripts off: 4 heights (header, each main block, footer) = 4f3875c
+   ok   /politique-confidentialite/ 375 scripts off: script errors 0 (4f3875c: 0)
+   ok   /404.html 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /404.html, new /404.html
+   ok   /404.html 1200 scripts off: 3 heights (header, each main block, footer) = 4f3875c
+   ok   /404.html 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   /404.html 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /404.html, new /404.html
+   ok   /404.html 375 scripts off: 3 heights (header, each main block, footer) = 4f3875c
+   ok   /404.html 375 scripts off: script errors 0 (4f3875c: 0)
+== kept capture
+   ok   capture services-cards-1200.jpg: Inter loaded true
+   ok   capture services-cards-1200.jpg: #services 1185x800 wholly inside the 1400 px viewport
+        capture services-cards-1200.jpg 1185x800
+RENDER: 126 checks, failing 0

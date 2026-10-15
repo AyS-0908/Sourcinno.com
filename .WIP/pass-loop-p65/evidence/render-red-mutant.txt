@@ -1,0 +1,40 @@
+RENDER p65: old http://127.0.0.1:4174 (4f3875c copy) against new http://127.0.0.1:4175; 2 routes x 1200/375 x scripts on/off — PARTIAL RUN
+== scripts on
+   ok   / 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /, new /
+   FAIL / 1200: 8 heights (header, each main block, footer) = 4f3875c; first difference #7: 4f3875c « footer.site-footer 363.5 » now « footer.site-footer 438.5 »
+   ok   / 1200: script errors 0 (4f3875c: 0)
+   FAIL / 1200: home service cards, computed background-image and size = 4f3875c:
+        card card--service card--strategie | none | 544x467
+        card card--service card--ia | url("/pictures/1ai_hero.jpg") | 544x467
+   ok   / 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /, new /
+   FAIL / 375: 8 heights (header, each main block, footer) = 4f3875c; first difference #7: 4f3875c « footer.site-footer 850.5 » now « footer.site-footer 925.5 »
+   ok   / 375: script errors 0 (4f3875c: 0)
+   FAIL / 375: home service cards, computed background-image and size = 4f3875c:
+        card card--service card--strategie | none | 327x450
+        card card--service card--ia | url("/pictures/1ai_hero.jpg") | 327x447
+   ok   /contact/ 1200: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /contact/, new /contact/
+   FAIL /contact/ 1200: 4 heights (header, each main block, footer) = 4f3875c; first difference #3: 4f3875c « footer.site-footer 363.5 » now « footer.site-footer 438.5 »
+   ok   /contact/ 1200: script errors 0 (4f3875c: 0)
+   ok   /contact/ 375: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /contact/, new /contact/
+   FAIL /contact/ 375: 4 heights (header, each main block, footer) = 4f3875c; first difference #3: 4f3875c « footer.site-footer 850.5 » now « footer.site-footer 925.5 »
+   ok   /contact/ 375: script errors 0 (4f3875c: 0)
+== scripts off
+   ok   / 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /, new /
+   FAIL / 1200 scripts off: 8 heights (header, each main block, footer) = 4f3875c; first difference #7: 4f3875c « footer.site-footer 363.5 » now « footer.site-footer 438.5 »
+   ok   / 1200 scripts off: script errors 0 (4f3875c: 0)
+   FAIL / 1200 scripts off: home service cards, computed background-image and size = 4f3875c:
+        card card--service card--strategie | none | 544x467
+        card card--service card--ia | url("/pictures/1ai_hero.jpg") | 544x467
+   ok   / 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /, new /
+   FAIL / 375 scripts off: 8 heights (header, each main block, footer) = 4f3875c; first difference #7: 4f3875c « footer.site-footer 850.5 » now « footer.site-footer 925.5 »
+   ok   / 375 scripts off: script errors 0 (4f3875c: 0)
+   FAIL / 375 scripts off: home service cards, computed background-image and size = 4f3875c:
+        card card--service card--strategie | none | 327x450
+        card card--service card--ia | url("/pictures/1ai_hero.jpg") | 327x447
+   ok   /contact/ 1200 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /contact/, new /contact/
+   FAIL /contact/ 1200 scripts off: 4 heights (header, each main block, footer) = 4f3875c; first difference #3: 4f3875c « footer.site-footer 363.5 » now « footer.site-footer 438.5 »
+   ok   /contact/ 1200 scripts off: script errors 0 (4f3875c: 0)
+   ok   /contact/ 375 scripts off: ready old/new true/true, Inter loaded old/new true/true (attempts 1/1); final path old /contact/, new /contact/
+   FAIL /contact/ 375 scripts off: 4 heights (header, each main block, footer) = 4f3875c; first difference #3: 4f3875c « footer.site-footer 850.5 » now « footer.site-footer 925.5 »
+   ok   /contact/ 375 scripts off: script errors 0 (4f3875c: 0)
+RENDER: 28 checks, failing 12 — PARTIAL RUN (routes /, /contact/, no capture): not the full render
