@@ -1093,6 +1093,15 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .viewer__btn:hover:not(:disabled) { background: var(--teal-dark); border-color: var(--teal-dark); }
 .viewer__btn:disabled { background: var(--white); border-color: var(--border); color: var(--grey-500); cursor: default; }
 .viewer__pos { min-width: 3.5em; text-align: center; color: var(--text-muted); font-weight: 600; font-variant-numeric: tabular-nums; }
+/* Relecture V1.2 (2026-10-15) : les deux schémas à la même hauteur, sans bande grise, aussi larges que le permet
+   le schéma large ; « ‹ » / « › » posés sur les schémas (même case de grille), la position dessous. */
+#reflexion .container:has(> .viewer.is-on) { --viewer-h: min(32rem, calc((100vw - 3rem) * .56)); display: grid; }
+.viewer.is-on, .viewer.is-on + .viewer__nav { grid-area: 2 / 1; width: 100%; max-width: calc(var(--viewer-h) * 1.78 + 12px); justify-self: center; }
+.viewer.is-on > .band-figure { max-width: none; }
+.viewer.is-on img { height: var(--viewer-h); width: auto; object-fit: contain; }
+.viewer.is-on + .viewer__nav { margin: 0; justify-content: space-between; padding-inline: var(--space-2); pointer-events: none; }
+.viewer.is-on + .viewer__nav > * { pointer-events: auto; }
+.viewer.is-on + .viewer__nav .viewer__pos { align-self: flex-end; margin-bottom: -2.75rem; }
 @media (max-width: 640px) {
   .service-levels { grid-template-columns: 1fr; }
 }
