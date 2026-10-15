@@ -1,9 +1,0 @@
-ok   /publications/               GEh_2faSLb0 mouse    title="Vidéo « Du PIB au BCI »" focused=true
-ok   /publications/               GEh_2faSLb0 keyboard title="Vidéo « Du PIB au BCI »" focused=true
-ok   /service-ia-business/        hDFiKEFv5kA mouse    title="Vidéo « AI for BUSINESS »" focused=true
-ok   /service-ia-business/        hDFiKEFv5kA keyboard title="Vidéo « AI for BUSINESS »" focused=true
-ok   /service-venture-building/   7qO3G7tCHr8 mouse    title="Vidéo « CorpAngels : TechnoService SaaS pour création de StartUps »" focused=true
-ok   /service-venture-building/   7qO3G7tCHr8 keyboard title="Vidéo « CorpAngels : TechnoService SaaS pour création de StartUps »" focused=true
-ok   /service-venture-building/   QtzlMHaUGyM mouse    title="Vidéo « corpangels Corporates — July23 »" focused=true
-ok   /service-venture-building/   QtzlMHaUGyM keyboard title="Vidéo « corpangels Corporates — July23 »" focused=true
-VIDEO http://127.0.0.1:4173: 8 launches, FAILURES 0, outside non-YouTube requests 0 (YouTube hosts resolve to NOTFOUND)

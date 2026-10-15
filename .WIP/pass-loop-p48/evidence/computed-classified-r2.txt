@@ -1,9 +1,0 @@
-summary {"pagesWidths": 20, "totalElements": 4544, "totalDiffs": 33, "totalSavedDiffs": 0, "badMedia": 0, "outside": [], "newTokensAdded": {}}
-   8  contact form slot shift (A-003 removed p.error)
-  16  grid child min-width only (A-001 .grid > *)
-   3  offer hero veil ::before (A-002)
-   4  overflow-wrap only
-  wrap: /contact/ @1200 | html>body:1>main:2>section:1>div:0>div:0>div:0>ul:1>li:0>a:1 | ['::after', '::before', 'element']
-  wrap: /mentions-legales/ @1200 | html>body:1>main:2>section:1>div:0>ul:1>li:8>a:1 | ['::after', '::before', 'element']
-  wrap: /contact/ @375 | html>body:1>main:2>section:1>div:0>div:0>div:0>ul:1>li:0>a:1 | ['::after', '::before', 'element']
-  wrap: /mentions-legales/ @375 | html>body:1>main:2>section:1>div:0>ul:1>li:8>a:1 | ['::after', '::before', 'element']
