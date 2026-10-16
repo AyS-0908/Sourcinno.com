@@ -1,0 +1,83 @@
+=== FULL AUDIT BRIEF - pass 4 - review contact 1 of 3 ===
+REVIEW SETTINGS (declared; not verified by this script): opus @ effort 4 (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are a FRESH auditor with zero memory of this work. You GRADE it. You do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-gtm-blog-4\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: everything this Pass changed: FULL SLICE of gtm-blog PLAN § 4 (spec: C:\Users\aymar\AYS_CODING\_AI_SKILLS\skill-gtm-blog\PLAN.md § 4 + the Coder prompt C:\Users\aymar\AYS_CODING\_AI_SKILLS\skill-gtm-blog\prompts\pass4-coder.md). THREE repositories; this seal covers the PRODUCT repository only. (1) PRODUCT (this repo, all uncommitted vs base 7eb3df9: git status; git diff -M 7eb3df9 --stat; untracked publications/blog.css, publications/blog.js, blog/profile.json): blog/profile.json, publications/articles/ (12 moved from tools/blog/), publications/img/ (30 moved from assets/img/blog/), publications/index.html, publications/blog.css + blog.js (engine-written), assets/css/style.css, tools/check.mjs, tools/version.mjs, tools/shell.mjs, deleted tools/blog-sync.mjs + tools/blog-sync.test.mjs + assets/js/blog.js, 16 pages restamped. (2) DOCS ROOT, NOT sealed: git -C C:\Users\aymar\AYS_CODING\code-SOURCINNO_WWW diff -- AGENTS.md ARCHITECTURE.md CHANGELOG.md PROGRESS.md (PROGRESS.md also holds the OWNER's own uncommitted edits: only the two Pass 4 lines are this Pass's; PLAN.md README.md prompts/ are the owner's, out of scope). (3) WORKBENCH, NOT sealed: git -C C:\Users\aymar\AYS_CODING\_AI_SKILLS diff -- skill-gtm-blog/PLAN.md (status token only; skill-gtm-blog/PROGRESS.md is written at closure). Engine (skill-gtm-blog/scripts, references, SKILL.md) must be UNCHANGED. Evidence and journal-side artifacts: .WIP/pass-loop-gtm-blog-4/ (prove-identity.mjs, list-before.txt, list-after.txt, verify/*.png, r1-check.txt). Engine path for re-runs: C:\Users\aymar\AYS_CODING\_AI_SKILLS\skill-gtm-blog\scripts\blog.mjs. No live system: verify serves the product folder on 127.0.0.1 only. Never push, never touch main, never run Sync-SkillsManifest.ps1, never edit the engine; mutations only on copies in the system temp folder.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 7eb3df92f09f578a2443053dc6a65b89b962d087
+  404.html                                           |   2 +-
+   ai-business.html                                   |   2 +-
+   assets/css/style.css                               |  11 +-
+   assets/js/blog.js                                  |  32 ---
+   blog/profile.json                                  |  69 +++++
+   contact/index.html                                 |   2 +-
+   index.html                                         |   2 +-
+   mentions-legales/index.html                        |   2 +-
+   offre-ia-business/index.html                       |   2 +-
+   offre-strategie-organisation-processus/index.html  |   2 +-
+   offre-venture-building/index.html                  |   2 +-
+   politique-confidentialite/index.html               |   2 +-
+   portfolio/index.html                               |   2 +-
+   prototypes/index.html                              |   2 +-
+   ...rporate-venture-building-4-engie-x-wefound.html |   2 +-
+   .../corporate-venture-building-en-1-mot.html       |  36 +++
+   ...ing-longer-to-startup-quicker-to-scaleup-1.html |   2 +-
+   .../enjeu-1-de-l-ia-sa-vitesse-d-evolution.html    |   4 +-
+   .../articles}/gpts-attention-1.html          
+  [diff display truncated; inspect the complete diff against the named Pass base]
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Use the `code-audit` skill in phase-gate mode. Do not invent or modify audit logic.
+2. Re-run the cheapest decisive check for every claim you rely on.
+3. GREEN only if there is no Tier 1 or Tier 2 finding and every check passes.
+4. Need testing -> MORE_TESTS; append `## TEST-REQUESTS` with every AUTO/MANUAL request.
+5. Findings -> append ONE `## Audit fixes to implement` section to .WIP\pass-loop-gtm-blog-4\pass-work.md.
+
+PRIOR FINDINGS
+  none recorded before this contact.
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-gtm-blog-4\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "ccc7c1d5",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 3 contacts this Pass can afford, and the
+Pass never goes green on it.
