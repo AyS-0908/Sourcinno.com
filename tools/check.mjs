@@ -17,8 +17,9 @@
  *   --seo      meta Open Graph, longueurs de title/description, sitemap complet, et chaque
  *              Service JSON-LD : url vers une page locale existante, name dans son <title> ou <h1>
  *   --all      tous les groupes, plus les tests executes (tools/portfolio.test.mjs,
- *              tools/test-ia-embeds.mjs, tools/blog-sync.test.mjs) et
- *              `node tools/blog-sync.mjs --check` (liste du blog = fichiers de tools/blog/, hors ligne)
+ *              tools/test-ia-embeds.mjs) et `blog.mjs check` du moteur gtm-blog (liste du blog
+ *              de Publications = fichiers de publications/articles/, images, liens, hors ligne ;
+ *              moteur : $GTM_BLOG_DIR, sinon ../../_AI_SKILLS/skill-gtm-blog depuis la racine)
  *
  * Groupes RETIRES avec leur sujet (en Pass 1, sauf mention) :
  *   --copy     le marqueur TODO-PASS-SUIVANT n'existe plus nulle part dans l'arbre ;
@@ -55,8 +56,9 @@ const note = (msg) => notes.push(msg);
 
 /* ---------- decouverte des fichiers ---------- */
 /* .WIP : brouillons et preuves des Passes, jamais servis ; un .html ou un .js
-   laisse la ne devient pas une page ou un script du site. */
-const SKIP_DIRS = new Set([".git", "node_modules", ".github", "tools", ".WIP"]);
+   laisse la ne devient pas une page ou un script du site. blog (profil du moteur
+   gtm-blog) et articles (fragments d articles, lus par le moteur) : pas des pages. */
+const SKIP_DIRS = new Set([".git", "node_modules", ".github", "tools", ".WIP", "blog", "articles"]);
 
 function walk(dir, out = []) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
@@ -337,7 +339,8 @@ function checkStructure() {
   // 9. recensement inverse : toute classe nommee par un selecteur (memes feuilles
   //    et <style>) sert quelque part : jeton class="…"/class='…' d une page ou de
   //    tools/shell/*.html, ou mot d une chaine "…", '…' ou `…` d un script
-  //    (assets/js/**, _v2 compris, VENDOR exclu, et <script> en ligne hors JSON-LD des pages et
+  //    (assets/js/**, _v2 compris, VENDOR exclu, publications/blog.js ecrit par le moteur gtm-blog
+  //    (puces .chip), et <script> en ligne hors JSON-LD des pages et
   //    de la coquille ; commentaires ignores). Limite : une expression reguliere
   //    litterale contenant un guillemet hors d un gabarit `…` decalerait la lecture.
   //    Seules exceptions : une classe dont le nom est compose par un script, avec
@@ -352,7 +355,7 @@ function checkStructure() {
   const sourcesHtml = [...pages.map((p) => p.html), ...partiels];
   const jetons = new Set(sourcesHtml.flatMap(classTokens));
   const scriptsTexte = [
-    ...allFiles.filter((f) => /^assets\/js\/.+\.js$/.test(relOf(f)) && !isVendor(f)).map((f) => readFileSync(f, "utf8")),
+    ...allFiles.filter((f) => (/^assets\/js\/.+\.js$/.test(relOf(f)) && !isVendor(f)) || relOf(f) === "publications/blog.js").map((f) => readFileSync(f, "utf8")),
     ...sourcesHtml.flatMap((h) => [...live(h).matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)]
       .filter((m) => !/ld\+json/i.test(m[1])).map((m) => m[2])),
   ];
@@ -953,7 +956,7 @@ function checkSeo() {
 
 /* ---------- tests executes (--all) ---------- */
 function runTests() {
-  for (const f of ["tools/portfolio.test.mjs", "tools/test-ia-embeds.mjs", "tools/blog-sync.test.mjs"]) {
+  for (const f of ["tools/portfolio.test.mjs", "tools/test-ia-embeds.mjs"]) {
     try {
       // --experimental-vm-modules : test-ia-embeds simule l import() du SDK avec vm.SyntheticModule.
       note(`${f}: ${runNode(["--experimental-vm-modules", join(ROOT, f)]).trim()}`);
@@ -962,10 +965,20 @@ function runTests() {
       fail(f, "test en echec : " + (timedOut(e) || !lines.length ? runFailure(e) : lines.find((l) => /^\w*Error\b/.test(l)) || lines.at(-1)));
     }
   }
-  // La liste du blog de publications/index.html = les fichiers de tools/blog/ (le script ne lit rien d autre).
-  const f = "tools/blog-sync.mjs --check";
+  // La liste du blog de publications/index.html = les fichiers de publications/articles/, verifies par le
+  // moteur gtm-blog (liste, blog.css et blog.js, images, liens). Moteur absent = echec nomme, jamais un vert.
+  const f = "blog.mjs check";
+  const parDefaut = resolve(ROOT, "../../_AI_SKILLS/skill-gtm-blog");
+  const dossier = process.env.GTM_BLOG_DIR ? resolve(process.env.GTM_BLOG_DIR) : parDefaut;
+  const moteur = join(dossier, "scripts/blog.mjs");
+  if (!existsSync(moteur)) {
+    fail(f, process.env.GTM_BLOG_DIR
+      ? `moteur gtm-blog introuvable : ${moteur} (GTM_BLOG_DIR) ; le chemin par defaut ${join(parDefaut, "scripts/blog.mjs")} n est pas essaye quand GTM_BLOG_DIR est defini`
+      : `moteur gtm-blog introuvable : GTM_BLOG_DIR non defini et chemin par defaut ${moteur} absent`);
+    return;
+  }
   try {
-    note(`${f}: ${runNode([join(ROOT, "tools/blog-sync.mjs"), "--check"]).trim()}`);
+    note(`${f}: ${runNode([moteur, "check", ROOT]).trim()}`);
   } catch (e) {
     const lines = String(e.stderr || "").split("\n").map((l) => l.trim()).filter(Boolean);
     fail(f, "en echec : " + (timedOut(e) || !lines.length ? runFailure(e) : lines.join(" | ")));

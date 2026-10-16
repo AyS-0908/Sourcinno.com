@@ -1,0 +1,69 @@
+{
+  "site": {
+    "name": "Sourcinno",
+    "blog_dir": "publications",
+    "lang": "fr",
+    "base_url": "https://www.sourcinno.com",
+    "blog_url": "https://www.sourcinno.com/publications/",
+    "stylesheet": "/assets/css/style.css",
+    "header_html": "",
+    "footer_html": "",
+    "css_vars": {
+      "text": "--text",
+      "accent": "--teal-dark",
+      "border": "--border",
+      "font": "--font-body"
+    },
+    "new_tab_text": null
+  },
+  "voice": {
+    "tone": "?",
+    "length": "?",
+    "words": {
+      "short": null,
+      "medium": null,
+      "long": null
+    },
+    "audience": "",
+    "forbidden_phrases": []
+  },
+  "tags": [
+    "IA",
+    "Venture Building",
+    "Startup"
+  ],
+  "extra_tags": [
+    "^<span aria-hidden=\"true\">$",
+    "^<figure class=\"band-figure\">$",
+    "^<button class=\"video-launch\" type=\"button\" data-video=\"[\\w-]+\" aria-label=\"[^\"<>]+\">$",
+    "^<figcaption>$",
+    "^<\\/(?:figure|figcaption|button)>$"
+  ],
+  "subjects": [],
+  "sources": {
+    "policy": null,
+    "references": []
+  },
+  "calendar": {
+    "cadence": "",
+    "earliest_time": "",
+    "timezone": ""
+  },
+  "modes": {
+    "mode": "review",
+    "auto_unlock_count": 0,
+    "auto_force": false
+  },
+  "publishing": {
+    "remote": "",
+    "branch": "rebuild"
+  },
+  "social": {
+    "languages": [],
+    "channels": [],
+    "hashtags": []
+  },
+  "accords": {
+    "profile": null
+  }
+}

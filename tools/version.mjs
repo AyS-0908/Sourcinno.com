@@ -20,7 +20,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const CHECK_ONLY = process.argv.includes("--check");
-const SKIP = new Set([".git", "node_modules", ".github", "tools", ".WIP"]);
+const SKIP = new Set([".git", "node_modules", ".github", "tools", ".WIP", "blog", "articles"]);
 
 function walk(dir, out = []) {
   for (const e of readdirSync(dir, { withFileTypes: true })) {
@@ -36,8 +36,9 @@ const stamp = (rel) => {
   return createHash("sha256").update(readFileSync(f)).digest("hex").slice(0, 8);
 };
 
-/* Toute URL /assets/....css ou .js dans une page, avec ou sans ?v= deja pose. */
-const ASSET_RE = /(\/assets\/[A-Za-z0-9_\-./]+\.(?:css|js))(\?v=[0-9a-f]{8})?/g;
+/* Toute URL /assets/....css ou .js dans une page, et /publications/blog.css ou .js
+   (ecrits par le moteur gtm-blog), avec ou sans ?v= deja pose. */
+const ASSET_RE = /(\/(?:assets\/[A-Za-z0-9_\-./]+|publications\/blog)\.(?:css|js))(\?v=[0-9a-f]{8})?/g;
 
 const files = walk(ROOT).filter((f) => f.endsWith(".html"));
 const stale = [];

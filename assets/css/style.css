@@ -563,8 +563,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .cta-band .btn { margin-top: var(--space-2); }
 
 /* ---------- Filtres et étiquettes (blog Publications) ---------- */
-.filters { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-bottom: var(--space-4); }
-.filters:empty { display: none; }
 .chip {
   padding: 0.4rem 0.95rem;
   border: 1px solid var(--grey-300);
@@ -577,7 +575,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 .chip:hover { border-color: var(--teal-dark); color: var(--teal-dark); }
-.chip.is-active { background: var(--teal-dark); border-color: var(--teal-dark); color: var(--white); }
+.chip.is-active, .chip[aria-pressed="true"] { background: var(--teal-dark); border-color: var(--teal-dark); color: var(--white); }
 /* .card est en display: flex, qui l emporte sur [hidden] du navigateur : la puce masque ainsi un article. */
 .card[hidden] { display: none; }
 /* Publications : une colonne à la largeur de lecture ; sur ordinateur, les trois cartes (1/3) à côté du blog (2/3).
@@ -925,7 +923,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .disclosure--card .bullets { margin: 0 var(--space-2) var(--space-2); }
 }
 
-/* ---------- Publications : article complet dans un dépliant du blog (écrit par tools/blog-sync.mjs) ---------- */
+/* ---------- Publications : article complet dans un dépliant du blog (écrit par le moteur gtm-blog, blog.mjs sync) ---------- */
 /* Résumé : étiquette, titre, date empilés ; le "+" sur la ligne du titre. */
 #blog-list .disclosure--card summary::after { grid-row: 2; }
 #blog-list .disclosure--card .tags,
@@ -1097,8 +1095,9 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .viewer.is-on + .viewer__nav .viewer__pos { align-self: flex-end; margin-bottom: -2.75rem; }
 
 /* ---------- Portfolio (anciennement dans portfolio/index.html) ---------- */
-  /* Arrivee par /portfolio/ (ancre #portfolio) : le titre de la section sous l en-tete collant (77 px), pas dessous. */
-  #portfolio { scroll-margin-top: 80px; }
+  /* Arrivee par /portfolio/ (ancre #portfolio) ou par l ancre d un article du blog (#<slug>, ouvert par
+     publications/blog.js) : le titre sous l en-tete collant (77 px), pas dessous. */
+  #portfolio, #blog-list > details { scroll-margin-top: 80px; }
   .portfolio-filter { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
   .portfolio-filter[hidden] { display: none; }
   .portfolio-filter .field { margin: 0; min-width: 0; }
