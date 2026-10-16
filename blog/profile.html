@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profil du blog — Sourcinno</title>
+<style>
+  :root { color-scheme: light dark; --fond: #fbfaf7; --texte: #1f1f1f; --doux: #5c5c5c; --cadre: #d9d6cf; --accent: #2a5db0; }
+  @media (prefers-color-scheme: dark) { :root { --fond: #1b1b1d; --texte: #ececec; --doux: #a8a8a8; --cadre: #3a3a3e; --accent: #8fb3ff; } }
+  @media print { :root { --fond: #fff; --texte: #000; --doux: #444; --cadre: #bbb; --accent: #1d4690; } tr { break-inside: avoid; } }
+  body { margin: 0; background: var(--fond); color: var(--texte); font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 50rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  a { color: var(--accent); }
+  h1 { margin: .5rem 0; font-size: 1.6rem; line-height: 1.2; }
+  h2 { margin: 2rem 0 .4rem; font-size: 1.1rem; color: var(--accent); }
+  p { margin: .4rem 0; }
+  .doux, h2 span { color: var(--doux); font-weight: 400; }
+  .bandeau { padding: .5rem .75rem; border: 1px solid var(--cadre); border-radius: 8px; }
+  .large { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; vertical-align: top; font-weight: 400; padding: .35rem 1rem .35rem 0; border-bottom: 1px solid var(--cadre); }
+  thead th, .lignes th { color: var(--doux); }
+  .lignes th { width: 10rem; }
+  tr.groupe th { font-weight: 600; padding-top: 1rem; }
+  tr.non th, tr.non td { color: var(--doux); }
+  tr.total th, tr.total td { font-weight: 600; }
+  .num { text-align: right; white-space: nowrap; }
+  select, textarea, button, input { font: inherit; }
+  select, textarea, input { color: inherit; background: transparent; border: 1px solid var(--cadre); border-radius: 4px; }
+  textarea { box-sizing: border-box; width: 100%; padding: .5rem .75rem; }
+  select, input { field-sizing: content; }
+  input { min-width: 2ch; padding: 0 .2rem; }
+  [contenteditable] { display: inline-block; min-width: 4ch; }
+  [contenteditable]:hover, [contenteditable]:focus { outline: 1px dashed var(--accent); outline-offset: 2px; }
+  .modifie { outline: 1px solid var(--accent); outline-offset: 2px; }
+  #choix { position: sticky; bottom: 0; padding: .5rem 0; background: var(--fond); border-top: 1px solid var(--cadre); }
+  @media print { select { appearance: none; } input { appearance: textfield; } input::-webkit-inner-spin-button { display: none; } select, input { min-width: 0; border: 0; padding: 0; } .modifie { outline: 0; } .ecran, #choix { display: none; } }
+  [contenteditable]:empty { border-bottom: 1px dashed var(--cadre); }
+  @media print { [contenteditable]:empty { border: 0; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Profil du blog — Sourcinno</h1>
+  <p class="doux ecran">Vous décidez : cliquez sur un texte, un chiffre ou un choix pour le changer.</p>
+  <h2>1. Le site</h2>
+  <div class="large"><table class="lignes">
+    <tr><th scope="row">Nom du site</th><td><span data-k="site.name" contenteditable="plaintext-only">Sourcinno</span></td></tr>
+    <tr><th scope="row">Dossier du blog</th><td>publications</td></tr>
+    <tr><th scope="row">Langue</th><td><select data-k="site.lang" aria-label="site.lang"><option selected>français</option><option>anglais</option></select></td></tr>
+    <tr><th scope="row">Adresse publique du site</th><td><span data-k="site.base_url" contenteditable="plaintext-only">https://www.sourcinno.com</span></td></tr>
+    <tr><th scope="row">Adresse publique du blog</th><td><span data-k="site.blog_url" contenteditable="plaintext-only">https://www.sourcinno.com/publications/</span></td></tr>
+    <tr><th scope="row">Feuille de style du site</th><td><span data-k="site.stylesheet" contenteditable="plaintext-only">/assets/css/style.css</span></td></tr>
+    <tr><th scope="row">Fragment d'en-tête</th><td><span data-k="site.header_html" contenteditable="plaintext-only"></span></td></tr>
+    <tr><th scope="row">Fragment de pied de page</th><td><span data-k="site.footer_html" contenteditable="plaintext-only"></span></td></tr>
+    <tr><th scope="row">Variable CSS du texte</th><td><span data-k="site.css_vars.text" contenteditable="plaintext-only">--text</span></td></tr>
+    <tr><th scope="row">Variable CSS de l'accent</th><td><span data-k="site.css_vars.accent" contenteditable="plaintext-only">--teal-dark</span></td></tr>
+    <tr><th scope="row">Variable CSS des bordures</th><td><span data-k="site.css_vars.border" contenteditable="plaintext-only">--border</span></td></tr>
+    <tr><th scope="row">Variable CSS de la police</th><td><span data-k="site.css_vars.font" contenteditable="plaintext-only">--font-body</span></td></tr>
+    <tr><th scope="row">Mention « nouvel onglet » des liens</th><td><span data-k="site.new_tab_text" contenteditable="plaintext-only"></span></td></tr>
+  </table></div>
+  <h2>2. La voix des articles</h2>
+  <div class="large"><table class="lignes">
+    <tr><th scope="row">Ton</th><td><span data-k="voice.tone" contenteditable="plaintext-only">Direct et factuel : phrases courtes, chaque chiffre sourcé, on s'adresse au dirigeant en « vous », et l'article finit par des décisions concrètes.</span></td></tr>
+    <tr><th scope="row">Longueur</th><td><select data-k="voice.length" aria-label="voice.length"><option>Court</option><option selected>Moyen</option><option>Long</option></select></td></tr>
+    <tr><th scope="row">Mots, article court</th><td><input type="number" data-k="voice.words.short" aria-label="voice.words.short" min="0" step="any" value="250"></td></tr>
+    <tr><th scope="row">Mots, article moyen</th><td><input type="number" data-k="voice.words.medium" aria-label="voice.words.medium" min="0" step="any" value="500"></td></tr>
+    <tr><th scope="row">Mots, article long</th><td><input type="number" data-k="voice.words.long" aria-label="voice.words.long" min="0" step="any" value="900"></td></tr>
+    <tr><th scope="row">Lecteurs visés</th><td><span data-k="voice.audience" contenteditable="plaintext-only">Dirigeants et directeurs (DG, DRH, directeurs innovation) d'entreprises établies, en France.</span></td></tr>
+    <tr><th scope="row">Expression interdite</th><td class="doux">Aucune ligne pour l'instant (à ajouter dans la note en bas de page).</td></tr>
+  </table></div>
+  <h2>3. Les étiquettes (une par article)</h2>
+  <div class="large"><table class="lignes">
+    <tr><th scope="row">Étiquette 1</th><td><span data-k="tags.1" contenteditable="plaintext-only">IA</span></td></tr>
+    <tr><th scope="row">Étiquette 2</th><td><span data-k="tags.2" contenteditable="plaintext-only">Venture Building</span></td></tr>
+    <tr><th scope="row">Étiquette 3</th><td><span data-k="tags.3" contenteditable="plaintext-only">Startup</span></td></tr>
+  </table></div>
+  <h2>4. Les balises HTML propres au site</h2>
+  <div class="large"><table class="lignes">
+    <tr><th scope="row">Balise 1</th><td><span data-k="extra_tags.1" contenteditable="plaintext-only">^&lt;span aria-hidden=&quot;true&quot;&gt;$</span></td></tr>
+    <tr><th scope="row">Balise 2</th><td><span data-k="extra_tags.2" contenteditable="plaintext-only">^&lt;figure class=&quot;band-figure&quot;&gt;$</span></td></tr>
+    <tr><th scope="row">Balise 3</th><td><span data-k="extra_tags.3" contenteditable="plaintext-only">^&lt;button class=&quot;video-launch&quot; type=&quot;button&quot; data-video=&quot;[\w-]+&quot; aria-label=&quot;[^&quot;&lt;&gt;]+&quot;&gt;$</span></td></tr>
+    <tr><th scope="row">Balise 4</th><td><span data-k="extra_tags.4" contenteditable="plaintext-only">^&lt;figcaption&gt;$</span></td></tr>
+    <tr><th scope="row">Balise 5</th><td><span data-k="extra_tags.5" contenteditable="plaintext-only">^&lt;\/(?:figure|figcaption|button)&gt;$</span></td></tr>
+  </table></div>
+  <h2>5. Les sujets</h2>
+  <div class="large"><table class="lignes">
+    <tr class="groupe"><th scope="rowgroup" colspan="2">Sujet 1</th></tr>
+    <tr><th scope="row">Titre ou thème</th><td><span data-k="subjects.1.title" contenteditable="plaintext-only">IA : signaux du mois</span></td></tr>
+    <tr><th scope="row">Étiquette</th><td><span data-k="subjects.1.tag" contenteditable="plaintext-only">IA</span></td></tr>
+    <tr><th scope="row">Type</th><td><select data-k="subjects.1.type" aria-label="subjects.1.type"><option>Daté</option><option selected>Continu</option></select></td></tr>
+    <tr><th scope="row">Date (AAAA-MM-JJ)</th><td><span data-k="subjects.1.date" contenteditable="plaintext-only"></span></td></tr>
+    <tr><th scope="row">Source attendue</th><td><span data-k="subjects.1.expected_source" contenteditable="plaintext-only"></span></td></tr>
+    <tr><th scope="row">Sources de moins de (jours)</th><td><input type="number" data-k="subjects.1.max_source_age_days" aria-label="subjects.1.max_source_age_days" min="0" step="any" value="30"></td></tr>
+    <tr><th scope="row">État</th><td><select data-k="subjects.1.status" aria-label="subjects.1.status"><option>À écrire</option><option selected>Écrit</option><option>Abandonné</option></select></td></tr>
+  </table></div>
+  <h2>6. Les sources</h2>
+  <div class="large"><table class="lignes">
+    <tr><th scope="row">Règle</th><td><select data-k="sources.policy" aria-label="sources.policy"><option selected>Cherchées à chaque article</option><option>Proposées à l'avance, validées par vous</option></select></td></tr>
+    <tr><th scope="row">Source de référence</th><td class="doux">Aucune ligne pour l'instant (à ajouter dans la note en bas de page).</td></tr>
+  </table></div>
+  <h2>7. Le calendrier</h2>
+  <div class="large"><table class="lignes">
+    <tr><th scope="row">Rythme</th><td><span data-k="calendar.cadence" contenteditable="plaintext-only"></span></td></tr>
+    <tr><th scope="row">Heure de publication au plus tôt</th><td><span data-k="calendar.earliest_time" contenteditable="plaintext-only"></span></td></tr>
+    <tr><th scope="row">Fuseau horaire</th><td><span data-k="calendar.timezone" contenteditable="plaintext-only"></span></td></tr>
+  </table></div>
+  <h2>8. Le mode de publication</h2>
+  <div class="large"><table class="lignes">
+    <tr><th scope="row">Mode</th><td><select data-k="modes.mode" aria-label="modes.mode"><option selected>Relecture par vous</option><option>Automatique</option></select></td></tr>
+    <tr><th scope="row">Articles publiés en relecture sans retouche</th><td>0</td></tr>
+    <tr><th scope="row">Mode automatique forcé</th><td><select data-k="modes.auto_force" aria-label="modes.auto_force"><option selected>Non</option><option>Oui</option></select></td></tr>
+  </table></div>
+  <h2>9. La publication</h2>
+  <div class="large"><table class="lignes">
+    <tr><th scope="row">Dépôt git</th><td><span data-k="publishing.remote" contenteditable="plaintext-only">origin</span></td></tr>
+    <tr><th scope="row">Branche</th><td><span data-k="publishing.branch" contenteditable="plaintext-only">rebuild</span></td></tr>
+  </table></div>
+  <h2>10. Les posts sur les réseaux</h2>
+  <div class="large"><table class="lignes">
+    <tr><th scope="row">Langue des posts 1</th><td><span data-k="social.languages.1" contenteditable="plaintext-only">fr</span></td></tr>
+    <tr><th scope="row">Canal</th><td class="doux">Aucune ligne pour l'instant (à ajouter dans la note en bas de page).</td></tr>
+    <tr><th scope="row">Hashtag</th><td class="doux">Aucune ligne pour l'instant (à ajouter dans la note en bas de page).</td></tr>
+  </table></div>
+  <h2>11. L'accord sur ce profil</h2>
+  <div class="large"><table class="lignes">
+    <tr><th scope="row">Accord A1 sur le profil</th><td><select data-k="accords.profile" aria-label="accords.profile"><option selected>✓ Donné</option><option>En attente</option></select></td></tr>
+  </table></div>
+  <p>Donné le 2026-10-16 par Aymard de Scorbiac.</p>
+  <p class="doux ecran"><label for="autre">Autre décision (ajouter ou retirer une ligne, autre demande) :</label></p>
+  <textarea id="autre" class="ecran" rows="2"></textarea>
+  <div id="choix" hidden>
+    <p class="doux"><label for="consigne">À coller dans la conversation avec l'IA, qui refait le profil :</label></p>
+    <textarea id="consigne" readonly rows="4" data-head="Utilise la skill gtm-blog sur le profil du blog du site Sourcinno. Voici mes décisions, prises sur la page du profil :" data-tail="Applique-les dans blog/profile.json, corrige ce qui en dépend, relance node scripts/blog.mjs profile sur ce site, puis montre-moi la page." data-colon=" : "></textarea>
+    <p><button id="copier" type="button" data-done="Copié">Copier</button></p>
+  </div>
+</main>
+<script>
+  (() => {
+    const by = id => document.getElementById(id), all = [...document.querySelectorAll('[data-k]')], norm = s => String(s).replace(/\s+/g, ' ').trim();
+    const box = by('choix'), out = by('consigne'), copy = by('copier'), note = by('autre'), word = copy.textContent;
+    const read = e => norm(e.options ? e.options[e.selectedIndex].text : e.value != null ? e.value : e.textContent);
+    const first = new Map(all.map(e => [e, norm(e.options ? [...e.options].find(o => o.defaultSelected).text : e.defaultValue != null ? e.defaultValue : e.textContent)]));
+    const show = () => {
+      const moved = all.filter(e => read(e) !== first.get(e)), more = norm(note.value);
+      for (const e of all) e.className = moved.includes(e) ? 'modifie' : '';
+      box.hidden = !moved.length && !more;
+      out.value = box.hidden ? '' : [out.dataset.head, ...moved.map(e => '- ' + e.dataset.k + out.dataset.colon + read(e)), ...(more ? ['- note' + out.dataset.colon + more] : []), out.dataset.tail].join('\n');
+      copy.textContent = word;
+    };
+    document.addEventListener('input', show);
+    copy.addEventListener('click', () => {
+      const done = ok => { if (ok) copy.textContent = copy.dataset.done; };
+      out.select();
+      if (navigator.clipboard) navigator.clipboard.writeText(out.value).then(() => done(true), () => done(document.execCommand('copy')));
+      else done(document.execCommand('copy'));
+    });
+    addEventListener('pageshow', show);
+  })();
+</script>
+</body>
+</html>

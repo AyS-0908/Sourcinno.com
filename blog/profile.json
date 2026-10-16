@@ -17,14 +17,14 @@
     "new_tab_text": null
   },
   "voice": {
-    "tone": "?",
-    "length": "?",
+    "tone": "Direct et factuel : phrases courtes, chaque chiffre sourcé, on s'adresse au dirigeant en « vous », et l'article finit par des décisions concrètes.",
+    "length": "medium",
     "words": {
-      "short": null,
-      "medium": null,
-      "long": null
+      "short": 250,
+      "medium": 500,
+      "long": 900
     },
-    "audience": "",
+    "audience": "Dirigeants et directeurs (DG, DRH, directeurs innovation) d'entreprises établies, en France.",
     "forbidden_phrases": []
   },
   "tags": [
@@ -39,9 +39,17 @@
     "^<figcaption>$",
     "^<\\/(?:figure|figcaption|button)>$"
   ],
-  "subjects": [],
+  "subjects": [
+    {
+      "title": "IA : signaux du mois",
+      "tag": "IA",
+      "type": "rolling",
+      "max_source_age_days": 30,
+      "status": "written"
+    }
+  ],
   "sources": {
-    "policy": null,
+    "policy": "per_article",
     "references": []
   },
   "calendar": {
@@ -55,15 +63,18 @@
     "auto_force": false
   },
   "publishing": {
-    "remote": "",
+    "remote": "origin",
     "branch": "rebuild"
   },
   "social": {
-    "languages": [],
+    "languages": ["fr"],
     "channels": [],
     "hashtags": []
   },
   "accords": {
-    "profile": null
+    "profile": {
+      "day": "2026-10-16",
+      "name": "Aymard de Scorbiac"
+    }
   }
 }

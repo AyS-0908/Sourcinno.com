@@ -42,6 +42,13 @@
     card.open = true;
     card.scrollIntoView({ block: "start" });
   };
+  for (const c of cards) c.addEventListener("toggle", () => {
+    if (!c.open) return;
+    const top = c.getBoundingClientRect().top;
+    for (const o of cards) if (o !== c && o.open) o.open = false;
+    const moved = c.getBoundingClientRect().top - top;
+    if (moved) scrollBy(0, moved);
+  });
   search.addEventListener("input", show);
   tools.append(search, chips, count);
   list.before(tools);
