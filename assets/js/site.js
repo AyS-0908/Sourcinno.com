@@ -100,7 +100,7 @@
     root.classList.remove("reveal-wait");
   }
 
-  /* --- Liste à aperçu (pages services « Livrables », accueil « +25 ans d'expérience ») ---
+  /* --- Liste à aperçu (accueil « +25 ans d'expérience », en onglets ; P56-P61) ---
      Ordinateur avec souris, 961 px et plus : survoler une ligne ou l'atteindre
      au clavier affiche son détail à côté de la liste. Écran tactile, fenêtre
      plus étroite ou sans ce fichier : le dépliant natif reste. Le détail est
@@ -151,12 +151,6 @@
         root.classList.toggle("is-hover", mq.matches);
         panel.textContent = "";
         if (mq.matches) {
-          /* La section est bien plus haute en mode aperçu : l'apparition au défilement
-             attendrait 8 % de cette hauteur à l'écran et laisserait le premier écran
-             vide sous le héros. Elle est donc montrée dès que le mode s'active.
-             Pas en onglets : la section n'y grandit pas, elle garde son apparition au défilement. */
-          const section = tabs ? null : root.closest(".reveal");
-          if (section) section.classList.add("is-visible");
           items.forEach((d) => { d.open = false; });
           show(current);
           reserve();

@@ -397,20 +397,6 @@ p  { margin: 0 0 var(--space-2); }
 }
 .logo-band img:hover { opacity: 1; filter: grayscale(0); }
 
-/* ---------- Étapes numérotées ---------- */
-.step__n {
-  display: inline-grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: var(--white);
-  font-weight: 700;
-  font-family: var(--font-title);
-  margin-bottom: var(--space-1);
-}
-
 /* ---------- Formulaires ---------- */
 .field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: var(--space-2); }
 .field > label { font-size: 0.88rem; font-weight: 600; }
@@ -893,14 +879,13 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   #experience .disclosure--card summary { min-height: var(--xp-row); }
 }
 
-/* ---------- Dépliant unique : details.disclosure (accueil, pages services) ---------- */
+/* ---------- Dépliant unique : details.disclosure (accueil, Publications) ---------- */
 .disclosure { border-top: 1px solid var(--border); }
 .disclosure summary { display: flex; align-items: baseline; gap: var(--space-2); min-height: 44px; padding: var(--space-2) 0; cursor: pointer; list-style: none; font-weight: 700; line-height: 1.5; }
 .disclosure summary::-webkit-details-marker { display: none; }
 .disclosure summary::after { content: "+"; flex: none; margin-left: auto; color: var(--teal-dark); }
 .disclosure[open] summary::after { content: "−"; }
 .disclosure summary:focus-visible { outline-color: var(--teal-dark); }
-.disclosure__subtitle { color: var(--text-muted); font-weight: 400; }
 /* Carte : titre + sous-titre empilés en colonne 1, le "+" en colonne 2 sur la ligne du titre. */
 .disclosure--card { min-width: 0; }
 .disclosure--card[open] { background: var(--grey-50); border-color: var(--teal-dark); }
@@ -1015,20 +1000,18 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .service-refinement { background: var(--white); overflow-wrap: anywhere; }
 #besoin.service-refinement .section__head { max-width: none; }
 #besoin.service-refinement .lead { padding: var(--space-3); margin-bottom: var(--space-3); border-radius: var(--radius-lg); background: var(--grey-50); font-size: 1rem; line-height: 1.7; font-weight: 400; }
-.service-phases { align-items: start; }
-.service-phase { min-width: 0; box-shadow: none; }
-.service-phase__head { display: flex; align-items: start; gap: var(--space-2); padding-bottom: var(--space-2); }
-.service-phase__head .step__n { flex: none; background: var(--teal-dark); }
-.service-phase__percent { margin: 0; color: var(--teal-dark); font-size: 1rem; font-weight: 700; }
-.service-question-list { list-style: none; margin: 0; padding: 0; }
-.service-question__number { flex: none; color: var(--teal-dark); font-size: 1rem; }
-.service-question { padding: var(--space-2); margin: 0 0 var(--space-1); border-radius: var(--radius); background: var(--grey-50); color: var(--text-muted); }
+/* P68 : blocs de questions (Performance, Entreprise IA) : trois colonnes à partir de 961 px, une seule en dessous. */
+#besoin .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#besoin .card h4 { margin: var(--space-1) 0 0; font-size: 1rem; line-height: 1.4; color: var(--navy); }
+@media (max-width: 960px) {
+  #besoin .grid { grid-template-columns: minmax(0, 1fr); }
+}
 .service-careers { list-style: none; margin: 0; padding: 0; }
 .service-career { min-width: 0; box-shadow: none; }
 .service-career::before { content: ""; display: block; width: 28px; height: 4px; background: var(--teal-dark); border-radius: var(--radius); margin-bottom: var(--space-1); }
 .service-career p { margin: 0; color: var(--text-muted); }
 @media (max-width: 640px) {
-  .service-phase, .service-career { padding: var(--space-2); }
+  .service-career { padding: var(--space-2); }
 }
 
 .service-careers--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1036,36 +1019,17 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .service-careers--two { grid-template-columns: 1fr; }
 }
 
-/* ---------- P36 — Cas d'usage (pages services) : opt-in .service-refinement--usecases, sans effet sur les autres pages ---------- */
-#besoin.service-refinement.service-refinement--usecases .lead { padding: 0; border-radius: 0; background: none; }
-.service-refinement--usecases .service-question-list .disclosure summary { align-items: flex-start; }
-.service-refinement--usecases .service-question-list .disclosure__subtitle { display: block; margin-top: 2px; font-size: .95rem; line-height: 1.5; }
-.service-detail { padding: 0 0 var(--space-2); }
-.service-detail__label { margin: var(--space-2) 0 var(--space-1); font-size: .95rem; font-weight: 700; color: var(--navy); }
-.service-detail .ticks { margin: 0; font-size: .95rem; }
-.service-detail .ticks li { margin-bottom: .4rem; }
-
 /* ---------- P56 — Liste à aperçu : le détail d'une ligne s'affiche à côté de la liste (maquette V1.2, bloc cartes-A) ----------
    .is-hover, .is-active, .is-swap et --hl-min sont posés par site.js, avec une souris et à partir de 961 px seulement.
-   Sans .is-hover (écran tactile, fenêtre étroite, sans script) rien ne change : les dépliants natifs restent tels quels. */
+   Sans .is-hover (écran tactile, fenêtre étroite, sans script) rien ne change : les dépliants natifs restent tels quels.
+   Depuis P68 un seul utilisateur : les onglets de l'accueil (.hl--tabs, plus bas). */
 .hl__detail { display: none; }
 .hl.is-hover { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-2); align-items: stretch; }
 .hl.is-hover > .hl__items { display: grid; gap: var(--space-1); align-content: start; min-height: var(--hl-min, 0px); }
 .hl.is-hover summary::after { content: ""; align-self: center; width: .6rem; height: .6rem; border-top: 2px solid currentColor; border-right: 2px solid currentColor; transform: rotate(45deg); opacity: 0; }
 .hl.is-hover .is-active { background: var(--navy); border-color: var(--navy); color: var(--white); }
 .hl.is-hover .is-active summary::after { opacity: 1; color: var(--accent-on-dark); }
-.hl.is-hover .is-active strong { color: var(--white); }
-.hl.is-hover .is-active .disclosure__subtitle { color: rgba(255, 255, 255, 0.86); }
-.hl.is-hover .is-active .service-question__number { color: var(--accent-on-dark); }
 .hl.is-hover > .hl__detail { display: block; align-self: start; padding: var(--space-3); border: 1px solid var(--teal-dark); border-radius: var(--radius-lg); background: var(--grey-50); }
-.hl.is-hover > .hl__detail .service-detail { padding: 0; }
-.hl.is-hover > .hl__detail .service-question { background: var(--white); }
-/* Livrables : les deux phases l'une sous l'autre, la liste à gauche et le détail à droite. */
-.service-phases:has(.hl.is-hover) { grid-template-columns: 1fr; }
-.service-phase.hl.is-hover { grid-template-areas: "head head" "items detail"; }
-.service-phase.hl.is-hover > .service-phase__head { grid-area: head; }
-.service-phase.hl.is-hover .disclosure { border: 1px solid transparent; border-top-color: var(--border); border-radius: var(--radius); }
-.service-phase.hl.is-hover .disclosure summary { padding: var(--space-2); }
 @media (prefers-reduced-motion: no-preference) {
   .hl.is-hover .disclosure { transition: background-color .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease); }
   .hl.is-hover > .hl__detail.is-swap > * { animation: hl-in .32s var(--ease) both; }
