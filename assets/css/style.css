@@ -808,7 +808,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   background: linear-gradient(125deg, rgba(18, 37, 63, 0.97) 0%, rgba(18, 37, 63, 0.89) 47%, rgba(26, 54, 93, 0.68) 100%);
 }
 .card--service::after { content: "0" counter(offers); position: absolute; top: var(--space-3); left: var(--space-4); color: var(--accent-on-dark); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.12em; }
-#services .grid { counter-reset: offers; }
 #services .card--service { padding-top: 5.5rem; }
 #services .card--service h3 { max-width: 19ch; font-size: clamp(1.4rem, 2.6vw, 1.85rem); }
 #services .card--service .card__foot { margin-top: auto; }
@@ -817,7 +816,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 #services .service-needs li + li { margin-top: var(--space-2); }
 #services .service-needs strong { display: block; color: var(--accent-on-dark); line-height: 1.4; }
 #services .service-needs span { display: block; color: var(--white); font-size: 0.95rem; line-height: 1.5; }
-#services .grid + p { margin: var(--space-3) 0 0; }
 .card--service > * { position: relative; z-index: 1; }
 .card--service h3 { color: var(--white); }
 .card--service p { color: rgba(255, 255, 255, 0.92); }
@@ -942,58 +940,94 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .blog-body td[data-label]::before { content: attr(data-label); display: block; margin-bottom: var(--space-1); color: var(--teal-dark); font-size: 0.85rem; font-weight: 700; line-height: 1.4; }
 }
 
-/* ---------- Accueil : démarche en quatre étapes en ligne, chaque action suivie de ses frameworks et outils ---------- */
-.dm-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); list-style: none; margin: 0; padding: 0; }
-.dm-steps { counter-reset: dm; }
-.dm-step { position: relative; padding-top: 3.25rem; counter-increment: dm; }
-.dm-step::before { content: counter(dm); position: absolute; top: 0; left: 0; display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--teal-dark); color: var(--white); font-weight: 700; }
-.dm-step:not(:last-child)::after { content: ""; position: absolute; top: calc(1.125rem - 1px); left: 2.75rem; right: calc(.5rem - var(--space-4)); height: 2px; background: var(--grey-300); }
-.dm-step h3 { margin-bottom: var(--space-1); font-size: 1.1rem; line-height: 1.3; }
-.dm-step__how { list-style: none; margin: 0; padding: 0; color: var(--text-muted); font-size: .95rem; line-height: 1.5; }
-.dm-step__how li + li { margin-top: var(--space-2); }
-.dm-step__how strong { display: block; color: var(--navy); }
-.dm-step__kit { display: block; margin-top: 2px; font-size: .85rem; line-height: 1.45; }
-@media (max-width: 960px) {
-  .dm-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .dm-step:nth-child(2)::after { display: none; }
-}
+/* ---------- Accueil « Votre enjeu » (Pass 72, maquette v13 option A) : offres → traits → « Création de valeur » → schéma ----------
+   Les traits (svg.vx-lines) sont créés et dessinés par site.js d'après la place réelle des blocs : ils suivent toute largeur.
+   Sans script : ni traits ni chevron, le schéma est affiché. .is-live est posé par site.js. */
+.ico { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.vx { position: relative; counter-reset: offers; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "c1" "c2" "node" "tree"; gap: var(--space-3); }
+.vx-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.vx-lines path { fill: none; stroke: var(--teal); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.vx-lines circle { fill: var(--teal-dark); }
+.vx-lines .draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: vx-draw .7s cubic-bezier(.16, 1, .3, 1) forwards; }
+.vx-lines circle.draw { opacity: 0; animation: vx-fade .3s .45s forwards; }
+@keyframes vx-draw { to { stroke-dashoffset: 0; } }
+@keyframes vx-fade { to { opacity: 1; } }
+.vx-src--1 { grid-area: c1; }
+.vx-src--2 { grid-area: c2; }
+.vx-hub { grid-area: node; position: relative; display: flex; justify-content: center; }
+.vx-tree { grid-area: tree; position: relative; }
+/* Le nœud « Création de valeur » : un vrai bouton (clic, Entrée, Espace) */
+.vx-node { display: flex; align-items: center; gap: 1.25rem; width: 100%; padding: 1rem 1rem 1rem 1.5rem; border: 0; border-radius: 999px; background: var(--navy); color: var(--white); font: inherit; text-align: left; cursor: pointer; box-shadow: var(--shadow); transition: background .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease); }
+.vx-node:hover { background: var(--navy-soft); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.vx-node:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 4px; }
+.vx-node__text { display: flex; flex-direction: column; gap: .2rem; flex: 1; }
+.vx-node__title { font-weight: 700; font-size: 1.1rem; letter-spacing: .06em; line-height: 1.3; }
+.vx-node__goals { color: var(--accent-on-dark); font-size: .95rem; line-height: 1.4; }
+.vx-node__chev { display: grid; place-items: center; flex: none; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: rgba(255, 255, 255, .14); transition: transform .35s cubic-bezier(.16, 1, .3, 1); }
+.vx-node[aria-expanded="true"] .vx-node__chev { transform: rotate(180deg); }
+.vx:not(.is-live) .vx-node { cursor: default; }
+.vx:not(.is-live) .vx-node__chev { display: none; }
+.vx-branches { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+.vx-branch { position: relative; min-width: 0; padding: var(--space-3); background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+.vx-branch__label { margin: 0 0 var(--space-1); font-size: 1.1rem; line-height: 1.3; }
+.vx-branch__formula { margin: 0 0 var(--space-2); color: var(--navy); font-weight: 600; line-height: 1.45; }
+.vx-branch__levers { margin: 0; color: var(--text-muted); font-size: .95rem; line-height: 1.5; }
+.vx-tree.is-entering .vx-branch { animation: vx-in .55s cubic-bezier(.16, 1, .3, 1) both; }
+.vx-tree.is-entering .vx-branch:nth-child(2) { animation-delay: .07s; }
+.vx-tree.is-entering .vx-branch:nth-child(3) { animation-delay: .14s; }
+@keyframes vx-in { from { opacity: 0; translate: 0 14px; } }
+/* ≤ 640 : tout empilé, un trait dans la marge gauche relie offres, nœud et schéma ; ≥ 641 : offres côte à côte, schéma en trois colonnes. */
 @media (max-width: 640px) {
-  .dm-steps { grid-template-columns: 1fr; gap: var(--space-3); }
-  .dm-step { padding: 0 0 0 3.25rem; }
-  .dm-step:not(:last-child)::after { display: block; top: 2.5rem; bottom: calc(-1 * var(--space-3)); left: calc(1.125rem - 1px); right: auto; width: 2px; height: auto; }
+  .vx { row-gap: var(--space-3); }
+  .vx-hub { margin-top: var(--space-2); }
+  .vx-tree { margin-top: var(--space-1); }
+}
+@media (min-width: 641px) {
+  .vx { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: "c1 c2" "node node" "tree tree"; row-gap: var(--space-6); column-gap: var(--space-3); }
+  .vx-node { width: auto; min-width: 22rem; }
+  .vx-branches { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
 }
 
-/* ---------- Accueil « Enjeux » (Pass 67) : arbre de création de valeur en listes imbriquées ----------
-   La racine au-dessus, les trois branches en ligne à partir de 961 px ; dessous, racine à gauche et branches empilées
-   le long d'un trait. Traits en pseudo-éléments, positions en % ou en jetons d'espacement : aucune largeur fixe. */
-.vtree, .vtree__goals, .vtree__branches { list-style: none; margin: 0; padding: 0; }
-.vtree__title, .vtree__goals { width: fit-content; max-width: 100%; background: var(--navy); }
-.vtree__title { margin: 0; padding: var(--space-2) var(--space-3) 0; border-radius: var(--radius-lg) var(--radius-lg) 0 0; color: var(--white); font-family: var(--font-title); font-weight: 700; letter-spacing: .04em; }
-.vtree__goals { display: flex; flex-wrap: wrap; gap: 0 var(--space-2); padding: var(--space-1) var(--space-3) var(--space-2); border-radius: 0 var(--radius-lg) var(--radius-lg) var(--radius-lg); color: var(--accent-on-dark); font-size: .95rem; }
-.vtree__goals li + li::before { content: "·"; margin-right: var(--space-2); }
-.vtree__branches { position: relative; display: grid; gap: var(--space-3); margin-top: var(--space-4); padding-left: var(--space-5); }
-.vtree__branch { position: relative; min-width: 0; padding: var(--space-3); border: 1px solid var(--border); border-top: 3px solid var(--teal); border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-sm); }
-.vtree__label { margin: 0 0 var(--space-1); font-size: 1.1rem; line-height: 1.3; }
-.vtree__formula { margin: 0 0 var(--space-2); color: var(--navy); font-weight: 600; line-height: 1.45; }
-.vtree__levers { margin: 0; color: var(--text-muted); font-size: .95rem; line-height: 1.5; }
-/* Empilé : un trait court vers chaque branche (::before) ; le trait vertical (::after) part de la branche du dessus (de la racine
-   pour la première) et descend jusqu'au bas de sa branche, jusqu'à son milieu pour la dernière : une seule ligne continue. */
-.vtree__branch::before, .vtree__branch::after { content: ""; position: absolute; background: var(--grey-300); }
-.vtree__branch::before { top: 50%; left: calc(var(--space-3) - var(--space-5) - 1px); width: calc(var(--space-5) - var(--space-3)); height: 2px; }
-.vtree__branch::after { --up: var(--space-3); top: calc(-1 * var(--up) - 3px); left: calc(var(--space-3) - var(--space-5) - 1px); width: 2px; height: calc(100% + var(--up) + 4px); }
-.vtree__branch:first-child::after { --up: var(--space-4); }
-.vtree__branch:last-child::after { height: calc(50% + var(--up) + 4px); }
-@media (min-width: 961px) {
-  .vtree__title, .vtree__goals { margin-inline: auto; text-align: center; }
-  .vtree__goals { justify-content: center; border-radius: 0 0 var(--radius-lg) var(--radius-lg); }
-  .vtree__title { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
-  .vtree__branches { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); padding: var(--space-4) 0 0; }
-  /* Un trait de la racine au trait horizontal (centre de la 1re à la 3e branche), un trait court au-dessus de chacune. */
-  .vtree__branches::before, .vtree__branches::after { content: ""; position: absolute; background: var(--grey-300); }
-  .vtree__branches::before { top: calc(-1 * var(--space-4)); left: calc(50% - 1px); width: 2px; height: var(--space-4); }
-  .vtree__branches::after { top: 0; left: calc((100% - 2 * var(--space-4)) / 6); right: calc((100% - 2 * var(--space-4)) / 6); height: 2px; }
-  .vtree__branch::before { top: calc(-1 * var(--space-4) - 3px); left: calc(50% - 1px); width: 2px; height: var(--space-4); }
-  .vtree__branch::after, .vtree__branch:first-child::after { display: none; }
+/* ---------- Accueil « Méthodologie type » (Pass 72, maquette v13 option A) : frise de quatre étapes en onglets ----------
+   site.js montre la frise (.mA-rail, livrée hidden), pose .is-live et les rôles d'onglet, masque les autres étapes et,
+   à partir de 861 px, réserve à chaque étape la hauteur de la plus haute (changer d'étape ne déplace pas la page).
+   Sans script : pas de frise, les quatre étapes l'une sous l'autre. .chip est aussi la puce du blog : règles sous .mA. */
+.mA .act { margin: 0; color: var(--navy); font-weight: 600; line-height: 1.45; }
+.mA .kit { display: grid; gap: .4rem; margin-top: .65rem; }
+.mA .kit__row { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .4rem; margin: 0; font-size: .85rem; line-height: 1.45; }
+.mA .kit__label { display: inline-flex; align-items: center; gap: .3rem; margin-right: .1rem; color: var(--grey-700); font-size: .8rem; font-weight: 600; }
+.mA .kit__label .ico { width: .95rem; height: .95rem; }
+.mA .kit__row--ia { display: block; }
+.mA .kit__row--ia .kit__label { color: var(--teal-dark); vertical-align: -.15em; margin-right: .3rem; }
+.mA .kit__tool { color: var(--text-muted); }
+.mA .chip { display: inline-block; padding: .1rem .6rem; border: 1px solid var(--grey-300); border-radius: .8rem; background: var(--white); color: var(--navy); font-size: .8rem; font-weight: 600; line-height: 1.6; cursor: auto; }
+.mA-rail { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 var(--space-4); }
+.mA-rail[hidden] { display: none; }
+.mA-rail::before, .mA-fill { content: ""; position: absolute; top: calc(1.375rem - 1px); left: 12.5%; height: 2px; }
+.mA-rail::before { right: 12.5%; background: var(--grey-300); }
+.mA-fill { width: 75%; background: var(--teal-dark); transform: scaleX(var(--p, 0)); transform-origin: left; transition: transform .6s cubic-bezier(.16, 1, .3, 1); }
+.mA-tab { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: .6rem; padding: 0 .25rem 1rem; border: 0; background: none; color: var(--grey-700); font: inherit; cursor: pointer; }
+.mA-dot { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; border: 2px solid var(--grey-300); background: var(--white); font-weight: 700; transition: background .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease), transform .3s var(--ease); }
+.mA-tab:hover .mA-dot { border-color: var(--teal-dark); transform: scale(1.06); }
+.mA-tab.is-done .mA-dot { border-color: var(--teal-dark); color: var(--teal-dark); }
+.mA-tab[aria-selected="true"] { color: var(--navy); }
+.mA-tab[aria-selected="true"] .mA-dot { border-color: var(--teal-dark); background: var(--teal-dark); color: var(--white); }
+.mA-tab[aria-selected="true"]::after { content: ""; position: absolute; bottom: 0; left: 25%; right: 25%; height: 3px; border-radius: 3px; background: var(--navy); }
+.mA-name { font-size: .85rem; font-weight: 700; letter-spacing: .04em; line-height: 1.3; text-align: center; }
+.mA-title { display: flex; align-items: center; gap: .75rem; margin: 0 0 var(--space-3); font-size: 1.25rem; }
+.mA-icon { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 50%; background: var(--grey-100); color: var(--navy); }
+.mA-num { color: var(--teal-dark); }
+.mA-actions { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.mA-action { padding: var(--space-3); border-radius: var(--radius-lg); background: var(--bg-alt); }
+.mA-panel + .mA-panel { margin-top: var(--space-5); }
+.mA.is-live .mA-panel + .mA-panel { margin-top: 0; }
+.mA-panel.is-entering .mA-action { animation: vx-in .45s cubic-bezier(.16, 1, .3, 1) both; }
+.mA-panel.is-entering .mA-action:nth-child(2) { animation-delay: .06s; }
+.mA-panel.is-entering .mA-action:nth-child(3) { animation-delay: .12s; }
+@media (max-width: 860px) { .mA-actions { grid-template-columns: minmax(0, 1fr); gap: var(--space-2); } }
+@media (max-width: 640px) {
+  .mA-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .mA-tab { padding-bottom: .75rem; }
 }
 
 /* Services : opt-in local, les pages sœurs gardent leur présentation. */

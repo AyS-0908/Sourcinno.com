@@ -230,6 +230,180 @@
     });
   }
 
+  /* --- « Votre enjeu » (accueil, Pass 72, maquette v13 option A) -------
+     Deux traits courbes des deux offres vers « Création de valeur » ; le
+     bouton ouvre le schéma dessous, relié par trois traits. Les traits sont
+     un SVG créé ici et dessiné d'après la place réelle des blocs : redessiné
+     au redimensionnement, au chargement de la police et pendant l'entrée des
+     branches. Sans ce fichier : pas de SVG, le schéma reste affiché. */
+  function initValueTree() {
+    const NS = "http://www.w3.org/2000/svg";
+    document.querySelectorAll(".vx").forEach((vx) => {
+      const btn = vx.querySelector(".vx-node");
+      const tree = btn && document.getElementById(btn.getAttribute("aria-controls"));
+      if (!tree) return;
+      const svg = document.createElementNS(NS, "svg");
+      svg.setAttribute("class", "vx-lines");
+      svg.setAttribute("aria-hidden", "true");
+      svg.setAttribute("focusable", "false");
+      vx.prepend(svg);
+
+      const box = (el, o) => {
+        const r = el.getBoundingClientRect();
+        return { l: r.left - o.left, t: r.top - o.top, b: r.bottom - o.top, h: r.height, cx: r.left - o.left + r.width / 2 };
+      };
+      /* Ligne brisée aux angles arrondis (rayon r), en chemin SVG. */
+      const rounded = (pts, r) => {
+        let d = "M" + pts[0][0] + " " + pts[0][1];
+        for (let i = 1; i < pts.length - 1; i++) {
+          const p = pts[i - 1], c = pts[i], n = pts[i + 1];
+          const l1 = Math.hypot(c[0] - p[0], c[1] - p[1]), l2 = Math.hypot(n[0] - c[0], n[1] - c[1]);
+          const k = Math.min(r, l1 / 2, l2 / 2);
+          if (k < 0.5) { d += " L" + c[0] + " " + c[1]; continue; }
+          const a = [c[0] - (c[0] - p[0]) / l1 * k, c[1] - (c[1] - p[1]) / l1 * k];
+          const b = [c[0] + (n[0] - c[0]) / l2 * k, c[1] + (n[1] - c[1]) / l2 * k];
+          d += " L" + a[0] + " " + a[1] + " Q" + c[0] + " " + c[1] + " " + b[0] + " " + b[1];
+        }
+        const z = pts[pts.length - 1];
+        return d + " L" + z[0] + " " + z[1];
+      };
+      /* Du bas d'un bloc au haut du suivant : descente droite jusqu'à yS (dégage ce qui est à côté), puis une courbe. */
+      const fan = (x1, y1, x2, y2, yS) => {
+        if (Math.abs(x1 - x2) < 1) return "M" + x1 + " " + y1 + " L" + x2 + " " + y2;
+        const k = (y2 - yS) * 0.6;
+        return "M" + x1 + " " + y1 + " L" + x1 + " " + yS + " C" + x1 + " " + (yS + k) + " " + x2 + " " + (y2 - k) + " " + x2 + " " + y2;
+      };
+      /* Blocs empilés : un trait dans la marge gauche, un court trait vers chaque bloc. */
+      const ay = (e) => e.t + Math.min(e.h / 2, 40);
+      const gutter = (f, t) => {
+        const gx = Math.min(f.l, t.l) - 14;
+        return rounded([[f.l, ay(f)], [gx, ay(f)], [gx, ay(t)], [t.l, ay(t)]], 10);
+      };
+      const inRow = (a) => a.length > 1 && a.every((x) => Math.abs(x.t - a[0].t) < 4);
+
+      const draw = (animate) => {
+        const o = vx.getBoundingClientRect();
+        if (!o.width) return;
+        const cards = [...vx.querySelectorAll(":scope > .card--service")].map((e) => box(e, o));
+        const node = box(btn, o);
+        const br = tree.hidden ? [] : [...tree.querySelectorAll(".vx-branch")].map((e) => box(e, o));
+        const edges = [];
+        const below = cards.every((c) => node.t >= c.b - 1);
+        cards.forEach((c, i) => {
+          edges.push(["in" + i, below && inRow(cards) ? fan(c.cx, c.b, node.cx, node.t, c.b) : gutter(c, node)]);
+        });
+        if (br.length) {
+          const yS = Math.max(node.b, ...cards.filter((c) => c.b <= br[0].t).map((c) => c.b));
+          br.forEach((b, i) => edges.push(["out" + i, inRow(br) ? fan(node.cx, node.b, b.cx, b.t, yS) : gutter(node, b)]));
+        }
+        const old = {};
+        [...svg.children].forEach((e) => { old[e.dataset.k] = e; });
+        edges.forEach(([k, d]) => {
+          let p = old[k], c = old["dot-" + k];
+          const end = d.match(/(-?[\d.]+) (-?[\d.]+)$/);
+          if (!p) {
+            p = document.createElementNS(NS, "path"); p.dataset.k = k; p.setAttribute("pathLength", "1"); svg.appendChild(p);
+            c = document.createElementNS(NS, "circle"); c.dataset.k = "dot-" + k; c.setAttribute("r", "4"); svg.appendChild(c);
+            if (animate && k.startsWith("out")) { p.classList.add("draw"); c.classList.add("draw"); }
+          }
+          p.setAttribute("d", d);
+          c.setAttribute("cx", end[1]); c.setAttribute("cy", end[2]);
+          delete old[k]; delete old["dot-" + k];
+        });
+        Object.values(old).forEach((e) => e.remove());
+      };
+      /* Pendant l'entrée des branches (elles bougent), un dessin par image pendant ms. */
+      const follow = (ms) => {
+        const end = performance.now() + ms;
+        const tick = (now) => { draw(false); if (now < end) requestAnimationFrame(tick); };
+        tick(performance.now());
+      };
+
+      tree.hidden = true;
+      btn.setAttribute("aria-expanded", "false");
+      vx.classList.add("is-live");
+      on(btn, "click", () => {
+        const open = tree.hidden;
+        tree.hidden = !open;
+        btn.setAttribute("aria-expanded", String(open));
+        tree.classList.remove("is-entering");
+        if (open && !reduced) { void tree.offsetWidth; tree.classList.add("is-entering"); }
+        draw(open && !reduced);
+        if (open && !reduced) follow(750);
+      });
+      /* Fin d'entrée des branches : un dernier dessin, même si aucune image n'a été peinte entre-temps (onglet en arrière-plan). */
+      on(tree, "animationend", () => draw(false));
+      if (window.ResizeObserver) new ResizeObserver(() => draw(false)).observe(vx);
+      on(window, "resize", () => draw(false));
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => draw(false));
+      draw(false);
+    });
+  }
+
+  /* --- « Méthodologie type » (accueil, Pass 72, maquette v13 option A) --
+     Onglets : une étape à la fois ; clic, flèches gauche/droite (en boucle),
+     Début, Fin ; un seul onglet atteignable par Tab. À partir de 861 px (trois
+     colonnes) chaque étape réserve la hauteur de la plus haute : changer
+     d'étape ne déplace pas la page. Sans ce fichier : pas de frise, les quatre
+     étapes l'une sous l'autre. */
+  function initStepTabs() {
+    const wide = window.matchMedia("(min-width: 861px)");
+    document.querySelectorAll(".mA").forEach((root) => {
+      const rail = root.querySelector(".mA-rail");
+      const tabs = rail ? [...rail.querySelectorAll("[role=tab]")] : [];
+      const panels = tabs.map((t) => document.getElementById(t.getAttribute("aria-controls")));
+      if (!tabs.length || panels.some((p) => !p)) return;
+      let current = 0;
+      panels.forEach((p, i) => {
+        p.setAttribute("role", "tabpanel");
+        p.setAttribute("aria-labelledby", tabs[i].id);
+        p.tabIndex = 0;
+      });
+
+      const reserve = () => {
+        panels.forEach((p) => p.style.removeProperty("min-height"));
+        if (!wide.matches) return;
+        let max = 0;
+        panels.forEach((p) => {
+          const was = p.hidden;
+          p.hidden = false;
+          max = Math.max(max, Math.ceil(p.getBoundingClientRect().height));
+          p.hidden = was;
+        });
+        panels.forEach((p) => { p.style.minHeight = max + "px"; });
+      };
+      const select = (i, focus, byUser) => {
+        current = i;
+        tabs.forEach((t, j) => {
+          t.setAttribute("aria-selected", String(i === j));
+          t.tabIndex = i === j ? 0 : -1;
+          t.classList.toggle("is-done", j < i);
+          panels[j].hidden = i !== j;
+          panels[j].classList.remove("is-entering");
+        });
+        rail.style.setProperty("--p", i / (tabs.length - 1));
+        if (byUser && !reduced) { void panels[i].offsetWidth; panels[i].classList.add("is-entering"); }
+        if (focus) tabs[i].focus();
+      };
+      tabs.forEach((t, i) => {
+        on(t, "click", () => select(i, false, true));
+        on(t, "keydown", (e) => {
+          const n = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+          if (n === undefined) return;
+          e.preventDefault();
+          select((n + tabs.length) % tabs.length, true, true);
+        });
+      });
+
+      rail.hidden = false;
+      root.classList.add("is-live");
+      select(current, false, false);
+      reserve();
+      on(window, "resize", reserve);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(reserve);
+    });
+  }
+
   /* --- Année du copyright ------------------------------------------- */
   function initYear() {
     document.querySelectorAll("[data-year]").forEach((el) => {
@@ -244,6 +418,8 @@
     initStickyHeader();
     initReveal();
     initHoverList();
+    initValueTree();
+    initStepTabs();
     initYear();
     initViewer();
   }

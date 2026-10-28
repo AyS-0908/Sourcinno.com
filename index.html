@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=c113e923">
+<link rel="stylesheet" href="/assets/css/style.css?v=9e27c361">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -154,16 +154,27 @@
   </div>
 </section>
 
-<!-- SECTION 1 — SERVICES ET BESOINS — PRD §5.1 -->
+<!-- Pictogrammes de « Votre enjeu » et de « Méthodologie type » (Pass 72), repris par les balises <use> des deux sections -->
+<svg class="visually-hidden" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".9"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L20.5 20.5"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 21V3.5M5.5 4h12l-2.5 4.25L17.5 12.5h-12"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3.5 20.5h17M6.5 20.5v-6M11.5 20.5V9M16.5 20.5v-9.5M5.5 9.5l5-4.5 4 3 5-4.5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+</svg>
+
+<!-- SECTION 1 — VOTRE ENJEU — PRD §5.1, maquette v13 option A (Pass 72) : deux offres → « Création de valeur » → son schéma.
+     Les traits sont dessinés par site.js d'après la place réelle des blocs ; sans script, le schéma est affiché, sans traits. -->
 <section class="section" id="services">
   <div class="container">
     <div class="section__head">
       <h2>Votre enjeu</h2>
       <p class="lead"><strong>Développer une croissance profitable et pérenne</strong></p>
     </div>
-    <div class="grid grid--2">
+    <div class="vx">
 
-      <article class="card card--service card--strategie">
+      <article class="card card--service card--strategie vx-src--1">
         <h3>PERFORMANCE</h3>
         <p>Aligner stratégie et transformation</p>
         <ul class="service-needs">
@@ -173,7 +184,7 @@
         <p class="card__foot"><a class="btn btn--primary btn--sm" href="/service-performance/">En savoir +</a></p>
       </article>
 
-      <article class="card card--service card--ia">
+      <article class="card card--service card--ia vx-src--2">
         <h3>ENTREPRISE IA</h3>
         <p>Focaliser l’humain sur la haute valeur ajoutée</p>
         <ul class="service-needs">
@@ -182,6 +193,35 @@
         </ul>
         <p class="card__foot"><a class="btn btn--primary btn--sm" href="/service-ia-business/">En savoir +</a></p>
       </article>
+
+      <div class="vx-hub">
+        <button class="vx-node" type="button" aria-expanded="true" aria-controls="creation-valeur">
+          <span class="vx-node__text">
+            <span class="vx-node__title">CRÉATION DE VALEUR</span>
+            <span class="vx-node__goals"><span>Rentabilité</span> <span aria-hidden="true">·</span> <span>Employés</span> <span aria-hidden="true">·</span> <span>Société</span></span>
+          </span>
+          <span class="vx-node__chev"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></span>
+        </button>
+      </div>
+      <div class="vx-tree" id="creation-valeur">
+        <ul class="vx-branches">
+          <li class="vx-branch">
+            <h3 class="vx-branch__label"><span aria-hidden="true">↗&nbsp;</span><span class="visually-hidden">hausse </span>REVENUS</h3>
+            <p class="vx-branch__formula"><span aria-hidden="true">↗&nbsp;</span><span class="visually-hidden">hausse </span>volume vendu × <span aria-hidden="true">↗&nbsp;</span><span class="visually-hidden">hausse </span>prix unitaire</p>
+            <p class="vx-branch__levers">Stratégie, marketing, ventes, innovation…</p>
+          </li>
+          <li class="vx-branch">
+            <h3 class="vx-branch__label"><span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>DÉPENSES</h3>
+            <p class="vx-branch__formula"><span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>volume consommé × <span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>coût unitaire</p>
+            <p class="vx-branch__levers">Process, productivité, achats, automatisation…</p>
+          </li>
+          <li class="vx-branch">
+            <h3 class="vx-branch__label"><span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>BFR</h3>
+            <p class="vx-branch__formula"><span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>stocks · <span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>délais clients · <span aria-hidden="true">↗&nbsp;</span><span class="visually-hidden">hausse </span>délais fournisseurs</p>
+            <p class="vx-branch__levers">Process, négociation, recouvrement, gestion…</p>
+          </li>
+        </ul>
+      </div>
 
     </div>
   </div>
@@ -314,53 +354,55 @@
   </div>
 </section>
 
-<!-- SECTION 5 — ENJEUX — PLAN § V1.3 (relecture 2026-10-28) : arbre de création de valeur, listes imbriquées -->
-<section class="section reveal" id="enjeux">
-  <div class="container">
-    <div class="section__head">
-      <h2>Enjeux</h2>
-    </div>
-
-    <ul class="vtree">
-      <li>
-        <p class="vtree__title">CRÉATION DE VALEUR</p>
-        <ul class="vtree__goals"><li>Rentabilité</li><li>Employés</li><li>Société</li></ul>
-        <ul class="vtree__branches">
-          <li class="vtree__branch">
-            <h3 class="vtree__label"><span aria-hidden="true">↗&nbsp;</span><span class="visually-hidden">hausse </span>REVENUS</h3>
-            <p class="vtree__formula"><span aria-hidden="true">↗&nbsp;</span><span class="visually-hidden">hausse </span>volume vendu × <span aria-hidden="true">↗&nbsp;</span><span class="visually-hidden">hausse </span>prix unitaire</p>
-            <p class="vtree__levers">Stratégie, marketing, ventes, innovation…</p>
-          </li>
-          <li class="vtree__branch">
-            <h3 class="vtree__label"><span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>DÉPENSES</h3>
-            <p class="vtree__formula"><span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>volume consommé × <span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>coût unitaire</p>
-            <p class="vtree__levers">Process, productivité, achats, automatisation…</p>
-          </li>
-          <li class="vtree__branch">
-            <h3 class="vtree__label"><span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>BFR</h3>
-            <p class="vtree__formula"><span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>stocks · <span aria-hidden="true">↘&nbsp;</span><span class="visually-hidden">baisse </span>délais clients · <span aria-hidden="true">↗&nbsp;</span><span class="visually-hidden">hausse </span>délais fournisseurs</p>
-            <p class="vtree__levers">Process, négociation, recouvrement, gestion…</p>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- SECTION 6 — DÉMARCHE — PLAN § V1.3 : 4 étapes en ligne, chaque action suivie de ses frameworks et outils -->
+<!-- SECTION 5 — MÉTHODOLOGIE — maquette v13 option A (Pass 72) : frise de quatre étapes en onglets, une étape à la fois.
+     site.js montre la frise et masque les autres étapes ; sans script, les quatre étapes l'une sous l'autre. -->
 <section class="section reveal" id="demarche">
   <div class="container">
     <div class="section__head">
       <h2>Méthodologie type</h2>
       <p class="lead">Chaque étape est assistée d’un Agent IA (pré-collecte de données externes, pré-questionnaires, pré-synthèse…)</p>
     </div>
-
-    <ol class="dm-steps">
-      <li class="dm-step"><h3>CADRAGE</h3><ul class="dm-step__how"><li><strong>Confirmation du périmètre → Plan d’actions</strong><span class="dm-step__kit">Frameworks : SMART</span></li><li><strong>Gouvernance (parties prenantes, reporting, comité de suivi)</strong><span class="dm-step__kit">Frameworks : RACI</span></li><li><strong>Kick-off</strong></li></ul></li>
-      <li class="dm-step"><h3>DIAGNOSTIC</h3><ul class="dm-step__how"><li><strong>État des lieux interne (interview, données…) et externe (état de l’art, benchmark)</strong><span class="dm-step__kit">Outils : agents IA de génération de questionnaires auto-administrés, recherche et analyse</span></li><li><strong>Synthèse, analyse d’écarts et facteurs clés de succès</strong><span class="dm-step__kit">Frameworks : SWOT, 5 Whys</span><span class="dm-step__kit">Outils : agents IA de synthèse</span></li><li><strong>Chantiers prioritaires</strong><span class="dm-step__kit">Frameworks : matrice décisionnelle (ex. impact x mise en œuvre)</span></li></ul></li>
-      <li class="dm-step"><h3>CIBLE</h3><ul class="dm-step__how"><li><strong>Brainstorming (ateliers, interviews, recherches)</strong><span class="dm-step__kit">Outils : agents IA : brainstorming, challenging</span></li><li><strong>Arbitrage des scénarii</strong><span class="dm-step__kit">Frameworks : matrice de décision</span></li><li><strong>Conception de la cible (cahier des charges)</strong></li></ul></li>
-      <li class="dm-step"><h3>PLANIFICATION &amp; PILOTAGE</h3><ul class="dm-step__how"><li><strong>Plan de mise en œuvre (actions, compétences, risques, budget…)</strong><span class="dm-step__kit">Frameworks : Gantt, RACI</span></li><li><strong>Assistance opérationnelle continue</strong><span class="dm-step__kit">Outils : agents IA créés par cas spécifique</span></li><li><strong>Reporting → Décisions</strong><span class="dm-step__kit">Frameworks : S-curve</span><span class="dm-step__kit">Outils : agents IA suivi des tâches et reporting</span></li></ul></li>
-    </ol>
+    <div class="mA">
+      <div class="mA-rail" role="tablist" aria-label="Étapes de la méthodologie" hidden>
+        <span class="mA-fill" aria-hidden="true"></span>
+        <button class="mA-tab" type="button" role="tab" id="mA-t1" aria-controls="mA-p1" aria-selected="true" tabindex="0"><span class="mA-dot">1</span><span class="mA-name">CADRAGE</span></button>
+        <button class="mA-tab" type="button" role="tab" id="mA-t2" aria-controls="mA-p2" aria-selected="false" tabindex="-1"><span class="mA-dot">2</span><span class="mA-name">DIAGNOSTIC</span></button>
+        <button class="mA-tab" type="button" role="tab" id="mA-t3" aria-controls="mA-p3" aria-selected="false" tabindex="-1"><span class="mA-dot">3</span><span class="mA-name">CIBLE</span></button>
+        <button class="mA-tab" type="button" role="tab" id="mA-t4" aria-controls="mA-p4" aria-selected="false" tabindex="-1"><span class="mA-dot">4</span><span class="mA-name">PLANIFICATION &amp; PILOTAGE</span></button>
+      </div>
+      <div class="mA-panel" id="mA-p1">
+        <h3 class="mA-title"><span class="mA-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-target"/></svg></span><span class="mA-num">1</span> CADRAGE</h3>
+        <ul class="mA-actions">
+          <li class="mA-action"><p class="act">Confirmation du périmètre → Plan d’actions</p><div class="kit"><p class="kit__row"><span class="kit__label">Frameworks<span class="visually-hidden"> :</span></span> <span class="chip">SMART</span></p></div></li>
+          <li class="mA-action"><p class="act">Gouvernance (parties prenantes, reporting, comité de suivi)</p><div class="kit"><p class="kit__row"><span class="kit__label">Frameworks<span class="visually-hidden"> :</span></span> <span class="chip">RACI</span></p></div></li>
+          <li class="mA-action"><p class="act">Kick-off</p></li>
+        </ul>
+      </div>
+      <div class="mA-panel" id="mA-p2">
+        <h3 class="mA-title"><span class="mA-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-search"/></svg></span><span class="mA-num">2</span> DIAGNOSTIC</h3>
+        <ul class="mA-actions">
+          <li class="mA-action"><p class="act">État des lieux interne (interview, données…) et externe (état de l’art, benchmark)</p><div class="kit"><p class="kit__row kit__row--ia"><span class="kit__label"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>Outils<span class="visually-hidden"> :</span></span> <span class="kit__tool">agents IA de génération de questionnaires auto-administrés, recherche et analyse</span></p></div></li>
+          <li class="mA-action"><p class="act">Synthèse, analyse d’écarts et facteurs clés de succès</p><div class="kit"><p class="kit__row"><span class="kit__label">Frameworks<span class="visually-hidden"> :</span></span> <span class="chip">SWOT</span><span class="visually-hidden">, </span><span class="chip">5 Whys</span></p><p class="kit__row kit__row--ia"><span class="kit__label"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>Outils<span class="visually-hidden"> :</span></span> <span class="kit__tool">agents IA de synthèse</span></p></div></li>
+          <li class="mA-action"><p class="act">Chantiers prioritaires</p><div class="kit"><p class="kit__row"><span class="kit__label">Frameworks<span class="visually-hidden"> :</span></span> <span class="chip">matrice décisionnelle (ex. impact x mise en œuvre)</span></p></div></li>
+        </ul>
+      </div>
+      <div class="mA-panel" id="mA-p3">
+        <h3 class="mA-title"><span class="mA-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-flag"/></svg></span><span class="mA-num">3</span> CIBLE</h3>
+        <ul class="mA-actions">
+          <li class="mA-action"><p class="act">Brainstorming (ateliers, interviews, recherches)</p><div class="kit"><p class="kit__row kit__row--ia"><span class="kit__label"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>Outils<span class="visually-hidden"> :</span></span> <span class="kit__tool">agents IA : brainstorming, challenging</span></p></div></li>
+          <li class="mA-action"><p class="act">Arbitrage des scénarii</p><div class="kit"><p class="kit__row"><span class="kit__label">Frameworks<span class="visually-hidden"> :</span></span> <span class="chip">matrice de décision</span></p></div></li>
+          <li class="mA-action"><p class="act">Conception de la cible (cahier des charges)</p></li>
+        </ul>
+      </div>
+      <div class="mA-panel" id="mA-p4">
+        <h3 class="mA-title"><span class="mA-icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-chart"/></svg></span><span class="mA-num">4</span> PLANIFICATION &amp; PILOTAGE</h3>
+        <ul class="mA-actions">
+          <li class="mA-action"><p class="act">Plan de mise en œuvre (actions, compétences, risques, budget…)</p><div class="kit"><p class="kit__row"><span class="kit__label">Frameworks<span class="visually-hidden"> :</span></span> <span class="chip">Gantt</span><span class="visually-hidden">, </span><span class="chip">RACI</span></p></div></li>
+          <li class="mA-action"><p class="act">Assistance opérationnelle continue</p><div class="kit"><p class="kit__row kit__row--ia"><span class="kit__label"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>Outils<span class="visually-hidden"> :</span></span> <span class="kit__tool">agents IA créés par cas spécifique</span></p></div></li>
+          <li class="mA-action"><p class="act">Reporting → Décisions</p><div class="kit"><p class="kit__row"><span class="kit__label">Frameworks<span class="visually-hidden"> :</span></span> <span class="chip">S-curve</span></p><p class="kit__row kit__row--ia"><span class="kit__label"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-spark"/></svg>Outils<span class="visually-hidden"> :</span></span> <span class="kit__tool">agents IA suivi des tâches et reporting</span></p></div></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -404,6 +446,6 @@
   </div>
 </footer>
 <script src="/assets/js/config.js?v=46fb6aef" defer></script>
-<script src="/assets/js/site.js?v=c2fc9b93" defer></script>
+<script src="/assets/js/site.js?v=94f43afc" defer></script>
 </body>
 </html>
