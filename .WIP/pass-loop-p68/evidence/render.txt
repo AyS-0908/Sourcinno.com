@@ -1,0 +1,374 @@
+RENDER p68: NEW http://127.0.0.1:4176 vs BASE http://127.0.0.1:4177 — 4 pages x 5 widths x scripts on/off x 2 motions; home tabs 961/1100/1200 + touch; #experience computed style 1200/375
+== A. /service-performance/
+   ok   /service-performance/ 1200 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 1200 scripts on motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (367 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 1200 scripts on motion no-preference: right edges past 1200: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 4/4 ["inside:figure.band-figure 1977.5","inside:a 1971.5","inside:img 1834.9","inside:figcaption 1971.5"]
+   ok   /service-performance/ 1200 scripts on motion no-preference: #besoin 3 columns (354.656px 354.672px 354.656px) tops 623.5/623.5/623.5 lefts 36.5/415.2/793.8 widths 354.7/354.7/354.7; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 1200 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-performance/ 1200 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 1200 scripts on motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (367 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 1200 scripts on motion reduce: right edges past 1200: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 4/4 ["inside:figure.band-figure 1977.5","inside:a 1971.5","inside:img 1834.9","inside:figcaption 1971.5"]
+   ok   /service-performance/ 1200 scripts on motion reduce: #besoin 3 columns (354.656px 354.672px 354.656px) tops 623.5/623.5/623.5 lefts 36.5/415.2/793.8 widths 354.7/354.7/354.7; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 1200 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-performance/ 1200 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 1200 scripts off motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (362 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 1200 scripts off motion no-preference: right edges past 1200: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-performance/ 1200 scripts off motion no-preference: #besoin 3 columns (354.656px 354.672px 354.656px) tops 623.5/623.5/623.5 lefts 36.5/415.2/793.8 widths 354.7/354.7/354.7; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 1200 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-performance/ 1200 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 1200 scripts off motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (362 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 1200 scripts off motion reduce: right edges past 1200: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-performance/ 1200 scripts off motion reduce: #besoin 3 columns (354.656px 354.672px 354.656px) tops 623.5/623.5/623.5 lefts 36.5/415.2/793.8 widths 354.7/354.7/354.7; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 1200 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-performance/ 961 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 961 scripts on motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (367 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 961 scripts on motion no-preference: right edges past 961: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 4/4 ["inside:figure.band-figure 1820","inside:a 1814","inside:img 1689.6","inside:figcaption 1814"]
+   ok   /service-performance/ 961 scripts on motion no-preference: #besoin 3 columns (283.328px 283.328px 283.344px) tops 615/615/615 lefts 24/331.3/638.7 widths 283.3/283.3/283.3; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 961 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-performance/ 961 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 961 scripts on motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (367 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 961 scripts on motion reduce: right edges past 961: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 4/4 ["inside:figure.band-figure 1820","inside:a 1814","inside:img 1689.6","inside:figcaption 1814"]
+   ok   /service-performance/ 961 scripts on motion reduce: #besoin 3 columns (283.328px 283.328px 283.344px) tops 615/615/615 lefts 24/331.3/638.7 widths 283.3/283.3/283.3; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 961 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-performance/ 961 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 961 scripts off motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (362 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 961 scripts off motion no-preference: right edges past 961: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-performance/ 961 scripts off motion no-preference: #besoin 3 columns (283.328px 283.328px 283.344px) tops 615/615/615 lefts 24/331.3/638.7 widths 283.3/283.3/283.3; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 961 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-performance/ 961 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 961 scripts off motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (362 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 961 scripts off motion reduce: right edges past 961: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-performance/ 961 scripts off motion reduce: #besoin 3 columns (283.328px 283.328px 283.344px) tops 615/615/615 lefts 24/331.3/638.7 widths 283.3/283.3/283.3; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 961 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-performance/ 768 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 768 scripts on motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (367 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 768 scripts on motion no-preference: right edges past 768: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 4/4 ["inside:figure.band-figure 1464","inside:a 1458","inside:img 1355.3","inside:figcaption 1458"]
+   ok   /service-performance/ 768 scripts on motion no-preference: #besoin one column (720px) tops 548.2/922.3/1269.1 lefts 24/24/24 widths 720/720/720; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 768 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-performance/ 768 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 768 scripts on motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (367 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 768 scripts on motion reduce: right edges past 768: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 4/4 ["inside:figure.band-figure 1464","inside:a 1458","inside:img 1355.3","inside:figcaption 1458"]
+   ok   /service-performance/ 768 scripts on motion reduce: #besoin one column (720px) tops 548.2/922.3/1269.1 lefts 24/24/24 widths 720/720/720; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 768 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-performance/ 768 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 768 scripts off motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (362 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 768 scripts off motion no-preference: right edges past 768: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-performance/ 768 scripts off motion no-preference: #besoin one column (720px) tops 548.2/922.3/1269.1 lefts 24/24/24 widths 720/720/720; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 768 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-performance/ 768 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 768 scripts off motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (362 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 768 scripts off motion reduce: right edges past 768: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-performance/ 768 scripts off motion reduce: #besoin one column (720px) tops 548.2/922.3/1269.1 lefts 24/24/24 widths 720/720/720; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 768 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-performance/ 375 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 375 scripts on motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (367 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 375 scripts on motion no-preference: right edges past 375: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 4/4 ["inside:figure.band-figure 678","inside:a 672","inside:img 628.6","inside:figcaption 672"]
+   ok   /service-performance/ 375 scripts on motion no-preference: #besoin one column (327px) tops 593/1157.3/1797.8 lefts 24/24/24 widths 327/327/327; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 375 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-performance/ 375 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 375 scripts on motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (367 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 375 scripts on motion reduce: right edges past 375: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 4/4 ["inside:figure.band-figure 678","inside:a 672","inside:img 628.6","inside:figcaption 672"]
+   ok   /service-performance/ 375 scripts on motion reduce: #besoin one column (327px) tops 593/1157.3/1797.8 lefts 24/24/24 widths 327/327/327; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 375 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-performance/ 375 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 375 scripts off motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (362 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 375 scripts off motion no-preference: right edges past 375: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-performance/ 375 scripts off motion no-preference: #besoin one column (327px) tops 593/1157.3/1797.8 lefts 24/24/24 widths 327/327/327; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 375 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-performance/ 375 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 375 scripts off motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (362 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 375 scripts off motion reduce: right edges past 375: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-performance/ 375 scripts off motion reduce: #besoin one column (327px) tops 593/1157.3/1797.8 lefts 24/24/24 widths 327/327/327; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 375 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-performance/ 320 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 320 scripts on motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (367 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 320 scripts on motion no-preference: right edges past 320: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 4/4 ["inside:figure.band-figure 568","inside:a 562","inside:img 526.9","inside:figcaption 562"]
+   ok   /service-performance/ 320 scripts on motion no-preference: #besoin one column (272px) tops 623.2/1350.7/2148.8 lefts 24/24/24 widths 272/272/272; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 320 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-performance/ 320 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 320 scripts on motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (367 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 320 scripts on motion reduce: right edges past 320: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 4/4 ["inside:figure.band-figure 568","inside:a 562","inside:img 526.9","inside:figcaption 562"]
+   ok   /service-performance/ 320 scripts on motion reduce: #besoin one column (272px) tops 623.2/1350.7/2148.8 lefts 24/24/24 widths 272/272/272; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 320 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-performance/ 320 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 320 scripts off motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (362 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 320 scripts off motion no-preference: right edges past 320: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-performance/ 320 scripts off motion no-preference: #besoin one column (272px) tops 623.2/1350.7/2148.8 lefts 24/24/24 widths 272/272/272; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 320 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-performance/ 320 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-performance/ 320 scripts off motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (362 words; owner-whole besoin; subs found once each [])
+   ok   /service-performance/ 320 scripts off motion reduce: right edges past 320: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-performance/ 320 scripts off motion reduce: #besoin one column (272px) tops 623.2/1350.7/2148.8 lefts 24/24/24 widths 272/272/272; h3 1/1/1 h4 0/0/0 questions 5/5/5
+   ok   /service-performance/ 320 scripts off motion reduce: script errors 0 (base 0)
+== A. /service-ia-business/
+   ok   /service-ia-business/ 1200 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 1200 scripts on motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (306 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 1200 scripts on motion no-preference: right edges past 1200: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 1200 scripts on motion no-preference: #besoin 3 columns (354.656px 354.672px 354.656px) tops 722.7/722.7/722.7 lefts 36.5/415.2/793.8 widths 354.7/354.7/354.7; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 1200 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-ia-business/ 1200 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 1200 scripts on motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (306 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 1200 scripts on motion reduce: right edges past 1200: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 1200 scripts on motion reduce: #besoin 3 columns (354.656px 354.672px 354.656px) tops 722.7/722.7/722.7 lefts 36.5/415.2/793.8 widths 354.7/354.7/354.7; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 1200 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-ia-business/ 1200 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 1200 scripts off motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (317 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 1200 scripts off motion no-preference: right edges past 1200: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 1200 scripts off motion no-preference: #besoin 3 columns (354.656px 354.672px 354.656px) tops 722.7/722.7/722.7 lefts 36.5/415.2/793.8 widths 354.7/354.7/354.7; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 1200 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-ia-business/ 1200 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 1200 scripts off motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (317 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 1200 scripts off motion reduce: right edges past 1200: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 1200 scripts off motion reduce: #besoin 3 columns (354.656px 354.672px 354.656px) tops 722.7/722.7/722.7 lefts 36.5/415.2/793.8 widths 354.7/354.7/354.7; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 1200 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-ia-business/ 961 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 961 scripts on motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (306 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 961 scripts on motion no-preference: right edges past 961: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 961 scripts on motion no-preference: #besoin 3 columns (283.328px 283.328px 283.344px) tops 714.2/714.2/714.2 lefts 24/331.3/638.7 widths 283.3/283.3/283.3; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 961 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-ia-business/ 961 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 961 scripts on motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (306 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 961 scripts on motion reduce: right edges past 961: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 961 scripts on motion reduce: #besoin 3 columns (283.328px 283.328px 283.344px) tops 714.2/714.2/714.2 lefts 24/331.3/638.7 widths 283.3/283.3/283.3; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 961 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-ia-business/ 961 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 961 scripts off motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (317 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 961 scripts off motion no-preference: right edges past 961: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 961 scripts off motion no-preference: #besoin 3 columns (283.328px 283.328px 283.344px) tops 714.2/714.2/714.2 lefts 24/331.3/638.7 widths 283.3/283.3/283.3; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 961 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-ia-business/ 961 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 961 scripts off motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (317 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 961 scripts off motion reduce: right edges past 961: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 961 scripts off motion reduce: #besoin 3 columns (283.328px 283.328px 283.344px) tops 714.2/714.2/714.2 lefts 24/331.3/638.7 widths 283.3/283.3/283.3; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 961 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-ia-business/ 768 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 768 scripts on motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (306 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 768 scripts on motion no-preference: right edges past 768: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 768 scripts on motion no-preference: #besoin one column (720px) tops 634.7/1171.9/1510.8 lefts 24/24/24 widths 720/720/720; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 768 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-ia-business/ 768 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 768 scripts on motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (306 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 768 scripts on motion reduce: right edges past 768: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 768 scripts on motion reduce: #besoin one column (720px) tops 634.7/1171.9/1510.8 lefts 24/24/24 widths 720/720/720; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 768 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-ia-business/ 768 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 768 scripts off motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (317 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 768 scripts off motion no-preference: right edges past 768: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 768 scripts off motion no-preference: #besoin one column (720px) tops 634.7/1171.9/1510.8 lefts 24/24/24 widths 720/720/720; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 768 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-ia-business/ 768 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 768 scripts off motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (317 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 768 scripts off motion reduce: right edges past 768: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 768 scripts off motion reduce: #besoin one column (720px) tops 634.7/1171.9/1510.8 lefts 24/24/24 widths 720/720/720; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 768 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-ia-business/ 375 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 375 scripts on motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (306 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 375 scripts on motion no-preference: right edges past 375: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 375 scripts on motion no-preference: #besoin one column (327px) tops 667/1601.7/2185.2 lefts 24/24/24 widths 327/327/327; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 375 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-ia-business/ 375 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 375 scripts on motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (306 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 375 scripts on motion reduce: right edges past 375: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 375 scripts on motion reduce: #besoin one column (327px) tops 667/1601.7/2185.2 lefts 24/24/24 widths 327/327/327; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 375 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-ia-business/ 375 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 375 scripts off motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (317 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 375 scripts off motion no-preference: right edges past 375: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 375 scripts off motion no-preference: #besoin one column (327px) tops 667/1601.7/2185.2 lefts 24/24/24 widths 327/327/327; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 375 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-ia-business/ 375 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 375 scripts off motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (317 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 375 scripts off motion reduce: right edges past 375: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 375 scripts off motion reduce: #besoin one column (327px) tops 667/1601.7/2185.2 lefts 24/24/24 widths 327/327/327; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 375 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-ia-business/ 320 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 320 scripts on motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (306 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 320 scripts on motion no-preference: right edges past 320: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 320 scripts on motion no-preference: #besoin one column (272px) tops 698.3/1813/2554.2 lefts 24/24/24 widths 272/272/272; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 320 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-ia-business/ 320 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 320 scripts on motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (306 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 320 scripts on motion reduce: right edges past 320: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 320 scripts on motion reduce: #besoin one column (272px) tops 698.3/1813/2554.2 lefts 24/24/24 widths 272/272/272; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 320 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-ia-business/ 320 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 320 scripts off motion no-preference: sections 0,besoin,experience,reflexion,4; text = expected (317 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 320 scripts off motion no-preference: right edges past 320: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 320 scripts off motion no-preference: #besoin one column (272px) tops 698.3/1813/2554.2 lefts 24/24/24 widths 272/272/272; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 320 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-ia-business/ 320 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-ia-business/ 320 scripts off motion reduce: sections 0,besoin,experience,reflexion,4; text = expected (317 words; owner-whole 0,besoin,experience; subs found once each [])
+   ok   /service-ia-business/ 320 scripts off motion reduce: right edges past 320: closed 0, 0 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-ia-business/ 320 scripts off motion reduce: #besoin one column (272px) tops 698.3/1813/2554.2 lefts 24/24/24 widths 272/272/272; h3 1/1/1 h4 2/0/0 questions 6/4/5
+   ok   /service-ia-business/ 320 scripts off motion reduce: script errors 0 (base 0)
+== A. /service-venture-building/
+   ok   /service-venture-building/ 1200 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 1200 scripts on motion no-preference: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (658 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 1200 scripts on motion no-preference: right edges past 1200: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 1200 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-venture-building/ 1200 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 1200 scripts on motion reduce: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (658 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 1200 scripts on motion reduce: right edges past 1200: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 1200 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-venture-building/ 1200 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 1200 scripts off motion no-preference: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (766 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 1200 scripts off motion no-preference: right edges past 1200: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 1200 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-venture-building/ 1200 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 1200 scripts off motion reduce: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (766 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 1200 scripts off motion reduce: right edges past 1200: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 1200 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-venture-building/ 961 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 961 scripts on motion no-preference: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (658 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 961 scripts on motion no-preference: right edges past 961: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 961 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-venture-building/ 961 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 961 scripts on motion reduce: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (658 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 961 scripts on motion reduce: right edges past 961: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 961 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-venture-building/ 961 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 961 scripts off motion no-preference: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (766 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 961 scripts off motion no-preference: right edges past 961: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 961 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-venture-building/ 961 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 961 scripts off motion reduce: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (766 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 961 scripts off motion reduce: right edges past 961: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 961 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-venture-building/ 768 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 768 scripts on motion no-preference: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (658 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 768 scripts on motion no-preference: right edges past 768: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 768 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-venture-building/ 768 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 768 scripts on motion reduce: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (658 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 768 scripts on motion reduce: right edges past 768: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 768 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-venture-building/ 768 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 768 scripts off motion no-preference: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (766 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 768 scripts off motion no-preference: right edges past 768: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 768 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-venture-building/ 768 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 768 scripts off motion reduce: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (766 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 768 scripts off motion reduce: right edges past 768: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 768 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-venture-building/ 375 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 375 scripts on motion no-preference: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (658 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 375 scripts on motion no-preference: right edges past 375: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 375 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-venture-building/ 375 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 375 scripts on motion reduce: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (658 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 375 scripts on motion reduce: right edges past 375: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 375 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-venture-building/ 375 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 375 scripts off motion no-preference: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (766 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 375 scripts off motion no-preference: right edges past 375: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 375 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-venture-building/ 375 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 375 scripts off motion reduce: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (766 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 375 scripts off motion reduce: right edges past 375: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 375 scripts off motion reduce: script errors 0 (base 0)
+   ok   /service-venture-building/ 320 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 320 scripts on motion no-preference: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (658 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 320 scripts on motion no-preference: right edges past 320: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 320 scripts on motion no-preference: script errors 0 (base 0)
+   ok   /service-venture-building/ 320 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 320 scripts on motion reduce: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (658 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 320 scripts on motion reduce: right edges past 320: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 320 scripts on motion reduce: script errors 0 (base 0)
+   ok   /service-venture-building/ 320 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 320 scripts off motion no-preference: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (766 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 320 scripts off motion no-preference: right edges past 320: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 320 scripts off motion no-preference: script errors 0 (base 0)
+   ok   /service-venture-building/ 320 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   /service-venture-building/ 320 scripts off motion reduce: sections 0,kodak,david-goliath,experience,portfolio,reflexion,6; text = expected (766 words; owner-whole -; subs found once each [1,1,1,1])
+   ok   /service-venture-building/ 320 scripts off motion reduce: right edges past 320: closed 0, 4 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   /service-venture-building/ 320 scripts off motion reduce: script errors 0 (base 0)
+== A. /
+   ok   / 1200 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 1200 scripts on motion no-preference: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 1200 scripts on motion no-preference: right edges past 1200: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 1200 scripts on motion no-preference: script errors 0 (base 0)
+   ok   / 1200 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 1200 scripts on motion reduce: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 1200 scripts on motion reduce: right edges past 1200: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 1200 scripts on motion reduce: script errors 0 (base 0)
+   ok   / 1200 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 1200 scripts off motion no-preference: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 1200 scripts off motion no-preference: right edges past 1200: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 1200 scripts off motion no-preference: script errors 0 (base 0)
+   ok   / 1200 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 1200 scripts off motion reduce: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 1200 scripts off motion reduce: right edges past 1200: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 1200 scripts off motion reduce: script errors 0 (base 0)
+   ok   / 961 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 961 scripts on motion no-preference: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 961 scripts on motion no-preference: right edges past 961: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 961 scripts on motion no-preference: script errors 0 (base 0)
+   ok   / 961 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 961 scripts on motion reduce: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 961 scripts on motion reduce: right edges past 961: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 961 scripts on motion reduce: script errors 0 (base 0)
+   ok   / 961 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 961 scripts off motion no-preference: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 961 scripts off motion no-preference: right edges past 961: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 961 scripts off motion no-preference: script errors 0 (base 0)
+   ok   / 961 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 961 scripts off motion reduce: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 961 scripts off motion reduce: right edges past 961: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 961 scripts off motion reduce: script errors 0 (base 0)
+   ok   / 768 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 768 scripts on motion no-preference: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 768 scripts on motion no-preference: right edges past 768: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 768 scripts on motion no-preference: script errors 0 (base 0)
+   ok   / 768 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 768 scripts on motion reduce: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 768 scripts on motion reduce: right edges past 768: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 768 scripts on motion reduce: script errors 0 (base 0)
+   ok   / 768 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 768 scripts off motion no-preference: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 768 scripts off motion no-preference: right edges past 768: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 768 scripts off motion no-preference: script errors 0 (base 0)
+   ok   / 768 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 768 scripts off motion reduce: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 768 scripts off motion reduce: right edges past 768: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 768 scripts off motion reduce: script errors 0 (base 0)
+   ok   / 375 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 375 scripts on motion no-preference: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 375 scripts on motion no-preference: right edges past 375: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 375 scripts on motion no-preference: script errors 0 (base 0)
+   ok   / 375 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 375 scripts on motion reduce: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 375 scripts on motion reduce: right edges past 375: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 375 scripts on motion reduce: script errors 0 (base 0)
+   ok   / 375 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 375 scripts off motion no-preference: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 375 scripts off motion no-preference: right edges past 375: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 375 scripts off motion no-preference: script errors 0 (base 0)
+   ok   / 375 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 375 scripts off motion reduce: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 375 scripts off motion reduce: right edges past 375: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 375 scripts off motion reduce: script errors 0 (base 0)
+   ok   / 320 scripts on motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 320 scripts on motion no-preference: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 320 scripts on motion no-preference: right edges past 320: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 320 scripts on motion no-preference: script errors 0 (base 0)
+   ok   / 320 scripts on motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 320 scripts on motion reduce: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 320 scripts on motion reduce: right edges past 320: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 320 scripts on motion reduce: script errors 0 (base 0)
+   ok   / 320 scripts off motion no-preference: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 320 scripts off motion no-preference: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 320 scripts off motion no-preference: right edges past 320: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 320 scripts off motion no-preference: script errors 0 (base 0)
+   ok   / 320 scripts off motion reduce: ready true/true, Inter true/true (base/new, attempts 1/1)
+   ok   / 320 scripts off motion reduce: sections 0,services,references,experience,enjeux,demarche,6; text = expected (555 words; owner-whole -; subs found once each [1,1,1,1,1,1])
+   ok   / 320 scripts off motion reduce: right edges past 320: closed 0, 5 details open 0; inside a clipping/scrolling ancestor 0/0
+   ok   / 320 scripts off motion reduce: script errors 0 (base 0)
+== B. home tabs
+   ok   tabs 961 mouse: NEW = BASE; hover active 01234 --hl-min 438px panel h 438/438/438/438/438; Tab focus/active 0/0 1/1 2/2 3/3 4/4; Enter open 0; errors 0
+   ok   tabs 1100 mouse: NEW = BASE; hover active 01234 --hl-min 384px panel h 384/384/384/384/384; Tab focus/active 0/0 1/1 2/2 3/3 4/4; Enter open 0; errors 0
+   ok   tabs 1200 mouse: NEW = BASE; hover active 01234 --hl-min 330px panel h 330/330/330/330/330; Tab focus/active 0/0 1/1 2/2 3/3 4/4; Enter open 0; errors 0
+   ok   tabs 1200 touch: NEW = BASE; hover-fine false, tabs mode false, after a tap on row 2: open [false,true,false,false,false]
+== C. #experience computed style
+   ok   #experience computed style 1200 (mouse, tabs mode): 258 element/pseudo rows, 0 differ from BASE
+   ok   #experience computed style 375 (touch): 231 element/pseudo rows, 0 differ from BASE
+RENDER: 366 checks, failing 0
