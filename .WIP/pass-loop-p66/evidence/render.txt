@@ -1,0 +1,171 @@
+RENDER p66: old http://127.0.0.1:4177 (275d20f copy) against new http://127.0.0.1:4176; 9 routes x 1200/375 x scripts on/off, redirects, menu 861/961, contact draft
+== section heights, scripts on
+   ok   / 1200: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /
+   ok   / 1200: 7 heights (header + each main block) = 275d20f
+   info / 1200: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   / 1200: script errors 0 (275d20f: 0)
+   ok   / 375: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /
+   ok   / 375: 7 heights (header + each main block) = 275d20f
+   info / 375: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   / 375: script errors 0 (275d20f: 0)
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 1200: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-performance/
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 1200: 6 heights (header + each main block) = 275d20f
+   info /service-performance/ (275d20f /service-strategie-transformation/) 1200: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 1200: script errors 0 (275d20f: 0)
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 375: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-performance/
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 375: 6 heights (header + each main block) = 275d20f
+   info /service-performance/ (275d20f /service-strategie-transformation/) 375: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 375: script errors 0 (275d20f: 0)
+   ok   /service-ia-business/ 1200: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-ia-business/
+   ok   /service-ia-business/ 1200: 6 heights (header + each main block) = 275d20f
+   info /service-ia-business/ 1200: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /service-ia-business/ 1200: script errors 0 (275d20f: 0)
+   ok   /service-ia-business/ 375: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-ia-business/
+   ok   /service-ia-business/ 375: 6 heights (header + each main block) = 275d20f
+   info /service-ia-business/ 375: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /service-ia-business/ 375: script errors 0 (275d20f: 0)
+   ok   /service-venture-building/ 1200: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-venture-building/
+   ok   /service-venture-building/ 1200: 8 heights (header + each main block) = 275d20f
+   info /service-venture-building/ 1200: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /service-venture-building/ 1200: script errors 0 (275d20f: 0)
+   ok   /service-venture-building/ 375: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-venture-building/
+   ok   /service-venture-building/ 375: 8 heights (header + each main block) = 275d20f
+   info /service-venture-building/ 375: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /service-venture-building/ 375: script errors 0 (275d20f: 0)
+   ok   /publications/ 1200: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /publications/
+   ok   /publications/ 1200: 3 heights (header + each main block) = 275d20f
+   info /publications/ 1200: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /publications/ 1200: script errors 0 (275d20f: 0)
+   ok   /publications/ 375: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /publications/
+   ok   /publications/ 375: 3 heights (header + each main block) = 275d20f
+   info /publications/ 375: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /publications/ 375: script errors 0 (275d20f: 0)
+   ok   /contact/ 1200: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /contact/
+   info /contact/ 1200: 3 heights (header + each main block) = 275d20f (text changed this Pass: reported, not judged)
+   info /contact/ 1200: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /contact/ 1200: script errors 0 (275d20f: 0)
+   ok   /contact/ 375: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /contact/
+   info /contact/ 375: 3 heights (header + each main block) differ; first #2: 275d20f « section.section 1368.8 » now « section.section 1304.9 » (text changed this Pass: reported, not judged)
+   info /contact/ 375: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /contact/ 375: script errors 0 (275d20f: 0)
+   ok   /mentions-legales/ 1200: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /mentions-legales/
+   info /mentions-legales/ 1200: 3 heights (header + each main block) differ; first #2: 275d20f « section.section 1678.3 » now « section.section 1651.1 » (text changed this Pass: reported, not judged)
+   info /mentions-legales/ 1200: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /mentions-legales/ 1200: script errors 0 (275d20f: 0)
+   ok   /mentions-legales/ 375: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /mentions-legales/
+   info /mentions-legales/ 375: 3 heights (header + each main block) differ; first #2: 275d20f « section.section 2274.5 » now « section.section 2192.9 » (text changed this Pass: reported, not judged)
+   info /mentions-legales/ 375: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /mentions-legales/ 375: script errors 0 (275d20f: 0)
+   ok   /politique-confidentialite/ 1200: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /politique-confidentialite/
+   info /politique-confidentialite/ 1200: 3 heights (header + each main block) = 275d20f (text changed this Pass: reported, not judged)
+   info /politique-confidentialite/ 1200: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /politique-confidentialite/ 1200: script errors 0 (275d20f: 0)
+   ok   /politique-confidentialite/ 375: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /politique-confidentialite/
+   info /politique-confidentialite/ 375: 3 heights (header + each main block) = 275d20f (text changed this Pass: reported, not judged)
+   info /politique-confidentialite/ 375: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /politique-confidentialite/ 375: script errors 0 (275d20f: 0)
+   ok   /404.html 1200: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /404.html
+   ok   /404.html 1200: 2 heights (header + each main block) = 275d20f
+   info /404.html 1200: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /404.html 1200: script errors 0 (275d20f: 0)
+   ok   /404.html 375: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /404.html
+   ok   /404.html 375: 2 heights (header + each main block) = 275d20f
+   info /404.html 375: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /404.html 375: script errors 0 (275d20f: 0)
+== section heights, scripts off
+   ok   / 1200 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /
+   ok   / 1200 scripts off: 7 heights (header + each main block) = 275d20f
+   info / 1200 scripts off: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   / 1200 scripts off: script errors 0 (275d20f: 0)
+   ok   / 375 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /
+   ok   / 375 scripts off: 7 heights (header + each main block) = 275d20f
+   info / 375 scripts off: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   / 375 scripts off: script errors 0 (275d20f: 0)
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 1200 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-performance/
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 1200 scripts off: 6 heights (header + each main block) = 275d20f
+   info /service-performance/ (275d20f /service-strategie-transformation/) 1200 scripts off: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 1200 scripts off: script errors 0 (275d20f: 0)
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 375 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-performance/
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 375 scripts off: 6 heights (header + each main block) = 275d20f
+   info /service-performance/ (275d20f /service-strategie-transformation/) 375 scripts off: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /service-performance/ (275d20f /service-strategie-transformation/) 375 scripts off: script errors 0 (275d20f: 0)
+   ok   /service-ia-business/ 1200 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-ia-business/
+   ok   /service-ia-business/ 1200 scripts off: 6 heights (header + each main block) = 275d20f
+   info /service-ia-business/ 1200 scripts off: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /service-ia-business/ 1200 scripts off: script errors 0 (275d20f: 0)
+   ok   /service-ia-business/ 375 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-ia-business/
+   ok   /service-ia-business/ 375 scripts off: 6 heights (header + each main block) = 275d20f
+   info /service-ia-business/ 375 scripts off: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /service-ia-business/ 375 scripts off: script errors 0 (275d20f: 0)
+   ok   /service-venture-building/ 1200 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-venture-building/
+   ok   /service-venture-building/ 1200 scripts off: 8 heights (header + each main block) = 275d20f
+   info /service-venture-building/ 1200 scripts off: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /service-venture-building/ 1200 scripts off: script errors 0 (275d20f: 0)
+   ok   /service-venture-building/ 375 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /service-venture-building/
+   ok   /service-venture-building/ 375 scripts off: 8 heights (header + each main block) = 275d20f
+   info /service-venture-building/ 375 scripts off: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /service-venture-building/ 375 scripts off: script errors 0 (275d20f: 0)
+   ok   /publications/ 1200 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /publications/
+   ok   /publications/ 1200 scripts off: 3 heights (header + each main block) = 275d20f
+   info /publications/ 1200 scripts off: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /publications/ 1200 scripts off: script errors 0 (275d20f: 0)
+   ok   /publications/ 375 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /publications/
+   ok   /publications/ 375 scripts off: 3 heights (header + each main block) = 275d20f
+   info /publications/ 375 scripts off: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /publications/ 375 scripts off: script errors 0 (275d20f: 0)
+   ok   /contact/ 1200 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /contact/
+   info /contact/ 1200 scripts off: 3 heights (header + each main block) differ; first #2: 275d20f « section.section 388 » now « section.section 351.2 » (text changed this Pass: reported, not judged)
+   info /contact/ 1200 scripts off: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /contact/ 1200 scripts off: script errors 0 (275d20f: 0)
+   ok   /contact/ 375 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /contact/
+   info /contact/ 375 scripts off: 3 heights (header + each main block) differ; first #2: 275d20f « section.section 632.4 » now « section.section 543.4 » (text changed this Pass: reported, not judged)
+   info /contact/ 375 scripts off: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /contact/ 375 scripts off: script errors 0 (275d20f: 0)
+   ok   /mentions-legales/ 1200 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /mentions-legales/
+   info /mentions-legales/ 1200 scripts off: 3 heights (header + each main block) differ; first #2: 275d20f « section.section 1678.3 » now « section.section 1651.1 » (text changed this Pass: reported, not judged)
+   info /mentions-legales/ 1200 scripts off: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /mentions-legales/ 1200 scripts off: script errors 0 (275d20f: 0)
+   ok   /mentions-legales/ 375 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /mentions-legales/
+   info /mentions-legales/ 375 scripts off: 3 heights (header + each main block) differ; first #2: 275d20f « section.section 2274.5 » now « section.section 2192.9 » (text changed this Pass: reported, not judged)
+   info /mentions-legales/ 375 scripts off: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /mentions-legales/ 375 scripts off: script errors 0 (275d20f: 0)
+   ok   /politique-confidentialite/ 1200 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /politique-confidentialite/
+   info /politique-confidentialite/ 1200 scripts off: 3 heights (header + each main block) = 275d20f (text changed this Pass: reported, not judged)
+   info /politique-confidentialite/ 1200 scripts off: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /politique-confidentialite/ 1200 scripts off: script errors 0 (275d20f: 0)
+   ok   /politique-confidentialite/ 375 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /politique-confidentialite/
+   info /politique-confidentialite/ 375 scripts off: 3 heights (header + each main block) = 275d20f (text changed this Pass: reported, not judged)
+   info /politique-confidentialite/ 375 scripts off: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /politique-confidentialite/ 375 scripts off: script errors 0 (275d20f: 0)
+   ok   /404.html 1200 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /404.html
+   ok   /404.html 1200 scripts off: 2 heights (header + each main block) = 275d20f
+   info /404.html 1200 scripts off: footer 275d20f « footer.site-footer 363.5 » now « footer.site-footer 363.5 »
+   ok   /404.html 1200 scripts off: script errors 0 (275d20f: 0)
+   ok   /404.html 375 scripts off: ready old/new true/true, Inter old/new true/true (attempts 1/1); final path new /404.html
+   ok   /404.html 375 scripts off: 2 heights (header + each main block) = 275d20f
+   info /404.html 375 scripts off: footer 275d20f « footer.site-footer 850.5 » now « footer.site-footer 816.1 »
+   ok   /404.html 375 scripts off: script errors 0 (275d20f: 0)
+== redirects
+   ok   /service-strategie-transformation/: refresh → /service-performance/, « Continuer » → /service-performance/, canonical https://www.sourcinno.com/service-performance/
+   ok   /service-strategie-transformation/: lands on /service-performance/; documents requested ["/service-strategie-transformation/","/service-performance/"]
+   ok   /offre-strategie-organisation-processus/: refresh → /service-performance/, « Continuer » → /service-performance/, canonical https://www.sourcinno.com/service-performance/
+   ok   /offre-strategie-organisation-processus/: lands on /service-performance/; documents requested ["/offre-strategie-organisation-processus/","/service-performance/"]
+== desktop menu
+   ok   menu 861: 5 items, centres 37.9/38/37.9/37.9/38, lefts 256.5/354.5/449.8/583.8/690.8, gap logo → « Expérience » 108.2 px, toggle display none
+   ok   menu 961: 5 items, centres 37.9/38/37.9/37.9/38, lefts 356.5/454.5/549.8/683.8/790.8, gap logo → « Expérience » 130.5 px, toggle display none
+== contact draft and legal wording
+   ok   contact options ["=Choisir…","Performance=Performance","Entreprise IA=Entreprise IA","Venture Building=Venture Building","Autre=Autre"]
+   ok   contact submission: form shown true; data-last-mailto recipient « contact@sourcinno.com », body names « Performance » true; head « mailto:contact@sourcinno.com?subject=Prise%20de%20contact%20… »
+   info contact Coordonnées: "Email — contact@sourcinno.com\nLinkedIn — linkedin.com/in/aymarddescorbiac\n(nouvel onglet)\nOù — Paris, France. Missions en France et à l’international."
+   info contact no-JS sentence: "Le formulaire de cette page a besoin de JavaScript. S’il ne s’affiche pas : ouvrir un brouillon d’email, à compléter puis à envoyer depuis votre messagerie."
+   info /mentions-legales/: "Capital social — 1 000 euros"
+   info /mentions-legales/: "Directeur de la publication — Aymard de Scorbiac"
+   info /mentions-legales/: "Contact — contact@sourcinno.com"
+   info /mentions-legales/: "Téléphone administratif de l’hébergeur — +370 645 03378 (coordonnées inscrites au registre RIPE (nouvel onglet))"
+   info /mentions-legales/: "Les marques et logos de tiers reproduits sur ce site appartiennent à leurs propriétaires respectifs. Ils illustrent des collaborations passées et ne valent pas partenariat commercial en cours."
+   info /mentions-legales/: "Une erreur, un contenu inapproprié ou un lien cassé ? Écrivez à contact@sourcinno.com : la correction est faite dans les meilleurs délais."
+   info /politique-confidentialite/: "Sourcinno SAS, dont les coordonnées figurent dans les mentions légales, est responsable du traitement. Pour toute question sur vos données : contact@sourcinno.com."
+   info /politique-confidentialite/: "Le propriétaire de Sourcinno SAS, seul destinataire des messages."
+   info /politique-confidentialite/: "Sur la page Entreprise IA, le parcours « AI for Business » utilise le service externe Typebot (typebot.io). Typebot est contacté dès que la section « Réflexion » de la page Entreprise IA s’affiche à l’écran, avant toute action de votre part : votre adresse IP et les caractéristiques techniques de votre navigateur lui sont alors transmises. Son composant est chargé depuis le site lui-même. Typebot enregistre ensuite vos données techniques de connexion et vos réponses. Si vous choisissez d’être rappelé, le parcours vous demande vos prénom et nom, votre email et votre téléphone : ils sont enregistrés chez Typebot et lus par Aymard de Scorbiac, seul destinataire, pour vous recontacter. Le parcours charge aussi une vidéo YouTube, qui reçoit alors des données techniques. Les durées de conservation chez Typebot et YouTube dépendent de leurs propres politiques. Vous pouvez utiliser le contact habituel sans répondre à Typebot."
+   info /politique-confidentialite/: "Il suffit d’écrire à contact@sourcinno.com. Une réponse vous est apportée sous un mois."
+RENDER: 104 checks, failing 0

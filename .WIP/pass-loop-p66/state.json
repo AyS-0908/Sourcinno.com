@@ -1,0 +1,35 @@
+{
+  "unit_label": "pass",
+  "unit": "66",
+  "state": "done",
+  "scope": "Product: 275d20f..6d47ace on rebuild (18 files; git diff --stat 275d20f 6d47ace; moved page: git diff 275d20f:service-strategie-transformation/index.html 6d47ace:service-performance/index.html). Root docs, second repository C:\\Users\\aymar\\AYS_CODING\\code-SOURCINNO_WWW, uncommitted on main above 8aa18c2 (git -C that folder diff): PLAN.md (status token only), ARCHITECTURE.md, PRD.md, CHANGELOG.md, PROGRESS.md - not covered by the seal. Acceptance: root PLAN.md section 66 Done When 1-5 and prompts/pass66-coder.md. Owner rule LOCAL ONLY: no push, no deploy. Owner decision PLAN section V1.3 D2: the mobile nowhere; Capital social and host phone stay.",
+  "audit_launches": 1,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 0,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 1,
+  "results_blocks": 1,
+  "pass_base": "275d20f198d16b2a649cbc7647fa880555e03974",
+  "seal_paths": "",
+  "brief_fingerprint": "b74c66ea51dd45e1",
+  "green_fingerprint": "b74c66ea51dd45e1",
+  "briefed_at": "2026-10-28T15:28:03",
+  "cap_extensions": [],
+  "state_dir": ".WIP/pass-loop-p66",
+  "updated": "2026-10-28"
+}
