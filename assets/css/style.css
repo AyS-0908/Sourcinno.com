@@ -1002,9 +1002,19 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 #besoin.service-refinement .lead { padding: var(--space-3); margin-bottom: var(--space-3); border-radius: var(--radius-lg); background: var(--grey-50); font-size: 1rem; line-height: 1.7; font-weight: 400; }
 /* P68 : blocs de questions (Performance, Entreprise IA) : trois colonnes à partir de 961 px, une seule en dessous. */
 #besoin .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-#besoin .card h4 { margin: var(--space-1) 0 0; font-size: 1rem; line-height: 1.4; color: var(--navy); }
+/* P71 : chaque bloc est un dépliant ; fermés, ils gardent la même hauteur ; un bloc ouvert ne fait pas grandir ses voisins. */
+#besoin .grid:has(> [open]) { align-items: start; }
+#besoin .disclosure--card h4 { margin: 0 var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--border); font-size: 1rem; line-height: 1.4; color: var(--navy); }
+#besoin .disclosure--card h4 + .bullets { padding-top: var(--space-1); border-top: 0; }
+/* P71 : Venture Building « Réflexion », la phrase sous son titre, même retrait et même filet que .bullets. */
+#reflexion .grid--2:has(> .stack) { margin-bottom: var(--space-4); }
+#reflexion .disclosure--card > p { margin: 0 var(--space-3) var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
 @media (max-width: 960px) {
   #besoin .grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  #besoin .disclosure--card h4 { margin-inline: var(--space-2); }
+  #reflexion .disclosure--card > p { margin: 0 var(--space-2) var(--space-2); }
 }
 .service-careers { list-style: none; margin: 0; padding: 0; }
 .service-career { min-width: 0; box-shadow: none; }
