@@ -8,7 +8,7 @@
   "use strict";
 
   const CFG = window.SOURCINNO_CONFIG || {};
-  const EMAIL = (CFG.CONTACT_EMAIL || "aymard.de.scorbiac@sourcinno.com").trim();
+  const EMAIL = (CFG.CONTACT_EMAIL || "contact@sourcinno.com").trim();
 
   const LABELS = {
     nom: "Nom",

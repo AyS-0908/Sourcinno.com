@@ -15,7 +15,7 @@ window.SOURCINNO_CONFIG = {
   FORM_ENDPOINT: "",
 
   /* Adresse email de destination, utilisée par le mode mailto. */
-  CONTACT_EMAIL: "aymard.de.scorbiac@sourcinno.com"
+  CONTACT_EMAIL: "contact@sourcinno.com"
 
   /* V2 — réglages des fonctionnalités mises de côté pour la version 1.
      Leurs scripts sont rangés dans assets/js/_v2/. À remettre ici, avec une

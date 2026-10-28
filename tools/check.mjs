@@ -102,9 +102,10 @@ const pages = htmlFiles.map((f) => ({
 const isStub = (p) => /http-equiv="refresh"/i.test(p.html);
 const shellPages = pages.filter((p) => !isStub(p));
 
-/* Coordonnees de reference (Pass 50) : le partiel du footer est la seule source de
-   l email, du telephone et du profil LinkedIn. Une valeur introuvable reste null :
-   la coherence (STRUCTURE) et le contrat d envoi (--forms) echouent en le nommant. */
+/* Coordonnees de reference (Pass 50, Pass 66) : le partiel du footer est la seule source de
+   l email et du profil LinkedIn ; il ne porte aucun telephone (pas de numero personnel sur
+   le site, PLAN § V1.3 D2). Une valeur introuvable reste null : la coherence (STRUCTURE)
+   et le contrat d envoi (--forms) echouent en le nommant. */
 const FOOTER_REF = "tools/shell/footer.html";
 const contactRef = (() => {
   const f = join(ROOT, FOOTER_REF);
@@ -112,7 +113,6 @@ const contactRef = (() => {
   return {
     lu: html !== null,
     email: html?.match(/href="mailto:([^"?]+)"/)?.[1] ?? null,
-    tel: html?.match(/href="tel:(\+\d+)"/)?.[1] ?? null,
     linkedin: html?.match(/linkedin\.com\/in\/([\w-]+)/)?.[1] ?? null,
   };
 })();
@@ -381,13 +381,15 @@ function checkStructure() {
   }
   note(`STRUCTURE: recensement inverse ${regles.size} classe(s) de selecteur, ${partiels.length} partiel(s) tools/shell, ${scriptsTexte.length} script(s) lus, ${mortes} classe(s) sans usage ; exception(s) composee(s) par script : ${[...SANS_USAGE].map(([t, [f]]) => `${t} (${f})`).join(", ") || "aucune"}`);
 
-  // 10. coherence des coordonnees (Pass 50) : pages + assets/js/*.js (ni _v2 ni VENDOR),
-  //     texte brut, copies du footer comprises (shell.mjs --check les tient deja).
+  // 10. coherence des coordonnees (Pass 50, Pass 66) : pages + assets/js/*.js (ni _v2 ni
+  //     VENDOR) + partiels tools/shell/*.html, texte brut, copies du footer comprises.
   //     - email : toute forme x@domaine.tld (hors nom de fichier image) = celle du footer ;
-  //     - telephone : tout numero international « +chiffres » d au moins 8 chiffres
-  //       (separateurs espace, &nbsp;, U+00A0) = celui du footer, chiffre a chiffre ; le
-  //       numero de l hebergeur n est admis que dans les mentions legales. Limite : une
-  //       forme nationale (06 …) n est pas lue ;
+  //     - telephone : AUCUN numero n est admis sauf celui de l hebergeur, et seulement dans
+  //       les mentions legales (PLAN § V1.3 D2 : le mobile du proprietaire nulle part). Lus :
+  //       tout numero international « +chiffres » d au moins 8 chiffres et toute forme
+  //       nationale « 0X XX XX XX XX », separateurs espace, &nbsp;, &#160;, U+00A0, point,
+  //       tiret ou aucun. Hebergeur absent des mentions = echec (la famille n a rien lu).
+  //       Limite : un numero ecrit autrement (entite par chiffre, %20, parentheses) n est pas lu ;
   //     - LinkedIn : tout profil linkedin.com/in/… = celui du footer ;
   //     - video : chaque figure a data-video porte un seul lien de legende
   //       youtube.com/watch?v= au meme id ; toute autre id YouTube de la page en fait partie ;
@@ -396,42 +398,48 @@ function checkStructure() {
   //     Reference illisible ou famille sans aucune occurrence = echec, jamais un vert.
   const R = "coherence des coordonnees";
   const textes = [...pages.map((p) => [p.rel, p.html]),
-    ...allFiles.filter((f) => /^assets\/js\/[^/]+\.js$/.test(relOf(f))).map((f) => [relOf(f), readFileSync(f, "utf8")])];
+    ...allFiles.filter((f) => /^assets\/js\/[^/]+\.js$/.test(relOf(f))).map((f) => [relOf(f), readFileSync(f, "utf8")]),
+    ...readdirSync(join(ROOT, "tools/shell")).filter((f) => f.endsWith(".html"))
+      .map((f) => [`tools/shell/${f}`, readFileSync(join(ROOT, "tools/shell", f), "utf8")])];
   const compte = (m, v) => m.set(v, (m.get(v) || 0) + 1);
   const total = (m) => [...m.values()].reduce((a, b) => a + b, 0);
   const detail = (m) => [...m].map(([v, n]) => `« ${v} » ×${n}`).join(", ");
-  const manque = ["email", "tel", "linkedin"].filter((k) => !contactRef[k]);
+  const manque = ["email", "linkedin"].filter((k) => !contactRef[k]);
   let bilanCoordonnees;
   if (!contactRef.lu || manque.length) {
     fail(FOOTER_REF, `${R} : reference illisible (${contactRef.lu ? `${manque.join(", ")} introuvable(s)` : "fichier absent"}) ; email, telephone et LinkedIn non compares`);
     bilanCoordonnees = `email, telephone, LinkedIn NON COMPARES (reference ${FOOTER_REF} illisible)`;
   } else {
-    const chiffres = (s) => s.replace(/&nbsp;/g, "").replace(/\D/g, "");
-    const refTel = chiffres(contactRef.tel);
+    const chiffres = (s) => s.replace(/&nbsp;|&#160;/g, "").replace(/\D/g, "");
     const HOTE = { file: "mentions-legales/index.html", tel: "37064503378" };
-    const vus = { email: new Map(), tel: new Map(), hote: new Map(), linkedin: new Map() };
+    const SEP = String.raw`(?: |&nbsp;|&#160;| |\.|-)?`;
+    const TEL_INTL = new RegExp(String.raw`\+\d(?:${SEP}\d)+`, "g");
+    const TEL_NAT = new RegExp(String.raw`(?<![\w+.-])0[1-9](?:${SEP}\d\d){4}(?!\w)`, "g");
+    const INTERDIT = "interdit : aucun numero sur le site sauf celui de l hebergeur, dans les mentions legales (PLAN § V1.3 D2)";
+    const vus = { email: new Map(), hote: new Map(), linkedin: new Map() };
     for (const [rel, txt] of textes) {
       for (const m of txt.matchAll(/[\w.%+-]+@[\w-]+(?:\.[\w-]+)*\.[A-Za-z]{2,}/g)) {
         if (/\.(?:png|jpe?g|webp|avif|gif|svg|ico)$/i.test(m[0])) continue;
         if (m[0] === contactRef.email) compte(vus.email, m[0]);
         else fail(rel, `${R} : email « ${m[0]} » different de la reference ${contactRef.email} (${FOOTER_REF})`);
       }
-      for (const m of txt.matchAll(/\+\d(?:(?: |&nbsp;| )?\d)+/g)) {
+      for (const m of txt.matchAll(TEL_INTL)) {
         const d = chiffres(m[0]);
         if (d.length < 8) continue;
-        if (d === refTel) compte(vus.tel, m[0]);
-        else if (d === HOTE.tel && rel === HOTE.file) compte(vus.hote, m[0]);
-        else fail(rel, `${R} : telephone « ${m[0]} » ${d === HOTE.tel ? `de l hebergeur, admis seulement dans ${HOTE.file}` : `different de la reference ${contactRef.tel} (${FOOTER_REF})`}`);
+        if (d === HOTE.tel && rel === HOTE.file) compte(vus.hote, m[0]);
+        else fail(rel, `${R} : telephone « ${m[0]} » ${d === HOTE.tel ? `de l hebergeur, admis seulement dans ${HOTE.file}` : INTERDIT}`);
       }
+      for (const m of txt.matchAll(TEL_NAT)) fail(rel, `${R} : telephone « ${m[0]} » ${INTERDIT}`);
       for (const m of txt.matchAll(/linkedin\.com\/in\/([\w-]*)/gi)) {
         if (m[1] === contactRef.linkedin) compte(vus.linkedin, m[0]);
         else fail(rel, `${R} : profil « ${m[0]} » different de la reference linkedin.com/in/${contactRef.linkedin} (${FOOTER_REF})`);
       }
     }
-    for (const [k, nom] of [["email", "email"], ["tel", "telephone"], ["linkedin", "profil LinkedIn"]]) {
-      if (!vus[k].size) fail(FOOTER_REF, `${R} : aucun ${nom} conforme trouve dans les pages et assets/js : rien n a ete compare`);
+    for (const [k, nom] of [["email", "email"], ["linkedin", "profil LinkedIn"]]) {
+      if (!vus[k].size) fail(FOOTER_REF, `${R} : aucun ${nom} conforme trouve dans les pages, assets/js et tools/shell : rien n a ete compare`);
     }
-    bilanCoordonnees = `email ${total(vus.email)} (${detail(vus.email)}), telephone ${total(vus.tel)} (${detail(vus.tel)}), hebergeur ${total(vus.hote)} dans ${HOTE.file} seulement (${detail(vus.hote) || "aucun"}), LinkedIn ${total(vus.linkedin)} (${detail(vus.linkedin)})`;
+    if (!vus.hote.size) fail(HOTE.file, `${R} : aucun telephone de l hebergeur trouve : la famille telephone n a rien lu`);
+    bilanCoordonnees = `email ${total(vus.email)} (${detail(vus.email)}), telephone : aucun sauf l hebergeur ×${total(vus.hote)} dans ${HOTE.file} (${detail(vus.hote) || "aucun"}), LinkedIn ${total(vus.linkedin)} (${detail(vus.linkedin)})`;
   }
   let videos = 0;
   for (const p of pages) {

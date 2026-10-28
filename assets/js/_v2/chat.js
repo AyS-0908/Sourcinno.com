@@ -20,7 +20,7 @@
 
   const CONTACT =
     'Le plus simple est d’en parler : <a href="/contact/">le formulaire est ici</a>, ' +
-    'ou directement <a href="mailto:aymard.de.scorbiac@sourcinno.com">aymard.de.scorbiac@sourcinno.com</a>.';
+    'ou directement <a href="mailto:contact@sourcinno.com">contact@sourcinno.com</a>.';
 
   /* Base de connaissances. Chaque entree : des mots-cles, et une reponse.
      Tout provient du contenu du site ; rien n est invente ici. */
@@ -29,7 +29,7 @@
       keys: ["offre", "offres", "service", "services", "proposez", "prestation", "accompagnement"],
       answer:
         "Trois offres, toutes centrées sur l’organisation et les processus :<br>" +
-        '&bull; <a href="/service-strategie-transformation/">Stratégie, Organisation &amp; Processus</a> — aligner la vision et l’exécution.<br>' +
+        '&bull; <a href="/service-performance/">Stratégie, Organisation &amp; Processus</a> — aligner la vision et l’exécution.<br>' +
         '&bull; <a href="/service-ia-business/">IA for Business</a> — installer l’IA là où elle fait gagner du temps.<br>' +
         '&bull; <a href="/service-venture-building/">Venture Building &amp; Portfolio</a> — structurer la création de nouvelles activités.',
     },
@@ -37,7 +37,7 @@
       keys: ["processus", "organisation", "pmo", "strategie", "stratégie", "kpi", "indicateur", "gouvernance"],
       answer:
         "C’est le cœur du métier : diagnostic de l’organisation, cartographie des processus tels qu’ils sont réellement exécutés, feuille de route priorisée, mise en place d’un PMO et d’indicateurs qui mesurent l’avancement plutôt que l’agitation. " +
-        '<a href="/service-strategie-transformation/">Le détail est ici</a>.',
+        '<a href="/service-performance/">Le détail est ici</a>.',
     },
     {
       keys: ["ia", "intelligence artificielle", "llm", "agentic", "agent", "automatis", "nocode", "no-code", "chatgpt"],
@@ -94,8 +94,7 @@
     {
       keys: ["contact", "contacter", "rendez-vous", "rdv", "joindre", "telephone", "téléphone", "email", "mail", "appeler"],
       answer:
-        "Par email : <a href=\"mailto:aymard.de.scorbiac@sourcinno.com\">aymard.de.scorbiac@sourcinno.com</a>. Par téléphone : " +
-        '<a href="tel:+33608755877">+33 6 08 75 58 77</a>. Ou via ' +
+        "Par email : <a href=\"mailto:contact@sourcinno.com\">contact@sourcinno.com</a>. Ou via " +
         '<a href="/contact/">le formulaire</a> — réponse sous 48 heures ouvrées, ' +
         "puis un échange de trente minutes, sans engagement.",
     },
