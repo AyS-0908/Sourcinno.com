@@ -1,3 +1,0 @@
-perf-1200.jpg 1200x900 /service-performance/ Inter true saved
-contact-375.jpg 375x812 /contact/ Inter true saved
-footer-375.jpg 375x812 /service-performance/ Inter true saved
