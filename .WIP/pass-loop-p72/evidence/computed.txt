@@ -1,0 +1,798 @@
+
+== 1200 px · closed, step 1: 231 mockup rows, 231 port rows
+   0 section#services.  (mockup section.)
+      block-size: 990.547px → 936.422px
+      height: 990.547px → 936.422px
+      perspective-origin: 592.5px 495.266px → 592.5px 468.203px
+      transform-origin: 592.5px 495.273px → 592.5px 468.211px
+   23 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   82 section#demarche.  (mockup section.)
+      block-size: 683.188px → 687.641px
+      height: 683.188px → 687.641px
+      perspective-origin: 592.5px 341.594px → 592.5px 343.812px
+      transform-origin: 592.5px 341.594px → 592.5px 343.82px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   86 div.mA  (mockup div.mA)
+      block-size: 317.688px → 376.266px
+      height: 317.688px → 376.266px
+      perspective-origin: 556px 158.844px → 556px 188.125px
+      transform-origin: 556px 158.844px → 556px 188.133px
+   101 div#mA-p1.mA-panel  (mockup div#mA-p1.mA-panel)
+      block-size: 198.422px → 257px
+      height: 198.422px → 257px
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+      perspective-origin: 556px 99.2031px → 556px 128.5px
+      transform-origin: 556px 99.2109px → 556px 128.5px
+   113 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -712.875px → -2302.53px
+      inset-block-end: -712.875px → -2302.53px
+      inset-block-start: 1613.88px → 3203.53px
+      top: 1613.88px → 3203.53px
+   114 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   120 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -712.875px → -2302.53px
+      inset-block-end: -712.875px → -2302.53px
+      inset-block-start: 1613.88px → 3203.53px
+      top: 1613.88px → 3203.53px
+   121 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   124 div#mA-p2.mA-panel  (mockup div#mA-p2.mA-panel)
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+   146 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   148 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   161 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   162 div#mA-p3.mA-panel  (mockup div#mA-p3.mA-panel)
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+   184 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   187 div#mA-p4.mA-panel  (mockup div#mA-p4.mA-panel)
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+   200 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   202 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   218 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 19 of 231
+
+== 1200 px · open, step 1: 237 mockup rows, 237 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1179.38px → 1125.25px
+      height: 1179.38px → 1125.25px
+      perspective-origin: 592.5px 589.688px → 592.5px 562.625px
+      transform-origin: 592.5px 589.688px → 592.5px 562.625px
+   29 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   88 section#demarche.  (mockup section.)
+      block-size: 683.188px → 687.641px
+      height: 683.188px → 687.641px
+      perspective-origin: 592.5px 341.594px → 592.5px 343.812px
+      transform-origin: 592.5px 341.594px → 592.5px 343.82px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   92 div.mA  (mockup div.mA)
+      block-size: 317.688px → 376.266px
+      height: 317.688px → 376.266px
+      perspective-origin: 556px 158.844px → 556px 188.125px
+      transform-origin: 556px 158.844px → 556px 188.133px
+   107 div#mA-p1.mA-panel  (mockup div#mA-p1.mA-panel)
+      block-size: 198.422px → 257px
+      height: 198.422px → 257px
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+      perspective-origin: 556px 99.2031px → 556px 128.5px
+      transform-origin: 556px 99.2109px → 556px 128.5px
+   119 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -901.703px → -2491.36px
+      inset-block-end: -901.703px → -2491.36px
+      inset-block-start: 1802.7px → 3392.36px
+      top: 1802.7px → 3392.36px
+   120 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   126 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -901.703px → -2491.36px
+      inset-block-end: -901.703px → -2491.36px
+      inset-block-start: 1802.7px → 3392.36px
+      top: 1802.7px → 3392.36px
+   127 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   130 div#mA-p2.mA-panel  (mockup div#mA-p2.mA-panel)
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+   152 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   154 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   167 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   168 div#mA-p3.mA-panel  (mockup div#mA-p3.mA-panel)
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+   190 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   193 div#mA-p4.mA-panel  (mockup div#mA-p4.mA-panel)
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+   206 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   208 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   224 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 19 of 237
+
+== 1200 px · open, step 3: 237 mockup rows, 237 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1179.38px → 1125.25px
+      height: 1179.38px → 1125.25px
+      perspective-origin: 592.5px 589.688px → 592.5px 562.625px
+      transform-origin: 592.5px 589.688px → 592.5px 562.625px
+   29 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   88 section#demarche.  (mockup section.)
+      block-size: 697.891px → 687.641px
+      height: 697.891px → 687.641px
+      perspective-origin: 592.5px 348.938px → 592.5px 343.812px
+      transform-origin: 592.5px 348.945px → 592.5px 343.82px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   92 div.mA  (mockup div.mA)
+      block-size: 332.391px → 376.266px
+      height: 332.391px → 376.266px
+      perspective-origin: 556px 166.188px → 556px 188.125px
+      transform-origin: 556px 166.195px → 556px 188.133px
+   107 div#mA-p1.mA-panel  (mockup div#mA-p1.mA-panel)
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+   120 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   127 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   130 div#mA-p2.mA-panel  (mockup div#mA-p2.mA-panel)
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+   152 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   154 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   167 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   168 div#mA-p3.mA-panel.is-entering  (mockup div#mA-p3.mA-panel.is-entering)
+      block-size: 213.125px → 257px
+      height: 213.125px → 257px
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+      perspective-origin: 556px 106.562px → 556px 128.5px
+      transform-origin: 556px 106.562px → 556px 128.5px
+   190 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   193 div#mA-p4.mA-panel  (mockup div#mA-p4.mA-panel)
+      min-block-size: 0px → 257px
+      min-height: 0px → 257px
+   206 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   208 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   224 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 17 of 237
+
+== 961 px · closed, step 1: 231 mockup rows, 231 port rows
+   0 section#services.  (mockup section.)
+      block-size: 999.453px → 945.328px
+      height: 999.453px → 945.328px
+      perspective-origin: 473px 499.719px → 473px 472.656px
+      transform-origin: 473px 499.727px → 473px 472.664px
+   23 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   82 section#demarche.  (mockup section.)
+      block-size: 697.922px → 702.188px
+      height: 697.922px → 702.188px
+      perspective-origin: 473px 348.953px → 473px 351.094px
+      transform-origin: 473px 348.961px → 473px 351.094px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   86 div.mA  (mockup div.mA)
+      block-size: 340.875px → 399.266px
+      height: 340.875px → 399.266px
+      perspective-origin: 449px 170.438px → 449px 199.625px
+      transform-origin: 449px 170.438px → 449px 199.633px
+   101 div#mA-p1.mA-panel  (mockup div#mA-p1.mA-panel)
+      block-size: 221.609px → 280px
+      height: 221.609px → 280px
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+      perspective-origin: 449px 110.797px → 449px 140px
+      transform-origin: 449px 110.805px → 449px 140px
+   113 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -713.328px → -2350.08px
+      inset-block-end: -713.328px → -2350.08px
+      inset-block-start: 1614.33px → 3251.08px
+      top: 1614.33px → 3251.08px
+   114 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   120 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -736.516px → -2373.27px
+      inset-block-end: -736.516px → -2373.27px
+      inset-block-start: 1637.52px → 3274.27px
+      top: 1637.52px → 3274.27px
+   121 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   124 div#mA-p2.mA-panel  (mockup div#mA-p2.mA-panel)
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+   146 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   148 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   161 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   162 div#mA-p3.mA-panel  (mockup div#mA-p3.mA-panel)
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+   184 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   187 div#mA-p4.mA-panel  (mockup div#mA-p4.mA-panel)
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+   200 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   202 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   218 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 19 of 231
+
+== 961 px · open, step 1: 237 mockup rows, 237 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1188.28px → 1134.16px
+      height: 1188.28px → 1134.16px
+      perspective-origin: 473px 594.141px → 473px 567.078px
+      transform-origin: 473px 594.141px → 473px 567.078px
+   29 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   88 section#demarche.  (mockup section.)
+      block-size: 697.922px → 702.188px
+      height: 697.922px → 702.188px
+      perspective-origin: 473px 348.953px → 473px 351.094px
+      transform-origin: 473px 348.961px → 473px 351.094px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   92 div.mA  (mockup div.mA)
+      block-size: 340.875px → 399.266px
+      height: 340.875px → 399.266px
+      perspective-origin: 449px 170.438px → 449px 199.625px
+      transform-origin: 449px 170.438px → 449px 199.633px
+   107 div#mA-p1.mA-panel  (mockup div#mA-p1.mA-panel)
+      block-size: 221.609px → 280px
+      height: 221.609px → 280px
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+      perspective-origin: 449px 110.797px → 449px 140px
+      transform-origin: 449px 110.805px → 449px 140px
+   119 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -902.156px → -2538.91px
+      inset-block-end: -902.156px → -2538.91px
+      inset-block-start: 1803.16px → 3439.91px
+      top: 1803.16px → 3439.91px
+   120 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   126 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -925.344px → -2562.09px
+      inset-block-end: -925.344px → -2562.09px
+      inset-block-start: 1826.34px → 3463.09px
+      top: 1826.34px → 3463.09px
+   127 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   130 div#mA-p2.mA-panel  (mockup div#mA-p2.mA-panel)
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+   152 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   154 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   167 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   168 div#mA-p3.mA-panel  (mockup div#mA-p3.mA-panel)
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+   190 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   193 div#mA-p4.mA-panel  (mockup div#mA-p4.mA-panel)
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+   206 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   208 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   224 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 19 of 237
+
+== 961 px · open, step 3: 237 mockup rows, 237 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1188.28px → 1134.16px
+      height: 1188.28px → 1134.16px
+      perspective-origin: 473px 594.141px → 473px 567.078px
+      transform-origin: 473px 594.141px → 473px 567.078px
+   29 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   88 section#demarche.  (mockup section.)
+      block-size: 689.438px → 702.188px
+      height: 689.438px → 702.188px
+      perspective-origin: 473px 344.719px → 473px 351.094px
+      transform-origin: 473px 344.719px → 473px 351.094px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   92 div.mA  (mockup div.mA)
+      block-size: 332.391px → 399.266px
+      height: 332.391px → 399.266px
+      perspective-origin: 449px 166.188px → 449px 199.625px
+      transform-origin: 449px 166.195px → 449px 199.633px
+   107 div#mA-p1.mA-panel  (mockup div#mA-p1.mA-panel)
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+   120 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   127 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   130 div#mA-p2.mA-panel  (mockup div#mA-p2.mA-panel)
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+   152 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   154 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   167 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   168 div#mA-p3.mA-panel.is-entering  (mockup div#mA-p3.mA-panel.is-entering)
+      block-size: 213.125px → 280px
+      height: 213.125px → 280px
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+      perspective-origin: 449px 106.562px → 449px 140px
+      transform-origin: 449px 106.562px → 449px 140px
+   190 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   193 div#mA-p4.mA-panel  (mockup div#mA-p4.mA-panel)
+      min-block-size: 0px → 280px
+      min-height: 0px → 280px
+   206 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   208 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   224 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 17 of 237
+
+== 768 px · closed, step 1: 231 mockup rows, 231 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1042.58px → 988.453px
+      height: 1042.58px → 988.453px
+      perspective-origin: 384px 521.281px → 384px 494.219px
+      transform-origin: 384px 521.289px → 384px 494.227px
+   23 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   82 section#demarche.  (mockup section.)
+      block-size: 875.812px → 821.688px
+      height: 875.812px → 821.688px
+      perspective-origin: 384px 437.906px → 384px 410.844px
+      transform-origin: 384px 437.906px → 384px 410.844px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   113 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -771.594px → -2536.41px
+      inset-block-end: -771.594px → -2536.41px
+      inset-block-start: 1672.59px → 3437.41px
+      top: 1672.59px → 3437.41px
+   114 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   120 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -894.828px → -2659.64px
+      inset-block-end: -894.828px → -2659.64px
+      inset-block-start: 1795.83px → 3560.64px
+      top: 1795.83px → 3560.64px
+   121 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   146 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   148 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   161 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   184 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   200 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   202 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   218 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 14 of 231
+
+== 768 px · open, step 1: 237 mockup rows, 237 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1277.39px → 1223.27px
+      height: 1277.39px → 1223.27px
+      perspective-origin: 384px 638.688px → 384px 611.625px
+      transform-origin: 384px 638.695px → 384px 611.633px
+   29 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   88 section#demarche.  (mockup section.)
+      block-size: 875.812px → 821.688px
+      height: 875.812px → 821.688px
+      perspective-origin: 384px 437.906px → 384px 410.844px
+      transform-origin: 384px 437.906px → 384px 410.844px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   119 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -1006.41px → -2771.22px
+      inset-block-end: -1006.41px → -2771.22px
+      inset-block-start: 1907.41px → 3672.22px
+      top: 1907.41px → 3672.22px
+   120 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   126 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -1129.64px → -2894.45px
+      inset-block-end: -1129.64px → -2894.45px
+      inset-block-start: 2030.64px → 3795.45px
+      top: 2030.64px → 3795.45px
+   127 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   152 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   154 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   167 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   190 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   206 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   208 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   224 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 14 of 237
+
+== 768 px · open, step 3: 237 mockup rows, 237 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1277.39px → 1223.27px
+      height: 1277.39px → 1223.27px
+      perspective-origin: 384px 638.688px → 384px 611.625px
+      transform-origin: 384px 638.695px → 384px 611.633px
+   29 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   88 section#demarche.  (mockup section.)
+      block-size: 870.812px → 816.688px
+      height: 870.812px → 816.688px
+      perspective-origin: 384px 435.406px → 384px 408.344px
+      transform-origin: 384px 435.406px → 384px 408.344px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   120 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   127 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   152 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   154 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   167 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   190 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   206 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   208 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   224 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 12 of 237
+
+== 375 px · closed, step 1: 231 mockup rows, 231 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1400.73px → 1346.61px
+      height: 1400.73px → 1346.61px
+      perspective-origin: 187.5px 700.359px → 187.5px 673.297px
+      transform-origin: 187.5px 700.367px → 187.5px 673.305px
+   23 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   82 section#demarche.  (mockup section.)
+      block-size: 894.156px → 840.031px
+      height: 894.156px → 840.031px
+      perspective-origin: 187.5px 447.078px → 187.5px 420.016px
+      transform-origin: 187.5px 447.078px → 187.5px 420.016px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   113 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -1169.39px → -3361.36px
+      inset-block-end: -1169.39px → -3361.36px
+      inset-block-start: 2070.39px → 4262.36px
+      top: 2070.39px → 4262.36px
+   114 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   120 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -1315.81px → -3507.78px
+      inset-block-end: -1315.81px → -3507.78px
+      inset-block-start: 2216.81px → 4408.78px
+      top: 2216.81px → 4408.78px
+   121 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   146 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   148 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   161 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   184 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   200 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   202 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   218 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 14 of 231
+
+== 375 px · open, step 1: 237 mockup rows, 237 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1984.03px → 1929.91px
+      height: 1984.03px → 1929.91px
+      perspective-origin: 187.5px 992.016px → 187.5px 964.953px
+      transform-origin: 187.5px 992.016px → 187.5px 964.953px
+   29 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   88 section#demarche.  (mockup section.)
+      block-size: 894.156px → 840.031px
+      height: 894.156px → 840.031px
+      perspective-origin: 187.5px 447.078px → 187.5px 420.016px
+      transform-origin: 187.5px 447.078px → 187.5px 420.016px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   119 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -1752.69px → -3944.66px
+      inset-block-end: -1752.69px → -3944.66px
+      inset-block-start: 2653.69px → 4845.66px
+      top: 2653.69px → 4845.66px
+   120 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   126 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -1899.11px → -4091.08px
+      inset-block-end: -1899.11px → -4091.08px
+      inset-block-start: 2800.11px → 4992.08px
+      top: 2800.11px → 4992.08px
+   127 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   152 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   154 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   167 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   190 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   206 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   208 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   224 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 14 of 237
+
+== 375 px · open, step 3: 237 mockup rows, 237 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1984.03px → 1929.91px
+      height: 1984.03px → 1929.91px
+      perspective-origin: 187.5px 992.016px → 187.5px 964.953px
+      transform-origin: 187.5px 992.016px → 187.5px 964.953px
+   29 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   88 section#demarche.  (mockup section.)
+      block-size: 908.859px → 854.734px
+      height: 908.859px → 854.734px
+      perspective-origin: 187.5px 454.422px → 187.5px 427.359px
+      transform-origin: 187.5px 454.43px → 187.5px 427.367px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   120 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   127 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   152 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   154 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   167 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   190 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   206 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   208 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   224 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 12 of 237
+
+== 320 px · closed, step 1: 231 mockup rows, 231 port rows
+   0 section#services.  (mockup section.)
+      block-size: 1517.66px → 1463.53px
+      height: 1517.66px → 1463.53px
+      perspective-origin: 160px 758.828px → 160px 731.766px
+      transform-origin: 160px 758.828px → 160px 731.766px
+   23 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   82 section#demarche.  (mockup section.)
+      block-size: 969.547px → 893.672px
+      height: 969.547px → 893.672px
+      perspective-origin: 160px 484.766px → 160px 446.828px
+      transform-origin: 160px 484.773px → 160px 446.836px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   113 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -1338.52px → -3829.53px
+      inset-block-end: -1338.52px → -3829.53px
+      inset-block-start: 2239.52px → 4730.53px
+      top: 2239.52px → 4730.53px
+   114 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   120 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -1508.12px → -3999.14px
+      inset-block-end: -1508.12px → -3999.14px
+      inset-block-start: 2409.12px → 4900.14px
+      top: 2409.12px → 4900.14px
+   121 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   146 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   148 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   161 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   184 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   200 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   202 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   218 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 14 of 231
+
+== 320 px · open, step 1: 237 mockup rows, 237 port rows
+   0 section#services.  (mockup section.)
+      block-size: 2124.14px → 2070.02px
+      height: 2124.14px → 2070.02px
+      perspective-origin: 160px 1062.06px → 160px 1035px
+      transform-origin: 160px 1062.07px → 160px 1035.01px
+   29 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   88 section#demarche.  (mockup section.)
+      block-size: 969.547px → 893.672px
+      height: 969.547px → 893.672px
+      perspective-origin: 160px 484.766px → 160px 446.828px
+      transform-origin: 160px 484.773px → 160px 446.836px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   119 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -1945px → -4436.02px
+      inset-block-end: -1945px → -4436.02px
+      inset-block-start: 2846px → 5337.02px
+      top: 2846px → 5337.02px
+   120 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   126 span.visually-hidden  (mockup span.visually-hidden)
+      bottom: -2114.61px → -4605.62px
+      inset-block-end: -2114.61px → -4605.62px
+      inset-block-start: 3015.61px → 5506.62px
+      top: 3015.61px → 5506.62px
+   127 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   152 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   154 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   167 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   190 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   206 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   208 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   224 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 14 of 237
+
+== 320 px · open, step 3: 237 mockup rows, 237 port rows
+   0 section#services.  (mockup section.)
+      block-size: 2124.14px → 2070.02px
+      height: 2124.14px → 2070.02px
+      perspective-origin: 160px 1062.06px → 160px 1035px
+      transform-origin: 160px 1062.07px → 160px 1035.01px
+   29 article.card.card--service.card--ia.vx-src--2  (mockup article.card.card--service.card--ia.vx-src--2)
+      background-image: url("http://127.0.0.1:4182/pictures/1ai_hero.jpg") → url("http://127.0.0.1:4181/pictures/1ai_hero.jpg")
+   88 section#demarche.  (mockup section.)
+      block-size: 985.203px → 909.328px
+      height: 985.203px → 909.328px
+      perspective-origin: 160px 492.594px → 160px 454.656px
+      transform-origin: 160px 492.602px → 160px 454.664px
+      transition-behavior: normal → normal, normal
+      transition-delay: 0s → 0s, 0s
+      transition-duration: 0s → 0.6s, 0.6s
+      transition-property: all → opacity, transform
+      transition-timing-function: ease → cubic-bezier(0.22, 0.61, 0.36, 1), cubic-bezier(0.22, 0.61, 0.36, 1)
+   120 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   127 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   152 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   154 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   167 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   190 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   206 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   208 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   224 span.chip  (mockup span.chip)
+      cursor: pointer → auto
+   rows with a difference: 12 of 237
+
+TOTAL rows with a difference: 230
