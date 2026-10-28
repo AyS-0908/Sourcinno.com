@@ -1,0 +1,144 @@
+=== DELTA CONFIRMATION BRIEF - pass 67 - review contact 2 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): inherited @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are the SAME independent auditor who requested the newest fixes. Confirm only that delta. Do not restart the audit and do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p67\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: ONLY the delta since the last audit: Delta after FIX r1: root PROGRESS.md only (git -C C:/Users/aymar/AYS_CODING/code-SOURCINNO_WWW diff -- PROGRESS.md): A-001 base-measure sentence, origin/main sentence moved back, placeholder removed; A-002 seven departures listed as owner-veto points in the MANUAL-V13 bullet. Product unchanged at 2d73d86.. The earlier round already cleared the rest - do not re-audit it and do not re-run its checks.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: a64eb1b3eaa56c3adb92887b9c2f18a6f32bf1f8
+  404.html                                          |   2 +-
+   ai-business.html                                  |   2 +-
+   assets/css/style.css                              |  62 +++++++----
+   contact/index.html                                |   2 +-
+   index.html                                        | 119 ++++++++++++++--------
+   mentions-legales/index.html                       |   2 +-
+   offre-ia-business/index.html                      |   2 +-
+   offre-strategie-organisation-processus/index.html |   2 +-
+   offre-venture-building/index.html                 |   2 +-
+   politique-confidentialite/index.html              |   2 +-
+   portfolio/index.html                              |   2 +-
+   prototypes/index.html                             |   2 +-
+   publications/index.html                           |   2 +-
+   service-ia-business/index.html                    |   2 +-
+   service-performance/index.html                    |   2 +-
+   service-strategie-transformation/index.html       |   2 +-
+   service-venture-building/index.html               |   2 +-
+   venture-building.html                             |   2 +-
+   18 files changed, 132 insertions(+), 81
+  [diff display truncated; inspect the complete diff against the named Pass base]
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Do NOT rerun `code-audit`; its valid earlier verdict already cleared the rest.
+2. Inspect only the newest fix section below and the files named under SCOPE.
+3. Re-run each decisive check named by that fix. GREEN only if the requested fix is complete, every check passes, and the delta introduced no Tier 1 or Tier 2 issue.
+4. If it still needs work, append ONE new `## Audit fixes to implement` section to .WIP\pass-loop-p67\pass-work.md.
+
+PRIOR FINDINGS
+Confirm the requested fixes and their affected behavior:
+## Audit fixes to implement — 2026-10-28
+BLOCKING_STATUS: NON_BLOCKING
+READINESS: READY_WITH_FIXES
+REASON: The product change (index.html, style.css, 16 stamps) is correct and every check passes; two Tier 2 defects sit in the unsealed root docs: PROGRESS records a false base measure and misfiled lines, and the owner's own Méthodologie words were changed beyond D6/D7 without any record he can veto.
+NATIVE CHECKS:
+- `git grep -n -E "Rendez-vous <span|préparer les marchés|disclosure__subtitle|Livrables types|xyz|Zappier|opérationel" -- index.html` PASS — exit 1, nothing printed
+- `node tools/check.mjs --all` PASS — « OK — aucun probleme sur 17 page(s). », census 166 classes both ways, portfolio/IA tests and blog check PASS
+- `node tools/version.mjs --check` PASS — 42 references on 17 pages
+- `node tools/shell.mjs --check` PASS — 9 pages, 8 redirects skipped
+- `git diff --check a64eb1b..2d73d86` PASS
+- Coder's `render.mjs` re-run by the auditor (copy in auditor scratch, own server 127.0.0.1:4181 on HEAD 2d73d86) PASS — 109 checks, 0 failing (main text = target at 1200/961/768/375/320 x scripts on/off x 2 motions; no right edge past width; tree order, columns >= 961 / stacked below, 10 arrows each aria-hidden + hidden word; P31 0 px at 961/1100; tab reserve 961/1100/1200; 375x553 « Votre enjeu » top 515 bottom 545, opacity 1)
+- auditor probe `audit.mjs` (tree :4181 vs `git -c core.autocrlf=false archive a64eb1b` on :4182) PASS — after scroll 0 text element below opacity 1 (1200/375, scripts on/off); 8 other pages: section heights identical at 1200 and 375; short-phone rule applies at 375x553 and 640x600 only (not 640x601, 641x553, 812x375); #enjeux and #demarche captures at 1200/961/768/375 looked at, connectors continuous
+- Coder's `firstscreen.mjs` re-run, base vs tree: tree PASS at 375x553/635, 360x640, 320x568; base rows contradict a PROGRESS sentence (A-001)
+SCOPE: CLEAN — every product change traces to PLAN § 67 Work 1–4, or to the Coder decision disclosed in PROGRESS (short-phone padding, `#services` out of `.reveal`).
+COVERAGE: 22/22 changed files read (18 product: index.html, assets/css/style.css, 16 one-line `?v=` stamps; 4 root docs) — skipped: none
+
+### A-001 | Tier 2 | MEDIUM | `PROGRESS.md:19`, `PROGRESS.md:33`
+- issue: PROGRESS (verified state) says that at the Pass base « at 375×635 / 360×640 it was on screen but blank until a scroll », but the Pass's own `firstscreen.txt` and the auditor's re-run read the base heading at top 669 (647 reduced motion), below the 635 and 640 px windows; and the new MANUAL-V13 bullet (line 33) took over the release sentence « Product `origin/main` (fd37e87) is an ancestor of `rebuild` … unchanged since 670f72f » that belonged after « Rollback ref e50e34f retained. » (line 32, Publication bullet), and keeps an unresolved `<P67 journal commit>` placeholder.
+- fix: Reword the base clause to the measure (base heading below the first screen at 375×553, 375×635, 360×640 and 320×568), move the `origin/main` sentence back after « Rollback ref e50e34f retained. », and put the real product journal SHA in place of `<P67 journal commit>` at closure.
+- test: `grep -n "on screen but blank" PROGRESS.md` prints nothing; the `origin/main (fd37e87)` sentence sits in the Publication bullet, not in the MANUAL-V13 bullet; `grep -c "<P67 journal commit>" PROGRESS.md` = 0 in the closure commit.
+
+### A-002 | Tier 2 | MEDIUM | `index.html:360-362`, `PROGRESS.md:19`
+- issue: « Méthodologie type » changes the owner's own words beyond PLAN § V1.3 D6/D7 (typos only): « scénarii » → « scénarios », « S-curve » → « courbe en S », « agents IA : brainstorming, challenging » → « agents IA de brainstorming et de challenge », « créés par cas spécifique » → « créés pour chaque cas », plus « questionnaire » → « questionnaires », « (ex. impact x mise en oeuvre) » → «, ex. impact × mise en œuvre », « agents IA suivi des tâches et reporting » → « agents IA de suivi des tâches et de reporting »; these come from `prompts/pass67-coder.md` lines 53-55, while PLAN § 67 Work 1/3 and the PRD § 5.1 line this Pass added say his text prevails, and neither PROGRESS nor CHANGELOG names them, so the owner cannot veto them at MANUAL-V13.
+- fix: List these seven departures (owner's words → site words, source: the Planner prompt) in PROGRESS, on the Pass 67 line or the MANUAL-V13 item, as owner-veto points; leave the page as it is unless the Planner decides otherwise.
+- test: `grep -c -E "scénarii|S-curve|cas spécifique|challenging" PROGRESS.md` >= 1.
+
+Tier 3 advisory (closure notes, no fix needed): the « Méthodologie type » lead breaks inside « pré-questionnaires » / « pré-synthèse » at 1200 and 375 (a non-breaking hyphen U+2011 would keep them whole); the `.vtree__title` border-radius line inside `@media (min-width: 961px)` repeats the base rule; PROGRESS already says « Passes 66 and 67 closed » before this verdict (true only once the closure commit lands).
+
+```json
+{
+  "token": "5d03b8cc",
+  "verdict": "FIX",
+  "confidence": "high",
+  "evidence": [
+    {"cmd": "git grep -n -E \"Rendez-vous <span|préparer les marchés|disclosure__subtitle|Livrables types|xyz|Zappier|opérationel\" -- index.html", "result": "PASS"},
+    {"cmd": "node tools/check.mjs --all", "result": "PASS"},
+    {"cmd": "node tools/version.mjs --check", "result": "PASS"},
+    {"cmd": "node tools/shell.mjs --check", "result": "PASS"},
+    {"cmd": "git diff --check a64eb1b..2d73d86", "result": "PASS"},
+    {"cmd": "P67_NEW=http://127.0.0.1:4181 node render.mjs (Coder script, auditor copy, HEAD 2d73d86): 109 checks", "result": "PASS"},
+    {"cmd": "node audit.mjs (auditor probe: visibility after scroll, 8 other pages OLD vs NEW, short-phone rule scope, captures)", "result": "PASS"},
+    {"cmd": "P67_OLD=http://127.0.0.1:4182 P67_NEW=http://127.0.0.1:4181 node firstscreen.mjs vs PROGRESS.md:19 base claim at 375x635 / 360x640", "result": "FAIL"},
+    {"cmd": "grep -n -E \"scénarii|S-curve|courbe en S|scénarios\" PROGRESS.md CHANGELOG.md (disclosure of departures from the owner's verbatim words)", "result": "FAIL"}
+  ],
+  "opened_fix_section": true
+}
+```
+
+AUDIT r1 COST: 186,714 tokens, 801 s (801,215 ms), FIX
+INVOCATION: one Agent call, agent pass-auditor, fresh context (id in the session's task notice) · USAGE BASIS: whole-contact (task notification `subagent_tokens`; incremental or cumulative not stated)
+
+## FIX r1 (A-001, A-002) — root PROGRESS.md only, product untouched (HEAD 2d73d86, fingerprint unchanged)
+- A-001: the Pass 67 Done line now gives the base measure (heading below the first screen at 375×553, 375×635, 360×640, 320×568: top 669, 647 reduced); the `origin/main (fd37e87)` sentence is back after « Rollback ref e50e34f retained. » in the Publication bullet; the MANUAL-V13 bullet has no `<P67 journal commit>` placeholder (it points to Last Verification, Pass 67, where the real journal SHA goes at closure).
+- A-002: the MANUAL-V13 bullet lists the seven departures (owner's words → site words, source the Planner prompt) as owner-veto points; page unchanged.
+Tests: `grep -n "on screen but blank" PROGRESS.md` → nothing; `grep -n fd37e87 PROGRESS.md` → line 32, the « Rollback ref » line of the Publication bullet; `grep -c "<P67 journal commit>" PROGRESS.md` → 0; `grep -c -E "scénarii|S-curve|cas spécifique|challenging" PROGRESS.md` → 1.
+
+## TEST-RESULTS r2
+TREE: 8ec9f369e323c2f8
+CMD: DW1 grep ; `node tools/check.mjs --all` ; `node tools/version.mjs --check` ; `node tools/shell.mjs --check` ; the four FIX r1 greps on root `PROGRESS.md` (fingerprint before 8ec9f369e323c2f8, after 8ec9f369e323c2f8)
+RESULT: PASS — DW1 exit 1 (no output); check --all 0 (« OK — aucun probleme sur 17 page(s). »); version 0; shell 0; « on screen but blank » 0 lines; `fd37e87` on line 32 (Publication bullet, after « Rollback ref e50e34f retained. »); placeholder 0; veto terms 1 line.
+NOTES: product unchanged since r1 (2d73d86, same seal); render not re-run (no product change).
+
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p67\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "fee8cff3",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.
