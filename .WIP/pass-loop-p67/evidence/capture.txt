@@ -1,6 +1,0 @@
-home-1200-1.jpg 1200x900 page 4330 px, tile y 0 h 2500, Inter true saved
-home-1200-2.jpg 1200x900 page 4330 px, tile y 2500 h 1830, Inter true saved
-home-375-1.jpg 375x812 page 6979 px, tile y 0 h 2500, Inter true saved
-home-375-2.jpg 375x812 page 6979 px, tile y 2500 h 2500, Inter true saved
-home-375-3.jpg 375x812 page 6979 px, tile y 5000 h 1979, Inter true saved
-home-375x553-first.jpg 375x553 page 553 px, tile y 0 h 553, Inter true saved
