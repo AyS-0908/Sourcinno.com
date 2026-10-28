@@ -1,0 +1,12 @@
+{
+  "verdict": "publish",
+  "sources": [
+    {
+      "url": "https://agentskills.io/",
+      "opened": true,
+      "note": "Opened 2026-10-28 (re-check: link and level-2 sentence changed). « Agent Skills are a lightweight, open format »; a skill holds a SKILL.md with instructions and « can also bundle scripts, reference materials, templates »; « Build a skill once and use it across any skills-compatible agent ». Supports the level-2 sentence on the open Agent Skills format. The earlier platform.claude.com link is no longer in the draft."
+    }
+  ],
+  "repairs": [],
+  "reasons": []
+}

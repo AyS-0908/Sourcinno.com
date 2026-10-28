@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "kind": "linkedin_post",
+      "lang": "fr",
+      "text": "Toutes les tâches ne demandent pas le même effort pour passer à l’IA.\n\nLa bonne question n’est pas « où mettre de l’IA ? », mais « quel niveau d’IA pour chaque tâche ? ».\n\nNiveau 1 — Déjà intégrée : la fonction existe dans un logiciel en place. Rien à construire.\n\nNiveau 2 — Ré-utiliser : une compétence IA (« AI Skill ») par tâche, écrite une fois, réutilisée à chaque fois.\n\nNiveau 3 — Restructurer : le processus structuré, numérisé et renforcé par l’IA dans un outil du quotidien.\n\nLa règle : viser le niveau le plus bas qui suffit, et écrire les limites dès le départ.\n\nLes trois niveaux en détail : https://www.sourcinno.com/publications/#comment-decider-des-taches-a-confier-a-l-ia",
+      "hashtags": ["IA", "Processus"]
+    },
+    {
+      "kind": "x_post",
+      "lang": "fr",
+      "text": "Quelles tâches confier à l’IA ? Trois niveaux : déjà intégrée, ré-utiliser (une « AI Skill » par tâche), restructurer le processus. La règle : le niveau le plus bas qui suffit. https://www.sourcinno.com/publications/#comment-decider-des-taches-a-confier-a-l-ia",
+      "hashtags": ["IA"]
+    }
+  ]
+}
