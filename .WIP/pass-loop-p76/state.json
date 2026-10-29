@@ -1,0 +1,39 @@
+{
+  "unit_label": "pass",
+  "unit": "76",
+  "state": "done",
+  "scope": "Delta after FIX r1 only: A-001 product commit 88a5ca4 (assets/css/style.css:906 opacity: 1 on #blog-list .disclosure--card .card__meta, plus the style.css ?v= stamp on 17 pages); A-002 root PLAN.md \u00a7 Release acceptance lines 115, 116, 118 reworded to publications/img/ and publications/articles/ with the gtm-blog blog.mjs sync . then node tools/version.mjs (root repo, outside this seal). Evidence: TEST-RESULTS r2 and .WIP/pass-loop-p76/evidence/render.txt.",
+  "audit_launches": 2,
+  "audit_launch_cap": 2,
+  "test_fix_round": 0,
+  "test_fix_rounds": 3,
+  "manual_open": 0,
+  "stop_mode": "decisions-only",
+  "verdict": "GREEN",
+  "verdict_note": "parsed",
+  "token": "",
+  "fix_sections": 1,
+  "audit_errors": 0,
+  "paused_from": "",
+  "model_capabilities": "",
+  "models": {
+    "work": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    },
+    "auditor": {
+      "model": "claude-opus-5-5",
+      "effort": "unknown"
+    }
+  },
+  "audits_paid": 2,
+  "results_blocks": 2,
+  "pass_base": "6244769a932807026cf346b1b73eb1fff1b61ad5",
+  "seal_paths": "",
+  "brief_fingerprint": "1a16e32bd91663a3",
+  "green_fingerprint": "1a16e32bd91663a3",
+  "briefed_at": "2026-10-29T20:53:41",
+  "cap_extensions": [],
+  "state_dir": ".WIP/pass-loop-p76",
+  "updated": "2026-10-29"
+}

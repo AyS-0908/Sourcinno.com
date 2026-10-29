@@ -1,0 +1,149 @@
+=== DELTA CONFIRMATION BRIEF - pass 76 - review contact 2 of 2 ===
+REVIEW SETTINGS (declared; not verified by this script): claude-opus-5-5 @ effort unknown (legacy: 1=low 2=medium 3=high 4=xhigh 5=max)
+Use exposed launch controls; otherwise inherit the permitted defaults.
+
+You are the SAME independent auditor who requested the newest fixes. Confirm only that delta. Do not restart the audit and do not fix it.
+
+READ FIRST - only this:
+- C:\Users\aymar\AYS_CODING\_AI_AGENTS\AGENTS-canonical.md
+- the files named under SCOPE
+Do NOT read .WIP\pass-loop-p76\pass-work.md to learn what happened: it is the work session's scratchpad, it
+grows every round, and re-reading it is what made the last run expensive. You only
+APPEND to it, at the end.
+
+SCOPE: ONLY the delta since the last audit: Delta after FIX r1 only: A-001 product commit 88a5ca4 (assets/css/style.css:906 opacity: 1 on #blog-list .disclosure--card .card__meta, plus the style.css ?v= stamp on 17 pages); A-002 root PLAN.md § Release acceptance lines 115, 116, 118 reworded to publications/img/ and publications/articles/ with the gtm-blog blog.mjs sync . then node tools/version.mjs (root repo, outside this seal). Evidence: TEST-RESULTS r2 and .WIP/pass-loop-p76/evidence/render.txt.. The earlier round already cleared the rest - do not re-audit it and do not re-run its checks.
+
+WHAT THE TREE ACTUALLY SHOWS - measured now, not claimed. The slice's declared size is
+the work session's own statement; this is git's. If they disagree, that IS a finding:
+  Pass base: 6244769a932807026cf346b1b73eb1fff1b61ad5
+  404.html                                          | 2 +-
+   ai-business.html                                  | 2 +-
+   assets/css/style.css                              | 2 +-
+   contact/index.html                                | 2 +-
+   index.html                                        | 2 +-
+   mentions-legales/index.html                       | 2 +-
+   offre-ia-business/index.html                      | 2 +-
+   offre-strategie-organisation-processus/index.html | 2 +-
+   offre-venture-building/index.html                 | 2 +-
+   politique-confidentialite/index.html              | 2 +-
+   portfolio/index.html                              | 2 +-
+   prototypes/index.html                             | 2 +-
+   publications/index.html                           | 2 +-
+   service-ia-business/index.html                    | 2 +-
+   service-performance/index.html                    | 2 +-
+   service-strategie-transformation/index.html       | 2 +-
+   service-venture-building/index.html               | 2 +-
+   venture-building.html                             | 2 +-
+   18 files changed, 18 insertions(+), 18 deletions(-)
+
+SEAL COVERAGE: primary-repo regular files, including operational Markdown - the whole repository,
+or ONLY the SEALED PATHS when the measured block above names some. A file this Pass changed outside
+them is NOT sealed: that is a finding. Excludes only PROGRESS.md/CHANGELOG.md at the top of each
+sealed folder (repo root when none is declared) and this loop's three bookkeeping artifacts. Ignored untracked files,
+symlink targets and other repositories/gitlink working trees are NOT sealed: name separate
+checks and their receipts for any such deliverable; do not claim this seal covered them.
+
+HOW TO REVIEW
+1. Do NOT rerun `code-audit`; its valid earlier verdict already cleared the rest.
+2. Inspect only the newest fix section below and the files named under SCOPE.
+3. Re-run each decisive check named by that fix. GREEN only if the requested fix is complete, every check passes, and the delta introduced no Tier 1 or Tier 2 issue.
+4. If it still needs work, append ONE new `## Audit fixes to implement` section to .WIP\pass-loop-p76\pass-work.md.
+
+PRIOR FINDINGS
+Confirm the requested fixes and their affected behavior:
+## Audit fixes to implement — 2026-10-29
+BLOCKING_STATUS: NON_BLOCKING
+READINESS: READY_WITH_FIXES
+REASON: Release audit of V1.3 (product 7eb3df9..6244769, 27 commits, 93 files): native suite green, privacy/legal text matches measured behaviour, redirects and scripts sound; one rendered accessibility regression from the gtm-blog engine move and one stale release-checklist route.
+NATIVE CHECKS: `node tools/check.mjs --all` PASS — « OK — aucun probleme sur 17 page(s) », test-ia-embeds PASS, blog.mjs check 14 articles
+NATIVE CHECKS: `node tools/version.mjs --check` PASS (42) · `node tools/shell.mjs --check` PASS (9 + 8 stubs) · `git diff --check 7eb3df9 HEAD` PASS · `git diff --quiet 670f72f HEAD -- .github/workflows/deploy-hostinger.yml` PASS · `git ls-files .WIP` 0 · `git merge-base --is-ancestor origin/main HEAD` PASS
+SCOPE: CLEAN — search box and « Tous » chip = owner O3 (PRD row updated); Portfolio out = owner « A », revert path proven in a scratch clone (`git revert -X ours 35e2217`, `version.mjs`, `check.mjs --all` exit 0, portfolio.test PASS); `blog/` = gtm-blog engine profile (necessary side work).
+COVERAGE: 63/93 changed files read (the five long pages index.html, service-performance, service-ia-business, service-venture-building, publications/index.html read by diff in part and covered by rendered probes 320–1200 px, scripts on and off) — skipped: 30 `publications/img/*` (R100 byte-identical binary moves from `assets/img/blog/`; existence and references verified by `blog.mjs check`, 31 pictures)
+
+### A-001 | Tier 2 | MEDIUM | `publications/blog.css:16`
+- issue: Since the gtm-blog engine move (cf1d4d7), `:where(#blog-list .card__meta) { opacity: .75 }` dims the 14 blog card dates (site grey-500 #64707f, 13.6 px, weight 400) to 3.08:1 on white, against 5.04:1 at 7eb3df9 (both measured rendered), below WCAG AA 4.5:1; `--a11y` compares declared colours only and does not read this file, so the suite stays green.
+- fix: `publications/blog.css` is rewritten by `blog.mjs sync`, so override on the site side: add `opacity: 1;` to `#blog-list .disclosure--card .card__meta` (`assets/css/style.css:906`), then `node tools/version.mjs`; route the engine default (opacity on a host-coloured date) to the gtm-blog skill backlog by name.
+- test: headless /publications/ at 1200 and 375: every `#blog-list .card__meta` computed opacity 1 and rendered date contrast >= 4.5:1 (expect 5.04:1 on white); `node tools/check.mjs --all` and `node tools/version.mjs --check` exit 0.
+
+### A-002 | Tier 2 | LOW | root `PLAN.md:115-118` (§ Deferred / Release acceptance)
+- issue: The P58, P57 and « Release audit P65 A-001 » owner items still name `assets/img/blog/…`, `tools/blog/…` and `node tools/blog-sync.mjs`; this diff moved the pictures byte-identical to `publications/img/`, the articles to `publications/articles/`, and deleted `tools/blog-sync.mjs`, so the checklist's light-route repair cannot be followed as written.
+- fix: routing advice (the auditor does not edit the root): in Pass 76 Work 2, reword those three items to `publications/img/<same file name>`, `publications/articles/<slug>.html` and `node C:\Users\aymar\AYS_CODING\_AI_SKILLS\skill-gtm-blog\scripts\blog.mjs sync .` then `node tools/version.mjs` (AGENTS Commands), owner facts unchanged; the same paths in PROGRESS Open « Publication ».
+- test: from the root, `grep -n "assets/img/blog\|tools/blog/\|blog-sync" PLAN.md` finds nothing inside § Release acceptance, and each picture named there exists under `current sourcinno site- code/publications/img/`.
+
+## Auditor notes, release audit contact 1 — Tier 3 advisory and limits (not fixes)
+- Published, not for visitors: `blog/` (engine page `blog/profile.html` with editing UI and no noindex, reviewer notes, unsent social drafts) and `publications/articles/*.html` (raw fragments, no charset or title) are served from the publish root `/` and absent from robots.txt. Whole-tree `git grep`: no phone but the host's, no email but contact@sourcinno.com, owner name already public; the repository is public anyway. Optional: `Disallow: /blog/` and `/publications/articles/`, or a server deny at deployment (§ Release acceptance, optional).
+- Without scripts `.vx-node` is a focusable button shipped with `aria-expanded="true"` that does nothing (chevron hidden, default cursor); site.js already sets the attribute at init, so the HTML could ship none.
+- `check.mjs`, `shell.mjs`, `version.mjs` skip any folder NAMED `blog` or `articles` anywhere; a future public folder of that name would escape every check. Anchoring to `blog/` at the root and `publications/articles/` closes it.
+- Privacy page: « Le propriétaire de Sourcinno SAS, seul destinataire des messages » and, for Typebot, « lus par Aymard de Scorbiac, seul destinataire »: same person, two wordings; the contact@ « seul destinataire » confirmation is already an owner item.
+- First-screen blank `.reveal` blocks on short phones (contact, mentions, privacy, VB 320×568) measured identical at 7eb3df9: the known P53 backlog trap, not a V1.3 regression.
+- Range: git shows 27 commits / 93 files as declared; the brief's list omits the three gtm-blog Pass 4 commits (cf1d4d7, 6b0f062, 8b2e076), audited here (A-001 comes from them).
+- Not covered: external link liveness (no network beyond 127.0.0.1 and Google Fonts), live Typebot content, server headers / 404 / log retention (already in § Release acceptance).
+
+```json
+{
+  "token": "a647caaf",
+  "verdict": "FIX",
+  "confidence": "high",
+  "evidence": [
+    {"cmd": "node tools/check.mjs --all", "result": "PASS"},
+    {"cmd": "node tools/version.mjs --check", "result": "PASS"},
+    {"cmd": "node tools/shell.mjs --check", "result": "PASS"},
+    {"cmd": "git diff --check 7eb3df9 HEAD", "result": "PASS"},
+    {"cmd": "git diff --quiet 670f72f HEAD -- .github/workflows/deploy-hostinger.yml", "result": "PASS"},
+    {"cmd": "git ls-files .WIP | wc -l (0); git merge-base --is-ancestor origin/main HEAD", "result": "PASS"},
+    {"cmd": "git grep -I -E owner-mobile, old-email and tel patterns over HEAD excluding vendor: only the host phone in mentions-legales", "result": "PASS"},
+    {"cmd": "scratchpad render.mjs: 9 pages x 1200/375 x scripts on/off: 0 exceptions, 0 console errors, 0 HTTP>=400, 0 element past width, hosts 127.0.0.1 and Google Fonts only; 8 redirect stubs land on their targets", "result": "PASS"},
+    {"cmd": "scratchpad render.mjs IA probe: typebot.io first requested after #reflexion is on screen; youtube-nocookie.com/embed/hDFiKEFv5kA iframe only after click", "result": "PASS"},
+    {"cmd": "scratchpad render.mjs interactions: .vx-node toggles the tree (2 to 5 paths, no NaN); .mA friezes click, ArrowRight, End, wrap; height stable from 861 px on home, Performance, IA", "result": "PASS"},
+    {"cmd": "scratchpad narrow.mjs: 320, 768, 961 px x scripts on/off x 9 pages: no overflow, no error", "result": "PASS"},
+    {"cmd": "scratchpad firstscreen.mjs: 8 pages x 6 sizes, HEAD vs 7eb3df9: no new first-screen blank heading", "result": "PASS"},
+    {"cmd": "scratch clone: git revert -X ours 35e2217; node tools/version.mjs; node tools/check.mjs --all", "result": "PASS"},
+    {"cmd": "scratch clone mutation: unknown class, dead CSS rule, national mobile number in contact: check.mjs exit 1 naming each; clean tree exit 0", "result": "PASS"},
+    {"cmd": "scratchpad contrast.mjs /publications/ 1200: #blog-list .card__meta time 3.08:1 (opacity .75 from publications/blog.css:16), baseline 7eb3df9 opacity 1 at 5.04:1", "result": "FAIL"},
+    {"cmd": "grep -n assets/img/blog, tools/blog/, blog-sync in root PLAN.md: Release acceptance lines 115, 116, 118 name moved or deleted paths", "result": "FAIL"}
+  ],
+  "opened_fix_section": true
+}
+```
+
+AUDIT r1 COST: 267,607 tokens, 28 min 39 s (1,718,802 ms), FIX (2 Tier 2: A-001 code, A-002 root docs)
+INVOCATION: Agent tool pass-auditor, task-notification of contact 1 · USAGE BASIS: whole-contact (subagent_tokens of the task notification)
+
+## FIX r1 — Coder
+- A-001 (product 88a5ca4): `assets/css/style.css:906` `#blog-list .disclosure--card .card__meta` gains `opacity: 1;` (grouped selector with `.tags`, which had no opacity); `node tools/version.mjs` restamped the `style.css?v=` line on 17 pages (18 files, 18+/18-). `publications/blog.css` (engine-written) untouched; its `opacity: .75` default goes to the gtm-blog skill backlog via PROGRESS (skill outside this Pass's bounds).
+- A-002 (root PLAN.md, not in this seal): § Release acceptance P58, P57 and P65 A-001 items now name `publications/img/…` and `publications/articles/…`, repair = the gtm-blog `blog.mjs sync .` (AGENTS § Commands) then `node tools/version.mjs`; 5 replacements on 3 lines, no line removed (`git -C <root> diff -U0 PLAN.md`). PROGRESS Open « Publication » mirrors the paths at closure.
+
+## TEST-RESULTS r2
+TREE: 1a16e32bd91663a3
+CMD: `node tools/check.mjs --all` · `node tools/version.mjs --check` · `node tools/shell.mjs --check` · `git diff --check 7eb3df9 HEAD` · `git ls-files .WIP | wc -l` · `git merge-base --is-ancestor origin/main HEAD` · `git diff --quiet 670f72f HEAD -- .github/workflows/deploy-hostinger.yml` · `node .WIP/pass-loop-p76/evidence/render.mjs <scratch>`
+RESULT: PASS — check.mjs 0 « OK — aucun probleme sur 17 page(s) » (`check-all-r2.txt`); version 0; shell 0; diff --check 0; `.WIP` 0; ancestor 0; workflow 0; render « PASS 4 of 4 » (`evidence/render.txt`).
+NOTES: AUTO-4 render: `/publications/` HEAD (127.0.0.1:4173) vs `git -c core.autocrlf=false archive 6244769` (127.0.0.1:4174), 1200×900 and 375×812, scripts on and off, reduced motion no-preference: element counts 862/862 (on) 854/854 (off), page heights equal (3238, 3122, 4805, 4451), Inter loaded both, 0 exceptions / 0 HTTP ≥ 400; per element box + sorted standard computed style hashed with and without opacity: the only difference is `SPAN.card__meta` opacity on 14 elements (1 vs 0.75), nothing else. Colour rgb(100,112,127) on white = 5.04:1 (was 3.78 effective at 0.75 per the auditor's 3.08 measure on its background). The probe's own sensitivity: it reported exactly the 14 expected opacity diffs on every run. Other pages: only the `?v=` stamp changed; the rule is scoped `#blog-list`, present on Publications alone (`git grep -l 'id="blog-list"'`).
+
+
+YOUR ANSWER - the only thing that is read
+Append to .WIP\pass-loop-p76\pass-work.md a fenced json block of exactly this shape, and put nothing else in it:
+
+```json
+{
+  "token": "644cf104",
+  "verdict": "GREEN | FIX | MORE_TESTS",
+  "confidence": "high | medium | low",
+  "evidence": [{"cmd": "<the command you ran>", "result": "PASS | FAIL"}],
+  "opened_fix_section": false
+}
+```
+
+THE GATE THAT READS IT - verbatim. These are the rules you are judged by:
+- Valid JSON, exactly those five fields, nothing more and nothing less. Malformed = void.
+- Backslashes inside JSON strings must be doubled: write \\s, not \s.
+- "token" is the code above, character for character. It is single use.
+- "verdict" is one of GREEN, FIX, MORE_TESTS. "confidence" is one of high, medium, low.
+- "evidence" is a non-empty list; every entry needs a non-empty "cmd" and a "result" of
+  exactly PASS or FAIL.
+- GREEN needs at least one PASS and tolerates no FAIL. A GREEN over a failing check is refused.
+- "opened_fix_section" is true if and only if you appended a fix section this round.
+  FIX requires true; GREEN and MORE_TESTS require false.
+- Prose - your reasoning, caveats, the fix section itself - goes OUTSIDE the block. Nothing
+  you write outside it can void the verdict, and nothing inside it may be prose.
+A void review is not a pass: it costs one of the 2 contacts this Pass can afford, and the
+Pass never goes green on it.
