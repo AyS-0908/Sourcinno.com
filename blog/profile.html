@@ -30,7 +30,7 @@
   textarea { box-sizing: border-box; width: 100%; padding: .5rem .75rem; }
   select, input { field-sizing: content; }
   input { min-width: 2ch; padding: 0 .2rem; }
-  [contenteditable] { display: inline-block; min-width: 4ch; }
+  [contenteditable] { display: inline-block; min-width: 4ch; white-space: pre-wrap; }
   [contenteditable]:hover, [contenteditable]:focus { outline: 1px dashed var(--accent); outline-offset: 2px; }
   .modifie { outline: 1px solid var(--accent); outline-offset: 2px; }
   #choix { position: sticky; bottom: 0; padding: .5rem 0; background: var(--fond); border-top: 1px solid var(--cadre); }
@@ -68,6 +68,12 @@
     <tr><th scope="row">Mots, article long</th><td><input type="number" data-k="voice.words.long" aria-label="voice.words.long" min="0" step="any" value="900"></td></tr>
     <tr><th scope="row">Lecteurs visés</th><td><span data-k="voice.audience" contenteditable="plaintext-only">Dirigeants et directeurs (DG, DRH, directeurs innovation) d'entreprises établies, en France.</span></td></tr>
     <tr><th scope="row">Expression interdite</th><td class="doux">Aucune ligne pour l'instant (à ajouter dans la note en bas de page).</td></tr>
+    <tr><th scope="row">Règle de style</th><td class="doux">Aucune ligne pour l'instant (à ajouter dans la note en bas de page).</td></tr>
+    <tr><th scope="row">Exemple de votre écriture</th><td><span data-k="voice.sample" contenteditable="plaintext-only">Le lancement d'une nouvelle entreprise consiste finalement à atteindre 3 objectifs : créer une solution, la vendre aux clients et gérer l'ensemble. Une jeune entreprise est souvent une très petite équipe et ne doit pas sur-structurer son organisation. Il est cependant plus efficace d'être clair sur les rôles et les responsabilités.
+
+Dans les années 90, le courrier électronique a démocratisé la fonction &quot;bcc :&quot; pour atteindre des milliers de destinataires à la fois (bonjour les spams). Aujourd'hui, l'IA est peut-être en passe de démocratiser les campagnes d'appels parallèles massives.
+
+Klarna (eCommerce/Fintech) a déployé un chatbot pour son Service Client ; il est disponible sur 23 marchés, en 35 langues, 24/7. L'IA n'est pas un sujet IT, c'est une priorité Business.</span></td></tr>
   </table></div>
   <h2>3. Les étiquettes (une par article)</h2>
   <div class="large"><table class="lignes">
@@ -124,9 +130,8 @@
   </table></div>
   <h2>11. L'accord sur ce profil</h2>
   <div class="large"><table class="lignes">
-    <tr><th scope="row">Accord A1 sur le profil</th><td><select data-k="accords.profile" aria-label="accords.profile"><option selected>✓ Donné</option><option>En attente</option></select></td></tr>
+    <tr><th scope="row">Accord A1 sur le profil</th><td><select data-k="accords.profile" aria-label="accords.profile"><option>✓ Donné</option><option selected>En attente</option></select></td></tr>
   </table></div>
-  <p>Donné le 2026-10-16 par Aymard de Scorbiac.</p>
   <p class="doux ecran"><label for="autre">Autre décision (ajouter ou retirer une ligne, autre demande) :</label></p>
   <textarea id="autre" class="ecran" rows="2"></textarea>
   <div id="choix" hidden>
@@ -137,12 +142,14 @@
 </main>
 <script>
   (() => {
-    const by = id => document.getElementById(id), all = [...document.querySelectorAll('[data-k]')], norm = s => String(s).replace(/\s+/g, ' ').trim();
+    const by = id => document.getElementById(id), all = [...document.querySelectorAll('[data-k]')];
+    const norm = (s, paras) => paras ? String(s).split(/\n\s*\n/).map(p => p.replace(/\s+/g, ' ').trim()).filter(Boolean).join('\n\n') : String(s).replace(/\s+/g, ' ').trim();
     const box = by('choix'), out = by('consigne'), copy = by('copier'), note = by('autre'), word = copy.textContent;
-    const read = e => norm(e.options ? e.options[e.selectedIndex].text : e.value != null ? e.value : e.textContent);
-    const first = new Map(all.map(e => [e, norm(e.options ? [...e.options].find(o => o.defaultSelected).text : e.defaultValue != null ? e.defaultValue : e.textContent)]));
+    const keep = e => e.dataset.k === 'voice.sample';
+    const read = e => norm(e.options ? e.options[e.selectedIndex].text : e.value != null ? e.value : e.textContent, keep(e));
+    const first = new Map(all.map(e => [e, norm(e.options ? [...e.options].find(o => o.defaultSelected).text : e.defaultValue != null ? e.defaultValue : e.textContent, keep(e))]));
     const show = () => {
-      const moved = all.filter(e => read(e) !== first.get(e)), more = norm(note.value);
+      const moved = all.filter(e => read(e) !== first.get(e)), more = norm(note.value, true);
       for (const e of all) e.className = moved.includes(e) ? 'modifie' : '';
       box.hidden = !moved.length && !more;
       out.value = box.hidden ? '' : [out.dataset.head, ...moved.map(e => '- ' + e.dataset.k + out.dataset.colon + read(e)), ...(more ? ['- note' + out.dataset.colon + more] : []), out.dataset.tail].join('\n');

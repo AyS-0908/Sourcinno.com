@@ -25,7 +25,8 @@
       "long": 900
     },
     "audience": "Dirigeants et directeurs (DG, DRH, directeurs innovation) d'entreprises établies, en France.",
-    "forbidden_phrases": []
+    "forbidden_phrases": [],
+    "sample": "Le lancement d'une nouvelle entreprise consiste finalement à atteindre 3 objectifs : créer une solution, la vendre aux clients et gérer l'ensemble. Une jeune entreprise est souvent une très petite équipe et ne doit pas sur-structurer son organisation. Il est cependant plus efficace d'être clair sur les rôles et les responsabilités.\n\nDans les années 90, le courrier électronique a démocratisé la fonction \"bcc :\" pour atteindre des milliers de destinataires à la fois (bonjour les spams). Aujourd'hui, l'IA est peut-être en passe de démocratiser les campagnes d'appels parallèles massives.\n\nKlarna (eCommerce/Fintech) a déployé un chatbot pour son Service Client ; il est disponible sur 23 marchés, en 35 langues, 24/7. L'IA n'est pas un sujet IT, c'est une priorité Business."
   },
   "tags": [
     "IA",
@@ -67,14 +68,13 @@
     "branch": "rebuild"
   },
   "social": {
-    "languages": ["fr"],
+    "languages": [
+      "fr"
+    ],
     "channels": [],
     "hashtags": []
   },
   "accords": {
-    "profile": {
-      "day": "2026-10-16",
-      "name": "Aymard de Scorbiac"
-    }
+    "profile": null
   }
 }
