@@ -903,7 +903,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 /* Résumé : étiquette, titre, date empilés ; le "+" sur la ligne du titre. */
 #blog-list .disclosure--card summary::after { grid-row: 2; }
 #blog-list .disclosure--card .tags,
-#blog-list .disclosure--card .card__meta { margin: 0; font-weight: 400; }
+#blog-list .disclosure--card .card__meta { margin: 0; font-weight: 400; opacity: 1; }
 /* Corps : même retrait et même filet que .bullets ; texte à la largeur de lecture, image jamais plus large que la carte. */
 .blog-body { margin: 0 var(--space-3) var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
 .blog-body > * { margin: 0; }
