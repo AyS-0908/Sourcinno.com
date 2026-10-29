@@ -1053,11 +1053,23 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 #besoin.service-refinement .section__head { max-width: none; }
 #besoin.service-refinement .lead { padding: var(--space-3); margin-bottom: var(--space-3); border-radius: var(--radius-lg); background: var(--grey-50); font-size: 1rem; line-height: 1.7; font-weight: 400; }
 /* P71 : Venture Building « Réflexion », la phrase sous son titre, même retrait et même filet que .bullets. */
-#reflexion .grid--2:has(> .stack) { margin-bottom: var(--space-4); }
+/* P75 : textes → vidéo un peu plus large (owner 2026-10-29) : --space-4 → --space-5. */
+#reflexion .grid--2:has(> .stack) { margin-bottom: var(--space-5); }
 #reflexion .disclosure--card > p { margin: 0 var(--space-3) var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
 @media (max-width: 640px) {
   #reflexion .disclosure--card > p { margin: 0 var(--space-2) var(--space-2); }
 }
+/* P75 (owner 2026-10-29) : espacements, chacun limité à sa section (pages repérées par leur hero).
+   Performance : Réflexion → « Discutons de votre besoin » divisé par deux, comme l’accueil (P74).
+   Venture Building : sous la vidéo de « David + Goliath » et sous celle de « Réflexion », la marge de la vidéo
+   est retirée ; le haut de la bande « Discutons de votre besoin » est réduit comme sur Performance.
+   Entreprise IA : la vidéo « Formation » sans marge basse, l’écart vers le bouton reste celui d’avant. */
+.hero--strategie ~ #reflexion { padding-bottom: calc(var(--space-6) / 2); }
+.hero--strategie ~ #reflexion + .section,
+.hero--venture ~ #reflexion + .section { padding-top: calc(var(--space-6) / 2 - .5rem); }
+#david-goliath .band-figure,
+.hero--venture ~ #reflexion > .container > .band-figure,
+#formation .band-figure { margin-bottom: 0; }
 .service-careers { list-style: none; margin: 0; padding: 0; }
 .service-career { min-width: 0; box-shadow: none; }
 .service-career::before { content: ""; display: block; width: 28px; height: 4px; background: var(--teal-dark); border-radius: var(--radius); margin-bottom: var(--space-1); }
