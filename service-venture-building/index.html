@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=e9c5b1fa">
+<link rel="stylesheet" href="/assets/css/style.css?v=eaec76ac">
 <noscript>
   <style>
     /* Sans JavaScript, le lecteur video ne peut pas se lancer : on le masque,
@@ -142,185 +142,7 @@
   </div>
 </section>
 
-<section class="section section--alt reveal" id="portfolio">
-  <div class="container">
-    <div class="section__head">
-      <h2>Portfolio</h2>
-    </div>
-    <form class="portfolio-filter" id="portfolio-filter" role="search" aria-label="Rechercher un projet" hidden>
-      <div class="field"><label for="portfolio-query">Mot-clé</label><input id="portfolio-query" type="search" placeholder="Nom, besoin, technologie…" aria-controls="portfolio-gallery" autocomplete="off"></div>
-      <div class="field"><label for="portfolio-sector">Secteur</label><select id="portfolio-sector" data-facet="sector" aria-controls="portfolio-gallery"><option value="">Tous les secteurs</option></select></div>
-      <div class="field"><label for="portfolio-persona">Persona</label><select id="portfolio-persona" data-facet="persona" aria-controls="portfolio-gallery"><option value="">Toutes les personas</option></select></div>
-      <div class="field"><label for="portfolio-stack">Stack</label><select id="portfolio-stack" data-facet="stack" aria-controls="portfolio-gallery"><option value="">Toutes les stacks</option></select></div>
-      <div class="field"><label for="portfolio-phase">Avancement</label><select id="portfolio-phase" data-facet="phase" aria-controls="portfolio-gallery"><option value="">Tous les avancements</option></select></div>
-      <div class="field"><label for="portfolio-model">Modèle éco</label><select id="portfolio-model" data-facet="model" aria-controls="portfolio-gallery"><option value="">Tous les modèles</option></select></div>
-      <div class="portfolio-filter__results">
-        <p id="portfolio-count" role="status" aria-live="polite" aria-atomic="true"></p>
-        <button id="portfolio-reset" type="button" class="btn btn--secondary">Réinitialiser</button>
-        <p id="portfolio-empty" hidden>Aucun projet ne correspond. Essayez un autre mot-clé ou réinitialisez les filtres.</p>
-      </div>
-    </form>
-  </div>
-  <div class="container portfolio-grid" id="portfolio-gallery">
-    <article class="portfolio-card" aria-labelledby="crm-title">
-      <h3 id="crm-title">CRM TENANTS</h3>
-      <details class="portfolio-details">
-        <summary>
-          <span class="portfolio-info"><span aria-hidden="true">i</span><span class="visually-hidden">Découvrir les détails de CRM TENANTS</span></span>
-          <span class="portfolio-return"><span aria-hidden="true">←</span><span class="visually-hidden">Revenir à la présentation de CRM TENANTS</span></span>
-        </summary>
-        <div class="portfolio-back">
-          <h4>Persona</h4><p>B2B · Équipes commerciales</p>
-          <h4>Problème</h4><p>Des étapes oubliées et des offres à fiabiliser.</p>
-          <h4>Vision</h4><p>Rendre la vente de surfaces plus rigoureuse.</p>
-          <h4>Proposition de valeur</h4><p>Guider les commerciaux, du besoin au devis.</p>
-          <h4>Solution</h4><p>Un parcours de vente guidé, relié au stock de surfaces et aux règles de devis. Ces fonctions décrivent le projet ; le produit reste à construire.</p>
-          <h4>Différenciation</h4><p>Comparaison à finaliser par benchmark.</p>
-          <h4>Stack</h4><p>À définir pour le produit</p>
-          <h4>Modèle économique</h4><p>À confirmer</p>
-          <h4>Avancement</h4>
-          <ol class="portfolio-timeline" aria-label="Avancement du projet">
-            <li aria-current="step">Idée / maquette<span class="visually-hidden"> : phase actuelle, maquette ; idée, problème et business plan sans validation détaillée attestée. Produit à construire.</span></li>
-            <li>Stories / spec<span class="visually-hidden"> : état détaillé à confirmer.</span></li>
-            <li>Dev / tests<span class="visually-hidden"> : développement, tests et audit du produit à réaliser.</span></li>
-            <li>Kit marché<span class="visually-hidden"> : à confirmer. État de pause non renseigné.</span></li>
-          </ol>
-          <div class="portfolio-actions"><a href="/contact/?project=CRM%20TENANTS&amp;intent=contact">Nous contacter</a></div>
-        </div>
-      </details>
-      <div class="portfolio-front">
-        <div class="portfolio-cover">
-          <img src="/assets/img/portfolio/crm-tenants-cover.svg" alt="Vignette illustrative : du besoin aux surfaces puis au devis" width="528" height="297">
-          <span class="portfolio-lock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10V7a6 6 0 0 1 12 0v3"/><rect x="4" y="10" width="16" height="13" rx="2"/></svg><span class="visually-hidden">Vidéo privée : accès sur demande, invitation à confirmer.</span></span>
-        </div>
-        <div class="portfolio-copy">
-          <div class="portfolio-tags"><span>Immobilier</span><span>B2B</span></div>
-          <h4>Proposition de valeur</h4><p>Guider les commerciaux, du besoin au devis.</p>
-          <div class="portfolio-actions">
-            <a href="/contact/?project=CRM%20TENANTS&amp;intent=contact">Nous contacter</a>
-            <a class="portfolio-request" href="/contact/?project=CRM%20TENANTS&amp;intent=acces">Demander l’accès</a>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="portfolio-card" aria-labelledby="go-viral-title">
-      <h3 id="go-viral-title">GO VIRAL</h3>
-      <details class="portfolio-details">
-        <summary>
-          <span class="portfolio-info"><span aria-hidden="true">i</span><span class="visually-hidden">Découvrir les détails de GO VIRAL</span></span>
-          <span class="portfolio-return"><span aria-hidden="true">←</span><span class="visually-hidden">Revenir à la présentation de GO VIRAL</span></span>
-        </summary>
-        <div class="portfolio-back">
-          <h4>Persona</h4><p>B2B · Petites entreprises</p>
-          <h4>Problème</h4><p>Avis et publications dispersés entre plusieurs canaux.</p>
-          <h4>Vision</h4><p>Structurer la visibilité en ligne des petites entreprises.</p>
-          <h4>Proposition de valeur</h4><p>Préparer avis et publications dans un même parcours.</p>
-          <h4>Solution</h4><p>Un espace de travail pour les avis et publications, avec préparation et validation. Projet en pause ; usage mobile à améliorer.</p>
-          <h4>Différenciation</h4><p>Comparaison à finaliser par benchmark.</p>
-          <h4>Stack</h4><p>Apps Script · Sheets</p>
-          <h4>Modèle économique</h4><p>À confirmer</p>
-          <h4>Avancement</h4>
-          <ol class="portfolio-timeline" aria-label="Avancement de GO VIRAL">
-            <li>Idée / maquette<span class="visually-hidden"> : idée, problème, business plan et maquette ; validation détaillée à confirmer.</span></li>
-            <li>Stories / spec<span class="visually-hidden"> : spécifications existantes ; validation détaillée à confirmer.</span></li>
-            <li aria-current="step">Dev / tests<span class="visually-hidden"> : phase actuelle, développement en pause ; validations partielles, usage mobile à améliorer ; audit global non attesté.</span></li>
-            <li>Kit marché<span class="visually-hidden"> : à confirmer.</span></li>
-          </ol>
-          <div class="portfolio-actions"><a href="/contact/?project=GO%20VIRAL&amp;intent=contact">Nous contacter</a></div>
-        </div>
-      </details>
-      <div class="portfolio-front">
-        <div class="portfolio-cover">
-          <img src="/assets/img/portfolio/go-viral-cover.svg" alt="Vignette illustrative : avis, publications et calendrier. Vidéo à venir." width="528" height="297">
-        </div>
-        <div class="portfolio-copy">
-          <div class="portfolio-tags"><span>Marketing</span><span>B2B</span><span>Apps Script</span><span>Sheets</span></div>
-          <h4>Proposition de valeur</h4><p>Préparer avis et publications dans un même parcours.</p>
-          <div class="portfolio-actions"><a href="/contact/?project=GO%20VIRAL&amp;intent=contact">Nous contacter</a></div>
-        </div>
-      </div>
-    </article>
-    <article class="portfolio-card" aria-labelledby="quick-diag-title">
-      <h3 id="quick-diag-title">QUICK DIAG</h3>
-      <details class="portfolio-details">
-        <summary>
-          <span class="portfolio-info"><span aria-hidden="true">i</span><span class="visually-hidden">Découvrir les détails de QUICK DIAG</span></span>
-          <span class="portfolio-return"><span aria-hidden="true">←</span><span class="visually-hidden">Revenir à la présentation de QUICK DIAG</span></span>
-        </summary>
-        <div class="portfolio-back">
-          <h4>Persona</h4><p>B2B · Responsables métier</p>
-          <h4>Problème</h4><p>Des questionnaires et réponses à réunir pour décider.</p>
-          <h4>Vision</h4><p>Transformer les réponses en un diagnostic exploitable.</p>
-          <h4>Proposition de valeur</h4><p>Relier questionnaires, collecte et lecture des résultats.</p>
-          <h4>Solution</h4><p>Un générateur de questionnaires et une collecte reliés au rapport Excel. Les limites de plateforme restent à préciser.</p>
-          <h4>Différenciation</h4><p>Comparaison à finaliser par benchmark.</p>
-          <h4>Stack</h4><p>Excel · VBA · PowerShell</p>
-          <h4>Modèle économique</h4><p>À confirmer</p>
-          <h4>Avancement</h4>
-          <ol class="portfolio-timeline" aria-label="Avancement de QUICK DIAG">
-            <li>Idée / maquette<span class="visually-hidden"> : idée, problème, business plan et maquette ; état détaillé à confirmer.</span></li>
-            <li>Stories / spec<span class="visually-hidden"> : état détaillé à confirmer.</span></li>
-            <li aria-current="step">Dev / tests<span class="visually-hidden"> : phase actuelle, périmètre Excel implémenté et validations partielles sous Windows administrateur et OneDrive personnel ; environnement professionnel, usage chez un client et Google Sheets non validés ; audit global non attesté.</span></li>
-            <li>Kit marché<span class="visually-hidden"> : à confirmer. État de pause non renseigné.</span></li>
-          </ol>
-          <div class="portfolio-actions"><a href="/contact/?project=QUICK%20DIAG&amp;intent=contact">Nous contacter</a></div>
-        </div>
-      </details>
-      <div class="portfolio-front">
-        <div class="portfolio-cover">
-          <img src="/assets/img/portfolio/quick-diag-cover.svg" alt="Vignette illustrative : questions, réponses et diagnostic. Vidéo à venir." width="528" height="297">
-        </div>
-        <div class="portfolio-copy">
-          <div class="portfolio-tags"><span>Organisation</span><span>B2B</span><span>Excel</span><span>VBA</span><span>PowerShell</span></div>
-          <h4>Proposition de valeur</h4><p>Relier questionnaires, collecte et lecture des résultats.</p>
-          <div class="portfolio-actions"><a href="/contact/?project=QUICK%20DIAG&amp;intent=contact">Nous contacter</a></div>
-        </div>
-      </div>
-    </article>
-    <article class="portfolio-card" aria-labelledby="n8n-orchestrator-title">
-      <h3 id="n8n-orchestrator-title">N8N ORCHESTRATOR</h3>
-      <details class="portfolio-details">
-        <summary>
-          <span class="portfolio-info"><span aria-hidden="true">i</span><span class="visually-hidden">Découvrir les détails de N8N ORCHESTRATOR</span></span>
-          <span class="portfolio-return"><span aria-hidden="true">←</span><span class="visually-hidden">Revenir à la présentation de N8N ORCHESTRATOR</span></span>
-        </summary>
-        <div class="portfolio-back">
-          <h4>Persona</h4><p>Persona à préciser</p>
-          <h4>Problème</h4><p>Des outils doivent appeler des automatisations sans leurs détails internes.</p>
-          <h4>Vision</h4><p>Donner aux outils un accès commun aux automatisations.</p>
-          <h4>Proposition de valeur</h4><p>Appeler des capacités autorisées par une entrée unique.</p>
-          <h4>Solution</h4><p>Une passerelle authentifiée vers des capacités autorisées. Le noyau actif et les extensions en brouillon restent distincts.</p>
-          <h4>Différenciation</h4><p>Comparaison à finaliser par benchmark.</p>
-          <h4>Stack</h4><p>n8n · HTTP</p>
-          <h4>Modèle économique</h4><p>À confirmer</p>
-          <h4>Avancement</h4>
-          <ol class="portfolio-timeline" aria-label="Avancement de N8N ORCHESTRATOR">
-            <li>Idée / maquette<span class="visually-hidden"> : idée, problème, business plan et maquette ; état détaillé à confirmer.</span></li>
-            <li>Stories / spec<span class="visually-hidden"> : spécifications existantes ; validation détaillée à confirmer.</span></li>
-            <li aria-current="step">Dev / tests<span class="visually-hidden"> : phase actuelle, Noyau actif · extensions en brouillon ; validations partielles, audit global et disponibilité actuelle non attestés.</span></li>
-            <li>Kit marché<span class="visually-hidden"> : à confirmer. État de pause non renseigné.</span></li>
-          </ol>
-          <div class="portfolio-actions"><a href="/contact/?project=N8N%20ORCHESTRATOR&amp;intent=contact">Nous contacter</a></div>
-        </div>
-      </details>
-      <div class="portfolio-front">
-        <div class="portfolio-cover">
-          <img src="/assets/img/portfolio/n8n-orchestrator-cover.svg" alt="Vignette illustrative : outils, accès et actions. Vidéo à venir." width="528" height="297">
-        </div>
-        <div class="portfolio-copy">
-          <div class="portfolio-tags"><span>Automatisation</span><span>n8n</span><span>HTTP</span></div>
-          <h4>Proposition de valeur</h4><p>Appeler des capacités autorisées par une entrée unique.</p>
-          <div class="portfolio-actions"><a href="/contact/?project=N8N%20ORCHESTRATOR&amp;intent=contact">Nous contacter</a></div>
-        </div>
-      </div>
-    </article>
-  </div>
-  <div class="container cta-band" id="portfolio-more" hidden>
-    <button type="button" class="btn btn--secondary">Afficher plus (2)</button>
-  </div>
-</section>
-
-<section class="section reveal" id="reflexion">
+<section class="section section--alt reveal" id="reflexion">
   <div class="container">
     <div class="section__head">
       <h2>Réflexion</h2>
@@ -425,6 +247,5 @@
 <script src="/assets/js/config.js?v=46fb6aef" defer></script>
 <script src="/assets/js/site.js?v=8fba11d0" defer></script>
 <script src="/assets/js/video.js?v=f008ff18" defer></script>
-<script src="/assets/js/portfolio.js?v=952c491c" defer></script>
 </body>
 </html>

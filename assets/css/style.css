@@ -348,7 +348,7 @@ p  { margin: 0 0 var(--space-2); }
 
 /* ---------- Cartes ---------- */
 /* Surface commune des cartes : avant .card--service et .card--strategie/--ia, qui la surchargent. */
-.card, .disclosure--card, .portfolio-card, .ia-chat {
+.card, .disclosure--card, .ia-chat {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -1144,45 +1144,11 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .viewer.is-on + .viewer__nav > * { pointer-events: auto; }
 .viewer.is-on + .viewer__nav .viewer__pos { align-self: flex-end; margin-bottom: -2.75rem; }
 
-/* ---------- Portfolio (anciennement dans portfolio/index.html) ---------- */
-  /* Arrivee par /portfolio/ (ancre #portfolio) ou par l ancre d un article du blog (#<slug>, ouvert par
-     publications/blog.js) : le titre sous l en-tete collant (77 px), pas dessous. */
-  #portfolio, #blog-list > details { scroll-margin-top: 80px; }
-  .portfolio-filter { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
-  .portfolio-filter[hidden] { display: none; }
-  .portfolio-filter .field { margin: 0; min-width: 0; }
-  .portfolio-filter input, .portfolio-filter select, .portfolio-filter button { min-height: 44px; }
-  .portfolio-filter input:focus-visible, .portfolio-filter select:focus-visible, .portfolio-filter button:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 2px; }
-  .portfolio-filter__results { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
-  .portfolio-filter__results p { margin: 0; }
-  .portfolio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); align-items: start; }
-  .portfolio-card { position: relative; overflow-wrap: anywhere; }
-  .portfolio-card h3 { font-size: 1.4rem; padding: 24px 76px 20px 20px; margin: 0; min-height: 76px; }
-  /* ponytail: native disclosure owns state, focus and no-JavaScript access. */
-  .portfolio-details > summary { position: absolute; top: 15px; right: 15px; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 50%; color: var(--teal-dark); background: var(--white); cursor: pointer; list-style: none; font-size: 20px; font-weight: 700; }
-  .portfolio-details > summary::-webkit-details-marker { display: none; }
-  .portfolio-details > summary:focus-visible { outline: 3px solid var(--teal-dark); outline-offset: 3px; }
-  .portfolio-return, .portfolio-details[open] .portfolio-info, .portfolio-details[open] ~ .portfolio-front { display: none; }
-  .portfolio-details[open] .portfolio-return { display: inline; }
-  .portfolio-back, .portfolio-copy { padding: 20px; }
-  .portfolio-card h4 { font-size: 12px; line-height: 1.4; letter-spacing: 0; text-transform: uppercase; color: var(--teal-dark); margin: 0 0 7px; }
-  .portfolio-card p { font-size: 16px; font-weight: 400; color: var(--navy); margin: 0 0 20px; }
-  .portfolio-cover { position: relative; }
-  .portfolio-cover img { width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius); }
-  .portfolio-lock { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; border-radius: 50%; background: var(--teal-dark); display: grid; place-items: center; }
-  .portfolio-lock svg { width: 22px; height: 22px; fill: none; stroke: var(--white); stroke-width: 2; }
-  .portfolio-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-  .portfolio-tags span { padding: 4px 12px; border-radius: 20px; background: var(--bg-alt); font-size: 14px; font-weight: 700; }
-  .portfolio-tags span:first-child { color: var(--teal-dark); }
-  .portfolio-actions { display: flex; gap: 10px; padding-top: 12px; border-top: 1px solid var(--border); }
-  .portfolio-actions a { flex: 1; min-height: 44px; padding: 10px 8px; font-size: 14px; line-height: 1.5; text-align: center; border: 1px solid var(--grey-300); border-radius: 7px; color: var(--teal-dark); font-weight: 700; }
-  .portfolio-actions .portfolio-request { background: var(--teal-dark); color: var(--white); border-color: var(--teal-dark); }
-  .portfolio-timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; list-style: none; margin: 12px 0 20px; padding: 0; }
-  .portfolio-timeline li { font-size: 12px; line-height: 1.35; color: var(--text-muted); }
-  .portfolio-timeline li::before { content: ''; display: block; height: 5px; border-radius: 3px; background: var(--border); margin-bottom: 8px; }
-  .portfolio-timeline li[aria-current="step"] { color: var(--teal-dark); font-weight: 700; }
-  .portfolio-timeline li[aria-current="step"]::before { background: var(--teal-dark); }
-  @media (max-width: 767px) { .portfolio-grid { grid-template-columns: 1fr; } }
+/* ---------- Ancre d un article du blog ---------- */
+  /* Arrivee par l ancre d un article du blog (#<slug>, ouvert par publications/blog.js) :
+     le titre sous l en-tete collant (77 px), pas dessous. P75 : la section Portfolio est retiree de la
+     publication (owner 2026-10-29 « A ») ; ses regles reviennent avec le revert de ce commit. */
+  #blog-list > details { scroll-margin-top: 80px; }
 
 /* ---------- Entreprise IA : chat (anciennement dans service-ia-business/index.html) ---------- */
   .ia-chat { max-width:760px; margin:auto; padding:var(--space-3); box-shadow:var(--shadow-sm); }

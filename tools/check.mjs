@@ -16,8 +16,8 @@
  *   --tiers    tout hote externe charge est annonce dans la politique de confidentialite
  *   --seo      meta Open Graph, longueurs de title/description, sitemap complet, et chaque
  *              Service JSON-LD : url vers une page locale existante, name dans son <title> ou <h1>
- *   --all      tous les groupes, plus les tests executes (tools/portfolio.test.mjs,
- *              tools/test-ia-embeds.mjs) et `blog.mjs check` du moteur gtm-blog (liste du blog
+ *   --all      tous les groupes, plus le test execute tools/test-ia-embeds.mjs
+ *              et `blog.mjs check` du moteur gtm-blog (liste du blog
  *              de Publications = fichiers de publications/articles/, images, liens, hors ligne ;
  *              moteur : $GTM_BLOG_DIR, sinon ../../_AI_SKILLS/skill-gtm-blog depuis la racine)
  *
@@ -28,6 +28,8 @@
  *              Le cas "balise de mesure d'audience en dur" reste couvert par --tiers :
  *              un hote externe non declare dans la politique de confidentialite echoue.
  *   --data     page Publications en HTML statique depuis Pass 34 : plus de JSON a valider.
+ * Test RETIRE avec son sujet : tools/portfolio.test.mjs (P75, section Portfolio hors publication,
+ *              owner 2026-10-29 « A ») ; le revert du commit P75 Portfolio le rend a --all.
  * Les drapeaux retires ou inconnus sont refuses : aucun controle ignore en silence.
  * Sortie 0 = tout vert. Sortie 1 = au moins un echec, chacun cite avec son fichier.
  */
@@ -964,7 +966,7 @@ function checkSeo() {
 
 /* ---------- tests executes (--all) ---------- */
 function runTests() {
-  for (const f of ["tools/portfolio.test.mjs", "tools/test-ia-embeds.mjs"]) {
+  for (const f of ["tools/test-ia-embeds.mjs"]) {
     try {
       // --experimental-vm-modules : test-ia-embeds simule l import() du SDK avec vm.SyntheticModule.
       note(`${f}: ${runNode(["--experimental-vm-modules", join(ROOT, f)]).trim()}`);
