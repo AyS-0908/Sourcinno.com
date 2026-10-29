@@ -1060,11 +1060,12 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   #reflexion .disclosure--card > p { margin: 0 var(--space-2) var(--space-2); }
 }
 /* P75 (owner 2026-10-29) : espacements, chacun limité à sa section (pages repérées par leur hero).
-   Performance : Réflexion → « Discutons de votre besoin » divisé par deux, comme l’accueil (P74).
+   Performance : Réflexion → « Discutons de votre besoin » réduit (compteur « 1 / 2 » → bouton : 116 → 60 px à 1200) ;
+   le compteur pend de 2.75rem sous la visionneuse (.viewer__pos), la bande le garde avec 1rem de marge.
    Venture Building : sous la vidéo de « David + Goliath » et sous celle de « Réflexion », la marge de la vidéo
    est retirée ; le haut de la bande « Discutons de votre besoin » est réduit comme sur Performance.
    Entreprise IA : la vidéo « Formation » sans marge basse, l’écart vers le bouton reste celui d’avant. */
-.hero--strategie ~ #reflexion { padding-bottom: calc(var(--space-6) / 2); }
+.hero--strategie ~ #reflexion { padding-bottom: calc(2.75rem + var(--space-2)); }
 .hero--strategie ~ #reflexion + .section,
 .hero--venture ~ #reflexion + .section { padding-top: calc(var(--space-6) / 2 - .5rem); }
 #david-goliath .band-figure,
