@@ -799,7 +799,6 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow);
-  counter-increment: offers;
 }
 .card--service::before {
   content: "";
@@ -807,8 +806,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   inset: 0;
   background: linear-gradient(125deg, rgba(18, 37, 63, 0.97) 0%, rgba(18, 37, 63, 0.89) 47%, rgba(26, 54, 93, 0.68) 100%);
 }
-.card--service::after { content: "0" counter(offers); position: absolute; top: var(--space-3); left: var(--space-4); color: var(--accent-on-dark); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.12em; }
-#services .card--service { padding-top: 5.5rem; }
+/* P74 : numéros « 01 »/« 02 » retirés (owner 2026-10-29), haut de carte réduit d’un quart (5.5rem → 4.125rem). */
+#services .card--service { padding-top: 4.125rem; }
 #services .card--service h3 { max-width: 19ch; font-size: clamp(1.4rem, 2.6vw, 1.85rem); }
 #services .card--service .card__foot { margin-top: auto; }
 #services .card--service { min-height: 415px; }
@@ -836,7 +835,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
    Chaque etape est du texte visible, sans infobulle : rien a activer, donc
    rien de focalisable. Le trait part de chaque point et rejoint le point
    suivant, quelle que soit la hauteur de l etape. */
-.timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+.timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
 .timeline > li { position: relative; padding-left: var(--space-4); }
 .timeline > li::before {
   content: "";
@@ -854,7 +853,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   position: absolute;
   left: 7px;
   top: 19px;
-  bottom: calc(-1 * var(--space-3) - 3px);
+  bottom: calc(-1 * var(--space-2) - 3px);
   width: 2px;
   background: linear-gradient(180deg, var(--teal), rgba(49, 151, 149, 0.45));
 }
@@ -875,6 +874,8 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   #experience .grid--2 { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: var(--space-5); }
   #experience .timeline > li { min-height: calc(var(--xp-row) + 2px); }
   #experience .disclosure--card summary { min-height: var(--xp-row); }
+  /* P74 : la frise passe à --space-2 entre étapes ; les cartes empilées suivent pour garder la ligne P31 égale. */
+  #experience .hl--tabs:not(.is-hover) > .hl__items { gap: var(--space-2); }
 }
 
 /* ---------- Dépliant unique : details.disclosure (accueil, Publications) ---------- */
@@ -944,7 +945,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
    Les traits (svg.vx-lines) sont créés et dessinés par site.js d'après la place réelle des blocs : ils suivent toute largeur.
    Sans script : ni traits ni chevron, le schéma est affiché. .is-live est posé par site.js. */
 .ico { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex: none; }
-.vx { position: relative; counter-reset: offers; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "c1" "c2" "node" "tree"; gap: var(--space-3); }
+.vx { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "c1" "c2" "node" "tree"; gap: var(--space-3); }
 .vx-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
 .vx-lines path { fill: none; stroke: var(--teal); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .vx-lines circle { fill: var(--teal-dark); }
@@ -992,13 +993,16 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
    site.js montre la frise (.mA-rail, livrée hidden), pose .is-live et les rôles d'onglet, masque les autres étapes et,
    à partir de 861 px, réserve à chaque étape la hauteur de la plus haute (changer d'étape ne déplace pas la page).
    Sans script : pas de frise, les étapes l'une sous l'autre (quatre ici, trois sur les services : .mA-rail--3, plus bas). .chip est aussi la puce du blog : règles sous .mA. */
+/* P74 : écart méthodologie → « Discutons de votre besoin » divisé par deux (accueil seulement : #demarche et la section qui suit). */
+#demarche { padding-bottom: calc(var(--space-6) / 2); }
+#demarche + .section { padding-top: calc(var(--space-6) / 2 - .5rem); }
 .mA .act { margin: 0; color: var(--navy); font-weight: 600; line-height: 1.45; }
 .mA .kit { display: grid; gap: .4rem; margin-top: .65rem; }
 .mA .kit__row { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .4rem; margin: 0; font-size: .85rem; line-height: 1.45; }
-.mA .kit__label { display: inline-flex; align-items: center; gap: .3rem; margin-right: .1rem; color: var(--grey-700); font-size: .8rem; font-weight: 600; }
+.mA .kit__label { display: inline-flex; align-items: center; gap: .3rem; margin-right: .1rem; color: var(--grey-700); font-size: .8rem; font-weight: 400; }
 .mA .kit__label .ico { width: .95rem; height: .95rem; }
 .mA .kit__row--ia { display: block; }
-.mA .kit__row--ia .kit__label { color: var(--teal-dark); vertical-align: -.15em; margin-right: .3rem; }
+.mA .kit__row--ia .kit__label { color: var(--teal-dark); font-weight: 600; vertical-align: -.15em; margin-right: .3rem; }
 .mA .kit__tool { color: var(--text-muted); }
 .mA .chip { display: inline-block; padding: .1rem .6rem; border: 1px solid var(--grey-300); border-radius: .8rem; background: var(--white); color: var(--navy); font-size: .8rem; font-weight: 600; line-height: 1.6; cursor: auto; }
 .mA-rail { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 0 var(--space-4); }
