@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/style.css?v=9e27c361">
+<link rel="stylesheet" href="/assets/css/style.css?v=4991b29f">
 <noscript>
   <style>
     /* Sans JavaScript, le lecteur video ne peut pas se lancer : on le masque,
@@ -77,44 +77,50 @@
 <section class="section service-refinement" id="besoin">
   <div class="container">
     <div class="section__head">
-      <h2>Vous accompagner</h2>
+      <h2>Votre besoin &gt; Vos questions</h2>
     </div>
     <p class="lead">«&nbsp;Quelles sont les menaces et opportunités de l'IA pour nous ? Quels cas d'usage opérationnels rentables ?&nbsp;»</p>
-    <div class="grid">
-      <details class="disclosure disclosure--card">
-        <summary><h3>1. Identifier les enjeux spécifiques à l'entreprise</h3></summary>
+    <div class="mA mA--3">
+      <div class="mA-rail" role="tablist" aria-label="Blocs de questions" hidden>
+        <span class="mA-fill" aria-hidden="true"></span>
+        <button class="mA-tab" type="button" role="tab" id="mA-t1" aria-controls="mA-p1" aria-selected="true" tabindex="0"><span class="mA-dot">1</span><span class="mA-name">Identifier les enjeux spécifiques à l'entreprise</span></button>
+        <button class="mA-tab" type="button" role="tab" id="mA-t2" aria-controls="mA-p2" aria-selected="false" tabindex="-1"><span class="mA-dot">2</span><span class="mA-name">Définir les vraies priorités</span></button>
+        <button class="mA-tab" type="button" role="tab" id="mA-t3" aria-controls="mA-p3" aria-selected="false" tabindex="-1"><span class="mA-dot">3</span><span class="mA-name">Réussir la mise en œuvre</span></button>
+      </div>
+      <div class="mA-panel" id="mA-p1">
+        <h3 class="mA-title"><span class="mA-num">1.</span> Identifier les enjeux spécifiques à l'entreprise</h3>
         <h4>Identifier les enjeux stratégiques</h4>
-        <ul class="bullets">
-          <li>Comment l'IA transforme-t-elle notre marché : clients, concurrents, fournisseurs et technologies ?</li>
-          <li>Notre offre et modèle économique sont-ils menacés ? Quelles nouvelles opportunités de croissance et de différenciation ?</li>
-          <li>Quelles évolutions technologiques et réglementaires devons-nous anticiper ?</li>
+        <ul class="mA-actions">
+          <li class="mA-action">Comment l'IA transforme-t-elle notre marché : clients, concurrents, fournisseurs et technologies ?</li>
+          <li class="mA-action">Notre offre et modèle économique sont-ils menacés ? Quelles nouvelles opportunités de croissance et de différenciation ?</li>
+          <li class="mA-action">Quelles évolutions technologiques et réglementaires devons-nous anticiper ?</li>
         </ul>
         <h4>Identifier les enjeux opérationnels</h4>
-        <ul class="bullets">
-          <li>Où en sommes-nous en termes d'usage de l'IA, compétences, et adhésion des équipes ?</li>
-          <li>Quels processus et activités pourrions-nous améliorer grâce à l'IA ?</li>
-          <li>Nos données, outils et infrastructure sont-ils adaptés à nos ambitions ?</li>
+        <ul class="mA-actions">
+          <li class="mA-action">Où en sommes-nous en termes d'usage de l'IA, compétences, et adhésion des équipes ?</li>
+          <li class="mA-action">Quels processus et activités pourrions-nous améliorer grâce à l'IA ?</li>
+          <li class="mA-action">Nos données, outils et infrastructure sont-ils adaptés à nos ambitions ?</li>
         </ul>
-      </details>
-      <details class="disclosure disclosure--card">
-        <summary><h3>2. Définir les vraies priorités</h3></summary>
-        <ul class="bullets">
-          <li>Quels enjeux sont prioritaires pour notre entreprise (urgents x importants) ?</li>
-          <li>Où y a-t-il le plus de potentiel, i.e. maximum de valeur (croissance, productivité, qualité) et minimum de défis (coûts, risques, résistances) ?</li>
-          <li>Quels projets découlent des enjeux et potentiel ?</li>
-          <li>Quel type d'IA-sation par projet : activer les fonctions IA de nos outils, déployer des agents IA, ou restructurer certains processus ?</li>
+      </div>
+      <div class="mA-panel" id="mA-p2">
+        <h3 class="mA-title"><span class="mA-num">2.</span> Définir les vraies priorités</h3>
+        <ul class="mA-actions">
+          <li class="mA-action">Quels enjeux sont prioritaires pour notre entreprise (urgents x importants) ?</li>
+          <li class="mA-action">Où y a-t-il le plus de potentiel, i.e. maximum de valeur (croissance, productivité, qualité) et minimum de défis (coûts, risques, résistances) ?</li>
+          <li class="mA-action">Quels projets découlent des enjeux et potentiel ?</li>
+          <li class="mA-action">Quel type d'IA-sation par projet : activer les fonctions IA de nos outils, déployer des agents IA, ou restructurer certains processus ?</li>
         </ul>
-      </details>
-      <details class="disclosure disclosure--card">
-        <summary><h3>3. Réussir la mise en œuvre</h3></summary>
-        <ul class="bullets">
-          <li>Quelle feuille de route : projets, calendrier, budgets, ressources et responsabilités ?</li>
-          <li>Comment organiser la gouvernance, maîtriser les risques et garantir la conformité ?</li>
-          <li>Comment mobiliser les équipes, développer les compétences et accompagner le changement ?</li>
-          <li>Faut-il acheter des solutions existantes (sur quels critères), développer en interne ou s'appuyer sur des partenaires ?</li>
-          <li>Comment expérimenter et mesurer les bénéfices avant de déployer à plus grande échelle ?</li>
+      </div>
+      <div class="mA-panel" id="mA-p3">
+        <h3 class="mA-title"><span class="mA-num">3.</span> Réussir la mise en œuvre</h3>
+        <ul class="mA-actions">
+          <li class="mA-action">Quelle feuille de route : projets, calendrier, budgets, ressources et responsabilités ?</li>
+          <li class="mA-action">Comment organiser la gouvernance, maîtriser les risques et garantir la conformité ?</li>
+          <li class="mA-action">Comment mobiliser les équipes, développer les compétences et accompagner le changement ?</li>
+          <li class="mA-action">Faut-il acheter des solutions existantes (sur quels critères), développer en interne ou s'appuyer sur des partenaires ?</li>
+          <li class="mA-action">Comment expérimenter et mesurer les bénéfices avant de déployer à plus grande échelle ?</li>
         </ul>
-      </details>
+      </div>
     </div>
   </div>
 </section>
@@ -201,7 +207,7 @@
   </div>
 </footer>
 <script src="/assets/js/config.js?v=46fb6aef" defer></script>
-<script src="/assets/js/site.js?v=94f43afc" defer></script>
+<script src="/assets/js/site.js?v=8fba11d0" defer></script>
 <script src="/assets/js/ia-embeds.js?v=c5b46ee5" defer></script>
 </body>
 </html>

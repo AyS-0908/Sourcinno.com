@@ -340,12 +340,13 @@
     });
   }
 
-  /* --- « Méthodologie type » (accueil, Pass 72, maquette v13 option A) --
-     Onglets : une étape à la fois ; clic, flèches gauche/droite (en boucle),
-     Début, Fin ; un seul onglet atteignable par Tab. À partir de 861 px (trois
-     colonnes) chaque étape réserve la hauteur de la plus haute : changer
-     d'étape ne déplace pas la page. Sans ce fichier : pas de frise, les quatre
-     étapes l'une sous l'autre. */
+  /* --- Frise à onglets .mA : « Méthodologie type » (accueil, Pass 72, quatre
+     étapes) et « Votre besoin > Vos questions » (Performance, Entreprise IA,
+     Pass 73, trois blocs). Onglets : une étape à la fois ; clic, flèches
+     gauche/droite (en boucle), Début, Fin ; un seul onglet atteignable par Tab.
+     À partir de 861 px chaque étape réserve la hauteur de la plus haute :
+     changer d'étape ne déplace pas la page. Sans ce fichier : pas de frise,
+     les étapes l'une sous l'autre. */
   function initStepTabs() {
     const wide = window.matchMedia("(min-width: 861px)");
     document.querySelectorAll(".mA").forEach((root) => {

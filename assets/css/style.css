@@ -991,7 +991,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 /* ---------- Accueil « Méthodologie type » (Pass 72, maquette v13 option A) : frise de quatre étapes en onglets ----------
    site.js montre la frise (.mA-rail, livrée hidden), pose .is-live et les rôles d'onglet, masque les autres étapes et,
    à partir de 861 px, réserve à chaque étape la hauteur de la plus haute (changer d'étape ne déplace pas la page).
-   Sans script : pas de frise, les quatre étapes l'une sous l'autre. .chip est aussi la puce du blog : règles sous .mA. */
+   Sans script : pas de frise, les étapes l'une sous l'autre (quatre ici, trois sur les services : .mA--3, plus bas). .chip est aussi la puce du blog : règles sous .mA. */
 .mA .act { margin: 0; color: var(--navy); font-weight: 600; line-height: 1.45; }
 .mA .kit { display: grid; gap: .4rem; margin-top: .65rem; }
 .mA .kit__row { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .4rem; margin: 0; font-size: .85rem; line-height: 1.45; }
@@ -1029,25 +1029,25 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .mA-name { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .mA-tab { padding-bottom: .75rem; }
 }
+/* P73 : la même frise à trois onglets sur Performance et Entreprise IA (« Votre besoin > Vos questions ») :
+   un onglet par bloc, ses questions en cartes ; sans icône (le jeu d'icônes est dans la page d'accueil). */
+.mA--3 .mA-rail { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.mA--3 .mA-rail::before, .mA--3 .mA-fill { left: calc(100% / 6); }
+.mA--3 .mA-rail::before { right: calc(100% / 6); }
+.mA--3 .mA-fill { width: calc(200% / 3); }
+.mA--3 .mA-name { letter-spacing: 0; }
+.mA--3 .mA-action { font-size: .95rem; line-height: 1.5; }
+.mA--3 .mA-panel h4 { margin: 0 0 var(--space-2); font-size: 1rem; line-height: 1.4; color: var(--navy); }
+.mA--3 .mA-actions + h4 { margin-top: var(--space-4); }
 
 /* Services : opt-in local, les pages sœurs gardent leur présentation. */
 .service-refinement { background: var(--white); overflow-wrap: anywhere; }
 #besoin.service-refinement .section__head { max-width: none; }
 #besoin.service-refinement .lead { padding: var(--space-3); margin-bottom: var(--space-3); border-radius: var(--radius-lg); background: var(--grey-50); font-size: 1rem; line-height: 1.7; font-weight: 400; }
-/* P68 : blocs de questions (Performance, Entreprise IA) : trois colonnes à partir de 961 px, une seule en dessous. */
-#besoin .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-/* P71 : chaque bloc est un dépliant ; fermés, ils gardent la même hauteur ; un bloc ouvert ne fait pas grandir ses voisins. */
-#besoin .grid:has(> [open]) { align-items: start; }
-#besoin .disclosure--card h4 { margin: 0 var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--border); font-size: 1rem; line-height: 1.4; color: var(--navy); }
-#besoin .disclosure--card h4 + .bullets { padding-top: var(--space-1); border-top: 0; }
 /* P71 : Venture Building « Réflexion », la phrase sous son titre, même retrait et même filet que .bullets. */
 #reflexion .grid--2:has(> .stack) { margin-bottom: var(--space-4); }
 #reflexion .disclosure--card > p { margin: 0 var(--space-3) var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
-@media (max-width: 960px) {
-  #besoin .grid { grid-template-columns: minmax(0, 1fr); }
-}
 @media (max-width: 640px) {
-  #besoin .disclosure--card h4 { margin-inline: var(--space-2); }
   #reflexion .disclosure--card > p { margin: 0 var(--space-2) var(--space-2); }
 }
 .service-careers { list-style: none; margin: 0; padding: 0; }
