@@ -159,7 +159,10 @@ function failFromTool(label, file, e) {
 function checkStructure() {
   // 1. balises obligatoires, une par page
   for (const p of pages) {
-    if (!/<html lang="fr">/.test(p.html)) fail(p.rel, 'balise <html lang="fr"> absente');
+    // Une page d article (publications/<slug>/index.html, ecrite par le moteur gtm-blog) porte la langue de
+    // son article (langue= de l en-tete) : fr ou en ; toute autre page est en francais.
+    const langs = /^publications\/[^\/]+\/index\.html$/.test(p.rel) ? ['fr', 'en'] : ['fr'];
+    if (!langs.some((l) => p.html.includes('<html lang="' + l + '">'))) fail(p.rel, 'balise <html lang="' + langs.join('" ou "') + '"> absente');
 
     const title = attr(p.html, /<title>([\s\S]*?)<\/title>/i);
     if (!title) fail(p.rel, "<title> absent ou vide");
@@ -723,10 +726,17 @@ function checkA11y() {
      .visually-hidden compris. Un title, un texte apres </a> ou un commentaire ne comptent
      pas ; un aria-labelledby n est pas lu, donc refuse. */
   const NOUVEL_ONGLET = "(nouvel onglet)";
+  /* Un article en anglais (moteur gtm-blog, en-tete langue="en") : sa page porte <html lang="en"> et
+     sa carte de la liste <details ... lang="en">, et ses liens finissent par « (new tab) »
+     (le texte cache que le moteur exige pour cette langue). */
+  const NEW_TAB = "(new tab)";
   let links = 0, buttons = 0, blanks = 0;
   const blankPages = new Set();
   for (const p of pages) {
     const body = p.html.slice(p.html.indexOf("<body"));
+    const pageEn = p.html.includes('<html lang="en">');
+    const enCards = [...body.matchAll(/<details\b[^>]*\blang="en"[^>]*>[\s\S]*?<\/details>/gi)].map((c) => [c.index, c.index + c[0].length]);
+    const suffixAt = (i) => (pageEn || enCards.some(([a, b]) => i >= a && i < b) ? NEW_TAB : NOUVEL_ONGLET);
 
     for (const m of body.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
       links++;
@@ -750,8 +760,9 @@ function checkA11y() {
         .replace(/<(\w+)\b[^>]*\baria-hidden\s*=\s*"true"[^>]*>[\s\S]*?<\/\1>/gi, "")
         .replace(/<[^>]+>/g, ""))
         .replace(/&nbsp;|&#160;/g, " ").replace(/\s+/g, " ").trim();
-      if (!nom.endsWith(NOUVEL_ONGLET)) {
-        fail(p.rel, `lien target="_blank" dont le nom accessible ne finit pas par « ${NOUVEL_ONGLET} » (« ${nom.slice(-60)} ») : ` + m[0].slice(0, 70));
+      const attendu = suffixAt(m.index);
+      if (!nom.endsWith(attendu)) {
+        fail(p.rel, `lien target="_blank" dont le nom accessible ne finit pas par « ${attendu} » (« ${nom.slice(-60)} ») : ` + m[0].slice(0, 70));
       }
     }
 
