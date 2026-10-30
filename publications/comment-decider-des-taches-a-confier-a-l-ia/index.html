@@ -1,0 +1,161 @@
+<!-- gtm-blog:article-page -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comment décider des tâches à confier à l’IA ? | Sourcinno</title>
+<meta name="description" content="Toutes les tâches ne demandent pas le même effort pour passer à l’IA. Certaines s’améliorent dès demain, sans rien construire. D’autres exigent de revoir…">
+<link rel="canonical" href="https://www.sourcinno.com/publications/comment-decider-des-taches-a-confier-a-l-ia/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Sourcinno">
+<meta property="og:title" content="Comment décider des tâches à confier à l’IA ?">
+<meta property="og:description" content="Toutes les tâches ne demandent pas le même effort pour passer à l’IA. Certaines s’améliorent dès demain, sans rien construire. D’autres exigent de revoir…">
+<meta property="og:url" content="https://www.sourcinno.com/publications/comment-decider-des-taches-a-confier-a-l-ia/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.sourcinno.com/pictures/og-sourcinno.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sourcinno — Aymard de Scorbiac, conseil en stratégie, organisation, processus, IA et Venture Building">
+<link rel="icon" href="/pictures/logo_favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css?v=176ce54f">
+<link rel="stylesheet" href="/publications/blog.css?v=62d0f311">
+<noscript>
+  <style>
+    /* Sans JavaScript, le lecteur video ne peut pas se lancer : on le masque,
+       le lien YouTube de la legende reste. */
+    .video-launch { display:none; }
+  </style>
+</noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <script>
+    /* Avant les sections : les masque en attendant site.js (animation au scroll),
+       2,5 s au plus. Sans JavaScript, ni classe ni masquage. */
+    document.documentElement.classList.add("reveal-wait");
+    setTimeout(function () { document.documentElement.classList.remove("reveal-wait"); }, 2500);
+  </script>
+  <div class="container site-header__inner">
+    <a class="site-logo" href="/" aria-label="Sourcinno, retour &agrave; l&rsquo;accueil">
+      <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="404" height="130">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+      <ul class="site-nav__list">
+        <li><a href="/">Exp&eacute;rience</a></li>
+        <li>
+          <details class="nav-drop">
+            <summary>Services</summary>
+            <ul class="nav-drop__menu">
+              <li><a href="/service-performance/">Performance</a></li>
+              <li><a href="/service-ia-business/">Entreprise IA</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="/service-venture-building/">Venture Building</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a class="btn btn--primary btn--sm" href="/contact/">Rendez-vous</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="container">
+  <!-- gtm-blog:start -->
+  <article class="blog-article">
+    <h1>Comment décider des tâches à confier à l’IA ?</h1>
+    <p class="tags"><span class="tag">IA</span></p>
+    <p><time datetime="2026-10-28">28 octobre 2026</time></p>
+    <p>Toutes les tâches ne demandent pas le même effort pour passer à l’IA. Certaines s’améliorent dès demain, sans rien construire. D’autres exigent de revoir le processus entier. La bonne question n’est donc pas « où mettre de l’IA ? », mais « quel niveau d’IA pour chaque tâche ? ».</p>
+    <h2>Avant de choisir : trois informations</h2>
+    <ul>
+      <li><strong>Le processus, tâche par tâche :</strong> étapes, données d’entrée, livrables, outils.</li>
+      <li><strong>Les frictions</strong> à supprimer en priorité.</li>
+      <li><strong>Les limites :</strong> ce qu’il ne faut pas confier à l’IA, et ses risques (hallucinations, coûts, confidentialité des données).</li>
+    </ul>
+    <p>Avec ces trois informations, chaque tâche trouve sa place à l’un des trois niveaux suivants. L’objectif reste le même à chaque niveau : utiliser l’IA tout de suite sur les tâches retenues.</p>
+    <h2>IA niveau 1 — Déjà intégrée</h2>
+    <p>La fonction existe déjà dans un logiciel que vous utilisez.</p>
+    <ul>
+      <li><strong>Quand :</strong> un logiciel en place propose une fonction d’IA adaptée à la tâche.</li>
+      <li><strong>Livrable :</strong> rien à construire ; la fonction est activée, configurée, et les équipes sont formées.</li>
+      <li><strong>Effort :</strong> le plus faible, aucun développement.</li>
+    </ul>
+    <h2>IA niveau 2 — Ré-utiliser</h2>
+    <p>La façon de faire la tâche est écrite une fois, puis réutilisée à chaque fois.</p>
+    <ul>
+      <li><strong>Quand :</strong> aucun logiciel ne fait la tâche.</li>
+      <li><strong>Livrable :</strong> une compétence IA (« AI Skill ») par tâche, c’est-à-dire des instructions et des outils. Le format ouvert Agent Skills en donne un exemple : des instructions, des scripts et des modèles, écrits une fois et utilisables par tout agent compatible.</li>
+      <li><strong>Effort :</strong> moyen, une compétence à écrire et à tester par tâche.</li>
+    </ul>
+    <h2>IA niveau 3 — Restructurer</h2>
+    <p>Le processus lui-même change de forme.</p>
+    <ul>
+      <li><strong>Quand :</strong> la tâche bute sur un processus dispersé.</li>
+      <li><strong>Livrable :</strong> le processus structuré, numérisé et renforcé par l’IA, dans un outil utilisé au quotidien (Excel, Google Sheets, etc.).</li>
+      <li><strong>Effort :</strong> le plus élevé, car la façon de travailler change, pas seulement l’outil.</li>
+    </ul>
+    <p>À chaque niveau, deux compléments facilitent l’adoption : un manuel de formation, et une page web qui lance les Skills ou les outils.</p>
+    <h2>Trois décisions pour votre entreprise</h2>
+    <ol>
+      <li><strong>Décrire avant de choisir.</strong> Sans le processus écrit tâche par tâche et ses frictions nommées, aucun niveau ne peut être choisi.</li>
+      <li><strong>Viser le niveau le plus bas qui suffit.</strong> D’abord ce qui est déjà intégré, ensuite une compétence réutilisable, la restructuration seulement quand le processus l’exige.</li>
+      <li><strong>Écrire les limites dès le départ.</strong> Ce que l’IA ne doit pas faire, les risques d’hallucination, de coût et de confidentialité : c’est une donnée d’entrée, pas une annexe.</li>
+    </ol>
+    <h2>Sources</h2>
+    <ul>
+      <li>Méthode Sourcinno, accompagnement « Entreprise IA ».</li>
+      <li><a href="https://agentskills.io/" target="_blank" rel="noopener">Agent Skills : présentation du format ouvert<span class="visually-hidden"> (nouvel onglet)</span></a></li>
+    </ul>
+    <p><a href="/publications/">Retour aux articles</a></p>
+  </article>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Comment décider des tâches à confier à l’IA ?","datePublished":"2026-10-28","inLanguage":"fr","description":"Toutes les tâches ne demandent pas le même effort pour passer à l’IA. Certaines s’améliorent dès demain, sans rien construire. D’autres exigent de revoir…","url":"https://www.sourcinno.com/publications/comment-decider-des-taches-a-confier-a-l-ia/","mainEntityOfPage":"https://www.sourcinno.com/publications/comment-decider-des-taches-a-confier-a-l-ia/","author":{"@type":"Organization","name":"Sourcinno"}}</script>
+  <!-- gtm-blog:end -->
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">Sourcinno</p>
+        <p>Aymard de Scorbiac &mdash; consultant en Strat&eacute;gie, Intelligence artificielle, Innovation, et Organisation. Paris,&nbsp;France.</p>
+        <p class="site-footer__cta"><a class="btn btn--primary btn--sm" href="/contact/">Rendez-vous</a></p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="/">Exp&eacute;rience</a></li>
+          <li><a href="/service-performance/">Performance</a></li>
+          <li><a href="/service-ia-business/">Entreprise IA</a></li>
+          <li><a href="/service-venture-building/">Venture Building</a></li>
+          <li><a href="/publications/">Publications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:contact@sourcinno.com">contact@sourcinno.com</a></li>
+          <li><a href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (nouvel onglet)</span></a></li>
+          <li><a href="https://www.sourcinno.com">www.sourcinno.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; <span data-year>2026</span> Sourcinno SAS &mdash; Paris (France)</p>
+      <p><a href="/mentions-legales/">Mentions l&eacute;gales</a> &middot; <a href="/politique-confidentialite/">Politique de confidentialit&eacute;</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/config.js?v=46fb6aef" defer></script>
+<script src="/assets/js/site.js?v=8fba11d0" defer></script>
+<script src="/assets/js/video.js?v=f008ff18" defer></script>
+</body>
+</html>

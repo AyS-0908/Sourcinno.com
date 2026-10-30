@@ -8,6 +8,8 @@
  *   <footer class="site-footer"> ... </footer>
  *   <noscript> ... </noscript>   celui du <head> (un <noscript> du <main> n est pas touche)
  * Les pages de redirection (http-equiv="refresh") n ont pas de coquille : ignorees.
+ * blog/ est saute (profil du moteur gtm-blog), sauf blog/article.html quand il existe : le
+ * modele des pages d article, dont la coquille doit rester celle des pages qu il engendre.
  * Chaque page garde ses fins de ligne (CRLF ou LF), seuls les trois blocs changent.
  *
  * USAGE
@@ -16,7 +18,7 @@
  * Un marqueur absent ou en double : sortie 1, page nommee, aucune page ecrite.
  * `node tools/check.mjs` lance --check automatiquement.
  */
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join, relative, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -58,6 +60,7 @@ function locate(html, part) {
 }
 
 const files = walk(ROOT).filter((f) => f.endsWith(".html")).sort();
+if (existsSync(join(ROOT, "blog/article.html"))) files.push(join(ROOT, "blog/article.html"));
 const errors = [];
 const drifted = [];
 const writes = [];

@@ -12,8 +12,10 @@
  *   node tools/version.mjs         met a jour toutes les pages
  *   node tools/version.mjs --check n ecrit rien, sort 1 si une page est perimee
  * `node tools/check.mjs` lance --check automatiquement : impossible d oublier.
+ * blog/ est saute (profil du moteur gtm-blog), sauf blog/article.html quand il existe : le
+ * modele des pages d article porte les memes empreintes que les pages qu il engendre.
  */
-import { readdirSync, readFileSync, writeFileSync, statSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, statSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join, relative, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -41,6 +43,7 @@ const stamp = (rel) => {
 const ASSET_RE = /(\/(?:assets\/[A-Za-z0-9_\-./]+|publications\/blog)\.(?:css|js))(\?v=[0-9a-f]{8})?/g;
 
 const files = walk(ROOT).filter((f) => f.endsWith(".html"));
+if (existsSync(join(ROOT, "blog/article.html"))) files.push(join(ROOT, "blog/article.html"));
 const stale = [];
 let rewritten = 0;
 let stamped = 0;

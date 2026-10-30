@@ -2,5 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /README.md
 Disallow: /tools/
+Disallow: /publications/articles/
+Disallow: /blog/
 
 Sitemap: https://www.sourcinno.com/sitemap.xml
+Sitemap: https://www.sourcinno.com/publications/sitemap.xml

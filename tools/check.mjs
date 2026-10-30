@@ -15,7 +15,12 @@
  *   --nojs     le site reste lisible et sur sans JavaScript
  *   --tiers    tout hote externe charge est annonce dans la politique de confidentialite
  *   --seo      meta Open Graph, longueurs de title/description, sitemap complet, et chaque
- *              Service JSON-LD : url vers une page locale existante, name dans son <title> ou <h1>
+ *              Service JSON-LD : url vers une page locale existante, name dans son <title> ou <h1>.
+ *              Sitemaps lus : sitemap.xml plus chaque ligne `Sitemap:` de robots.txt sous
+ *              https://www.sourcinno.com/ (fichier lu sur le disque ; absent = echec) ; une URL
+ *              en double dans un meme sitemap echoue. Un <title> trop long sur une page d article
+ *              (publications/<slug>/index.html, ecrite par gtm-blog) est une note, pas un echec :
+ *              le titre est celui de l article, au proprietaire de le raccourcir.
  *   --all      tous les groupes, plus le test execute tools/test-ia-embeds.mjs
  *              et `blog.mjs check` du moteur gtm-blog (liste du blog
  *              de Publications = fichiers de publications/articles/, images, liens, hors ligne ;
@@ -903,22 +908,39 @@ function checkSeo() {
   const sitemap = existsSync(join(ROOT, "sitemap.xml")) ? readFileSync(join(ROOT, "sitemap.xml"), "utf8") : "";
   const indexed = pages.filter((p) => !isStub(p) && p.rel !== "404.html");
   const expectedUrls = new Set(indexed.map((p) => "https://www.sourcinno.com/" + p.rel.replace(/index\.html$/, "")));
-  const listedUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  const locs = (xml) => [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  const listedUrls = locs(sitemap);
   if (!sitemap) fail("sitemap.xml", "sitemap absent");
+  // Une URL en double dans un meme sitemap echoue ; la page Publications figure dans deux sitemaps (la racine et
+  // celui du blog), ce que le protocole des sitemaps admet.
+  if (new Set(listedUrls).size !== listedUrls.length) fail("sitemap.xml", "URL dupliquee");
+  // Les autres sitemaps du site : chaque ligne `Sitemap:` de robots.txt sous https://www.sourcinno.com/ (celui de la
+  // racine deja lu), lu sur le disque ; ses URL s ajoutent aux listees.
+  const robots = existsSync(join(ROOT, "robots.txt")) ? readFileSync(join(ROOT, "robots.txt"), "utf8") : "";
+  const autres = new Set([...robots.matchAll(/^Sitemap:\s*https:\/\/www\.sourcinno\.com\/(\S+?)\s*$/gim)].map((m) => m[1]).filter((f) => f !== "sitemap.xml"));
+  for (const f of autres) {
+    if (!existsSync(join(ROOT, f))) { fail("robots.txt", `le sitemap ${f} qu il nomme est absent`); continue; }
+    const urls = locs(readFileSync(join(ROOT, f), "utf8"));
+    if (new Set(urls).size !== urls.length) fail(f, "URL dupliquee");
+    listedUrls.push(...urls);
+  }
   for (const url of expectedUrls) {
     if (!listedUrls.includes(url)) fail("sitemap.xml", `l URL ${url} n est pas listee`);
   }
   for (const url of listedUrls) {
     if (!expectedUrls.has(url)) fail("sitemap.xml", `l URL ${url} est retiree ou inconnue`);
   }
-  if (new Set(listedUrls).size !== listedUrls.length) fail("sitemap.xml", "URL dupliquee");
   for (const p of pages) {
     if (isStub(p) || p.rel === "404.html") continue;
     for (const prop of ["og:title", "og:description", "og:url", "og:type"]) {
       if (!new RegExp(`property="${prop}"`).test(p.html)) fail(p.rel, `meta ${prop} absente`);
     }
     const title = attr(p.html, /<title>([\s\S]*?)<\/title>/i) || "";
-    if (title.length > 65) fail(p.rel, `<title> trop long pour Google: ${title.length} caracteres (max 65)`);
+    if (title.length > 65) {
+      // Page d article (gtm-blog) : son titre est celui de l article, au proprietaire de le raccourcir : une note.
+      const msg = `<title> trop long pour Google: ${title.length} caracteres (max 65)`;
+      if (/^publications\/[^/]+\/index\.html$/.test(p.rel)) note(`${p.rel}: ${msg}`); else fail(p.rel, msg);
+    }
     if (title.length < 15) fail(p.rel, `<title> trop court: ${title.length} caracteres`);
     const desc = attr(p.html, /<meta name="description" content="([^"]*)"/i) || "";
     if (desc.length > 165) fail(p.rel, `meta description trop longue: ${desc.length} caracteres (max 165)`);

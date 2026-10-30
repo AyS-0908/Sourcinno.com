@@ -1156,3 +1156,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
   .ia-chat typebot-standard { display:block; width:100%; height:600px; max-height:75vh; margin-top:var(--space-2); }
   .ia-chat typebot-standard[hidden] { display:none; }
   .ia-chat__notice { font-size:.875rem; color:var(--text-muted); }
+
+/* ---------- gtm-blog : page d un article (publications/<slug>/) et lien de la carte vers elle ---------- */
+.blog-article { max-width: 68ch; margin: var(--space-4) 0; line-height: 1.6; }
+.blog-more { font-weight: 600; }
