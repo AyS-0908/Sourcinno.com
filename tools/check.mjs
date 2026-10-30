@@ -804,7 +804,7 @@ function checkA11y() {
   // repeint un bouton). Ce cas-la se voit a l oeil, sur la page rendue.
   note("--a11y: le conflit de cascade (une regle plus specifique qui repeint un element) n est PAS couvert ici : il se controle a l ecran.");
   note(`--a11y: ${PAIRS.length} couple(s) de couleurs verifie(s) (le plus juste : ${worst.nom}, ${worst.r.toFixed(2)}:1); ${links} lien(s) et ${buttons} bouton(s) inspecte(s)`);
-  note(`--a11y: ${blanks} lien(s) target="_blank" sur ${blankPages.size} page(s), chacun lu pour « ${NOUVEL_ONGLET} » en fin de nom accessible`);
+  note(`--a11y: ${blanks} lien(s) target="_blank" sur ${blankPages.size} page(s), chacun lu pour « ${NOUVEL_ONGLET} » (« ${NEW_TAB} » dans un bloc anglais) en fin de nom accessible`);
 }
 
 /* ---------- --nojs ----------
