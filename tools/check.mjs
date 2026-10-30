@@ -35,6 +35,11 @@
  *   --data     page Publications en HTML statique depuis Pass 34 : plus de JSON a valider.
  * Test RETIRE avec son sujet : tools/portfolio.test.mjs (P75, section Portfolio hors publication,
  *              owner 2026-10-29 « A ») ; le revert du commit P75 Portfolio le rend a --all.
+ * Page RETIREE de la publication : la page Venture Building (P77, owner 2026-10-30 : la page entiere,
+ *              pas seulement le Portfolio) est une redirection vers / comme les trois anciennes adresses
+ *              qui y menaient ; le revert du commit P77 la rend au site. Depuis P77, un lien interne
+ *              dont la cible est une redirection echoue (STRUCTURE) : le visiteur atterrirait sur une page
+ *              « deplacee ».
  * Les drapeaux retires ou inconnus sont refuses : aucun controle ignore en silence.
  * Sortie 0 = tout vert. Sortie 1 = au moins un echec, chacun cite avec son fichier.
  */
@@ -249,6 +254,14 @@ function checkStructure() {
       if (pathPart.endsWith("/")) target = join(target, "index.html");
       if (!existsSync(target) || !statSync(target).isFile()) {
         fail(p.rel, `${kind} casse: ${v} (attendu ${relative(ROOT, target).replace(/\\/g, "/")})`);
+        continue;
+      }
+      // P77 : un lien ou une image vers une page de redirection echoue (le visiteur atterrirait sur « Cette page a
+      // demenage ») ; la cible d un meta refresh (kind "refresh") passe par la meme boucle : jamais une redirection non plus.
+      const targetRel = relative(ROOT, target).replace(/\\/g, "/");
+      const targetPage = pages.find((q) => q.rel === targetRel);
+      if (targetPage && isStub(targetPage)) {
+        fail(p.rel, `${kind} vers une redirection: ${v} (${targetRel} est une page « deplacee »)`);
         continue;
       }
       if (hash && target.endsWith(".html")) {
