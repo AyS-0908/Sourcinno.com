@@ -726,17 +726,17 @@ function checkA11y() {
      .visually-hidden compris. Un title, un texte apres </a> ou un commentaire ne comptent
      pas ; un aria-labelledby n est pas lu, donc refuse. */
   const NOUVEL_ONGLET = "(nouvel onglet)";
-  /* Un article en anglais (moteur gtm-blog, en-tete langue="en") : sa page porte <html lang="en"> et
-     sa carte de la liste <details ... lang="en">, et ses liens finissent par « (new tab) »
-     (le texte cache que le moteur exige pour cette langue). */
+  /* Un article en anglais (moteur gtm-blog, en-tete langue="en") : sa carte de la liste
+     <details ... lang="en"> et le bloc <article ... lang="en"> de sa page tiennent ses liens, qui
+     finissent par « (new tab) » (le texte cache que le moteur exige pour cette langue) ; l en-tete
+     et le pied de page du site, francais, gardent « (nouvel onglet) » meme sur cette page. */
   const NEW_TAB = "(new tab)";
   let links = 0, buttons = 0, blanks = 0;
   const blankPages = new Set();
   for (const p of pages) {
     const body = p.html.slice(p.html.indexOf("<body"));
-    const pageEn = p.html.includes('<html lang="en">');
-    const enCards = [...body.matchAll(/<details\b[^>]*\blang="en"[^>]*>[\s\S]*?<\/details>/gi)].map((c) => [c.index, c.index + c[0].length]);
-    const suffixAt = (i) => (pageEn || enCards.some(([a, b]) => i >= a && i < b) ? NEW_TAB : NOUVEL_ONGLET);
+    const enBlocks = [...body.matchAll(/<(details|article)\b[^>]*\blang="en"[^>]*>[\s\S]*?<\/\1>/gi)].map((c) => [c.index, c.index + c[0].length]);
+    const suffixAt = (i) => (enBlocks.some(([a, b]) => i >= a && i < b) ? NEW_TAB : NOUVEL_ONGLET);
 
     for (const m of body.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
       links++;
