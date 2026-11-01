@@ -10,6 +10,7 @@
  * Les pages de redirection (http-equiv="refresh") n ont pas de coquille : ignorees.
  * blog/ est saute (profil du moteur gtm-blog), sauf blog/article.html quand il existe : le
  * modele des pages d article, dont la coquille doit rester celle des pages qu il engendre.
+ * assets/data/ est saute aussi (Pass 83) : fragments du skill gtm-catalog, jamais des pages.
  * Chaque page garde ses fins de ligne (CRLF ou LF), seuls les trois blocs changent.
  *
  * USAGE
@@ -59,7 +60,7 @@ function locate(html, part) {
   return [i, j + part.close.length];
 }
 
-const files = walk(ROOT).filter((f) => f.endsWith(".html")).sort();
+const files = walk(ROOT).filter((f) => f.endsWith(".html") && !relative(ROOT, f).replace(/\\/g, "/").startsWith("assets/data/")).sort();
 if (existsSync(join(ROOT, "blog/article.html"))) files.push(join(ROOT, "blog/article.html"));
 const errors = [];
 const drifted = [];

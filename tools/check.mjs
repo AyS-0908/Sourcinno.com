@@ -35,9 +35,9 @@
  *   --data     page Publications en HTML statique depuis Pass 34 : plus de JSON a valider.
  * Test RETIRE avec son sujet : tools/portfolio.test.mjs (P75, section Portfolio hors publication,
  *              owner 2026-10-29 « A ») ; le revert du commit P75 Portfolio le rend a --all.
- * Page RETIREE de la publication : la page Venture Building (P77, owner 2026-10-30 : la page entiere,
- *              pas seulement le Portfolio) est une redirection vers / comme les trois anciennes adresses
- *              qui y menaient ; le revert du commit P77 la rend au site. Depuis P77, un lien interne
+ * Page Venture Building : retiree de P77 (owner 2026-10-30) a P83, rendue par le revert du commit P77
+ *              (sans le Portfolio), avec la section « Catalogue des idees » (assets/data/ : fragments du
+ *              skill gtm-catalog, jamais des pages). Depuis P77, un lien interne
  *              dont la cible est une redirection echoue (STRUCTURE) : le visiteur atterrirait sur une page
  *              « deplacee ».
  * Les drapeaux retires ou inconnus sont refuses : aucun controle ignore en silence.
@@ -97,7 +97,11 @@ const VENDOR_PINS = new Map([
   ["assets/js/vendor/typebot-js-0.10.11/web.js", "41adb2855b0e8868b4cf304b20e3ab1f1014e8ed252ec559aaa8d4cd4ed72750"],
 ]);
 const isVendor = (f) => relative(ROOT, f).replace(/\\/g, "/").startsWith(VENDOR);
-const htmlFiles = allFiles.filter((f) => f.endsWith(".html")).sort();
+/* assets/data/ (Pass 83) : fragments ecrits par le skill gtm-catalog (catalogue.html = les cartes, aussi recopiees
+   entre les reperes de la page Venture Building), jamais des pages ; le recensement inverse lit le fragment. */
+const FRAGMENTS = "assets/data/";
+const isFragment = (f) => relative(ROOT, f).replace(/\\/g, "/").startsWith(FRAGMENTS);
+const htmlFiles = allFiles.filter((f) => f.endsWith(".html") && !isFragment(f)).sort();
 if (htmlFiles.length === 0) {
   console.error("ECHEC: aucun fichier .html trouve sous " + ROOT);
   process.exit(1);
@@ -375,7 +379,16 @@ function checkStructure() {
   ]);
   const partiels = readdirSync(join(ROOT, "tools/shell")).filter((f) => f.endsWith(".html"))
     .map((f) => readFileSync(join(ROOT, "tools/shell", f), "utf8"));
-  const sourcesHtml = [...pages.map((p) => p.html), ...partiels];
+  // Classes de la carte gtm-catalog (contrat card.md du skill) : elles servent par les cartes publiees
+  // (fragment assets/data/catalogue.html et section de la page) et restent declarees tant que la page
+  // porte le repere, cartes ou non (une carte Teaser n a ni motto ni pied). Perimee : sans regle, ou repere absent.
+  const CATALOGUE = ["card", "card-b", "media", "ph", "badge-lvl", "card-b__body", "card-b__top", "tags", "tag",
+    "tag--sector", "tag--plain", "card__title", "motto", "card-b__cols", "block", "label", "points", "locked",
+    "card-b__foot", "btn", "btn--primary", "btn--secondary"];
+  const [CAT_PAGE, CAT_MOTIF, CAT_FRAGMENT] = ["service-venture-building/index.html", "<!-- gtm-catalog:start -->", "assets/data/catalogue.html"];
+  const catalogue = existsSync(join(ROOT, CAT_PAGE)) && readFileSync(join(ROOT, CAT_PAGE), "utf8").includes(CAT_MOTIF);
+  const fragment = existsSync(join(ROOT, CAT_FRAGMENT)) ? readFileSync(join(ROOT, CAT_FRAGMENT), "utf8") : "";
+  const sourcesHtml = [...pages.map((p) => p.html), ...partiels, fragment];
   const jetons = new Set(sourcesHtml.flatMap(classTokens));
   const scriptsTexte = [
     ...allFiles.filter((f) => (/^assets\/js\/.+\.js$/.test(relOf(f)) && !isVendor(f)) || relOf(f) === "publications/blog.js").map((f) => readFileSync(f, "utf8")),
@@ -392,7 +405,7 @@ function checkStructure() {
   const sert = (t) => jetons.has(t) || motsDeChaines.has(t);
   let mortes = 0;
   for (const [t, file] of regles) {
-    if (SANS_USAGE.has(t) || sert(t)) continue;
+    if (SANS_USAGE.has(t) || sert(t) || (catalogue && CATALOGUE.includes(t))) continue;
     mortes++;
     fail(file, `classe « ${t} » dans un selecteur CSS mais utilisee nulle part (pages, tools/shell/, chaines des scripts) : retirer la regle`);
   }
@@ -402,7 +415,10 @@ function checkStructure() {
       fail(file, `exception de recensement inverse « ${t} » perimee : la retirer de SANS_USAGE dans tools/check.mjs`);
     }
   }
-  note(`STRUCTURE: recensement inverse ${regles.size} classe(s) de selecteur, ${partiels.length} partiel(s) tools/shell, ${scriptsTexte.length} script(s) lus, ${mortes} classe(s) sans usage ; exception(s) composee(s) par script : ${[...SANS_USAGE].map(([t, [f]]) => `${t} (${f})`).join(", ") || "aucune"}`);
+  for (const t of CATALOGUE) {
+    if (!catalogue || !regles.has(t)) fail(CAT_PAGE, `classe de carte gtm-catalog « ${t} » perimee : ${catalogue ? "aucune regle" : `repere ${CAT_MOTIF} absent`} ; la retirer de CATALOGUE dans tools/check.mjs`);
+  }
+  note(`STRUCTURE: recensement inverse ${regles.size} classe(s) de selecteur, ${partiels.length} partiel(s) tools/shell, ${scriptsTexte.length} script(s) lus, ${mortes} classe(s) sans usage ; exception(s) composee(s) par script : ${[...SANS_USAGE].map(([t, [f]]) => `${t} (${f})`).join(", ") || "aucune"} ; cartes gtm-catalog : ${CATALOGUE.length} classe(s) declarees (repere ${catalogue ? "present" : "ABSENT"}), fragment ${CAT_FRAGMENT} ${fragment ? "lu" : "absent"}`);
 
   // 10. coherence des coordonnees (Pass 50, Pass 66) : pages + assets/js/*.js (ni _v2 ni
   //     VENDOR) + partiels tools/shell/*.html, texte brut, copies du footer comprises.

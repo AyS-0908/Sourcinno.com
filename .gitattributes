@@ -1,1 +1,2 @@
 assets/js/vendor/** -text -whitespace
+assets/data/** -text

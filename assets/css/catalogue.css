@@ -1,0 +1,96 @@
+/* Catalogue des idées (Venture Building, #catalogue) — Pass 83.
+   Les cartes sont écrites par le skill gtm-catalog entre <!-- gtm-catalog:start --> et
+   <!-- gtm-catalog:end --> (contrat : _AI_SKILLS\skill-gtm-catalog\references\export.md, card.md).
+   Copie des règles de son assets/card.css, chacune sous .catalogue-list, sans ses blocs :root et
+   « Base » : les classes .card, .btn, .tags, .tag de style.css restent intactes ailleurs.
+   Jetons : --font → --font-body, --teal-hover → --primary-hover ; --shadow et --shadow-sm de la carte
+   déclarés ici. Ne jamais renommer une classe : elle vient du skill. Chargée par la seule page Venture Building. */
+
+/* Liste : une carte par ligne */
+.catalogue-list {
+  --shadow-sm: 0 2px 8px rgba(26, 54, 93, 0.07);
+  --shadow: 0 12px 32px rgba(26, 54, 93, 0.11);
+  --card-media-w: 300px;  /* image MEDIUM (PRD A2 § Open) */
+  display: grid;
+  gap: 24px;
+  color: var(--navy);
+  line-height: 1.65;
+}
+/* Phrase d'attente : visible tant que la liste ne contient rien d'autre (sans script aussi). */
+.catalogue-empty { color: var(--text-muted); }
+.catalogue-list > .catalogue-empty:not(:only-child) { display: none; }
+/* Au-delà de 6 cartes : classe posée par catalogue.js seulement. */
+.catalogue-list .card.is-folded { display: none; }
+.catalogue-more { margin-top: 24px; text-align: center; }
+
+/* Adaptation au site : ce que style.css ajoute aux .card, .tag, h3, p et ul est neutralisé
+   pour que la carte reste celle de son aperçu (catalog.py preview). */
+.catalogue-list h3, .catalogue-list p, .catalogue-list ul { margin: 0; }
+.catalogue-list ul { padding: 0; }
+.catalogue-list h3 { line-height: 1.2; }
+.catalogue-list .card { --text-muted: var(--navy); padding: 0; gap: 0; }
+.catalogue-list .tag { letter-spacing: normal; text-transform: none; }
+.catalogue-list .btn { text-align: start; }
+
+/* Shared card pieces (site charter) */
+.catalogue-list .card { background: var(--white); border: 1px solid var(--grey-100); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; min-width: 0; transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease); }
+.catalogue-list .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(49, 151, 149, 0.4); }
+.catalogue-list .card__title { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; }
+.catalogue-list .motto { font-size: 1.02rem; font-weight: 500; color: var(--navy-soft); line-height: 1.45; }
+.catalogue-list .motto::before { content: "« "; color: var(--orange); }
+.catalogue-list .motto::after { content: " »"; color: var(--orange); }
+.catalogue-list .tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; }
+.catalogue-list .tag { font-size: .78rem; font-weight: 600; line-height: 1; padding: 6px 10px; border-radius: 999px; white-space: nowrap; }
+.catalogue-list .tag--sector { background: rgba(221, 107, 32, 0.12); color: var(--tag-text); }
+.catalogue-list .tag--plain { background: var(--grey-50); color: var(--navy); border: 1px solid var(--grey-100); }
+.catalogue-list .label { font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 6px; }
+.catalogue-list .block p { font-weight: 600; font-size: .96rem; line-height: 1.45; }
+.catalogue-list .points { list-style: none; display: grid; gap: 6px; margin-top: 8px; }
+.catalogue-list .points li { position: relative; padding-left: 18px; font-size: .92rem; color: var(--grey-700); line-height: 1.5; }
+.catalogue-list .points li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 7px; height: 7px; border-radius: 2px; background: var(--teal); }
+.catalogue-list .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: inherit; font-size: .95rem; font-weight: 600; line-height: 1.2; padding: 12px 20px; border-radius: 999px; border: 2px solid transparent; text-decoration: none; cursor: pointer; transition: background .2s var(--ease), box-shadow .2s var(--ease), color .2s var(--ease); }
+.catalogue-list .btn svg { width: 18px; height: 18px; flex: none; }
+.catalogue-list .btn--primary { background: var(--teal-dark); color: var(--white); box-shadow: var(--shadow-sm); }
+.catalogue-list .btn--primary:hover { background: var(--primary-hover); box-shadow: var(--shadow); }
+.catalogue-list .btn--secondary { background: var(--white); color: var(--navy); border-color: var(--navy); }
+.catalogue-list .btn--secondary:hover { background: var(--navy); color: var(--white); }
+
+/* Locked solution (Teaser) */
+.catalogue-list .locked { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 14px; align-items: center; padding: 16px; border: 1.5px dashed var(--grey-300); border-radius: var(--radius); background: repeating-linear-gradient(135deg, var(--white) 0 10px, var(--grey-50) 10px 20px); }
+.catalogue-list .locked svg { grid-row: span 2; width: 34px; height: 34px; color: var(--teal); }
+.catalogue-list .locked strong { font-size: .95rem; }
+.catalogue-list .locked span { font-size: .86rem; color: var(--grey-700); line-height: 1.45; }
+
+/* Media */
+.catalogue-list .media { position: relative; background: var(--grey-100); overflow: hidden; }
+.catalogue-list .media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.catalogue-list .ph { display: grid; place-content: center; text-align: center; gap: 4px; width: 100%; height: 100%; background: repeating-linear-gradient(45deg, rgba(26, 54, 93, 0.05) 0 12px, transparent 12px 24px), linear-gradient(160deg, #e9eff6, #dde6f0); color: var(--navy-soft); padding: 12px; }
+.catalogue-list .ph svg { width: 34px; height: 34px; margin: 0 auto 4px; color: var(--grey-500); }
+.catalogue-list .ph strong { font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.catalogue-list .ph span { font-size: .78rem; color: var(--grey-700); }
+.catalogue-list .badge-lvl { position: absolute; top: 12px; left: 12px; z-index: 1; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 9px; border-radius: 6px; background: rgba(255, 255, 255, 0.94); color: var(--navy); box-shadow: 0 1px 3px rgba(26, 54, 93, 0.15); }
+
+/* Design B: Diptyque (horizontal, one per row) */
+.catalogue-list .card-b { display: grid; grid-template-columns: var(--card-media-w) minmax(0, 1fr); }
+.catalogue-list .card-b .media { min-height: 100%; }
+.catalogue-list .card-b .media img { object-position: 66% 30%; position: absolute; inset: 0; }
+.catalogue-list .card-b__body { display: grid; gap: 16px; padding: 28px 30px; align-content: start; }
+.catalogue-list .card-b__top { display: flex; justify-content: space-between; gap: 16px; align-items: start; flex-wrap: wrap; }
+.catalogue-list .card-b__cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding-top: 16px; border-top: 1px solid var(--grey-100); }
+.catalogue-list .card-b__foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.catalogue-list .card-b__foot small { font-size: .84rem; color: var(--grey-500); }
+
+/* Responsive */
+@media (max-width: 760px) {
+  .catalogue-list .card-b { grid-template-columns: 1fr; }
+  .catalogue-list .card-b .media { aspect-ratio: 16 / 9; min-height: 0; }
+  .catalogue-list .card-b__body { padding: 22px; }
+  .catalogue-list .card-b__cols { grid-template-columns: 1fr; gap: 18px; }
+}
+@media (max-width: 520px) {
+  .catalogue-list .card-b__foot .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .catalogue-list *, .catalogue-list *::before, .catalogue-list *::after { transition-duration: 0.01ms !important; }
+  .catalogue-list .card:hover { transform: none; }
+}
