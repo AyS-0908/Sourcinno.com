@@ -3,23 +3,249 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page deplacee | Sourcinno</title>
-<meta name="description" content="Cette page a ete deplacee vers /.">
-<meta http-equiv="refresh" content="0; url=/">
-<link rel="canonical" href="https://www.sourcinno.com/">
-<meta name="robots" content="noindex, follow">
+<title>Venture Building | Sourcinno</title>
+<meta name="description" content="Venture Building : les entreprises établies peuvent créer des startups titans avec leurs actifs dormants.">
+<link rel="canonical" href="https://www.sourcinno.com/service-venture-building/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Sourcinno">
+<meta property="og:title" content="Venture Building | Sourcinno">
+<meta property="og:description" content="Venture Building : les entreprises établies peuvent créer des startups titans avec leurs actifs dormants.">
+<meta property="og:url" content="https://www.sourcinno.com/service-venture-building/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://www.sourcinno.com/pictures/og-sourcinno.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sourcinno — Aymard de Scorbiac, conseil en stratégie, organisation, processus, IA et Venture Building">
 <link rel="icon" href="/pictures/logo_favicon.png">
-<link rel="stylesheet" href="/assets/css/style.css?v=1be199e9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css?v=1731dde7">
+<noscript>
+  <style>
+    /* Sans JavaScript, le lecteur video ne peut pas se lancer : on le masque,
+       le lien YouTube de la legende reste. */
+    .video-launch { display:none; }
+  </style>
+</noscript>
 </head>
 <body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <script>
+    /* Avant les sections : les masque en attendant site.js (animation au scroll),
+       2,5 s au plus. Sans JavaScript, ni classe ni masquage. */
+    document.documentElement.classList.add("reveal-wait");
+    setTimeout(function () { document.documentElement.classList.remove("reveal-wait"); }, 2500);
+  </script>
+  <div class="container site-header__inner">
+    <a class="site-logo" href="/" aria-label="Sourcinno, retour &agrave; l&rsquo;accueil">
+      <img src="/pictures/logo_sourcinno.png" alt="Sourcinno" width="404" height="130">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+      <ul class="site-nav__list">
+        <li><a href="/">Exp&eacute;rience</a></li>
+        <li>
+          <details class="nav-drop">
+            <summary>Services</summary>
+            <ul class="nav-drop__menu">
+              <li><a href="/service-performance/">Performance</a></li>
+              <li><a href="/service-ia-business/">Entreprise IA</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="/service-venture-building/">Venture Building</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a class="btn btn--primary btn--sm" href="/contact/">Rendez-vous</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 <main id="main">
-<section class="hero hero--page">
+<section class="hero hero--cover hero--venture">
+  <img class="hero__bg" src="/assets/img/hero-venture.jpg" alt="" width="1024" height="1536">
   <div class="container">
-    <h1>Cette page a d&eacute;m&eacute;nag&eacute;</h1>
-    <p class="hero__sub">Vous allez &ecirc;tre redirig&eacute; vers la page d&rsquo;accueil.</p>
-    <p><a class="btn btn--primary" href="/">Continuer</a></p>
+    <h1>Venture Building</h1>
+    <p class="hero__sub">Les entreprises établies peuvent créer des startups titans avec leurs actifs dormants</p>
+  </div>
+</section>
+
+<section class="section reveal" id="kodak">
+  <div class="container">
+    <div class="section__head">
+      <h2>Kodak aurait pu créer Instagram</h2>
+    </div>
+    <div class="vb-kodak">
+      <div class="vb-matrix" role="img" aria-label="Matrice offre et client. Cœur métier, offre existante et client existant : Kodak, 30 Md$. Développement, offre nouvelle et client existant : appareil photo numérique. Conquête, offre existante et client nouveau : vide. Exploration, offre nouvelle et client nouveau, mise en avant : Instagram, 100 Md$.">
+        <div class="vb-matrix__grid">
+          <div class="vb-matrix__cell"><p class="vb-matrix__name">Conquête</p></div>
+          <div class="vb-matrix__cell vb-matrix__cell--hot"><p class="vb-matrix__name">Exploration</p><p class="vb-matrix__fact">Instagram — 100&nbsp;Md$</p></div>
+          <div class="vb-matrix__cell"><p class="vb-matrix__name">Cœur métier</p><p class="vb-matrix__fact">Kodak — 30&nbsp;Md$</p></div>
+          <div class="vb-matrix__cell"><p class="vb-matrix__name">Développement</p><p class="vb-matrix__fact">Appareil photo numérique</p></div>
+        </div>
+        <p class="vb-matrix__axis vb-matrix__axis--y"><span>Existant</span><strong>Client</strong><span>Nouveau</span></p>
+        <p class="vb-matrix__axis vb-matrix__axis--x"><span>Existante</span><strong>Offre</strong><span>Nouvelle</span></p>
+      </div>
+      <div class="vb-kodak__text">
+        <p>Stratégie de croissance <strong>«&nbsp;autour&nbsp;»</strong> du cœur de métier = ils l'ont fait :</p>
+        <ul class="vb-kodak__list">
+          <li><strong>Air France</strong> → AMADEUS (2 Md€ CA-21)</li>
+          <li><strong>Crédit Agricole</strong> → BLANK (50 M€ Série B)</li>
+          <li><strong>Pmu</strong> → STABLES (En croissance)</li>
+          <li><strong>Bmw</strong> → FREENOW (Leader Européen)</li>
+          <li><strong>GE health</strong> → EVIDATION (150 M$ Série E)</li>
+          <li><strong>Amazon</strong> → AWS (20 Md€ CA-22)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt reveal" id="david-goliath">
+  <div class="container">
+    <div class="section__head">
+      <h2>David + Goliath</h2>
+    </div>
+    <figure class="band-figure">
+      <button class="video-launch" type="button" data-video="QtzlMHaUGyM" aria-label="Lire la vidéo « corpangels Corporates — July23 »">
+        <img src="/assets/img/video-corpangels-corporates.jpg" width="480" height="270" alt="" loading="lazy">
+        <span aria-hidden="true">▶</span>
+      </button>
+      <figcaption><a href="https://www.youtube.com/watch?v=QtzlMHaUGyM" target="_blank" rel="noopener">Vidéo « corpangels Corporates — July23 »<span class="visually-hidden"> (nouvel onglet)</span></a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section reveal service-refinement" id="experience">
+  <div class="container">
+    <div class="section__head">
+      <h2>Expériences associées</h2>
+    </div>
+    <ul class="grid grid--3 service-careers">
+      <li class="card service-career">
+        <h3>Fabereo (corporate startup)</h3>
+        <p>Co-fondation et direction, conception du SaaS, développement commercial et de l'écosystème, levée de 500 K€.</p>
+      </li>
+      <li class="card service-career">
+        <h3>Mazars’ Lab</h3>
+        <p>Création et direction, accélération opérationnelle de startups (50% pérennes après 10 ans).</p>
+      </li>
+      <li class="card service-career">
+        <h3>Sourcinno</h3>
+        <p>Portefeuille de pré-startups (prototype + business plan).</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt reveal" id="reflexion">
+  <div class="container">
+    <div class="section__head">
+      <h2>Réflexion</h2>
+    </div>
+    <div class="grid grid--2">
+      <div class="stack">
+        <h3>Intérêts</h3>
+        <details class="disclosure disclosure--card">
+          <summary>Un second moteur de croissance</summary>
+          <p>L’entreprise crée ses propres startups autour de son cœur de métier, «&nbsp;ni trop près, ni trop loin&nbsp;», pour trouver des relais de croissance ou contre-attaquer une disruption.</p>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>David + Goliath</summary>
+          <p>L’agilité de la startup, portée par les actifs de l’entreprise établie&nbsp;: données, R&amp;D, supply chain, canaux commerciaux, partenaires, souvent sous-exploités.</p>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>Un levier de la stratégie</summary>
+          <p>Une fois dé-risquée, la startup rejoint une entité existante, devient une entité propre ou vole de ses propres ailes.</p>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>Culture et talents</summary>
+          <p>Une réponse à la volonté de renforcer la culture d’innovation et de se différencier auprès des talents.</p>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>Exemple</summary>
+          <p>Une banque crée un micro-ERP pour ses clients PME&nbsp;: elle gagne en visibilité sur leurs données opérationnelles et renforce ses offres (affacturage).</p>
+        </details>
+      </div>
+      <div class="stack">
+        <h3>Challenges</h3>
+        <details class="disclosure disclosure--card">
+          <summary>«&nbsp;Culture eats digital&nbsp;»</summary>
+          <p>Le fossé culturel entre startup et entreprise établie&nbsp;: traction ou bénéfice trimestriel, semaine ou mois, test-mesure-apprentissage ou cycle lourd.</p>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>Alignement du Comité exécutif</summary>
+          <p>Le critère impératif&nbsp;: ses membres sont clés dans le déploiement commercial des futures startups.</p>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>Adhésion des équipes</summary>
+          <p>Comprendre (expliquer le pourquoi), accepter (associer tôt ventes et marketing), pouvoir (temps, budget, outils).</p>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>Terrain peu fertile</summary>
+          <p>Pérennité de court terme en jeu, actifs à partager de faible impact, ou pas de marge financière de l’ordre de 1&nbsp;M€ par startup.</p>
+        </details>
+        <details class="disclosure disclosure--card">
+          <summary>Patience en amont</summary>
+          <p>«&nbsp;Plus long au décollage, plus rapide pour le voyage&nbsp;»&nbsp;: perdre quelques semaines à la création pour gagner des mois au passage à l’échelle.</p>
+        </details>
+      </div>
+    </div>
+    <figure class="band-figure">
+      <button class="video-launch" type="button" data-video="7qO3G7tCHr8" aria-label="Lire la vidéo « CorpAngels : TechnoService SaaS pour création de StartUps »">
+        <img src="/assets/img/video-corpangels-technoservice.jpg" width="480" height="270" alt="" loading="lazy">
+        <span aria-hidden="true">▶</span>
+      </button>
+      <figcaption><a href="https://www.youtube.com/watch?v=7qO3G7tCHr8" target="_blank" rel="noopener">Vidéo « CorpAngels : TechnoService SaaS pour création de StartUps »<span class="visually-hidden"> (nouvel onglet)</span></a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section reveal" aria-label="Contact">
+  <div class="container cta-band">
+    <a class="btn btn--primary" href="/contact/">Discutons de votre besoin</a>
   </div>
 </section>
 </main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">Sourcinno</p>
+        <p>Aymard de Scorbiac &mdash; consultant en Strat&eacute;gie, Intelligence artificielle, Innovation, et Organisation. Paris,&nbsp;France.</p>
+        <p class="site-footer__cta"><a class="btn btn--primary btn--sm" href="/contact/">Rendez-vous</a></p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="/">Exp&eacute;rience</a></li>
+          <li><a href="/service-performance/">Performance</a></li>
+          <li><a href="/service-ia-business/">Entreprise IA</a></li>
+          <li><a href="/service-venture-building/">Venture Building</a></li>
+          <li><a href="/publications/">Publications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:contact@sourcinno.com">contact@sourcinno.com</a></li>
+          <li><a href="https://www.linkedin.com/in/aymarddescorbiac" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (nouvel onglet)</span></a></li>
+          <li><a href="https://www.sourcinno.com">www.sourcinno.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p>&copy; <span data-year>2026</span> Sourcinno SAS &mdash; Paris (France)</p>
+      <p><a href="/mentions-legales/">Mentions l&eacute;gales</a> &middot; <a href="/politique-confidentialite/">Politique de confidentialit&eacute;</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/config.js?v=46fb6aef" defer></script>
+<script src="/assets/js/site.js?v=8fba11d0" defer></script>
+<script src="/assets/js/video.js?v=f008ff18" defer></script>
 </body>
 </html>
