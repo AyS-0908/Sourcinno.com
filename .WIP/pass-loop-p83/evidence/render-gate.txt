@@ -1,0 +1,11 @@
+## GATE: real folder (:4173), restored page
+1200: h1 « Venture Building », menu ["Venture Building"], footer ["Venture Building"], sections null kodak david-goliath(alt) experience catalogue(alt) reflexion Contact, script errors [], Inter=true
+capture page-footer-1200.png (1200×363 px, document y 3905)
+capture page-top-1200.png (first screen)
+375: h1 « Venture Building », menu ["Venture Building"], footer ["Venture Building"], sections null kodak david-goliath(alt) experience catalogue(alt) reflexion Contact, script errors [], Inter=true
+capture page-footer-375.png (375×816 px, document y 4163)
+capture page-top-375.png (first screen)
+first screen 375×553, no scroll: h1 255..293 in viewport true, opacity chain 1, scrollY 0
+first screen 375×635, no scroll: h1 255..293 in viewport true, opacity chain 1, scrollY 0
+first screen 360×640, no scroll: h1 255..293 in viewport true, opacity chain 1, scrollY 0
+first screen 320×568, no scroll: h1 255..293 in viewport true, opacity chain 1, scrollY 0

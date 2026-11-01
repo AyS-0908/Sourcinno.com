@@ -1,0 +1,13 @@
+## RENDERS: rehearsal (:4176), two fixture cards
+1200 JS on, reduced-motion no-preference, Inter=true: cards 2, visible 2, empty sentence no box, more none, overflow [], errors []
+  hrefs: mailto:contact@sourcinno.com?subject=Id%C3%A9e%20%C2%AB%20Lu | mailto:contact@sourcinno.com?subject=Id%C3%A9e%20%C2%AB%20Z%
+capture catalogue-1200.png (1200×995 px, document y 2183)
+375 JS on, reduced-motion no-preference, Inter=true: cards 2, visible 2, empty sentence no box, more none, overflow [], errors []
+  hrefs: mailto:contact@sourcinno.com?subject=Id%C3%A9e%20%C2%AB%20Lu | mailto:contact@sourcinno.com?subject=Id%C3%A9e%20%C2%AB%20Z%
+capture catalogue-375.png (375×1848 px, document y 2430)
+375 JS OFF: cards 2, visible 2, empty sentence no box, more none, hrefs ["#","#"], overflow []
+capture catalogue-375-nojs.png (375×1848 px, document y 2246)
+1200 JS OFF: cards 2, visible 2, empty sentence no box, more none, hrefs ["#","#"], overflow []
+320 JS on: overflow []
+keyboard: Tab #10 reaches a.btn.btn--primary « Discuter de cette idée », href mailto:contact@sourcinno.com?subject=Id%C3%A9…, reduced-motion reduce=true, outline solid 3px
+keyboard: Tab #11 reaches a.btn.btn--secondary « Demander l'accès », href mailto:contact@sourcinno.com?subject=Id%C3%A9…, reduced-motion reduce=true, outline solid 3px

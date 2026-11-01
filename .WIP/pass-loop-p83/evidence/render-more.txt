@@ -1,0 +1,5 @@
+## AFFICHER PLUS: static copy of the page holding 7 <article>s (:4176/tools/p83-sept/)
+JS on: cards 7, visible 6, button Afficher plus (1)
+  Tab reaches « Afficher plus »: true
+  after Enter: {"focus":"h3.card__title tabindex=-1 in card #7","text":"Carte fictive 7","visible":7,"button":"removed","inView":true}
+JS off: cards 7, visible 7, button none

@@ -1,0 +1,10 @@
+## OUTSIDE: computed style before (c9745dc, :4175) vs after (working tree, :4173), sorted, custom apart
+1200 / first .btn--primary: 522 props + pseudo, 0 difference(s)
+1200 / first .card: 522 props + pseudo, 0 difference(s)
+1200 /service-venture-building/ #experience first .card: 523 props + pseudo, 0 difference(s)
+1200 /service-venture-building/ contact band .btn--primary: 522 props + pseudo, 0 difference(s)
+375 / first .btn--primary: 522 props + pseudo, 0 difference(s)
+375 / first .card: 522 props + pseudo, 0 difference(s)
+375 /service-venture-building/ #experience first .card: 523 props + pseudo, 0 difference(s)
+375 /service-venture-building/ contact band .btn--primary: 522 props + pseudo, 0 difference(s)
+OUTSIDE total differences: 0

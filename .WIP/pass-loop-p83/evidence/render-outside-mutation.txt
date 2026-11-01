@@ -1,0 +1,9 @@
+1200 / first .btn--primary: 522 props + pseudo, 0 difference(s)
+1200 / first .card: 522 props + pseudo, 0 difference(s)
+1200 /service-venture-building/ #experience first .card: 523 props + pseudo, 4 difference(s): overflow-block: visible -> hidden | overflow-inline: visible -> hidden | overflow-x: visible -> hidden | overflow-y: visible -> hidden
+1200 /service-venture-building/ contact band .btn--primary: 522 props + pseudo, 22 difference(s): block-size: 55.4375px -> 53.8438px | border-bottom-left-radius: 12px -> 999px | border-bottom-right-radius: 12px -> 999px | border-end-end-radius: 12px -> 999px |
+375 / first .btn--primary: 522 props + pseudo, 0 difference(s)
+375 / first .card: 522 props + pseudo, 0 difference(s)
+375 /service-venture-building/ #experience first .card: 523 props + pseudo, 4 difference(s): overflow-block: visible -> hidden | overflow-inline: visible -> hidden | overflow-x: visible -> hidden | overflow-y: visible -> hidden
+375 /service-venture-building/ contact band .btn--primary: 522 props + pseudo, 22 difference(s): block-size: 55.4375px -> 53.8438px | border-bottom-left-radius: 12px -> 999px | border-bottom-right-radius: 12px -> 999px | border-end-end-radius: 12px -> 999px | 
+OUTSIDE total differences: 52

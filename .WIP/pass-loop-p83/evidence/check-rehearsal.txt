@@ -1,0 +1,17 @@
+  STRUCTURE: code tiers epingle : assets/js/vendor/typebot-js-0.10.11/web.js (sha256 41adb2855b0e…, LICENSE)
+  VERSIONS: 119 reference(s) CSS/JS a jour sur 33 page(s)
+  SHELL: header, footer et <noscript> conformes a tools/shell/ sur 24 page(s) ; 8 redirection(s) ignoree(s) : ai-business.html, offre-ia-business/index.html, offre-strategie-organisation-processus/index.html, offre-venture-building/index.html, portfolio/index.html, prototypes/index.html, service-strategie-transformation/index.html, venture-building.html
+  STRUCTURE: recensement 154 classe(s) HTML, 2 feuille(s) assets/css + 23 bloc(s) <style> de page, 188 classe(s) avec regle ; exception(s) sans regle : aucune
+  STRUCTURE: recensement inverse 188 classe(s) de selecteur, 3 partiel(s) tools/shell, 100 script(s) lus, 0 classe(s) sans usage ; exception(s) composee(s) par script : chat-msg--bot (assets/js/_v2/chat.js), chat-msg--me (assets/js/_v2/chat.js) ; cartes gtm-catalog : 22 classe(s) declarees (repere present), fragment assets/data/catalogue.html lu
+  STRUCTURE: coherence des coordonnees (reference tools/shell/footer.html) : email 63 (« contact@sourcinno.com » ×63), telephone : aucun sauf l hebergeur ×2 dans mentions-legales/index.html (« +37064503378 » ×1, « +370&nbsp;645&nbsp;03378 » ×1), LinkedIn 28 (« linkedin.com/in/aymarddescorbiac » ×28) ; videos 12 lanceur(s) = id de leur legende ; Typebot lien direct ×1, scripts ×1
+  STRUCTURE: 9 script(s) compile(s); 31 page(s) lue(s), dont 23 avec coquille et 8 redirection(s); 705 lien(s) interne(s) resolu(s)
+  --forms: formulaire de contact inspecte sur contact/index.html
+  --a11y: le conflit de cascade (une regle plus specifique qui repeint un element) n est PAS couvert ici : il se controle a l ecran.
+  --a11y: 14 couple(s) de couleurs verifie(s) (le plus juste : dates du parcours sur fond gris, 4.77:1); 552 lien(s) et 47 bouton(s) inspecte(s)
+  --a11y: 79 lien(s) target="_blank" sur 23 page(s), chacun lu pour « (nouvel onglet) » (« (new tab) » dans un bloc anglais) en fin de nom accessible
+  --nojs: 23 page(s) verifiee(s); 2 selecteur(s) masquant .reveal recense(s) (.reveal-wait .reveal, .reveal-on .reveal:not(.is-visible)); 1 script(s) .reveal-wait execute(s)
+  --tiers: 4 hote(s) externe(s) charge(s) par les pages et leurs scripts : fonts.googleapis.com, fonts.gstatic.com, typebot.io, www.youtube-nocookie.com
+  --seo: meta et sitemap verifies sur 22 page(s) indexable(s)
+  --seo: JSON-LD : 3 Service(s) verifie(s) (url locale existante, name dans le <title> ou le <h1> de la page cible)
+
+OK — aucun probleme sur 31 page(s).
