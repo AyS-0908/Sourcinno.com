@@ -1,7 +1,0 @@
-## EMPTY STATE: four combinations on screen
-no card, JS on: empty sentence visible 26px (in viewport 237..264, opacity chain 1), cards 0
-capture catalogue-empty-375.png (375×316 px, document y 2430)
-no card, JS off: empty sentence visible 26px (in viewport 237..264, opacity chain 1), cards 0
-capture catalogue-empty-375-nojs.png (375×316 px, document y 2246)
-cards, JS on: empty sentence no box (no box), cards 2
-cards, JS off: empty sentence no box (no box), cards 2
