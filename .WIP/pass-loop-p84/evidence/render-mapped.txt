@@ -1,0 +1,36 @@
+# render mapped 2026-11-02T18:25:17.701Z ; umami-script.js sha256 654f12c7548be726, 4773 bytes
+chrome: --host-resolver-rules="MAP www.sourcinno.com 127.0.0.1, MAP stats.sourcinno.com ~NOTFOUND, MAP * ~NOTFOUND, EXCLUDE localhost, EXCLUDE 127.0.0.1, EXCLUDE fonts.googleapis.com, EXCLUDE fonts.gstatic.com"
+--- mapped http://www.sourcinno.com/
+requests to stats host: 3 : GET https://stats.sourcinno.com/script.js [Script] | OPTIONS https://stats.sourcinno.com/api/send [Other] | POST https://stats.sourcinno.com/api/send [Fetch]
+script.js requests: 1; /api/send in network log: 2; paused: GET https://stats.sourcinno.com/script.js | OPTIONS https://stats.sourcinno.com/api/send headers={"Accept":"*/*","Access-Control-Request-Headers":"content-type,x-umami-hostname,x-umami-website-id","Access-Control-Request-Method":"POST","Origin":"http://www.sourcinno.com","Referer":"http://www.sourcinno.com/","Sec-Fetch-Mode":"cors","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36"} | POST https://stats.sourcinno.com/api/send
+send attempts caught: 1
+  POST https://stats.sourcinno.com/api/send -> failed (BlockedByClient); body: {"type":"event","payload":{"website":"40414ae3-7634-4761-a172-3c7a95d705b6","screen":"800x600","language":"fr-FR","title":"Conseil en Stratégie, Organisation, Processus et IA | Sourcinno","hostname":"www.sourcinno.com","url":"http://www.sourcinno.com/","referrer":""}}
+failed loads: https://stats.sourcinno.com/api/send net::ERR_BLOCKED_BY_CLIENT.Inspector inspector
+Set-Cookie headers seen: none
+script errors: none
+location.host: www.sourcinno.com
+document.cookie: ""
+localStorage.length: 0
+sessionStorage.length: 0
+tag in footer (all 4 attributes): true
+window.umami: object
+navigator.doNotTrack: null
+browser cookie jar (all hosts): empty
+  payload.website = 40414ae3-7634-4761-a172-3c7a95d705b6 (expected 40414ae3-7634-4761-a172-3c7a95d705b6: true), hostname = www.sourcinno.com, url = http://www.sourcinno.com/, type = event
+--- mapped http://www.sourcinno.com/politique-confidentialite/
+requests to stats host: 2 : GET https://stats.sourcinno.com/script.js [Script] | POST https://stats.sourcinno.com/api/send [Fetch]
+script.js requests: 1; /api/send in network log: 1; paused: GET https://stats.sourcinno.com/script.js | POST https://stats.sourcinno.com/api/send
+send attempts caught: 1
+  POST https://stats.sourcinno.com/api/send -> failed (BlockedByClient); body: {"type":"event","payload":{"website":"40414ae3-7634-4761-a172-3c7a95d705b6","screen":"800x600","language":"fr-FR","title":"Politique de confidentialité | Sourcinno","hostname":"www.sourcinno.com","url":"http://www.sourcinno.com/politique-confidentialite/","referrer":""}}
+failed loads: https://stats.sourcinno.com/api/send net::ERR_BLOCKED_BY_CLIENT.Inspector inspector
+Set-Cookie headers seen: none
+script errors: none
+location.host: www.sourcinno.com
+document.cookie: ""
+localStorage.length: 0
+sessionStorage.length: 0
+tag in footer (all 4 attributes): true
+window.umami: object
+navigator.doNotTrack: null
+browser cookie jar (all hosts): empty
+  payload.website = 40414ae3-7634-4761-a172-3c7a95d705b6 (expected 40414ae3-7634-4761-a172-3c7a95d705b6: true), hostname = www.sourcinno.com, url = http://www.sourcinno.com/politique-confidentialite/, type = event

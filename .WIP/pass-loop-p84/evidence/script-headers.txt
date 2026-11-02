@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Alt-Svc: h3=":443"; ma=2592000
+Cache-Control: public, max-age=86400, must-revalidate
+Content-Security-Policy: default-src 'self'; img-src 'self' https: data: blob:; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https:; frame-src 'self' http: https:; frame-ancestors 'self';
+Content-Type: application/javascript; charset=UTF-8
+Date: Mon, 02 Nov 2026 17:56:30 GMT
+Etag: W/"12a5-1a167df8fb8"
+Last-Modified: Fri, 23 Oct 2026 08:27:47 GMT
+Vary: Accept-Encoding
+X-Dns-Prefetch-Control: on
+Transfer-Encoding: chunked
+
