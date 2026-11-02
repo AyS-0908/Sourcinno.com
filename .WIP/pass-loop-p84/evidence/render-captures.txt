@@ -1,6 +1,0 @@
-# render captures 2026-11-02T18:25:33.372Z ; umami-script.js sha256 654f12c7548be726, 4773 bytes
-chrome: --host-resolver-rules="MAP www.sourcinno.com 127.0.0.1, MAP stats.sourcinno.com ~NOTFOUND, MAP * ~NOTFOUND, EXCLUDE localhost, EXCLUDE 127.0.0.1, EXCLUDE fonts.googleapis.com, EXCLUDE fonts.gstatic.com"
---- capture 1200: height 4642, Inter loaded true, h1 font Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, elements past 1200px: none, .reveal opacity 1
-tiles 1200: 2
---- capture 375: height 7165, Inter loaded true, h1 font Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, elements past 375px: none, .reveal opacity 1
-tiles 375: 3
